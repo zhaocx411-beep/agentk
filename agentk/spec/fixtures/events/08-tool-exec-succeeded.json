@@ -1,0 +1,35 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a08",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "tool.exec_succeeded",
+  "data": {
+    "toolCallId": "call_9f2c1a",
+    "result": {
+      "artifacts": [
+        {
+          "type": "image",
+          "uri": "https://cdn.example.com/agentk/img/9f2c1a.png",
+          "model": "gpt-image-1",
+          "params": {
+            "size": "1536x1024",
+            "quality": "medium"
+          }
+        }
+      ]
+    },
+    "artifacts": [
+      {
+        "type": "image",
+        "uri": "https://cdn.example.com/agentk/img/9f2c1a.png",
+        "model": "gpt-image-1",
+        "params": {
+          "size": "1536x1024",
+          "quality": "medium"
+        }
+      }
+    ],
+    "durationMillis": 8420
+  },
+  "createdAt": "2026-07-30T12:00:12Z"
+}

@@ -1,0 +1,1359 @@
+{
+  "view": "client",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-client"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.client",
+  "classNames": [
+    "AgentKClient"
+  ],
+  "type": {
+    "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient",
+    "kind": "interface",
+    "name": "AgentKClient",
+    "declaration": {
+      "text": "public interface AgentKClient extends AutoCloseable",
+      "references": [
+        {
+          "start": 17,
+          "end": 29,
+          "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient"
+        },
+        {
+          "start": 38,
+          "end": 51,
+          "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AutoCloseable.html"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Authenticated, transport-independent access to the AgentK API. "
+              }
+            ]
+          },
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Unary operations complete exceptionally when the transport or AgentK rejects a request. Cancelling a returned stage cancels the corresponding in-flight operation. Close the client when it is no longer needed."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-cancelExecution-com-kuaishou-klingai-agentk-api-v1-CancelExecutionRequest-",
+        "name": "cancelExecution",
+        "declaration": {
+          "text": "public abstract CompletionStage<CancelExecutionResponse> cancelExecution(CancelExecutionRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 55,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            },
+            {
+              "start": 57,
+              "end": 72,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-cancelExecution-com-kuaishou-klingai-agentk-api-v1-CancelExecutionRequest-"
+            },
+            {
+              "start": 73,
+              "end": 95,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Requests cancellation of the running Execution in a Session."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session whose running Execution should be cancelled"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the cancellation response"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<CancelExecutionResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 39,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "cancelExecution(CancelExecutionRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-close-",
+        "name": "close",
+        "declaration": {
+          "text": "public abstract void close()",
+          "references": [
+            {
+              "start": 21,
+              "end": 26,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-close-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Cancels in-flight operations and releases transport resources. "
+                  }
+                ]
+              },
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Closing is idempotent. Operations started after close fail."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "close()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-createSession-com-kuaishou-klingai-agentk-api-v1-CreateSessionRequest-",
+        "name": "createSession",
+        "declaration": {
+          "text": "public abstract CompletionStage<CreateSessionResponse> createSession(CreateSessionRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionResponse"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-createSession-com-kuaishou-klingai-agentk-api-v1-CreateSessionRequest-"
+            },
+            {
+              "start": 69,
+              "end": 89,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Creates a Session from the complete Profile in the request. "
+                  }
+                ]
+              },
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The Profile is fixed for the lifetime of the Session."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session title and complete Profile"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the created Session"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<CreateSessionResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "createSession(CreateSessionRequest request)",
+          "references": [
+            {
+              "start": 14,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-getExecution-com-kuaishou-klingai-agentk-api-v1-GetExecutionRequest-",
+        "name": "getExecution",
+        "declaration": {
+          "text": "public abstract CompletionStage<GetExecutionResponse> getExecution(GetExecutionRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            },
+            {
+              "start": 54,
+              "end": 66,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-getExecution-com-kuaishou-klingai-agentk-api-v1-GetExecutionRequest-"
+            },
+            {
+              "start": 67,
+              "end": 86,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Gets one Execution by its Session and Execution IDs."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session and Execution IDs"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the requested Execution"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<GetExecutionResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getExecution(GetExecutionRequest request)",
+          "references": [
+            {
+              "start": 13,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-invokeCapability-com-kuaishou-klingai-agentk-api-v1-InvokeCapabilityRequest-",
+        "name": "invokeCapability",
+        "declaration": {
+          "text": "public abstract CompletionStage<InvokeCapabilityResponse> invokeCapability(InvokeCapabilityRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityResponse"
+            },
+            {
+              "start": 58,
+              "end": 74,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-invokeCapability-com-kuaishou-klingai-agentk-api-v1-InvokeCapabilityRequest-"
+            },
+            {
+              "start": 75,
+              "end": 98,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Invokes a capability without creating a Session or Execution."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the capability ID and input object"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the capability output"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<InvokeCapabilityResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "invokeCapability(InvokeCapabilityRequest request)",
+          "references": [
+            {
+              "start": 17,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listCapabilities-com-kuaishou-klingai-agentk-api-v1-ListCapabilitiesRequest-",
+        "name": "listCapabilities",
+        "declaration": {
+          "text": "public abstract CompletionStage<ListCapabilitiesResponse> listCapabilities(ListCapabilitiesRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesResponse"
+            },
+            {
+              "start": 58,
+              "end": 74,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listCapabilities-com-kuaishou-klingai-agentk-api-v1-ListCapabilitiesRequest-"
+            },
+            {
+              "start": 75,
+              "end": 98,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Lists registered capabilities ordered by capability ID."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "pagination settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing one page of capabilities and its next-page token"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<ListCapabilitiesResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listCapabilities(ListCapabilitiesRequest request)",
+          "references": [
+            {
+              "start": 17,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listEvents-com-kuaishou-klingai-agentk-api-v1-ListEventsRequest-",
+        "name": "listEvents",
+        "declaration": {
+          "text": "public abstract CompletionStage<ListEventsResponse> listEvents(ListEventsRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsResponse"
+            },
+            {
+              "start": 52,
+              "end": 62,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listEvents-com-kuaishou-klingai-agentk-api-v1-ListEventsRequest-"
+            },
+            {
+              "start": 63,
+              "end": 80,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Lists persisted Session events from newest to oldest."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session ID and pagination settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing one page of events and its next-page token"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<ListEventsResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listEvents(ListEventsRequest request)",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listExecutions-com-kuaishou-klingai-agentk-api-v1-ListExecutionsRequest-",
+        "name": "listExecutions",
+        "declaration": {
+          "text": "public abstract CompletionStage<ListExecutionsResponse> listExecutions(ListExecutionsRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsResponse"
+            },
+            {
+              "start": 56,
+              "end": 70,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listExecutions-com-kuaishou-klingai-agentk-api-v1-ListExecutionsRequest-"
+            },
+            {
+              "start": 71,
+              "end": 92,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Lists Executions for a Session from newest to oldest."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session ID and pagination settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing one page of Executions and its next-page token"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<ListExecutionsResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listExecutions(ListExecutionsRequest request)",
+          "references": [
+            {
+              "start": 15,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listPipelines-com-kuaishou-klingai-agentk-api-v1-ListPipelinesRequest-",
+        "name": "listPipelines",
+        "declaration": {
+          "text": "public abstract CompletionStage<ListPipelinesResponse> listPipelines(ListPipelinesRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listPipelines-com-kuaishou-klingai-agentk-api-v1-ListPipelinesRequest-"
+            },
+            {
+              "start": 69,
+              "end": 89,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Lists Pipelines available to a Session, ordered by name."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session ID and pagination settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing one page of Pipelines and its next-page token"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<ListPipelinesResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listPipelines(ListPipelinesRequest request)",
+          "references": [
+            {
+              "start": 14,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listSessions-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-",
+        "name": "listSessions",
+        "declaration": {
+          "text": "public abstract CompletionStage<ListSessionsResponse> listSessions(ListSessionsRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsResponse"
+            },
+            {
+              "start": 54,
+              "end": 66,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-listSessions-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-"
+            },
+            {
+              "start": 67,
+              "end": 86,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Lists Sessions from newest to oldest."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "pagination settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing one page of Sessions and its next-page token"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<ListSessionsResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listSessions(ListSessionsRequest request)",
+          "references": [
+            {
+              "start": 13,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-startExecution-com-kuaishou-klingai-agentk-api-v1-StartExecutionRequest-",
+        "name": "startExecution",
+        "declaration": {
+          "text": "public abstract CompletionStage<StartExecutionResponse> startExecution(StartExecutionRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionResponse"
+            },
+            {
+              "start": 56,
+              "end": 70,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-startExecution-com-kuaishou-klingai-agentk-api-v1-StartExecutionRequest-"
+            },
+            {
+              "start": 71,
+              "end": 92,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Starts an Execution in an existing Session."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session ID and message, answers, or Pipeline input"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the new Execution"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<StartExecutionResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "startExecution(StartExecutionRequest request)",
+          "references": [
+            {
+              "start": 15,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-watchEvents-com-kuaishou-klingai-agentk-api-v1-WatchEventsRequest-com-kuaishou-klingai-agentk-client-EventObserver-",
+        "name": "watchEvents",
+        "declaration": {
+          "text": "public abstract EventSubscription watchEvents(WatchEventsRequest request, EventObserver observer)",
+          "references": [
+            {
+              "start": 16,
+              "end": 33,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription"
+            },
+            {
+              "start": 34,
+              "end": 45,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-watchEvents-com-kuaishou-klingai-agentk-api-v1-WatchEventsRequest-com-kuaishou-klingai-agentk-client-EventObserver-"
+            },
+            {
+              "start": 46,
+              "end": 64,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsRequest"
+            },
+            {
+              "start": 74,
+              "end": 87,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Watches live event frames for one Session and Execution. "
+                  }
+                ]
+              },
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The observer receives "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onComplete-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "onComplete"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " after a normal stream end and "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onError-java-lang-Throwable-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "onError"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " after a stream or observer failure. Cancelling the returned subscription stops the stream without a terminal callback."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the Session and Execution IDs to watch"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "observer",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "receives frames and terminal notifications"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a subscription that can cancel the stream"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "EventSubscription",
+          "references": [
+            {
+              "start": 0,
+              "end": 17,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "watchEvents(WatchEventsRequest request, EventObserver observer)",
+          "references": [
+            {
+              "start": 12,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsRequest"
+            },
+            {
+              "start": 40,
+              "end": 53,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-whoAmI-com-kuaishou-klingai-agentk-api-v1-WhoAmIRequest-",
+        "name": "whoAmI",
+        "declaration": {
+          "text": "public abstract CompletionStage<WhoAmIResponse> whoAmI(WhoAmIRequest request)",
+          "references": [
+            {
+              "start": 16,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 32,
+              "end": 46,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIResponse"
+            },
+            {
+              "start": 48,
+              "end": 54,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient#agentk-client-com-kuaishou-klingai-agentk-client-AgentKClient-whoAmI-com-kuaishou-klingai-agentk-api-v1-WhoAmIRequest-"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIRequest"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Gets the service and App identity resolved by AgentK."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "request",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "an empty identity request"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a stage containing the caller Service and App identity"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CompletionStage<WhoAmIResponse>",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html"
+            },
+            {
+              "start": 16,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "whoAmI(WhoAmIRequest request)",
+          "references": [
+            {
+              "start": 7,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIRequest"
+            }
+          ]
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

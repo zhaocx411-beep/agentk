@@ -1,0 +1,990 @@
+# AgentK 对外 API 规格(手工维护)。
+#
+# 维护纪律:本文件与 internal/api 的 handler/DTO 同步演进——改路由、改请求
+# 或响应字段时必须同步改这里(review 检查项,无 codegen)。事件 wire 信封与
+# data 各变体以 internal/event 为准,兼容性由 spec/fixtures/events 钉死。
+openapi: 3.1.0
+info:
+  title: AgentK API
+  version: v1
+  description: |
+    AgentK 是多媒体 agent 中台。对外模型只有两层:**会话**与它的**事件流**。
+
+    - 发消息、回答提问或启动 Pipeline 会创建一次 Execution;结果以事件日志为准。
+    - 客户端读取 `GET /v1/sessions/{sessionId}/events` 获取完整历史与最终事实;
+      Execution 进行时可订阅 `GET /v1/sessions/{sessionId}/stream` 获取实时旁路。
+
+    ## 认证
+
+    - **应用接入(下游服务)**:`Authorization: Bearer <API Key>`,Key 由 Service Principal 签发,
+      走 `agentk-api` 子域名(下方 servers 首项)。
+    - **人类接入(内网员工)**:经 SSO 网关访问 `agentk` 子域名,身份由网关注入,无需自带凭证。
+
+    所有资源按租户隔离:不存在与不属于你的资源同一律返回 404。
+servers:
+  - url: https://agentk-api.staging.kuaishou.com
+    description: 应用接入(API Key,staging)
+  - url: /
+    description: 当前站点(内网 SSO 人类接入)
+security:
+  - apiKey: []
+tags:
+  - name: sessions
+    description: 会话的创建、列表与推进(发消息 / 作答 / 取消)
+  - name: events
+    description: 会话事件流(轮询与 SSE)
+  - name: pipelines
+    description: 会话内 pipeline 的发现、触发与状态查询
+  - name: capabilities
+    description: Worker 上报的能力目录(写 Profile 前的发现入口)
+  - name: identity
+    description: 当前调用身份
+
+paths:
+  /v1/sessions:
+    post:
+      operationId: createSession
+      tags: [sessions]
+      summary: 创建会话
+      description: |
+        `profile` 是本会话的行为定义文档(JSON object),**必填**:服务端没有可继承的
+        缺省文档,用什么能力面由调用方决定。整份校验,模型只能按名引用实例的模型目录。
+        请求体上限 1MB。
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [profile]
+              properties:
+                title:
+                  type: string
+                  description: 会话标题,可空
+                profile:
+                  $ref: "#/components/schemas/Profile"
+      responses:
+        "201":
+          description: 已创建
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Session"
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "413":
+          description: 请求体超过 1MB
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+    get:
+      operationId: listSessions
+      tags: [sessions]
+      summary: 会话列表
+      description: |
+        租户内会话列表,创建序倒排(新在前)。keyset 翻页:`before` 传上一页末尾
+        会话的 id,返回 `hasMore` 表示还有更早的页。
+      parameters:
+        - name: limit
+          in: query
+          description: 页大小,缺省 20,上限 100(超出收敛到上限)
+          schema: { type: integer, minimum: 1 }
+        - name: before
+          in: query
+          description: 上一页末尾会话的 id(public id)
+          schema: { type: string }
+      responses:
+        "200":
+          description: 会话页
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [sessions, hasMore]
+                properties:
+                  sessions:
+                    type: array
+                    items: { $ref: "#/components/schemas/Session" }
+                  hasMore: { type: boolean }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/sessions/{sessionId}/messages:
+    post:
+      operationId: postMessage
+      tags: [sessions]
+      summary: 发一条用户消息
+      description: |
+        启动一次新的 Agent Loop。输入随 Workflow 启动持久化,并由
+        Workflow 的首个 Activity 幂等写入 `user.input`。已有活跃 Execution
+        时返回 409,不排队也不写事件。
+
+        若模型目录换版导致会话固化的 profile 失效,返回 409。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [text]
+              properties:
+                text: { type: string }
+      responses:
+        "202":
+          description: Agent Loop 已接受启动
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AcceptedResult" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409":
+          description: 会话已有活跃 Execution,或 profile 在当前模型目录下已不可执行
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "413":
+          description: 请求体超过 1MB
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "415":
+          description: 消息接口只接受 application/json
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "502":
+          description: Agent Loop 启动失败(执行面暂不可用)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+
+  /v1/sessions/{sessionId}/events:
+    get:
+      operationId: listEvents
+      tags: [events]
+      summary: 拉取会话事件(可靠通道)
+      description: |
+        返回会话完整事件日志,按内部存储顺序升序排列。
+        这是可靠通道——SSE(/stream)只是它的低延迟旁路。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      responses:
+        "200":
+          description: 完整事件列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [events]
+                properties:
+                  events:
+                    type: array
+                    items: { $ref: "#/components/schemas/Event" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/sessions/{sessionId}/stream:
+    get:
+      operationId: streamEvents
+      tags: [events]
+      summary: 订阅会话事件(SSE)
+      description: |
+        当前 Execution 的 Server-Sent Events。没有活跃 Execution 时返回 204;
+        有 Execution 时返回 200,从 offset 0 回放它的缓冲并继续实时发送:
+
+        - **已提交事件日志事件**:带 `id:` 行(值为 `eventId`),用于即时更新 UI;
+        - **delta 帧**:无 `id:` 行,断线重连后从当前 Execution 缓冲回放;
+        - **stream.end**:Execution 已结束,客户端应关闭连接并从 /events 做最终校准。
+
+        SSE 不承载会话历史,不跨 Execution 常驻,也不处理 Last-Event-ID。
+        服务端每 15 秒发 `: ping` 注释行保活。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      responses:
+        "200":
+          description: SSE 流
+          content:
+            text/event-stream:
+              schema:
+                type: string
+                description: 当前 Execution 的 SSE 帧序列
+        "204":
+          description: 当前没有活跃 Execution
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/sessions/{sessionId}/answers:
+    post:
+      operationId: answerQuestions
+      tags: [sessions]
+      summary: 回答模型的提问
+      description: |
+        提交 `ask_user.requested` 事件的作答,并启动一次新的 Agent Loop。
+        `ask_user.responded` 由 Workflow 的首个 Activity 幂等写入。
+        `toolCallId` 取自提问事件;`answers` 里每题的 `questionId` 必须是该次提问里的,
+        问题原文由服务端回填(客户端无需也不该传 `question`)。
+
+        该题已被作答、不再等待作答,或会话已有活跃 Execution 时返回 409。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [toolCallId, answers]
+              properties:
+                toolCallId: { type: string }
+                answers:
+                  type: array
+                  minItems: 1
+                  items:
+                    type: object
+                    required: [questionId, selected]
+                    properties:
+                      questionId: { type: string }
+                      selected:
+                        type: array
+                        minItems: 1
+                        items: { type: string }
+                        description: 选中的选项文案;也可以是用户自己写的;单选题只允许一项
+      responses:
+        "202":
+          description: Agent Loop 已接受启动
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/AcceptedResult" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409":
+          description: 该提问已不在等待作答,或会话已有活跃 Execution
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "502":
+          description: Agent Loop 启动失败(执行面暂不可用)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+
+  /v1/sessions/{sessionId}/cancel:
+    post:
+      operationId: cancelSession
+      tags: [sessions]
+      summary: 中断会话当前的推进
+      description: |
+        异步取消当前活跃的 Agent Loop 或 Pipeline Execution。
+        没有活跃 Execution 时返回 409。
+        请求体可省略。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      responses:
+        "202":
+          description: 已接受
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409":
+          description: 会话没有活跃 Execution
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "502":
+          description: 取消下发失败
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+
+  /v1/sessions/{sessionId}/pipelines:
+    get:
+      operationId: listPipelines
+      tags: [pipelines]
+      summary: 列出会话可用的 pipeline
+      description: |
+        发现端点:返回注册表与会话 profile 暴露名单的交集(名字、描述、inputs
+        schema),客户端据此渲染选择器与输入表单。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      responses:
+        "200":
+          description: 可用 pipeline 列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [pipelines]
+                properties:
+                  pipelines:
+                    type: array
+                    items: { $ref: "#/components/schemas/PipelineListItem" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "503": { $ref: "#/components/responses/PipelineUnavailable" }
+        "501": { $ref: "#/components/responses/PipelinesDisabled" }
+
+  /v1/sessions/{sessionId}/pipeline-runs:
+    get:
+      operationId: listPipelineRuns
+      tags: [pipelines]
+      summary: 列出会话的全部 pipeline 执行
+      description: |
+        快照由服务端 fold 会话事件日志的 execution.started/finished 事件得出
+        (没有独立的执行存储),
+        客户端重开会话时从这里恢复运行卡片。单个执行的详情与终态轮询走
+        `GET /v1/sessions/{sessionId}/pipeline-runs/{runId}`。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      responses:
+        "200":
+          description: 执行列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [pipelineRuns]
+                properties:
+                  pipelineRuns:
+                    type: array
+                    items: { $ref: "#/components/schemas/PipelineRun" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+    post:
+      operationId: startPipeline
+      tags: [pipelines]
+      summary: 触发一次 pipeline 执行
+      description: |
+        按 canonical name 查声明并透传 args,Temporal 接受后立即返回 202 快照。
+        执行异步推进,客户端沿会话事件流(SSE / 事件列表)拿进度与终态,或凭
+        `GET /v1/sessions/{sessionId}/pipeline-runs/{runId}` 轮询快照。
+        同一 Session 已有活跃 Agent Loop 或 Pipeline Execution 时返回 409。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [pipeline]
+              properties:
+                pipeline:
+                  type: string
+                  description: pipeline 名(须在会话 profile 的暴露名单内)
+                args:
+                  type: object
+                  description: 原样传给声明所指 Temporal 实现的 JSON 参数
+      responses:
+        "202":
+          description: 已启动,返回执行快照
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/PipelineRun" }
+        "400": { $ref: "#/components/responses/BadRequest" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+        "409":
+          description: 会话已有活跃 Execution
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+        "503": { $ref: "#/components/responses/PipelineUnavailable" }
+        "501": { $ref: "#/components/responses/PipelinesDisabled" }
+
+  /v1/sessions/{sessionId}/pipeline-runs/{runId}:
+    get:
+      operationId: getPipelineRun
+      tags: [pipelines]
+      summary: 查询一次 pipeline 执行
+      description: |
+        执行状态查询主通道:exec 级状态 + 完成时的 output(节点级进度不对外)。
+        会话是唯一聚合根,执行不脱离宿主会话可寻址;快照由 fold 会话事件得出。
+      parameters:
+        - $ref: "#/components/parameters/sessionId"
+        - name: runId
+          in: path
+          required: true
+          description: 执行 id(public id)
+          schema: { type: string }
+      responses:
+        "200":
+          description: 执行快照
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/PipelineRun" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "404": { $ref: "#/components/responses/NotFound" }
+
+  /v1/capabilities:
+    get:
+      operationId: listCapabilities
+      tags: [capabilities]
+      summary: 列出当前能力目录
+      description: |
+        开发者发现入口:返回本实例当前可见的全部 capability(按 id 升序),接入方
+        据此核对可以写进 Profile entry 的 `capability`。
+
+        `agentk.*` 核心能力随服务发布且不参与 TTL；`contrib.*.*` 能力由外部
+        Worker 周期上报维持,停报约一小时后自动消失,重新上报即恢复。返回的是
+        契约,不含 Temporal 路由(能力落在哪个 task queue、对应哪个 workflow type
+        属内部执行细节)。
+      responses:
+        "200":
+          description: 能力列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [capabilities]
+                properties:
+                  capabilities:
+                    type: array
+                    items: { $ref: "#/components/schemas/Capability" }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+        "501": { $ref: "#/components/responses/CapabilitiesDisabled" }
+        "502": { $ref: "#/components/responses/CapabilityCatalogUnavailable" }
+
+  /v1/me:
+    get:
+      operationId: whoAmI
+      tags: [identity]
+      summary: 当前调用身份
+      description: 回显当前凭证解析出的接入方身份与它绑定的租户。
+      responses:
+        "200":
+          description: 身份信息
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, tenantId, display]
+                properties:
+                  id: { type: string, description: 服务主体 public id }
+                  tenantId: { type: string, description: 主体绑定的租户 }
+                  display: { type: string, description: 展示名 }
+        "401": { $ref: "#/components/responses/Unauthorized" }
+
+components:
+  securitySchemes:
+    apiKey:
+      type: http
+      scheme: bearer
+      description: |
+        应用接入凭证:`Authorization: Bearer <API Key>`。Key 由 Service Principal
+        签发,明文仅在创建时展示一次。这是唯一的身份通道——缺失或无效一律 401。
+
+  parameters:
+    sessionId:
+      name: sessionId
+      in: path
+      required: true
+      description: 会话 id(public id)
+      schema: { type: string }
+
+  responses:
+    BadRequest:
+      description: 请求不合法(JSON 解析失败、缺必填字段、参数越界等)
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    Unauthorized:
+      description: 凭证缺失或无效
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    NotFound:
+      description: 资源不存在,或不属于当前租户(二者同一律 404)
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    PipelinesDisabled:
+      description: 本实例未启用 pipeline 执行
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    PipelineUnavailable:
+      description: Profile 已暴露 pipeline，但其 Worker Manifest 当前不在 Catalog 中或 Catalog 暂时不可用
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    CapabilitiesDisabled:
+      description: 本实例未启用能力目录
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    CapabilityCatalogUnavailable:
+      description: 能力目录暂时读不出来(共享存储故障)
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+
+  schemas:
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error: { type: string, description: 人读错误信息 }
+
+    Session:
+      type: object
+      required: [id, tenantId, title, createdAt]
+      properties:
+        id: { type: string, description: 会话 public id }
+        tenantId: { type: string }
+        title: { type: string }
+        createdAt: { type: string, format: date-time }
+
+    AcceptedResult:
+      type: object
+      required: [sessionId]
+      description: Agent Loop 已被 Temporal 接受启动。
+      properties:
+        sessionId: { type: string }
+
+    Event:
+      type: object
+      required: [eventId, executionId, kind, data, createdAt]
+      description: |
+        会话事件日志一行的 wire 信封。`kind` 判别 `data` 的形状(各变体见下方
+        schema)。服务端读取存量日志时跳过未知 kind;客户端也应容忍新增 kind。
+      properties:
+        eventId:
+          type: string
+          description: 稳定事件标识(evt_<UUIDv7>)
+        executionId:
+          type: string
+          description: 所属 Execution(exe_<UUIDv7>)
+        roundId:
+          type: string
+          description: 所属模型轮次;Execution 生命周期等轮外事件无此字段
+        kind:
+          type: string
+          enum:
+            - user.input
+            - round.started
+            - round.completed
+            - assistant.text
+            - assistant.reasoning
+            - assistant.tool_call
+            - tool.exec_started
+            - tool.exec_succeeded
+            - tool.exec_failed
+            - ask_user.requested
+            - ask_user.responded
+            - execution.started
+            - invocation.progress
+            - execution.finished
+        data:
+          description: 载荷,形状由 kind 判别
+          oneOf:
+            - $ref: "#/components/schemas/UserInputData"
+            - $ref: "#/components/schemas/RoundStartedData"
+            - $ref: "#/components/schemas/RoundCompletedData"
+            - $ref: "#/components/schemas/AssistantTextData"
+            - $ref: "#/components/schemas/AssistantReasoningData"
+            - $ref: "#/components/schemas/AssistantToolCallData"
+            - $ref: "#/components/schemas/ToolExecStartedData"
+            - $ref: "#/components/schemas/ToolExecSucceededData"
+            - $ref: "#/components/schemas/ToolExecFailedData"
+            - $ref: "#/components/schemas/AskUserRequestedData"
+            - $ref: "#/components/schemas/AskUserRespondedData"
+            - $ref: "#/components/schemas/ExecutionStartedData"
+            - $ref: "#/components/schemas/InvocationProgressData"
+            - $ref: "#/components/schemas/ExecutionFinishedData"
+        createdAt: { type: string, format: date-time }
+
+    UserInputData:
+      type: object
+      title: user.input
+      description: 用户发进来的一条文本消息。
+      required: [text]
+      properties:
+        text: { type: string }
+
+    RoundStartedData:
+      type: object
+      title: round.started
+      description: 一次模型调用的配置快照(评测分组与溯源用,普通客户端可忽略)。
+      required: [model, dialect]
+      properties:
+        model: { type: string }
+        dialect:
+          type: string
+          description: 模型 API 方言，决定消息转换、reasoning 回喂、缓存与 usage 语义
+        profileVersion: { type: string }
+        promptSha256: { type: string }
+        tools:
+          type: array
+          items: { type: string }
+        workerId: { type: string }
+
+    RoundCompletedData:
+      type: object
+      title: round.completed
+      description: 收尾一次模型调用。
+      required: [usage, modelMillis]
+      properties:
+        usage:
+          type: object
+          required: [inputTokens, outputTokens]
+          properties:
+            inputTokens: { type: integer }
+            outputTokens: { type: integer }
+            cacheReadTokens: { type: integer }
+        modelMillis: { type: integer, format: int64 }
+        finishReason: { type: string }
+
+    AssistantTextData:
+      type: object
+      title: assistant.text
+      description: 模型产出的一段正文。block 是轮内块序号(0 起)。
+      required: [block, text]
+      properties:
+        block: { type: integer }
+        text: { type: string }
+
+    AssistantReasoningData:
+      type: object
+      title: assistant.reasoning
+      description: 模型思维链原文。
+      required: [block, text]
+      properties:
+        block: { type: integer }
+        text: { type: string }
+
+    AssistantToolCallData:
+      type: object
+      title: assistant.tool_call
+      description: 模型发起的一次工具调用。args 形状由工具自己定义。
+      required: [toolCallId, toolName, args]
+      properties:
+        toolCallId: { type: string }
+        toolName: { type: string }
+        args: {}
+
+    ToolExecStartedData:
+      type: object
+      title: tool.exec_started
+      description: 工具开始执行。工具名与入参见同轮的 assistant.tool_call。
+      required: [toolCallId]
+      properties:
+        toolCallId: { type: string }
+
+    ToolExecSucceededData:
+      type: object
+      title: tool.exec_succeeded
+      description: 一次工具执行的成功结果。
+      required: [toolCallId, result, durationMillis]
+      properties:
+        toolCallId: { type: string }
+        result: {}
+        artifacts:
+          type: array
+          items: { $ref: "#/components/schemas/ArtifactData" }
+        durationMillis: { type: integer, format: int64 }
+
+    ToolExecFailedData:
+      type: object
+      title: tool.exec_failed
+      description: 一次工具执行的失败。
+      required: [toolCallId, error, durationMillis]
+      properties:
+        toolCallId: { type: string }
+        error: { type: string }
+        durationMillis: { type: integer, format: int64 }
+
+    AskUserRequestedData:
+      type: object
+      title: ask_user.requested
+      description: |
+        模型向用户提问。客户端渲染问卷,凭 `toolCallId` 调
+        `POST /v1/sessions/{sessionId}/answers` 提交作答。
+      required: [toolCallId, questions]
+      properties:
+        toolCallId: { type: string }
+        questions:
+          type: array
+          items:
+            type: object
+            required: [id, question]
+            properties:
+              id: { type: string }
+              label: { type: string, description: 界面用短标题,可空 }
+              question: { type: string }
+              options:
+                type: array
+                items: { type: string }
+                description: 候选项文案;用户也可以都不选、自己写
+              multiSelect: { type: boolean }
+
+    AskUserRespondedData:
+      type: object
+      title: ask_user.responded
+      description: 用户的作答,闭合那次 ask_user 调用。
+      required: [toolCallId, answers]
+      properties:
+        toolCallId: { type: string }
+        answers:
+          type: array
+          items:
+            type: object
+            required: [questionId, question, selected]
+            properties:
+              questionId: { type: string }
+              question: { type: string, description: 问题原文(服务端回填) }
+              selected:
+                type: array
+                items: { type: string }
+
+    ExecutionStartedData:
+      type: object
+      title: execution.started
+      description: 一次 Agent Loop 或 Pipeline Execution 的出生登记。
+      required: [kind]
+      properties:
+        kind: { type: string, enum: [agent_loop, pipeline] }
+        profileVersion: { type: string, description: 启动时生效的 Profile 版本 }
+        pipeline:
+          type: object
+          description: kind 为 pipeline 时携带的冻结输入
+          required: [name, capabilityId]
+          properties:
+            name: { type: string, description: Profile 中的 Pipeline 名 }
+            capabilityId: { type: string, description: 本次执行冻结的 Capability ID }
+            args: { description: 触发时传给实现的原始 JSON 参数 }
+
+    InvocationProgressData:
+      type: object
+      title: invocation.progress
+      description: capability invocation 执行中的一次进度汇报。data 的形状由具体实现约定,通用客户端消费 invocation 坐标和 stepId/message。
+      required: [invocationId, invocationKind, invocationName, stepId]
+      properties:
+        invocationId: { type: string }
+        invocationKind: { type: string, enum: [pipeline, tool] }
+        invocationName: { type: string }
+        stepId: { type: string, description: invocation 内的步骤位置(board / clip/0 ...) }
+        message: { type: string, description: 给人看的进展文案 }
+        data: { description: 步骤产出的结构化细节,形状由 capability 作者约定 }
+
+    ExecutionFinishedData:
+      type: object
+      title: execution.finished
+      description: 一次 Execution 的唯一终态。
+      required: [status]
+      properties:
+        status: { type: string, enum: [completed, failed, cancelled] }
+        error: { type: string, description: 失败原因 }
+        pipeline:
+          type: object
+          description: Pipeline 成功时可携带聚合输出
+          properties:
+            output: {}
+
+    ArtifactData:
+      type: object
+      description: 一件产物(图片 / 视频等)。uri 是唯一句柄,跨会话可用。
+      required: [type, uri]
+      properties:
+        type: { type: string, description: 产物类型(image / video ...) }
+        uri: { type: string }
+        description: { type: string, description: 产物的自然语言说明 }
+        model: { type: string, description: 产出时工具绑定的模型 }
+        params:
+          description: 实际生效参数(size、quality 等,由方言补齐)
+          type: object
+
+    Profile:
+      type: object
+      additionalProperties: false
+      required: [defaultModel]
+      description: |
+        会话的行为定义文档:system prompt、启用的工具与 pipeline 暴露名单。
+        模型一律**按名引用**代码发布的静态模型契约,
+        文档里没有也不允许出现任何凭证或环境变量引用。
+
+        校验纪律:
+
+        - 未知字段一律拒绝(不是忽略),整份文档校验失败即 400;
+        - 创建即校验 defaultModel 静态契约与本地工具;tool/pipeline capability
+          只校验格式和重名,在线状态在使用时从 Catalog 惰性解析;
+        - 模型目录热更只改变运行时客户端,不会改变已固化的 Profile 行为。
+      properties:
+        defaultModel:
+          type: string
+          description: |
+            必填。主 agent 使用的逻辑模型 ID,必须是代码静态契约中声明的 chat 模型。
+        system:
+          type: string
+          description: 主 agent 的 system prompt
+        tools:
+          type: array
+          items: { $ref: "#/components/schemas/ProfileToolEntry" }
+          description: |
+            主 agent 启用的工具列表(保序,即喂给模型的顺序)。capability 为空时按
+            name 选择本地机制工具;非空时从 Capability Catalog 惰性解析。
+            Session 创建不要求 contrib Worker 在线。
+        toolDefaults:
+          type: object
+          additionalProperties:
+            type: object
+          description: |
+            当前 Session 按工具名配置的顶层默认入参。工具必须已在 tools 中启用,
+            参数名与值必须符合该工具 input schema。模型本次显式参数优先于这里,
+            未配置项继续使用工具代码兜底值。
+        pipelines:
+          type: array
+          items: { $ref: "#/components/schemas/ProfilePipelineEntry" }
+          description: |
+            向本会话暴露的 pipeline capability ID 与会话内 canonical name。
+            Session 创建只校验 capability/name；List/Start 时才解析 Worker Manifest。
+        maxToolRounds:
+          type: integer
+          minimum: 0
+          description: |
+            一次推进里连续调工具的轮数上限。超过则中断会话
+            (`MaxToolRoundsExceeded`)。省略或 0 时使用服务端缺省(20)。
+            新的用户输入会重置计数。
+
+    ProfileToolEntry:
+      type: object
+      additionalProperties: false
+      required: [name]
+      not:
+        required: [capability, ref]
+      description: 一条本地 Tool 选择或 Catalog Tool capability。
+      properties:
+        capability:
+          type: string
+          pattern: "^(|agentk\\.[a-z][a-z0-9_]*|contrib\\.[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*)$"
+          description: 可选的裸 Capability ID；省略时按 name 选择本地工具
+        ref:
+          type: string
+          pattern: "^tool:(agentk\\.[a-z][a-z0-9_]*|contrib\\.[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*)$"
+          deprecated: true
+          description: 兼容旧客户端的 Tool ref；服务端规范化为 capability
+        name:
+          type: string
+          pattern: "^[a-z][a-z0-9_]{0,127}$"
+          description: 本会话提供给 LLM 的 canonical name
+        instructions:
+          type: string
+          description: 追加到工具说明中的会话级使用提示
+
+    ProfilePipelineEntry:
+      type: object
+      additionalProperties: false
+      required: [name]
+      oneOf:
+        - required: [capability]
+        - required: [ref]
+      description: 一条 Pipeline 暴露声明。
+      properties:
+        capability:
+          type: string
+          pattern: "^(agentk\\.[a-z][a-z0-9_]*|contrib\\.[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*)$"
+          description: 裸 Capability ID
+        ref:
+          type: string
+          pattern: "^pipeline:(agentk\\.[a-z][a-z0-9_]*|contrib\\.[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*)$"
+          deprecated: true
+          description: 兼容旧客户端的 Pipeline ref；服务端规范化为 capability
+        name:
+          type: string
+          pattern: "^[a-z][a-z0-9_]{0,127}$"
+          description: 本会话对外 canonical name
+        displayName:
+          type: string
+          maxLength: 256
+          description: 可选的人类可读名称
+
+    PipelineListItem:
+      type: object
+      required: [capabilityId, name, description, inputSchema, outputSchema]
+      description: 从当前 Catalog Manifest 解析出的 Pipeline 公开契约。
+      properties:
+        capabilityId: { type: string, description: Profile entry 引用的 Capability ID }
+        name: { type: string }
+        displayName: { type: string }
+        description: { type: string }
+        inputSchema:
+          type: object
+          description: Pipeline 入参 JSON Schema
+        outputSchema:
+          type: object
+          description: Pipeline 输出 JSON Schema
+
+    Capability:
+      type: object
+      required: [id, source, kind, description, inputSchema, outputSchema, timeoutSeconds]
+      description: |
+        一条核心或 contrib 能力契约。`id` 可直接用作 Profile entry 的
+        `capability`。
+      properties:
+        id:
+          type: string
+          description: 全局能力标识,形如 `agentk.<name>` 或 `contrib.<owner>.<name>`
+          maxLength: 128
+          pattern: "^(agentk\\.[a-z][a-z0-9_]*|contrib\\.[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*)$"
+        source:
+          type: string
+          enum: [core, contrib]
+          description: 能力发现来源;core 随服务发布,contrib 由外部 Worker 上报
+        kind:
+          type: string
+          enum: [workflow, activity]
+          description: Temporal 实现种类
+        description: { type: string }
+        inputSchema:
+          type: object
+          description: 入参 JSON Schema
+        outputSchema:
+          type: object
+          description: 输出 JSON Schema
+        timeoutSeconds:
+          type: integer
+          format: int64
+          description: 单次执行超时上限
+        lastReportedAt:
+          type: string
+          format: date-time
+          description: contrib Manifest 最近一次被 AgentK 接收的时间;core 能力不返回
+        tool:
+          type: object
+          required: [description, mode]
+          description: Tool 注册声明
+          properties:
+            description: { type: string }
+            mode:
+              type: string
+              enum: [blocking]
+              description: Tool 调用会在执行完成后闭合
+            maxAttempts:
+              type: integer
+              format: int32
+              minimum: 0
+              description: Activity Tool 的最大尝试次数；0 表示使用 Temporal 缺省策略
+    PipelineRun:
+      type: object
+      required: [id, sessionId, name, capabilityId, status, createdAt]
+      properties:
+        id: { type: string, description: 执行 public id }
+        sessionId: { type: string, description: 所属会话 public id }
+        name: { type: string, description: Profile 中的 pipeline 名 }
+        capabilityId: { type: string, description: 本次执行冻结的 Capability ID }
+        status:
+          type: string
+          enum: [running, completed, failed, cancelled]
+        args:
+          type: object
+          description: 触发参数原样回显
+        output:
+          description: 完成时 pipeline 返回的聚合结果
+        profileVersion: { type: string, description: 创建时生效的 profile 版本 }
+        error: { type: string, description: 失败原因(status = failed 时) }
+        createdAt: { type: string, format: date-time }
+        finishedAt: { type: string, format: date-time }

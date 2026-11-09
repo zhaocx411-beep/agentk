@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "doubao-seedance-2.0"
+      ],
+      "description": "使用的模型。候选：doubao-seedance-2.0（Seedance 2.0 多模态视频）"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "纯自然语言的画面、镜头运动和声音描述。可用「图片1」「视频1」「音频1」按各自列表的顺序指名素材，例如「把视频1礼盒里的商品换成图片1中的商品，运镜不变」"
+    },
+    "firstFrame": {
+      "type": "string",
+      "description": "首帧图片 URL（可选）；不给任何素材即为纯文生视频"
+    },
+    "lastFrame": {
+      "type": "string",
+      "description": "尾帧图片 URL（可选）；必须与 firstFrame 同时给，不能只给尾帧"
+    },
+    "referenceImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 9,
+      "description": "参考图 URL 列表，最多 9 张：提供角色形象、商品、风格或构图参考，不作为首帧。按顺序在 prompt 里记作「图片1」「图片2」…"
+    },
+    "referenceVideos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "description": "参考视频 URL 列表，最多 3 个：借鉴运镜、动作与风格，也可作为待编辑的原视频。必须是公网可读的直链；按顺序在 prompt 里记作「视频1」「视频2」…"
+    },
+    "referenceAudios": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "description": "参考音频 URL 列表，最多 3 个：提供音色、旋律或台词。必须配合图片或视频使用（不支持纯音频、文本+音频）；必须是公网可读的直链；按顺序记作「音频1」「音频2」…"
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "480p",
+        "720p",
+        "1080p",
+        "4k"
+      ],
+      "default": "1080p",
+      "description": "输出清晰度，越高越贵；缺省 1080p。1080p 与 4k 只有部分型号支持，见各候选模型说明"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "description": "片段时长（秒），4~15，缺省 5"
+    },
+    "ratio": {
+      "type": "string",
+      "enum": [
+        "21:9",
+        "16:9",
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16",
+        "adaptive"
+      ],
+      "description": "输出画面比例；缺省 adaptive（跟随首帧图，无素材时由模型定）。给了首帧图又指定不一致的比例，画面可能出现拉伸跳变"
+    },
+    "generateAudio": {
+      "type": "boolean",
+      "description": "是否生成与画面适配的声音，缺省 false"
+    },
+    "watermark": {
+      "type": "boolean",
+      "description": "是否在成片上加水印，缺省 false"
+    }
+  },
+  "required": [
+    "model",
+    "prompt"
+  ]
+}

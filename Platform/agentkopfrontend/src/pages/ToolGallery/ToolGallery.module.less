@@ -1,0 +1,788 @@
+/* 工具广场：主标题 + 分类卡片 */
+
+.page {
+  .page-scroll();
+}
+
+.gallery {
+  .page-container();
+
+  padding-top: @spacing-md;
+}
+
+.hero {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+
+  /* 与官方 Agent 页头保持一致的顶部呼吸空间 */
+  margin: @spacing-xxl 0 @spacing-xl;
+  text-align: center;
+}
+
+.heroTitle {
+  .hero-title();
+}
+
+.heroAccent {
+  .hero-title-accent();
+}
+
+.heroDesc {
+  max-width: 40em;
+  margin: 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.7;
+}
+
+.search {
+  width: 100%;
+  max-width: 480px;
+  margin-top: @spacing-lg;
+
+  .control-search(@control-height-lg; @border-radius-lg);
+}
+
+.searchIcon {
+  color: @text-color-tertiary;
+}
+
+.section {
+  margin-bottom: @spacing-xxl;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @spacing-md;
+}
+
+.sectionTitle {
+  .section-title();
+}
+
+.moreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+  cursor: pointer;
+  transition: color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    color: @primary-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 2px;
+    border-radius: @border-radius-xs;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+/* 网格间距与官方目录对齐；工具卡内容比 Agent 卡轻，保留更密的 4 列 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: @spacing-lg;
+}
+
+/* 工具卡可点击查看可选配置 */
+.card {
+  .surface-card-interactive();
+
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 148px;
+  margin: 0;
+  padding: @spacing-md;
+  color: inherit;
+  text-align: left;
+  gap: @spacing-sm;
+  font: inherit;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-size: 18px;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+/* 工具类别色：六个色相需彼此可区分，否则类别标识失去意义。
+   原先 sky / violet / indigo 都落到同一个靛蓝，这里拆开三个色相 */
+.accentSky {
+  background: fade(@azure-royal, 12%);
+  color: @azure-royal;
+}
+
+.accentEmerald {
+  background: fade(@success-color, 12%);
+  color: @success-color;
+}
+
+.accentAmber {
+  background: fade(@warning-color, 12%);
+  color: @warning-color;
+}
+
+.accentRose {
+  background: fade(@error-color, 12%);
+  color: @error-color;
+}
+
+.accentViolet {
+  background: fade(@primary-gradient-end, 12%);
+  color: @primary-gradient-end;
+}
+
+.accentIndigo {
+  background: @primary-subdued;
+  color: @primary-color;
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  max-width: 100%;
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardAuthor {
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  margin: 2px 0 @spacing-xs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.4;
+}
+
+.cardAuthorPrefix {
+  flex-shrink: 0;
+}
+
+.cardAuthorName {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardDesc {
+  .text-clamp(2);
+
+  margin: 0 0 @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 2px @spacing-xs;
+  background: @surface-3;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.4;
+  border-radius: @border-radius-pill;
+}
+
+.empty {
+  .empty-frame();
+}
+
+.emptyTitle {
+  .empty-title();
+}
+
+.emptyDesc {
+  .empty-desc();
+}
+
+/* —— 工具详情抽屉 / 详情页 —— */
+.detailDrawer {
+  :global(.ant-drawer-body) {
+    padding: @spacing-lg;
+  }
+}
+
+.detailBody {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+}
+
+.detailIntro {
+  display: flex;
+  gap: @spacing-md;
+}
+
+.detailIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-size: 20px;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+.detailIntroText {
+  min-width: 0;
+}
+
+.detailPageTitle {
+  margin: 0 0 @spacing-xxs;
+  color: @text-color;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.detailAuthor {
+  margin: 0 0 @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.detailDesc {
+  margin: 0 0 @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.detailPage {
+  .page-scroll();
+  .page-container();
+
+  padding-top: @spacing-xl;
+  gap: @spacing-xl;
+}
+
+.detailPageLoading {
+  .page-scroll();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailPageHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-md;
+}
+
+.detailRunLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: @spacing-xl;
+  align-items: start;
+}
+
+.detailRunMain {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+}
+
+.detailRunAside {
+  position: sticky;
+  top: @spacing-lg;
+}
+
+.runForm {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+  padding: @spacing-lg;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+}
+
+.runFormHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-md;
+}
+
+.runFormActions {
+  flex-shrink: 0;
+}
+
+.runTitleField {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+}
+
+.runTitleLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.runFormError {
+  margin: 0;
+  color: @error-color;
+  font-size: @font-size-caption;
+}
+
+.runParamForm {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.ttsVoiceStack {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.ttsVoiceField {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+}
+
+.ttsVoiceLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.ttsVoiceSelect {
+  width: 100%;
+}
+
+.runResultSection {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.runResultPanel {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+  padding: @spacing-lg;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+}
+
+.runResultEmpty {
+  padding: @spacing-xl;
+  border: 1px dashed @hairline;
+  border-radius: @border-radius-lg;
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+  text-align: center;
+}
+
+.runResultHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.runResultMeta {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.runResultAlert {
+  margin: 0;
+}
+
+.runMediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: @spacing-md;
+}
+
+.runMediaItem {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid @hairline;
+  background: @surface-3;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+}
+
+.historySection {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  min-height: 0;
+  padding: @spacing-lg;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+}
+
+.historyHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  flex-shrink: 0;
+}
+
+.historyPaneLoading {
+  display: flex;
+  justify-content: center;
+  padding: @spacing-xl 0;
+}
+
+.runHistoryList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  max-height: 520px;
+  overflow-y: auto;
+  // 滚动到顶/底时不裁切首末项边框
+  padding: 2px 1px;
+  scroll-padding-block: 2px;
+}
+
+.runStatusTagRunning {
+  animation: run-status-tag-pulse 1.4s ease-in-out infinite;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: currentcolor;
+    vertical-align: 0.05em;
+    animation: run-status-dot-pulse 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes run-status-tag-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@keyframes run-status-dot-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.35;
+    transform: scale(0.82);
+  }
+}
+
+.runHistoryItem {
+  min-width: 0;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  transition:
+    background @transition-duration-fast,
+    border-color @transition-duration-fast;
+
+  &:hover {
+    background: @surface-2;
+  }
+}
+
+.runHistoryItemBody {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  min-width: 0;
+  padding: @spacing-sm @spacing-md;
+  border-radius: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 1px;
+  }
+}
+
+.runHistoryItemActive {
+  border-color: fade(@primary-color, 55%);
+  background: @primary-soft;
+
+  &:hover {
+    background: @primary-soft;
+  }
+}
+
+.runHistoryItemMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.runHistoryItemAside {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: @spacing-xxs;
+  padding-top: 2px;
+}
+
+.runHistoryTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.runHistorySummary {
+  margin-top: 4px;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.runHistoryMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-top: 4px;
+}
+
+.runHistoryTime {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.runHistoryId {
+  max-width: 120px;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  overflow: hidden;
+  font-family: @font-mono;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyPagination {
+  display: flex;
+  justify-content: center;
+  margin-top: @spacing-sm;
+  flex-shrink: 0;
+}
+
+.paramSection {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.paramSectionTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+.paramSectionHint {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.paramEmpty {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+}
+
+.paramList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paramItem {
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+}
+
+.paramHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+  margin-bottom: @spacing-xs;
+}
+
+.paramName {
+  margin-right: @spacing-xxs;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.paramType {
+  margin-inline-end: 0 !important;
+}
+
+.paramDesc {
+  margin: 0 0 @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.paramMeta {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+
+  em {
+    color: @text-color-secondary;
+    font-style: normal;
+  }
+}
+
+.paramEnums {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.paramEnum {
+  padding: 0 @spacing-xxs;
+  border-radius: @border-radius-sm;
+  background: @surface-3;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.paramChildren {
+  margin-top: @spacing-sm;
+  padding-top: @spacing-sm;
+  border-top: 1px dashed @hairline;
+}
+
+.paramChildrenLabel {
+  margin: 0 0 @spacing-xs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.paramList[data-depth='1'] .paramItem,
+.paramList[data-depth='2'] .paramItem {
+  background: @surface-2;
+}
+
+@media (max-width: @screen-lg) {
+  .detailRunLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .detailRunAside {
+    position: static;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: @screen-md) {
+  .heroTitle {
+    font-size: @font-size-display;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moreBtn {
+    transition: none;
+  }
+}

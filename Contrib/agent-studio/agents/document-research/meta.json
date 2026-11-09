@@ -1,0 +1,20 @@
+{
+  "id": "document-research",
+  "name": "文档解析与研究",
+  "description": "解析 PDF、Word 和表格文件，并结合联网搜索与商品资料完成核验和研究。",
+  "category": "知识工具",
+  "tags": ["PDF 解析", "表格分析", "联网核验"],
+  "kind": "chat",
+  "href": "/agents/document-research/chat/",
+  "status": "可使用",
+  "visual": "research",
+  "visualLabel": "DOCUMENT RESEARCH · 05",
+  "icon": "▤",
+  "accent": "#9a643d",
+  "welcomeMessage": "上传文档或提供文件 URL，并告诉我需要摘要、提取、比较还是外部资料核验。",
+  "starterPrompts": [
+    "解析这份 PDF，整理结构、核心观点和关键数据",
+    "比较这些文档的一致结论、冲突点和信息缺口",
+    "读取这份表格，并联网核验其中的市场与商品信息"
+  ]
+}

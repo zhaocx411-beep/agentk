@@ -1,0 +1,9 @@
+logging:
+  level:
+    com.kuaishou.agent.operation.backend: info
+    com.kuaishou.infra.boot: info
+
+# 海外生产 / PRT 配置，按实际 runner 数据源补充。
+# ksboot:
+#   data-sources:
+#     - name: agentOperationBackendOversea

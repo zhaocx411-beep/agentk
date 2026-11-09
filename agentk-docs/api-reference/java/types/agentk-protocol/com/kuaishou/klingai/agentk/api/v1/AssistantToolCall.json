@@ -1,0 +1,634 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "AssistantToolCall"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall",
+    "kind": "class",
+    "name": "AssistantToolCall",
+    "declaration": {
+      "text": "@Generated()public final class AssistantToolCall extends GeneratedMessage implements AssistantToolCallOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 48,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.AssistantToolCall"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getArgs-",
+        "name": "getArgs",
+        "declaration": {
+          "text": "public Struct getArgs()",
+          "references": [
+            {
+              "start": 14,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getArgs-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct args = 3 [json_name = \"args\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The args."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Struct",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getArgs()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolCallId-",
+        "name": "getToolCallId",
+        "declaration": {
+          "text": "public String getToolCallId()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolCallId-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_call_id = 1 [json_name = \"toolCallId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The toolCallId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolCallId()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolCallIdBytes-",
+        "name": "getToolCallIdBytes",
+        "declaration": {
+          "text": "public ByteString getToolCallIdBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolCallIdBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_call_id = 1 [json_name = \"toolCallId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for toolCallId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolCallIdBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolName-",
+        "name": "getToolName",
+        "declaration": {
+          "text": "public String getToolName()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 25,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolName-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_name = 2 [json_name = \"toolName\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The toolName."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolName()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolNameBytes-",
+        "name": "getToolNameBytes",
+        "declaration": {
+          "text": "public ByteString getToolNameBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-getToolNameBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_name = 2 [json_name = \"toolName\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for toolName."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolNameBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-hasArgs-",
+        "name": "hasArgs",
+        "declaration": {
+          "text": "public boolean hasArgs()",
+          "references": [
+            {
+              "start": 15,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-hasArgs-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct args = 3 [json_name = \"args\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the args field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasArgs()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AssistantToolCall.Builder newBuilder()",
+          "references": [
+            {
+              "start": 40,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilder-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AssistantToolCall.Builder newBuilder(AssistantToolCall prototype)",
+          "references": [
+            {
+              "start": 40,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilder-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-"
+            },
+            {
+              "start": 51,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(AssistantToolCall prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public AssistantToolCall.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 33,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public AssistantToolCall.Builder toBuilder()",
+          "references": [
+            {
+              "start": 33,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AssistantToolCall-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

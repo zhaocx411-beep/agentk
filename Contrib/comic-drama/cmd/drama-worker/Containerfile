@@ -1,0 +1,31 @@
+# comic-drama Temporal Worker 镜像（仅 pipeline 模式需要部署）。
+# 从仓库根目录构建：
+#   podman build -f cmd/drama-worker/Containerfile -t comic-drama-worker .
+
+FROM docker.io/library/golang:1.26-bookworm AS build
+
+WORKDIR /src
+
+# 私有 SDK 依赖公司 Go 代理；构建时可用 --build-arg 覆盖。
+ARG GOPROXY=https://goproxy.corp.kuaishou.com,direct
+ENV GOPROXY=${GOPROXY} GOSUMDB=off
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -trimpath -ldflags="-s -w" -o /out/comic-drama-worker ./cmd/drama-worker
+
+FROM docker.io/library/debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Temporal 经 KESS 自动发现，无需注入地址；需要 AGENTK_BASE_URL / AGENTK_API_KEY。
+COPY --from=build /out/comic-drama-worker /usr/local/bin/comic-drama-worker
+
+USER 65532:65532
+
+ENTRYPOINT ["/usr/local/bin/comic-drama-worker"]

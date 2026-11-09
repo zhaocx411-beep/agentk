@@ -1,0 +1,252 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "CancelExecutionResponse"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse",
+    "kind": "class",
+    "name": "CancelExecutionResponse",
+    "declaration": {
+      "text": "@Generated()public final class CancelExecutionResponse extends GeneratedMessage implements CancelExecutionResponseOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 54,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.CancelExecutionResponse"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static CancelExecutionResponse.Builder newBuilder()",
+          "references": [
+            {
+              "start": 46,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static CancelExecutionResponse.Builder newBuilder(CancelExecutionResponse prototype)",
+          "references": [
+            {
+              "start": 46,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-"
+            },
+            {
+              "start": 57,
+              "end": 80,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(CancelExecutionResponse prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public CancelExecutionResponse.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 39,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public CancelExecutionResponse.Builder toBuilder()",
+          "references": [
+            {
+              "start": 39,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CancelExecutionResponse-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

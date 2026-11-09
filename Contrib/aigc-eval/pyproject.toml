@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aigc-eval"
+version = "0.1.0"
+description = "AIGC 视频质检：模型调用走 AgentK 通道"
+requires-python = ">=3.12"
+# 判定主链路只用标准库，刻意不引三方依赖：质检要跑在各种受限环境里，
+# 少一个依赖就少一处装不上的风险。三方依赖全部收进 optional-dependencies，
+# 并在调用处做局部 import——见 xlsx（pandas）与 agentk（Client SDK）。
+dependencies = []
+
+[project.optional-dependencies]
+xlsx = ["pandas>=2.0", "openpyxl>=3.1"]
+# 走 agentk 通道（模型调用打 AgentK）才需要。SDK 只在公司内部源上，所以它不能
+# 进主依赖——gemini 通道要在受限环境里零三方依赖地跑起来。
+# providers/agentk_transport.py 因此是惰性 import，缺它只会在真正用 agentk
+# 通道时报一句「uv sync --extra agentk」，不会让整个包 import 不进来。
+agentk = ["ks-agentk-client"]
+# AgentK worker 形态才需要的依赖。刻意不进主依赖：纯 HTTP 部署要保持零三方依赖，
+# 而这一串只在公司内部源上，放进主依赖会让外部环境直接装不上。
+#
+# 钉 0.2.2 是因为它才是仓库内 agentk-sdk/python/worker 的当前版本，其
+# ``Tool(description, max_attempts)`` 与本 worker「一次失败不重试」的声明对得上。
+# ffmpeg-worker vendor 的那份 0.1.0 wheel 是旧 API（``Tool(name, mode)``，没有
+# max_attempts），换过去等于放弃重试次数控制，而一次质检失败重试会翻倍烧模型钱。
+#
+# pydantic 要显式写：worker 的输入输出模型直接用它，而 SDK 并不依赖它。
+worker = [
+    # 0.3.2 而不是 0.2.2：0.2.x 没有 Worker Lane，manifest 里连 laneId 字段都没有，
+    # 结果是**只能以基线身份注册**——开发机上起 worker 会去接 staging 的真实基线
+    # 流量。0.3.2 起才会按 KWS_LANE_ID / KWS_SERVICE_STAGE 决定轮询
+    # ``<queue>@<lane>`` 还是基础队列，本机联调才隔离得开。
+    "ks-agentk-worker==0.3.2",
+    # worker 进程里也要跑质检链路（要调 understand_media），所以 agentk extra
+    # 的内容在这里一并要；verify_agentk.py 用同一个包起 Pipeline。
+    "ks-agentk-client",
+    "pydantic>=2.9",
+]
+
+[project.scripts]
+aigc-eval = "aigc_eval.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aigc_eval"]
+
+# worker extra 的依赖（ks-agentk-worker 及其 infra-* 传递依赖）只在公司内部 PyPI 上，
+# 公网源解析不到。纯 HTTP 形态不装 worker extra，不受这里影响。
+[[tool.uv.index]]
+name = "kuaishou"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+default = true
+
+# 这些 override 与 ffmpeg-worker/pyproject.toml 同源，作用是顶掉 infra-* 里过时的
+# 版本上限。上限指向的老版本要么只有 cp39 及更早的轮子、要么只发 sdist，而它们的
+# 老 Cython 产物引用了 Python 3.11+ 已删除的 CPython 内部结构（longintrepr.h、
+# curexc_type、ob_digit），在现代 Python 上根本编不过。抬到新版本才有可用轮子。
+[tool.uv]
+override-dependencies = [
+    "cityhash==0.4.9",
+    "grpcio==1.76.0",
+    "lxml==6.0.2",
+    "lz4==4.4.5",
+    "python-snappy==0.7.3",
+    "setuptools<82",
+]
+
+# 两个包的 sdist 都缺构建期声明：dsc-auth 的 setup.py 直接 import setuptools_scm；
+# cchardet 需要 cython 从 .pyx 重新生成 C++（用它自带的旧产物会撞上上面那些已删除的
+# CPython 内部符号）。pip 的构建隔离环境里没有这两个包，所以必须在这里补。
+[tool.uv.extra-build-dependencies]
+dsc-auth = ["setuptools_scm"]
+cchardet = ["cython"]
+
+[tool.ruff]
+line-length = 110

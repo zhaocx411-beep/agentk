@@ -1,0 +1,12 @@
+# 构建上下文里只需要 pyproject / uv.lock / README / src / worker / deploy。
+# runtime/ 尤其要排掉：本地跑一段时间就有几百兆报告与抽帧，全量上传会让每次
+# 构建都先耗上几分钟传一堆镜像里根本用不到的东西。
+runtime/
+secrets/
+.venv/
+.git/
+.DS_Store
+__pycache__/
+*.pyc
+docs/
+tests/

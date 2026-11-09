@@ -1,0 +1,224 @@
+---
+sidebar_position: 3
+sidebar_label: 将 Capability 暴露为 Tool
+title: 将 Capability 暴露为 Tool
+description: 为已发布 Capability 增加可选 Tool 声明，让模型在 Agent Execution 中调用它
+slug: /worker/guides/tool
+pagination_prev: worker/guides/capability
+pagination_next: worker/guides/worker-lane
+---
+
+# 将 Capability 暴露为 Tool
+
+本文面向希望让模型调用已有 <Capability /> 的 Worker 开发者。Capability 发布后已经可以由 Client
+直接调用；本页在一个 Activity 实现的 Capability 上增加可选 <Tool /> 声明，再通过 <Session />
+<Profile /> 把这个额外暴露面提供给 Agent Loop。
+
+```text
+Worker 注册 Activity
+  → Worker SDK 发布 Capability（含可选 Tool 声明）
+  → Profile 选择 Capability
+  → 模型发起 Tool call
+  → AgentK 等待结果
+  → 结果进入 Event Log 和下一轮模型上下文
+```
+
+当前 Contributor Tool 都是 blocking：Agent Loop 等待 Activity 或 Workflow 完成，再继续下一轮。
+没有 background Tool 或独立 Job 生命周期。
+
+## 1. 确认 Capability 的实现类型
+
+Tool 可以由两种 Capability 实现：
+
+- **Activity**：适合一次服务调用、数据库操作或其他单段 I/O；
+- **Workflow**：适合需要持久等待、多个步骤或并发编排的能力。
+
+两者对模型呈现相同的 Tool 契约。区别只在 Worker 的实现与 Temporal 执行方式。
+
+Capability 无论由 Activity 还是 Workflow 实现，发布后都可以由 Client 作为 Pipeline 直接调用。
+如果任务需要由下游应用显式启动、独立显示进度和管理终态，直接使用这个调用面，不要为 Tool
+发明后台 Job。参见[实现并发布 Capability](/worker/guides/capability)。
+
+## 2. 定义 Activity
+
+下面的示例根据订单 ID 查询状态：
+
+```go
+type GetOrderInput struct {
+    OrderID string `json:"orderId"`
+}
+
+type GetOrderOutput struct {
+    Status string `json:"status"`
+}
+
+type OrderActivities struct {
+    Store OrderStore
+}
+
+func (a *OrderActivities) GetOrder(
+    ctx context.Context,
+    input GetOrderInput,
+) (GetOrderOutput, error) {
+    return a.Store.Get(ctx, input.OrderID)
+}
+```
+
+Activity 可以访问网络和数据库，并应按 Temporal 的至少一次执行语义处理重试和幂等。耗时
+Activity 需要 heartbeat，才能及时收到取消并提供恢复位置。
+
+## 3. 发布 Capability 并增加 Tool 声明
+
+安装 Go Worker SDK：
+
+```bash
+go get git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go@v0.3.2
+```
+
+使用 Worker SDK 连接 Temporal，并在自己的 task queue 上创建 Worker：
+
+```go
+temporalClient, err := agentktemporal.Dial(context.Background())
+if err != nil {
+    log.Fatal(err)
+}
+defer temporalClient.Close()
+
+w := agentkworker.New(
+    temporalClient,
+    "contrib.order-service",
+    temporalworker.Options{},
+)
+```
+
+先原生注册 Activity，再发布 Capability；`Tool` 字段只增加模型调用暴露面：
+
+```go
+activities := &OrderActivities{Store: store}
+
+w.RegisterActivityWithOptions(
+    activities.GetOrder,
+    activity.RegisterOptions{Name: "GetOrder"},
+)
+w.PublishActivity(sdkcapability.Capability{
+    ID:             "contrib.order.get_order",
+    TemporalType:   "GetOrder",
+    Description:    "查询订单的当前状态。",
+    InputSchema:    sdkcapability.SchemaOf[GetOrderInput](),
+    OutputSchema:   sdkcapability.SchemaOf[GetOrderOutput](),
+    TimeoutSeconds: 30,
+    Tool: &sdkcapability.Tool{
+        Description: "当用户询问指定订单的处理状态时使用。",
+        MaxAttempts: 3,
+    },
+})
+
+if err := w.Run(temporalworker.InterruptCh()); err != nil {
+    log.Fatal(err)
+}
+```
+
+Tool 的输入 Schema 直接使用 Capability 的 `InputSchema`。`Tool` 自身只增加模型选择用的说明和
+最大尝试次数，没有另一套 Capability Schema 或运行模式。省略 Tool 说明时，Worker SDK 使用
+Capability 说明；`MaxAttempts` 为 `0` 时使用 AgentK 的缺省策略。
+
+Worker SDK 在启动前校验 Manifest，并自动上报 Capability。Contributor Capability ID 必须符合
+`contrib.<owner>.<name>`，Worker task queue 不能是核心 `agentk`。
+
+## 4. 在 Profile 中启用 Tool
+
+```json title="profile.json"
+{
+  "defaultModel": "<chat-model>",
+  "system": "帮助用户查询订单状态。缺少订单 ID 时先询问。",
+  "tools": [
+    {
+      "capability": "contrib.order.get_order",
+      "name": "get_order",
+      "instructions": "只查询用户明确提供的订单 ID。"
+    }
+  ],
+  "toolDefaults": {},
+  "pipelines": [],
+  "maxToolRounds": 5
+}
+```
+
+Profile 中的 `name` 是模型看到的工具名，`capability` 是 Worker 发布的稳定 ID。
+`instructions` 描述当前场景下何时使用；公共输入 Schema 和执行超时仍由 Capability 维护。
+
+## 5. 从 Client 消费侧验证 Agent Execution
+
+下面的 Client SDK 调用属于消费侧验证，用于确认 Worker 发布的 Tool 可以被 Agent Loop 调用；
+它不是 Worker 的运行职责：
+
+```python
+created = await client.create_session(
+    service_pb.CreateSessionRequest(
+        title="order-support",
+        profile=profile,
+    )
+)
+
+started = await client.start_execution(
+    service_pb.StartExecutionRequest(
+        session_id=created.session.id,
+        input=Oneof(
+            "message",
+            service_pb.AgentMessageExecutionInput(
+                text="订单 20260818-42 处理到哪一步了？"
+            ),
+        ),
+    )
+)
+```
+
+模型选择 `get_order` 后，Event Log 中依次出现 Tool 请求、开始以及成功或失败事件：
+
+```text
+assistant_tool_call
+tool_exec_started
+tool_exec_succeeded | tool_exec_failed
+```
+
+成功结果进入下一轮模型上下文。Agent 可以据此生成自然语言回答；下游也可以直接从
+`tool_exec_succeeded.result` 读取结构化结果。
+
+## 6. 返回 Artifact
+
+会产生文件或媒体的 Tool 可以在输出中返回 `artifacts`：
+
+```go
+type RenderOutput struct {
+    Artifacts []sdkcapability.Artifact `json:"artifacts"`
+}
+```
+
+AgentK 保留原始 Tool 结果，并把合法 Artifact 提取到 `tool_exec_succeeded.artifacts`。Client 消费侧使用
+Client SDK 的 `WatchEvents` 或 `ListEvents` 读取，不需要调用独立 Artifact API。
+
+## 使用 Workflow 作为 Tool
+
+多步骤 Capability 可以使用与 Pipeline Guide 相同的方式注册和发布 Workflow，只需增加：
+
+```go
+Tool: &sdkcapability.Tool{
+    Description: "生成完整分镜短片。",
+},
+```
+
+AgentK 会等待 Workflow 完成，再把最终结果交给下一轮模型。Workflow 内部仍可使用
+`capability.Invoke` 组合其他能力，并遵守 Temporal 确定性要求。
+
+如果等待时间不适合一次 Agent 交互，使用 Pipeline 让下游显式控制运行；不要把 Tool 描述为
+“后台提交后自动恢复”的机制。
+
+## Tool 暴露检查
+
+1. 业务代码使用原生 Temporal Activity 或 Workflow；Worker 由 AgentK Worker SDK 创建。
+2. 原生注册提供执行体，`PublishActivity` 或 `PublishWorkflow` 发布统一 Capability 契约。
+3. Capability 默认可由 Client 直接调用；`Tool` 只增加模型调用暴露面。
+4. Tool 输入 Schema 来自 Capability；`Tool` 自身只声明说明和尝试次数，当前执行方式始终是 blocking。
+5. Profile 使用 Capability ID 选择 Tool，不包含 Temporal Type 或 task queue。
+6. Client 消费侧使用 Client SDK 启动 Agent Execution 并读取 Event，验证 Tool 暴露。
+7. 长流程需要调用方独立管理时，直接使用 Capability 的 Pipeline 调用面。

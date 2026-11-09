@@ -1,0 +1,447 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ListSessionsRequest"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest",
+    "kind": "class",
+    "name": "ListSessionsRequest",
+    "declaration": {
+      "text": "@Generated()public final class ListSessionsRequest extends GeneratedMessage implements ListSessionsRequestOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 50,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.ListSessionsRequest"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageSize-",
+        "name": "getPageSize",
+        "declaration": {
+          "text": "public int getPageSize()",
+          "references": [
+            {
+              "start": 11,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageSize-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "Pre",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Sessions are returned newest first.\nZero uses 20; values above 100 are limited to 100; negative values are invalid.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "int32 page_size = 1 [json_name = \"pageSize\"];"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The pageSize."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getPageSize()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageToken-",
+        "name": "getPageToken",
+        "declaration": {
+          "text": "public String getPageToken()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageToken-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string page_token = 2 [json_name = \"pageToken\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The pageToken."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPageToken()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageTokenBytes-",
+        "name": "getPageTokenBytes",
+        "declaration": {
+          "text": "public ByteString getPageTokenBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 35,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-getPageTokenBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string page_token = 2 [json_name = \"pageToken\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for pageToken."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getPageTokenBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ListSessionsRequest.Builder newBuilder()",
+          "references": [
+            {
+              "start": 42,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilder-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ListSessionsRequest.Builder newBuilder(ListSessionsRequest prototype)",
+          "references": [
+            {
+              "start": 42,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilder-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-"
+            },
+            {
+              "start": 53,
+              "end": 72,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(ListSessionsRequest prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public ListSessionsRequest.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 35,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public ListSessionsRequest.Builder toBuilder()",
+          "references": [
+            {
+              "start": 35,
+              "end": 44,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1666 @@
+{
+  "package": "agentk",
+  "view": "worker",
+  "modules": {
+    "agentk.worker": {
+      "source": {
+        "path": "worker/src/agentk/worker/__init__.py"
+      },
+      "members": {
+        "auto_heartbeat": {
+          "kind": "function",
+          "doc": "Keep the current async Temporal Activity heartbeating within the block.\n\nThe context manager records a heartbeat immediately, continues at an\ninterval derived from the Activity heartbeat timeout, and stops before the\nblock exits. Use it only from an asynchronous Temporal Activity.\n\nYields:\n    Control to the Activity body while automatic heartbeats are active.",
+          "source": {
+            "path": "worker/src/agentk/worker/_heartbeat.py",
+            "line": 12,
+            "endLine": 31
+          },
+          "decorators": [
+            "asynccontextmanager"
+          ],
+          "returns": {
+            "text": "AsyncIterator[None]",
+            "references": [
+              {
+                "start": 0,
+                "end": 13,
+                "target": "collections.abc.AsyncIterator"
+              }
+            ]
+          },
+          "async": true,
+          "parameters": [],
+          "definedAt": "agentk.worker._heartbeat.auto_heartbeat"
+        },
+        "invoke_capability": {
+          "kind": "function",
+          "doc": "Ask AgentK Core to resolve and call a capability from a Workflow.\n\nAgentK selects the registered Temporal workflow or activity for\ncapability_id. This function waits for the target to complete and\ndeserializes its result as result_type. Workflow targets receive a\ncancellation request when their parent closes; Activity targets wait for\ncancellation to complete.\n\nArgs:\n    capability_id: The globally unique ID of the capability to call.\n    input: Input passed to the resolved workflow or activity.\n    result_type: The Python type used to deserialize the result.\n\nReturns:\n    The deserialized capability result.",
+          "source": {
+            "path": "worker/src/agentk/worker/_routing.py",
+            "line": 15,
+            "endLine": 45
+          },
+          "returns": {
+            "text": "ResultT",
+            "references": [
+              {
+                "start": 0,
+                "end": 7,
+                "target": "agentk.worker._routing.ResultT"
+              }
+            ]
+          },
+          "async": true,
+          "parameters": [
+            {
+              "name": "capability_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "input",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "Any",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "typing.Any"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "result_type",
+              "kind": "keyword_only",
+              "annotation": {
+                "text": "type[ResultT]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "type"
+                  },
+                  {
+                    "start": 5,
+                    "end": 12,
+                    "target": "agentk.worker._routing.ResultT"
+                  }
+                ]
+              }
+            }
+          ],
+          "definedAt": "agentk.worker._routing.invoke_capability"
+        },
+        "Artifact": {
+          "kind": "class",
+          "doc": "An artifact produced by a capability.\n\nAttributes:\n    type: The kind of artifact, such as an image or video.\n    uri: The location of the artifact for downstream consumers.\n    description: An optional human-readable summary.\n    model: The model that produced the artifact, when applicable.\n    params: Optional model or generation parameters.",
+          "source": {
+            "path": "worker/src/agentk/worker/capability.py",
+            "line": 19,
+            "endLine": 35
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "type",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "uri",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "description",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "None"
+            },
+            {
+              "name": "model",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "None"
+            },
+            {
+              "name": "params",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "dict[str, Any] | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "dict"
+                  },
+                  {
+                    "start": 5,
+                    "end": 8,
+                    "target": "str"
+                  },
+                  {
+                    "start": 10,
+                    "end": 13,
+                    "target": "typing.Any"
+                  }
+                ]
+              },
+              "default": "None"
+            }
+          ],
+          "members": {
+            "type": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 31,
+                "endLine": 31
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "uri": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 32,
+                "endLine": 32
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "description": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 33,
+                "endLine": 33
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "value": "None"
+            },
+            "model": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 34,
+                "endLine": 34
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "value": "None"
+            },
+            "params": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 35,
+                "endLine": 35
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "dict[str, Any] | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "dict"
+                  },
+                  {
+                    "start": 5,
+                    "end": 8,
+                    "target": "str"
+                  },
+                  {
+                    "start": 10,
+                    "end": 13,
+                    "target": "typing.Any"
+                  }
+                ]
+              },
+              "value": "None"
+            }
+          },
+          "definedAt": "agentk.worker.capability.Artifact"
+        },
+        "Capability": {
+          "kind": "class",
+          "doc": "A Temporal workflow or activity published by an AgentK Worker.\n\nThe publish method supplies the implementation kind, and the Worker supplies\nthe task queue. The Worker snapshots and validates this declaration before\nit starts.\n\nAttributes:\n    id: The globally unique capability ID. Contributor Workers use\n        contrib.<owner>.<name>; IDs contain lowercase letters, digits, and\n        underscores and are at most 128 characters.\n    temporal_type: The registered Temporal workflow or activity type.\n    description: A user-facing description of the capability.\n    input_schema: The JSON Schema for input. Its top-level type must be\n        object.\n    output_schema: The JSON Schema for the capability result.\n    timeout: The maximum invocation duration. It must contain whole seconds\n        and be greater than zero and no more than 24 hours.\n    tool: Tool exposure settings, or None when the capability should not be\n        presented as a Tool.",
+          "source": {
+            "path": "worker/src/agentk/worker/capability.py",
+            "line": 53,
+            "endLine": 82
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "temporal_type",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "description",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "input_schema",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "JsonObject",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 10,
+                    "target": "agentk.worker.capability.JsonObject"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "output_schema",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "JsonObject",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 10,
+                    "target": "agentk.worker.capability.JsonObject"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "timeout",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "timedelta",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 9,
+                    "target": "datetime.timedelta"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "tool",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "Tool | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "agentk.worker.capability.Tool"
+                  }
+                ]
+              },
+              "default": "None"
+            }
+          ],
+          "members": {
+            "id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 76,
+                "endLine": 76
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "temporal_type": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 77,
+                "endLine": 77
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "description": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 78,
+                "endLine": 78
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "input_schema": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 79,
+                "endLine": 79
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "JsonObject",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 10,
+                    "target": "agentk.worker.capability.JsonObject"
+                  }
+                ]
+              }
+            },
+            "output_schema": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 80,
+                "endLine": 80
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "JsonObject",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 10,
+                    "target": "agentk.worker.capability.JsonObject"
+                  }
+                ]
+              }
+            },
+            "timeout": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 81,
+                "endLine": 81
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "timedelta",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 9,
+                    "target": "datetime.timedelta"
+                  }
+                ]
+              }
+            },
+            "tool": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 82,
+                "endLine": 82
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "Tool | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "agentk.worker.capability.Tool"
+                  }
+                ]
+              },
+              "value": "None"
+            }
+          },
+          "definedAt": "agentk.worker.capability.Capability"
+        },
+        "Tool": {
+          "kind": "class",
+          "doc": "Settings for exposing a capability as a model-callable Tool.\n\nAttributes:\n    description: Text used for Tool selection. None inherits the capability\n        description.\n    max_attempts: The maximum number of Tool attempts. None or zero leaves\n        the value unspecified; negative values are invalid.",
+          "source": {
+            "path": "worker/src/agentk/worker/capability.py",
+            "line": 38,
+            "endLine": 50
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "description",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "None"
+            },
+            {
+              "name": "max_attempts",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "int | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              },
+              "default": "None"
+            }
+          ],
+          "members": {
+            "description": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 49,
+                "endLine": 49
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "value": "None"
+            },
+            "max_attempts": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/capability.py",
+                "line": 50,
+                "endLine": 50
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "int | None",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              },
+              "value": "None"
+            }
+          },
+          "definedAt": "agentk.worker.capability.Tool"
+        },
+        "InvocationKind": {
+          "kind": "class",
+          "source": {
+            "path": "worker/src/agentk/worker/invocation.py",
+            "line": 43,
+            "endLine": 45
+          },
+          "bases": [
+            {
+              "text": "StrEnum",
+              "references": [
+                {
+                  "start": 0,
+                  "end": 7,
+                  "target": "enum.StrEnum"
+                }
+              ]
+            }
+          ],
+          "members": {
+            "PIPELINE": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 44,
+                "endLine": 44
+              },
+              "scope": "instance",
+              "value": "'pipeline'"
+            },
+            "TOOL": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 45,
+                "endLine": 45
+              },
+              "scope": "instance",
+              "value": "'tool'"
+            }
+          },
+          "definedAt": "agentk.worker.invocation.InvocationKind"
+        },
+        "Meta": {
+          "kind": "class",
+          "source": {
+            "path": "worker/src/agentk/worker/invocation.py",
+            "line": 48,
+            "endLine": 67
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "session_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "int",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "session",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "app_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_kind",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "InvocationKind",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 14,
+                    "target": "agentk.worker.invocation.InvocationKind"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_name",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "callback_task_queue",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            }
+          ],
+          "members": {
+            "session_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 50,
+                "endLine": 50
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "int",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              }
+            },
+            "session": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 51,
+                "endLine": 51
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "app_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 52,
+                "endLine": 52
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "invocation_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 53,
+                "endLine": 53
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "invocation_kind": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 54,
+                "endLine": 54
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "InvocationKind",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 14,
+                    "target": "agentk.worker.invocation.InvocationKind"
+                  }
+                ]
+              }
+            },
+            "invocation_name": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 55,
+                "endLine": 55
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "callback_task_queue": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 56,
+                "endLine": 56
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "to_payload": {
+              "kind": "function",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 58,
+                "endLine": 67
+              },
+              "returns": {
+                "text": "dict[str, JsonValue]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "dict"
+                  },
+                  {
+                    "start": 5,
+                    "end": 8,
+                    "target": "str"
+                  },
+                  {
+                    "start": 10,
+                    "end": 19,
+                    "target": "agentk.worker.invocation.JsonValue"
+                  }
+                ]
+              },
+              "parameters": []
+            }
+          },
+          "definedAt": "agentk.worker.invocation.Meta"
+        },
+        "ReportProgressInput": {
+          "kind": "class",
+          "source": {
+            "path": "worker/src/agentk/worker/invocation.py",
+            "line": 70,
+            "endLine": 110
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "session_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "int",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_kind",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "InvocationKind",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 14,
+                    "target": "agentk.worker.invocation.InvocationKind"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "invocation_name",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "step_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "message",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "''"
+            },
+            {
+              "name": "data",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "JsonValue",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 9,
+                    "target": "agentk.worker.invocation.JsonValue"
+                  }
+                ]
+              },
+              "default": "None"
+            }
+          ],
+          "members": {
+            "session_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 72,
+                "endLine": 72
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "int",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "int"
+                  }
+                ]
+              }
+            },
+            "invocation_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 73,
+                "endLine": 73
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "invocation_kind": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 74,
+                "endLine": 74
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "InvocationKind",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 14,
+                    "target": "agentk.worker.invocation.InvocationKind"
+                  }
+                ]
+              }
+            },
+            "invocation_name": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 75,
+                "endLine": 75
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "step_id": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 76,
+                "endLine": 76
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            "message": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 77,
+                "endLine": 77
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "value": "''"
+            },
+            "data": {
+              "kind": "attribute",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 78,
+                "endLine": 78
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "JsonValue",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 9,
+                    "target": "agentk.worker.invocation.JsonValue"
+                  }
+                ]
+              },
+              "value": "None"
+            },
+            "from_meta": {
+              "kind": "function",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 80,
+                "endLine": 96
+              },
+              "decorators": [
+                "classmethod"
+              ],
+              "returns": {
+                "text": "ReportProgressInput",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 19,
+                    "target": "agentk.worker.invocation.ReportProgressInput"
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "name": "meta",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "Meta",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 4,
+                        "target": "agentk.worker.invocation.Meta"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "step_id",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "str",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 3,
+                        "target": "str"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "message",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "str",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 3,
+                        "target": "str"
+                      }
+                    ]
+                  },
+                  "default": "''"
+                },
+                {
+                  "name": "data",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "JsonValue",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 9,
+                        "target": "agentk.worker.invocation.JsonValue"
+                      }
+                    ]
+                  },
+                  "default": "None"
+                }
+              ]
+            },
+            "to_payload": {
+              "kind": "function",
+              "source": {
+                "path": "worker/src/agentk/worker/invocation.py",
+                "line": 98,
+                "endLine": 110
+              },
+              "returns": {
+                "text": "dict[str, JsonValue]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "dict"
+                  },
+                  {
+                    "start": 5,
+                    "end": 8,
+                    "target": "str"
+                  },
+                  {
+                    "start": 10,
+                    "end": 19,
+                    "target": "agentk.worker.invocation.JsonValue"
+                  }
+                ]
+              },
+              "parameters": []
+            }
+          },
+          "definedAt": "agentk.worker.invocation.ReportProgressInput"
+        },
+        "current_meta": {
+          "kind": "function",
+          "doc": "Return AgentK invocation coordinates for the running workflow, if any.",
+          "source": {
+            "path": "worker/src/agentk/worker/invocation.py",
+            "line": 113,
+            "endLine": 122
+          },
+          "returns": {
+            "text": "Meta | None",
+            "references": [
+              {
+                "start": 0,
+                "end": 4,
+                "target": "agentk.worker.invocation.Meta"
+              }
+            ]
+          },
+          "parameters": [],
+          "definedAt": "agentk.worker.invocation.current_meta"
+        },
+        "report_progress": {
+          "kind": "function",
+          "doc": "Record progress for the current AgentK invocation.\n\nThe call waits for the progress event to be accepted. AgentK uses step_id to\nmake retries idempotent within the current invocation. When the Workflow was\nnot invoked by AgentK, this function does nothing.\n\nArgs:\n    step_id: The stable identifier for this progress step.\n    message: An optional human-readable progress message.\n    data: Optional JSON-compatible progress data.",
+          "source": {
+            "path": "worker/src/agentk/worker/invocation.py",
+            "line": 125,
+            "endLine": 157
+          },
+          "returns": {
+            "text": "None"
+          },
+          "async": true,
+          "parameters": [
+            {
+              "name": "step_id",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "message",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "''"
+            },
+            {
+              "name": "data",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "JsonValue",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 9,
+                    "target": "agentk.worker.invocation.JsonValue"
+                  }
+                ]
+              },
+              "default": "None"
+            }
+          ],
+          "definedAt": "agentk.worker.invocation.report_progress"
+        },
+        "connect_temporal": {
+          "kind": "function",
+          "doc": "Connect to the AgentK Temporal namespace through KESS discovery.\n\nArgs:\n    data_converter: The Temporal payload converter configuration used by\n        workflows and activities.\n\nReturns:\n    A Temporal client connected to the AgentK namespace and suitable for an\n    AgentK Worker.\n\nRaises:\n    RuntimeError: If KESS does not return a Temporal endpoint.",
+          "source": {
+            "path": "worker/src/agentk/worker/temporal.py",
+            "line": 72,
+            "endLine": 97
+          },
+          "returns": {
+            "text": "Client",
+            "references": [
+              {
+                "start": 0,
+                "end": 6,
+                "target": "temporalio.client.Client"
+              }
+            ]
+          },
+          "async": true,
+          "parameters": [
+            {
+              "name": "data_converter",
+              "kind": "keyword_only",
+              "annotation": {
+                "text": "DataConverter",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 13,
+                    "target": "temporalio.converter.DataConverter"
+                  }
+                ]
+              },
+              "default": "DataConverter.default"
+            }
+          ],
+          "definedAt": "agentk.worker.temporal.connect"
+        },
+        "Worker": {
+          "kind": "class",
+          "doc": "A Temporal Worker that publishes selected AgentK capabilities.\n\nRegister workflow and activity implementations through the native Temporal\nconstructor arguments, then call publish_workflow or publish_activity before\nrunning the Worker. Publishing a capability does not register its\nimplementation.\n\nRunning the Worker freezes and validates its capability declarations. The\nWorker announces those declarations in the background until it stops;\nannouncement failures are retried without stopping workflow or activity\nprocessing.\n\nArgs:\n    client: The Temporal client used by the Worker.\n    task_queue: The contributor-owned Temporal task queue. The AgentK core\n        task queue cannot be used.\n    workflows: Workflow implementations registered with Temporal.\n    activities: Activity implementations registered with Temporal.\n    **worker_options: Additional native Temporal Worker options.",
+          "source": {
+            "path": "worker/src/agentk/worker/worker.py",
+            "line": 23,
+            "endLine": 212
+          },
+          "bases": [
+            {
+              "text": "TemporalWorker",
+              "references": [
+                {
+                  "start": 0,
+                  "end": 14,
+                  "target": "temporalio.worker.Worker"
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "name": "client",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "Client",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 6,
+                    "target": "temporalio.client.Client"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "task_queue",
+              "kind": "keyword_only",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "workflows",
+              "kind": "keyword_only",
+              "annotation": {
+                "text": "Sequence[type]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 8,
+                    "target": "collections.abc.Sequence"
+                  },
+                  {
+                    "start": 9,
+                    "end": 13,
+                    "target": "type"
+                  }
+                ]
+              },
+              "default": "()"
+            },
+            {
+              "name": "activities",
+              "kind": "keyword_only",
+              "annotation": {
+                "text": "Sequence[Callable]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 8,
+                    "target": "collections.abc.Sequence"
+                  },
+                  {
+                    "start": 9,
+                    "end": 17,
+                    "target": "collections.abc.Callable"
+                  }
+                ]
+              },
+              "default": "()"
+            },
+            {
+              "name": "worker_options",
+              "kind": "variadic_keyword",
+              "annotation": {
+                "text": "Any",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "typing.Any"
+                  }
+                ]
+              },
+              "default": "{}"
+            }
+          ],
+          "members": {
+            "publish_workflow": {
+              "kind": "function",
+              "doc": "Publish an already registered workflow as an AgentK capability.\n\nArgs:\n    capability: The public contract for the registered workflow.\n\nRaises:\n    RuntimeError: If the Worker has already started and its capability\n        declarations have been frozen.",
+              "source": {
+                "path": "worker/src/agentk/worker/worker.py",
+                "line": 73,
+                "endLine": 84
+              },
+              "returns": {
+                "text": "None"
+              },
+              "parameters": [
+                {
+                  "name": "capability",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "Capability",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 10,
+                        "target": "agentk.worker.capability.Capability"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "publish_activity": {
+              "kind": "function",
+              "doc": "Publish an already registered activity as an AgentK capability.\n\nArgs:\n    capability: The public contract for the registered activity.\n\nRaises:\n    RuntimeError: If the Worker has already started and its capability\n        declarations have been frozen.",
+              "source": {
+                "path": "worker/src/agentk/worker/worker.py",
+                "line": 86,
+                "endLine": 97
+              },
+              "returns": {
+                "text": "None"
+              },
+              "parameters": [
+                {
+                  "name": "capability",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "Capability",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 10,
+                        "target": "agentk.worker.capability.Capability"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "run": {
+              "kind": "function",
+              "doc": "Validate, publish, and run the Worker until it is shut down.\n\nCapability publication and KESS endpoint refresh stop when the native\nTemporal Worker returns.",
+              "source": {
+                "path": "worker/src/agentk/worker/worker.py",
+                "line": 99,
+                "endLine": 112
+              },
+              "returns": {
+                "text": "None"
+              },
+              "async": true,
+              "parameters": []
+            },
+            "shutdown": {
+              "kind": "function",
+              "doc": "Stop capability publication before shutting down the Worker.",
+              "source": {
+                "path": "worker/src/agentk/worker/worker.py",
+                "line": 114,
+                "endLine": 118
+              },
+              "returns": {
+                "text": "None"
+              },
+              "async": true,
+              "parameters": []
+            },
+            "__aenter__": {
+              "kind": "function",
+              "doc": "Validate and freeze capabilities before entering the Worker context.",
+              "source": {
+                "path": "worker/src/agentk/worker/worker.py",
+                "line": 120,
+                "endLine": 125
+              },
+              "returns": {
+                "text": "Self",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "typing.Self"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": []
+            }
+          },
+          "definedAt": "agentk.worker.worker.Worker"
+        }
+      }
+    }
+  }
+}

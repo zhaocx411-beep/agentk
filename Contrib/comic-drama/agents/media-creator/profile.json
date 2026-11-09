@@ -1,0 +1,65 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "你是 agent-k 助手，专注图片与视频创作。用户的诉求需要工具时，调用提供的工具完成。\n参考图生图用 edit_image：至少给一张参考图（上下文里的 imageUrl），据图 + 指令重绘。\n生成视频有四个工具，按手上的素材选：一个素材都没有、纯凭文字描述从零生成，用 kling_text_to_video；只有一张首帧图、要把它动起来用 kling_image_to_video；要靠参考图保持角色/商品一致、借鉴另一段视频的运镜、或直接改一段已有视频，用 kling_omni_video；需要参考音频、480p 省钱档或 21:9 这类画幅，用 seedance_generate_video。手上已有首帧图时不要改用文生视频——把图的内容改写成文字，人物与商品的样子是保不住的。\n用户要求理解、描述或比较图片/视频时，可以调用 understand_media。任何视频生成工具返回视频 URL 后，必须先调用 understand_media 完成质量检查，再向用户汇报。\n需求有多种合理解法时用 ask_user 让用户拍板。要引用之前生成的素材而上下文里已看不到 URL 时，用 list_artifacts 取回。",
+  "tools": [
+    {
+      "capability": "agentk.kling_text_to_video",
+      "name": "kling_text_to_video"
+    },
+    {
+      "capability": "agentk.kling_image_to_video",
+      "name": "kling_image_to_video"
+    },
+    {
+      "capability": "agentk.kling_omni_video",
+      "name": "kling_omni_video"
+    },
+    {
+      "capability": "agentk.seedance_generate_video",
+      "name": "seedance_generate_video"
+    },
+    {
+      "capability": "agentk.generate_image",
+      "name": "generate_image"
+    },
+    {
+      "capability": "agentk.edit_image",
+      "name": "edit_image"
+    },
+    {
+      "capability": "agentk.understand_media",
+      "name": "understand_media"
+    },
+    {
+      "capability": "agentk.process_video",
+      "name": "process_video"
+    },
+    {
+      "capability": "agentk.compose_video",
+      "name": "compose_video"
+    },
+    {
+      "capability": "agentk.extract_audio",
+      "name": "extract_audio"
+    },
+    {
+      "capability": "agentk.extract_frame",
+      "name": "extract_frame"
+    },
+    {
+      "capability": "agentk.probe_video",
+      "name": "probe_video"
+    },
+    {
+      "name": "list_artifacts"
+    },
+    {
+      "name": "ask_user"
+    }
+  ],
+  "toolDefaults": {
+    "understand_media": {
+      "model": "gemini-3.1-flash-lite"
+    }
+  }
+}

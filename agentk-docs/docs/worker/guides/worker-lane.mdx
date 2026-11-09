@@ -1,0 +1,109 @@
+---
+sidebar_position: 4
+sidebar_label: 配置 Worker Lane
+title: 配置 Worker Lane
+description: 配置 Worker 所属泳道，并了解本地启动与部署环境中的自动行为
+slug: /worker/guides/worker-lane
+pagination_prev: worker/guides/tool
+pagination_next: worker/sdk/go
+---
+
+# 配置 Worker Lane
+
+本页说明 Worker 如何加入基线或指定泳道。泳道的用途、局部覆盖和基线回落见
+[Request Lane：共享环境中的任务路由隔离](/concepts/request-lane)。
+
+## Worker Lane 是什么
+
+Worker Lane 是 Worker 进程启动时确定的固定泳道标识。它告诉 AgentK：这个 Worker 发布的
+Capability 属于基线还是某个指定泳道。
+
+同一个 Capability 可以同时由基线 Worker 和多个泳道 Worker 提供。AgentK 根据请求携带的泳道
+选择对应实现；目标泳道没有提供某个 Capability 时，继续使用基线实现。
+
+Worker SDK 在创建 Worker 时读取一次 Worker Lane。环境变量修改后，需要重启 Worker 才会生效。
+
+## Worker Lane 的判定规则
+
+Worker SDK 按以下顺序确定 Worker Lane：
+
+| 环境 | 判定结果 |
+| --- | --- |
+| 设置了非空的 `KWS_LANE_ID` | 加入该泳道 |
+| 未设置 `KWS_LANE_ID`，但设置了非空的 `KWS_SERVICE_STAGE` | 作为基线 Worker 启动 |
+| 两个变量都未设置 | 自动生成本地隔离泳道 |
+
+本文所说的“部署环境”，就是设置了 `KWS_SERVICE_STAGE` 的运行环境。最典型的例子是天琴容器云：
+平台启动服务容器时会注入这个变量，因此未指定 `KWS_LANE_ID` 的 Worker 默认属于基线。
+
+`KWS_LANE_ID` 优先级更高。即使已经设置 `KWS_SERVICE_STAGE`，只要同时提供有效的
+`KWS_LANE_ID`，Worker 就会加入指定泳道。
+
+## 本地启动
+
+本地直接启动 Worker 时，默认不会设置 `KWS_SERVICE_STAGE`。在 `KWS_LANE_ID` 也为空的情况下，
+Worker SDK 会根据操作系统用户名和主机名生成稳定的本地泳道，例如：
+
+```text
+local-zhangsan-a1b2c3d4e5f6
+```
+
+同一用户在同一台机器上会得到相同值，不同用户或机器不会共享。Worker 启动日志会打印最终的
+`lane`，发起测试请求时直接使用这个值即可。
+
+如果运行环境无法取得用户名或主机名，Worker 会拒绝启动；此时可以显式设置 `KWS_LANE_ID`。
+
+本地启动也可以手工设置 `KWS_SERVICE_STAGE`，获得与部署环境相同的判定效果：
+
+```bash
+export KWS_SERVICE_STAGE=STAGING
+```
+
+此时不设置 `KWS_LANE_ID`，Worker 会作为基线实例启动；同时设置 `KWS_LANE_ID`，则加入指定泳道。
+本地开发默认不设置 `KWS_SERVICE_STAGE`，以免误连基线流量。
+
+## 部署到指定泳道
+
+在天琴容器云等部署环境中，为 Worker 增加 `KWS_LANE_ID`：
+
+```bash
+export KWS_LANE_ID='dev/zhangsan'
+```
+
+泳道值必须是 1 到 256 字节的可见 ASCII，不能包含空格。非法值会使 Worker 启动失败。
+
+同一泳道内的 Worker 使用相同 `KWS_LANE_ID`。不同开发者或不同联调任务使用不同值，避免测试
+流量相互影响。
+
+## Worker SDK 自动完成的工作
+
+接入方仍按正常流程注册 Temporal Workflow 或 Activity，并声明要发布的 Capability：
+
+```text
+注册 Workflow / Activity
+  → PublishWorkflow / PublishActivity
+  → 启动 AgentK Worker
+```
+
+Worker 启动后，SDK 会自动：
+
+- 确定 Worker Lane；
+- 以该泳道身份发布 Capability，并持续刷新注册租约；
+- 配合 AgentK 完成同泳道路由和基线回落；
+- 在启动日志中记录最终 `lane`，便于联调确认。
+
+接入方不需要维护泳道版 Capability ID，也不需要复制 Profile。Workflow 和 Activity 的执行体注册、
+Capability 契约声明仍由业务代码完成。
+
+## 验证泳道隔离
+
+可以准备一个基线 Worker 和一个泳道 Worker，两者发布相同的 Capability，并让测试实现返回不同的
+标记。然后完成三组检查：
+
+1. 检查启动日志：基线 Worker 显示 `lane=baseline`，泳道 Worker 显示目标泳道值；
+2. 发起普通请求，结果应来自基线 Worker；
+3. 发起带目标泳道的请求，结果应来自泳道 Worker。
+
+再调用一个没有泳道实现的 Capability，可以确认它仍由基线 Worker 处理。如何从 KESS Debug、
+HTTP Header 或测试代码发起泳道请求，见
+[在 Client 请求中使用 Request Lane](/client/guides/request-lane)。

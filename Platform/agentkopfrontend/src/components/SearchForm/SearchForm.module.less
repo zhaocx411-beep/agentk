@@ -1,0 +1,19 @@
+.searchForm {
+  margin-bottom: @spacing-md;
+  padding: @spacing-md;
+  background: @canvas;
+  border-radius: @border-radius-lg;
+}
+
+// --- 移动端适配：表单项垂直堆叠 ---
+@media (max-width: @screen-sm) {
+  .searchForm {
+    padding: @spacing-mobile;
+
+    :global(.ant-form-inline .ant-form-item) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: @spacing-sm;
+    }
+  }
+}

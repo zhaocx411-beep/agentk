@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Converse API 测试台</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --panel: #ffffff; --border: #e3e5e8;
+    --text: #1c1e21; --muted: #8a8f98; --accent: #2563eb;
+    --user-bubble: #2563eb; --assistant-bubble: #ffffff;
+    --ok: #16a34a; --warn: #d97706; --err: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.6 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    display: flex; flex-direction: column; height: 100vh;
+  }
+  header {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 10px 16px; background: var(--panel);
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 15px; margin: 0 12px 0 0; }
+  header label { color: var(--muted); font-size: 12px; }
+  select, header input[type=number] {
+    padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px;
+    background: #fff; font-size: 13px;
+  }
+  header input[type=number] { width: 60px; }
+  .meta { font-size: 12px; color: var(--muted); margin-left: auto; text-align: right; }
+  .meta code { background: var(--bg); padding: 1px 5px; border-radius: 4px; }
+  button {
+    padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px;
+    background: #fff; cursor: pointer; font-size: 13px;
+  }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.primary:hover { opacity: .9; color: #fff; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  main { flex: 1; overflow-y: auto; padding: 20px 0; }
+  .thread { max-width: 780px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 14px; }
+  .msg { display: flex; flex-direction: column; max-width: 85%; }
+  .msg.user { align-self: flex-end; align-items: flex-end; }
+  .msg.assistant { align-self: flex-start; align-items: flex-start; }
+  .bubble {
+    padding: 10px 14px; border-radius: 12px; white-space: pre-wrap; word-break: break-word;
+  }
+  .msg.user .bubble { background: var(--user-bubble); color: #fff; border-bottom-right-radius: 4px; }
+  .msg.assistant .bubble {
+    background: var(--assistant-bubble); border: 1px solid var(--border);
+    border-bottom-left-radius: 4px;
+  }
+  .tag { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .tag .rebuilt { color: var(--warn); font-weight: 600; }
+  .artifacts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .artifacts img, .artifacts video { max-width: 240px; max-height: 240px; border-radius: 8px; border: 1px solid var(--border); }
+  .artifacts a { font-size: 12px; color: var(--accent); }
+  .questions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .questions button { font-size: 12px; padding: 4px 10px; border-radius: 999px; }
+  .status-line {
+    align-self: center; font-size: 12px; color: var(--muted);
+    display: flex; align-items: center; gap: 8px; white-space: pre-wrap;
+    max-width: 780px;
+  }
+  .status-line.error { color: var(--err); }
+  .spinner {
+    width: 12px; height: 12px; border: 2px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  footer {
+    background: var(--panel); border-top: 1px solid var(--border); padding: 12px 16px;
+  }
+  .composer { max-width: 780px; margin: 0 auto; display: flex; gap: 10px; }
+  textarea {
+    flex: 1; resize: none; padding: 10px 12px; border: 1px solid var(--border);
+    border-radius: 8px; font: inherit; min-height: 44px; max-height: 160px;
+  }
+  textarea:focus { outline: none; border-color: var(--accent); }
+  .empty { text-align: center; color: var(--muted); margin-top: 80px; }
+  .empty p { margin: 4px 0; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Converse 测试台</h1>
+  <label>能力 <select id="capability"></select></label>
+  <label><input id="stream" type="checkbox" checked> SSE 流式</label>
+  <label>wait <input id="wait" type="number" value="25" min="0" max="110">s</label>
+  <button id="new-chat">新对话</button>
+  <div class="meta">
+    <div>conversationId: <code id="conv-id">（未开始）</code></div>
+    <div id="stats">0 条消息</div>
+  </div>
+</header>
+
+<main><div class="thread" id="thread"></div></main>
+
+<footer>
+  <div class="composer">
+    <textarea id="input" placeholder="输入消息，Enter 发送，Shift+Enter 换行"></textarea>
+    <button id="send" class="primary">发送</button>
+  </div>
+</footer>
+
+<script>
+"use strict";
+// 协议实现严格对齐 docs/converse-api.md：
+// 本页面（模拟前端）持有全量对话记录，始终打统一入口 /v1/agents/assistant/converse。
+// 能力下拉只作为 selectedAgent 提示词标记，不换 agent / 不换会话。
+// reply 逐字节原样保存；默认消费 SSE delta，也可关闭后验证 JSON 长轮询兼容路径。
+
+const ROUTER = "assistant";
+
+const els = {
+  capability: document.getElementById("capability"),
+  stream: document.getElementById("stream"),
+  wait: document.getElementById("wait"),
+  newChat: document.getElementById("new-chat"),
+  convId: document.getElementById("conv-id"),
+  stats: document.getElementById("stats"),
+  thread: document.getElementById("thread"),
+  input: document.getElementById("input"),
+  send: document.getElementById("send"),
+};
+
+// state.messages 是唯一真相源；同时存 localStorage，刷新页面后可继续对话，
+// 也能用来验证"服务端重启 → 全量重建"路径。
+const state = {
+  conversationId: "",
+  messages: [],          // [{role, content}]
+  extras: [],            // 与 messages 对齐的展示附加信息（artifacts 等）
+  busy: false,
+  lastResponse: null,
+};
+
+function storageKey() { return "converse-test/" + ROUTER; }
+
+function saveState() {
+  localStorage.setItem(storageKey(), JSON.stringify({
+    conversationId: state.conversationId,
+    messages: state.messages,
+    extras: state.extras,
+  }));
+}
+
+function loadState() {
+  state.conversationId = "";
+  state.messages = [];
+  state.extras = [];
+  state.lastResponse = null;
+  try {
+    const raw = localStorage.getItem(storageKey());
+    if (raw) {
+      const saved = JSON.parse(raw);
+      state.conversationId = saved.conversationId || "";
+      state.messages = saved.messages || [];
+      state.extras = saved.extras || [];
+    }
+  } catch (_) { /* 损坏的存档直接从零开始 */ }
+}
+
+async function loadAgents() {
+  const response = await fetch("/v1/agents");
+  const data = await response.json();
+  els.capability.innerHTML = "";
+  const auto = document.createElement("option");
+  auto.value = "";
+  auto.textContent = "自动路由";
+  els.capability.appendChild(auto);
+  for (const agent of data.agents || []) {
+    if (agent.id === ROUTER) continue;
+    const option = document.createElement("option");
+    option.value = agent.id;
+    option.textContent = agent.name + " (" + agent.id + ")";
+    els.capability.appendChild(option);
+  }
+  loadState();
+  render();
+}
+
+function render(statusLine) {
+  els.convId.textContent = state.conversationId || "（未开始）";
+  els.stats.textContent = state.messages.length + " 条消息";
+  els.thread.innerHTML = "";
+
+  if (state.messages.length === 0 && !statusLine) {
+    const empty = document.createElement("div");
+    empty.className = "empty";
+    empty.innerHTML = "<p>本页面模拟\"前端持有全量记录\"的接入方：</p>" +
+      "<p>每次请求都发送完整对话历史；记录同时存在浏览器 localStorage。</p>" +
+      "<p>可以中途重启 apiserver 再继续发消息，观察 rebuilt 标记。</p>";
+    els.thread.appendChild(empty);
+  }
+
+  state.messages.forEach((message, index) => {
+    const wrap = document.createElement("div");
+    wrap.className = "msg " + message.role;
+    const bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.textContent = message.content;
+    wrap.appendChild(bubble);
+
+    const extra = state.extras[index] || {};
+    if (extra.artifacts && extra.artifacts.length) {
+      wrap.appendChild(renderArtifacts(extra.artifacts));
+    }
+    if (extra.tag) {
+      const tag = document.createElement("div");
+      tag.className = "tag";
+      tag.innerHTML = extra.tag;
+      wrap.appendChild(tag);
+    }
+    els.thread.appendChild(wrap);
+  });
+
+  const last = state.lastResponse;
+  if (last && last.status === "awaiting_user" &&
+      last.pendingQuestions && last.pendingQuestions.length) {
+    const box = document.createElement("div");
+    box.className = "msg assistant";
+    const questions = document.createElement("div");
+    questions.className = "questions";
+    for (const question of last.pendingQuestions) {
+      for (const optionText of question.options || []) {
+        const button = document.createElement("button");
+        button.textContent = optionText;
+        button.onclick = () => { els.input.value = optionText; els.input.focus(); };
+        questions.appendChild(button);
+      }
+    }
+    box.appendChild(questions);
+    els.thread.appendChild(box);
+  }
+
+  if (statusLine) {
+    const line = document.createElement("div");
+    line.className = "status-line" + (statusLine.error ? " error" : "");
+    if (statusLine.spinner) {
+      const spinner = document.createElement("div");
+      spinner.className = "spinner";
+      line.appendChild(spinner);
+    }
+    const text = document.createElement("span");
+    text.textContent = statusLine.text;
+    line.appendChild(text);
+    els.thread.appendChild(line);
+  }
+  els.thread.parentElement.scrollTop = els.thread.parentElement.scrollHeight;
+}
+
+function renderArtifacts(artifacts) {
+  const box = document.createElement("div");
+  box.className = "artifacts";
+  for (const artifact of artifacts) {
+    if (!artifact.uri) continue;
+    if (artifact.type === "image") {
+      const img = document.createElement("img");
+      img.src = artifact.uri;
+      img.onclick = () => window.open(artifact.uri, "_blank");
+      box.appendChild(img);
+    } else if (artifact.type === "video") {
+      const video = document.createElement("video");
+      video.src = artifact.uri;
+      video.controls = true;
+      box.appendChild(video);
+    } else if (artifact.type === "audio") {
+      const audio = document.createElement("audio");
+      audio.src = artifact.uri;
+      audio.controls = true;
+      box.appendChild(audio);
+    } else {
+      const link = document.createElement("a");
+      link.href = artifact.uri;
+      link.target = "_blank";
+      link.textContent = (artifact.type || "文件") + ": " + artifact.uri;
+      box.appendChild(link);
+    }
+  }
+  return box;
+}
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function readEventStream(response, onEvent) {
+  if (!response.body) throw new Error("浏览器不支持读取流式响应");
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+    buffer = buffer.replace(/\r\n/g, "\n");
+    let boundary;
+    while ((boundary = buffer.indexOf("\n\n")) >= 0) {
+      const packet = buffer.slice(0, boundary);
+      buffer = buffer.slice(boundary + 2);
+      let event = "message";
+      const data = [];
+      for (const line of packet.split("\n")) {
+        if (line.startsWith("event:")) event = line.slice(6).trim();
+        if (line.startsWith("data:")) data.push(line.slice(5).trimStart());
+      }
+      if (data.length) await onEvent(event, data.join("\n"));
+    }
+    if (done) break;
+  }
+}
+
+async function requestConverseStream(body) {
+  const streamBody = { ...body, stream: true };
+  const response = await fetch(
+    "/v1/agents/" + encodeURIComponent(ROUTER) + "/converse",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "text/event-stream" },
+      body: JSON.stringify(streamBody),
+    },
+  );
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error("HTTP " + response.status + ": " + detail);
+  }
+
+  const blocks = new Map();
+  let result = null;
+  await readEventStream(response, async (event, raw) => {
+    const payload = JSON.parse(raw);
+    if (event === "meta") {
+      if (!state.conversationId && payload.conversationId) {
+        state.conversationId = payload.conversationId;
+        body.conversationId = payload.conversationId;
+        saveState();
+      }
+      render({ text: "已连接实时流，等待模型输出…", spinner: true });
+      return;
+    }
+    if (event === "delta") {
+      const key = (payload.roundId || "") + ":" + payload.block;
+      let block = blocks.get(key);
+      if (!block || block.generation !== payload.generation) {
+        block = { generation: payload.generation, text: "", indexes: new Set() };
+        blocks.set(key, block);
+      }
+      if (!block.indexes.has(payload.index)) {
+        block.indexes.add(payload.index);
+        block.text += payload.text || "";
+      }
+      const preview = Array.from(blocks.values()).map((item) => item.text).join("\n\n");
+      render({ text: preview || "任务执行中…", spinner: true });
+      return;
+    }
+    if (event === "done") {
+      result = payload;
+      return;
+    }
+    if (event === "error") {
+      throw new Error(payload.error || "流式响应异常");
+    }
+  });
+  if (!result) throw new Error("流式响应结束，但没有收到 done 事件");
+  return result;
+}
+
+async function send() {
+  const text = els.input.value;
+  if (!text.trim() || state.busy) return;
+  els.input.value = "";
+
+  // 关键协议点 1：把新输入追加进全量记录，随后每次请求都发完整数组。
+  state.messages.push({ role: "user", content: text });
+  state.extras.push({});
+  saveState();
+
+  state.busy = true;
+  els.send.disabled = true;
+
+  const body = {
+    conversationId: state.conversationId,
+    messages: state.messages.slice(), // 完整历史 + 最新输入
+  };
+  if (els.capability.value) body.selectedAgent = els.capability.value;
+
+  try {
+    let result;
+    if (els.stream.checked) {
+      render({ text: "正在连接实时流…", spinner: true });
+      result = await requestConverseStream(body);
+    } else {
+      let waited = 0;
+      for (;;) {
+        render({ text: waited ? "任务执行中（已等待 " + waited + "s，原样重发轮询）…" : "请求中…", spinner: true });
+        const wait = Math.max(0, Math.min(110, parseInt(els.wait.value, 10) || 25));
+        const response = await fetch(
+          "/v1/agents/" + encodeURIComponent(ROUTER) + "/converse?wait=" + wait,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          },
+        );
+        if (!response.ok) {
+          const detail = await response.text();
+          throw new Error("HTTP " + response.status + ": " + detail);
+        }
+        result = await response.json();
+        if (!state.conversationId && result.conversationId) {
+          state.conversationId = result.conversationId;
+          body.conversationId = result.conversationId;
+          saveState();
+        }
+        if (result.status !== "running") break;
+        // JSON 兼容模式：running 时不改动记录，原样重发同一请求继续等。
+        waited += wait;
+        await sleep(2000);
+      }
+    }
+
+    state.lastResponse = result;
+    if (!state.conversationId && result.conversationId) {
+      state.conversationId = result.conversationId;
+      saveState();
+    }
+    if (result.status === "error") {
+      render({ text: "本轮失败：" + (result.error || "未知错误") + "（可直接重发这条消息重试）", error: true });
+      state.messages.pop();
+      state.extras.pop();
+      els.input.value = text;
+      saveState();
+      return;
+    }
+
+    // completed / awaiting_user：reply 非空时逐字节原样追加为 assistant 消息。
+    if (typeof result.reply === "string" && result.reply !== "") {
+      state.messages.push({ role: "assistant", content: result.reply });
+      state.extras.push({
+        artifacts: result.artifacts || [],
+        tag: describeTurn(result),
+      });
+    }
+    saveState();
+    render();
+    return;
+  } catch (err) {
+    render({ text: "请求异常：" + err.message, error: true });
+    state.messages.pop();
+    state.extras.pop();
+    els.input.value = text;
+    saveState();
+  } finally {
+    state.busy = false;
+    els.send.disabled = false;
+  }
+}
+
+function describeTurn(result) {
+  const parts = [];
+  parts.push("status: " + result.status);
+  if (result.rebuilt) {
+    parts.push('<span class="rebuilt">rebuilt: 服务端重建了会话（全量回灌）</span>');
+  }
+  return parts.join(" · ");
+}
+
+els.send.onclick = send;
+els.input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    send();
+  }
+});
+els.newChat.onclick = () => {
+  localStorage.removeItem(storageKey());
+  loadState();
+  render();
+};
+loadAgents().catch((err) => {
+  render({ text: "加载 Agent 列表失败：" + err.message + "（确认 apiserver 已启动）", error: true });
+});
+</script>
+</body>
+</html>

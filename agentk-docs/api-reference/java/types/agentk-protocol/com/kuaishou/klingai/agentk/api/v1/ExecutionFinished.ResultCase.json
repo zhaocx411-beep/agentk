@@ -1,0 +1,314 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ExecutionFinished",
+    "ResultCase"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase",
+    "kind": "enum",
+    "name": "ResultCase",
+    "declaration": {
+      "text": "public enum ResultCase implements Internal.EnumLite, AbstractMessageLite.InternalOneOfEnum",
+      "references": [
+        {
+          "start": 12,
+          "end": 22,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+        }
+      ]
+    },
+    "documentation": [],
+    "nestedTypes": [],
+    "enumConstants": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-AGENT-",
+        "name": "AGENT",
+        "declaration": {
+          "text": "AGENT",
+          "references": [
+            {
+              "start": 0,
+              "end": 5,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-AGENT-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-PIPELINE-",
+        "name": "PIPELINE",
+        "declaration": {
+          "text": "PIPELINE",
+          "references": [
+            {
+              "start": 0,
+              "end": 8,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-PIPELINE-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-RESULT_NOT_SET-",
+        "name": "RESULT_NOT_SET",
+        "declaration": {
+          "text": "RESULT_NOT_SET",
+          "references": [
+            {
+              "start": 0,
+              "end": 14,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-RESULT_NOT_SET-"
+            }
+          ]
+        },
+        "documentation": []
+      }
+    ],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-forNumber-int-",
+        "name": "forNumber",
+        "declaration": {
+          "text": "public static ExecutionFinished.ResultCase forNumber(int value)",
+          "references": [
+            {
+              "start": 14,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            },
+            {
+              "start": 43,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-forNumber-int-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static ResultCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 17,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "forNumber(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-getNumber-",
+        "name": "getNumber",
+        "declaration": {
+          "text": "public int getNumber()",
+          "references": [
+            {
+              "start": 11,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-getNumber-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNumber()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-valueOf-int-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "@Deprecated()public static ExecutionFinished.ResultCase valueOf(int value)",
+          "references": [
+            {
+              "start": 1,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html"
+            },
+            {
+              "start": 27,
+              "end": 55,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            },
+            {
+              "start": 56,
+              "end": 63,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-valueOf-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The number of the enum to look for."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given number."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Deprecated",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Use "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-forNumber-int-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "forNumber"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " instead."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static ResultCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 17,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-valueOf-java-lang-String-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static ExecutionFinished.ResultCase valueOf(String name)",
+          "references": [
+            {
+              "start": 14,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            },
+            {
+              "start": 43,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-valueOf-java-lang-String-"
+            },
+            {
+              "start": 51,
+              "end": 57,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static ResultCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 17,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(String name)",
+          "references": [
+            {
+              "start": 8,
+              "end": 14,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-values-",
+        "name": "values",
+        "declaration": {
+          "text": "public static Array<ExecutionFinished.ResultCase> values()",
+          "references": [
+            {
+              "start": 20,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            },
+            {
+              "start": 50,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionFinished-ResultCase-values-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Array<ResultCase>",
+          "references": [
+            {
+              "start": 13,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished.ResultCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "values()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

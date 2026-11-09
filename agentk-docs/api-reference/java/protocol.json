@@ -1,0 +1,491 @@
+{
+  "view": "protocol",
+  "artifacts": [
+    {
+      "groupId": "com.kuaishou.klingai.agentk",
+      "artifactId": "agentk-protocol",
+      "packages": [
+        {
+          "name": "com.kuaishou.klingai.agentk.api.v1",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "class",
+              "name": "AgentAnswersExecutionInput",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentAnswersExecutionInput",
+              "summary": "Protobuf type agentk.api.v1.AgentAnswersExecutionInput"
+            },
+            {
+              "kind": "class",
+              "name": "AgentExecution",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution",
+              "summary": "Protobuf type agentk.api.v1.AgentExecution"
+            },
+            {
+              "kind": "class",
+              "name": "AgentExecutionResult",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecutionResult",
+              "summary": "Protobuf type agentk.api.v1.AgentExecutionResult"
+            },
+            {
+              "kind": "class",
+              "name": "AgentExecutionStarted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecutionStarted",
+              "summary": "Protobuf type agentk.api.v1.AgentExecutionStarted"
+            },
+            {
+              "kind": "class",
+              "name": "AgentKServiceClient",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClient",
+              "summary": ""
+            },
+            {
+              "kind": "interface",
+              "name": "AgentKServiceClientInterface",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface",
+              "summary": ""
+            },
+            {
+              "kind": "class",
+              "name": "AgentMessageExecutionInput",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentMessageExecutionInput",
+              "summary": "Protobuf type agentk.api.v1.AgentMessageExecutionInput"
+            },
+            {
+              "kind": "class",
+              "name": "Answer",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Answer",
+              "summary": "Protobuf type agentk.api.v1.Answer"
+            },
+            {
+              "kind": "class",
+              "name": "AnswerInput",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AnswerInput",
+              "summary": "Protobuf type agentk.api.v1.AnswerInput"
+            },
+            {
+              "kind": "class",
+              "name": "AskUserRequested",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested",
+              "summary": "Protobuf type agentk.api.v1.AskUserRequested"
+            },
+            {
+              "kind": "class",
+              "name": "AskUserResponded",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserResponded",
+              "summary": "Protobuf type agentk.api.v1.AskUserResponded"
+            },
+            {
+              "kind": "class",
+              "name": "AssistantReasoning",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantReasoning",
+              "summary": "Protobuf type agentk.api.v1.AssistantReasoning"
+            },
+            {
+              "kind": "class",
+              "name": "AssistantText",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantText",
+              "summary": "Protobuf type agentk.api.v1.AssistantText"
+            },
+            {
+              "kind": "class",
+              "name": "AssistantToolCall",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AssistantToolCall",
+              "summary": "Protobuf type agentk.api.v1.AssistantToolCall"
+            },
+            {
+              "kind": "class",
+              "name": "CancelExecutionRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionRequest",
+              "summary": "Protobuf type agentk.api.v1.CancelExecutionRequest"
+            },
+            {
+              "kind": "class",
+              "name": "CancelExecutionResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse",
+              "summary": "Protobuf type agentk.api.v1.CancelExecutionResponse"
+            },
+            {
+              "kind": "class",
+              "name": "Capability",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Capability",
+              "summary": "Capability is the consumer contract view and excludes Temporal routing."
+            },
+            {
+              "kind": "enum",
+              "name": "CapabilitySource",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilitySource",
+              "summary": "Protobuf enum agentk.api.v1.CapabilitySource"
+            },
+            {
+              "kind": "class",
+              "name": "CapabilityTool",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityTool",
+              "summary": "Protobuf type agentk.api.v1.CapabilityTool"
+            },
+            {
+              "kind": "class",
+              "name": "CapabilityVariant",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant",
+              "summary": "Protobuf type agentk.api.v1.CapabilityVariant"
+            },
+            {
+              "kind": "class",
+              "name": "CreateSessionRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionRequest",
+              "summary": "Protobuf type agentk.api.v1.CreateSessionRequest"
+            },
+            {
+              "kind": "class",
+              "name": "CreateSessionResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionResponse",
+              "summary": "Protobuf type agentk.api.v1.CreateSessionResponse"
+            },
+            {
+              "kind": "class",
+              "name": "Delta",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Delta",
+              "summary": "Protobuf type agentk.api.v1.Delta"
+            },
+            {
+              "kind": "enum",
+              "name": "DeltaBlockKind",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/DeltaBlockKind",
+              "summary": "Protobuf enum agentk.api.v1.DeltaBlockKind"
+            },
+            {
+              "kind": "class",
+              "name": "Event",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event",
+              "summary": "Event payload type is the event discriminator; no separate kind field exists."
+            },
+            {
+              "kind": "class",
+              "name": "Execution",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Execution",
+              "summary": "Execution is one complete agent loop or pipeline execution within a session."
+            },
+            {
+              "kind": "class",
+              "name": "ExecutionFinished",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionFinished",
+              "summary": "ExecutionFinished closes an execution; status must be completed, failed, or cancelled."
+            },
+            {
+              "kind": "class",
+              "name": "ExecutionStarted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted",
+              "summary": "Protobuf type agentk.api.v1.ExecutionStarted"
+            },
+            {
+              "kind": "enum",
+              "name": "ExecutionStatus",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus",
+              "summary": "Protobuf enum agentk.api.v1.ExecutionStatus"
+            },
+            {
+              "kind": "class",
+              "name": "GetExecutionRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionRequest",
+              "summary": "Protobuf type agentk.api.v1.GetExecutionRequest"
+            },
+            {
+              "kind": "class",
+              "name": "GetExecutionResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse",
+              "summary": "Protobuf type agentk.api.v1.GetExecutionResponse"
+            },
+            {
+              "kind": "class",
+              "name": "InvocationProgress",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvocationProgress",
+              "summary": "Protobuf type agentk.api.v1.InvocationProgress"
+            },
+            {
+              "kind": "class",
+              "name": "InvokeCapabilityRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityRequest",
+              "summary": "Protobuf type agentk.api.v1.InvokeCapabilityRequest"
+            },
+            {
+              "kind": "class",
+              "name": "InvokeCapabilityResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityResponse",
+              "summary": "Protobuf type agentk.api.v1.InvokeCapabilityResponse"
+            },
+            {
+              "kind": "class",
+              "name": "ListCapabilitiesRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesRequest",
+              "summary": "Protobuf type agentk.api.v1.ListCapabilitiesRequest"
+            },
+            {
+              "kind": "class",
+              "name": "ListCapabilitiesResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesResponse",
+              "summary": "Protobuf type agentk.api.v1.ListCapabilitiesResponse"
+            },
+            {
+              "kind": "class",
+              "name": "ListEventsRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsRequest",
+              "summary": "Protobuf type agentk.api.v1.ListEventsRequest"
+            },
+            {
+              "kind": "class",
+              "name": "ListEventsResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsResponse",
+              "summary": "Protobuf type agentk.api.v1.ListEventsResponse"
+            },
+            {
+              "kind": "class",
+              "name": "ListExecutionsRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsRequest",
+              "summary": "Protobuf type agentk.api.v1.ListExecutionsRequest"
+            },
+            {
+              "kind": "class",
+              "name": "ListExecutionsResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsResponse",
+              "summary": "Protobuf type agentk.api.v1.ListExecutionsResponse"
+            },
+            {
+              "kind": "class",
+              "name": "ListPipelinesRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesRequest",
+              "summary": "Protobuf type agentk.api.v1.ListPipelinesRequest"
+            },
+            {
+              "kind": "class",
+              "name": "ListPipelinesResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse",
+              "summary": "Protobuf type agentk.api.v1.ListPipelinesResponse"
+            },
+            {
+              "kind": "class",
+              "name": "ListSessionsRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest",
+              "summary": "Protobuf type agentk.api.v1.ListSessionsRequest"
+            },
+            {
+              "kind": "class",
+              "name": "ListSessionsResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsResponse",
+              "summary": "Protobuf type agentk.api.v1.ListSessionsResponse"
+            },
+            {
+              "kind": "class",
+              "name": "Pipeline",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Pipeline",
+              "summary": "Protobuf type agentk.api.v1.Pipeline"
+            },
+            {
+              "kind": "class",
+              "name": "PipelineExecution",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecution",
+              "summary": "Protobuf type agentk.api.v1.PipelineExecution"
+            },
+            {
+              "kind": "class",
+              "name": "PipelineExecutionInput",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecutionInput",
+              "summary": "Protobuf type agentk.api.v1.PipelineExecutionInput"
+            },
+            {
+              "kind": "class",
+              "name": "PipelineExecutionResult",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecutionResult",
+              "summary": "Protobuf type agentk.api.v1.PipelineExecutionResult"
+            },
+            {
+              "kind": "class",
+              "name": "PipelineExecutionStarted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecutionStarted",
+              "summary": "Protobuf type agentk.api.v1.PipelineExecutionStarted"
+            },
+            {
+              "kind": "class",
+              "name": "Profile",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile",
+              "summary": "Protobuf type agentk.api.v1.Profile"
+            },
+            {
+              "kind": "class",
+              "name": "ProfilePipeline",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline",
+              "summary": "Protobuf type agentk.api.v1.ProfilePipeline"
+            },
+            {
+              "kind": "class",
+              "name": "ProfileTool",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfileTool",
+              "summary": "Protobuf type agentk.api.v1.ProfileTool"
+            },
+            {
+              "kind": "class",
+              "name": "Question",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Question",
+              "summary": "Protobuf type agentk.api.v1.Question"
+            },
+            {
+              "kind": "class",
+              "name": "RoundCompleted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/RoundCompleted",
+              "summary": "Protobuf type agentk.api.v1.RoundCompleted"
+            },
+            {
+              "kind": "class",
+              "name": "RoundStarted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/RoundStarted",
+              "summary": "Protobuf type agentk.api.v1.RoundStarted"
+            },
+            {
+              "kind": "class",
+              "name": "Session",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Session",
+              "summary": "Protobuf type agentk.api.v1.Session"
+            },
+            {
+              "kind": "class",
+              "name": "StartExecutionRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionRequest",
+              "summary": "Protobuf type agentk.api.v1.StartExecutionRequest"
+            },
+            {
+              "kind": "class",
+              "name": "StartExecutionResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionResponse",
+              "summary": "Protobuf type agentk.api.v1.StartExecutionResponse"
+            },
+            {
+              "kind": "class",
+              "name": "StreamEnd",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StreamEnd",
+              "summary": "Protobuf type agentk.api.v1.StreamEnd"
+            },
+            {
+              "kind": "class",
+              "name": "TokenUsage",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/TokenUsage",
+              "summary": "Protobuf type agentk.api.v1.TokenUsage"
+            },
+            {
+              "kind": "class",
+              "name": "ToolExecFailed",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ToolExecFailed",
+              "summary": "Protobuf type agentk.api.v1.ToolExecFailed"
+            },
+            {
+              "kind": "class",
+              "name": "ToolExecStarted",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ToolExecStarted",
+              "summary": "Protobuf type agentk.api.v1.ToolExecStarted"
+            },
+            {
+              "kind": "class",
+              "name": "ToolExecSucceeded",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ToolExecSucceeded",
+              "summary": "Protobuf type agentk.api.v1.ToolExecSucceeded"
+            },
+            {
+              "kind": "class",
+              "name": "UserInput",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/UserInput",
+              "summary": "Protobuf type agentk.api.v1.UserInput"
+            },
+            {
+              "kind": "class",
+              "name": "WatchEventsRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsRequest",
+              "summary": "Protobuf type agentk.api.v1.WatchEventsRequest"
+            },
+            {
+              "kind": "class",
+              "name": "WatchEventsResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsResponse",
+              "summary": "Protobuf type agentk.api.v1.WatchEventsResponse"
+            },
+            {
+              "kind": "class",
+              "name": "WhoAmIRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIRequest",
+              "summary": "Protobuf type agentk.api.v1.WhoAmIRequest"
+            },
+            {
+              "kind": "class",
+              "name": "WhoAmIResponse",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIResponse",
+              "summary": "Protobuf type agentk.api.v1.WhoAmIResponse"
+            }
+          ]
+        },
+        {
+          "name": "com.kuaishou.klingai.agentk.capability.v1",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "class",
+              "name": "Capability",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/capability/v1/Capability",
+              "summary": "Protobuf type agentk.capability.v1.Capability"
+            },
+            {
+              "kind": "enum",
+              "name": "CapabilityKind",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/capability/v1/CapabilityKind",
+              "summary": "Protobuf enum agentk.capability.v1.CapabilityKind"
+            },
+            {
+              "kind": "class",
+              "name": "CapabilityManifest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/capability/v1/CapabilityManifest",
+              "summary": "Protobuf type agentk.capability.v1.CapabilityManifest"
+            },
+            {
+              "kind": "class",
+              "name": "ToolRegistration",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/capability/v1/ToolRegistration",
+              "summary": "Protobuf type agentk.capability.v1.ToolRegistration"
+            }
+          ]
+        },
+        {
+          "name": "com.kuaishou.klingai.agentk.common.v1",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "class",
+              "name": "Artifact",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/common/v1/Artifact",
+              "summary": "Protobuf type agentk.common.v1.Artifact"
+            }
+          ]
+        },
+        {
+          "name": "com.kuaishou.klingai.agentk.invocation.v1",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "enum",
+              "name": "InvocationKind",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind",
+              "summary": "Protobuf enum agentk.invocation.v1.InvocationKind"
+            },
+            {
+              "kind": "class",
+              "name": "InvocationMeta",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationMeta",
+              "summary": "Protobuf type agentk.invocation.v1.InvocationMeta"
+            },
+            {
+              "kind": "class",
+              "name": "ReportProgressRequest",
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/ReportProgressRequest",
+              "summary": "Protobuf type agentk.invocation.v1.ReportProgressRequest"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[project]
+name = "storyboard-example-mcp-server"
+version = "0.1.0"
+description = "Python MCP server for the agent-k storyboard example"
+requires-python = ">=3.11"
+dependencies = [
+  "ks-agentk-client[grpc]==0.3.0",
+  "ks-agentk-protocol==0.3.0",
+  "mcp>=2.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]

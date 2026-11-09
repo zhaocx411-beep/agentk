@@ -1,0 +1,98 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "minimax-speech-2.8-hd"
+      ],
+      "description": "使用的模型。候选：minimax-speech-2.8-hd（MiniMax 高清语音）"
+    },
+    "text": {
+      "type": "string",
+      "description": "要合成的文字"
+    },
+    "voiceId": {
+      "type": "string",
+      "description": "当前账号已配置的音色 ID"
+    },
+    "speed": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 2,
+      "description": "语速，实用区间通常为 0.85~1.25"
+    },
+    "languageBoost": {
+      "type": "string",
+      "enum": [
+        "Chinese",
+        "Chinese,Yue",
+        "English",
+        "Arabic",
+        "Russian",
+        "Spanish",
+        "French",
+        "Portuguese",
+        "German",
+        "Turkish",
+        "Dutch",
+        "Ukrainian",
+        "Vietnamese",
+        "Indonesian",
+        "Japanese",
+        "Italian",
+        "Korean",
+        "Thai",
+        "Polish",
+        "Romanian",
+        "Greek",
+        "Czech",
+        "Finnish",
+        "Hindi",
+        "Bulgarian",
+        "Danish",
+        "Hebrew",
+        "Malay",
+        "Persian",
+        "Slovak",
+        "Swedish",
+        "Croatian",
+        "Filipino",
+        "Hungarian",
+        "Norwegian",
+        "Slovenian",
+        "Catalan",
+        "Nynorsk",
+        "Tamil",
+        "Afrikaans",
+        "auto"
+      ],
+      "description": "语言增强模式"
+    },
+    "emotion": {
+      "type": "string",
+      "enum": [
+        "happy",
+        "sad",
+        "angry",
+        "fearful",
+        "disgusted",
+        "surprised",
+        "calm"
+      ],
+      "description": "可选情绪；省略时由模型根据文本自动匹配"
+    },
+    "pronunciationDict": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "自定义发音规则，格式为 原文/替换内容"
+    }
+  },
+  "required": [
+    "model",
+    "text",
+    "voiceId"
+  ]
+}

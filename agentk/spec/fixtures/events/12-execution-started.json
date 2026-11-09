@@ -1,0 +1,15 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a12",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "kind": "execution.started",
+  "data": {
+    "kind": "pipeline",
+    "profileVersion": "9f2c1a7b8d0e",
+    "pipeline": {
+      "name": "storyboard_film",
+      "capabilityId": "contrib.storyboard.film",
+      "args": {"topic": "猫"}
+    }
+  },
+  "createdAt": "2026-08-01T09:00:00Z"
+}

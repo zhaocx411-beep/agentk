@@ -1,0 +1,37 @@
+FROM docker.io/library/golang:1.26.4-bookworm AS build
+
+ENV GOPROXY=https://goproxy.corp.kuaishou.com \
+    GONOPROXY=none \
+    GOSUMDB=off
+
+WORKDIR /src
+
+COPY go/apiserver/go.mod go/apiserver/go.sum ./
+RUN go mod download
+
+COPY go/apiserver/*.go ./
+COPY go/apiserver/openapi.yaml go/apiserver/scalar.html ./
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -trimpath -ldflags="-s -w" -o /out/storyboard-example-apiserver .
+
+FROM docker.io/library/debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV API_HOST=0.0.0.0 \
+    API_PORT=8080
+
+WORKDIR /app/go/apiserver
+
+COPY --from=build /out/storyboard-example-apiserver /usr/local/bin/storyboard-example-apiserver
+COPY --chown=65532:65532 \
+    go/apiserver/profile.json \
+    /app/go/apiserver/profile.json
+
+USER 65532:65532
+
+EXPOSE 8080
+
+ENTRYPOINT ["/usr/local/bin/storyboard-example-apiserver"]

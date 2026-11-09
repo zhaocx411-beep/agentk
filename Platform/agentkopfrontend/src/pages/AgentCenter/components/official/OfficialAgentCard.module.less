@@ -1,0 +1,144 @@
+/* 官方 Agent 封面卡片：写实头图 + 名称 / 描述 / 操作 */
+
+.card {
+  .surface-card-interactive();
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* 封面卡有整幅头图，hover 时描边会切割画面，层级交给阴影表达 */
+  &:hover,
+  &:focus-visible {
+    border-color: transparent;
+  }
+
+  &:hover .coverImg,
+  &:focus-visible .coverImg {
+    transform: scale(1.04);
+  }
+}
+
+.cover {
+  position: relative;
+  height: 180px;
+  background: @surface-3;
+  overflow: hidden;
+}
+
+.coverImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform @transition-duration-slow @transition-timing;
+}
+
+.coverShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, fade(@azure-abyss, 6%) 0%, fade(@azure-abyss, 32%) 100%);
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: @spacing-md;
+  right: @spacing-md;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: fade(@surface-1, 92%);
+  color: @primary-color;
+  font-size: 18px;
+  border-radius: @border-radius-md;
+  box-shadow: @shadow-sm;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: @spacing-lg;
+}
+
+.name {
+  .text-clamp(2);
+
+  margin: 0 0 @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  word-break: break-word;
+}
+
+.desc {
+  .text-clamp(3);
+
+  flex: 1;
+  margin: 0 0 @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-sm;
+  align-items: center;
+  margin-top: auto;
+}
+
+.cta,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-xs;
+  margin: 0;
+  padding: @spacing-xs @spacing-md;
+  font-size: @font-size-base;
+  font-weight: 500;
+  line-height: 1.2;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+  transition: opacity @transition-duration-fast @transition-timing;
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.7;
+  }
+}
+
+.cta {
+  border: none;
+  background: @primary-color;
+  color: @on-primary;
+}
+
+.ctaSecondary {
+  border: 1px solid @border-color;
+  background: @surface-1;
+  color: @text-color;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coverImg,
+  .cta,
+  .ctaSecondary {
+    transition: none;
+  }
+
+  .card:hover .coverImg,
+  .card:focus-visible .coverImg {
+    transform: none;
+  }
+}

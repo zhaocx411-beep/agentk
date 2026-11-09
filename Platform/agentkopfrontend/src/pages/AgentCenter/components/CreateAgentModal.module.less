@@ -1,0 +1,82 @@
+/* 创建 Agent 弹窗 */
+
+.typeHint {
+  margin: 0 0 @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.typeLabel {
+  display: block;
+  margin-bottom: @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 500;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-md;
+}
+
+.typeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: @spacing-xs;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  border-radius: @border-radius-lg;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: @primary-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 1px;
+  }
+}
+
+.typeCardActive {
+  border-color: @primary-color;
+  background: @primary-subdued;
+}
+
+.typeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: @primary-soft;
+  color: @primary-color;
+  font-size: 18px;
+  border-radius: @border-radius-md;
+}
+
+.typeIconWorkflow {
+  background: @surface-3;
+  color: @success-color;
+}
+
+.typeName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.typeDesc {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}

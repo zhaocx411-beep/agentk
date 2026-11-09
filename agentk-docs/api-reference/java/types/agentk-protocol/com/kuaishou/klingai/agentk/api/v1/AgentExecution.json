@@ -1,0 +1,252 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "AgentExecution"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution",
+    "kind": "class",
+    "name": "AgentExecution",
+    "declaration": {
+      "text": "@Generated()public final class AgentExecution extends GeneratedMessage implements AgentExecutionOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 45,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.AgentExecution"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AgentExecution.Builder newBuilder()",
+          "references": [
+            {
+              "start": 37,
+              "end": 47,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilder-com-kuaishou-klingai-agentk-api-v1-AgentExecution-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AgentExecution.Builder newBuilder(AgentExecution prototype)",
+          "references": [
+            {
+              "start": 37,
+              "end": 47,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilder-com-kuaishou-klingai-agentk-api-v1-AgentExecution-"
+            },
+            {
+              "start": 48,
+              "end": 62,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(AgentExecution prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 25,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public AgentExecution.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 30,
+              "end": 47,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public AgentExecution.Builder toBuilder()",
+          "references": [
+            {
+              "start": 30,
+              "end": 39,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecution#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentExecution-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

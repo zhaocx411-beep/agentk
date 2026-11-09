@@ -1,0 +1,275 @@
+/* AgentCenter - Agent 列表页样式 */
+
+.page {
+  .page-scroll();
+}
+
+.panel {
+  .page-container();
+
+  /* flush 内容区顶部无 padding，给「我的 Agent」留出与顶栏的呼吸间距 */
+  padding-top: @spacing-xl;
+}
+
+/* —— 标题区 —— */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-md;
+  margin-bottom: @spacing-md;
+}
+
+.subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+/* —— 工具栏 —— */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-lg;
+  flex-wrap: wrap;
+}
+
+.searchIcon {
+  color: @text-color-tertiary;
+}
+
+/* 工具栏是密集操作区，沿用 antd 默认的 32px 密度，
+   只把圆角与 focus 光圈对齐到全站统一的搜索控件语言 */
+.searchInput {
+  width: 280px;
+
+  .control-search(@control-height-sm; @border-radius-md);
+}
+
+.statusSelect {
+  width: 140px;
+}
+
+.toolbarRight {
+  margin-left: auto;
+}
+
+/* —— 卡片网格 —— */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: @spacing-lg;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+    gap: @spacing-lg;
+    padding: @spacing-md @spacing-lg;
+  }
+
+  .cardHead {
+    flex: 0 0 260px;
+    margin-bottom: 0;
+  }
+
+  .cardId {
+    flex: 0 0 220px;
+    margin-bottom: 0;
+  }
+
+  .cardDesc {
+    flex: 1;
+    margin-bottom: 0;
+    -webkit-line-clamp: 1;
+  }
+
+  .cardMeta {
+    display: none;
+  }
+
+  .cardFoot {
+    flex: 0 0 auto;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+/* —— 卡片 —— */
+.card {
+  .surface-card-interactive();
+
+  display: flex;
+  flex-direction: column;
+  padding: @spacing-lg;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-sm;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, @primary-color 0%, @primary-gradient-end 100%);
+  color: @on-primary;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+  box-shadow: @shadow-sm;
+}
+
+.cardTitleBox {
+  min-width: 0;
+}
+
+.cardName {
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardType {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  margin-top: 2px;
+}
+
+.cardId {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  margin-bottom: @spacing-xs;
+  font-family: @font-mono;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardDesc {
+  .text-clamp(2);
+
+  min-height: 42px;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.5;
+  margin-bottom: @spacing-sm;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+  margin-bottom: @spacing-sm;
+}
+
+.cardMetaTag {
+  margin-inline-end: 0;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+}
+
+.cardFoot {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-top: auto;
+  padding-top: @spacing-sm;
+  border-top: 1px solid @divider;
+}
+
+.cardStatus {
+  margin-inline-end: 0;
+}
+
+.cardVersion {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+}
+
+.cardTime {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  margin-left: auto;
+}
+
+/* —— 空态与分页 —— */
+.empty {
+  .empty-frame();
+}
+
+.emptyTitle {
+  .empty-title();
+}
+
+.emptyDesc {
+  .empty-desc();
+}
+
+.pagination {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin-top: @spacing-md;
+  padding-top: @spacing-sm;
+}
+
+/* —— 响应式：窄屏下工具栏与列表模式结构性降级 —— */
+@media (max-width: @screen-md) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar {
+    gap: @spacing-xs;
+  }
+
+  .searchInput,
+  .statusSelect {
+    width: 100%;
+  }
+
+  .toolbarRight {
+    margin-left: 0;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* 列表模式的固定列宽在窄屏会撑破容器，退回纵向堆叠 */
+  .list {
+    .card {
+      flex-direction: column;
+      align-items: stretch;
+      gap: @spacing-sm;
+      padding: @spacing-md;
+    }
+
+    .cardHead,
+    .cardId {
+      flex: none;
+    }
+
+    .cardDesc {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+  }
+}

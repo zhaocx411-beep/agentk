@@ -1,0 +1,4 @@
+.git
+bin
+configs/routes.json
+*.log

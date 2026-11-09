@@ -1,0 +1,15 @@
+logging:
+  level:
+    com.kuaishou.agent.operation.backend: debug
+    com.kuaishou.infra.boot: debug
+
+# 海外 staging / 开发环境配置。
+agent:
+  operation:
+    backend:
+      auth:
+        enabled: false
+
+# ksboot:
+#   data-sources:
+#     - name: agentOperationBackendOversea

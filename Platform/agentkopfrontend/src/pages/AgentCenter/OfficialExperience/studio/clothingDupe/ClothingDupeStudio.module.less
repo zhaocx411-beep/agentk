@@ -1,0 +1,58 @@
+/* 一键换装专有样式；通用表单 / 工作台样式复用 CreationStudio.module.less */
+
+.audioMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.outputFallback {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+  padding: @spacing-lg;
+}
+
+.outputList {
+  margin: 0;
+  padding: 0;
+  border: 1px solid @hairline;
+  background: @canvas;
+  list-style: none;
+  border-radius: @border-radius-lg;
+
+  li {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.25fr) minmax(0, 1fr);
+    gap: @spacing-md;
+    padding: @spacing-sm @spacing-md;
+
+    & + li {
+      border-top: 1px solid @divider;
+    }
+  }
+
+  span {
+    color: @text-color-secondary;
+    font-weight: 500;
+  }
+
+  code {
+    color: @text-color-tertiary;
+    overflow: hidden;
+    font-family: @font-mono;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (width <= @screen-md) {
+  .outputList li {
+    grid-template-columns: 1fr;
+    gap: @spacing-xxs;
+  }
+}

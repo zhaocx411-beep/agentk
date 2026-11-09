@@ -1,0 +1,84 @@
+@import url('../../styles/variables.less');
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: @surface-3;
+}
+
+.editor {
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: calc(100vh - @header-height);
+  overflow: hidden;
+}
+
+.canvas {
+  position: relative;
+  flex: 1;
+}
+
+.reactFlow {
+  width: 100%;
+  height: 100%;
+  background: @surface-2;
+}
+
+.toolbar {
+  padding: 4px 8px;
+  background: @canvas;
+  border-radius: @border-radius-sm;
+  box-shadow: @shadow-md;
+}
+
+.stats {
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+/* React Flow 全局样式覆盖 */
+:global {
+  .react-flow__node-agent {
+    /* 确保 Agent 节点不被截断 */
+    overflow: visible;
+  }
+
+  .react-flow__edge-path {
+    /* 流动虚线动画 */
+    stroke-linecap: round;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -10;
+    }
+  }
+
+  .react-flow__controls {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+    border-radius: 6px;
+    border: 1px solid @divider;
+
+    button {
+      width: 28px;
+      height: 28px;
+      border: none;
+      background: @canvas;
+      border-bottom: 1px solid @divider;
+
+      &:hover {
+        background: @primary-subdued;
+      }
+
+      svg {
+        fill: rgb(0 0 0 / 65%);
+      }
+    }
+  }
+
+  .react-flow__minimap {
+    border-radius: 6px;
+  }
+}

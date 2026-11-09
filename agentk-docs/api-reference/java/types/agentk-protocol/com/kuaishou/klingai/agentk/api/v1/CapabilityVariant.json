@@ -1,0 +1,1125 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "CapabilityVariant"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant",
+    "kind": "class",
+    "name": "CapabilityVariant",
+    "declaration": {
+      "text": "@Generated()public final class CapabilityVariant extends GeneratedMessage implements CapabilityVariantOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 48,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.CapabilityVariant"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getDescription-",
+        "name": "getDescription",
+        "declaration": {
+          "text": "public String getDescription()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getDescription-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string description = 2 [json_name = \"description\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The description."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getDescription()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getDescriptionBytes-",
+        "name": "getDescriptionBytes",
+        "declaration": {
+          "text": "public ByteString getDescriptionBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getDescriptionBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string description = 2 [json_name = \"description\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for description."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDescriptionBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getInputSchema-",
+        "name": "getInputSchema",
+        "declaration": {
+          "text": "public Struct getInputSchema()",
+          "references": [
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getInputSchema-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct input_schema = 3 [json_name = \"inputSchema\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The inputSchema."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Struct",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getInputSchema()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLaneId-",
+        "name": "getLaneId",
+        "declaration": {
+          "text": "public String getLaneId()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLaneId-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string lane_id = 1 [json_name = \"laneId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The laneId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getLaneId()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLaneIdBytes-",
+        "name": "getLaneIdBytes",
+        "declaration": {
+          "text": "public ByteString getLaneIdBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLaneIdBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string lane_id = 1 [json_name = \"laneId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for laneId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getLaneIdBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLastReportedAt-",
+        "name": "getLastReportedAt",
+        "declaration": {
+          "text": "public Timestamp getLastReportedAt()",
+          "references": [
+            {
+              "start": 17,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getLastReportedAt-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Timestamp last_reported_at = 7 [json_name = \"lastReportedAt\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The lastReportedAt."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Timestamp",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getLastReportedAt()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getOutputSchema-",
+        "name": "getOutputSchema",
+        "declaration": {
+          "text": "public Struct getOutputSchema()",
+          "references": [
+            {
+              "start": 14,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getOutputSchema-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct output_schema = 4 [json_name = \"outputSchema\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The outputSchema."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Struct",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getOutputSchema()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getTimeout-",
+        "name": "getTimeout",
+        "declaration": {
+          "text": "public Duration getTimeout()",
+          "references": [
+            {
+              "start": 16,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getTimeout-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Duration timeout = 5 [json_name = \"timeout\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The timeout."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Duration",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getTimeout()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getTool-",
+        "name": "getTool",
+        "declaration": {
+          "text": "public CapabilityTool getTool()",
+          "references": [
+            {
+              "start": 7,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityTool"
+            },
+            {
+              "start": 22,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-getTool-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.CapabilityTool tool = 6 [json_name = \"tool\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The tool."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "CapabilityTool",
+          "references": [
+            {
+              "start": 0,
+              "end": 14,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityTool"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getTool()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasInputSchema-",
+        "name": "hasInputSchema",
+        "declaration": {
+          "text": "public boolean hasInputSchema()",
+          "references": [
+            {
+              "start": 15,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasInputSchema-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct input_schema = 3 [json_name = \"inputSchema\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the inputSchema field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasInputSchema()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasLastReportedAt-",
+        "name": "hasLastReportedAt",
+        "declaration": {
+          "text": "public boolean hasLastReportedAt()",
+          "references": [
+            {
+              "start": 15,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasLastReportedAt-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Timestamp last_reported_at = 7 [json_name = \"lastReportedAt\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the lastReportedAt field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasLastReportedAt()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasOutputSchema-",
+        "name": "hasOutputSchema",
+        "declaration": {
+          "text": "public boolean hasOutputSchema()",
+          "references": [
+            {
+              "start": 15,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasOutputSchema-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Struct output_schema = 4 [json_name = \"outputSchema\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the outputSchema field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasOutputSchema()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasTimeout-",
+        "name": "hasTimeout",
+        "declaration": {
+          "text": "public boolean hasTimeout()",
+          "references": [
+            {
+              "start": 15,
+              "end": 25,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasTimeout-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".google.protobuf.Duration timeout = 5 [json_name = \"timeout\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the timeout field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasTimeout()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasTool-",
+        "name": "hasTool",
+        "declaration": {
+          "text": "public boolean hasTool()",
+          "references": [
+            {
+              "start": 15,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-hasTool-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.CapabilityTool tool = 6 [json_name = \"tool\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the tool field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasTool()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static CapabilityVariant.Builder newBuilder()",
+          "references": [
+            {
+              "start": 40,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilder-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static CapabilityVariant.Builder newBuilder(CapabilityVariant prototype)",
+          "references": [
+            {
+              "start": 40,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilder-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-"
+            },
+            {
+              "start": 51,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(CapabilityVariant prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public CapabilityVariant.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 33,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public CapabilityVariant.Builder toBuilder()",
+          "references": [
+            {
+              "start": 33,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CapabilityVariant#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-CapabilityVariant-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+---
+sidebar_label: 在 Agent 中使用文档（MCP）
+title: 在 Agent 中使用 AgentK 文档
+description: 在 Codex、Cursor 中配置 AgentK 文档 MCP，查询指南与 SDK API，并处理 OAuth 登录失效
+slug: /mcp
+pagination_prev: development
+pagination_next: concepts/runtime-model
+---
+
+# 在 Agent 中使用 AgentK 文档
+
+AgentK 文档提供 MCP（Model Context Protocol）服务。接入后，Codex、Cursor 等 Agent 可以在
+编写代码时搜索指南、查询 SDK API、读取完整文档，并给出原文链接。
+
+:::warning[当前限制]
+
+文档 MCP 仍在完善中，OAuth 登录状态暂未持久化。**文档服务重启或重新部署后，需要重新登录。**
+Agent 本地可能仍保存旧凭据，此时会遇到 `401 Unauthorized` 或 OAuth 登录失败。
+处理方式见[清理登录态并重新登录](#清理登录态并重新登录)。
+
+:::
+
+## 连接地址与登录
+
+MCP 使用 Streamable HTTP，连接地址如下：
+
+| 文档环境 | MCP 地址 |
+| --- | --- |
+| 生产 | `https://agentk.corp.kuaishou.com/mcp` |
+| Staging | `https://agentk.staging.kuaishou.com/mcp` |
+
+以下配置使用生产地址，统一以 `agentk-docs` 作为 MCP 服务名。首次连接时，在 Agent 发起的
+浏览器授权流程中完成公司统一登录，OAuth 注册和凭据保存由 Agent 完成。
+
+## Codex
+
+### 桌面端
+
+1. 打开 **Settings → MCP servers**，点击 **Add server**。
+2. 名称填写 `agentk-docs`，连接类型选择 **Streamable HTTP**，URL 填写
+   `https://agentk.corp.kuaishou.com/mcp`。
+3. 保存后点击 **Restart**，再在服务列表中点击 **Authenticate**，完成浏览器授权。
+
+步骤见 [Codex MCP 官方文档](https://developers.openai.com/codex/mcp)。
+
+### 配置文件（可选）
+
+桌面端也支持直接读取配置文件。在 `~/.codex/config.toml` 中添加以下条目；若只希望当前项目
+使用，也可以放在已信任项目的 `.codex/config.toml` 中：
+
+```toml
+[mcp_servers.agentk-docs]
+url = "https://agentk.corp.kuaishou.com/mcp"
+```
+
+保存后重启 Codex，在 **Settings → MCP servers** 中找到 `agentk-docs`，点击 **Authenticate**
+完成浏览器授权，然后打开会话使用。
+
+### CLI
+
+CLI 与桌面端共用上述配置，也可以通过命令添加并登录：
+
+```bash
+codex mcp add agentk-docs --url https://agentk.corp.kuaishou.com/mcp
+codex mcp login agentk-docs
+```
+
+完成授权后，重新打开 CLI 会话。用 `codex mcp list` 查看配置，在会话中用 `/mcp` 查看已连接的服务。
+
+## Cursor
+
+### 桌面端
+
+1. 点击[添加 AgentK 文档到 Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=agentk-docs&config=eyJ1cmwiOiJodHRwczovL2FnZW50ay5jb3JwLmt1YWlzaG91LmNvbS9tY3AifQ%3D%3D)，允许浏览器打开 Cursor。
+2. 在 Cursor 的安装确认界面中确认添加 `agentk-docs`，地址为 `https://agentk.corp.kuaishou.com/mcp`。
+3. 在 **Customize → MCPs** 中找到该服务，按 **Connect / Authenticate** 提示完成浏览器授权。
+
+该入口使用 [Cursor 官方 MCP 安装链接](https://cursor.com/docs/mcp/install-links)。
+
+### 配置文件（可选）
+
+桌面端也支持直接读取配置文件。在项目的 `.cursor/mcp.json` 中添加以下配置；若希望所有项目
+都可用，使用 `~/.cursor/mcp.json`。已有其他 MCP 时，将条目合并进原有的 `mcpServers`：
+
+```json
+{
+  "mcpServers": {
+    "agentk-docs": {
+      "url": "https://agentk.corp.kuaishou.com/mcp"
+    }
+  }
+}
+```
+
+保存后重启 Cursor，在 **Customize → MCPs** 中找到 `agentk-docs`，按连接或授权提示完成
+浏览器登录。不同版本的入口名称可能显示为 **MCP** 或 **Tools & MCP**。
+配置格式见 [Cursor MCP 官方文档](https://cursor.com/docs/mcp)。
+
+### CLI
+
+使用 Cursor CLI 时，同样读取上述配置，通过内置 MCP 命令登录和检查工具：
+
+```bash
+agent mcp login agentk-docs
+agent mcp list-tools agentk-docs
+```
+
+这里的 `agent` 是 Cursor CLI，命令说明见 [Cursor CLI MCP 文档](https://cursor.com/docs/cli/reference/parameters#mcp)。
+
+## 确认 Agent 已经能查文档
+
+连接成功后，Agent 应能看到三个工具：
+
+| 工具 | 用途 |
+| --- | --- |
+| `search_docs` | 搜索概念、指南、示例和使用方法 |
+| `lookup_api` | 查询 SDK 类型、方法、函数和字段 |
+| `read_doc` | 按搜索结果中的文档 URL 读取完整页面 |
+
+可以在对话中直接提出一个具体问题：
+
+> 请使用 agentk-docs 查询本地 Worker 如何配置泳道，读取对应指南，并附上文档链接。
+
+可以从 Agent 的工具调用记录和返回内容中确认查询成功。
+
+## 清理登录态并重新登录
+
+当前服务端的 OAuth 客户端注册和 Token 都只保存在进程内存中。服务重启后，Agent 本地保存的
+旧凭据会失效，导致 `401 Unauthorized` 或登录失败。此时清理旧登录态并重新授权即可。
+
+### Codex 重新登录
+
+在终端执行：
+
+```bash
+codex mcp logout agentk-docs
+codex mcp login agentk-docs
+```
+
+完成浏览器授权后，重新打开 Codex 会话，再试一次文档查询。
+命令说明见 [Codex MCP 命令参考](https://developers.openai.com/codex/cli/reference#codex-mcp)。
+
+### Cursor 重新登录
+
+在 **Customize → MCPs** 中找到 `agentk-docs`，选择 **Logout / Disconnect**，再通过
+**Connect / Authenticate** 重新授权，参见 [Cursor 官方支持的说明](https://forum.cursor.com/t/supabase-plugin-mcp-not-working/159148/5)。
+
+如果重新授权后仍然失败，可以使用 Cursor 的全量清理命令：
+
+1. 打开命令面板：macOS 使用 `Cmd+Shift+P`，Windows / Linux 使用 `Ctrl+Shift+P`。
+2. 搜索并执行 **Clear All MCP Tokens**（部分版本显示为 **Cursor: Clear All MCP Tokens**）。
+3. 重启 Cursor，再连接 `agentk-docs` 并完成浏览器授权。
+
+该命令会清理所有 MCP 的登录态，其他 MCP 也需要重新登录，参见
+[Cursor 官方支持的说明](https://forum.cursor.com/t/slack-mcp-auth-fails-with-must-use-pkce-to-redirect-to-a-non-web-uri/158746/12)。
+
+重新登录后仍无法连接，请直接联系 AgentK 开发者沟通。

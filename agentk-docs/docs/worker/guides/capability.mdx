@@ -1,0 +1,305 @@
+---
+sidebar_position: 2
+sidebar_label: 实现并发布 Capability
+title: 实现并发布 Capability
+description: 使用 Go Worker SDK 将已注册的 Activity 或 Workflow 发布为可直接调用的 Capability
+slug: /worker/guides/capability
+pagination_prev: worker/index
+pagination_next: worker/guides/tool
+---
+
+# 实现并发布 Capability
+
+本文面向提供领域能力的 Worker 开发者。Activity 和 Workflow 是 <Capability /> 的两种 Temporal
+实现类型；Worker SDK 分别通过 `PublishActivity` 和 `PublishWorkflow` 发布同一种 Capability
+契约。发布后的 Capability 默认可以由 Client 作为 <Pipeline /> 直接调用，<Tool /> 是额外的可选暴露面。
+
+本文先说明两种实现类型的共同发布模型，再用一个多步骤 Workflow 展示组合、进度和 Client
+消费侧验证。
+
+```text
+独立 Worker
+  → 注册 Temporal Activity / Workflow
+  → PublishActivity / PublishWorkflow
+  → AgentK Catalog
+  → Session Profile
+  → Pipeline Execution
+  → Events / Output
+```
+
+完整的多语言实现位于 `storyboard-example`。本文只保留 Worker 实现、发布 Capability 和 Client
+消费侧验证所需的结构。
+
+## Activity 与 Workflow 是实现类型
+
+- **Activity** 适合一次服务调用、数据库操作或其他单段 I/O；
+- **Workflow** 适合持久等待、多步骤、并发编排或调用其他 Capability。
+
+两者发布后都进入 Capability Catalog，并使用相同的 ID、description、输入输出 Schema 和超时
+契约。区别只在原生 Temporal 注册方式，以及调用 `PublishActivity` 还是 `PublishWorkflow`。
+是否暴露给模型不由实现类型决定；只有 Capability 的 `Tool` 字段非空时，它才同时成为
+model-callable Tool。
+
+## 准备环境
+
+Worker SDK 通过 KESS 发现 AgentK 使用的 Temporal 集群，并固定连接 `agentk` namespace。
+需要让本地 Worker 接入共享环境、同时避免消费普通任务时，参见
+[配置 Worker Lane](/worker/guides/worker-lane)。
+不需要配置 Temporal 地址或 namespace：
+
+```bash
+go get git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go@v0.3.2
+```
+
+本机 KESS Agent 只能访问 staging。生产 Worker 必须部署在能够发现生产 KESS 服务的 IDC 环境。
+
+Contributor Worker 必须使用自己的 task queue，例如 `contrib.storyboard-example-go`；不能使用
+AgentK Core 的 `agentk` task queue。
+
+:::warning[模型调用费用]
+
+Storyboard 示例会调用文本、图片和视频生成能力，可能需要数分钟并产生费用。首次验证请使用
+`shots: 1`。
+
+:::
+
+## 1. 定义业务输入与输出
+
+Workflow 只接收领域参数，不接收 App、<Session />、<Execution /> ID 或回调地址：
+
+```go
+type StoryboardInput struct {
+    Topic      string `json:"topic"`
+    Shots      int    `json:"shots,omitempty"`
+    ChatModel  string `json:"chatModel"`
+    ImageModel string `json:"imageModel"`
+    VideoModel string `json:"videoModel"`
+}
+
+type StoryboardOutput struct {
+    Artifacts []sdkcapability.Artifact `json:"artifacts"`
+    ClipCount int                      `json:"clipCount"`
+}
+```
+
+这两个类型同时是 Workflow ABI 和 Capability Schema 的来源。字段一旦被下游使用，就应按公开
+契约维护，不要把 Worker 部署信息加入业务输入。
+
+## 2. 在 Workflow 中调用其他 Capability
+
+业务 Workflow 仍然使用 Temporal Go SDK 编写。需要调用 AgentK 内置或其他 Worker 提供的
+能力时，使用稳定 Capability ID，而不是复制目标 task queue 和 Temporal Type：
+
+```go
+func StoryboardFilmWorkflow(
+    ctx workflow.Context,
+    input StoryboardInput,
+) (StoryboardOutput, error) {
+    var board GenerateTextOutput
+    if err := sdkcapability.Invoke(
+        ctx,
+        "agentk.generate_text",
+        GenerateTextInput{
+            Model:  input.ChatModel,
+            Prompt: "根据主题生成分镜",
+        },
+        &board,
+    ); err != nil {
+        return StoryboardOutput{}, err
+    }
+
+    // 使用 workflow.Go、Child Workflow 或其他确定性原语继续编排。
+    return buildFilm(ctx, input, board)
+}
+```
+
+这个 `capability.Invoke` 只接受 `workflow.Context`，用于 Worker Workflow 内组合能力。下游应用
+不连接 Temporal，也不调用这个 Worker API；需要一次性阻塞调用时，使用 Client SDK 的
+[`InvokeCapability`](/client/guides/invoke-capability)。
+
+`capability.Invoke` 启动 AgentK core 的薄壳 Child Workflow；薄壳解析当前路由，再根据目标类型
+执行 Child Workflow 或 Activity。调用仍在 Temporal Workflow 中，因此需要遵守确定性要求：
+网络、文件和数据库操作放入 Activity；并发使用 `workflow.Go` 等 Temporal 原语。
+
+## 3. 按业务阶段上报进度
+
+Pipeline Workflow 可以使用 Worker SDK 上报下游可见的步骤：
+
+```go
+if err := invocation.ReportProgress(
+    ctx,
+    "board",
+    "分镜完成，共 3 镜",
+    nil,
+); err != nil {
+    workflow.GetLogger(ctx).Warn(
+        "report progress failed",
+        "error", err,
+    )
+}
+```
+
+没有 AgentK invocation context 时，`ReportProgress` 是 no-op，因此 Workflow 仍可直接测试或被
+其他 Workflow 调用。进度失败是否影响业务结果由能力自身决定；仅用于界面展示时，通常记录
+告警并继续。
+
+进度事件的结构见[能力执行与进度回传](/concepts/capability-execution-progress)。
+
+## 4. 注册并发布 Workflow 实现
+
+使用 Worker SDK 连接 Temporal、注册 Workflow 并发布 Capability：
+
+```go
+package main
+
+import (
+    "context"
+    "log"
+
+    agentktemporal "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/temporal"
+    agentkworker "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker"
+    sdkcapability "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability"
+    temporalworker "go.temporal.io/sdk/worker"
+    "go.temporal.io/sdk/workflow"
+)
+
+func main() {
+    temporalClient, err := agentktemporal.Dial(context.Background())
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer temporalClient.Close()
+
+    w := agentkworker.New(
+        temporalClient,
+        "contrib.storyboard-example-go",
+        temporalworker.Options{},
+    )
+    w.RegisterWorkflowWithOptions(
+        StoryboardFilmWorkflow,
+        workflow.RegisterOptions{Name: "StoryboardFilmExample"},
+    )
+    w.PublishWorkflow(sdkcapability.Capability{
+        ID:             "contrib.storyboard_example.storyboard_film_go",
+        TemporalType:   "StoryboardFilmExample",
+        Description:    "围绕主题生成分镜，并行生成视频片段，最后拼接成片。",
+        InputSchema:    sdkcapability.SchemaOf[StoryboardInput](),
+        OutputSchema:   sdkcapability.SchemaOf[StoryboardOutput](),
+        TimeoutSeconds: 24 * 60 * 60,
+    })
+
+    if err := w.Run(temporalworker.InterruptCh()); err != nil {
+        log.Fatal(err)
+    }
+}
+```
+
+`agentktemporal.Dial` 处理 KESS 与 invocation context；`agentkworker.New` 是原生 Temporal
+Worker 的薄装饰器，原生注册方法仍然可用；`PublishWorkflow` 只发布契约，不替代注册。
+
+Activity 使用同一个发布模型：先通过原生 Temporal API 注册 Activity，再把相同结构的
+`sdkcapability.Capability` 传给 `PublishActivity`。两种方法都只发布契约，不注册执行体。
+
+本例没有填写 `Tool`，Capability 仍可由 Client 作为 Pipeline 直接调用。需要同时允许模型选择
+并调用它时，再增加 `Tool: &sdkcapability.Tool{}`，并在 Profile 中把它加入 `tools`。
+
+## 5. 运行并确认 Capability
+
+启动 Worker：
+
+```bash
+go run .
+```
+
+Worker 启动前会校验并冻结 Manifest，随后自动上报。使用任一 Client SDK 调用
+`ListCapabilities`，确认响应中出现：
+
+```text
+contrib.storyboard_example.storyboard_film_go
+```
+
+Catalog 返回公开说明、Schema、超时和 Tool 声明，不返回 task queue 或 Temporal Type。
+
+## 6. 为 Client 消费侧准备 Profile
+
+```json title="profile.json"
+{
+  "defaultModel": "<chat-model>",
+  "system": "按调用方选择的 Pipeline 执行任务。",
+  "tools": [],
+  "pipelines": [
+    {
+      "capability": "contrib.storyboard_example.storyboard_film_go",
+      "name": "storyboard_film",
+      "displayName": "分镜成片"
+    }
+  ]
+}
+```
+
+`capability` 是全局 ID，`name` 是当前 Session 调用 Pipeline 时使用的名称。Profile 不承载
+Workflow Type、task queue 或超时。
+
+## 7. 从 Client 消费侧验证 Pipeline
+
+下面的 Go Client SDK 调用属于消费侧验证，用于确认以 Workflow 实现的 Capability 可以通过
+Pipeline Execution 直接运行；它不是 Worker 的运行职责：
+
+运行验证前向 AgentK 平台维护方登记消费侧工作负载 KSN，完成 Service/App 绑定，并在本机设置
+`KWS_SERVICE_NAME='<registered-ksn>'`。
+
+```go
+client, err := agentkgrpc.New(agentkclient.Options{})
+if err != nil {
+    return err
+}
+
+created, err := client.CreateSession(ctx, &apiv1.CreateSessionRequest{
+    Title:   "storyboard",
+    Profile: profile,
+})
+if err != nil {
+    return err
+}
+
+args, err := structpb.NewStruct(map[string]any{
+    "topic": "雨夜里走过霓虹街道的猫",
+    "shots": 1,
+    "chatModel": "<chat-model>",
+    "imageModel": "<image-model>",
+    "videoModel": "<video-model>",
+})
+if err != nil {
+    return err
+}
+
+started, err := client.StartExecution(ctx, &apiv1.StartExecutionRequest{
+    SessionId: created.GetSession().GetId(),
+    Input: &apiv1.StartExecutionRequest_Pipeline{
+        Pipeline: &apiv1.PipelineExecutionInput{
+            Pipeline: "storyboard_film",
+            Args:     args,
+        },
+    },
+})
+if err != nil {
+    return err
+}
+
+executionID := started.GetExecution().GetId() // exe_...
+```
+
+`StartExecution` 返回 `exe_...` ID。应用使用 `WatchEvents` 接收 `invocation_progress`，并使用
+`GetExecution` 读取 `RUNNING`、`COMPLETED`、`FAILED` 或 `CANCELLED`。成功时最终结果位于
+`execution.pipeline.output`。
+
+完整的真实应用见 [Go Storyboard Job API](/examples/go-storyboard-job-api)。
+
+## Worker 发布检查
+
+1. 使用 `agentktemporal.Dial`，不自行配置 Temporal 地址和 namespace。
+2. Contributor Worker 使用自己的 task queue。
+3. 使用原生 Temporal API 注册 Workflow，再使用 `PublishWorkflow` 发布契约。
+4. Workflow 通过 `capability.Invoke` 调用其他 Capability，不复制目标路由。
+5. Profile 保存 Capability ID 和 Session 内名称，不保存部署信息。
+6. Client 消费侧使用 `StartExecution`、`WatchEvents` 和 `GetExecution` 验证已发布的 Pipeline。

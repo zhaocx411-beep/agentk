@@ -1,0 +1,15 @@
+# Commit message generation (Source Control sparkle button)
+# Newer `.cursor/rules` files are not applied to this flow; keep instructions here.
+
+When generating a Git commit message for this repository:
+- Write the entire message in Simplified Chinese (简体中文). Do not use English for the subject or body.
+- Follow Conventional Commits: `<type>(<scope>): <subject>`
+- type: feat / fix / docs / style / refactor / perf / chore
+- scope: module name such as agent / workflow / playground / offline
+- subject: concise Chinese summary of why the change exists, not a file list
+- Keep it to one subject line (about 50 characters). Add a short Chinese body only when the change is non-obvious.
+
+Examples:
+feat(agent): 新增 Agent 列表页面，遵循 DESIGN.md 的 Notion 风格
+fix(request): 修复 401 重复跳转问题
+docs(design): 更新 DESIGN.md 的颜色 token

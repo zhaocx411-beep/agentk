@@ -1,0 +1,20 @@
+{
+  "id": "video-understanding",
+  "name": "视频分镜理解",
+  "description": "按原视频时间轴分析内容结构、真实分镜、画面、声音与叙事作用。",
+  "category": "媒体理解",
+  "tags": ["分镜分析", "时间轴", "视听理解"],
+  "kind": "chat",
+  "href": "/agents/video-understanding/chat/",
+  "status": "可使用",
+  "visual": "research",
+  "visualLabel": "VIDEO ANALYSIS · 05",
+  "icon": "◉",
+  "accent": "#536fb7",
+  "welcomeMessage": "提供视频 URL 和分析目标，我会按时间轴完成分镜级理解。",
+  "starterPrompts": [
+    "分析这个视频的完整分镜和叙事结构",
+    "逐段说明视频中的人物动作、运镜和声音",
+    "比较两个视频的分镜节奏与视觉风格"
+  ]
+}

@@ -1,0 +1,287 @@
+---
+sidebar_position: 1
+sidebar_label: Go：分镜短片 Job API
+title: Go 示例：把 AgentK Pipeline 包装成业务 Job API
+description: 使用 Go Worker SDK 提供分镜能力，并使用 Go Client SDK 构建下游异步 API
+pagination_prev: concepts/request-lane
+pagination_next: examples/python-storyboard-mcp
+---
+
+# Go 示例：把 AgentK Pipeline 包装成业务 Job API
+
+这个完整示例展示能力供给和下游消费的两端：Go Worker 使用 AgentK Worker SDK 发布
+Storyboard <Capability />；独立的 Go API Server 使用 AgentK Go Client SDK 启动 <Pipeline />，
+再向自己的调用方提供异步 Job API。
+
+这里的 Job 是下游应用自己的业务资源，不是 AgentK 资源。AgentK 内部只有 <Session />、<Execution />
+和 Event；API Server 保存 `job_id → session_id + execution_id` 的映射。
+
+## Storyboard Film 是什么
+
+调用方提供短片主题和镜头数，Workflow 依次完成：
+
+```text
+主题
+  → 生成分镜列表
+  → 为每个分镜生成首帧
+  → 并行生成视频片段
+  → 拼接成功片段
+  → 返回 Video Artifact
+```
+
+它不是 AgentK 内置能力，而是独立 Worker 提供的示例 Capability。这个业务包含多模型调用、
+分钟级执行、并行分支、局部失败、进度和最终 <Artifact />，适合展示完整的 Worker 供给与 Client 消费路径。
+
+:::warning[模型调用费用]
+
+运行示例会调用文本、图片和视频生成能力，可能需要数分钟并产生费用。首次验证请使用
+`shots: 1`。
+
+:::
+
+## 运行链路
+
+```text
+业务调用方
+  → Go Storyboard Job API
+  → AgentK Go Client SDK
+  → Session + Pipeline Execution
+  → Go Storyboard Worker
+  → AgentK 内置文本、图片、视频与拼接 Capability
+  → Pipeline Output
+  → 业务 Job 终态
+```
+
+示例包含两个独立进程：
+
+- `go/worker` 是能力提供方，负责 Workflow、Schema、Capability 发布和进度上报；
+- `go/apiserver` 是下游应用，负责业务 Job、入参、状态转换和调用方接口。
+
+API Server 使用已登记的工作负载 KSN 接入 AgentK。业务调用方只访问 Job API，由 API Server
+维护业务 Job 与 AgentK Session、Execution 的映射。
+
+## Worker：用 Workflow 实现 Capability
+
+Worker 入口位于 `go/worker/main.go`。下面保留实际 import 路径，避免别名与所属包不明确：
+
+```go title="go/worker/main.go"
+package main
+
+import (
+    "context"
+    "log"
+
+    agentktemporal "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/temporal"
+    agentkworker "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker"
+    sdkcapability "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability"
+    temporalworker "go.temporal.io/sdk/worker"
+    "go.temporal.io/sdk/workflow"
+)
+
+temporalClient, err := agentktemporal.Dial(context.Background())
+if err != nil {
+    log.Fatalf("dial temporal through KESS: %v", err)
+}
+defer temporalClient.Close()
+
+temporalWorker := agentkworker.New(
+    temporalClient,
+    WorkerTaskQueue,
+    temporalworker.Options{},
+)
+temporalWorker.RegisterWorkflowWithOptions(
+    StoryboardFilmWorkflow,
+    workflow.RegisterOptions{Name: WorkflowType},
+)
+temporalWorker.PublishWorkflow(sdkcapability.Capability{
+    ID:             CapabilityID,
+    TemporalType:   WorkflowType,
+    Description:    pipelineDescription,
+    InputSchema:    sdkcapability.SchemaOf[StoryboardInput](),
+    OutputSchema:   sdkcapability.SchemaOf[StoryboardOutput](),
+    TimeoutSeconds: 24 * 60 * 60,
+    Tool:           &sdkcapability.Tool{},
+})
+
+if err := temporalWorker.Run(temporalworker.InterruptCh()); err != nil {
+    log.Fatalf("worker exited: %v", err)
+}
+```
+
+这一个 Capability 同时可以作为 Pipeline 和 blocking Tool。Pipeline 不需要额外发布声明；
+`Tool{}` 只表示它允许被 Agent Loop 选择。
+
+## Workflow：按 Capability ID 组合能力
+
+Storyboard Workflow 不复制核心 Worker 的 task queue 或 Activity Type，而是通过 Worker SDK 调用
+Capability ID：
+
+```go title="go/worker/workflow.go"
+import (
+    sdkcapability "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability"
+    "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation"
+    "go.temporal.io/sdk/workflow"
+)
+
+var frame GenerateImageOutput
+if err := sdkcapability.Invoke(ctx, "agentk.generate_image", GenerateImageInput{
+    Model:       input.ImageModel,
+    Prompt:      shot.Frame,
+    AspectRatio: "16:9",
+}, &frame); err != nil {
+    return "", err
+}
+```
+
+生成分镜后，Workflow 使用 `workflow.Go` 并行处理镜头；每个片段完成时使用上面导入的
+`invocation.ReportProgress` 上报稳定的 `clip/<index>` 步骤。最终结果包含 Video Artifact：
+
+```go
+return StoryboardOutput{
+    Artifacts: []sdkcapability.Artifact{{
+        Type: "video",
+        URI:  composedArtifact.URI,
+    }},
+    ClipCount: composed.ClipCount,
+}, nil
+```
+
+## API Server：使用 Go Client SDK
+
+Client 实现位于 `go/apiserver/agentk.go`。下游使用 KESS gRPC transport 创建 AgentK Client：
+
+```go title="go/apiserver/agentk.go"
+import (
+    "context"
+    "fmt"
+
+    agentkclient "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client"
+    agentkgrpc "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client/grpc"
+    apiv1 "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1"
+    "google.golang.org/protobuf/types/known/structpb"
+)
+
+client, err := agentkgrpc.New(agentkclient.Options{})
+if err != nil {
+    return nil, fmt.Errorf("create agent-k gRPC client: %w", err)
+}
+```
+
+Client SDK 负责服务发现、gRPC h2c、KSN 身份传播和 protobuf 调用。API Server 不配置 AgentK
+固定地址，也不拼接 AgentK HTTP 路径。
+
+创建业务 Job 时，Server 先创建 Session：
+
+```go
+created, err := client.CreateSession(ctx, &apiv1.CreateSessionRequest{
+    Title:   "Storyboard Film: " + topic,
+    Profile: profile,
+})
+sessionID := created.GetSession().GetId()
+```
+
+再启动 Profile 中声明的 Pipeline：
+
+```go
+started, err := client.StartExecution(ctx, &apiv1.StartExecutionRequest{
+    SessionId: sessionID,
+    Input: &apiv1.StartExecutionRequest_Pipeline{
+        Pipeline: &apiv1.PipelineExecutionInput{
+            Pipeline: "storyboard_film_example",
+            Args:     args,
+        },
+    },
+})
+executionID := started.GetExecution().GetId() // exe_...
+```
+
+应用生成自己的 `job_...` ID，并保存：
+
+```text
+job_... → ses_... + exe_...
+```
+
+查询 Job 时，Server 使用 `GetExecution` 读取 Pipeline 状态：
+
+```go
+response, err := client.GetExecution(ctx, &apiv1.GetExecutionRequest{
+    SessionId:   sessionID,
+    ExecutionId: executionID,
+})
+```
+
+`RUNNING` 映射为业务 Job 的 running；`COMPLETED` 时从 `execution.pipeline.output` 解码
+`StoryboardOutput`；`FAILED` 或 `CANCELLED` 映射为业务失败。AgentK 的 Execution ID
+不会暴露成业务 Job ID。
+
+## Profile
+
+API Server 使用的 Profile 只选择 Go Worker Capability：
+
+```json
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "Use the declared pipeline when the caller explicitly starts it.",
+  "tools": [],
+  "pipelines": [
+    {
+      "capability": "contrib.storyboard_example.storyboard_film_go",
+      "name": "storyboard_film_example",
+      "displayName": "Go 分镜成片示例"
+    }
+  ]
+}
+```
+
+模型名称可以按环境调整。Capability ID、Pipeline 名称和业务 ABI 与 Worker 保持一致。
+
+## 运行
+
+本机 KESS 连接 staging，不需要启动本地 Temporal 或 AgentK。运行前向 AgentK 平台维护方登记
+API Server 的工作负载 KSN，并完成 Service/App 绑定。
+
+先启动 Worker：
+
+```bash
+cd go/worker
+go run .
+```
+
+再启动 API Server：
+
+```bash
+cd go/apiserver
+
+export KWS_SERVICE_NAME='<registered-ksn>'
+export API_HOST='127.0.0.1'
+export API_PORT='8080'
+
+go run .
+```
+
+创建并查询业务 Job：
+
+```bash
+curl -sS -X POST http://127.0.0.1:8080/v1/jobs \
+  -H 'Content-Type: application/json' \
+  -d '{"topic":"雨夜里走过霓虹街道的猫","shots":1}'
+
+curl -sS http://127.0.0.1:8080/v1/jobs/<job_id>
+```
+
+这些 HTTP 路径属于示例 API Server，不是 AgentK API。Server 到 AgentK 的调用全部通过 Go
+Client SDK 完成。
+
+## 示例边界
+
+这个仓库展示集成形态，不是生产级 Job 平台：
+
+- Job 索引只保存在当前进程内存中，服务重启后丢失；
+- Job API 暂无入站鉴权，只能部署在可信网络；
+- API Server 在 GET 时刷新 AgentK Execution，没有后台轮询或通知；
+- API Server 使用自身登记的 KSN 调用 AgentK，业务调用方不接触这份工作负载身份；
+- 生产应用应持久化业务 Job 与 `session_id + execution_id` 的映射。
+
+同一仓库还提供使用 Java Client SDK 的等价 API Server，见
+[Java Client SDK](/client/sdk/java)；Python 下游形态见
+[Python Storyboard MCP Tool](/examples/python-storyboard-mcp)。

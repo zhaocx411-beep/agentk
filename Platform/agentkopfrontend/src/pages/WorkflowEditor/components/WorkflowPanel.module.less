@@ -1,0 +1,446 @@
+@import url('@/styles/variables.less');
+
+/* ========== 右侧面板容器 ========== */
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  min-height: 0;
+  flex-shrink: 0;
+  padding: 0;
+  background: @canvas;
+  border-left: 1px solid @divider;
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @spacing-sm @spacing-md;
+  border-bottom: 1px solid @divider;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  color: @text-color;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panelIcon {
+  color: @primary-color;
+  font-size: 14px;
+}
+
+.panelBody {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: @spacing-md;
+  scrollbar-gutter: stable;
+}
+
+/* ========== Tab 切换 ========== */
+.tabBar {
+  display: flex;
+  align-items: center;
+  margin: @spacing-xs @spacing-md @spacing-xs;
+  padding: @spacing-xs;
+  background: @surface-3;
+  gap: @spacing-xxs;
+  border-radius: @border-radius-md;
+}
+
+.tabItem {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  border: none;
+  background: none;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+  transition: all @transition-duration-fast;
+  border-radius: @border-radius-sm;
+  gap: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(0 0 0 / 3%);
+    color: @text-color;
+  }
+
+  &.tabActive {
+    background: @canvas;
+    color: @primary-color;
+    box-shadow: @shadow-sm;
+    font-weight: 600;
+  }
+}
+
+.tabIcon {
+  font-size: 12px;
+}
+
+/* ========== 选择 Pipeline 区 ========== */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-md;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.select {
+  width: 100%;
+}
+
+.sessionHint {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* ========== 参数表单区 ========== */
+.params {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.paramItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.paramLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.paramRequired {
+  color: @error-color;
+  margin-left: 2px;
+}
+
+.paramInput {
+  width: 100%;
+}
+
+/* ========== 调试运行区 ========== */
+.runSection {
+  margin-top: @spacing-md;
+  padding-top: @spacing-md;
+  border-top: 1px solid @divider;
+}
+
+.runBtn {
+  width: 100%;
+}
+
+/* ========== 运行结果区 ========== */
+.resultSection {
+  margin-top: @spacing-md;
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @spacing-sm;
+}
+
+.resultTitle {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.resultStatus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.resultStatusRunning {
+  color: @primary-color;
+}
+
+.resultStatusOk {
+  color: @success-color;
+}
+
+.resultStatusErr {
+  color: @error-color;
+}
+
+/* 节点状态列表 */
+.nodeList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: @spacing-sm;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  padding: 4px @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-sm;
+  background: @surface-2;
+  font-size: @font-size-caption;
+}
+
+.nodeIcon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.nodeName {
+  min-width: 60px;
+  color: @text-color;
+  font-family: @font-mono;
+  font-weight: 500;
+}
+
+.nodeStatus {
+  color: @text-color-secondary;
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.nodeStatusPending {
+  color: @text-color-tertiary;
+}
+
+.nodeStatusRunning {
+  color: @primary-color;
+}
+
+.nodeStatusCompleted {
+  color: @success-color;
+}
+
+.nodeStatusFailed {
+  color: @error-color;
+}
+
+.nodeStatusSkipped {
+  color: @text-color-tertiary;
+}
+
+.nodeDuration {
+  color: @text-color-tertiary;
+  font-size: 10px;
+  font-family: @font-mono;
+}
+
+.nodeError {
+  max-width: 120px;
+  color: @error-color;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 输出区 */
+.outputSection {
+  margin-top: @spacing-sm;
+  padding-top: @spacing-sm;
+  border-top: 1px solid @hairline;
+}
+
+.outputTitle {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  margin-bottom: @spacing-xs;
+}
+
+.outputPre {
+  padding: @spacing-sm;
+  border-radius: @border-radius-sm;
+  background: @surface-3;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  font: 12px/1.5 @font-mono;
+}
+
+.errorBar {
+  margin-top: @spacing-xs;
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid #fecaca;
+  border-radius: @border-radius-sm;
+  background: #fef2f2;
+  color: @error-color;
+  font-size: @font-size-caption;
+}
+
+/* ========== 运行历史区 ========== */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.historyItem {
+  padding: @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+  cursor: pointer;
+  transition:
+    background @transition-duration-fast,
+    border-color @transition-duration-fast;
+
+  &:hover {
+    background: @primary-subdued;
+    border-color: @primary-color;
+  }
+}
+
+.historyItemActive {
+  border-color: @primary-color;
+  background: @primary-soft;
+}
+
+.historyHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-xs;
+  margin-bottom: 4px;
+}
+
+.historyName {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.historyTime {
+  color: @text-color-tertiary;
+  font-size: 11px;
+}
+
+.historyRunId {
+  color: @text-color-tertiary;
+  font-size: 10px;
+  font-family: @font-mono;
+}
+
+.historyEmpty {
+  padding: @spacing-lg 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+.historyLoading {
+  padding: @spacing-sm 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+/* ========== 空状态 ========== */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @spacing-sm;
+  padding: @spacing-xxl 0;
+  color: @text-color-tertiary;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: @text-color-disabled;
+  font-size: 32px;
+}
+
+.emptyText {
+  font-size: @font-size-caption;
+  line-height: 1.6;
+}
+
+/* ========== 折叠状态 ========== */
+.panelCollapsed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  min-height: 0;
+  flex-shrink: 0;
+  background: @canvas;
+  border-left: 1px solid @divider;
+}
+
+.expandBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-sm;
+  background: @surface-2;
+  color: @text-color-secondary;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    color @transition-duration-fast,
+    background @transition-duration-fast;
+
+  &:hover {
+    background: @primary-subdued;
+    color: @primary-color;
+  }
+}
+
+.collapseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: @border-radius-xs;
+  background: none;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  cursor: pointer;
+  transition:
+    color @transition-duration-fast,
+    background @transition-duration-fast;
+
+  &:hover {
+    background: @primary-subdued;
+    color: @primary-color;
+  }
+}

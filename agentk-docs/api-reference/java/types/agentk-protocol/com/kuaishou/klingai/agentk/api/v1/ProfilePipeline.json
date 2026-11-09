@@ -1,0 +1,645 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ProfilePipeline"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline",
+    "kind": "class",
+    "name": "ProfilePipeline",
+    "declaration": {
+      "text": "@Generated()public final class ProfilePipeline extends GeneratedMessage implements ProfilePipelineOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 46,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.ProfilePipeline"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getCapability-",
+        "name": "getCapability",
+        "declaration": {
+          "text": "public String getCapability()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getCapability-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string capability = 1 [json_name = \"capability\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The capability."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getCapability()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getCapabilityBytes-",
+        "name": "getCapabilityBytes",
+        "declaration": {
+          "text": "public ByteString getCapabilityBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getCapabilityBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string capability = 1 [json_name = \"capability\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for capability."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getCapabilityBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getDisplayName-",
+        "name": "getDisplayName",
+        "declaration": {
+          "text": "public String getDisplayName()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getDisplayName-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string display_name = 3 [json_name = \"displayName\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The displayName."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getDisplayName()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getDisplayNameBytes-",
+        "name": "getDisplayNameBytes",
+        "declaration": {
+          "text": "public ByteString getDisplayNameBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getDisplayNameBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string display_name = 3 [json_name = \"displayName\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for displayName."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDisplayNameBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getName-",
+        "name": "getName",
+        "declaration": {
+          "text": "public String getName()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getName-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string name = 2 [json_name = \"name\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The name."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getName()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getNameBytes-",
+        "name": "getNameBytes",
+        "declaration": {
+          "text": "public ByteString getNameBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-getNameBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string name = 2 [json_name = \"name\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for name."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNameBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ProfilePipeline.Builder newBuilder()",
+          "references": [
+            {
+              "start": 38,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilder-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ProfilePipeline.Builder newBuilder(ProfilePipeline prototype)",
+          "references": [
+            {
+              "start": 38,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilder-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-"
+            },
+            {
+              "start": 49,
+              "end": 64,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(ProfilePipeline prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public ProfilePipeline.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 31,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public ProfilePipeline.Builder toBuilder()",
+          "references": [
+            {
+              "start": 31,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ProfilePipeline-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

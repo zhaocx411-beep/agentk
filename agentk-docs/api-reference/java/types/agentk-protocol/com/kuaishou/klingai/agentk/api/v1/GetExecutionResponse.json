@@ -1,0 +1,383 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "GetExecutionResponse"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse",
+    "kind": "class",
+    "name": "GetExecutionResponse",
+    "declaration": {
+      "text": "@Generated()public final class GetExecutionResponse extends GeneratedMessage implements GetExecutionResponseOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 51,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.GetExecutionResponse"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-getExecution-",
+        "name": "getExecution",
+        "declaration": {
+          "text": "public Execution getExecution()",
+          "references": [
+            {
+              "start": 7,
+              "end": 16,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Execution"
+            },
+            {
+              "start": 17,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-getExecution-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.Execution execution = 1 [json_name = \"execution\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The execution."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Execution",
+          "references": [
+            {
+              "start": 0,
+              "end": 9,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Execution"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getExecution()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-hasExecution-",
+        "name": "hasExecution",
+        "declaration": {
+          "text": "public boolean hasExecution()",
+          "references": [
+            {
+              "start": 15,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-hasExecution-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.Execution execution = 1 [json_name = \"execution\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the execution field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasExecution()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static GetExecutionResponse.Builder newBuilder()",
+          "references": [
+            {
+              "start": 43,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static GetExecutionResponse.Builder newBuilder(GetExecutionResponse prototype)",
+          "references": [
+            {
+              "start": 43,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-"
+            },
+            {
+              "start": 54,
+              "end": 74,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(GetExecutionResponse prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public GetExecutionResponse.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 36,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public GetExecutionResponse.Builder toBuilder()",
+          "references": [
+            {
+              "start": 36,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-GetExecutionResponse-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

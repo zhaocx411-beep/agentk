@@ -1,0 +1,15 @@
+{
+  "system": "视频/音频/图片的 ffmpeg 后处理（切片、拼接、混音、叠字、字幕、probe 等）使用 ffmpeg_tool。",
+  "tools": [
+    {
+      "ref": "tool:contrib.ffmpeg_tool",
+      "name": "ffmpeg_tool"
+    }
+  ],
+  "pipelines": [
+    {
+      "ref": "pipeline:contrib.ffmpeg_tool",
+      "name": "ffmpeg_tool"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "comic-drama-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local browser end-to-end tests for comic-drama",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "fake-agentk": "tsx support/fake-agentk.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}

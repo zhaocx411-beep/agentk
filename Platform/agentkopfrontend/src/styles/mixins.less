@@ -1,0 +1,171 @@
+// ==========================================
+// 全局 Less Mixin
+// 收敛跨页面重复的视觉模式，保证同类元素在各页面表现一致
+// 通过 vite 的 additionalData 全局注入，组件内无需 @import
+// 依赖 variables.less 的 token，禁止在此硬编码颜色与尺寸
+// ==========================================
+
+// 多行文本截断
+.text-clamp(@lines) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @lines;
+  line-clamp: @lines;
+}
+
+// 卡片基础表面：白底 + 发丝边框 + 大圆角
+.surface-card(@radius: @border-radius-xl) {
+  border: 1px solid @hairline;
+  background: @surface-1;
+  border-radius: @radius;
+}
+
+// 可点击卡片：hover 时以边框、阴影、轻微抬升表达可点击，不做夸张位移
+.surface-card-interactive(@radius: @border-radius-xl) {
+  .surface-card(@radius);
+
+  cursor: pointer;
+  transition:
+    border-color @transition-duration-base @transition-timing,
+    box-shadow @transition-duration-base @transition-timing,
+    transform @transition-duration-base @transition-timing;
+
+  &:hover,
+  &:focus-visible {
+    border-color: @primary-color;
+    box-shadow: @shadow-md;
+    transform: translateY(@card-lift);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover,
+    &:focus-visible {
+      transform: none;
+    }
+  }
+}
+
+// 搜索输入框皮肤：高度、圆角、focus 光圈
+.control-search-skin(@height; @radius; @shadow) {
+  height: @height;
+  border-color: @hairline;
+  background: @surface-1;
+  border-radius: @radius;
+  box-shadow: @shadow;
+
+  // 焦点在内部 input 上，外壳需要用 focus-within 才能响应
+  &:hover,
+  &:focus-within {
+    border-color: @primary-color;
+    box-shadow: @focus-ring;
+  }
+}
+
+// 搜索输入框：统一高度、圆角与 focus 光圈
+// class 可能直接挂在 antd 的 affix-wrapper 上，也可能挂在外层包裹容器上，两种结构都要命中
+// @shadow 仅在输入框需要脱离背景浮起时传入，容器已有阴影时保持 none 避免层层堆叠
+.control-search(@height: @control-height-base; @radius: @border-radius-lg; @shadow: @shadow-none) {
+  &:global(.ant-input-affix-wrapper) {
+    .control-search-skin(@height; @radius; @shadow);
+  }
+
+  :global(.ant-input-affix-wrapper) {
+    width: 100%;
+
+    .control-search-skin(@height; @radius; @shadow);
+  }
+}
+
+// 空状态容器：虚线框，与实线卡片区分「此处本应有内容」
+.empty-frame() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: @spacing-xxl @spacing-lg;
+  border: 1px dashed @hairline-strong;
+  background: @surface-1;
+  border-radius: @border-radius-lg;
+  text-align: center;
+}
+
+// 空状态标题：一句话说明「这里为什么是空的」
+.empty-title() {
+  margin: @spacing-xs 0 @spacing-xxs;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+// 空状态说明：告诉用户下一步能做什么，而不是只写「暂无数据」
+.empty-desc() {
+  max-width: 46em;
+  margin: 0 0 @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.7;
+}
+
+// 列表页页头主标题：常规无衬线大字，与 DESIGN.md display-lg / 全局正文字体一致
+.hero-title() {
+  margin: 0 0 @spacing-sm;
+  color: @text-color;
+  font-family: inherit;
+  font-size: @font-size-display-lg;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+  text-wrap: balance;
+}
+
+// 页头标题中的重点词：品牌色 + 一道淡色底纹
+// 整句同色时重点无从谈起，弱化主体、只强调关键动作才能让它跳出来
+.hero-title-accent() {
+  color: @primary-color;
+  font-style: normal;
+  background-image: linear-gradient(@primary-soft, @primary-soft);
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.16em;
+}
+
+// 分区标题：列表页各分组的二级标题
+.section-title() {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+// 页面滚动容器：列表页统一的内边距与背景
+.page-scroll() {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  padding: 0 @spacing-xxl @spacing-xl;
+  background: @page-ambient;
+  overflow: auto;
+
+  @media (max-width: @screen-md) {
+    padding: 0 @spacing-mobile @spacing-mobile;
+  }
+}
+
+// 列表页内容容器：统一最大宽度与居中
+.page-container() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: @content-max-width;
+  margin: 0 auto;
+}

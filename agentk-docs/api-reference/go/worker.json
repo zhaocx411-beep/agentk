@@ -1,0 +1,3373 @@
+{
+  "modulePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go",
+  "view": "worker",
+  "packages": [
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/temporal",
+      "name": "temporal",
+      "doc": "Package temporal connects AgentK workers to their Temporal namespace.\n",
+      "consts": [],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "Dial",
+          "doc": "Dial connects to the Temporal namespace used by AgentK through KESS service\ndiscovery. The client propagates AgentK invocation context to workflows and\nactivities registered by the caller.\n\nThe caller owns the returned client and must close it when it is no longer\nneeded.\n",
+          "declaration": {
+            "text": "func Dial(ctx context.Context) (client.Client, error)",
+            "references": [
+              {
+                "start": 14,
+                "end": 21,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 22,
+                "end": 29,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 32,
+                "end": 38,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/client",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 39,
+                "end": 45,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/client",
+                  "symbol": "Client",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 47,
+                "end": 52,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "ctx"
+                ],
+                "type": {
+                  "text": "context.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 7,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 8,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "client.Client",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 6,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/client",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 7,
+                      "end": 13,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/client",
+                        "symbol": "Client",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": []
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+      "name": "worker",
+      "doc": "Package worker adds AgentK capability publication to Temporal workers.\n",
+      "consts": [],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "InstanceLaneFromEnv",
+          "doc": "InstanceLaneFromEnv resolves the static lane identity for a Worker process.\nA configured KWS lane wins, a KWS-managed process without one is baseline,\nand an unmanaged local process receives a stable isolated lane.\n",
+          "declaration": {
+            "text": "func InstanceLaneFromEnv() (requestlane.Lane, error)",
+            "references": [
+              {
+                "start": 28,
+                "end": 39,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/requestlane",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 40,
+                "end": 44,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/requestlane",
+                  "symbol": "Lane",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 46,
+                "end": 51,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "requestlane.Lane",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 11,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/requestlane",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 12,
+                      "end": 16,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/requestlane",
+                        "symbol": "Lane",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": [
+        {
+          "name": "Worker",
+          "doc": "Worker wraps a Temporal Worker and publishes selected workflows and\nactivities as AgentK capabilities. Register implementations through the\nembedded Temporal Worker, then call PublishWorkflow or PublishActivity before\nstarting the Worker.\n\nStarting the Worker freezes its capability declarations. The Worker then\nannounces the frozen declarations in the background until it stops;\nannouncement failures are retried without stopping workflow or activity\nprocessing.\n",
+          "declaration": {
+            "text": "type Worker struct {\n\ttemporalworker.Worker\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 22,
+                "end": 36,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/worker",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 37,
+                "end": 43,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/worker",
+                  "symbol": "Worker",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [
+            {
+              "name": "New",
+              "doc": "New creates a Worker for taskQueue using the supplied Temporal client and\nworker options. Contributor workers must use their own task queue rather than\nthe AgentK core task queue.\n\nThe caller retains ownership of c and must close it separately.\n",
+              "declaration": {
+                "text": "func New(\n\tc client.Client,\n\ttaskQueue string,\n\toptions temporalworker.Options,\n) *Worker",
+                "references": [
+                  {
+                    "start": 13,
+                    "end": 19,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/client",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 20,
+                    "end": 26,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 39,
+                    "end": 45,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "string",
+                      "builtin": true
+                    }
+                  },
+                  {
+                    "start": 56,
+                    "end": 70,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/worker",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 71,
+                    "end": 78,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/worker",
+                      "symbol": "Options",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 83,
+                    "end": 89,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": null,
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "c"
+                    ],
+                    "type": {
+                      "text": "client.Client",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/client",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 13,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/client",
+                            "symbol": "Client",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "taskQueue"
+                    ],
+                    "type": {
+                      "text": "string",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "string",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "options"
+                    ],
+                    "type": {
+                      "text": "temporalworker.Options",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 14,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/worker",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 15,
+                          "end": 22,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/worker",
+                            "symbol": "Options",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*Worker",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                            "symbol": "Worker",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ],
+          "methods": [
+            {
+              "name": "PublishActivity",
+              "doc": "PublishActivity publishes the contract for an activity that is already\nregistered with the embedded Temporal Worker. It does not register the\nactivity implementation.\n\nPublishActivity panics if the Worker has already started and its declarations\nhave been frozen.\n",
+              "declaration": {
+                "text": "func (w *Worker) PublishActivity(declared capability.Capability)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 42,
+                    "end": 52,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 53,
+                    "end": 63,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "Capability",
+                      "builtin": false
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "w"
+                  ],
+                  "type": {
+                    "text": "*Worker",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                          "symbol": "Worker",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "declared"
+                    ],
+                    "type": {
+                      "text": "capability.Capability",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 10,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 11,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                            "symbol": "Capability",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": []
+              }
+            },
+            {
+              "name": "PublishWorkflow",
+              "doc": "PublishWorkflow publishes the contract for a workflow that is already\nregistered with the embedded Temporal Worker. It does not register the\nworkflow implementation.\n\nPublishWorkflow panics if the Worker has already started and its declarations\nhave been frozen.\n",
+              "declaration": {
+                "text": "func (w *Worker) PublishWorkflow(declared capability.Capability)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 42,
+                    "end": 52,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 53,
+                    "end": 63,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "Capability",
+                      "builtin": false
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "w"
+                  ],
+                  "type": {
+                    "text": "*Worker",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                          "symbol": "Worker",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "declared"
+                    ],
+                    "type": {
+                      "text": "capability.Capability",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 10,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 11,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                            "symbol": "Capability",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": []
+              }
+            },
+            {
+              "name": "Run",
+              "doc": "Run validates and freezes the published capabilities, announces them in the\nbackground, and runs the embedded Temporal Worker. Capability announcement\nstops when Run returns.\n",
+              "declaration": {
+                "text": "func (w *Worker) Run(interruptCh <-chan interface{}) error",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 53,
+                    "end": 58,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "w"
+                  ],
+                  "type": {
+                    "text": "*Worker",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                          "symbol": "Worker",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "interruptCh"
+                    ],
+                    "type": {
+                      "text": "<-chan interface{}",
+                      "references": []
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Start",
+              "doc": "Start validates and freezes the published capabilities, starts the embedded\nTemporal Worker, and begins announcing the capabilities in the background.\nAn announcement failure does not make Start fail; the Worker retries while it\nremains running.\n",
+              "declaration": {
+                "text": "func (w *Worker) Start() error",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 25,
+                    "end": 30,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "w"
+                  ],
+                  "type": {
+                    "text": "*Worker",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                          "symbol": "Worker",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Stop",
+              "doc": "Stop stops capability announcement before stopping the embedded Temporal\nWorker.\n",
+              "declaration": {
+                "text": "func (w *Worker) Stop()",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                      "symbol": "Worker",
+                      "builtin": false
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "w"
+                  ],
+                  "type": {
+                    "text": "*Worker",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker",
+                          "symbol": "Worker",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+      "name": "capability",
+      "doc": "Package capability declares and invokes AgentK capabilities implemented by\nTemporal workflows and activities.\n",
+      "consts": [
+        {
+          "names": [
+            "ManifestProtocolVersion"
+          ],
+          "doc": "ManifestProtocolVersion 是 capability discovery Manifest 的 wire 版本。\nV1 只承载实现契约与 Tool 消费策略，不承载在线状态或审计信息。\n",
+          "declaration": {
+            "text": "const ManifestProtocolVersion = 1",
+            "references": []
+          }
+        }
+      ],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "Invoke",
+          "doc": "Invoke asks AgentK Core to resolve and execute capabilityID, then waits for\nits result in output. Call Invoke only from Temporal Workflow code; output\nmust be a pointer compatible with the capability result.\n\nWorkflow targets run as child workflows and receive a cancellation request\nwhen their parent closes. Activity targets wait for cancellation to complete.\nInvoke returns errors from capability resolution and execution.\n",
+          "declaration": {
+            "text": "func Invoke(\n\tctx workflow.Context,\n\tcapabilityID string,\n\tinput any,\n\toutput any,\n) error",
+            "references": [
+              {
+                "start": 18,
+                "end": 26,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/workflow",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 27,
+                "end": 34,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/workflow",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 50,
+                "end": 56,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 65,
+                "end": 68,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "any",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 78,
+                "end": 81,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "any",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 85,
+                "end": 90,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "ctx"
+                ],
+                "type": {
+                  "text": "workflow.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 8,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/workflow",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 9,
+                      "end": 16,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/workflow",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "capabilityID"
+                ],
+                "type": {
+                  "text": "string",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 6,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "string",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "input"
+                ],
+                "type": {
+                  "text": "any",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 3,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "any",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "output"
+                ],
+                "type": {
+                  "text": "any",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 3,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "any",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "SchemaOf",
+          "doc": "SchemaOf returns a deterministic, fully inlined JSON Schema for T. Field\nnames and optional fields follow encoding/json: fields without omitempty are\nrequired, and generated object schemas reject unknown properties.\n",
+          "declaration": {
+            "text": "func SchemaOf[T any]() json.RawMessage",
+            "references": [
+              {
+                "start": 16,
+                "end": 19,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "any",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 23,
+                "end": 27,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 28,
+                "end": 38,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [
+              {
+                "name": "T",
+                "constraint": {
+                  "text": "any",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 3,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "any",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "parameters": [],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "json.RawMessage",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 4,
+                      "target": {
+                        "packagePath": "encoding/json",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 5,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "encoding/json",
+                        "symbol": "RawMessage",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "ValidateID",
+          "doc": "ValidateID 校验核心或 contributor 能力的全局标识。\n",
+          "declaration": {
+            "text": "func ValidateID(id string) error",
+            "references": [
+              {
+                "start": 19,
+                "end": 25,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 27,
+                "end": 32,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "id"
+                ],
+                "type": {
+                  "text": "string",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 6,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "string",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": [
+        {
+          "name": "Artifact",
+          "doc": "Artifact describes an output produced by a capability.\n",
+          "declaration": {
+            "text": "type Artifact struct {\n\t// Type identifies the kind of artifact, such as image or video.\n\tType string `json:\"type\"`\n\n\t// URI locates the artifact for downstream consumers.\n\tURI string `json:\"uri\"`\n\n\t// Description is an optional human-readable summary of the artifact.\n\tDescription string `json:\"description,omitempty\"`\n\n\t// Model identifies the model that produced the artifact, when applicable.\n\tModel string `json:\"model,omitempty\"`\n\n\t// Params records optional model or generation parameters.\n\tParams map[string]any `json:\"params,omitempty\"`\n}",
+            "references": [
+              {
+                "start": 95,
+                "end": 101,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 177,
+                "end": 183,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 282,
+                "end": 288,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 404,
+                "end": 410,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 509,
+                "end": 515,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 516,
+                "end": 519,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "any",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Capability",
+          "doc": "Capability describes a Temporal workflow or activity that an AgentK Worker\npublishes. The publish method supplies the implementation kind, and the\nWorker supplies the task queue.\n",
+          "declaration": {
+            "text": "type Capability struct {\n\t// ID is the globally unique capability ID. Contributor Workers must use\n\t// contrib.<owner>.<name>; IDs may contain lowercase letters, digits, and\n\t// underscores and must not exceed 128 characters.\n\tID string\n\n\t// TemporalType is the registered Temporal workflow or activity type.\n\tTemporalType string\n\n\t// Description explains the capability to users and, when Tool.Description\n\t// is empty, to the model that selects the Tool.\n\tDescription string\n\n\t// InputSchema is the JSON Schema for the capability input. Its top-level\n\t// type must be object.\n\tInputSchema json.RawMessage\n\n\t// OutputSchema is the JSON Schema for the capability result.\n\tOutputSchema json.RawMessage\n\n\t// TimeoutSeconds is the maximum execution duration applied when AgentK\n\t// invokes the capability. It must be between 1 second and 24 hours.\n\tTimeoutSeconds int64\n\n\t// Tool publishes the capability as a model-callable Tool when non-nil.\n\tTool *Tool\n}",
+            "references": [
+              {
+                "start": 230,
+                "end": 236,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 323,
+                "end": 329,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 470,
+                "end": 476,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 591,
+                "end": 595,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 596,
+                "end": 606,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 685,
+                "end": 689,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 690,
+                "end": 700,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 861,
+                "end": 866,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 948,
+                "end": 952,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                  "symbol": "Tool",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityDef",
+          "doc": "CapabilityDef 是 Manifest 中的 capability wire 结构。\n",
+          "declaration": {
+            "text": "type CapabilityDef struct {\n\tID             string          `json:\"id\"`\n\tKind           CapabilityKind  `json:\"kind\"`\n\tTemporalType   string          `json:\"temporalType\"`\n\tDescription    string          `json:\"description\"`\n\tInputSchema    json.RawMessage `json:\"inputSchema\"`\n\tOutputSchema   json.RawMessage `json:\"outputSchema\"`\n\tTimeoutSeconds int64           `json:\"timeoutSeconds\"`\n\tTool           *ToolDecl       `json:\"tool,omitempty\"`\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 88,
+                "end": 102,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                  "symbol": "CapabilityKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 134,
+                "end": 140,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 188,
+                "end": 194,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 241,
+                "end": 245,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 246,
+                "end": 256,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 294,
+                "end": 298,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 299,
+                "end": 309,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 348,
+                "end": 353,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 405,
+                "end": 413,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                  "symbol": "ToolDecl",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityKind",
+          "doc": "CapabilityKind 是 capability 的 Temporal 实现种类。\n",
+          "declaration": {
+            "text": "type CapabilityKind string",
+            "references": [
+              {
+                "start": 20,
+                "end": 26,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "CapabilityKindWorkflow",
+                "CapabilityKindActivity"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tCapabilityKindWorkflow CapabilityKind = \"workflow\"\n\tCapabilityKindActivity CapabilityKind = \"activity\"\n)",
+                "references": [
+                  {
+                    "start": 32,
+                    "end": 46,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "CapabilityKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 84,
+                    "end": 98,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "CapabilityKind",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ManifestV1",
+          "doc": "ManifestV1 是一个 task queue 上所有已发布 capability 的发现快照。\nTaskQueue 由 SDK Worker 注入，Kind 由 PublishWorkflow/PublishActivity 注入。\n",
+          "declaration": {
+            "text": "type ManifestV1 struct {\n\tProtocolVersion int             `json:\"protocolVersion\"`\n\tTaskQueue       string          `json:\"taskQueue\"`\n\tLaneID          string          `json:\"laneId,omitempty\"`\n\tCapabilities    []CapabilityDef `json:\"capabilities\"`\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 45,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 100,
+                "end": 106,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 152,
+                "end": 158,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 213,
+                "end": 226,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                  "symbol": "CapabilityDef",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": [
+            {
+              "name": "Normalize",
+              "doc": "Normalize 校验 Manifest，深拷贝内嵌值并返回稳定排序的规范化快照。\n",
+              "declaration": {
+                "text": "func (m ManifestV1) Normalize() (ManifestV1, error)",
+                "references": [
+                  {
+                    "start": 8,
+                    "end": 18,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "ManifestV1",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 33,
+                    "end": 43,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "ManifestV1",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 45,
+                    "end": 50,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "m"
+                  ],
+                  "type": {
+                    "text": "ManifestV1",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 10,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                          "symbol": "ManifestV1",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "ManifestV1",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 10,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                            "symbol": "ManifestV1",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Validate",
+              "doc": "Validate 校验 Manifest 并确认其规范化结果合法。\n",
+              "declaration": {
+                "text": "func (m ManifestV1) Validate() error",
+                "references": [
+                  {
+                    "start": 8,
+                    "end": 18,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "ManifestV1",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 31,
+                    "end": 36,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "m"
+                  ],
+                  "type": {
+                    "text": "ManifestV1",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 10,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                          "symbol": "ManifestV1",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Tool",
+          "doc": "Tool configures how a published capability is presented as a model-callable\nTool.\n",
+          "declaration": {
+            "text": "type Tool struct {\n\t// Description overrides the Capability description for Tool selection. An\n\t// empty value inherits Capability.Description.\n\tDescription string\n\n\t// MaxAttempts is the maximum number of Tool attempts. Zero leaves the value\n\t// unspecified; negative values are invalid.\n\tMaxAttempts int32\n}",
+            "references": [
+              {
+                "start": 157,
+                "end": 163,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 302,
+                "end": 307,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolDecl",
+          "doc": "ToolDecl 声明 capability 注册为 LLM Tool。Description 为空时继承 capability。\n",
+          "declaration": {
+            "text": "type ToolDecl struct {\n\tDescription string   `json:\"description\"`\n\tMode        ToolMode `json:\"mode\"`\n\tMaxAttempts int32    `json:\"maxAttempts,omitempty\"`\n}",
+            "references": [
+              {
+                "start": 36,
+                "end": 42,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 79,
+                "end": 87,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                  "symbol": "ToolMode",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 115,
+                "end": 120,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolMode",
+          "doc": "ToolMode is retained in the JSON discovery wire until discovery moves to protobuf.\n",
+          "declaration": {
+            "text": "type ToolMode string",
+            "references": [
+              {
+                "start": 14,
+                "end": 20,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "ToolModeBlocking"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tToolModeBlocking ToolMode = \"blocking\"\n)",
+                "references": [
+                  {
+                    "start": 26,
+                    "end": 34,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability",
+                      "symbol": "ToolMode",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/discovery",
+      "name": "discovery",
+      "doc": "Package discovery defines the cross-language Temporal names used for\ncapability manifest registration and diagnostics.\n",
+      "consts": [
+        {
+          "names": [
+            "RegisterWorkflowType",
+            "DescribeActivityType"
+          ],
+          "doc": "",
+          "declaration": {
+            "text": "const (\n\tRegisterWorkflowType = \"agentk.discovery.register.v1\"\n\tDescribeActivityType = \"agentk.capabilities.describe.v1\"\n)",
+            "references": []
+          }
+        }
+      ],
+      "vars": [],
+      "funcs": [],
+      "types": []
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/heartbeat",
+      "name": "heartbeat",
+      "doc": "Package heartbeat provides explicit keepalive heartbeats for Temporal Activities.\n",
+      "consts": [],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "Start",
+          "doc": "Start immediately records an Activity heartbeat and keeps recording in the\nbackground until the returned stop function is called or ctx is canceled.\nThe stop function waits for the background recorder to exit. Outside a\nTemporal Activity, Start returns a no-op stop function.\n",
+          "declaration": {
+            "text": "func Start(ctx context.Context) func()",
+            "references": [
+              {
+                "start": 15,
+                "end": 22,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 23,
+                "end": 30,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "ctx"
+                ],
+                "type": {
+                  "text": "context.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 7,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 8,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "func()",
+                  "references": []
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": []
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+      "name": "invocation",
+      "doc": "Package invocation reports progress from AgentK-invoked Temporal Workflows.\n",
+      "consts": [
+        {
+          "names": [
+            "MetaHeaderKey"
+          ],
+          "doc": "MetaHeaderKey 是 header 键，本身就是跨语言契约：非 Go 实现只需按同名键\n取 JSON payload。\n",
+          "declaration": {
+            "text": "const MetaHeaderKey = \"agentk-invocation-meta-v1\"",
+            "references": []
+          }
+        },
+        {
+          "names": [
+            "ReportProgressActivityType"
+          ],
+          "doc": "ReportProgressActivityType 是 agent-k 侧进度记账 Activity 的跨语言 type。\n",
+          "declaration": {
+            "text": "const ReportProgressActivityType = \"agentk.invocation.progress.v1\"",
+            "references": []
+          }
+        }
+      ],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "ReportProgress",
+          "doc": "ReportProgress records a progress event for the current AgentK invocation and\nwaits for the event to be accepted. stepID identifies the progress step and\nmakes retries idempotent within the current invocation. message and data may\nbe empty.\n\nWhen the Workflow was not invoked by AgentK, ReportProgress does nothing and\nreturns nil. Otherwise it returns any error from recording the progress event.\n",
+          "declaration": {
+            "text": "func ReportProgress(ctx workflow.Context, stepID, message string, data json.RawMessage) error",
+            "references": [
+              {
+                "start": 24,
+                "end": 32,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/workflow",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 33,
+                "end": 40,
+                "target": {
+                  "packagePath": "go.temporal.io/sdk/workflow",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 58,
+                "end": 64,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 71,
+                "end": 75,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 76,
+                "end": 86,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 88,
+                "end": 93,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "ctx"
+                ],
+                "type": {
+                  "text": "workflow.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 8,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/workflow",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 9,
+                      "end": 16,
+                      "target": {
+                        "packagePath": "go.temporal.io/sdk/workflow",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "stepID",
+                  "message"
+                ],
+                "type": {
+                  "text": "string",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 6,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "string",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "data"
+                ],
+                "type": {
+                  "text": "json.RawMessage",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 4,
+                      "target": {
+                        "packagePath": "encoding/json",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 5,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "encoding/json",
+                        "symbol": "RawMessage",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "WithMeta",
+          "doc": "WithMeta 把 invocation 坐标放进 client 侧 context；MetaPropagator 负责注入 header。\n",
+          "declaration": {
+            "text": "func WithMeta(ctx context.Context, m Meta) context.Context",
+            "references": [
+              {
+                "start": 18,
+                "end": 25,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 26,
+                "end": 33,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 37,
+                "end": 41,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                  "symbol": "Meta",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 43,
+                "end": 50,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 51,
+                "end": 58,
+                "target": {
+                  "packagePath": "context",
+                  "symbol": "Context",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "ctx"
+                ],
+                "type": {
+                  "text": "context.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 7,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 8,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [
+                  "m"
+                ],
+                "type": {
+                  "text": "Meta",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 4,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                        "symbol": "Meta",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "context.Context",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 7,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 8,
+                      "end": 15,
+                      "target": {
+                        "packagePath": "context",
+                        "symbol": "Context",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": [
+        {
+          "name": "Kind",
+          "doc": "Kind 标识 agent-k 侧发起 invocation 的入口种类。\n",
+          "declaration": {
+            "text": "type Kind string",
+            "references": [
+              {
+                "start": 10,
+                "end": 16,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "KindPipeline",
+                "KindTool"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tKindPipeline Kind = \"pipeline\"\n\tKindTool     Kind = \"tool\"\n)",
+                "references": [
+                  {
+                    "start": 22,
+                    "end": 26,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "Kind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 54,
+                    "end": 58,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "Kind",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Meta",
+          "doc": "Meta 是一次 agent-k invocation 的记账和回调坐标，由 agent-k 在启动时注入\ncontext，经 Temporal header 透传到被调 workflow/activity，业务签名不感知。\n跨语言契约由 protocol/invocation/v1/meta.schema.json 固定。\n",
+          "declaration": {
+            "text": "type Meta struct {\n\tSessionID         int64  `json:\"sessionId\"`\n\tSession           string `json:\"session\"` // 会话公开 ID，也是推送主题\n\tAppID             string `json:\"appId\"`\n\tInvocationID      string `json:\"invocationId\"`\n\tInvocationKind    Kind   `json:\"invocationKind\"`\n\tInvocationName    string `json:\"invocationName\"`\n\tCallbackTaskQueue string `json:\"callbackTaskQueue\"`\n}",
+            "references": [
+              {
+                "start": 38,
+                "end": 43,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 83,
+                "end": 89,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 144,
+                "end": 150,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 185,
+                "end": 191,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 233,
+                "end": 237,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                  "symbol": "Kind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 283,
+                "end": 289,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 333,
+                "end": 339,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [
+            {
+              "name": "MetaFromWorkflow",
+              "doc": "MetaFromWorkflow 读取 header 透传进来的 invocation 坐标（App、会话等）。\n不在 agent-k 调度下运行（直调、测试）时返回 false。\n",
+              "declaration": {
+                "text": "func MetaFromWorkflow(ctx workflow.Context) (Meta, bool)",
+                "references": [
+                  {
+                    "start": 26,
+                    "end": 34,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 35,
+                    "end": 42,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 45,
+                    "end": 49,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "Meta",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 51,
+                    "end": 55,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "bool",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": null,
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "workflow.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 16,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "Meta",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 4,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                            "symbol": "Meta",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "bool",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 4,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "bool",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ],
+          "methods": []
+        },
+        {
+          "name": "MetaPropagator",
+          "doc": "MetaPropagator 把 Meta 沿 Client → Workflow → Child Workflow/Activity\n全链路透传。context 里没有 meta 时静默跳过，不影响其他 workflow。\n",
+          "declaration": {
+            "text": "type MetaPropagator struct{}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": [
+            {
+              "name": "Extract",
+              "doc": "",
+              "declaration": {
+                "text": "func (MetaPropagator) Extract(ctx context.Context, r workflow.HeaderReader) (context.Context, error)",
+                "references": [
+                  {
+                    "start": 6,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "MetaPropagator",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 34,
+                    "end": 41,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 42,
+                    "end": 49,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 53,
+                    "end": 61,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 62,
+                    "end": 74,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "HeaderReader",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 77,
+                    "end": 84,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 85,
+                    "end": 92,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 94,
+                    "end": 99,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [],
+                  "type": {
+                    "text": "MetaPropagator",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 14,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                          "symbol": "MetaPropagator",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "r"
+                    ],
+                    "type": {
+                      "text": "workflow.HeaderReader",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "HeaderReader",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ExtractToWorkflow",
+              "doc": "",
+              "declaration": {
+                "text": "func (MetaPropagator) ExtractToWorkflow(ctx workflow.Context, r workflow.HeaderReader) (workflow.Context, error)",
+                "references": [
+                  {
+                    "start": 6,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "MetaPropagator",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 44,
+                    "end": 52,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 53,
+                    "end": 60,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 64,
+                    "end": 72,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 73,
+                    "end": 85,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "HeaderReader",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 88,
+                    "end": 96,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 97,
+                    "end": 104,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 106,
+                    "end": 111,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [],
+                  "type": {
+                    "text": "MetaPropagator",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 14,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                          "symbol": "MetaPropagator",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "workflow.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 16,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "r"
+                    ],
+                    "type": {
+                      "text": "workflow.HeaderReader",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "HeaderReader",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "workflow.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 16,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Inject",
+              "doc": "",
+              "declaration": {
+                "text": "func (MetaPropagator) Inject(ctx context.Context, w workflow.HeaderWriter) error",
+                "references": [
+                  {
+                    "start": 6,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "MetaPropagator",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 33,
+                    "end": 40,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 41,
+                    "end": 48,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 52,
+                    "end": 60,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 61,
+                    "end": 73,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "HeaderWriter",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 75,
+                    "end": 80,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [],
+                  "type": {
+                    "text": "MetaPropagator",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 14,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                          "symbol": "MetaPropagator",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "w"
+                    ],
+                    "type": {
+                      "text": "workflow.HeaderWriter",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "HeaderWriter",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "InjectFromWorkflow",
+              "doc": "",
+              "declaration": {
+                "text": "func (MetaPropagator) InjectFromWorkflow(ctx workflow.Context, w workflow.HeaderWriter) error",
+                "references": [
+                  {
+                    "start": 6,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                      "symbol": "MetaPropagator",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 45,
+                    "end": 53,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 54,
+                    "end": 61,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 65,
+                    "end": 73,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 74,
+                    "end": 86,
+                    "target": {
+                      "packagePath": "go.temporal.io/sdk/workflow",
+                      "symbol": "HeaderWriter",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 88,
+                    "end": 93,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [],
+                  "type": {
+                    "text": "MetaPropagator",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 14,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                          "symbol": "MetaPropagator",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "workflow.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 16,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "w"
+                    ],
+                    "type": {
+                      "text": "workflow.HeaderWriter",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 8,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 9,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "go.temporal.io/sdk/workflow",
+                            "symbol": "HeaderWriter",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ReportProgressInput",
+          "doc": "ReportProgressInput 是进度汇报入参。StepID 是 invocation 内的步骤位置，与\nInvocationID 一起构成写入的幂等键（Activity 重试不重复写入事件日志）。\n跨语言契约由 protocol/invocation/v1/report-progress-input.schema.json 固定。\n",
+          "declaration": {
+            "text": "type ReportProgressInput struct {\n\tSessionID      int64           `json:\"sessionId\"`\n\tInvocationID   string          `json:\"invocationId\"`\n\tInvocationKind Kind            `json:\"invocationKind\"`\n\tInvocationName string          `json:\"invocationName\"`\n\tStepID         string          `json:\"stepId\"`\n\tMessage        string          `json:\"message,omitempty\"`\n\tData           json.RawMessage `json:\"data,omitempty\"`\n}",
+            "references": [
+              {
+                "start": 50,
+                "end": 55,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 101,
+                "end": 107,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 155,
+                "end": 159,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation",
+                  "symbol": "Kind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 211,
+                "end": 217,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 267,
+                "end": 273,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 315,
+                "end": 321,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 374,
+                "end": 378,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 379,
+                "end": 389,
+                "target": {
+                  "packagePath": "encoding/json",
+                  "symbol": "RawMessage",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

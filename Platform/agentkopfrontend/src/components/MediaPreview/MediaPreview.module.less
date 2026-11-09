@@ -1,0 +1,331 @@
+@import url('@/styles/variables.less');
+
+.modal {
+  :global(.ant-modal-title) {
+    .text-clamp(2);
+
+    padding-right: @spacing-xl;
+    word-break: break-word;
+  }
+
+  :global(.ant-modal-body) {
+    padding-top: @spacing-sm;
+  }
+}
+
+.modalBody {
+  min-height: calc(@spacing-section + @spacing-xl);
+}
+
+.player {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - @spacing-section * 4);
+  background: @azure-abyss;
+  border-radius: @border-radius-md;
+}
+
+.imagePreview {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - @spacing-section * 4);
+  object-fit: contain;
+  border-radius: @border-radius-md;
+  background: @surface-3;
+}
+
+.audioPlayer {
+  display: block;
+  width: 100%;
+}
+
+.docFrame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - @spacing-section * 4);
+  min-height: calc(@spacing-section * 3);
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+}
+
+.textPreview {
+  max-height: calc(100vh - @spacing-section * 4);
+  margin: 0;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-2;
+  color: @text-color;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: @border-radius-md;
+}
+
+.loadingWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(@spacing-section * 2);
+}
+
+.docFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @spacing-sm;
+  padding: @spacing-lg @spacing-md;
+  text-align: center;
+}
+
+.docFallbackIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(@spacing-section + @spacing-md);
+  height: calc(@spacing-section + @spacing-md);
+  background: @primary-subdued;
+  color: @primary-color;
+  font-size: @spacing-xl;
+  border-radius: @border-radius-lg;
+}
+
+.docFallbackTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.docFallbackHint {
+  max-width: 420px;
+  margin: 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.docFallbackActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: @spacing-xs;
+  margin-top: @spacing-xs;
+}
+
+.imageRoot {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  :global(.ant-image-img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.thumbRoot {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: inherit;
+
+  :global(.ant-image),
+  :global(.ant-image-img) {
+    width: 100%;
+    height: 100%;
+  }
+
+  :global(.ant-image-img) {
+    object-fit: cover;
+  }
+}
+
+.mediaCover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewTrigger {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: @focus-ring;
+    border-radius: inherit;
+  }
+}
+
+.previewTriggerStack {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid @hairline;
+  background: @surface-2;
+  overflow: hidden;
+  cursor: pointer;
+  appearance: none;
+  border-radius: @border-radius-md;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: @focus-ring;
+  }
+}
+
+.thumbStack {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  width: 100%;
+  min-width: 0;
+}
+
+.thumbStackCaption {
+  .text-clamp(2);
+
+  padding: 0 @spacing-xxs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.35;
+  text-align: center;
+  word-break: break-word;
+}
+
+.thumbRootCompact {
+  border-radius: inherit;
+}
+
+.fileThumbCompactAudio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, @primary-subdued 0%, @surface-2 100%);
+  color: @primary-color;
+}
+
+.fileThumbCompactDoc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-xxs;
+  width: 100%;
+  height: 100%;
+  padding: @spacing-xs @spacing-xxs;
+  background: linear-gradient(145deg, fade(@info-color, 8%) 0%, @surface-2 100%);
+  color: @info-color;
+  box-sizing: border-box;
+}
+
+.videoThumbWrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.playBadge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  color: @on-primary;
+  font-size: @font-size-xxl;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 1px 4px rgb(0 0 0 / 35%));
+  pointer-events: none;
+}
+
+.fileThumb {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-xxs;
+  width: 100%;
+  height: 100%;
+  padding: @spacing-xs @spacing-xxs;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.fileThumbAudio {
+  background: linear-gradient(145deg, @primary-subdued 0%, @surface-2 100%);
+  color: @primary-color;
+}
+
+.fileThumbDoc {
+  background: linear-gradient(145deg, fade(@info-color, 8%) 0%, @surface-2 100%);
+  color: @info-color;
+}
+
+.fileThumbIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(@spacing-xl + @spacing-sm);
+  height: calc(@spacing-xl + @spacing-sm);
+  border: 1px solid fade(@primary-color, 16%);
+  background: @surface-1;
+  font-size: @font-size-xl;
+  border-radius: @border-radius-md;
+  box-shadow: 0 1px 2px fade(@text-color, 6%);
+}
+
+.fileThumbDoc .fileThumbIcon {
+  border-color: fade(@info-color, 18%);
+}
+
+.fileThumbExt {
+  padding: 0 @spacing-xxs;
+  background: fade(@primary-color, 10%);
+  color: @primary-color;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  border-radius: @border-radius-xs;
+}
+
+.fileThumbDoc .fileThumbExt {
+  background: fade(@info-color, 10%);
+  color: @info-color;
+}
+
+.fileThumbName {
+  .text-clamp(2);
+
+  width: 100%;
+  max-width: 100%;
+  padding: 0 @spacing-xxs;
+  color: @text-color-secondary;
+  font-size: 10px;
+  line-height: 1.35;
+  word-break: break-word;
+}

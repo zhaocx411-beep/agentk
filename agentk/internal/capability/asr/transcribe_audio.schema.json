@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "azure-whisper"
+      ],
+      "description": "使用的模型。候选：azure-whisper（Azure Whisper 语音识别）"
+    },
+    "audioUrl": {
+      "type": "string",
+      "description": "待识别音频的 HTTP/HTTPS URL，通常取语音合成工具返回的 artifacts[0].uri；最大 25 MB"
+    },
+    "task": {
+      "type": "string",
+      "enum": [
+        "transcribe",
+        "translate"
+      ],
+      "default": "transcribe",
+      "description": "transcribe 保留原语言转写；translate 把语音翻译成英文"
+    },
+    "language": {
+      "type": "string",
+      "description": "可选输入语言代码（如 zh、en），仅 transcribe 有效；已知语言时填写可提升准确率"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "可选上下文提示，用于补充专有名词、人物名或期望标点风格"
+    }
+  },
+  "required": [
+    "model",
+    "audioUrl"
+  ]
+}

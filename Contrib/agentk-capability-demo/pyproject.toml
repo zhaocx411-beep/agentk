@@ -1,0 +1,73 @@
+[project]
+name = "agentk-capability-demo"
+version = "0.1.0"
+description = "Local browser console for AgentK capabilities and agent loops"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "aiofiles>=24.1,<25",
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "ks-agentk-client[grpc]==0.3.7",
+  "ks-agentk-protocol==0.3.7",
+  "ks-agentk-request-lane==0.3.7",
+  "ks-agentk-worker==0.3.7",
+  "python-multipart>=0.0.20,<1",
+  "pyyaml>=6.0.2,<7",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.scripts]
+agentk-capability-demo = "agentk_capability_demo.__main__:main"
+agentk-capability-demo-worker = "agentk_capability_demo.agent100.worker_cli:main"
+
+[dependency-groups]
+dev = [
+  "jsonschema>=4.23,<5",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1,<2",
+  "ruff>=0.12,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentk_capability_demo"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[[tool.uv.index]]
+name = "kuaishou"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+default = true
+
+[tool.uv.sources]
+ks-agentk-client = { index = "kuaishou" }
+ks-agentk-protocol = { index = "kuaishou" }
+ks-agentk-request-lane = { index = "kuaishou" }
+ks-agentk-worker = { index = "kuaishou" }
+
+[tool.uv]
+override-dependencies = [
+  "cityhash==0.4.9",
+  "grpcio==1.76.0",
+  "lxml==6.0.2",
+  "lz4==4.4.5",
+  "python-snappy==0.7.3",
+  "setuptools<82.0.0",
+]
+
+[tool.uv.extra-build-dependencies]
+cchardet = ["cython"]
+dsc-auth = ["setuptools_scm"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+ignore = ["B008", "BLE001"]

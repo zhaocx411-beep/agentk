@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.batcheval.mapper.persistence.BatchevalOfflineJobCellMapper">
+
+    <resultMap id="OfflineJobCellMap"
+               type="com.kuaishou.agent.operation.backend.batcheval.model.BatchEvalModels$OfflineJobCell">
+        <id column="id" property="id"/>
+        <result column="task_key" property="taskKey"/>
+        <result column="prompt" property="prompt"/>
+        <result column="conversation_key" property="conversationKey"/>
+        <result column="turn_index" property="turnIndex"/>
+        <result column="status" property="status"/>
+        <result column="agentk_session_id" property="agentkSessionId"/>
+        <result column="agentk_run_id" property="agentkRunId"/>
+        <result column="pipeline_exec_id" property="pipelineExecId"/>
+        <result column="metrics_json" property="metricsJson"/>
+        <result column="output_uris" property="outputUris"/>
+        <result column="trace_json" property="traceJson"/>
+        <result column="error_message" property="error"/>
+        <result column="started_at" property="startedAt"/>
+        <result column="finished_at" property="finishedAt"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="cell.id">
+        INSERT INTO batcheval_offline_job_cell
+            (offline_job_id, task_key, prompt, conversation_key, turn_index, `status`)
+        VALUES (#{jobId}, #{cell.taskKey}, #{cell.prompt}, #{cell.conversationKey}, #{cell.turnIndex},
+                #{cell.status})
+    </insert>
+
+    <!-- 不选 trace_json：列表/导出每次刷新都会走这里，大字段只在 trace 详情按 cell 单取 -->
+    <select id="listByJobId" resultMap="OfflineJobCellMap">
+        SELECT id, task_key, prompt, conversation_key, turn_index, `status`, agentk_session_id, agentk_run_id,
+               pipeline_exec_id, metrics_json, output_uris, error_message, started_at, finished_at
+        FROM batcheval_offline_job_cell
+        WHERE offline_job_id = #{jobId}
+        ORDER BY id ASC
+    </select>
+
+    <select id="selectTraceJson" resultType="java.lang.String">
+        SELECT trace_json
+        FROM batcheval_offline_job_cell
+        WHERE task_key = #{taskKey}
+          AND offline_job_id = (
+            SELECT id FROM batcheval_offline_job WHERE biz_id = #{bizId} LIMIT 1
+          )
+        LIMIT 1
+    </select>
+
+    <update id="updateByBizIdAndTaskKey">
+        UPDATE batcheval_offline_job_cell
+        SET `status` = #{cell.status},
+            agentk_session_id = #{cell.agentkSessionId},
+            agentk_run_id = #{cell.agentkRunId},
+            pipeline_exec_id = #{cell.pipelineExecId},
+            metrics_json = #{cell.metricsJson},
+            output_uris = #{cell.outputUris},
+            trace_json = #{cell.traceJson},
+            error_message = #{cell.error},
+            started_at = #{cell.startedAt},
+            finished_at = #{cell.finishedAt}
+        WHERE task_key = #{cell.taskKey}
+          AND offline_job_id = (
+            SELECT id FROM batcheval_offline_job WHERE biz_id = #{bizId} LIMIT 1
+          )
+    </update>
+
+    <delete id="deleteByJobId">
+        DELETE FROM batcheval_offline_job_cell WHERE offline_job_id = #{jobId}
+    </delete>
+
+    <select id="countByAgentkRef" resultType="int">
+        SELECT COUNT(1)
+        FROM batcheval_offline_job_cell
+        WHERE (#{agentkSessionId} IS NOT NULL AND #{agentkSessionId} &lt;&gt; ''
+               AND agentk_session_id = #{agentkSessionId})
+           OR (#{agentkRunId} IS NOT NULL AND #{agentkRunId} &lt;&gt; ''
+               AND (agentk_run_id = #{agentkRunId} OR pipeline_exec_id = #{agentkRunId}))
+    </select>
+</mapper>

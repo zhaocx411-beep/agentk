@@ -1,0 +1,53 @@
+---
+sidebar_position: 6
+title: Go Worker SDK
+description: 使用 Go Worker SDK 发布和组合 AgentK Capability
+slug: /worker/sdk/go
+pagination_prev: worker/guides/worker-lane
+pagination_next: worker/sdk/python
+---
+
+# Go Worker SDK
+
+Go Worker SDK 是 Temporal Go Worker 的薄装饰器。它增加 AgentK 连接、<Capability /> Manifest、
+Capability ID 调用和 invocation context；原生 Workflow、Activity 与注册 API 保持可用。
+
+## 公开包
+
+```go
+import (
+    agentktemporal "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/temporal"
+    agentkworker "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker"
+    "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/capability"
+    "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/worker/invocation"
+)
+```
+
+## 基本生命周期
+
+1. `agentktemporal.Dial(ctx)` 通过 KESS 连接固定的 `agentk` namespace。
+2. `agentkworker.New(client, taskQueue, options)` 创建装饰后的 Temporal Worker。
+3. 使用原生 `RegisterWorkflow*`、`RegisterActivity*` 注册执行体。
+4. 使用 `PublishWorkflow`、`PublishActivity` 发布公开契约。
+5. `Run` 或 `Start` 在启动前校验并冻结 Manifest，运行后自动 announce。
+
+Contributor task queue 不能是 `agentk`，Capability ID 必须使用
+`contrib.<owner>.<name>`。
+
+## Capability 声明
+
+`capability.Capability` 包含 ID、Temporal Type、说明、输入输出 Schema、超时和可选 <Tool />。
+`capability.SchemaOf[T]()` 可以从 Go 类型生成 Schema。
+
+`capability.Tool` 只有 `Description` 和 `MaxAttempts`。当前 Tool 始终是 blocking。
+
+## Workflow 内组合
+
+`capability.Invoke(ctx, capabilityID, input, output)` 通过 AgentK core 调用当前 Capability 路由，
+并执行对应 Child Workflow 或 Activity。它只接受 `workflow.Context`，用于 Workflow 内组合；
+普通下游应用使用 Client SDK 的 `InvokeCapability`。不要在业务 Workflow 中复制目标 task queue。
+
+`invocation.ReportProgress` 为 <Pipeline /> Workflow 写入业务进度；没有 invocation context 时 no-op。
+
+完整教程见[实现并发布 Capability](/worker/guides/capability)和
+[将 Capability 暴露为 Tool](/worker/guides/tool)。

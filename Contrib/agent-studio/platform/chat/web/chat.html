@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Agent Chat</title>
+<link rel="stylesheet" href="/chat.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a class="back" href="/">← Agent 集市</a>
+      <button class="close-sidebar" id="closeSidebar" type="button" aria-label="关闭会话列表">×</button>
+      <div class="agent-identity">
+        <div class="agent-mark" id="agentMark">A</div>
+        <div>
+          <div class="agent-kicker">SPECIALIST AGENT</div>
+          <h1 id="agentName">正在载入…</h1>
+        </div>
+      </div>
+      <p class="agent-description" id="agentDescription"></p>
+      <button class="new-chat" id="newChat" type="button"><span>＋</span> 新对话</button>
+    </div>
+    <div class="session-scroll">
+      <div class="session-label">会话记录</div>
+      <div class="session-list" id="sessionList">
+        <div class="session-empty">还没有会话。<br>从一个问题开始。</div>
+      </div>
+    </div>
+    <div class="sidebar-foot">
+      <span class="online-dot"></span>
+      <span>AgentK 服务在线</span>
+    </div>
+  </aside>
+
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+  <main class="workspace">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" type="button" aria-label="打开会话列表">☰</button>
+      <div class="topbar-title">
+        <span class="eyebrow" id="agentCategory">AGENT</span>
+        <strong id="chatTitle">新对话</strong>
+      </div>
+      <div class="topbar-actions">
+        <div class="run-state" id="runState"><i></i><span>等待输入</span></div>
+        <button class="artifact-button" id="artifactButton" type="button"
+          aria-label="打开产物列表" aria-controls="artifactSidebar" aria-expanded="false">
+          产物 <b id="artifactButtonCount">0</b>
+        </button>
+      </div>
+    </header>
+
+    <section class="conversation" id="conversation" aria-live="polite">
+      <div class="welcome" id="welcome">
+        <div class="welcome-number">01 / START</div>
+        <h2 id="welcomeTitle">今天想完成什么？</h2>
+        <p id="welcomeMessage"></p>
+        <div class="starter-grid" id="starterGrid"></div>
+      </div>
+      <div class="messages" id="messages"></div>
+    </section>
+
+    <footer class="composer-wrap">
+      <form class="composer" id="composer">
+        <label class="composer-label" for="messageInput">MESSAGE / 输入你的目标</label>
+        <div class="attachments" id="attachments" hidden></div>
+        <textarea id="messageInput" rows="1" maxlength="64000"
+          placeholder="描述问题、目标或想要的交付结果…"></textarea>
+        <div class="composer-foot">
+          <div class="composer-tools">
+            <label class="attach" id="attachButton" title="上传媒体或文档">
+              <span>＋</span> 添加素材
+              <input id="fileInput" type="file"
+                accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.md,.markdown,.txt"
+                multiple hidden>
+            </label>
+            <span class="keyboard-hint"><kbd>Enter</kbd> 发送 · <kbd>Shift</kbd> + <kbd>Enter</kbd> 换行</span>
+          </div>
+          <button class="send" id="sendButton" type="submit">
+            <span>发送</span><b>→</b>
+          </button>
+        </div>
+      </form>
+    </footer>
+  </main>
+
+  <aside class="artifact-sidebar" id="artifactSidebar" aria-label="当前任务产物">
+    <header class="artifact-sidebar-head">
+      <div>
+        <span class="eyebrow">TASK OUTPUT</span>
+        <h2>当前任务产物</h2>
+      </div>
+      <span class="artifact-count" id="artifactCount">0</span>
+      <button class="close-artifacts" id="closeArtifacts" type="button" aria-label="关闭产物列表">×</button>
+    </header>
+    <div class="artifact-sidebar-body" id="artifactList">
+      <div class="artifact-empty">
+        <b>暂无产物</b>
+        <span>Agent 生成的图片、视频和音频会集中显示在这里。</span>
+      </div>
+    </div>
+  </aside>
+  <div class="artifact-scrim" id="artifactScrim"></div>
+</div>
+
+<div class="drop-overlay" id="dropOverlay" aria-hidden="true">
+  <div><strong>释放以上传素材</strong><span>媒体 · PDF · Word · Excel · 文本，单文件最大 256 MB</span></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package infer;
+
+message InferRequest {
+  string request_id = 1;               // 请求ID
+  map<string, ExFeature> feature = 2;  // 通用输入输出
+  bool finish = 3;                     // 是否结束，发送给服务的最后一条消息，置为true
+  string model_name = 4;               // 请求的模型名称
+}
+
+message InferResponse {
+  string request_id = 1;               // 请求ID
+  map<string, ExFeature> feature = 2;  // 通用输入输出
+  bool finish = 3;                     // 是否结束，如果为true，则为收到的最后一条消息
+}
+
+service StreamInferService {
+  rpc Infer(stream InferRequest) returns (stream InferResponse);
+}
+
+service LocalInferService {
+  rpc Infer(InferRequest) returns (InferResponse) {};
+}

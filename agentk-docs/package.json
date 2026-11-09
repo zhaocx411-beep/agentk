@@ -1,0 +1,73 @@
+{
+  "name": "agentk-docs",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.24.0",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "pnpm build:site && pnpm build:server",
+    "build:site": "docusaurus build && pnpm verify:ai-docs",
+    "build:server": "pnpm --filter @agentk/docs-server build",
+    "swizzle": "docusaurus swizzle",
+    "deploy:site": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "generate:go-reference": "node scripts/generate-go-api-reference.mjs",
+    "generate:java-reference": "node scripts/generate-java-api-reference.mjs",
+    "generate:python-reference": "node scripts/generate-python-api-reference.mjs",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "pnpm typecheck:site && pnpm typecheck:server",
+    "typecheck:site": "tsc",
+    "typecheck:server": "pnpm --filter @agentk/docs-server typecheck",
+    "test:search": "pnpm build:site && pnpm --filter @agentk/docs-server test:search",
+    "test:mcp": "pnpm build:site && pnpm --filter @agentk/docs-server test:mcp",
+    "search:docs": "pnpm --filter @agentk/docs-server build && pnpm --filter @agentk/docs-server run search",
+    "mcp:stdio": "pnpm --filter @agentk/docs-server build && pnpm --filter @agentk/docs-server run mcp:stdio",
+    "mcp:http": "pnpm --filter @agentk/docs-server build && pnpm --filter @agentk/docs-server run mcp:http",
+    "inspect:mcp": "pnpm --filter @agentk/docs-server build && pnpm --filter @agentk/docs-server run inspect:mcp",
+    "start:service": "pnpm build && pnpm --filter @agentk/docs-server run start:service",
+    "test:service": "pnpm build:site && pnpm --filter @agentk/docs-server run test:service",
+    "verify:ai-docs": "node scripts/verify-ai-docs.mjs"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/faster": "3.10.2",
+    "@docusaurus/plugin-client-redirects": "3.10.2",
+    "@docusaurus/plugin-content-docs": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-common": "3.10.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.10.2",
+    "@docusaurus/tsconfig": "3.10.2",
+    "@docusaurus/types": "3.10.2",
+    "@types/react": "^19.0.0",
+    "@types/turndown": "^5.0.6",
+    "cheerio": "^1.2.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "~6.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

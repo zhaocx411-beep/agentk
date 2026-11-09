@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "platform": {
+      "type": "string"
+    },
+    "productUrl": {
+      "type": "string"
+    },
+    "sourceMainImage": {
+      "type": "string"
+    },
+    "sourceImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "uri"
+        ]
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selectedSkuId": {
+      "type": "string"
+    },
+    "selectedOptions": {
+      "type": "string"
+    },
+    "sourceSelectedVariantImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selectedVariantImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "product": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "platform",
+    "productUrl",
+    "sourceMainImage",
+    "sourceImages",
+    "artifacts",
+    "images",
+    "product"
+  ]
+}

@@ -1,0 +1,47 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xs;
+}
+
+.thumb,
+.galleryThumb,
+.moreButton {
+  width: @spacing-section;
+  height: @spacing-section;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-sm;
+  background: @surface-3;
+  overflow: hidden;
+}
+
+.moreButton {
+  color: @primary-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border-color: @primary-color;
+    background: @primary-subdued;
+    outline: none;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, @spacing-section);
+  gap: @spacing-xs;
+  max-width: 320px;
+  max-height: 360px;
+  padding-right: @spacing-xxs;
+  overflow: auto;
+}
+
+@media (max-width: @screen-sm) {
+  .gallery {
+    grid-template-columns: repeat(3, @spacing-section);
+    max-width: 232px;
+  }
+}

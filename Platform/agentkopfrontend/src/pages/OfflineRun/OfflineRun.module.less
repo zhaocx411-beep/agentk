@@ -1,0 +1,98 @@
+/* 离线跑数页面样式 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  color: @text-color-secondary;
+  font-size: 14px;
+  margin-bottom: @spacing-lg;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.subtitleIcon {
+  color: @primary-color;
+  font-size: 16px;
+}
+
+/* 上传弹窗 */
+.uploadModal {
+  :global(.ant-modal-body) {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+.uploadArea {
+  padding: @spacing-md 0;
+}
+
+.uploadField {
+  margin-bottom: @spacing-lg;
+}
+
+.uploadControl {
+  width: 100%;
+}
+
+/* 预留出 showCount 计数条的位置，避免遮挡末行文字 */
+.uploadTextarea {
+  padding-bottom: @spacing-lg;
+}
+
+/* 数据集筛选栏 */
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: @spacing-md;
+  margin-bottom: @spacing-lg;
+  flex-wrap: wrap;
+}
+
+.filterInput {
+  width: 200px;
+}
+
+.filterSelect {
+  width: 120px;
+}
+
+.filterSelectWide {
+  width: 168px;
+}
+
+.filterInputWide {
+  width: 220px;
+}
+
+/* 固定操作列与普通单元格保持一致的整行 hover 背景。 */
+.datasetTable {
+  :global(.ant-table-tbody > .ant-table-row:hover > .ant-table-cell-fix-right) {
+    background: @surface-3;
+  }
+}
+
+/* 表格只在弹窗内容区内滚动，避免宽列撑破 Modal。 */
+.taskModal {
+  :global(.ant-modal-body) {
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+.taskModalToolbar {
+  margin-bottom: @spacing-sm;
+  text-align: right;
+}
+
+.taskEditModalBody {
+  max-height: calc(100vh - (@spacing-section * 3));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}

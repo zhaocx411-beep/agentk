@@ -1,0 +1,40 @@
+[project]
+name = "ks-agentk-worker"
+version = "0.4.2"
+description = "AgentK SDK for Python Temporal workers"
+requires-python = ">=3.12,<4"
+dependencies = [
+  "ks-resolve>=0.1.1",
+  "opentelemetry-api>=1.30.0",
+  "temporalio[opentelemetry]>=1.31.0",
+]
+
+[dependency-groups]
+dev = [
+  "ks-agentk-client",
+  "jsonschema",
+  "pytest",
+  "pytest-asyncio",
+  "ruff",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "agentk.worker"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+  "e2e: requires live Temporal and agent-k services",
+]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint.per-file-ignores]
+"src/agentk/worker/_routing.py" = ["UP047"]
+"src/agentk/worker/invocation.py" = ["UP040"]

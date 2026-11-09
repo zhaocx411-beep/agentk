@@ -1,0 +1,16 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a06",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "assistant.tool_call",
+  "data": {
+    "toolCallId": "call_9f2c1a",
+    "toolName": "kling_image_to_video",
+    "args": {
+      "prompt": "城市黄昏航拍推进",
+      "aspectRatio": "16:9",
+      "durationSeconds": 5
+    }
+  },
+  "createdAt": "2026-07-30T12:00:03Z"
+}

@@ -1,0 +1,4 @@
+/bin/
+/configs/routes.json
+*.log
+.DS_Store

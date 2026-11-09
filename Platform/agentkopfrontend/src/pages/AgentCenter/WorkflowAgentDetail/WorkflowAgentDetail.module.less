@@ -1,0 +1,120 @@
+/* 工作流 Agent 详情：定义编辑与 Pipeline 运行预览 */
+
+.workflowConfigPanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: @spacing-lg;
+  overflow: hidden;
+}
+
+.workflowSection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: @surface-1;
+  overflow: hidden;
+  border-radius: @border-radius-lg;
+}
+
+.jsonEditorWrap {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.jsonEditor {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+  line-height: 1.55;
+  resize: none;
+  overflow-y: auto;
+}
+
+.runBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: @spacing-md;
+  overflow-y: auto;
+}
+
+.runLoading {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.runFooter {
+  display: flex;
+  flex-direction: column;
+  max-height: 46%;
+  padding: @spacing-md @spacing-lg;
+  gap: @spacing-sm;
+  border-top: 1px solid @divider;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.pipelineSelect {
+  width: 100%;
+}
+
+.paramBlock {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.paramHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-sm;
+}
+
+.paramTitle {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.paramList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.paramItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.paramLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.paramRequired {
+  margin-left: 2px;
+  color: @error-color;
+}
+
+.paramInput {
+  width: 100%;
+}

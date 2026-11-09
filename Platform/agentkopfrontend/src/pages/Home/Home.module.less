@@ -1,0 +1,751 @@
+/**
+ * 首页样式 — Hero / 智能体 / 入口 / 作品 / 工具箱
+ */
+@page-ink: #121314;
+@page-muted: #484d52;
+@page-line: #e3e4e5;
+@page-soft: #f5f8fa;
+
+.page {
+  flex: 1;
+  min-height: 0;
+  background: @canvas;
+  color: @page-ink;
+  overflow: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: @spacing-xl @spacing-xl 120px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xl;
+  width: 100%;
+}
+
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sectionHeadRow {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: @spacing-lg;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: @page-ink;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.sectionDesc {
+  margin: 0;
+  color: @page-muted;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* —— Hero —— */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: @spacing-xxl;
+  align-items: center;
+  width: 100%;
+  padding: @spacing-xl;
+  border-radius: 24px;
+  background:
+    radial-gradient(560px 240px at 0% 0%, fade(@azure-royal, 10%), transparent 70%),
+    radial-gradient(480px 220px at 100% 20%, fade(@primary-gradient-end, 8%), transparent 72%),
+    @page-soft;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.heroEyebrow {
+  margin: 0;
+  color: @primary-color;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.heroTitle {
+  margin: 0;
+  color: @page-ink;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.heroDesc {
+  max-width: 36em;
+  margin: 0;
+  color: @page-muted;
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.heroCollage {
+  position: relative;
+  min-height: 320px;
+}
+
+.heroCollageItem {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: @shadow-lg;
+  background: @canvas;
+}
+
+.heroCollageItem1 {
+  top: 0;
+  right: 12%;
+  z-index: 2;
+  width: 58%;
+  height: 70%;
+}
+
+.heroCollageItem2 {
+  bottom: 8%;
+  left: 0;
+  z-index: 3;
+  width: 46%;
+  height: 52%;
+}
+
+.heroCollageItem3 {
+  top: 12%;
+  left: 8%;
+  z-index: 4;
+  width: 28%;
+  height: 28%;
+  border-radius: 12px;
+}
+
+.heroCollageItem4 {
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 34%;
+  height: 34%;
+  border-radius: 12px;
+}
+
+/* —— Agent cards —— */
+.agentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: @spacing-xl;
+  width: 100%;
+}
+
+.agentCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 24px 32px;
+  border: 1px solid @page-line;
+  background: @canvas;
+  overflow: hidden;
+  transition:
+    transform @transition-duration-slow @transition-timing,
+    box-shadow @transition-duration-slow @transition-timing;
+  gap: 24px;
+  border-radius: 16px;
+
+  &:hover {
+    transform: translateY(@card-lift);
+    box-shadow: @shadow-lg;
+  }
+}
+
+.agentCardClickable {
+  cursor: pointer;
+
+  .cta::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+  }
+}
+
+.agentCardPlaceholder {
+  border: none;
+  background: @page-soft;
+
+  &:hover {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+.agentMedia {
+  position: relative;
+  width: calc(100% + 64px);
+  height: 200px;
+  margin: -24px -32px 0;
+  background: linear-gradient(180deg, @page-soft 0%, @canvas 100%);
+  overflow: hidden;
+}
+
+/* 自主规划 AgentLoop 封面：品牌渐变 + 居中标题 */
+.agentCardLoop {
+  .agentFooter {
+    justify-content: flex-start;
+  }
+}
+
+.loopCover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% + 64px);
+  min-height: 180px;
+  margin: -24px -32px 0;
+  padding: @spacing-xl @spacing-lg;
+  background:
+    radial-gradient(420px 180px at 12% 20%, fade(@warning-color, 28%), transparent 70%),
+    radial-gradient(380px 200px at 88% 30%, fade(@primary-gradient-end, 22%), transparent 72%),
+    linear-gradient(
+      118deg,
+      fade(@warning-color, 12%) 0%,
+      @primary-soft 48%,
+      fade(@primary-color, 18%) 100%
+    );
+  overflow: hidden;
+  gap: @spacing-md;
+}
+
+.loopSpark {
+  position: absolute;
+  top: @spacing-md;
+  right: @spacing-md;
+  width: 28px;
+  height: 28px;
+  border-radius: @border-radius-md;
+  background: @canvas;
+  box-shadow: @shadow-sm;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: @warning-color;
+    clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  }
+}
+
+.loopCoverTitle {
+  max-width: 90%;
+  color: @page-ink;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.loopPills {
+  display: flex;
+  gap: @spacing-xs;
+}
+
+.loopPill,
+.loopPillActive {
+  padding: 4px 12px;
+  border-radius: @border-radius-pill;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.loopPillActive {
+  background: @canvas;
+  color: @page-ink;
+  box-shadow: @shadow-sm;
+}
+
+.loopPill {
+  background: fade(@canvas, 55%);
+  color: @page-muted;
+}
+
+.agentDescLoop {
+  margin-top: 0;
+  color: @page-muted;
+}
+
+.ctaPrimary {
+  background: @primary-color;
+  color: @on-primary;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.agentCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.agentThumb {
+  position: absolute;
+  top: 72px;
+  left: 24px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 9px;
+  box-shadow: @shadow-md;
+  background: @canvas;
+}
+
+.agentBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.agentTitle {
+  margin: 0;
+  color: @page-ink;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.agentDesc {
+  .text-clamp(2);
+
+  margin: 12px 0 0;
+  color: @page-ink;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: none;
+  background: @page-line;
+}
+
+.agentFooter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.price {
+  flex: 1;
+  min-width: 0;
+  color: @page-ink;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.priceStrong {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-right: 2px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 36px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 64px;
+  background: @page-ink;
+  color: @on-primary;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  transition: opacity @transition-duration @transition-timing;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}
+
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 6px 16px;
+  border: 1px solid @page-line;
+  border-radius: 64px;
+  background: @canvas;
+  color: @page-ink;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background @transition-duration @transition-timing;
+
+  &:hover {
+    background: @page-soft;
+  }
+}
+
+.ctaSoon {
+  background: fade(@page-ink, 6%);
+  color: @page-ink;
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.ctaArrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentcolor;
+  border-top: 2px solid currentcolor;
+  transform: rotate(45deg);
+  margin-left: 2px;
+}
+
+/* —— 平台入口 —— */
+.entryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: @spacing-lg;
+  width: 100%;
+}
+
+.entryCard {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 1px solid @page-line;
+  background: @canvas;
+  text-align: left;
+  overflow: hidden;
+  transition:
+    transform @transition-duration-slow @transition-timing,
+    box-shadow @transition-duration-slow @transition-timing;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(@card-lift);
+    box-shadow: @shadow-lg;
+  }
+}
+
+.entryMedia {
+  position: relative;
+  height: 140px;
+  background: @page-soft;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.entryTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 2px 10px;
+  background: fade(@canvas, 92%);
+  border-radius: 999px;
+  color: @page-ink;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.entryBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px 18px;
+}
+
+.entryTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.entryDesc {
+  min-height: 3.2em;
+  margin: 0;
+  color: @page-muted;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.entryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  color: @page-ink;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* —— 作品 —— */
+.worksGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.workCard {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: @page-soft;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+
+  &:hover .workCover {
+    transform: scale(1.04);
+  }
+
+  &:hover .workMeta {
+    opacity: 1;
+  }
+}
+
+.workCardSkeleton {
+  background: @surface-3;
+  pointer-events: none;
+  cursor: default;
+}
+
+.workCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform @transition-duration-slow @transition-timing;
+}
+
+.workMeta {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 12px 12px;
+  background: linear-gradient(180deg, transparent, fade(@page-ink, 72%));
+  color: @on-primary;
+  text-align: left;
+  opacity: 0.92;
+  inset: auto 0 0;
+  gap: 2px;
+}
+
+.workCategory {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.workTitle {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* —— 工具箱 —— */
+.toolkitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: @spacing-lg;
+  width: 100%;
+}
+
+.toolkitCard {
+  display: grid;
+  align-items: stretch;
+  padding: 16px;
+  border: 1px solid @page-line;
+  background: @canvas;
+  text-align: left;
+  transition:
+    transform @transition-duration-slow @transition-timing,
+    box-shadow @transition-duration-slow @transition-timing;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(@card-lift);
+    box-shadow: @shadow-lg;
+  }
+}
+
+.toolkitCover {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: @page-soft;
+}
+
+.toolkitBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.toolkitTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.toolkitDesc {
+  flex: 1;
+  margin: 0;
+  color: @page-muted;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: @screen-lg) {
+  .main {
+    padding: @spacing-lg @spacing-lg 80px;
+    gap: 56px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: @spacing-xl;
+  }
+
+  .heroCollage {
+    min-height: 260px;
+  }
+
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .agentGrid,
+  .toolkitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .entryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .worksGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sectionHeadRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: @screen-md) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .agentCard {
+    padding: 20px;
+  }
+
+  .agentMedia {
+    width: calc(100% + 40px);
+    margin: -20px -20px 0;
+  }
+
+  .entryGrid,
+  .worksGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agentCard,
+  .entryCard,
+  .toolkitCard,
+  .workCover,
+  .cta,
+  .ctaGhost {
+    transition: none;
+  }
+
+  .agentCard:hover,
+  .entryCard:hover,
+  .toolkitCard:hover {
+    transform: none;
+  }
+
+  .workCard:hover .workCover {
+    transform: none;
+  }
+}

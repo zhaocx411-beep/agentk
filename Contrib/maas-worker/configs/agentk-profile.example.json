@@ -1,0 +1,50 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "tools": [
+    {
+      "capability": "contrib.maas.ffmpeg",
+      "name": "process_media",
+      "instructions": "只调用白名单媒体操作；params 和 pipeline 必须序列化为 JSON 字符串。媒体产物会以 AgentK artifact 返回。"
+    },
+    {
+      "capability": "contrib.maas.process_video",
+      "name": "process_video",
+      "instructions": "通过 MaaS ffmpeg 按 operations 顺序处理单个视频，支持 trim、normalize、denoise、reframe、resize、speed 和 mute；videoUrl 可直接使用 blob:// artifact URI。"
+    },
+    {
+      "capability": "contrib.maas.compose_video",
+      "name": "compose_video",
+      "instructions": "按 videoUrls 顺序通过 MaaS ffmpeg 合成视频；需要叠加配音、背景音轨或烧录字幕时使用 audioTracks、subtitleUrl 或 subtitleSegments。输入可直接使用上一步返回的 blob:// artifact URI，缺失原声音轨会自动补静音。"
+    },
+    {
+      "capability": "contrib.maas.extract_audio",
+      "name": "extract_audio",
+      "instructions": "通过 MaaS ffmpeg 从视频提取 MP3/AAC/WAV 音频 artifact，可用 startSeconds、durationSeconds、bitRate、sampleRate、channels 和 normalizeLoudness 控制输出。videoUrl 可直接使用 blob:// artifact URI。"
+    },
+    {
+      "capability": "contrib.maas.indextts",
+      "name": "synthesize_speech",
+      "instructions": "根据文本和参考音频合成语音；提供 text 和 spk_audio，并按情感模式补齐对应参数。生成音频从 artifacts 获取。"
+    },
+    {
+      "capability": "contrib.maas.transnet",
+      "name": "detect_shots",
+      "instructions": "只在需要分析视频镜头边界或分镜结构时调用；video 必须使用 MaaS 可访问的媒体引用。"
+    },
+    {
+      "capability": "contrib.maas.melband",
+      "name": "separate_audio",
+      "instructions": "分离人声和伴奏；提供 audio，通过 stems 指定返回声部，产物从 artifacts 获取。"
+    },
+    {
+      "capability": "contrib.maas.wav2vec2",
+      "name": "transcribe_audio",
+      "instructions": "把中文语音或视频音轨转写为文本；audio 必须使用 MaaS 可访问的媒体引用。"
+    },
+    {
+      "capability": "contrib.maas.qwen3_embedding",
+      "name": "embed_texts",
+      "instructions": "生成文本向量；检索 query 可传 instruction，document 不传 instruction；控制批量和 dimensions 避免返回过大。"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+FROM node:24-alpine AS builder
+
+ARG PNPM_VERSION=11.24.0
+ARG AGENTK_DOCS_PUBLIC_URL
+
+WORKDIR /app
+
+RUN npm install --global "pnpm@${PNPM_VERSION}"
+
+COPY .npmrc package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY server/package.json server/package.json
+RUN pnpm install --frozen-lockfile
+
+COPY . .
+RUN AGENTK_DOCS_PUBLIC_URL="${AGENTK_DOCS_PUBLIC_URL}" node -e \
+    "const u=new URL(process.env.AGENTK_DOCS_PUBLIC_URL);if(u.protocol!=='https:'||u.pathname!=='/docs/'||u.search||u.hash||u.username||u.password)process.exit(1)"
+RUN AGENTK_DOCS_PUBLIC_URL="${AGENTK_DOCS_PUBLIC_URL}" pnpm build
+RUN pnpm --filter @agentk/docs-server deploy --prod /runtime/server
+
+FROM node:24-alpine AS runtime
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+COPY --from=builder /app/build /app/build
+COPY --from=builder /app/generated/search-documents.json /app/generated/search-documents.json
+COPY --from=builder /app/server/dist /app/server/dist
+COPY --from=builder /runtime/server/package.json /app/server/package.json
+COPY --from=builder /runtime/server/node_modules /app/server/node_modules
+
+USER node
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:'+(process.env.AUTO_PORT0||process.env.PORT||8080)+'/healthz').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+
+CMD ["node", "server/dist/service.js"]

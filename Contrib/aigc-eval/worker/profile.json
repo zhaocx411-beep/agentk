@@ -1,0 +1,19 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "你可以对 AIGC 生成的视频做质量核查。调用 video_judge 时必须同时给出视频链接和生成该视频所用的提示词——没有提示词就无法判断指令遵循情况。它返回的是逐维度的三档结论，没有综合总分：不要自己把各维度加权成一个分数。特别注意 unverifiedDimensions 字段，它大于 0 说明有维度没能核实完，此时不能对外宣称视频通过质检，应说明哪些维度需要人工复核。",
+  "tools": [
+    {
+      "capability": "contrib.aigc_eval.video_judge",
+      "name": "video_judge",
+      "instructions": "用户给出视频链接并想知道这条视频质量如何、有没有画面问题时使用。一次调用是分钟级的，且会产生模型开销：同一条视频不要重复调用，也不要为了凑证据而对多条视频批量调用。缺少生成提示词时先向用户索取，不要自己编一个。"
+    }
+  ],
+  "pipelines": [
+    {
+      "capability": "contrib.aigc_eval.video_judge",
+      "name": "video_judge",
+      "displayName": "AIGC 视频质检（native8 八维）"
+    }
+  ],
+  "maxToolRounds": 4
+}

@@ -1,0 +1,313 @@
+@import url('@/styles/variables.less');
+
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @spacing-sm;
+  padding: @spacing-lg 0 @spacing-xl;
+  text-align: center;
+}
+
+.heroTitle {
+  margin: 0 !important;
+  color: @text-color;
+  font-size: @font-size-display !important;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.heroDesc {
+  max-width: 720px;
+  margin: 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.7;
+}
+
+.heroWarn {
+  max-width: 720px;
+  margin: 0;
+  color: @error-color;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: @spacing-sm;
+  width: 100%;
+  margin-bottom: @spacing-md;
+}
+
+.exampleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: @spacing-lg;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (max-width: @screen-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exampleCard {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  text-align: left;
+  overflow: hidden;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    box-shadow @transition-duration-fast @transition-timing;
+  gap: @spacing-sm;
+  border-radius: @border-radius-lg;
+  cursor: pointer;
+
+  &:hover {
+    border-color: @primary-color;
+    box-shadow: @shadow-sm;
+  }
+}
+
+.exampleCardActive {
+  border-color: @primary-color;
+  box-shadow: @focus-ring;
+}
+
+.exampleImageWrap {
+  aspect-ratio: 4 / 3;
+  background: @surface-3;
+}
+
+.exampleImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.examplePrompt {
+  padding: 0 @spacing-md @spacing-md;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.5;
+}
+
+.refreshRow {
+  display: flex;
+  justify-content: center;
+  margin-top: @spacing-lg;
+}
+
+.stage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.battleBoard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: @spacing-lg;
+  flex: 1;
+  min-height: 320px;
+  margin-bottom: @spacing-lg;
+
+  @media (max-width: @screen-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modelColumn {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  min-height: 0;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+}
+
+.modelColumnHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-sm;
+}
+
+.modelColumnTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.modelColumnBody {
+  flex: 1;
+  min-height: 180px;
+  padding: @spacing-sm;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+.userPromptBar {
+  margin-bottom: @spacing-md;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-2;
+}
+
+.userPromptLabel {
+  margin-bottom: @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.userPromptText {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.voteBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: @spacing-sm;
+  padding: @spacing-md;
+  border: 1px dashed @hairline;
+  border-radius: @border-radius-lg;
+  background: @canvas-soft;
+}
+
+.composerDock {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin-top: auto;
+  padding-top: @spacing-md;
+  background: linear-gradient(180deg, fade(@canvas, 0%) 0%, @canvas 32%);
+}
+
+.composerShell {
+  display: flex;
+  align-items: flex-end;
+  gap: @spacing-sm;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline-strong;
+  border-radius: @border-radius-xl;
+  background: @surface-1;
+  box-shadow: @shadow-sm;
+
+  &:focus-within {
+    border-color: @primary-color;
+    box-shadow: @focus-ring;
+  }
+}
+
+.attachBtn:global(.ant-btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: @border-radius-md;
+}
+
+.composerInput:global(.ant-input) {
+  min-height: 40px;
+  padding: @spacing-xs 0;
+  border: none;
+  box-shadow: none;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.sendBtn:global(.ant-btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.previewThumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+}
+
+.composerMeta {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-xs;
+}
+
+.revealBanner {
+  margin-bottom: @spacing-md;
+}
+
+.modelList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.modelListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+}
+
+.modelListName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.modelListMeta {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.batcheval.mapper.persistence.BatchevalDatasetTaskMapper">
+
+    <resultMap id="DatasetTaskMap"
+               type="com.kuaishou.agent.operation.backend.batcheval.model.BatchEvalModels$DatasetTask">
+        <id column="id" property="id"/>
+        <result column="dataset_id" property="datasetId"/>
+        <result column="task_key" property="taskKey"/>
+        <result column="prompt" property="prompt"/>
+        <result column="link_url" property="linkUrl"/>
+        <result column="refer_images" property="referImagesJson"/>
+        <result column="extra_fields" property="extraFieldsJson"/>
+        <result column="category" property="category"/>
+        <result column="conversation_key" property="conversationKey"/>
+        <result column="turn_index" property="turnIndex"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <sql id="TaskColumns">
+        id, dataset_id, task_key, prompt, link_url, refer_images, extra_fields, category,
+        conversation_key, turn_index, created_at, updated_at
+    </sql>
+
+    <sql id="TaskColumnsT">
+        t.id, t.dataset_id, t.task_key, t.prompt, t.link_url, t.refer_images, t.extra_fields, t.category,
+        t.conversation_key, t.turn_index, t.created_at, t.updated_at
+    </sql>
+
+    <sql id="TaskFilterJoin">
+        FROM batcheval_dataset_task t
+        INNER JOIN batcheval_dataset d ON d.id = t.dataset_id
+        <where>
+            <if test="filter.datasetId != null and filter.datasetId &gt; 0">
+                AND t.dataset_id = #{filter.datasetId}
+            </if>
+            <if test="filter.usage != null and filter.usage != ''">
+                AND d.usage_type = #{filter.usage}
+            </if>
+            <if test="filter.pipelineName != null and filter.pipelineName != ''">
+                AND d.pipeline_name = #{filter.pipelineName}
+            </if>
+            <if test="filter.category != null and filter.category != ''">
+                AND t.category = #{filter.category}
+            </if>
+        </where>
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="task.id">
+        INSERT INTO batcheval_dataset_task
+            (dataset_id, task_key, prompt, link_url, refer_images, extra_fields, category,
+             conversation_key, turn_index, created_at, updated_at)
+        VALUES (#{datasetId}, #{task.taskKey}, #{task.prompt}, #{task.linkUrl},
+                #{task.referImagesJson}, #{task.extraFieldsJson}, #{task.category},
+                #{task.conversationKey}, #{task.turnIndex},
+                #{task.createdAt}, #{task.updatedAt})
+    </insert>
+
+    <select id="listByDatasetId" resultMap="DatasetTaskMap">
+        SELECT <include refid="TaskColumns"/>
+        FROM batcheval_dataset_task
+        WHERE dataset_id = #{datasetId}
+        ORDER BY id ASC
+    </select>
+
+    <select id="listByDatasetIdPage" resultMap="DatasetTaskMap">
+        SELECT <include refid="TaskColumns"/>
+        FROM batcheval_dataset_task
+        WHERE dataset_id = #{datasetId}
+        ORDER BY id ASC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="countByFilter" resultType="long">
+        SELECT COUNT(1)
+        <include refid="TaskFilterJoin"/>
+    </select>
+
+    <select id="listByFilterPage" resultMap="DatasetTaskMap">
+        SELECT <include refid="TaskColumnsT"/>
+        <include refid="TaskFilterJoin"/>
+        ORDER BY t.id ASC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="listByFilterRandom" resultMap="DatasetTaskMap">
+        SELECT <include refid="TaskColumnsT"/>
+        <include refid="TaskFilterJoin"/>
+        ORDER BY RAND()
+        LIMIT #{limit}
+    </select>
+
+    <select id="findById" resultMap="DatasetTaskMap">
+        SELECT <include refid="TaskColumns"/>
+        FROM batcheval_dataset_task
+        WHERE id = #{id}
+    </select>
+
+    <select id="findDatasetIdByTaskId" resultType="long">
+        SELECT dataset_id FROM batcheval_dataset_task WHERE id = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE batcheval_dataset_task
+        SET prompt = #{prompt},
+            link_url = #{linkUrl},
+            refer_images = #{referImagesJson},
+            extra_fields = #{extraFieldsJson},
+            category = #{category},
+            conversation_key = #{conversationKey},
+            turn_index = #{turnIndex},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM batcheval_dataset_task WHERE id = #{id}
+    </delete>
+
+    <delete id="deleteByDatasetId">
+        DELETE FROM batcheval_dataset_task WHERE dataset_id = #{datasetId}
+    </delete>
+</mapper>

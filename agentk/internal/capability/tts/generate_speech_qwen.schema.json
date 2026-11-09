@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "qwen3-tts-flash"
+      ],
+      "description": "使用的模型。候选：qwen3-tts-flash（Qwen3 快速自然语音）"
+    },
+    "text": {
+      "type": "string",
+      "description": "要合成的文字"
+    },
+    "voiceId": {
+      "type": "string",
+      "description": "当前账号已配置的音色 ID"
+    },
+    "languageType": {
+      "type": "string",
+      "enum": [
+        "Auto",
+        "Chinese",
+        "English",
+        "German",
+        "Italian",
+        "Portuguese",
+        "Spanish",
+        "Japanese",
+        "Korean",
+        "French",
+        "Russian"
+      ],
+      "description": "语种；省略时为 Auto"
+    },
+    "instructions": {
+      "type": "string",
+      "description": "Instruct 型号的自然语言演绎指令"
+    },
+    "optimizeInstructions": {
+      "type": "boolean",
+      "description": "是否优化 instructions；缺省 false"
+    }
+  },
+  "required": [
+    "model",
+    "text",
+    "voiceId"
+  ]
+}

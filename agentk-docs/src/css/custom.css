@@ -1,0 +1,271 @@
+:root {
+  --ifm-color-primary: #245b8f;
+  --ifm-color-primary-dark: #20527f;
+  --ifm-color-primary-darker: #1e4d78;
+  --ifm-color-primary-darkest: #193f63;
+  --ifm-color-primary-light: #2a68a3;
+  --ifm-color-primary-lighter: #2d6eac;
+  --ifm-color-primary-lightest: #367dbf;
+  --ifm-font-family-base: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ifm-font-family-monospace: "SFMono-Regular", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --ifm-heading-font-weight: 680;
+  --ifm-container-width-xl: 1480px;
+
+  --agentk-paper: #ffffff;
+  --agentk-surface: #f7f8fa;
+  --agentk-surface-blue: #f3f7fb;
+  --agentk-surface-green: #eef6f2;
+  --agentk-surface-warm: #faf8f3;
+  --agentk-ink: #1d2732;
+  --agentk-muted: #5c6875;
+  --agentk-faint: #8994a0;
+  --agentk-line: #dde2e7;
+  --agentk-line-strong: #b8c1cb;
+  --agentk-blue: #356d9d;
+  --agentk-blue-dark: #244d72;
+  --agentk-green: #39725b;
+  --agentk-amber: #89672b;
+  --agentk-mono: var(--ifm-font-family-monospace);
+}
+
+body {
+  color: var(--agentk-ink);
+  background: #f5f6f7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar,
+.theme-doc-sidebar-container,
+main {
+  background: var(--agentk-paper);
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.theme-doc-sidebar-menu .menu__link--sublist,
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist) {
+  font-weight: 500;
+}
+
+.theme-doc-sidebar-menu
+  a.menu__link[href$="/capabilities"]::after {
+  content: "CONNECTING";
+  margin-left: auto;
+  padding: 2px 5px;
+  border: 1px solid var(--agentk-line);
+  border-radius: 3px;
+  color: var(--agentk-faint);
+  background: var(--agentk-surface);
+  font: 8px/1.2 var(--agentk-mono);
+  letter-spacing: 0.08em;
+}
+
+html[data-capability-catalog-status="live"]
+  .theme-doc-sidebar-menu
+  a.menu__link[href$="/capabilities"]::after {
+  content: "LIVE";
+  color: var(--agentk-green);
+  border-color: #bed8cc;
+  background: var(--agentk-surface-green);
+}
+
+html[data-capability-catalog-status="offline"]
+  .theme-doc-sidebar-menu
+  a.menu__link[href$="/capabilities"]::after {
+  content: "OFFLINE";
+  color: #a95038;
+  border-color: #e1c2b8;
+  background: #fbf1ed;
+}
+
+.navbar-capability-catalog {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-capability-catalog::after {
+  content: "CONNECTING";
+  align-self: center;
+  margin-left: 6px;
+  padding: 2px 5px;
+  border: 1px solid var(--agentk-line);
+  border-radius: 3px;
+  color: var(--agentk-faint);
+  background: var(--agentk-surface);
+  font: 8px/1 var(--agentk-mono);
+  letter-spacing: 0.08em;
+}
+
+html[data-capability-catalog-status="live"]
+  .navbar-capability-catalog::after {
+  content: "LIVE";
+  color: var(--agentk-green);
+  border-color: #bed8cc;
+  background: var(--agentk-surface-green);
+}
+
+html[data-capability-catalog-status="offline"]
+  .navbar-capability-catalog::after {
+  content: "OFFLINE";
+  color: #a95038;
+  border-color: #e1c2b8;
+  background: #fbf1ed;
+}
+
+.theme-doc-markdown {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.theme-doc-markdown a.external-doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
+  margin-left: 0.28em;
+  margin-right: 0.18em;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  line-height: inherit;
+  text-decoration: none;
+  vertical-align: -0.08em;
+}
+
+.theme-doc-markdown a.external-doc-link:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.external-doc-link__favicon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  border-radius: 2px;
+  object-fit: contain;
+}
+
+html.docs-doc-id-intro .theme-doc-markdown > h2 {
+  margin: 0 0 8px;
+  font-size: 29px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown {
+  --ifm-heading-font-weight: 650;
+  --ifm-line-height-base: 1.7;
+  max-width: 880px;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown > h1,
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  > header
+  > h1 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown > h2 {
+  margin-top: 46px;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown > h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown > h4 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown > p {
+  margin-top: 0;
+  margin-bottom: 14px;
+  line-height: 1.75;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  > :is(ul, ol) {
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-left: 1.65rem;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown li {
+  line-height: 1.7;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  li
+  + li {
+  margin-top: 4px;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  > blockquote {
+  margin-top: 18px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  > :is(.theme-admonition, .theme-code-block) {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .theme-doc-markdown .tabs {
+  --ifm-tabs-padding-horizontal: 12px;
+  --ifm-tabs-padding-vertical: 8px;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro)
+  .theme-doc-markdown
+  .tabs__item {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+html.docs-doc-page:not(.docs-doc-id-intro) .pagination-nav {
+  max-width: 880px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.concept-anchor {
+  display: block;
+  height: calc(var(--ifm-navbar-height) + 16px);
+  margin-top: calc(-1 * var(--ifm-navbar-height) - 16px);
+  visibility: hidden;
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    padding-inline: 8px;
+  }
+}

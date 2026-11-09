@@ -1,0 +1,26 @@
+FROM docker.io/library/golang:1.26.4-bookworm AS build
+
+ENV GOPROXY=https://goproxy.corp.kuaishou.com \
+    GONOPROXY=none \
+    GOSUMDB=off
+
+WORKDIR /src
+
+COPY go/worker/go.mod go/worker/go.sum ./
+RUN go mod download
+
+COPY go/worker/ ./
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -trimpath -ldflags="-s -w" -o /out/storyboard-example-worker .
+
+FROM docker.io/library/debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=build /out/storyboard-example-worker /usr/local/bin/storyboard-example-worker
+
+USER 65532:65532
+
+ENTRYPOINT ["/usr/local/bin/storyboard-example-worker"]

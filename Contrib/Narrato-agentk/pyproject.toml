@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "narrato-agentk"
+version = "0.1.0"
+description = "AgentK documentary narration pipelines inspired by NarratoAI"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = { file = "LICENSE" }
+dependencies = [
+  "aiofiles>=24.1,<25",
+  "agentk-client==0.1.0",
+  "agentk-protocol==0.1.0",
+  "ks-agentk-worker==0.1.0",
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "python-multipart>=0.0.20,<1",
+  "pyyaml>=6.0.2,<7",
+  "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+test = [
+  "jsonschema>=4.23,<5",
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.25,<1",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+narrato-agentk = "narrato_agentk.cli.main:main"
+narrato-agentk-api = "narrato_agentk.api.main:main"
+narrato-agentk-worker = "narrato_agentk.worker:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/narrato_agentk"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[[tool.uv.index]]
+name = "kuaishou"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+explicit = true
+
+[tool.uv.sources]
+agentk-client = { path = "../agentk-sdk/python/client", editable = true }
+agentk-protocol = { path = "../agentk-sdk/python/protocol", editable = true }
+ks-agentk-worker = { path = "../agentk-sdk/python/worker", editable = true }
+
+[tool.uv]
+package = true
+override-dependencies = [
+  "cityhash==0.4.9",
+  "grpcio==1.76.0",
+  "lxml==6.0.2",
+  "lz4==4.4.5",
+  "python-snappy==0.7.3",
+  "setuptools<82.0.0",
+]
+
+[tool.uv.extra-build-dependencies]
+cchardet = ["cython"]
+dsc-auth = ["setuptools_scm"]

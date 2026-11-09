@@ -1,0 +1,12 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a09",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "tool.exec_failed",
+  "data": {
+    "toolCallId": "call_7b3d02",
+    "error": "generate_video: upstream rejected prompt (content policy)",
+    "durationMillis": 1130
+  },
+  "createdAt": "2026-07-30T12:00:14Z"
+}

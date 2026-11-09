@@ -1,0 +1,9 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a01",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "kind": "user.input",
+  "data": {
+    "text": "把这段分镜做成 15 秒短片"
+  },
+  "createdAt": "2026-07-30T12:00:00Z"
+}

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "gemini-3.1-pro-preview",
+        "gemini-3-flash-preview",
+        "gemini-3.1-flash-lite"
+      ],
+      "description": "使用的模型。候选：gemini-3.1-pro-preview、gemini-3-flash-preview、gemini-3.1-flash-lite"
+    },
+    "mediaUrls": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "string"
+      },
+      "description": "要看的视频/图片 URL，按送进模型的顺序排列；通常取上下文里生成工具返回的 artifacts 数组元素的 uri，也可用公网可读的直链。视频与图片可混用，类型由系统按内容判定，不用你标注。全部素材共用一份体积预算，一次给太多或太长会被拒绝"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "要模型回答的问题或分析要求，例如「这段视频里发生了什么」「这两张图的差别在哪」「画面风格和第一段一致吗」"
+    }
+  },
+  "required": [
+    "model",
+    "mediaUrls",
+    "prompt"
+  ]
+}

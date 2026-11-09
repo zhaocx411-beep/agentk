@@ -1,0 +1,2942 @@
+{
+ "report": {
+  "analysis_status": "complete",
+  "audit_trace": [
+   {
+    "detail": "检查得分 100/100；未发现异常。",
+    "stage": "1 · 视频文件检查",
+    "status": "完成"
+   },
+   {
+    "detail": "取 12 张画面，含 4 张快动作加密，13 段快动作区间。",
+    "stage": "2 · 抽取关键画面",
+    "status": "完成"
+   },
+   {
+    "detail": "3 个主体，11 条可核对要求。",
+    "stage": "3 · 拆解提示词要求",
+    "status": "完成"
+   },
+   {
+    "detail": "记录 4 条画面描述，并按疑点触发专项复核。",
+    "stage": "4 · 看视频、记录画面",
+    "status": "大模型"
+   },
+   {
+    "detail": "4b 主判给出 3 个有效问题子判据；4c 仅按候选 issue 增量取证，未执行完整八维二次裁决。",
+    "stage": "4b/4c · 原生八维事实形成",
+    "status": "大模型"
+   },
+   {
+    "detail": "由代码按结构化事实生成八维三档，不计算综合分或整体质量状态。",
+    "stage": "6 · 原生八维事实聚合",
+    "status": "完成"
+   }
+  ],
+  "case": {
+   "case_id": "up_81c14eab49e22a90",
+   "case_name": "up_81c14eab49e22a90",
+   "collection": "uploads",
+   "focus": "I2V 生成",
+   "label": "up_81c14eab49e22a90",
+   "mode": "I2V"
+  },
+  "engine": "agentk",
+  "evidence": [
+   {
+    "bbox": [
+     0.38,
+     0.85,
+     0.62,
+     1.0
+    ],
+    "confirmed": null,
+    "counterevidence_checked": [
+     "右侧画面边缘的黑色物体未能满足面前位置要求"
+    ],
+    "decision_summary": "画面正前方未出现要求的麦克风，且由于位置错误导致主播未表现出对着麦克风说话的倾向。",
+    "frame_time": 0.25,
+    "frames": [
+     {
+      "bbox": [
+       0.38,
+       0.85,
+       0.62,
+       1.0
+      ],
+      "has_box": true,
+      "image_path": "<path:ISSUE-001_01_boxed.jpg>",
+      "observation": "正前方桌面区域完全为空",
+      "role": "representative",
+      "time": 0.25
+     },
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-001_02_src.jpg>",
+      "observation": "直视镜头说话，无俯身对麦倾向",
+      "role": "representative",
+      "time": 3.6
+     }
+    ],
+    "has_box": true,
+    "image_path": "<path:ISSUE-001_01_boxed.jpg>",
+    "issue_id": "ISSUE-001",
+    "note": "主播前方始终无麦克风实体存在。；00:00.0-00:14.4正前方桌面始终为空；00:00.0-00:14.4主播始终保持正襟危坐直视前方",
+    "occurrences": [
+     {
+      "detail": "主播前方始终无麦克风实体存在。",
+      "time": "00:00.0-00:14.4"
+     },
+     {
+      "detail": "00:00.0-00:14.4正前方桌面始终为空",
+      "time": "全片"
+     },
+     {
+      "detail": "00:00.0-00:14.4主播始终保持正襟危坐直视前方",
+      "time": "全片"
+     }
+    ],
+    "ref_id": "ISSUE-001",
+    "scope": "issue",
+    "source_stage": "grounding",
+    "target": "主播正前方的桌面区域（应有麦克风）",
+    "time": "00:00.0-00:14.4",
+    "title": "ISSUE-001 · C9, C10"
+   },
+   {
+    "bbox": [
+     0.24,
+     0.18,
+     0.34,
+     0.22
+    ],
+    "confirmed": null,
+    "counterevidence_checked": [
+     "全程逐秒排查均未发现眼球视线的明显移开"
+    ],
+    "decision_summary": "女主播视线全程固定看着镜头，没有体现“偶尔看向”的视线交替状态。",
+    "frame_time": 1.54,
+    "frames": [
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-002_01_src.jpg>",
+      "observation": "直视镜头",
+      "role": "before",
+      "time": 1.54
+     },
+     {
+      "bbox": [
+       0.24,
+       0.18,
+       0.34,
+       0.22
+      ],
+      "has_box": true,
+      "image_path": "<path:ISSUE-002_02_boxed.jpg>",
+      "observation": "直视镜头，无变化",
+      "role": "problem",
+      "time": 8.74
+     },
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-002_03_src.jpg>",
+      "observation": "持续直视镜头",
+      "role": "after",
+      "time": 13.89
+     }
+    ],
+    "has_box": true,
+    "image_path": "<path:ISSUE-002_01_src.jpg>",
+    "issue_id": "ISSUE-002",
+    "note": "全段视线均未发生移动。；00:00.0-00:14.4视线自始至终未曾离开镜头",
+    "occurrences": [
+     {
+      "detail": "全段视线均未发生移动。",
+      "time": "00:00.0-00:14.4"
+     },
+     {
+      "detail": "00:00.0-00:14.4视线自始至终未曾离开镜头",
+      "time": "全片"
+     }
+    ],
+    "ref_id": "ISSUE-002",
+    "scope": "issue",
+    "source_stage": "grounding",
+    "target": "主播双眼",
+    "time": "00:00.0-00:14.4",
+    "title": "ISSUE-002 · C11"
+   },
+   {
+    "bbox": [
+     0.36,
+     0.67,
+     0.51,
+     0.88
+    ],
+    "confirmed": null,
+    "counterevidence_checked": [
+     "已确认左手初始状态为空，排除了由于视角遮挡导致一开始没看到笔的可能性"
+    ],
+    "decision_summary": "女主播左手抬起时，手中凭空出现一支笔，发生物品无中生有的错误，同时桌面右侧原有的笔依然存在。",
+    "frame_time": 0.25,
+    "frames": [
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-003_01_src.jpg>",
+      "observation": "左手平放桌面，手中无笔",
+      "role": "before",
+      "time": 0.25
+     },
+     {
+      "bbox": [
+       0.36,
+       0.67,
+       0.51,
+       0.88
+      ],
+      "has_box": true,
+      "image_path": "<path:ISSUE-003_02_boxed.jpg>",
+      "observation": "抬起的左手中突然多出一支笔",
+      "role": "problem",
+      "time": 1.54
+     },
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-003_03_src.jpg>",
+      "observation": "左手持续握笔动作",
+      "role": "after",
+      "time": 5.66
+     }
+    ],
+    "has_box": true,
+    "image_path": "<path:ISSUE-003_01_src.jpg>",
+    "issue_id": "ISSUE-003",
+    "note": "01秒左右手部抬起后，物品发生复制的视觉错误并一直持续。；视频在00:00.6左右，女主播左手从桌面抬起，手中突然凭空出现一支笔并一直持续在后续画面中。",
+    "occurrences": [
+     {
+      "detail": "01秒左右手部抬起后，物品发生复制的视觉错误并一直持续。",
+      "time": "00:01.0-00:14.4"
+     },
+     {
+      "detail": "视频在00:00.6左右，女主播左手从桌面抬起，手中突然凭空出现一支笔并一直持续在后续画面中。",
+      "time": "00:00.6-00:01.5"
+     }
+    ],
+    "ref_id": "ISSUE-003",
+    "scope": "issue",
+    "source_stage": "grounding",
+    "target": "抬起的左手中突然出现的笔",
+    "time": "00:01.0-00:14.4",
+    "title": "ISSUE-003 · specialist"
+   },
+   {
+    "bbox": [
+     0.35,
+     0.75,
+     0.49,
+     0.89
+    ],
+    "confirmed": null,
+    "counterevidence_checked": [
+     "排除了正常运动模糊的影响，静止观察可见明确的生理结构错误和物体粘连"
+    ],
+    "decision_summary": "女主播左手挥动时，手指解剖结构与笔杆产生严重的交融、变形与边界模糊，无法辨认正常的手指形态。",
+    "frame_time": 3.6,
+    "frames": [
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-004_01_src.jpg>",
+      "observation": "左手手部结构和笔杆尚可相对清晰分离",
+      "role": "before",
+      "time": 3.6
+     },
+     {
+      "bbox": [
+       0.35,
+       0.75,
+       0.49,
+       0.89
+      ],
+      "has_box": true,
+      "image_path": "<path:ISSUE-004_02_boxed.jpg>",
+      "observation": "左手手指发生严重扭曲，并与黑色笔杆完全融合",
+      "role": "problem",
+      "time": 5.66
+     },
+     {
+      "bbox": null,
+      "has_box": false,
+      "image_path": "<path:ISSUE-004_03_src.jpg>",
+      "observation": "手指握笔处的生理结构无法辨认，呈现粘连错乱的状态",
+      "role": "after",
+      "time": 8.74
+     }
+    ],
+    "has_box": true,
+    "image_path": "<path:ISSUE-004_01_src.jpg>",
+    "issue_id": "ISSUE-004",
+    "note": "随着手的运动，手部结构维持性变差并与笔发生错乱融合。；随着女主播左手的挥动，其手指维持性变差，与手中的笔发生严重的结构错乱和粘连融合。",
+    "occurrences": [
+     {
+      "detail": "随着手的运动，手部结构维持性变差并与笔发生错乱融合。",
+      "time": "00:05.5-00:09.5"
+     },
+     {
+      "detail": "随着女主播左手的挥动，其手指维持性变差，与手中的笔发生严重的结构错乱和粘连融合。",
+      "time": "00:05.5-00:09.5"
+     }
+    ],
+    "ref_id": "ISSUE-004",
+    "scope": "issue",
+    "source_stage": "grounding",
+    "target": "与笔杆融合扭曲的手指",
+    "time": "00:05.5-00:09.5",
+    "title": "ISSUE-004 · specialist"
+   }
+  ],
+  "grounding": [
+   {
+    "bbox": [
+     0.38,
+     0.85,
+     0.62,
+     1.0
+    ],
+    "locatable": true,
+    "ref_id": "ISSUE-001",
+    "target": "主播正前方的桌面区域（应有麦克风）",
+    "time": 0.25,
+    "validation_note": null
+   },
+   {
+    "bbox": [
+     0.24,
+     0.18,
+     0.34,
+     0.22
+    ],
+    "locatable": true,
+    "ref_id": "ISSUE-002",
+    "target": "主播双眼",
+    "time": 8.74,
+    "validation_note": null
+   },
+   {
+    "bbox": [
+     0.36,
+     0.67,
+     0.51,
+     0.88
+    ],
+    "locatable": true,
+    "ref_id": "ISSUE-003",
+    "target": "抬起的左手中突然出现的笔",
+    "time": 1.54,
+    "validation_note": null
+   },
+   {
+    "bbox": [
+     0.35,
+     0.75,
+     0.49,
+     0.89
+    ],
+    "locatable": true,
+    "ref_id": "ISSUE-004",
+    "target": "与笔杆融合扭曲的手指",
+    "time": 5.66,
+    "validation_note": null
+   }
+  ],
+  "integrity": {
+   "issues": [],
+   "notes": "完整性预检为确定性工具结果；冻结/黑帧等仍需 VLM 结合语义判定。",
+   "score": 100,
+   "verdict": "pass"
+  },
+  "issues": [
+   {
+    "counterevidence_checked": [
+     "右侧画面边缘的黑色物体未能满足面前位置要求"
+    ],
+    "decision_summary": "画面正前方未出现要求的麦克风，且由于位置错误导致主播未表现出对着麦克风说话的倾向。",
+    "evidence": [
+     {
+      "detail": "主播前方始终无麦克风实体存在。",
+      "time": "00:00.0-00:14.4"
+     },
+     {
+      "detail": "00:00.0-00:14.4正前方桌面始终为空",
+      "time": "全片"
+     },
+     {
+      "detail": "00:00.0-00:14.4主播始终保持正襟危坐直视前方",
+      "time": "全片"
+     }
+    ],
+    "evidence_frames": [
+     {
+      "observation": "正前方桌面区域完全为空",
+      "role": "representative",
+      "time": 0.25
+     },
+     {
+      "observation": "直视镜头说话，无俯身对麦倾向",
+      "role": "representative",
+      "time": 3.6
+     }
+    ],
+    "facts": {
+     "constraint_id": "C9",
+     "requirement_importance": "core"
+    },
+    "issue_id": "ISSUE-001",
+    "observer_fact_ids": [
+     "OBS-004"
+    ],
+    "ref_ids": [
+     "C9",
+     "C10"
+    ],
+    "source": "unified"
+   },
+   {
+    "counterevidence_checked": [
+     "全程逐秒排查均未发现眼球视线的明显移开"
+    ],
+    "decision_summary": "女主播视线全程固定看着镜头，没有体现“偶尔看向”的视线交替状态。",
+    "evidence": [
+     {
+      "detail": "全段视线均未发生移动。",
+      "time": "00:00.0-00:14.4"
+     },
+     {
+      "detail": "00:00.0-00:14.4视线自始至终未曾离开镜头",
+      "time": "全片"
+     }
+    ],
+    "evidence_frames": [
+     {
+      "observation": "直视镜头",
+      "role": "before",
+      "time": 1.54
+     },
+     {
+      "observation": "直视镜头，无变化",
+      "role": "problem",
+      "time": 8.74
+     },
+     {
+      "observation": "持续直视镜头",
+      "role": "after",
+      "time": 13.89
+     }
+    ],
+    "facts": {
+     "constraint_id": "C11",
+     "requirement_importance": "detail"
+    },
+    "issue_id": "ISSUE-002",
+    "observer_fact_ids": [
+     "OBS-007"
+    ],
+    "ref_ids": [
+     "C11"
+    ],
+    "source": "unified"
+   },
+   {
+    "counterevidence_checked": [
+     "已确认左手初始状态为空，排除了由于视角遮挡导致一开始没看到笔的可能性"
+    ],
+    "decision_summary": "女主播左手抬起时，手中凭空出现一支笔，发生物品无中生有的错误，同时桌面右侧原有的笔依然存在。",
+    "evidence": [
+     {
+      "detail": "01秒左右手部抬起后，物品发生复制的视觉错误并一直持续。",
+      "time": "00:01.0-00:14.4"
+     },
+     {
+      "detail": "视频在00:00.6左右，女主播左手从桌面抬起，手中突然凭空出现一支笔并一直持续在后续画面中。",
+      "time": "00:00.6-00:01.5"
+     }
+    ],
+    "evidence_frames": [
+     {
+      "observation": "左手平放桌面，手中无笔",
+      "role": "before",
+      "time": 0.25
+     },
+     {
+      "observation": "抬起的左手中突然多出一支笔",
+      "role": "problem",
+      "time": 1.54
+     },
+     {
+      "observation": "左手持续握笔动作",
+      "role": "after",
+      "time": 5.66
+     }
+    ],
+    "facts": {
+     "change_cause": "actual_change",
+     "object_scope": "subject",
+     "occlusion_or_exit_excluded": true,
+     "prompt_change_excluded": true,
+     "same_shot": true,
+     "state_after": "女主播抬起左手时，手中凭空出现了一支笔",
+     "state_before": "女主播左手平放于桌面，手中空无一物"
+    },
+    "issue_id": "ISSUE-003",
+    "observer_fact_ids": [
+     "OBS-005"
+    ],
+    "ref_ids": [],
+    "source": "specialist"
+   },
+   {
+    "counterevidence_checked": [
+     "排除了正常运动模糊的影响，静止观察可见明确的生理结构错误和物体粘连"
+    ],
+    "decision_summary": "女主播左手挥动时，手指解剖结构与笔杆产生严重的交融、变形与边界模糊，无法辨认正常的手指形态。",
+    "evidence": [
+     {
+      "detail": "随着手的运动，手部结构维持性变差并与笔发生错乱融合。",
+      "time": "00:05.5-00:09.5"
+     },
+     {
+      "detail": "随着女主播左手的挥动，其手指维持性变差，与手中的笔发生严重的结构错乱和粘连融合。",
+      "time": "00:05.5-00:09.5"
+     }
+    ],
+    "evidence_frames": [
+     {
+      "observation": "左手手部结构和笔杆尚可相对清晰分离",
+      "role": "before",
+      "time": 3.6
+     },
+     {
+      "observation": "左手手指发生严重扭曲，并与黑色笔杆完全融合",
+      "role": "problem",
+      "time": 5.66
+     },
+     {
+      "observation": "手指握笔处的生理结构无法辨认，呈现粘连错乱的状态",
+      "role": "after",
+      "time": 8.74
+     }
+    ],
+    "facts": {
+     "affects_adoption": true,
+     "confidence": "high",
+     "continuous_frames_confirmed": true,
+     "duration_seconds": 4.0,
+     "normal_speed_visible": true
+    },
+    "issue_id": "ISSUE-004",
+    "observer_fact_ids": [
+     "OBS-006"
+    ],
+    "ref_ids": [],
+    "source": "specialist"
+   }
+  ],
+  "media": {
+   "contact_sheet_url": "./runtime/up_81c14eab49e22a90__replay_contact.jpg",
+   "input_image_url": "./api/upload_media?slug=up_81c14eab49e22a90&asset=reference&ref_id=Image%201",
+   "reference_urls": [
+    {
+     "expected_role": "主体/外观参考",
+     "kind": "image",
+     "label": "Image 1",
+     "reference_id": "Image 1",
+     "url": "./api/upload_media?slug=up_81c14eab49e22a90&asset=reference&ref_id=Image%201"
+    }
+   ],
+   "source_video_url": null,
+   "video_url": "./api/upload_media?slug=up_81c14eab49e22a90&asset=video"
+  },
+  "metadata": {
+   "audio_codec": "aac",
+   "codec": "h264",
+   "duration_seconds": 14.4,
+   "expected_frames": 432,
+   "file_size_mb": 9.39,
+   "fps": 30.0,
+   "frame_count": 432,
+   "has_audio": true,
+   "height": 1072,
+   "width": 1904
+  },
+  "mock_mode": false,
+  "native8_recheck": {
+   "confirmed_issues": [
+    {
+     "counterevidence_checked": [
+      "已确认左手初始状态为空，排除了由于视角遮挡导致一开始没看到笔的可能性"
+     ],
+     "decision_summary": "女主播左手抬起时，手中凭空出现一支笔，发生物品无中生有的错误，同时桌面右侧原有的笔依然存在。",
+     "dimension_id": "visual_consistency",
+     "evidence": [
+      {
+       "detail": "视频在00:00.6左右，女主播左手从桌面抬起，手中突然凭空出现一支笔并一直持续在后续画面中。",
+       "time": "00:00.6-00:01.5"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "左手平放桌面，手中无笔",
+       "role": "before",
+       "time": 0.25
+      },
+      {
+       "observation": "抬起的左手中突然多出一支笔",
+       "role": "problem",
+       "time": 1.54
+      },
+      {
+       "observation": "左手持续握笔动作",
+       "role": "after",
+       "time": 5.66
+      }
+     ],
+     "facts": {
+      "change_cause": "actual_change",
+      "object_scope": "subject",
+      "occlusion_or_exit_excluded": true,
+      "prompt_change_excluded": true,
+      "same_shot": true,
+      "state_after": "女主播抬起左手时，手中凭空出现了一支笔",
+      "state_before": "女主播左手平放于桌面，手中空无一物"
+     },
+     "issue_id": "ISSUE-003",
+     "key": "visual_object_disappearance",
+     "source": "specialist"
+    },
+    {
+     "counterevidence_checked": [
+      "排除了正常运动模糊的影响，静止观察可见明确的生理结构错误和物体粘连"
+     ],
+     "decision_summary": "女主播左手挥动时，手指解剖结构与笔杆产生严重的交融、变形与边界模糊，无法辨认正常的手指形态。",
+     "dimension_id": "picture_quality",
+     "evidence": [
+      {
+       "detail": "随着女主播左手的挥动，其手指维持性变差，与手中的笔发生严重的结构错乱和粘连融合。",
+       "time": "00:05.5-00:09.5"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "左手手部结构和笔杆尚可相对清晰分离",
+       "role": "before",
+       "time": 3.6
+      },
+      {
+       "observation": "左手手指发生严重扭曲，并与黑色笔杆完全融合",
+       "role": "problem",
+       "time": 5.66
+      },
+      {
+       "observation": "手指握笔处的生理结构无法辨认，呈现粘连错乱的状态",
+       "role": "after",
+       "time": 8.74
+      }
+     ],
+     "facts": {
+      "affects_adoption": true,
+      "confidence": "high",
+      "continuous_frames_confirmed": true,
+      "duration_seconds": 4.0,
+      "normal_speed_visible": true
+     },
+     "issue_id": "ISSUE-004",
+     "key": "picture_structural_visibility",
+     "source": "specialist"
+    }
+   ],
+   "rejected_candidate_issue_ids": [],
+   "unresolved_candidates": []
+  },
+  "native8_scan": {
+   "_frames": [
+    {
+     "path": "<path:zoom_01.jpg>",
+     "time": 0.25
+    },
+    {
+     "focus_role": "center",
+     "focus_types": [
+      "consistency"
+     ],
+     "path": "<path:zoom_02.jpg>",
+     "time": 0.6
+    },
+    {
+     "path": "<path:zoom_03.jpg>",
+     "time": 1.543
+    },
+    {
+     "path": "<path:zoom_04.jpg>",
+     "time": 3.6
+    },
+    {
+     "path": "<path:zoom_05.jpg>",
+     "time": 5.657
+    },
+    {
+     "path": "<path:zoom_06.jpg>",
+     "time": 8.743
+    },
+    {
+     "path": "<path:zoom_07.jpg>",
+     "time": 10.8
+    },
+    {
+     "path": "<path:zoom_08.jpg>",
+     "time": 13.886
+    }
+   ],
+   "continuity_checks": [
+    {
+     "after": "00:01.5, 手抬起并握有一支笔后，桌面上的笔依旧存在并未被移走",
+     "before": "00:00.2, 桌面上摆放有一支笔",
+     "change_cause": "actual_change",
+     "object": "笔"
+    }
+   ],
+   "instruction_checklist": [
+    {
+     "actual": "外观、着装和背景与参考图高度一致",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "主体",
+     "constraint_id": "C1",
+     "counterevidence_checked": [],
+     "decision_basis": "画面中主播身穿浅蓝色西装，背景屏幕显示正确，与参考图一致",
+     "evidence": "00:00.0-00:14.4全片可见",
+     "expected": "女主播的外观、着装和背景需与 Image 1 保持一致",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-002",
+      "OBS-005"
+     ],
+     "requirement": "女主播的外观、着装和背景需与 Image 1 保持一致",
+     "requirement_importance": "core",
+     "responded": "unknown"
+    },
+    {
+     "actual": "主播全片保持微笑神态",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "表情",
+     "constraint_id": "C2",
+     "counterevidence_checked": [],
+     "decision_basis": "主播面部表情始终保持微笑",
+     "evidence": "00:00.0-00:14.4全片可见",
+     "expected": "女主播面带微笑",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-003"
+     ],
+     "requirement": "女主播面带微笑",
+     "requirement_importance": "core",
+     "responded": true
+    },
+    {
+     "actual": "主播有明显的张嘴说话及唇部开合动作",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "动作",
+     "constraint_id": "C3",
+     "counterevidence_checked": [],
+     "decision_basis": "画面中有持续的说话唇部动态配合音频",
+     "evidence": "00:00.0-00:14.4全片可见",
+     "expected": "女主播有说话的动作表现",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-003"
+     ],
+     "requirement": "女主播有说话的动作表现",
+     "requirement_importance": "core",
+     "responded": true
+    },
+    {
+     "actual": "眼神平视前方，状态自信",
+     "confidence": 0.9,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "表情",
+     "constraint_id": "C4",
+     "counterevidence_checked": [],
+     "decision_basis": "眼神稳定不飘忽，体现出专注与自信",
+     "evidence": "00:00.0-00:14.4全片可见",
+     "expected": "女主播的眼神表现出专注和自信",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-003"
+     ],
+     "requirement": "女主播的眼神表现出专注和自信",
+     "requirement_importance": "detail",
+     "responded": true
+    },
+    {
+     "actual": "主播手中持有一支笔",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "动作",
+     "constraint_id": "C5",
+     "counterevidence_checked": [
+      "确认是否仅为手势，实为持笔"
+     ],
+     "decision_basis": "00:01.0之后抬起的手中明确握着一支笔",
+     "evidence": "00:01.0开始手中持笔",
+     "expected": "女主播手中拿着笔",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-005"
+     ],
+     "requirement": "女主播手中拿着笔",
+     "requirement_importance": "core",
+     "responded": true
+    },
+    {
+     "actual": "除了片头0-1秒手未完全抬起时状态模糊外，其余时间均持笔",
+     "confidence": 0.9,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "时序",
+     "constraint_id": "C6",
+     "counterevidence_checked": [
+      "检查中途是否将笔放下，未发现"
+     ],
+     "decision_basis": "手抬起后一直维持拿笔的状态至片尾",
+     "evidence": "00:01.0-00:14.4全程持笔",
+     "expected": "女主播拿着笔的状态持续整个视频过程",
+     "issue_id": null,
+     "observer_fact_ids": [],
+     "requirement": "女主播拿着笔的状态持续整个视频过程",
+     "requirement_importance": "detail",
+     "responded": true
+    },
+    {
+     "actual": "手部结构有变形，但手臂挥动本身的运动轨迹大致自然",
+     "confidence": 0.85,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "动作",
+     "constraint_id": "C7",
+     "counterevidence_checked": [],
+     "decision_basis": "动作幅度及频率符合播报场景的自然预期（结构瑕疵在视觉质量扣分）",
+     "evidence": "00:00.0-00:14.4手臂有自然的起伏配合说话",
+     "expected": "女主播的手臂动作显得自然",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-005",
+      "OBS-006"
+     ],
+     "requirement": "女主播的手臂动作显得自然",
+     "requirement_importance": "detail",
+     "responded": true
+    },
+    {
+     "actual": "全程固定镜头",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "运镜",
+     "constraint_id": "C8",
+     "counterevidence_checked": [],
+     "decision_basis": "全片无任何推拉摇移运镜发生",
+     "evidence": "00:00.0-00:14.4全程可见",
+     "expected": "画面保持固定镜头，没有推拉摇移等运镜",
+     "issue_id": null,
+     "observer_fact_ids": [
+      "OBS-001"
+     ],
+     "requirement": "画面保持固定镜头，没有推拉摇移等运镜",
+     "requirement_importance": "core",
+     "responded": true
+    },
+    {
+     "actual": "女主播正前方桌面为空，无麦克风",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "物体",
+     "constraint_id": "C9",
+     "counterevidence_checked": [
+      "排除了右侧桌角的物品作为麦克风的有效性"
+     ],
+     "decision_basis": "主播面前并没有摆放麦克风，即使画面右侧极边缘处有黑色物体，也不满足“面前”的位置要求",
+     "evidence": "00:00.0-00:14.4正前方桌面始终为空",
+     "expected": "画面中出现麦克风（位于女主播面前）",
+     "issue_id": "ISSUE-001",
+     "observer_fact_ids": [
+      "OBS-004"
+     ],
+     "requirement": "画面中出现麦克风（位于女主播面前）",
+     "requirement_importance": "core",
+     "responded": false
+    },
+    {
+     "actual": "主播直视正前方说话，由于面前无麦克风，未表现出对应倾向",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "动作",
+     "constraint_id": "C10",
+     "counterevidence_checked": [
+      "检查是否有头部明显偏转或俯身的动作，未发现"
+     ],
+     "decision_basis": "由于没有面前的麦克风目标，无法做出对着麦克风说话的相应倾向",
+     "evidence": "00:00.0-00:14.4主播始终保持正襟危坐直视前方",
+     "expected": "女主播说话时有对着麦克风的倾向或动作",
+     "issue_id": "ISSUE-001",
+     "observer_fact_ids": [
+      "OBS-004"
+     ],
+     "requirement": "女主播说话时有对着麦克风的倾向或动作",
+     "requirement_importance": "detail",
+     "responded": false
+    },
+    {
+     "actual": "女主播全程视线锁定镜头，未出现偶尔移开再看回的情况",
+     "confidence": 0.95,
+     "conflict_resolution": null,
+     "conflict_with_observer": false,
+     "constraint_category": "动作",
+     "constraint_id": "C11",
+     "counterevidence_checked": [
+      "逐帧检查视线，未发现偏移瞬间"
+     ],
+     "decision_basis": "指令隐含了视线的交替或偶尔转移，但实际表现为全程死盯着镜头",
+     "evidence": "00:00.0-00:14.4视线自始至终未曾离开镜头",
+     "expected": "女主播在视频中偶尔将视线看向镜头方向",
+     "issue_id": "ISSUE-002",
+     "observer_fact_ids": [
+      "OBS-007"
+     ],
+     "requirement": "女主播在视频中偶尔将视线看向镜头方向",
+     "requirement_importance": "detail",
+     "responded": false
+    }
+   ],
+   "issues": [
+    {
+     "counterevidence_checked": [
+      "右侧画面边缘的黑色物体未能满足面前位置要求"
+     ],
+     "decision_summary": "画面正前方未出现要求的麦克风，且由于位置错误导致主播未表现出对着麦克风说话的倾向。",
+     "evidence": [
+      {
+       "detail": "主播前方始终无麦克风实体存在。",
+       "time": "00:00.0-00:14.4"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "正前方桌面区域完全为空",
+       "role": "representative",
+       "time": 0.25
+      },
+      {
+       "observation": "直视镜头说话，无俯身对麦倾向",
+       "role": "representative",
+       "time": 3.6
+      }
+     ],
+     "facts": {
+      "constraint_id": "C9",
+      "requirement_importance": "core"
+     },
+     "issue_id": "ISSUE-001",
+     "observer_fact_ids": [
+      "OBS-004"
+     ],
+     "ref_ids": [
+      "C9",
+      "C10"
+     ],
+     "source": "unified"
+    },
+    {
+     "counterevidence_checked": [
+      "全程逐秒排查均未发现眼球视线的明显移开"
+     ],
+     "decision_summary": "女主播视线全程固定看着镜头，没有体现“偶尔看向”的视线交替状态。",
+     "evidence": [
+      {
+       "detail": "全段视线均未发生移动。",
+       "time": "00:00.0-00:14.4"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "直视镜头",
+       "role": "before",
+       "time": 1.54
+      },
+      {
+       "observation": "直视镜头，无变化",
+       "role": "problem",
+       "time": 8.74
+      },
+      {
+       "observation": "持续直视镜头",
+       "role": "after",
+       "time": 13.89
+      }
+     ],
+     "facts": {
+      "constraint_id": "C11",
+      "requirement_importance": "detail"
+     },
+     "issue_id": "ISSUE-002",
+     "observer_fact_ids": [
+      "OBS-007"
+     ],
+     "ref_ids": [
+      "C11"
+     ],
+     "source": "unified"
+    },
+    {
+     "counterevidence_checked": [
+      "排除遮挡导致，确认桌面上残影实体存在"
+     ],
+     "decision_summary": "女主播抬手动作导致物品凭空复制，手中出现笔的同时桌面上仍残留一支同样的笔。",
+     "evidence": [
+      {
+       "detail": "01秒左右手部抬起后，物品发生复制的视觉错误并一直持续。",
+       "time": "00:01.0-00:14.4"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "手贴桌面，下方压有一支黑色的笔",
+       "role": "before",
+       "time": 0.25
+      },
+      {
+       "observation": "抬起的手中握笔，原桌面位置依然存在一支笔",
+       "role": "problem",
+       "time": 1.54
+      },
+      {
+       "observation": "两支笔持续在同一画面中共存",
+       "role": "after",
+       "time": 5.66
+      }
+     ],
+     "facts": {
+      "change_cause": "actual_change",
+      "object_scope": "subject",
+      "occlusion_or_exit_excluded": true,
+      "prompt_change_excluded": true,
+      "same_shot": true,
+      "state_after": "手抬起后握有一支笔，但原桌面位置仍留有一支同样的笔",
+      "state_before": "手平放桌面，手下方压有一支笔"
+     },
+     "issue_id": "ISSUE-003",
+     "observer_fact_ids": [
+      "OBS-005"
+     ],
+     "ref_ids": [],
+     "source": "unified"
+    },
+    {
+     "counterevidence_checked": [
+      "排除正常运动模糊，静止观察可见明显的结构错误"
+     ],
+     "decision_summary": "女主播挥动手部时，手指解剖结构与笔杆产生严重的交融、变形与边界模糊。",
+     "evidence": [
+      {
+       "detail": "随着手的运动，手部结构维持性变差并与笔发生错乱融合。",
+       "time": "00:05.5-00:09.5"
+      }
+     ],
+     "evidence_frames": [
+      {
+       "observation": "手部结构和笔杆尚可分离辨识",
+       "role": "before",
+       "time": 3.6
+      },
+      {
+       "observation": "手指发生扭曲，并开始与黑色笔杆融合",
+       "role": "problem",
+       "time": 5.66
+      },
+      {
+       "observation": "握笔处的生理结构无法辨认，发生粘连",
+       "role": "after",
+       "time": 8.74
+      }
+     ],
+     "facts": {
+      "affects_adoption": true,
+      "confidence": "high",
+      "continuous_frames_confirmed": true,
+      "duration_seconds": 4.0,
+      "normal_speed_visible": true
+     },
+     "issue_id": "ISSUE-004",
+     "observer_fact_ids": [
+      "OBS-006"
+     ],
+     "ref_ids": [],
+     "source": "unified"
+    }
+   ],
+   "observer_fact_dispositions": [
+    {
+     "counterevidence_checked": [],
+     "decision_basis": "抬手时发生了物体的异常复制/凭空出现。",
+     "issue_id": "ISSUE-003",
+     "observer_fact_id": "OBS-005",
+     "status": "accepted",
+     "supporting_frames": [
+      0.25,
+      1.54
+     ]
+    },
+    {
+     "counterevidence_checked": [],
+     "decision_basis": "手部在运动中明显与笔杆发生结构性融合扭曲。",
+     "issue_id": "ISSUE-004",
+     "observer_fact_id": "OBS-006",
+     "status": "accepted",
+     "supporting_frames": [
+      5.66,
+      8.74
+     ]
+    },
+    {
+     "counterevidence_checked": [],
+     "decision_basis": "确认视线全程未转移，未达到“偶尔看向”的要求。",
+     "issue_id": "ISSUE-002",
+     "observer_fact_id": "OBS-007",
+     "status": "accepted",
+     "supporting_frames": [
+      1.54,
+      10.8
+     ]
+    }
+   ],
+   "per_frame": [
+    {
+     "motion_facts": "微动，尚未开始大幅动作",
+     "objects": "桌子、左下侧的黑笔、背景新闻屏幕",
+     "picture_facts": "整体清晰，人物特征保留",
+     "shot": 1,
+     "subjects": "女主播身穿蓝西装平视前方",
+     "time": 0.25,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "有平滑的抬手趋势",
+     "objects": "桌面上有笔",
+     "picture_facts": "图像平稳",
+     "shot": 1,
+     "subjects": "女主播开始抬起画面左侧的手",
+     "time": 0.6,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "手臂动作相对连贯",
+     "objects": "桌面原处多出一支残影笔",
+     "picture_facts": "出现物体复制的不一致现象",
+     "shot": 1,
+     "subjects": "女主播已将手抬起并握笔",
+     "time": 1.54,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "唇形配合音频运动",
+     "objects": "桌面多余笔持续存在",
+     "picture_facts": "面部清晰",
+     "shot": 1,
+     "subjects": "女主播微笑着说话",
+     "time": 3.6,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "动作平滑",
+     "objects": "手中的笔与手指开始模糊",
+     "picture_facts": "手部结构出现融合扭曲",
+     "shot": 1,
+     "subjects": "女主播继续播报，挥动左手",
+     "time": 5.66,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "肢体晃动自然但结构有错",
+     "objects": "手握部位结构混乱",
+     "picture_facts": "手与笔的像素交错严重",
+     "shot": 1,
+     "subjects": "女主播表情专注持续播报",
+     "time": 8.74,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "说话幅度平缓",
+     "objects": "双手位置保持稳定",
+     "picture_facts": "主体衣物等保持一致",
+     "shot": 1,
+     "subjects": "女主播保持说话状态",
+     "time": 10.8,
+     "visible_text": "老友导报新闻直播间"
+    },
+    {
+     "motion_facts": "整体无异常跳动",
+     "objects": "桌上的残留笔仍在",
+     "picture_facts": "画面质量稳定",
+     "shot": 1,
+     "subjects": "女主播播报进入尾声",
+     "time": 13.89,
+     "visible_text": "老友导报新闻直播间"
+    }
+   ],
+   "rubric": [
+    {
+     "dimension_id": "instruction_following",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "女主播长相衣服均准确无误",
+        "counterevidence_checked": [],
+        "evidence": "全片可见一致的形象",
+        "evidence_frames": [],
+        "expected": "人物外观长相符合参考图特征要求",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_subject_attributes",
+       "observer_fact_ids": [
+        "OBS-002"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "正前方无麦克风，视线全程不移死盯镜头",
+        "counterevidence_checked": [
+         "已反复核实镜头内无麦克风及无视线移开"
+        ],
+        "evidence": "全片观察可见缺失道具及相应的互动动作",
+        "evidence_frames": [
+         0.25,
+         3.6,
+         8.74
+        ],
+        "expected": "画面存在面前麦克风，有对其说话倾向，且偶尔转移视线看镜头",
+        "why_not_other_dimensions": "这是纯粹的未按Prompt指令发生指定行为",
+        "why_this_dimension": "缺失核心对象互动以及表情/视线细节控制失败"
+       },
+       "issue_ids": [
+        "ISSUE-001",
+        "ISSUE-002"
+       ],
+       "key": "instruction_action_relation",
+       "observer_fact_ids": [
+        "OBS-004",
+        "OBS-007"
+       ],
+       "verdict": "violated"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "完全固定不动的机位",
+        "counterevidence_checked": [],
+        "evidence": "00:00.0-00:14.4无位移",
+        "evidence_frames": [],
+        "expected": "固定镜头",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_camera",
+       "observer_fact_ids": [
+        "OBS-001"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "维持了参考图的环境设定",
+        "counterevidence_checked": [],
+        "evidence": "全程背景画面稳固",
+        "evidence_frames": [],
+        "expected": "演播室背景风格一致",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_style_environment",
+       "observer_fact_ids": [
+        "OBS-002"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "全片为单镜头一镜到底",
+        "counterevidence_checked": [],
+        "evidence": "全片无切镜",
+        "evidence_frames": [],
+        "expected": "无明确多镜头要求",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_multishot",
+       "observer_fact_ids": [],
+       "verdict": "not_applicable"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "背景字正确显示",
+        "counterevidence_checked": [],
+        "evidence": "背景一直显示“老友导报新闻直播间”",
+        "evidence_frames": [],
+        "expected": "未明确指定复杂文字指令，背后的字符合图片参考即可",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_requested_text_audio",
+       "observer_fact_ids": [
+        "OBS-002"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "输入为图片素材",
+        "counterevidence_checked": [],
+        "evidence": "输入类型",
+        "evidence_frames": [],
+        "expected": "非V2V编辑任务",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "instruction_v2v_edit",
+       "observer_fact_ids": [],
+       "verdict": "not_applicable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "reference_consistency",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "还原良好",
+        "counterevidence_checked": [],
+        "evidence": "发型、西服与背景屏幕吻合",
+        "evidence_frames": [],
+        "expected": "人物服装长相还原原图",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "reference_input_fidelity",
+       "observer_fact_ids": [
+        "OBS-002"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "无关",
+        "counterevidence_checked": [],
+        "evidence": "无源视频",
+        "evidence_frames": [],
+        "expected": "非V2V任务",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "reference_v2v_preservation",
+       "observer_fact_ids": [],
+       "verdict": "not_applicable"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "无关",
+        "counterevidence_checked": [],
+        "evidence": "无源视频",
+        "evidence_frames": [],
+        "expected": "非V2V任务",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "reference_v2v_motion",
+       "observer_fact_ids": [],
+       "verdict": "not_applicable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "visual_consistency",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "衣服背景无突变闪烁",
+        "counterevidence_checked": [],
+        "evidence": "全段播放正常",
+        "evidence_frames": [],
+        "expected": "除物品外主体整体状态平滑连续",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "visual_inshot_temporal",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "抬手握笔后，桌上原位置多出一支同样的笔导致复制",
+        "counterevidence_checked": [
+         "确认并非手势阴影等自然现象"
+        ],
+        "evidence": "00:01.5可见两支笔共存",
+        "evidence_frames": [
+         0.25,
+         1.54,
+         5.66
+        ],
+        "expected": "物品在运动交互中应保持数量物理真实，不应凭空复制",
+        "why_not_other_dimensions": "主要针对同镜头下物体数量和状态的跨帧不连续问题",
+        "why_this_dimension": "描述了同镜头内无因新增或原处残留的视觉不一致缺陷"
+       },
+       "issue_ids": [
+        "ISSUE-003"
+       ],
+       "key": "visual_object_disappearance",
+       "observer_fact_ids": [
+        "OBS-005"
+       ],
+       "verdict": "violated"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "无切镜",
+        "counterevidence_checked": [],
+        "evidence": "全片一镜",
+        "evidence_frames": [],
+        "expected": "单镜头无需判断多镜头连贯性",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "visual_multishot_continuity",
+       "observer_fact_ids": [],
+       "verdict": "not_applicable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "audio_quality",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "播报声音响亮清晰",
+        "counterevidence_checked": [],
+        "evidence": "完整可听见无爆音",
+        "evidence_frames": [],
+        "expected": "音频清晰无杂音",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "audio_signal_quality",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.8,
+       "decision_basis": {
+        "actual": "说话唇部动作与语音输出有合理的配准",
+        "counterevidence_checked": [],
+        "evidence": "有明显的声画关联",
+        "evidence_frames": [],
+        "expected": "口型大致对齐即可",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "audio_av_sync",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "无莫名断连或环境音跳跃",
+        "counterevidence_checked": [],
+        "evidence": "一整段播报顺畅",
+        "evidence_frames": [],
+        "expected": "音频平滑度良好",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "audio_temporal_consistency",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      }
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "画面整体分辨率和细节良好",
+        "counterevidence_checked": [],
+        "evidence": "人物面部及衣服纹理清晰",
+        "evidence_frames": [],
+        "expected": "画面高清不糊",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "picture_clarity_codec",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "背景字迹边缘锐利",
+        "counterevidence_checked": [],
+        "evidence": "老友导报文字全片清晰",
+        "evidence_frames": [],
+        "expected": "文字清楚可见",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "picture_text_clarity",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "无异常过曝或色块",
+        "counterevidence_checked": [],
+        "evidence": "打光匀称",
+        "evidence_frames": [],
+        "expected": "色彩曝光正常",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "picture_exposure_color",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "演播室固定视角的标准构图，无边缘裁切缺陷",
+        "counterevidence_checked": [],
+        "evidence": "符合主播常识的画面安排",
+        "evidence_frames": [],
+        "expected": "构图平稳",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "picture_composition_static",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "女主播手指结构变异，出现与握持的笔杆交融糊合",
+        "counterevidence_checked": [
+         "反复确认手部特写区域不是衣物遮挡引起"
+        ],
+        "evidence": "00:05.5后多处明显形变",
+        "evidence_frames": [
+         3.6,
+         5.66,
+         8.74
+        ],
+        "expected": "身体及物品应保持清晰正常的结构",
+        "why_not_other_dimensions": "并非运动规律违反，而是画面的解剖学形变",
+        "why_this_dimension": "对应了生成模型在末端肢体和细小相接处的结构生成缺陷"
+       },
+       "issue_ids": [
+        "ISSUE-004"
+       ],
+       "key": "picture_structural_visibility",
+       "observer_fact_ids": [
+        "OBS-006"
+       ],
+       "verdict": "violated"
+      }
+     ]
+    },
+    {
+     "dimension_id": "motion_quality",
+     "subcriteria": [
+      {
+       "confidence": 0.85,
+       "decision_basis": {
+        "actual": "手臂的挥舞及嘴部动作在物理动态上基本合理",
+        "counterevidence_checked": [],
+        "evidence": "虽然局部有形变，但整条手臂的摆动速率自然",
+        "evidence_frames": [],
+        "expected": "动作服从物理定律",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "motion_physics_structure",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "平稳播放，无异样抖屏抽搐",
+        "counterevidence_checked": [],
+        "evidence": "全片均正常播放",
+        "evidence_frames": [],
+        "expected": "无抽搐抖动",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "motion_coordination_stability",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.9,
+       "decision_basis": {
+        "actual": "笔和手在运动中无消失闪烁，物体凭空出现已归入静态一致性维度处理",
+        "counterevidence_checked": [],
+        "evidence": "运动状态连续不断档",
+        "evidence_frames": [],
+        "expected": "物品动作无明显消失过程",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "motion_temporal_disappearance",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 1.0,
+       "decision_basis": {
+        "actual": "一镜到底",
+        "counterevidence_checked": [],
+        "evidence": "未产生任何镜头切边",
+        "evidence_frames": [],
+        "expected": "无突兀无指令切镜",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "motion_unrequested_cut",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      }
+     ]
+    },
+    {
+     "dimension_id": "text_quality",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "背景中文字为标准的汉字组合，极具可读性",
+        "counterevidence_checked": [],
+        "evidence": "全段背板上的大字清晰且无拼写错误",
+        "evidence_frames": [],
+        "expected": "文字非乱码可读",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "text_legibility_gibberish",
+       "observer_fact_ids": [
+        "OBS-002"
+       ],
+       "verdict": "pass"
+      },
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "妥当地呈现在大屏中间位置",
+        "counterevidence_checked": [],
+        "evidence": "排版合理不突兀",
+        "evidence_frames": [],
+        "expected": "文字贴合场景正常位置",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "text_position_correctness",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      }
+     ]
+    },
+    {
+     "dimension_id": "story_logic",
+     "subcriteria": [
+      {
+       "confidence": 0.95,
+       "decision_basis": {
+        "actual": "作为一段单纯的固定播报素材，未涉及情节展开或突变，逻辑自洽",
+        "counterevidence_checked": [],
+        "evidence": "首尾一贯的播报动作组合",
+        "evidence_frames": [],
+        "expected": "事件情节承接正常，无严重常识断裂",
+        "why_not_other_dimensions": "",
+        "why_this_dimension": ""
+       },
+       "issue_ids": [],
+       "key": "story_causality_continuity",
+       "observer_fact_ids": [],
+       "verdict": "pass"
+      }
+     ]
+    }
+   ],
+   "schema_version": "native8-v1",
+   "story_event_chain": [
+    {
+     "causal_link": "全片主要事件的平稳推进",
+     "conflict": "",
+     "event": "女主播坐在演播室播报新闻，期间一直注视前方，并抬起拿着笔的手辅助手势",
+     "event_origin": "prompt_required",
+     "time": "00:00.0-00:14.4"
+    }
+   ]
+  },
+  "observation_extras": {
+   "audio_recheck": null,
+   "focus_intervals": [
+    {
+     "bbox": [
+      0.46,
+      0.65,
+      0.68,
+      0.85
+     ],
+     "constraint_ids": [
+      "C5",
+      "C7"
+     ],
+     "contradicted_constraint_ids": [
+      "C1"
+     ],
+     "fact_id": "OBS-005",
+     "fact_types": [
+      "consistency",
+      "reference"
+     ],
+     "frame_time": "00:00.6",
+     "reason": "女主播原本空着的左手从桌面抬起时，手中突然凭空出现了一支笔，而右手似乎仍握着原本放置在桌面的黑色笔状物。",
+     "subcriteria": [
+      "object_persistence"
+     ],
+     "time": "00:00.4-00:01.5"
+    },
+    {
+     "bbox": [
+      0.42,
+      0.61,
+      0.53,
+      0.82
+     ],
+     "constraint_ids": [
+      "C7"
+     ],
+     "contradicted_constraint_ids": [],
+     "fact_id": "OBS-006",
+     "fact_types": [
+      "picture"
+     ],
+     "frame_time": "00:07.5",
+     "reason": "女主播左手挥动握笔时，手指与笔的结构出现明显交融和扭曲，手指形态不够清晰稳定。",
+     "subcriteria": [
+      "anatomy_hands"
+     ],
+     "time": "00:05.5-00:09.5"
+    },
+    {
+     "bbox": [
+      0.33,
+      0.22,
+      0.44,
+      0.29
+     ],
+     "constraint_ids": [
+      "C11"
+     ],
+     "contradicted_constraint_ids": [
+      "C11"
+     ],
+     "fact_id": "OBS-007",
+     "fact_types": [
+      "instruction"
+     ],
+     "frame_time": "00:05.0",
+     "reason": "女主播在整个播报过程中视线始终锁定直视镜头，未观察到视线移开再重新看向镜头的动作，与“偶尔看向”的要求存在差异。",
+     "subcriteria": [
+      "prompt_compliance"
+     ],
+     "time": "00:00.0-00:14.4"
+    }
+   ]
+  },
+  "observations": [
+   {
+    "confidence": "high",
+    "constraint_ids": [
+     "C8"
+    ],
+    "contradicted_constraint_ids": [],
+    "fact": "画面为固定镜头，没有发生推拉摇移等运镜变化。",
+    "fact_id": "OBS-001",
+    "source": "vlm_observer",
+    "tags": [
+     "visual",
+     "motion"
+    ],
+    "time": "00:00.0-00:14.4"
+   },
+   {
+    "confidence": "high",
+    "constraint_ids": [
+     "C1"
+    ],
+    "contradicted_constraint_ids": [],
+    "fact": "女主播身穿浅蓝色西装坐在主播台前，背景屏幕持续显示“老友导报新闻直播间”文字及世界地图，与参考图片整体场景元素一致。",
+    "fact_id": "OBS-002",
+    "source": "vlm_observer",
+    "tags": [
+     "visual",
+     "identity",
+     "text"
+    ],
+    "time": "00:00.0-00:14.4"
+   },
+   {
+    "confidence": "high",
+    "constraint_ids": [
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "contradicted_constraint_ids": [],
+    "fact": "女主播全程面带微笑，嘴部有持续的说话动作，视线始终直视正前方的镜头。",
+    "fact_id": "OBS-003",
+    "source": "vlm_observer",
+    "tags": [
+     "motion",
+     "visual"
+    ],
+    "time": "00:00.0-00:14.4"
+   },
+   {
+    "confidence": "high",
+    "constraint_ids": [
+     "C9",
+     "C10"
+    ],
+    "contradicted_constraint_ids": [],
+    "fact": "画面右侧主播台上摆放着一个麦克风，女主播面向正前方说话，身体和头部没有明显偏向右侧麦克风的动作倾向。",
+    "fact_id": "OBS-004",
+    "source": "vlm_observer",
+    "tags": [
+     "visual",
+     "motion"
+    ],
+    "time": "00:00.0-00:14.4"
+   }
+  ],
+  "prompt": {
+   "en": "",
+   "gold_label": "",
+   "gold_note": "",
+   "zh": ""
+  },
+  "prompt_requirements": [
+   {
+    "category": "主体",
+    "requirement_id": "C1",
+    "requirement_importance": "core",
+    "source": "I2V基础要求",
+    "statement": "女主播的外观、着装和背景需与 Image 1 保持一致"
+   },
+   {
+    "category": "表情",
+    "requirement_id": "C2",
+    "requirement_importance": "core",
+    "source": "面带微笑 / 微笑",
+    "statement": "女主播面带微笑"
+   },
+   {
+    "category": "动作",
+    "requirement_id": "C3",
+    "requirement_importance": "core",
+    "source": "说话",
+    "statement": "女主播有说话的动作表现"
+   },
+   {
+    "category": "表情",
+    "requirement_id": "C4",
+    "requirement_importance": "detail",
+    "source": "眼神专注自信地说话",
+    "statement": "女主播的眼神表现出专注和自信"
+   },
+   {
+    "category": "动作",
+    "requirement_id": "C5",
+    "requirement_importance": "core",
+    "source": "一直拿着笔",
+    "statement": "女主播手中拿着笔"
+   },
+   {
+    "category": "时序",
+    "requirement_id": "C6",
+    "requirement_importance": "detail",
+    "source": "一直拿着笔",
+    "statement": "女主播拿着笔的状态持续整个视频过程"
+   },
+   {
+    "category": "动作",
+    "requirement_id": "C7",
+    "requirement_importance": "detail",
+    "source": "手臂动作自然 / 动作自然",
+    "statement": "女主播的手臂动作显得自然"
+   },
+   {
+    "category": "运镜",
+    "requirement_id": "C8",
+    "requirement_importance": "core",
+    "source": "固定镜头",
+    "statement": "画面保持固定镜头，没有推拉摇移等运镜"
+   },
+   {
+    "category": "物体",
+    "requirement_id": "C9",
+    "requirement_importance": "core",
+    "source": "对着面前麦克风说话",
+    "statement": "画面中出现麦克风（位于女主播面前）"
+   },
+   {
+    "category": "动作",
+    "requirement_id": "C10",
+    "requirement_importance": "detail",
+    "source": "对着面前麦克风说话",
+    "statement": "女主播说话时有对着麦克风的倾向或动作"
+   },
+   {
+    "category": "动作",
+    "requirement_id": "C11",
+    "requirement_importance": "detail",
+    "source": "偶尔看向镜头位置",
+    "statement": "女主播在视频中偶尔将视线看向镜头方向"
+   }
+  ],
+  "review_candidates": [],
+  "review_funnel": {
+   "admitted_issue_count": 4,
+   "audio_incremental_apply": {
+    "confirmed_issue_ids": [],
+    "ignored_keys": []
+   },
+   "candidate_count": 8,
+   "candidates": [
+    {
+     "dimension_id": "visual_consistency",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "visual_inshot_temporal",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "visual_consistency",
+     "first_verdict": "violated",
+     "issue_ids": [
+      "ISSUE-003"
+     ],
+     "key": "visual_object_disappearance",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "picture_clarity_codec",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "picture_text_clarity",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "picture_exposure_color",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "picture_composition_static",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "first_verdict": "violated",
+     "issue_ids": [
+      "ISSUE-004"
+     ],
+     "key": "picture_structural_visibility",
+     "triggers": [
+      "observer_focus_interval"
+     ]
+    },
+    {
+     "constraint_ids": [
+      "C1"
+     ],
+     "dimension_id": "instruction_following",
+     "first_verdict": "pass",
+     "issue_ids": [],
+     "key": "instruction_subject_attributes",
+     "triggers": [
+      "instruction_unknown"
+     ]
+    }
+   ],
+   "confirmed_count": 2,
+   "gate_rejection_count": 0,
+   "gate_rejections": [],
+   "incremental_apply": {
+    "confirmed_issue_ids": [
+     "ISSUE-003",
+     "ISSUE-004"
+    ],
+    "ignored": [],
+    "rejected_candidate_issue_ids": [],
+    "unresolved_candidates": []
+   },
+   "recheck_available": true,
+   "rejected_count": 0,
+   "unresolved_count": 0
+  },
+  "review_required": [],
+  "rubric": [
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "instruction_following",
+    "dimension_name": "指令遵循",
+    "escalated": false,
+    "feedback": [
+     "ISSUE-001",
+     "ISSUE-002"
+    ],
+    "score": 0.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "女主播长相衣服均准确无误",
+       "counterevidence_checked": [],
+       "evidence": "全片可见一致的形象",
+       "evidence_frames": [],
+       "expected": "人物外观长相符合参考图特征要求",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_subject_attributes",
+      "name": "主体数量与属性",
+      "observer_fact_ids": [
+       "OBS-002"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "正前方无麦克风，视线全程不移死盯镜头",
+       "counterevidence_checked": [
+        "已反复核实镜头内无麦克风及无视线移开"
+       ],
+       "evidence": "全片观察可见缺失道具及相应的互动动作",
+       "evidence_frames": [
+        0.25,
+        3.6,
+        8.74
+       ],
+       "expected": "画面存在面前麦克风，有对其说话倾向，且偶尔转移视线看镜头",
+       "why_not_other_dimensions": "这是纯粹的未按Prompt指令发生指定行为",
+       "why_this_dimension": "缺失核心对象互动以及表情/视线细节控制失败"
+      },
+      "issue_ids": [
+       "ISSUE-001",
+       "ISSUE-002"
+      ],
+      "key": "instruction_action_relation",
+      "name": "动作、对象与时空关系",
+      "observer_fact_ids": [
+       "OBS-004",
+       "OBS-007"
+      ],
+      "verdict": "violated"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "完全固定不动的机位",
+       "counterevidence_checked": [],
+       "evidence": "00:00.0-00:14.4无位移",
+       "evidence_frames": [],
+       "expected": "固定镜头",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_camera",
+      "name": "运镜",
+      "observer_fact_ids": [
+       "OBS-001"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "维持了参考图的环境设定",
+       "counterevidence_checked": [],
+       "evidence": "全程背景画面稳固",
+       "evidence_frames": [],
+       "expected": "演播室背景风格一致",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_style_environment",
+      "name": "风格与环境",
+      "observer_fact_ids": [
+       "OBS-002"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "全片为单镜头一镜到底",
+       "counterevidence_checked": [],
+       "evidence": "全片无切镜",
+       "evidence_frames": [],
+       "expected": "无明确多镜头要求",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_multishot",
+      "name": "多镜头计划",
+      "observer_fact_ids": [],
+      "verdict": "not_applicable"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "背景字正确显示",
+       "counterevidence_checked": [],
+       "evidence": "背景一直显示“老友导报新闻直播间”",
+       "evidence_frames": [],
+       "expected": "未明确指定复杂文字指令，背后的字符合图片参考即可",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_requested_text_audio",
+      "name": "明确要求的文字与音频",
+      "observer_fact_ids": [
+       "OBS-002"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "输入为图片素材",
+       "counterevidence_checked": [],
+       "evidence": "输入类型",
+       "evidence_frames": [],
+       "expected": "非V2V编辑任务",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "instruction_v2v_edit",
+      "name": "V2V 编辑达成",
+      "observer_fact_ids": [],
+      "verdict": "not_applicable"
+     }
+    ],
+    "tier": "恶劣错误",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "reference_consistency",
+    "dimension_name": "参考一致性",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "还原良好",
+       "counterevidence_checked": [],
+       "evidence": "发型、西服与背景屏幕吻合",
+       "evidence_frames": [],
+       "expected": "人物服装长相还原原图",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "reference_input_fidelity",
+      "name": "输入参考主体与静态细节",
+      "observer_fact_ids": [
+       "OBS-002"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "无关",
+       "counterevidence_checked": [],
+       "evidence": "无源视频",
+       "evidence_frames": [],
+       "expected": "非V2V任务",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "reference_v2v_preservation",
+      "name": "V2V 源视频保真",
+      "observer_fact_ids": [],
+      "verdict": "not_applicable"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "无关",
+       "counterevidence_checked": [],
+       "evidence": "无源视频",
+       "evidence_frames": [],
+       "expected": "非V2V任务",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "reference_v2v_motion",
+      "name": "V2V 动态继承",
+      "observer_fact_ids": [],
+      "verdict": "not_applicable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "visual_consistency",
+    "dimension_name": "视觉一致性",
+    "escalated": false,
+    "feedback": [
+     "ISSUE-003"
+    ],
+    "score": 0.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "衣服背景无突变闪烁",
+       "counterevidence_checked": [],
+       "evidence": "全段播放正常",
+       "evidence_frames": [],
+       "expected": "除物品外主体整体状态平滑连续",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "visual_inshot_temporal",
+      "name": "同镜头时序一致性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "抬手握笔后，桌上原位置多出一支同样的笔导致复制",
+       "counterevidence_checked": [
+        "确认并非手势阴影等自然现象"
+       ],
+       "evidence": "00:01.5可见两支笔共存",
+       "evidence_frames": [
+        0.25,
+        1.54,
+        5.66
+       ],
+       "expected": "物品在运动交互中应保持数量物理真实，不应凭空复制",
+       "why_not_other_dimensions": "主要针对同镜头下物体数量和状态的跨帧不连续问题",
+       "why_this_dimension": "描述了同镜头内无因新增或原处残留的视觉不一致缺陷"
+      },
+      "issue_ids": [
+       "ISSUE-003"
+      ],
+      "key": "visual_object_disappearance",
+      "name": "物体凭空消失",
+      "observer_fact_ids": [
+       "OBS-005"
+      ],
+      "verdict": "violated"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "无切镜",
+       "counterevidence_checked": [],
+       "evidence": "全片一镜",
+       "evidence_frames": [],
+       "expected": "单镜头无需判断多镜头连贯性",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "visual_multishot_continuity",
+      "name": "跨镜头一致性",
+      "observer_fact_ids": [],
+      "verdict": "not_applicable"
+     }
+    ],
+    "tier": "恶劣错误",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "audio_quality",
+    "dimension_name": "音频综合质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "播报声音响亮清晰",
+       "counterevidence_checked": [],
+       "evidence": "完整可听见无爆音",
+       "evidence_frames": [],
+       "expected": "音频清晰无杂音",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "audio_signal_quality",
+      "name": "音质",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.8,
+      "decision_basis": {
+       "actual": "说话唇部动作与语音输出有合理的配准",
+       "counterevidence_checked": [],
+       "evidence": "有明显的声画关联",
+       "evidence_frames": [],
+       "expected": "口型大致对齐即可",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "audio_av_sync",
+      "name": "音画同步",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "无莫名断连或环境音跳跃",
+       "counterevidence_checked": [],
+       "evidence": "一整段播报顺畅",
+       "evidence_frames": [],
+       "expected": "音频平滑度良好",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "audio_temporal_consistency",
+      "name": "音频前后一致性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "picture_quality",
+    "dimension_name": "画面质量",
+    "escalated": false,
+    "feedback": [
+     "ISSUE-004"
+    ],
+    "score": 0.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "画面整体分辨率和细节良好",
+       "counterevidence_checked": [],
+       "evidence": "人物面部及衣服纹理清晰",
+       "evidence_frames": [],
+       "expected": "画面高清不糊",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "picture_clarity_codec",
+      "name": "清晰度与编解码",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "背景字迹边缘锐利",
+       "counterevidence_checked": [],
+       "evidence": "老友导报文字全片清晰",
+       "evidence_frames": [],
+       "expected": "文字清楚可见",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "picture_text_clarity",
+      "name": "文字清晰度（模糊/压缩）",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "无异常过曝或色块",
+       "counterevidence_checked": [],
+       "evidence": "打光匀称",
+       "evidence_frames": [],
+       "expected": "色彩曝光正常",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "picture_exposure_color",
+      "name": "曝光与色彩",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "演播室固定视角的标准构图，无边缘裁切缺陷",
+       "counterevidence_checked": [],
+       "evidence": "符合主播常识的画面安排",
+       "evidence_frames": [],
+       "expected": "构图平稳",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "picture_composition_static",
+      "name": "构图与静态合理性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "女主播手指结构变异，出现与握持的笔杆交融糊合",
+       "counterevidence_checked": [
+        "反复确认手部特写区域不是衣物遮挡引起"
+       ],
+       "evidence": "00:05.5后多处明显形变",
+       "evidence_frames": [
+        3.6,
+        5.66,
+        8.74
+       ],
+       "expected": "身体及物品应保持清晰正常的结构",
+       "why_not_other_dimensions": "并非运动规律违反，而是画面的解剖学形变",
+       "why_this_dimension": "对应了生成模型在末端肢体和细小相接处的结构生成缺陷"
+      },
+      "issue_ids": [
+       "ISSUE-004"
+      ],
+      "key": "picture_structural_visibility",
+      "name": "正常速度可见的结构崩坏",
+      "observer_fact_ids": [
+       "OBS-006"
+      ],
+      "verdict": "violated"
+     }
+    ],
+    "tier": "恶劣错误",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "motion_quality",
+    "dimension_name": "动态质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "confidence": 0.85,
+      "decision_basis": {
+       "actual": "手臂的挥舞及嘴部动作在物理动态上基本合理",
+       "counterevidence_checked": [],
+       "evidence": "虽然局部有形变，但整条手臂的摆动速率自然",
+       "evidence_frames": [],
+       "expected": "动作服从物理定律",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "motion_physics_structure",
+      "name": "物理与结构合理性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "平稳播放，无异样抖屏抽搐",
+       "counterevidence_checked": [],
+       "evidence": "全片均正常播放",
+       "evidence_frames": [],
+       "expected": "无抽搐抖动",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "motion_coordination_stability",
+      "name": "协调与稳定性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.9,
+      "decision_basis": {
+       "actual": "笔和手在运动中无消失闪烁，物体凭空出现已归入静态一致性维度处理",
+       "counterevidence_checked": [],
+       "evidence": "运动状态连续不断档",
+       "evidence_frames": [],
+       "expected": "物品动作无明显消失过程",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "motion_temporal_disappearance",
+      "name": "动态过程中的物体无因消失",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 1.0,
+      "decision_basis": {
+       "actual": "一镜到底",
+       "counterevidence_checked": [],
+       "evidence": "未产生任何镜头切边",
+       "evidence_frames": [],
+       "expected": "无突兀无指令切镜",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "motion_unrequested_cut",
+      "name": "非 Prompt 要求的突兀切镜",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "text_quality",
+    "dimension_name": "文字质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "背景中文字为标准的汉字组合，极具可读性",
+       "counterevidence_checked": [],
+       "evidence": "全段背板上的大字清晰且无拼写错误",
+       "evidence_frames": [],
+       "expected": "文字非乱码可读",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "text_legibility_gibberish",
+      "name": "字形与乱码",
+      "observer_fact_ids": [
+       "OBS-002"
+      ],
+      "verdict": "pass"
+     },
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "妥当地呈现在大屏中间位置",
+       "counterevidence_checked": [],
+       "evidence": "排版合理不突兀",
+       "evidence_frames": [],
+       "expected": "文字贴合场景正常位置",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "text_position_correctness",
+      "name": "位置与正确性",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "resolved",
+    "dimension_id": "story_logic",
+    "dimension_name": "故事逻辑连贯性",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "confidence": 0.95,
+      "decision_basis": {
+       "actual": "作为一段单纯的固定播报素材，未涉及情节展开或突变，逻辑自洽",
+       "counterevidence_checked": [],
+       "evidence": "首尾一贯的播报动作组合",
+       "evidence_frames": [],
+       "expected": "事件情节承接正常，无严重常识断裂",
+       "why_not_other_dimensions": "",
+       "why_this_dimension": ""
+      },
+      "issue_ids": [],
+      "key": "story_causality_continuity",
+      "name": "因果、承接、动机和内容常识",
+      "observer_fact_ids": [],
+      "verdict": "pass"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": []
+   }
+  ],
+  "sampling": {
+   "dense_count": 4,
+   "frames": [
+    {
+     "dense": true,
+     "time": 0.267
+    },
+    {
+     "dense": true,
+     "time": 0.367
+    },
+    {
+     "dense": false,
+     "time": 0.5
+    },
+    {
+     "dense": false,
+     "time": 2.567
+    },
+    {
+     "dense": true,
+     "time": 3.633
+    },
+    {
+     "dense": false,
+     "time": 4.633
+    },
+    {
+     "dense": false,
+     "time": 6.7
+    },
+    {
+     "dense": false,
+     "time": 7.7
+    },
+    {
+     "dense": false,
+     "time": 9.767
+    },
+    {
+     "dense": false,
+     "time": 11.833
+    },
+    {
+     "dense": true,
+     "time": 12.5
+    },
+    {
+     "dense": false,
+     "time": 13.9
+    }
+   ],
+   "shot_segments": [
+    {
+     "end": 14.4,
+     "shot_id": 1,
+     "start": 0.0
+    }
+   ],
+   "strategy": "motion_aware",
+   "windows": [
+    {
+     "end": 0.875,
+     "peak": 4.2583,
+     "start": 0.25
+    },
+    {
+     "end": 2.75,
+     "peak": 2.2102,
+     "start": 2.75
+    },
+    {
+     "end": 3.875,
+     "peak": 2.7243,
+     "start": 3.625
+    },
+    {
+     "end": 6.75,
+     "peak": 2.1192,
+     "start": 6.75
+    },
+    {
+     "end": 7.875,
+     "peak": 2.2324,
+     "start": 7.875
+    },
+    {
+     "end": 8.625,
+     "peak": 2.0226,
+     "start": 8.625
+    },
+    {
+     "end": 9.375,
+     "peak": 2.1904,
+     "start": 9.375
+    },
+    {
+     "end": 10.625,
+     "peak": 2.0822,
+     "start": 10.625
+    },
+    {
+     "end": 11.875,
+     "peak": 2.3492,
+     "start": 11.75
+    },
+    {
+     "end": 12.25,
+     "peak": 2.3155,
+     "start": 12.125
+    },
+    {
+     "end": 12.75,
+     "peak": 2.4819,
+     "start": 12.5
+    },
+    {
+     "end": 13.125,
+     "peak": 1.9427,
+     "start": 13.125
+    },
+    {
+     "end": 13.375,
+     "peak": 1.9802,
+     "start": 13.375
+    }
+   ]
+  },
+  "schema_version": "native8-v1",
+  "source": "replay",
+  "source_label": "上传视频",
+  "v2v_align": null,
+  "vlm_error": null,
+  "zoom_findings": [],
+  "zoom_frames": [
+   {
+    "path": "<path:zoom_01.jpg>",
+    "time": 0.25
+   },
+   {
+    "focus_role": "center",
+    "focus_types": [
+     "consistency"
+    ],
+    "path": "<path:zoom_02.jpg>",
+    "time": 0.6
+   },
+   {
+    "path": "<path:zoom_03.jpg>",
+    "time": 1.543
+   },
+   {
+    "path": "<path:zoom_04.jpg>",
+    "time": 3.6
+   },
+   {
+    "path": "<path:zoom_05.jpg>",
+    "time": 5.657
+   },
+   {
+    "path": "<path:zoom_06.jpg>",
+    "time": 8.743
+   },
+   {
+    "path": "<path:zoom_07.jpg>",
+    "time": 10.8
+   },
+   {
+    "path": "<path:zoom_08.jpg>",
+    "time": 13.886
+   }
+  ]
+ },
+ "summary": {
+  "analysis_status": "complete",
+  "evidence_cards": 4,
+  "instruction_rows": 0,
+  "issue_count": 4,
+  "rubric_dims": 8,
+  "sampling_frames": 12,
+  "schema_version": "native8-v1",
+  "subcriteria": 28,
+  "top_level_keys": [
+   "analysis_status",
+   "audit_trace",
+   "case",
+   "checkpoint",
+   "cost",
+   "engine",
+   "evidence",
+   "from_cache",
+   "grounding",
+   "integrity",
+   "issues",
+   "llm_trace",
+   "media",
+   "metadata",
+   "mock_mode",
+   "native8_recheck",
+   "native8_scan",
+   "observation_extras",
+   "observations",
+   "prompt",
+   "prompt_requirements",
+   "report_html_path",
+   "report_view_url",
+   "review_candidates",
+   "review_funnel",
+   "review_required",
+   "rubric",
+   "sampling",
+   "schema_version",
+   "source",
+   "source_label",
+   "trace_saved_path",
+   "v2v_align",
+   "vlm_error",
+   "zoom_findings",
+   "zoom_frames"
+  ],
+  "trace_steps": 9
+ }
+}

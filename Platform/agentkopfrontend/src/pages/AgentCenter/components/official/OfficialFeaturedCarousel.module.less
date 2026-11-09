@@ -1,0 +1,598 @@
+/* 官方 Agent 精选旗舰轮播 */
+
+.section {
+  margin-top: @spacing-section;
+  padding-bottom: @spacing-xl;
+}
+
+.sectionHero {
+  margin-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.sectionHero .slideInner {
+  min-height: 0;
+
+  /* 左侧多留空，避免翻页箭头压住文案 */
+  padding: @spacing-lg @spacing-xxl @spacing-lg @spacing-xxl;
+}
+
+.sectionHero .navPrev {
+  left: @spacing-sm;
+}
+
+.sectionHero .navNext {
+  right: @spacing-sm;
+}
+
+.sectionHero .dots {
+  bottom: @spacing-md;
+  left: @spacing-xl;
+}
+
+.head {
+  margin-bottom: @spacing-lg;
+}
+
+.headTitleRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+}
+
+.headStar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, @primary-subdued 0%, @primary-soft 100%);
+  color: @primary-color;
+  font-size: @font-size-base;
+  border-radius: @border-radius-md;
+  box-shadow: @shadow-sm;
+}
+
+.headTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-xxl;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.headDesc {
+  margin: @spacing-xs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.frame {
+  position: relative;
+}
+
+.viewport {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: @border-radius-xl;
+  box-shadow: @shadow-lg;
+}
+
+.slide {
+  position: relative;
+  min-width: 0;
+  background: var(--slide-bg);
+  color: @on-primary;
+  opacity: 0;
+  transition:
+    opacity var(--carousel-fade-ms, 1200ms) cubic-bezier(0.4, 0, 0.2, 1),
+    visibility var(--carousel-fade-ms, 1200ms) cubic-bezier(0.4, 0, 0.2, 1);
+  grid-area: 1 / 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* 摄影氛围底图：叠在品牌渐变下，软光混合提升质感 */
+.slidePhoto {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.38;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* 背景光斑：两团极慢漂移的径向光，让大面积深色渐变有呼吸感。
+   溢出部分由 viewport 的圆角裁切 */
+.slide::before,
+.slide::after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, var(--slide-glow) 0%, transparent 68%);
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.slide::before {
+  top: -30%;
+  left: -12%;
+  width: 58%;
+  height: 150%;
+  opacity: 0.75;
+}
+
+.slide::after {
+  right: -14%;
+  bottom: -46%;
+  width: 46%;
+  height: 130%;
+  opacity: 0.5;
+}
+
+.slideActive {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 只让当前展示的 slide 跑动画，隐藏的不占合成资源。
+   两条动画周期不同且明暗反相，光影交替流动而不是整体一起呼吸 */
+.slideActive::before {
+  animation: featured-glow-drift-a 10s ease-in-out infinite;
+}
+
+.slideActive::after {
+  animation: featured-glow-drift-b 14s ease-in-out infinite;
+}
+
+@keyframes featured-glow-drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate3d(20%, 10%, 0) scale(1.35);
+    opacity: 1;
+  }
+}
+
+@keyframes featured-glow-drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: translate3d(-18%, -12%, 0) scale(0.82);
+    opacity: 0.3;
+  }
+}
+
+/* 内容必须压在光斑之上：绝对定位的伪元素默认绘制在普通流内容上方。
+   高度靠文案截断控制，禁止 max-height + overflow 裁切，否则 CTA 会被切掉 */
+.slideInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(200px, 0.75fr);
+  align-items: stretch;
+  min-height: 240px;
+
+  /* 左侧多留空，避免翻页箭头压住文案 */
+  padding: @spacing-xl @spacing-xxl @spacing-xl @spacing-xxl;
+  gap: @spacing-lg;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  text-align: left;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: @spacing-xxs @spacing-sm;
+  border: 1px solid fade(@on-primary, 18%);
+  background: fade(@on-primary, 14%);
+  color: fade(@on-primary, 92%);
+  font-size: @font-size-caption;
+  line-height: 1.4;
+  margin-bottom: @spacing-sm;
+  gap: @spacing-xs;
+  border-radius: @border-radius-pill;
+  backdrop-filter: blur(8px);
+}
+
+.eyebrowIcon {
+  font-size: 14px;
+}
+
+.title {
+  margin: 0 0 @spacing-xs;
+  color: @on-primary;
+  font-size: @font-size-xxl;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  .text-clamp(1);
+}
+
+.hook {
+  margin: 0 0 @spacing-xs;
+  color: fade(@on-primary, 94%);
+  font-size: @font-size-lg;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  .text-clamp(1);
+}
+
+.pitch {
+  max-width: 36em;
+  margin: 0 0 @spacing-sm;
+  color: fade(@on-primary, 78%);
+  font-size: @font-size-base;
+  line-height: 1.5;
+  .text-clamp(2);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-md @spacing-lg;
+  margin-bottom: @spacing-md;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+}
+
+.statValue {
+  color: @on-primary;
+  font-size: @font-size-xxl;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+
+.statLabel {
+  color: fade(@on-primary, 62%);
+  font-size: @font-size-caption;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-md;
+  margin-top: auto;
+  padding-top: @spacing-xs;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  border: none !important;
+  background: @on-primary !important;
+  color: @primary-color !important;
+  font-weight: 600;
+  padding-inline: @spacing-lg;
+  border-radius: @border-radius-pill !important;
+  box-shadow: @shadow-md;
+  gap: @spacing-xs;
+
+  &:hover {
+    background: fade(@on-primary, 94%) !important;
+    color: @primary-color-hover !important;
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: @spacing-lg;
+  left: @spacing-xxl;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+}
+
+.dot {
+  width: 28px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  background: fade(@on-primary, 28%);
+  border-radius: @border-radius-pill;
+  cursor: pointer;
+  transition: background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: fade(@on-primary, 48%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid fade(@on-primary, 80%);
+    outline-offset: 2px;
+  }
+}
+
+.dotActive {
+  background: @on-primary;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid fade(@on-primary, 28%);
+
+  /* 底与图标都半透明，不抢内容 */
+  background: fade(@azure-abyss, 28%);
+  color: fade(@on-primary, 78%);
+  font-size: @font-size-base;
+  border-radius: @border-radius-pill;
+  opacity: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  transition:
+    opacity @transition-duration-base @transition-timing,
+    background @transition-duration-fast @transition-timing,
+    border-color @transition-duration-fast @transition-timing,
+    color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: fade(@azure-abyss, 42%);
+    border-color: fade(@on-primary, 42%);
+    color: @on-primary;
+  }
+
+  &:focus-visible {
+    opacity: 0.85;
+    pointer-events: auto;
+    outline: 2px solid @primary-soft;
+    outline-offset: 2px;
+  }
+}
+
+/* 仅 hover 显示；整体再压一层透明度 */
+.frame:hover .navBtn {
+  opacity: 0.72;
+  pointer-events: auto;
+}
+
+.frame:hover .navBtn:hover {
+  opacity: 0.92;
+}
+
+.navPrev {
+  left: @spacing-md;
+}
+
+.navNext {
+  right: @spacing-md;
+}
+
+.visualWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.visualGlow {
+  position: absolute;
+  inset: 8% 10%;
+  background: radial-gradient(circle, var(--slide-glow) 0%, transparent 72%);
+  border-radius: @border-radius-xl;
+  pointer-events: none;
+}
+
+.visualCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 260px);
+  border: 1px solid fade(@on-primary, 22%);
+  background: var(--slide-card-bg);
+  color: @on-primary;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: @border-radius-xl;
+  box-shadow:
+    @shadow-lg,
+    inset 0 1px 0 fade(@on-primary, 18%);
+  backdrop-filter: blur(12px);
+}
+
+.visualPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.72;
+}
+
+.visualScrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, fade(@azure-abyss, 35%) 0%, fade(@azure-abyss, 62%) 100%),
+    var(--slide-card-bg);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.visualBadge {
+  position: absolute;
+  top: @spacing-md;
+  left: @spacing-md;
+  z-index: 2;
+  padding: 3px @spacing-sm;
+  background: fade(@text-color, 42%);
+  color: fade(@on-primary, 92%);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border-radius: @border-radius-pill;
+}
+
+.visualOverlay {
+  position: relative;
+  z-index: 1;
+  width: 72%;
+  height: 72%;
+  filter: drop-shadow(0 10px 28px fade(@azure-abyss, 45%));
+}
+
+.visualSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.slideTheme0 {
+  --slide-bg: linear-gradient(
+    132deg,
+    @primary-color-pressed 0%,
+    @primary-gradient-end 52%,
+    @primary-color 100%
+  );
+  --slide-glow: fade(@primary-soft, 55%);
+  --slide-card-bg: linear-gradient(
+    145deg,
+    fade(@primary-color-hover, 72%) 0%,
+    fade(@primary-gradient-end, 88%) 100%
+  );
+}
+
+.slideTheme1 {
+  --slide-bg: linear-gradient(
+    128deg,
+    darken(@success-color, 26%) 0%,
+    @success-color 46%,
+    lighten(@success-color, 8%) 100%
+  );
+  --slide-glow: fade(@success-color, 42%);
+  --slide-card-bg: linear-gradient(
+    145deg,
+    fade(@success-color, 78%) 0%,
+    fade(lighten(@success-color, 12%), 88%) 100%
+  );
+}
+
+/* 原橙金渐变饱和度过高、显廉价，换成冷蓝色阶：深渊蓝 → 深海蓝 → 皇家蓝 */
+.slideTheme2 {
+  --slide-bg: linear-gradient(130deg, @azure-abyss 0%, @azure-deep 48%, @azure-royal 100%);
+  --slide-glow: fade(@azure-sky, 44%);
+  --slide-card-bg: linear-gradient(145deg, fade(@azure-royal, 58%) 0%, fade(@azure-deep, 88%) 100%);
+}
+
+.slideTheme3 {
+  --slide-bg: linear-gradient(
+    135deg,
+    @primary-gradient-end 0%,
+    @primary-color 44%,
+    @primary-color-pressed 100%
+  );
+  --slide-glow: fade(@primary-soft, 50%);
+  --slide-card-bg: linear-gradient(
+    145deg,
+    fade(@primary-gradient-end, 80%) 0%,
+    fade(@primary-color, 88%) 100%
+  );
+}
+
+@media (max-width: @screen-lg) {
+  .slideInner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: @spacing-lg @spacing-xl;
+  }
+
+  .visualWrap {
+    order: -1;
+    min-height: 140px;
+  }
+
+  .visualCard {
+    width: min(100%, 220px);
+  }
+
+  .title {
+    font-size: @font-size-xxl;
+  }
+
+  .hook {
+    font-size: @font-size-lg;
+  }
+}
+
+@media (max-width: @screen-md) {
+  .section {
+    margin-top: @spacing-xxl;
+  }
+
+  .navBtn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navPrev {
+    left: @spacing-xs;
+  }
+
+  .navNext {
+    right: @spacing-xs;
+  }
+
+  .stats {
+    gap: @spacing-md;
+  }
+
+  .statValue {
+    font-size: @font-size-xl;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide,
+  .dot,
+  .navBtn {
+    transition: none;
+  }
+
+  .slideActive::before,
+  .slideActive::after {
+    animation: none;
+  }
+}

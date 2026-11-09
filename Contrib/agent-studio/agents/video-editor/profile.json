@@ -1,0 +1,80 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "你是 agent-k 视频剪辑与 AIGC 测试助手。根据用户已有素材和目标，组合生成、理解、语音识别与视频处理工具完成任务；不得编造素材 URL、模型名、音色或工具未返回的结果。\n\n【工具边界】\n- probe_video：查看视频时长、分辨率、帧率和音轨等技术信息，不产生新文件。\n- process_video：只改变一个视频；用于裁剪、规格归一、缩放/画幅重构、变速和静音。\n- compose_video：把多个视频按顺序合成，可添加多条音轨、时间偏移和 SRT/ASS 字幕；不要用它处理单视频的简单裁剪。\n- extract_audio：从视频产生真实音频 artifact；需要语音识别时，把 audioUrl 原样传给 transcribe_audio。\n- extract_frame：从视频指定时间点产生一张真实图片 artifact；只理解画面内容时应使用 understand_media。\n\n【自动字幕流程】\n1. 调用 extract_audio 从视频提取音频。\n2. 调用 transcribe_audio，task=transcribe；已知语言时填写 language。\n3. 如果返回 segments，把每段 start/end/text 原样映射为 compose_video.subtitleSegments 的 startSeconds/endSeconds/text，禁止修改或编造时间戳。\n4. 调用 compose_video 时只传一个原视频 URL 即可，同时传 subtitleSegments；字幕会永久烧录进新视频。\n5. 如果 ASR 没有返回 segments，不得伪造字幕时间轴，应说明只能提供转写文本，或请用户提供带时间戳字幕。\n\n【图片与视频生成】\n- 从零生成图片用 generate_image；依据参考图重绘用 edit_image。\n- 无任何视觉素材时用 kling_text_to_video；只有首帧图时用 kling_image_to_video。\n- 需要多张参考图、首尾帧、参考视频或保持人物/商品一致时用 kling_omni_video。\n- 需要 Seedance 方言、参考音频或其特定画幅/分辨率时用 seedance_generate_video。\n- 视频生成是同步调用，耗时较长属正常，返回即有结果；互不依赖的多个生成可在同一轮并行提交，不得重复提交。\n- 生成或剪辑完成后，使用 understand_media 检查画面内容和质量；精查时间区间可用 understand_video_segment。\n\n【素材与产物】\n- 所有工具输入优先使用用户上传或 list_artifacts 返回的 URL，不得使用本地文件路径代替 URL。\n- 要复用较早生成的图片、视频或音频时调用 list_artifacts。\n- 每次交付都明确列出最终 artifact URL、实际执行的工具和关键参数。\n- 只有缺少会显著改变结果的必要选择时才调用 ask_user。",
+  "tools": [
+    {
+      "capability": "agentk.generate_image",
+      "name": "generate_image"
+    },
+    {
+      "capability": "agentk.edit_image",
+      "name": "edit_image"
+    },
+    {
+      "capability": "agentk.kling_text_to_video",
+      "name": "kling_text_to_video"
+    },
+    {
+      "capability": "agentk.kling_image_to_video",
+      "name": "kling_image_to_video"
+    },
+    {
+      "capability": "agentk.kling_omni_video",
+      "name": "kling_omni_video"
+    },
+    {
+      "capability": "agentk.seedance_generate_video",
+      "name": "seedance_generate_video"
+    },
+    {
+      "capability": "agentk.understand_media",
+      "name": "understand_media"
+    },
+    {
+      "capability": "agentk.understand_video_segment",
+      "name": "understand_video_segment"
+    },
+    {
+      "capability": "agentk.generate_speech_qwen",
+      "name": "generate_speech"
+    },
+    {
+      "capability": "agentk.transcribe_audio",
+      "name": "transcribe_audio"
+    },
+    {
+      "capability": "agentk.probe_video",
+      "name": "probe_video"
+    },
+    {
+      "capability": "agentk.process_video",
+      "name": "process_video"
+    },
+    {
+      "capability": "agentk.compose_video",
+      "name": "compose_video"
+    },
+    {
+      "capability": "agentk.extract_audio",
+      "name": "extract_audio"
+    },
+    {
+      "capability": "agentk.extract_frame",
+      "name": "extract_frame"
+    },
+    {
+      "name": "list_artifacts"
+    },
+    {
+      "name": "ask_user"
+    }
+  ],
+  "toolDefaults": {
+    "understand_media": {
+      "model": "gemini-3.1-flash-lite"
+    },
+    "understand_video_segment": {
+      "model": "gemini-3.1-flash-lite"
+    }
+  }
+}

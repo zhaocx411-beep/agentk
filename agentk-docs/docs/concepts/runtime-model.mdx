@@ -1,0 +1,160 @@
+---
+sidebar_position: 1
+sidebar_label: AgentK 运行模型
+title: AgentK 运行模型：Session、Execution 与 Event Log
+description: 理解一次 Agent 或 Pipeline 任务如何启动、持续运行并被可靠观察
+pagination_prev: mcp
+pagination_next: concepts/capability-tool-pipeline
+---
+
+import {
+  RuntimeOverview,
+  StateTracks,
+} from '@site/src/components/concepts/RuntimeDiagrams';
+
+# AgentK 运行模型：Session、Execution 与 Event Log
+
+[AgentK 概览](/)介绍了 AgentK 的定位，[Client Quickstart](/client/quickstart)演示了下游应用如何运行一次
+Agent 任务。本文解释请求返回以后发生什么：任务由谁继续推进，状态保存在哪里，以及应用
+如何在断线或重启后继续观察同一次运行。
+
+本文关注稳定的运行语义，不展开 Worker 注册、<Capability /> Schema 或各语言 Client/Worker SDK 的完整接口。
+
+本文描述的是创建 Session 的持久业务路径。下游也可以使用 `InvokeCapability` 直接阻塞调用一个
+Capability；这条路径不创建 Session、Execution 或 Event Log，见
+[直接调用 Capability](/client/guides/invoke-capability)。
+
+## 四个对象分担运行职责
+
+- <Profile /> 定义模型、系统指令、<Tool />、<Pipeline /> 和 Agent Loop 的行为边界。
+- **Session** 保存一份冻结的 Profile，并承载一段持续交互中的执行与事件。
+- **Execution** 表示 Session 中一次完整的 Agent Loop 或 Pipeline 运行。
+- **Session Event Log** 保存已经发生的对外事件。
+
+Temporal 在这些对象背后推进 Workflow、等待、重试和恢复。调用方不直接操作 Temporal
+Workflow，而是通过 AgentK Client SDK 创建 Session、启动 Execution，并读取事件或执行状态。
+
+<RuntimeOverview />
+
+## Session 是持续交互的边界
+
+创建 Session 时，调用方必须提交完整 Profile。AgentK 校验并冻结这份定义；后续 Execution
+都使用同一套模型、指令和能力选择，不会因为服务端缺省配置变化而静默改变行为。
+
+Session 不等于终端用户或业务项目。AgentK 管理接入方身份和 Agent 运行，下游应用负责维护：
+
+- 终端用户与 Session 的关联；
+- 业务权限、配额和素材；
+- 订单、项目、评测任务等业务资源；
+- 应用自己的展示状态和通知策略。
+
+一个业务对象可以对应一个或多个 Session；同一份 Profile 也可以创建多份彼此隔离的 Session。
+
+<span id="execution" className="concept-anchor" />
+
+## Execution 是一次完整运行
+
+`StartExecution` 根据输入启动以下一种运行：
+
+- **Agent Execution**：输入是一条消息或一组人工回答，Agent Loop 调用模型并按需执行 Tool；
+- **Pipeline Execution**：输入是 Profile 中的 Pipeline 名称和业务参数，由 Workflow 或 Activity
+  控制执行步骤。
+
+两种运行都返回 `exe_...` Execution ID，并使用同一组状态：
+
+```text
+RUNNING → COMPLETED
+        → FAILED
+        → CANCELLED
+```
+
+Execution 记录类型、创建时间、结束时间、错误和结果。Pipeline 完成后，输出位于
+`execution.pipeline.output`；Agent Execution 的文本和 Tool 结果从 Event Log 读取。
+
+同一个 Session 同时只能有一个 active Execution。应用必须等待当前运行结束或先取消它，
+再提交下一条消息、人工回答或 Pipeline。Session 可以先后运行多轮 Agent 和 Pipeline，但不能
+把它当成并发任务队列。
+
+## 一次消息如何持续推进
+
+以一条用户消息为例：
+
+1. Client SDK 调用 `StartExecution`，AgentK 创建 Agent Execution。
+2. 用户输入和 `execution_started` 写入 Session Event Log。
+3. Agent Loop 从 Event Log 投影模型上下文，调用 Profile 选择的模型。
+4. 文本、推理或 Tool 请求作为 Event 写回 Event Log。
+5. 如果模型选择 Tool，AgentK 执行对应 Capability，再把结果交给下一轮模型调用。
+6. Agent 收敛、失败或被取消后，`execution_finished` 关闭本次 Execution。
+
+`StartExecution` 不等待整条链路完成。任务可以跨越请求、连接和 Worker 进程继续运行；调用方
+使用 `WatchEvents` 获取实时更新，并使用 `GetExecution` 或 Event Log 判断可靠终态。
+
+Pipeline 的入口不同：调用方显式选择 Pipeline 并提交参数，代码预先决定步骤与依赖。它仍然
+使用相同的 Execution 状态和 Session Event Log。
+
+## Temporal History 与 Event Log
+
+AgentK 同时使用 Temporal Workflow History 和 Session Event Log。二者都保存状态，但服务于
+不同读者。
+
+<StateTracks />
+
+### Temporal History 保存执行现场
+
+Temporal 需要知道 Workflow 执行到了哪里、正在等待什么、哪些 Activity 应该重试，以及 Worker
+重启后如何继续。这些信息由 Temporal 保存并用于确定性重放。
+
+History 属于运行机制和运维排障面。下游应用不读取 Temporal History 来拼装 AgentK 状态。
+
+### Event Log 保存对外事件
+
+Session Event Log 以只追加方式记录已经发生的事件，包括用户输入、模型输出、Tool 调用、人工
+交互、Execution 生命周期和 Pipeline 进度。每个 Event 有稳定的 `event_id`，并归属于一个
+`execution_id`。
+
+模型下一轮看到的对话历史、Execution 查询结果和部分 <Artifact /> 视图都可以从事件投影得到。
+投影规则可以演进，已经提交的 Event 保持不变。
+
+简化地说：
+
+> Temporal History 让任务能够继续执行；Session Event Log 让应用知道任务发生了什么。
+
+## Agent 与 Pipeline 共享什么
+
+Agent Loop 与 Pipeline 的主要区别是**谁决定下一步**。
+
+**Agent Loop**
+
+- 模型读取当前上下文并动态选择 Tool；
+- 以 Round 为推进单位，Tool 结果可以触发下一轮；
+- 适合步骤和调用顺序需要在运行时决定的任务。
+
+**Pipeline**
+
+- 调用方显式选择流程；
+- Workflow 或 Activity 定义步骤、并发、等待和聚合；
+- 适合输入输出和执行顺序可以由代码确定的任务。
+
+两者共享 Session、Profile、Capability、Execution 状态和 Event Log。共享边界不表示自动编排：
+Pipeline 完成不会自动启动 Agent Loop，Agent 也不会因为 Profile 中存在 Pipeline 就自动调用它。
+需要组合时，应通过 Tool、Capability 调用或下游应用明确建立关系。
+
+## 调用方如何观察运行
+
+AgentK 提供三种互补接口：
+
+- `WatchEvents(session_id, execution_id)`：实时接收 Delta、已提交 Event 和流结束通知；
+- `ListEvents(session_id)`：分页读取 Session 的持久事件，负责历史与恢复；
+- `GetExecution(session_id, execution_id)`：读取当前状态、错误和 Pipeline 输出。
+
+`WatchEvents` 是低延迟通道，可能因连接或缓冲区生命周期而不可用。应用在断线后应使用
+`ListEvents` 补齐已提交事件，并使用 `GetExecution` 判断终态。完整 Client 应用模式见
+[构建可恢复的 Agent Client](/client/guides/chat-client)。
+
+## 需要记住的边界
+
+1. Profile 定义行为，Session 承载持续交互，Execution 表示其中一次完整运行。
+2. Agent 与 Pipeline 使用同一种 Execution；公开 ID 都是 `exe_...`。
+3. 一个 Session 同时只有一个 active Execution。
+4. Temporal History 用于恢复执行；Session Event Log 用于下游观察和模型上下文投影。
+5. 实时流不替代 Event Log 或 Execution 终态。

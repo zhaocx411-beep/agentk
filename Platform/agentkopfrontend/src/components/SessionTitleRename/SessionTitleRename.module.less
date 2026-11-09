@@ -1,0 +1,46 @@
+@import url('@/styles/variables.less');
+
+.renameRow {
+  display: flex;
+  align-items: stretch;
+  gap: @spacing-xxs;
+  min-width: 0;
+
+  &:hover .renameBtn,
+  &:focus-within .renameBtn {
+    opacity: 1;
+  }
+}
+
+.renameBtn:global(.ant-btn) {
+  flex-shrink: 0;
+  align-self: center;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: @border-radius-sm;
+  background: transparent;
+  color: @text-color-tertiary;
+  opacity: 0;
+  transition:
+    opacity @transition-duration-fast @transition-timing,
+    color @transition-duration-fast @transition-timing,
+    background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: @surface-3;
+    color: @text-color;
+  }
+
+  &:focus-visible {
+    opacity: 1;
+    outline: none;
+    box-shadow: @focus-ring-neutral;
+  }
+}
+
+.renameModalInput {
+  margin-top: @spacing-sm;
+}

@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "kling-3.0"
+      ],
+      "description": "使用的模型。候选：kling-3.0（可灵 3.0 图生视频）"
+    },
+    "firstFrame": {
+      "type": "string",
+      "description": "首帧图片 URL；通常取上下文里 generate_image / edit_image 返回的 artifacts[0].uri，也可用公网可读的图片 URL"
+    },
+    "lastFrame": {
+      "type": "string",
+      "description": "尾帧图片 URL（可选）；给了它画面会向该帧收敛。取值同首帧；只能给「首帧」或「首帧 + 尾帧」，不能只给尾帧"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "纯自然语言的画面、镜头运动和声音描述；不要附加模型专用命令或参数"
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "720p",
+        "1080p"
+      ],
+      "default": "1080p",
+      "description": "输出清晰度，越高越贵；缺省 1080p"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "description": "片段时长（秒），3~15，缺省 5"
+    },
+    "audio": {
+      "type": "string",
+      "enum": [
+        "native",
+        "off"
+      ],
+      "default": "native",
+      "description": "是否生成与画面适配的原生声音：native 有声，off 无声；缺省 native"
+    },
+    "multiShot": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否生成多镜头视频，缺省 true。设为 true 时模型可根据 prompt 生成多镜头；不需要多镜头时显式设为 false"
+    }
+  },
+  "required": [
+    "model",
+    "firstFrame",
+    "prompt"
+  ]
+}

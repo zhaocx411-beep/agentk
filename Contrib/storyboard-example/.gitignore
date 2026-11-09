@@ -1,0 +1,16 @@
+.idea/
+*.iml
+
+# Go
+go/worker/storyboard-example-worker
+go/apiserver/storyboard-example-apiserver
+go/*/coverage.out
+
+# Python
+python/.venv/
+python/**/.pytest_cache/
+python/**/__pycache__/
+python/**/*.pyc
+
+# Java
+java/**/target/

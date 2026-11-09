@@ -1,0 +1,109 @@
+/* 官方工作流填参弹窗 */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+  max-height: min(60vh, 520px);
+  overflow: auto;
+  padding-right: @spacing-xxs;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.fieldHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-xs;
+}
+
+.fieldLabel {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.requiredMark {
+  margin-left: 2px;
+  color: @error-color;
+}
+
+.argKey {
+  color: @text-color-tertiary;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+}
+
+.fieldTip {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  .text-clamp(3);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.imageActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.imageHint {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.urlList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.urlItem {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  padding: @spacing-xxs @spacing-xs;
+  background: @surface-2;
+  border-radius: @border-radius-sm;
+}
+
+.thumb {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: @border-radius-xs;
+  background: @surface-3;
+}
+
+.urlText {
+  flex: 1;
+  min-width: 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  font-family: @font-mono;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: @spacing-sm;
+  margin-top: @spacing-md;
+}

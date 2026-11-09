@@ -1,0 +1,220 @@
+---
+sidebar_position: 3
+sidebar_label: Agent 定义与运行上下文
+title: Profile 定义 Agent，Session 承载运行上下文
+description: 理解 Agent 定义、运行上下文与下游业务语义之间的边界
+pagination_prev: concepts/capability-tool-pipeline
+pagination_next: concepts/events-stream-artifacts
+---
+
+# Profile 定义 Agent，Session 承载运行上下文
+
+[Capability、Tool 与 Pipeline](/concepts/capability-tool-pipeline)解释了能力如何进入 AgentK。
+Profile 负责把模型、指令和能力组合成一种明确的 Agent；Session 则承载这个 Agent 在一次持续
+运行中形成的 <Execution /> 和 Event。
+
+二者回答不同的问题：
+
+- **Profile 回答“这个 Agent 是什么”**；
+- **Session 回答“这个 Agent 在这次运行中发生了什么”**；
+- **下游应用负责解释“这次运行在业务上意味着什么”**。
+
+<span id="profile" className="concept-anchor" />
+
+## Profile 是 Agent 定义
+
+Profile 定义：
+
+- Agent 默认使用的模型；
+- Agent 的角色、目标和行为约束；
+- 模型可以选择哪些 <Tool />；
+- 调用方可以显式启动哪些 <Pipeline />；
+- Tool 的场景级默认参数；
+- 连续 Tool Round 的上限。
+
+Profile 不是独立资源。下游应用在创建 Session 时提交完整 Profile，AgentK 校验并冻结它。
+同一份 Profile 可以创建多个 Session，它们共享行为定义，但运行上下文彼此隔离。
+
+## 一个典型 Profile
+
+```json
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "你是视频创作助手。先确认用户目标，再选择合适的能力。",
+  "tools": [
+    {
+      "capability": "contrib.storyboard_example.storyboard_film_go",
+      "name": "storyboard_film",
+      "instructions": "用户希望通过对话生成完整短片时使用。"
+    }
+  ],
+  "toolDefaults": {
+    "storyboard_film": {
+      "chatModel": "deepseek-v4-pro",
+      "imageModel": "z-image-turbo",
+      "videoModel": "kling-3.0",
+      "shots": 3
+    }
+  },
+  "pipelines": [
+    {
+      "capability": "contrib.storyboard_example.storyboard_film_go",
+      "name": "storyboard_film",
+      "displayName": "分镜成片"
+    }
+  ],
+  "maxToolRounds": 20
+}
+```
+
+同一个 <Capability /> 可以同时作为 Tool 和 Pipeline，但它们是两种不同入口：
+
+- Tool 由 Agent Loop 中的模型选择；
+- Pipeline 由下游应用显式启动。
+
+Profile 选择的是使用方式，不改变 Capability 的实现。
+
+## 模型与系统指令
+
+`defaultModel` 是必填字段，按名称引用当前 AgentK 环境中的对话模型。即使 Session 只准备
+运行 Pipeline，当前协议仍要求提交完整 Profile 和 `defaultModel`。
+
+`system` 定义 Agent 的角色、目标和行为约束。它适合表达场景对 Agent 的期望，不适合存放
+credential、token、证书、终端用户资料或其他敏感信息。
+
+Profile 固化模型名称，不固定模型服务的物理实例。所选模型不可用时，AgentK 返回错误，
+不会悄悄选择另一个模型。
+
+## 为 Agent Loop 选择 Tool
+
+`tools` 决定模型可以看到和调用哪些工具：
+
+```json
+{
+  "capability": "contrib.storyboard_example.storyboard_film_go",
+  "name": "storyboard_film",
+  "instructions": "用户希望通过对话生成完整短片时使用。"
+}
+```
+
+- `capability` 使用裸 ID 选择 Capability；
+- `name` 是这个 Session 中提供给模型的工具名；
+- `instructions` 补充当前场景下的调用提示。
+
+下游不需要复制 Worker 的 Temporal Workflow Type、task queue 或部署地址。
+
+## 提供场景级默认参数
+
+`toolDefaults` 可以为 Tool 提供当前 Session 的默认参数：
+
+```json
+{
+  "toolDefaults": {
+    "storyboard_film": {
+      "shots": 3,
+      "videoModel": "kling-3.0"
+    }
+  }
+}
+```
+
+这里的 key 是 Session 内工具名。AgentK 在执行前合并默认值与模型给出的参数，模型明确提供的
+值优先。默认参数适合表达已经由业务场景确定、不需要模型反复选择的配置；公共输入契约仍由
+Capability 维护。
+
+## 限制连续 Tool Round
+
+`maxToolRounds` 限制一条用户输入之后可以连续发生多少轮 Tool 调用，避免模型在原地循环。
+值为 `0` 时使用 AgentK 当前缺省值 20；负数无效。
+
+这个限制只约束 Agent Loop，不限制 Pipeline 内部的 Workflow 步骤。
+
+## 为调用方选择 Pipeline
+
+`pipelines` 决定下游可以通过当前 Session 启动哪些流程：
+
+```json
+{
+  "capability": "contrib.storyboard_example.storyboard_film_go",
+  "name": "storyboard_film",
+  "displayName": "分镜成片"
+}
+```
+
+- `capability` 使用裸 ID 选择 Capability；
+- `name` 是 `StartExecution` 使用的 Session 内名称；
+- `displayName` 用于界面展示。
+
+调用方只提交业务参数。Schema、超时和 Temporal 路由由能力提供方维护，不进入 Profile。
+
+<span id="session" className="concept-anchor" />
+
+## Session 是 Agent 的运行上下文
+
+创建 Session，就是用一份 Profile 创建一份彼此隔离的运行上下文：
+
+```text
+Profile：同一种 Agent 定义
+  ├─ Session A：Execution 与 Event
+  └─ Session B：另一份独立运行上下文
+```
+
+Session 承载用户输入、模型轮次、Tool 调用、Pipeline、Artifact、错误和取消等运行事件。它不解释
+这些事件的业务含义：
+
+```text
+业务用户 / 项目 / 评测任务
+            │
+            └── 下游应用维护映射 ──→ AgentK session_id
+```
+
+AgentK 管理接入方身份和 Agent 运行；终端用户、权限、配额以及业务对象到 Session 的映射仍归
+下游应用。
+
+## Agent 与 Pipeline 按顺序运行
+
+同一个 Session 可以先后运行 Agent Execution 和 Pipeline Execution，两者共享 Profile 与
+<EventLog />，但不会自动串联。
+
+一个 Session 同时只能有一个 active Execution。当前 Execution 结束或被取消后，应用才能启动
+下一条消息、人工回答或 Pipeline。因此同时配置 `tools` 和 `pipelines` 只是提供两种入口，
+不是定义并发或编排关系。
+
+Pipeline 的结果不会自动进入 Agent 的模型上下文，Pipeline 完成也不会自动启动新的 Agent
+Execution。需要组合时，由 Tool、Capability 调用或下游应用明确建立关系。
+
+## 什么被固化，什么在使用时解析
+
+Session 创建后，Profile 中的模型、系统指令、Capability ID 和 Session 内名称不会自行变化，
+但 Profile 不复制 Worker 的实际路由：
+
+- 核心 Capability 在创建 Session 时校验；
+- Contributor Tool 在 Agent Execution 开始时从当前 Catalog 解析；
+- Pipeline 在列出和启动时从当前 Catalog 解析；
+- Execution 启动后，本次采用的执行目标进入 Temporal History。
+
+Contributor Worker 暂时离线时，带有对应 Capability ID 的 Session 仍可创建。Worker 恢复上报后，
+同一个 ID 可以重新可用；真正使用时仍无法解析则返回错误。
+
+> Profile 固化 Agent 的定义；Catalog 提供所选能力当前如何执行；Session 保存实际发生的运行事件。
+
+## Profile 不包含部署或业务数据
+
+Profile 不应包含：
+
+- credential、token、证书或其他接入凭证；
+- Temporal Workflow Type、task queue 或 Worker 地址；
+- 下游应用的终端用户资料、权限或配额；
+- 终端用户与 AgentK Session 的映射关系。
+
+Profile 只定义 Agent，不接管 Worker 部署，也不复制下游业务模型。
+
+## 常见选择
+
+- 普通对话：配置 `defaultModel`、`system` 和空 `tools`；
+- 让模型按上下文调用能力：把 Capability 加入 `tools`；
+- 让应用显式启动流程：把 Capability 加入 `pipelines`；
+- 同一能力同时支持两种入口：分别加入 `tools` 与 `pipelines`，但不要假定二者会自动编排。
+
+Profile 负责组合 AgentK 已有的模型与 Capability；Session 承载这份定义的一次持续运行；业务含义
+始终由下游应用维护。

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="多模态视频质检 · Prompt + 多参考图 / 参考音频 / 参考视频" />
+    <meta name="color-scheme" content="light dark" />
+    <title>视频质检 Studio</title>
+    <link rel="stylesheet" href="./studio.css" />
+  </head>
+  <body>
+    <!-- macOS 的窗口骨架：一条贯穿全宽的统一标题栏，下面才是 侧栏 + 内容。
+         标题栏不属于任何一栏，所以侧栏收起时它不会跟着抖动。 -->
+    <div class="win">
+      <header class="titlebar">
+        <button id="navToggle" class="tb-icon" type="button"
+                title="收起边栏" aria-label="收起边栏" aria-expanded="true">
+          <svg class="icn" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1.75" y="2.75" width="12.5" height="10.5" rx="2.4" />
+            <path d="M6.15 2.75v10.5" />
+          </svg>
+        </button>
+
+        <span class="tb-divider" aria-hidden="true"></span>
+
+        <span class="tb-mark" aria-hidden="true">质</span>
+        <h1 class="tb-title">视频质检</h1>
+        <span class="tb-caption">多模态 · 八维三档</span>
+        <span id="modeBadge" class="mode-badge t2v">T2VA</span>
+
+        <span class="tb-spacer"></span>
+
+        <button id="inputToggle" class="tb-icon" type="button"
+                title="收起素材区" aria-label="收起素材区" aria-expanded="true">
+          <svg class="icn" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1.75" y="2.75" width="12.5" height="10.5" rx="2.4" />
+            <path d="M9.85 2.75v10.5" />
+          </svg>
+        </button>
+
+        <button id="themeToggle" class="tb-icon" type="button" title="切换外观" aria-label="切换外观">
+          <svg class="icn icn-sun" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="8" r="3.1" />
+            <path d="M8 1.6v1.4M8 13v1.4M1.6 8h1.4M13 8h1.4M3.5 3.5l1 1M11.5 11.5l1 1M12.5 3.5l-1 1M4.5 11.5l-1 1" />
+          </svg>
+          <svg class="icn icn-moon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 9.8A5.9 5.9 0 0 1 6.2 3a5.9 5.9 0 1 0 6.8 6.8z" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="shell">
+        <!-- 侧栏走 vibrancy：半透明 + 大半径模糊，底色由窗口透出来。
+             这是 macOS 侧栏最直接的识别特征，比任何配色都管用。 -->
+        <aside class="sidebar">
+          <div class="sidebar-top">
+            <button id="historyNew" class="btn-new" type="button">
+              <svg class="icn" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"
+                   fill="none" stroke="currentColor" stroke-width="1.5"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3.4v9.2M3.4 8h9.2" />
+              </svg>
+              <span>新建质检</span>
+            </button>
+          </div>
+
+          <div class="hist-pane">
+            <p class="sb-section">历史记录</p>
+            <ul id="historyList" class="hist-list" aria-label="历史质检记录"></ul>
+          </div>
+
+          <!-- 协议说明：优先级最低，收进一个可折叠的 disclosure，
+               默认闭合。常驻展开会让侧栏底部永远压着一块小字。 -->
+          <details class="sb-note">
+            <summary>
+              <svg class="icn sb-note-chev" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"
+                   fill="none" stroke="currentColor" stroke-width="1.7"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.1 3.9 10.2 8l-4.1 4.1" />
+              </svg>
+              <span>八个维度 · 三个档位</span>
+            </summary>
+            <div class="sb-note-body">
+              <p>指令遵循 · 参考一致性 · 视觉一致性 · 音频综合质量 · 画面质量 · 动态质量 · 文字质量 · 故事逻辑连贯性</p>
+              <p>每维独立定档：无问题 / 瑕疵 / 恶劣错误。不产出综合评分。</p>
+            </div>
+          </details>
+        </aside>
+
+        <!-- 可拖动分隔线。role="separator" + aria-orientation 让它对读屏软件
+             和键盘都是一个正规的分隔控件，方向键即可调宽。 -->
+        <div class="splitter" data-resize="nav" role="separator" tabindex="0"
+             aria-orientation="vertical" aria-label="调整边栏宽度（方向键微调，双击复位）"
+             aria-valuemin="200" aria-valuemax="460" title="拖动调整宽度 · 双击复位"></div>
+
+        <main class="workbench">
+          <section class="control-col" aria-label="输入">
+            <!-- 分组表单：一组相关字段共用一个圆角容器 + 发丝分隔线，
+                 这是 macOS 设置面板的排法，比一堆独立卡片安静得多。 -->
+            <div class="group">
+              <button id="browseDataset" class="row-btn" type="button">
+                <span class="row-icon">
+                  <svg class="icn" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
+                       fill="none" stroke="currentColor" stroke-width="1.5"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1.8" y="3" width="12.4" height="10" rx="2.2" />
+                    <path d="M5.6 6.3h5.6M5.6 8.6h5.6M5.6 10.9h3.2" />
+                    <path d="M3.4 6.3h.5M3.4 8.6h.5M3.4 10.9h.5" />
+                  </svg>
+                </span>
+                <span class="row-label">从离线数据集选一条</span>
+                <svg class="icn row-chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+                     fill="none" stroke="currentColor" stroke-width="1.6"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6.1 3.9 10.2 8l-4.1 4.1" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="field">
+              <p class="field-label">Prompt</p>
+              <div class="composer">
+                <textarea
+                  id="prompt"
+                  class="composer-input"
+                  rows="6"
+                  placeholder="描述这条视频应该呈现什么。若使用多参考素材，请在文中以「参考 Image 4」「声音参考 Audio 1」「运镜参考 Video 1」的形式引用。"
+                ></textarea>
+                <div class="composer-foot">
+                  <span class="composer-hint"><kbd>⌘</kbd><kbd>⏎</kbd> 提交</span>
+                  <span class="composer-count"><span id="promptCount">0</span> 字</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="field-label">待质检视频<span class="field-required">必填</span></p>
+              <div id="videoSlot" class="video-slot empty" role="button" tabindex="0"></div>
+              <input id="videoInput" class="sr-only" type="file" accept="video/*" />
+            </div>
+
+            <div class="field">
+              <p class="field-label">
+                参考素材
+                <span class="field-count" id="refCount"></span>
+                <button id="clearAll" class="btn-link" type="button">清空</button>
+              </p>
+              <div id="dropzone" class="dropzone" role="button" tabindex="0">
+                <span class="dropzone-icon" aria-hidden="true">
+                  <svg class="icn" viewBox="0 0 16 16" width="17" height="17" aria-hidden="true"
+                       fill="none" stroke="currentColor" stroke-width="1.5"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 3.4v9.2M3.4 8h9.2" />
+                  </svg>
+                </span>
+                <p class="dropzone-title">添加参考图 / 参考音频 / 参考视频</p>
+                <p class="dropzone-hint">支持多选与拖拽 · png jpg webp · mp3 wav m4a · mp4 mov</p>
+              </div>
+              <input id="fileInput" class="sr-only" type="file" multiple
+                     accept="image/*,audio/*,video/*" />
+              <ul id="assetList" class="asset-list" hidden></ul>
+            </div>
+
+            <div class="field">
+              <p class="field-label">运行参数</p>
+              <div class="group">
+                <label class="ctl-row" for="providerSelect">
+                  <span class="ctl-label">模型通道</span>
+                  <span class="popup">
+                    <select id="providerSelect" aria-label="模型通道" disabled>
+                      <option>读取中…</option>
+                    </select>
+                    <svg class="icn popup-chev" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"
+                         fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4.9 6.5 8 3.4l3.1 3.1M4.9 9.5 8 12.6l3.1-3.1" />
+                    </svg>
+                  </span>
+                </label>
+                <label class="ctl-row" for="useVlm">
+                  <span class="ctl-label">调用真实模型</span>
+                  <input id="useVlm" class="switch-input" type="checkbox" checked />
+                </label>
+                <label class="ctl-row" for="refreshCache">
+                  <span class="ctl-label">忽略缓存重跑</span>
+                  <input id="refreshCache" class="switch-input" type="checkbox" />
+                </label>
+              </div>
+            </div>
+
+            <div class="run-bar">
+              <button id="runButton" class="btn-primary" type="button" disabled>开始质检</button>
+              <p id="runHint" class="run-hint">请上传待质检视频</p>
+            </div>
+
+            <p id="errorBox" class="error-box" role="alert" hidden></p>
+          </section>
+
+          <div class="splitter" data-resize="input" role="separator" tabindex="0"
+               aria-orientation="vertical" aria-label="调整素材区宽度（方向键微调，双击复位）"
+               aria-valuemin="330" aria-valuemax="820" title="拖动调整宽度 · 双击复位"></div>
+
+          <section class="result-col" id="resultPane" data-phase="idle" aria-label="结果">
+            <header class="result-head">
+              <h2 class="result-title">质检报告</h2>
+              <ul id="stageList" class="stage-list"></ul>
+            </header>
+            <!-- 判定区：八维三档 + 未采信清单 + V2V 对齐测量。这里刻意没有总分位。 -->
+            <section id="verdictPane" class="vd" aria-label="八维三档判定" hidden>
+              <header class="vd-head">
+                <h3 class="vd-title">八维三档</h3>
+                <p id="vdSchema" class="vd-schema"></p>
+                <ul id="vdTally" class="vd-tally"></ul>
+                <a id="vdReport" class="btn-secondary vd-reportlink" target="_blank"
+                   rel="noreferrer" hidden>
+                  <span>完整报告</span>
+                  <svg class="icn" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"
+                       fill="none" stroke="currentColor" stroke-width="1.7"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.1 3.3h6.6v6.6M12.7 3.3 4.4 11.6" />
+                  </svg>
+                </a>
+              </header>
+              <ol id="vdGrid" class="vd-grid"></ol>
+              <div id="vdDrawer" class="vd-drawer" data-open="0"></div>
+              <div id="vdFlags" class="vd-flags"></div>
+            </section>
+
+            <p id="emptyState" class="empty-state">
+              上传待质检视频后点击「开始质检」，报告将在此处呈现。填写 Prompt 与参考素材可额外评估指令遵循。
+            </p>
+
+            <!-- 判定区与问题定位之间的横向分隔线。它替代了 .vd 的下边框，
+                 所以只在上下两块同时可见时才出现（规则见 studio.css）。 -->
+            <div class="splitter splitter-h" data-resize="verdict" role="separator" tabindex="0"
+                 aria-orientation="horizontal" aria-label="调整判定区高度（方向键微调，双击恢复自适应）"
+                 aria-valuemin="140" title="拖动调整高度 · 双击恢复自适应"></div>
+
+            <section id="videoPane" class="vpane" aria-label="问题定位" hidden>
+              <header class="vpane-head">
+                <h3 class="vpane-title">问题定位</h3>
+                <span id="vpaneCount" class="vpane-count"></span>
+                <div id="vpaneFilters" class="vpane-filters segmented"></div>
+              </header>
+              <div class="vpane-body">
+                <div class="vcol">
+                  <div class="video-wrapper" id="vWrap">
+                    <video id="vEl" controls preload="metadata" playsinline></video>
+                    <div class="annotation-layer" id="vLayer" aria-hidden="true"></div>
+                  </div>
+                  <div class="vtimeline">
+                    <div class="track" id="vTrack">
+                      <div class="rail"></div>
+                      <div class="rfill" id="vFill"></div>
+                    </div>
+                    <span class="ctime" id="vTime">0:00 / 0:00</span>
+                  </div>
+                  <div class="jumpwrap" id="vJumps"></div>
+                  <details id="vOrphans" class="vorphans" hidden>
+                    <summary id="vOrphansHead"></summary>
+                    <ul id="vOrphansList" class="vorphans-list"></ul>
+                  </details>
+                </div>
+                <div class="jcol">
+                  <div class="jcard">
+                    <div class="jhead">
+                      <span class="jt">质检标签</span>
+                      <!-- 复制成功的反馈靠 .copied 切换两个图标，不改 DOM 文本：
+                           原来用 textContent 换字符，会把里面的 SVG 一起抹掉。 -->
+                      <span class="jc" id="jCopy" title="复制" role="button" tabindex="0">
+                        <svg class="icn icn-copy" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"
+                             fill="none" stroke="currentColor" stroke-width="1.5"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="5.7" y="1.9" width="8.4" height="8.4" rx="2.1" />
+                          <path d="M10.3 10.3v1.7a2.1 2.1 0 0 1-2.1 2.1H4a2.1 2.1 0 0 1-2.1-2.1V7.8A2.1 2.1 0 0 1 4 5.7h1.7" />
+                        </svg>
+                        <svg class="icn icn-done" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"
+                             fill="none" stroke="currentColor" stroke-width="1.8"
+                             stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3.4 8.6 6.3 11.5 12.6 5.2" />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="jbodywrap">
+                      <div class="tagwrap" id="jTags"></div>
+                      <p class="jempty" id="jHint">点击进度条上的问题帧标记查看该帧标注。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="overlay" class="drop-overlay" hidden>
+      <div class="drop-overlay-inner">
+        <p class="drop-overlay-title">松手即上传</p>
+        <p class="drop-overlay-hint">图片 / 音频 / 视频将作为参考素材，拖到视频槽则作为待质检视频</p>
+      </div>
+    </div>
+
+    <div id="lightbox" class="lb" hidden>
+      <div class="lb-inner" role="dialog" aria-label="素材预览">
+        <header class="lb-head">
+          <div class="lb-titles">
+            <p id="lightboxTitle" class="lb-title"></p>
+            <p id="lightboxMeta" class="lb-meta"></p>
+          </div>
+          <button id="lightboxClose" class="btn-close" type="button" aria-label="关闭">
+            <svg class="icn" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+                 fill="none" stroke="currentColor" stroke-width="1.7"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.4 4.4l7.2 7.2M11.6 4.4l-7.2 7.2" />
+            </svg>
+          </button>
+        </header>
+        <div id="lightboxBody" class="lb-body"></div>
+      </div>
+    </div>
+
+    <div id="datasetPanel" class="ds-panel" hidden>
+      <div class="ds-panel-inner" role="dialog" aria-label="离线数据集">
+        <header class="ds-panel-head">
+          <div>
+            <h2 class="ds-panel-title">离线数据集</h2>
+            <p id="datasetHint" class="ds-panel-hint"></p>
+          </div>
+          <button id="datasetClose" class="btn-close" type="button" aria-label="关闭">
+            <svg class="icn" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+                 fill="none" stroke="currentColor" stroke-width="1.7"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.4 4.4l7.2 7.2M11.6 4.4l-7.2 7.2" />
+            </svg>
+          </button>
+        </header>
+        <div class="ds-panel-search">
+          <span class="search-field">
+            <svg class="icn search-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+                 fill="none" stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="7.1" cy="7.1" r="4.4" />
+              <path d="M10.4 10.4l3 3" />
+            </svg>
+            <input id="datasetSearch" type="search" class="ds-search-input"
+                   placeholder="按 case 编号或 prompt 关键词过滤" autocomplete="off" />
+          </span>
+        </div>
+        <ul id="datasetList" class="ds-list"></ul>
+      </div>
+    </div>
+
+    <script type="module" src="./studio.js"></script>
+  </body>
+</html>

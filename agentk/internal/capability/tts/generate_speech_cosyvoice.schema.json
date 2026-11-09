@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "cosyvoice-v3.5-plus"
+      ],
+      "description": "使用的模型。候选：cosyvoice-v3.5-plus（CosyVoice 复刻音色语音）"
+    },
+    "text": {
+      "type": "string",
+      "description": "要合成的文字"
+    },
+    "voiceId": {
+      "type": "string",
+      "description": "当前账号已配置的音色 ID"
+    },
+    "instructions": {
+      "type": "string",
+      "description": "自然语言演绎指令，加权长度不超过 100 字符"
+    }
+  },
+  "required": [
+    "model",
+    "text",
+    "voiceId"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a05",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "assistant.reasoning",
+  "data": {
+    "block": 0,
+    "text": "用户要 15 秒，按 3 个镜头每个 5 秒切分最稳。"
+  },
+  "createdAt": "2026-07-30T12:00:02Z"
+}

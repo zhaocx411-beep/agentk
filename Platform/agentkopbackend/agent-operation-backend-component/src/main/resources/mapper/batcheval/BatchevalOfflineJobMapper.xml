@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.batcheval.mapper.persistence.BatchevalOfflineJobMapper">
+
+    <resultMap id="OfflineJobMap"
+               type="com.kuaishou.agent.operation.backend.batcheval.model.BatchEvalModels$OfflineJob">
+        <id column="id" property="id"/>
+        <result column="biz_id" property="bizId"/>
+        <result column="dataset_id" property="datasetId"/>
+        <result column="agent_id" property="agentId"/>
+        <result column="agent_version_id" property="agentVersionId"/>
+        <result column="agent_name" property="agentName"/>
+        <result column="model_name" property="model"/>
+        <result column="system_prompt" property="systemPrompt"/>
+        <result column="tools_json" property="toolsJson"/>
+        <result column="pipeline_name" property="pipelineName"/>
+        <result column="pipeline_ref" property="pipelineRef"/>
+        <result column="profile_version" property="profileVersion"/>
+        <result column="profile_yaml" property="profileYaml"/>
+        <result column="session_mode" property="sessionMode"/>
+        <result column="status" property="status"/>
+        <result column="total" property="total"/>
+        <result column="errors" property="errors"/>
+        <result column="creator" property="creator"/>
+        <result column="started_at" property="startedAt"/>
+        <result column="finished_at" property="finishedAt"/>
+        <result column="created_at" property="createdAt"/>
+    </resultMap>
+
+    <sql id="offlineJobColumns">
+        id, biz_id, dataset_id, agent_id, agent_version_id, agent_name,
+        model_name, system_prompt, tools_json, pipeline_name, pipeline_ref,
+        profile_version, profile_yaml, session_mode, `status`, total, `errors`, creator, started_at, finished_at,
+        created_at
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="job.id">
+        INSERT INTO batcheval_offline_job (
+            biz_id, dataset_id, agent_id, agent_version_id, agent_name,
+            model_name, system_prompt, tools_json, pipeline_name, pipeline_ref,
+            profile_version, profile_yaml, session_mode, `status`, total, `errors`, creator, created_at
+        ) VALUES (
+            #{job.bizId}, #{job.datasetId}, #{job.agentId}, #{job.agentVersionId}, #{job.agentName},
+            #{job.model}, #{job.systemPrompt}, #{toolsJson},
+            #{job.pipelineName}, #{job.pipelineRef},
+            #{job.profileVersion}, #{job.profileYaml}, #{job.sessionMode}, #{job.status},
+            #{job.total}, #{job.errors}, #{job.creator}, #{job.createdAt}
+        )
+    </insert>
+
+    <!-- DELETING 的任务已被用户删除、正在后台清理，列表与计数都要当它不存在 -->
+    <select id="countAll" resultType="long">
+        SELECT COUNT(*) FROM batcheval_offline_job WHERE `status` &lt;&gt; 'DELETING'
+    </select>
+
+    <select id="listPage" resultMap="OfflineJobMap">
+        SELECT <include refid="offlineJobColumns"/>
+        FROM batcheval_offline_job
+        WHERE `status` &lt;&gt; 'DELETING'
+        ORDER BY created_at DESC, id DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <update id="markStatus">
+        UPDATE batcheval_offline_job
+        SET `status` = #{status}
+        WHERE biz_id = #{bizId}
+    </update>
+
+    <select id="listBizIdsByStatus" resultType="java.lang.String">
+        SELECT biz_id
+        FROM batcheval_offline_job
+        WHERE `status` = #{status}
+        ORDER BY id ASC
+        LIMIT #{limit}
+    </select>
+
+    <select id="findByBizId" resultMap="OfflineJobMap">
+        SELECT <include refid="offlineJobColumns"/>
+        FROM batcheval_offline_job
+        WHERE biz_id = #{bizId}
+    </select>
+
+    <update id="update">
+        UPDATE batcheval_offline_job
+        SET `status` = #{status},
+            `errors` = #{errors},
+            total = #{total},
+            started_at = #{startedAt},
+            finished_at = #{finishedAt}
+        WHERE biz_id = #{bizId}
+    </update>
+
+    <select id="countByDatasetId" resultType="long">
+        SELECT COUNT(*) FROM batcheval_offline_job WHERE dataset_id = #{datasetId}
+    </select>
+
+    <delete id="deleteByBizId">
+        DELETE FROM batcheval_offline_job WHERE biz_id = #{bizId}
+    </delete>
+</mapper>

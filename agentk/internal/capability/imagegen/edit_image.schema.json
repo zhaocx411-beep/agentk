@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "gpt-image-2-edit",
+        "qwen-image-edit-plus-2025-10-30",
+        "gemini-3-pro-image-edit"
+      ],
+      "description": "使用的模型。候选：gpt-image-2-edit（GPT Image 图片编辑）；qwen-image-edit-plus-2025-10-30（Qwen 图片编辑）；gemini-3-pro-image-edit（Gemini 图片编辑）"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "编辑指令：如何在参考图基础上生成新画面"
+    },
+    "referenceImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "受管参考图 URL 列表（至少一张）。取值为上下文里的图片占位符——通常是先前 generate_image 或 edit_image 返回的 artifacts 数组元素的 uri。"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "1:1",
+        "9:16",
+        "16:9"
+      ],
+      "description": "可选画幅比例，缺省由模型按输入图推断"
+    }
+  },
+  "required": [
+    "model",
+    "prompt",
+    "referenceImages"
+  ]
+}

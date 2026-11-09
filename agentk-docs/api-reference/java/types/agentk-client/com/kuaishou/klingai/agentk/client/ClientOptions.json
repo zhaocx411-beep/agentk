@@ -1,0 +1,301 @@
+{
+  "view": "client",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-client"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.client",
+  "classNames": [
+    "ClientOptions"
+  ],
+  "type": {
+    "id": "agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions",
+    "kind": "class",
+    "name": "ClientOptions",
+    "declaration": {
+      "text": "public final class ClientOptions",
+      "references": [
+        {
+          "start": 19,
+          "end": 32,
+          "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Endpoint options shared by AgentK client transports."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-endpoint-",
+        "name": "endpoint",
+        "declaration": {
+          "text": "public final String endpoint",
+          "references": [
+            {
+              "start": 13,
+              "end": 19,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 20,
+              "end": 28,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions#agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-endpoint-"
+            }
+          ]
+        },
+        "documentation": []
+      }
+    ],
+    "constructors": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-ClientOptions-",
+        "name": "ClientOptions",
+        "declaration": {
+          "text": "public ClientOptions()",
+          "references": [
+            {
+              "start": 7,
+              "end": 20,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions#agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-ClientOptions-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Creates client options that use the transport's default AgentK endpoint."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summarySignature": {
+          "text": "ClientOptions()",
+          "references": []
+        }
+      }
+    ],
+    "methods": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-forEndpoint-java-lang-String-",
+        "name": "forEndpoint",
+        "declaration": {
+          "text": "public static ClientOptions forEndpoint(String endpoint)",
+          "references": [
+            {
+              "start": 14,
+              "end": 27,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions"
+            },
+            {
+              "start": 28,
+              "end": 39,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions#agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-forEndpoint-java-lang-String-"
+            },
+            {
+              "start": 40,
+              "end": 46,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Creates client options with a fixed AgentK endpoint."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "endpoint",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "an absolute AgentK URL"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "client options using "
+                  },
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "endpoint"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Throws",
+            "name": "java.lang.IllegalArgumentException",
+            "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "if "
+                  },
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "endpoint"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " is null, empty, or not absolute"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static ClientOptions",
+          "references": [
+            {
+              "start": 7,
+              "end": 20,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "forEndpoint(String endpoint)",
+          "references": [
+            {
+              "start": 12,
+              "end": 18,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-getEndpoint-",
+        "name": "getEndpoint",
+        "declaration": {
+          "text": "public String getEndpoint()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 25,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions#agentk-client-com-kuaishou-klingai-agentk-client-ClientOptions-getEndpoint-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Returns the fixed AgentK endpoint, or an empty string when the transport default is used."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the configured endpoint"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getEndpoint()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

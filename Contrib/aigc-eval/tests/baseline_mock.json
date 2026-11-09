@@ -1,0 +1,714 @@
+{
+ "report": {
+  "analysis_status": "complete",
+  "audit_trace": [
+   {
+    "detail": "检查得分 100/100；未发现异常。",
+    "stage": "1 · 视频文件检查",
+    "status": "完成"
+   },
+   {
+    "detail": "取 10 张画面，含 6 张快动作加密，3 段快动作区间。",
+    "stage": "2 · 抽取关键画面",
+    "status": "完成"
+   },
+   {
+    "detail": "3 个主体，0 条可核对要求。",
+    "stage": "3 · 拆解提示词要求",
+    "status": "完成"
+   },
+   {
+    "detail": "记录 1 条画面描述，并按疑点触发专项复核。",
+    "stage": "4 · 看视频、记录画面",
+    "status": "离线"
+   },
+   {
+    "detail": "4b 主判给出 0 个有效问题子判据；4c 仅按候选 issue 增量取证，未执行完整八维二次裁决。",
+    "stage": "4b/4c · 原生八维事实形成",
+    "status": "离线"
+   },
+   {
+    "detail": "由代码按结构化事实生成八维三档，不计算综合分或整体质量状态。",
+    "stage": "6 · 原生八维事实聚合",
+    "status": "完成"
+   }
+  ],
+  "case": {
+   "case_id": "up_47741abf8dc843c6",
+   "case_name": "up_47741abf8dc843c6",
+   "collection": "uploads",
+   "focus": "I2V 生成",
+   "label": "up_47741abf8dc843c6",
+   "mode": "T2V"
+  },
+  "engine": "mock",
+  "evidence": [],
+  "grounding": [],
+  "integrity": {
+   "issues": [],
+   "notes": "完整性预检为确定性工具结果；冻结/黑帧等仍需 VLM 结合语义判定。",
+   "score": 100,
+   "verdict": "pass"
+  },
+  "issues": [],
+  "media": {
+   "contact_sheet_url": "./runtime/up_47741abf8dc843c6__baseline_contact.jpg",
+   "input_image_url": null,
+   "reference_urls": [],
+   "source_video_url": null,
+   "video_url": "./api/upload_media?slug=up_47741abf8dc843c6&asset=video"
+  },
+  "metadata": {
+   "audio_codec": null,
+   "codec": "h264",
+   "duration_seconds": 4.0,
+   "expected_frames": 64,
+   "file_size_mb": 0.03,
+   "fps": 16.0,
+   "frame_count": 64,
+   "has_audio": false,
+   "height": 480,
+   "width": 854
+  },
+  "mock_mode": true,
+  "native8_recheck": null,
+  "native8_scan": {
+   "issues": [],
+   "rubric": [
+    {
+     "dimension_id": "instruction_following",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "instruction_subject_attributes",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_action_relation",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_camera",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_style_environment",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_multishot",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_requested_text_audio",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "instruction_v2v_edit",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "reference_consistency",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "reference_input_fidelity",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "reference_v2v_preservation",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "reference_v2v_motion",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "visual_consistency",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "visual_inshot_temporal",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "visual_object_disappearance",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "visual_multishot_continuity",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "audio_quality",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "audio_signal_quality",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "audio_av_sync",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "audio_temporal_consistency",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "picture_quality",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "picture_clarity_codec",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "picture_text_clarity",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "picture_exposure_color",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "picture_composition_static",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "picture_structural_visibility",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "motion_quality",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "motion_physics_structure",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "motion_coordination_stability",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "motion_temporal_disappearance",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "motion_unrequested_cut",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "text_quality",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "text_legibility_gibberish",
+       "verdict": "not_observable"
+      },
+      {
+       "issue_ids": [],
+       "key": "text_position_correctness",
+       "verdict": "not_observable"
+      }
+     ]
+    },
+    {
+     "dimension_id": "story_logic",
+     "subcriteria": [
+      {
+       "issue_ids": [],
+       "key": "story_causality_continuity",
+       "verdict": "not_observable"
+      }
+     ]
+    }
+   ],
+   "schema_version": "native8-v1"
+  },
+  "observation_extras": {
+   "audio_recheck": null,
+   "focus_intervals": []
+  },
+  "observations": [
+   {
+    "confidence": "low",
+    "fact": "离线模式不执行视频事实判断。",
+    "source": "mock_observer",
+    "tags": [
+     "integrity"
+    ],
+    "time": "全片"
+   }
+  ],
+  "prompt": {
+   "en": "",
+   "gold_label": "",
+   "gold_note": "",
+   "zh": "一只橘色的猫从画面左侧走到右侧，背景是草地，阳光明亮"
+  },
+  "prompt_requirements": [],
+  "review_candidates": [],
+  "review_funnel": {},
+  "review_required": [],
+  "rubric": [
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "instruction_following",
+    "dimension_name": "指令遵循",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "instruction_subject_attributes",
+      "name": "主体数量与属性",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_action_relation",
+      "name": "动作、对象与时空关系",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_camera",
+      "name": "运镜",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_style_environment",
+      "name": "风格与环境",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_multishot",
+      "name": "多镜头计划",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_requested_text_audio",
+      "name": "明确要求的文字与音频",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "instruction_v2v_edit",
+      "name": "V2V 编辑达成",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "instruction_subject_attributes",
+     "instruction_action_relation",
+     "instruction_camera",
+     "instruction_style_environment",
+     "instruction_multishot",
+     "instruction_requested_text_audio",
+     "instruction_v2v_edit"
+    ]
+   },
+   {
+    "applicable": false,
+    "decision_status": "resolved",
+    "dimension_id": "reference_consistency",
+    "dimension_name": "参考一致性",
+    "escalated": false,
+    "feedback": [],
+    "score": null,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "reference_input_fidelity",
+      "name": "输入参考主体与静态细节",
+      "verdict": "not_applicable"
+     },
+     {
+      "issue_ids": [],
+      "key": "reference_v2v_preservation",
+      "name": "V2V 源视频保真",
+      "verdict": "not_applicable"
+     },
+     {
+      "issue_ids": [],
+      "key": "reference_v2v_motion",
+      "name": "V2V 动态继承",
+      "verdict": "not_applicable"
+     }
+    ],
+    "tier": "不适用",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "visual_consistency",
+    "dimension_name": "视觉一致性",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "visual_inshot_temporal",
+      "name": "同镜头时序一致性",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "visual_object_disappearance",
+      "name": "物体凭空消失",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "visual_multishot_continuity",
+      "name": "跨镜头一致性",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "visual_inshot_temporal",
+     "visual_object_disappearance",
+     "visual_multishot_continuity"
+    ]
+   },
+   {
+    "applicable": false,
+    "decision_status": "resolved",
+    "dimension_id": "audio_quality",
+    "dimension_name": "音频综合质量",
+    "escalated": false,
+    "feedback": [],
+    "score": null,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "audio_signal_quality",
+      "name": "音质",
+      "verdict": "not_applicable"
+     },
+     {
+      "issue_ids": [],
+      "key": "audio_av_sync",
+      "name": "音画同步",
+      "verdict": "not_applicable"
+     },
+     {
+      "issue_ids": [],
+      "key": "audio_temporal_consistency",
+      "name": "音频前后一致性",
+      "verdict": "not_applicable"
+     }
+    ],
+    "tier": "不适用",
+    "unresolved_subcriteria": []
+   },
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "picture_quality",
+    "dimension_name": "画面质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "picture_clarity_codec",
+      "name": "清晰度与编解码",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "picture_text_clarity",
+      "name": "文字清晰度（模糊/压缩）",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "picture_exposure_color",
+      "name": "曝光与色彩",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "picture_composition_static",
+      "name": "构图与静态合理性",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "picture_structural_visibility",
+      "name": "正常速度可见的结构崩坏",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "picture_clarity_codec",
+     "picture_text_clarity",
+     "picture_exposure_color",
+     "picture_composition_static",
+     "picture_structural_visibility"
+    ]
+   },
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "motion_quality",
+    "dimension_name": "动态质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "motion_physics_structure",
+      "name": "物理与结构合理性",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "motion_coordination_stability",
+      "name": "协调与稳定性",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "motion_temporal_disappearance",
+      "name": "动态过程中的物体无因消失",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "motion_unrequested_cut",
+      "name": "非 Prompt 要求的突兀切镜",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "motion_physics_structure",
+     "motion_coordination_stability",
+     "motion_temporal_disappearance",
+     "motion_unrequested_cut"
+    ]
+   },
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "text_quality",
+    "dimension_name": "文字质量",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "text_legibility_gibberish",
+      "name": "字形与乱码",
+      "verdict": "not_observable"
+     },
+     {
+      "issue_ids": [],
+      "key": "text_position_correctness",
+      "name": "位置与正确性",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "text_legibility_gibberish",
+     "text_position_correctness"
+    ]
+   },
+   {
+    "applicable": true,
+    "decision_status": "review_required",
+    "dimension_id": "story_logic",
+    "dimension_name": "故事逻辑连贯性",
+    "escalated": false,
+    "feedback": [],
+    "score": 1.0,
+    "subcriteria": [
+     {
+      "issue_ids": [],
+      "key": "story_causality_continuity",
+      "name": "因果、承接、动机和内容常识",
+      "verdict": "not_observable"
+     }
+    ],
+    "tier": "无问题",
+    "unresolved_subcriteria": [
+     "story_causality_continuity"
+    ]
+   }
+  ],
+  "sampling": {
+   "dense_count": 6,
+   "frames": [
+    {
+     "dense": true,
+     "time": 0.125
+    },
+    {
+     "dense": false,
+     "time": 0.5
+    },
+    {
+     "dense": true,
+     "time": 1.0
+    },
+    {
+     "dense": false,
+     "time": 1.5
+    },
+    {
+     "dense": true,
+     "time": 2.0
+    },
+    {
+     "dense": false,
+     "time": 2.5
+    },
+    {
+     "dense": true,
+     "time": 2.875
+    },
+    {
+     "dense": true,
+     "time": 3.0
+    },
+    {
+     "dense": true,
+     "time": 3.125
+    },
+    {
+     "dense": false,
+     "time": 3.5
+    }
+   ],
+   "shot_segments": [
+    {
+     "end": 4.0,
+     "shot_id": 1,
+     "start": 0.0
+    }
+   ],
+   "strategy": "motion_aware",
+   "windows": [
+    {
+     "end": 1.0,
+     "peak": 2.1122,
+     "start": 1.0
+    },
+    {
+     "end": 2.0,
+     "peak": 2.4993,
+     "start": 2.0
+    },
+    {
+     "end": 3.0,
+     "peak": 1.8235,
+     "start": 3.0
+    }
+   ]
+  },
+  "schema_version": "native8-v1",
+  "source": "baseline",
+  "source_label": "上传视频",
+  "v2v_align": null,
+  "vlm_error": null,
+  "zoom_findings": [],
+  "zoom_frames": []
+ },
+ "summary": {
+  "analysis_status": "complete",
+  "evidence_cards": 0,
+  "instruction_rows": 0,
+  "issue_count": 0,
+  "rubric_dims": 8,
+  "sampling_frames": 10,
+  "schema_version": "native8-v1",
+  "subcriteria": 28,
+  "top_level_keys": [
+   "analysis_status",
+   "audit_trace",
+   "case",
+   "cost",
+   "engine",
+   "evidence",
+   "from_cache",
+   "grounding",
+   "integrity",
+   "issues",
+   "llm_trace",
+   "media",
+   "metadata",
+   "mock_mode",
+   "native8_recheck",
+   "native8_scan",
+   "observation_extras",
+   "observations",
+   "prompt",
+   "prompt_requirements",
+   "report_html_path",
+   "report_view_url",
+   "review_candidates",
+   "review_funnel",
+   "review_required",
+   "rubric",
+   "sampling",
+   "schema_version",
+   "source",
+   "source_label",
+   "trace_saved_path",
+   "v2v_align",
+   "vlm_error",
+   "zoom_findings",
+   "zoom_frames"
+  ],
+  "trace_steps": 5
+ }
+}

@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  height: @header-height;
+  padding: 0 @spacing-lg;
+  background: @canvas;
+  line-height: @header-height;
+  box-shadow: @shadow-md;
+}
+
+.left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  height: 100%;
+  gap: @spacing-sm;
+}
+
+.trigger {
+  flex-shrink: 0;
+  font-size: @font-size-lg;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, @primary-color, @primary-gradient-end);
+  color: @on-primary;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: @border-radius-md;
+}
+
+.logoText {
+  margin-left: 10px;
+  color: @text-color;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.menu {
+  flex: 1;
+  min-width: 0;
+  margin-left: @spacing-md;
+  border-bottom: none !important;
+  background: transparent;
+  line-height: @header-height;
+
+  :global {
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+      display: inline-flex;
+      align-items: center;
+      padding-inline: @spacing-md;
+      line-height: @header-height;
+    }
+
+    .ant-menu-item-selected,
+    .ant-menu-submenu-selected > .ant-menu-submenu-title {
+      color: @primary-color;
+      font-weight: 500;
+    }
+
+    .ant-menu-item::after,
+    .ant-menu-submenu::after {
+      inset-inline: @spacing-md;
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  cursor: default;
+}
+
+.username {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+// --- 移动端适配 ---
+@media (max-width: @screen-md) {
+  .header {
+    padding: 0 @spacing-mobile;
+  }
+
+  .logoText {
+    font-size: 14px;
+  }
+}

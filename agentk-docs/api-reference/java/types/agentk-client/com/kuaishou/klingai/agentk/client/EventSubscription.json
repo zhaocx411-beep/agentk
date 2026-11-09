@@ -1,0 +1,203 @@
+{
+  "view": "client",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-client"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.client",
+  "classNames": [
+    "EventSubscription"
+  ],
+  "type": {
+    "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription",
+    "kind": "interface",
+    "name": "EventSubscription",
+    "declaration": {
+      "text": "public interface EventSubscription extends AutoCloseable",
+      "references": [
+        {
+          "start": 17,
+          "end": 34,
+          "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription"
+        },
+        {
+          "start": 43,
+          "end": 56,
+          "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/AutoCloseable.html"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "A cancellable subscription to a live AgentK event stream."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-cancel-",
+        "name": "cancel",
+        "declaration": {
+          "text": "public abstract void cancel()",
+          "references": [
+            {
+              "start": 21,
+              "end": 27,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription#agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-cancel-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Stops receiving events. "
+                  }
+                ]
+              },
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Cancellation does not invoke the observer's terminal callbacks."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "cancel()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-close-",
+        "name": "close",
+        "declaration": {
+          "text": "public void close()",
+          "references": [
+            {
+              "start": 12,
+              "end": 17,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription#agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-close-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Cancels this subscription."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "close()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-isCancelled-",
+        "name": "isCancelled",
+        "declaration": {
+          "text": "public abstract boolean isCancelled()",
+          "references": [
+            {
+              "start": 24,
+              "end": 35,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription#agentk-client-com-kuaishou-klingai-agentk-client-EventSubscription-isCancelled-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Reports whether this subscription has been cancelled."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " after cancellation"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "isCancelled()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@ks-agentk/protocol",
+  "version": "0.1.0",
+  "description": "AgentK API protocol messages and service descriptors",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "gen/",
+    "api/",
+    "common/",
+    "invocation/"
+  ],
+  "exports": {
+    "./gen/*": null,
+    "./api/v1": {
+      "types": "./api/v1/index.d.ts",
+      "import": "./api/v1/index.js"
+    },
+    "./common/v1": {
+      "types": "./common/v1/index.d.ts",
+      "import": "./common/v1/index.js"
+    },
+    "./invocation/v1": {
+      "types": "./invocation/v1/index.d.ts",
+      "import": "./invocation/v1/index.js"
+    },
+    "./*.js": {
+      "types": "./gen/agentk/*.d.ts",
+      "import": "./gen/agentk/*.js"
+    },
+    "./agentk/*.js": {
+      "types": "./gen/agentk/*.d.ts",
+      "import": "./gen/agentk/*.js"
+    }
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git",
+    "directory": "typescript/protocol"
+  },
+  "publishConfig": {
+    "registry": "https://npm.corp.kuaishou.com"
+  }
+}

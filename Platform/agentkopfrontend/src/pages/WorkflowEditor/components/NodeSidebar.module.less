@@ -1,0 +1,129 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: 100%;
+  padding: 12px;
+  background: @canvas;
+  border-right: 1px solid @divider;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.title {
+  color: rgb(0 0 0 / 88%);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hint {
+  color: rgb(0 0 0 / 45%);
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.group {
+  margin-top: 8px;
+}
+
+.groupTitle {
+  color: rgb(0 0 0 / 65%);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.groupHint {
+  color: rgb(0 0 0 / 35%);
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.groupList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.template {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: @border-radius-sm;
+  border: 1px solid @divider;
+  border-left: 3px solid @primary-color;
+  cursor: grab;
+  transition: all 0.2s;
+  user-select: none;
+
+  &:hover {
+    border-color: @primary-color;
+    background: @primary-subdued;
+  }
+
+  &:active {
+    cursor: grabbing;
+    opacity: 0.7;
+  }
+}
+
+.icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.name {
+  color: rgb(0 0 0 / 88%);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.desc {
+  color: rgb(0 0 0 / 45%);
+  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 快捷模板分隔区 */
+.templatesDivider {
+  height: 1px;
+  margin: 8px 0 4px;
+  background: @divider;
+}
+
+/* 快捷 Pipeline 模板卡片（可点击） */
+.workflowTemplate {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid @divider;
+  border-left: 3px solid @primary-color;
+  border-radius: @border-radius-sm;
+  background: @canvas;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: @primary-color;
+    background: @primary-subdued;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+}

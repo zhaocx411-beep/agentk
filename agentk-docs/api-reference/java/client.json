@@ -1,0 +1,59 @@
+{
+  "view": "client",
+  "artifacts": [
+    {
+      "groupId": "com.kuaishou.klingai.agentk",
+      "artifactId": "agentk-client",
+      "packages": [
+        {
+          "name": "com.kuaishou.klingai.agentk.client",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "interface",
+              "name": "AgentKClient",
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient",
+              "summary": "Authenticated, transport-independent access to the AgentK API."
+            },
+            {
+              "kind": "class",
+              "name": "ClientOptions",
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions",
+              "summary": "Endpoint options shared by AgentK client transports."
+            },
+            {
+              "kind": "interface",
+              "name": "EventObserver",
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver",
+              "summary": "Receives frames and terminal signals from a WatchEvents stream."
+            },
+            {
+              "kind": "interface",
+              "name": "EventSubscription",
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventSubscription",
+              "summary": "A cancellable subscription to a live AgentK event stream."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "com.kuaishou.klingai.agentk",
+      "artifactId": "agentk-client-grpc",
+      "packages": [
+        {
+          "name": "com.kuaishou.klingai.agentk.client.grpc",
+          "documentation": [],
+          "types": [
+            {
+              "kind": "class",
+              "name": "AgentKGrpcClient",
+              "href": "/reference/java/client/agentk-client-grpc/com/kuaishou/klingai/agentk/client/grpc/AgentKGrpcClient",
+              "summary": "Creates AgentK clients that use KESS service discovery and gRPC over h2c."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

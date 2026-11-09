@@ -1,0 +1,12 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "本会话托管漫剧成片 pipeline（comic_drama_film）。执行只由调用方通过 StartExecution 显式启动。",
+  "tools": [],
+  "pipelines": [
+    {
+      "capability": "contrib.studio.comic_drama_film",
+      "name": "comic_drama_film",
+      "displayName": "漫剧成片"
+    }
+  ]
+}

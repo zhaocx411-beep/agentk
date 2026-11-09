@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "z-image-turbo",
+        "gpt-image-2",
+        "gemini-3-pro-image",
+        "gemini-3.1-flash-image"
+      ],
+      "description": "使用的模型。候选：z-image-turbo（快速文生图）；gpt-image-2（GPT Image 文生图）；gemini-3-pro-image（Gemini 高质量文生图）；gemini-3.1-flash-image（Gemini 快速文生图）"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "画面内容与风格描述"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "1:1",
+        "9:16",
+        "16:9"
+      ],
+      "description": "画幅比例，缺省 1:1"
+    }
+  },
+  "required": [
+    "model",
+    "prompt"
+  ]
+}

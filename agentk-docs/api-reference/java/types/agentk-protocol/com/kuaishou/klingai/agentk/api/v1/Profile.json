@@ -1,0 +1,1276 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "Profile"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile",
+    "kind": "class",
+    "name": "Profile",
+    "declaration": {
+      "text": "@Generated()public final class Profile extends GeneratedMessage implements ProfileOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 38,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.Profile"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-containsToolDefaults-java-lang-String-",
+        "name": "containsToolDefaults",
+        "declaration": {
+          "text": "public boolean containsToolDefaults(String key)",
+          "references": [
+            {
+              "start": 15,
+              "end": 35,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-containsToolDefaults-java-lang-String-"
+            },
+            {
+              "start": 36,
+              "end": 42,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "map<string, .google.protobuf.Struct> tool_defaults = 4 [json_name = \"toolDefaults\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "containsToolDefaults(String key)",
+          "references": [
+            {
+              "start": 21,
+              "end": 27,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getDefaultModel-",
+        "name": "getDefaultModel",
+        "declaration": {
+          "text": "public String getDefaultModel()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getDefaultModel-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string default_model = 1 [json_name = \"defaultModel\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The defaultModel."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getDefaultModel()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getDefaultModelBytes-",
+        "name": "getDefaultModelBytes",
+        "declaration": {
+          "text": "public ByteString getDefaultModelBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getDefaultModelBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string default_model = 1 [json_name = \"defaultModel\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for defaultModel."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDefaultModelBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getMaxToolRounds-",
+        "name": "getMaxToolRounds",
+        "declaration": {
+          "text": "public int getMaxToolRounds()",
+          "references": [
+            {
+              "start": 11,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getMaxToolRounds-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "int32 max_tool_rounds = 6 [json_name = \"maxToolRounds\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The maxToolRounds."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getMaxToolRounds()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelines-int-",
+        "name": "getPipelines",
+        "declaration": {
+          "text": "public ProfilePipeline getPipelines(int index)",
+          "references": [
+            {
+              "start": 7,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            },
+            {
+              "start": 23,
+              "end": 35,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelines-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfilePipeline pipelines = 5 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ProfilePipeline",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPipelines(int index)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelinesCount-",
+        "name": "getPipelinesCount",
+        "declaration": {
+          "text": "public int getPipelinesCount()",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelinesCount-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfilePipeline pipelines = 5 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getPipelinesCount()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelinesList-",
+        "name": "getPipelinesList",
+        "declaration": {
+          "text": "public List<ProfilePipeline> getPipelinesList()",
+          "references": [
+            {
+              "start": 7,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 12,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            },
+            {
+              "start": 29,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getPipelinesList-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfilePipeline pipelines = 5 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "List<ProfilePipeline>",
+          "references": [
+            {
+              "start": 0,
+              "end": 4,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 5,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfilePipeline"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPipelinesList()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getSystem-",
+        "name": "getSystem",
+        "declaration": {
+          "text": "public String getSystem()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getSystem-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string system = 2 [json_name = \"system\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The system."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getSystem()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getSystemBytes-",
+        "name": "getSystemBytes",
+        "declaration": {
+          "text": "public ByteString getSystemBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getSystemBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string system = 2 [json_name = \"system\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for system."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getSystemBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaults-",
+        "name": "getToolDefaults",
+        "declaration": {
+          "text": "@Deprecated()public Map<String, Struct> getToolDefaults()",
+          "references": [
+            {
+              "start": 1,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html"
+            },
+            {
+              "start": 20,
+              "end": 23,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 24,
+              "end": 30,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 40,
+              "end": 55,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaults-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Use "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsMap-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "getToolDefaultsMap"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " instead."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Map<String, Struct>",
+          "references": [
+            {
+              "start": 0,
+              "end": 3,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 4,
+              "end": 10,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolDefaults()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsCount-",
+        "name": "getToolDefaultsCount",
+        "declaration": {
+          "text": "public int getToolDefaultsCount()",
+          "references": [
+            {
+              "start": 11,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsCount-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "map<string, .google.protobuf.Struct> tool_defaults = 4 [json_name = \"toolDefaults\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolDefaultsCount()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsMap-",
+        "name": "getToolDefaultsMap",
+        "declaration": {
+          "text": "public Map<String, Struct> getToolDefaultsMap()",
+          "references": [
+            {
+              "start": 7,
+              "end": 10,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 11,
+              "end": 17,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 27,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsMap-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "map<string, .google.protobuf.Struct> tool_defaults = 4 [json_name = \"toolDefaults\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Map<String, Struct>",
+          "references": [
+            {
+              "start": 0,
+              "end": 3,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 4,
+              "end": 10,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolDefaultsMap()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsOrDefault-java-lang-String-com-google-protobuf-Struct-",
+        "name": "getToolDefaultsOrDefault",
+        "declaration": {
+          "text": "public Struct getToolDefaultsOrDefault(String key, Struct defaultValue)",
+          "references": [
+            {
+              "start": 14,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsOrDefault-java-lang-String-com-google-protobuf-Struct-"
+            },
+            {
+              "start": 39,
+              "end": 45,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "map<string, .google.protobuf.Struct> tool_defaults = 4 [json_name = \"toolDefaults\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Struct",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolDefaultsOrDefault(String key, Struct defaultValue)",
+          "references": [
+            {
+              "start": 25,
+              "end": 31,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsOrThrow-java-lang-String-",
+        "name": "getToolDefaultsOrThrow",
+        "declaration": {
+          "text": "public Struct getToolDefaultsOrThrow(String key)",
+          "references": [
+            {
+              "start": 14,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolDefaultsOrThrow-java-lang-String-"
+            },
+            {
+              "start": 37,
+              "end": 43,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "map<string, .google.protobuf.Struct> tool_defaults = 4 [json_name = \"toolDefaults\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Struct",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolDefaultsOrThrow(String key)",
+          "references": [
+            {
+              "start": 23,
+              "end": 29,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getTools-int-",
+        "name": "getTools",
+        "declaration": {
+          "text": "public ProfileTool getTools(int index)",
+          "references": [
+            {
+              "start": 7,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfileTool"
+            },
+            {
+              "start": 19,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getTools-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfileTool tools = 3 [json_name = \"tools\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ProfileTool",
+          "references": [
+            {
+              "start": 0,
+              "end": 11,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfileTool"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getTools(int index)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolsCount-",
+        "name": "getToolsCount",
+        "declaration": {
+          "text": "public int getToolsCount()",
+          "references": [
+            {
+              "start": 11,
+              "end": 24,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolsCount-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfileTool tools = 3 [json_name = \"tools\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolsCount()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolsList-",
+        "name": "getToolsList",
+        "declaration": {
+          "text": "public List<ProfileTool> getToolsList()",
+          "references": [
+            {
+              "start": 7,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 12,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfileTool"
+            },
+            {
+              "start": 25,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-getToolsList-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.ProfileTool tools = 3 [json_name = \"tools\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "List<ProfileTool>",
+          "references": [
+            {
+              "start": 0,
+              "end": 4,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 5,
+              "end": 16,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ProfileTool"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolsList()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static Profile.Builder newBuilder()",
+          "references": [
+            {
+              "start": 30,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilder-com-kuaishou-klingai-agentk-api-v1-Profile-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static Profile.Builder newBuilder(Profile prototype)",
+          "references": [
+            {
+              "start": 30,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilder-com-kuaishou-klingai-agentk-api-v1-Profile-"
+            },
+            {
+              "start": 41,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(Profile prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public Profile.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 23,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public Profile.Builder toBuilder()",
+          "references": [
+            {
+              "start": 23,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Profile#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Profile-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

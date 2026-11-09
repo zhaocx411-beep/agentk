@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "gemini-3.1-pro-preview",
+        "gemini-3-flash-preview",
+        "gemini-3.1-flash-lite"
+      ],
+      "description": "使用的模型。候选：gemini-3.1-pro-preview、gemini-3-flash-preview、gemini-3.1-flash-lite"
+    },
+    "videoUrl": {
+      "type": "string",
+      "description": "要精查的视频 HTTP/HTTPS URL；只接受单个视频"
+    },
+    "startSeconds": {
+      "type": "number",
+      "minimum": 0,
+      "description": "区间起点，单位秒，使用原视频时间轴；可以是小数"
+    },
+    "endSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "区间终点，单位秒，必须大于 startSeconds 且不超过视频总时长"
+    },
+    "fps": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 24,
+      "description": "可选采样帧率，范围 (0, 24]；不填时模型缺省为 1 FPS"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "对该区间的具体分析要求。需要时间轴结果时，应分别要求画面、镜头、对白、音乐/音效、字幕、观察事实与不确定项"
+    }
+  },
+  "required": [
+    "model",
+    "videoUrl",
+    "startSeconds",
+    "endSeconds",
+    "prompt"
+  ]
+}

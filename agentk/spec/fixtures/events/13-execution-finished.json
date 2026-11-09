@@ -1,0 +1,12 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a13",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "kind": "execution.finished",
+  "data": {
+    "status": "completed",
+    "pipeline": {
+      "output": {"film": "https://cdn.example.com/agentk/video/film.mp4"}
+    }
+  },
+  "createdAt": "2026-08-01T09:10:00Z"
+}

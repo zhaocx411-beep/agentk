@@ -1,0 +1,3 @@
+# --quiet：屏蔽 lint-staged 的进度日志（默认写入 stderr，会被 VS Code / Cursor 的 Git 面板
+# 误判为提交失败并弹窗中断提交）。校验任务本身报错时仍会输出，不影响拦截问题代码。
+npx lint-staged --quiet

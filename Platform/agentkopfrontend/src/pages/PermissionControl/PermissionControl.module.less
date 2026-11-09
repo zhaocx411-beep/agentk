@@ -1,0 +1,86 @@
+/* 权限控制页面样式 */
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  color: @text-color-secondary;
+  font-size: 14px;
+  margin-bottom: @spacing-lg;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.subtitleIcon {
+  color: @primary-color;
+  font-size: 16px;
+}
+
+/* 统计信息栏 */
+.statsBar {
+  display: flex;
+  align-items: center;
+  gap: @spacing-md;
+  margin-bottom: @spacing-lg;
+  flex-shrink: 0;
+}
+
+.statsItem {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.statsValue {
+  color: @primary-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+/* 操作区域 */
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @spacing-md;
+  flex-shrink: 0;
+}
+
+.actionTitle {
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+/* 表格卡片容器 - 蒙层滚动 */
+.tableCard {
+  position: relative;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @canvas;
+  overflow: hidden;
+}
+
+/* 底部渐变蒙层，提示可滚动 */
+.scrollFade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 40px;
+  background: linear-gradient(to bottom, fade(@canvas, 0%), fade(@canvas, 80%));
+  pointer-events: none;
+}
+
+/* 新增权限弹窗 */
+.addModal {
+  :global(.ant-modal-body) {
+    padding-top: @spacing-lg;
+  }
+}
+
+.roleTag {
+  font-family: @font-mono;
+}

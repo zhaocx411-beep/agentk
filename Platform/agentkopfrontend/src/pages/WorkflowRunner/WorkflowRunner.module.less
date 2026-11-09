@@ -1,0 +1,385 @@
+@import url('@/styles/variables.less');
+
+.page {
+  display: flex;
+  height: 100%;
+  background: @canvas;
+}
+
+/* ========== 左侧配置面板 ========== */
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  min-height: 0;
+  padding: @spacing-md;
+  background: @canvas;
+  flex-shrink: 0;
+  border-right: 1px solid @divider;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.panelHeader {
+  margin-bottom: @spacing-md;
+  padding-bottom: @spacing-sm;
+  border-bottom: 1px solid @divider;
+}
+
+.panelTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-sm;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  color: @text-color;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sectionIcon {
+  color: @text-color-secondary;
+  font-size: 14px;
+}
+
+.sectionDesc {
+  margin: 0 0 @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.subSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: @spacing-sm;
+}
+
+.label {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* 参数配置标题行：label + 表单/JSON 模式切换 */
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @spacing-xs;
+
+  .label {
+    margin-bottom: 0;
+  }
+}
+
+.divider {
+  margin: @spacing-sm 0;
+}
+
+.select {
+  width: 100%;
+}
+
+/* Pipeline 参数表单 */
+.wfDescription {
+  margin-top: @spacing-xs;
+  padding: @spacing-xs @spacing-sm;
+  background: @primary-subdued;
+  border-left: 2px solid @primary-color;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  border-radius: @border-radius-sm;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.wfParams {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.wfParamItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wfParamLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.wfParamRequired {
+  color: @error-color;
+  margin-left: 2px;
+}
+
+.wfParamInput {
+  width: 100%;
+}
+
+.runBtn {
+  margin-top: @spacing-sm;
+}
+
+/* 运行历史 / 历史会话列表 */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.historyEmpty {
+  padding: @spacing-md 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+.historyLoading {
+  padding: @spacing-xs 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+.historyItem {
+  padding: @spacing-xxs;
+  border-radius: @border-radius-sm;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: @surface-2;
+  }
+}
+
+.historyItemBody {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-xs;
+  min-width: 0;
+  padding: 6px @spacing-sm;
+  border-radius: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 1px;
+  }
+}
+
+.historyItemActive {
+  background: @primary-subdued;
+
+  &:hover {
+    background: @primary-subdued;
+  }
+}
+
+.historyHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-xs;
+}
+
+.historyName {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyTag {
+  height: 18px;
+  margin: 0;
+  padding: 0 6px;
+  font-size: 10px;
+  line-height: 16px;
+  flex-shrink: 0;
+}
+
+.historyRunId {
+  margin-top: 2px;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  font-family: @font-mono;
+}
+
+/* ========== 右侧输出区 ========== */
+.output {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: @spacing-lg;
+  overflow-y: auto;
+}
+
+.outputBody {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.outputLoading {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-md;
+}
+
+.outputLoadingText {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.outputEmpty {
+  margin-top: 120px;
+}
+
+/* ========== 持久化（新建/存草稿/版本管理） ========== */
+.persistBtns {
+  display: flex;
+  gap: @spacing-xs;
+  margin-top: @spacing-sm;
+
+  :global(.ant-btn) {
+    flex: 1;
+    font-size: @font-size-caption;
+  }
+}
+
+.newWorkflowBtn {
+  margin-top: @spacing-xs;
+  border-style: dashed;
+}
+
+/* 弹窗表单 */
+.formCol {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.formLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.formHint {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.required::before {
+  content: '*';
+  color: @error-color;
+  margin-right: @spacing-xxs;
+}
+
+.jsonEditor {
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+}
+
+/* 版本管理抽屉 */
+.versionManagerHeader {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-md;
+}
+
+.versionManagerSelect {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.versionManagerDesc {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 版本详情弹窗：Tab 导航固定，内容区滚动 */
+.detailModalBody {
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  overflow: hidden;
+
+  :global(.ant-tabs) {
+    flex: 1;
+    min-height: 0;
+  }
+
+  :global(.ant-tabs-content-holder) {
+    min-height: 0;
+    overflow-y: auto;
+  }
+}
+
+.detailWorkflows {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.jsonPreview {
+  max-height: 60vh;
+  margin: 0;
+  padding: @spacing-sm @spacing-md;
+  background: @surface-2;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  border-radius: @border-radius-sm;
+  font-family: @font-mono;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-y: auto;
+}

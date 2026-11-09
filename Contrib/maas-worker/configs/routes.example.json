@@ -1,0 +1,80 @@
+{
+  "routes": {
+    "ffmpeg": {
+      "serviceName": "maas-agentalgo-klingai-ffmpeg-tool",
+      "timeoutSeconds": 600,
+      "defaultFeatures": {
+        "db": "<agentk-artifact-db>",
+        "table": "<agentk-artifact-table>"
+      },
+      "allowedFeatures": [
+        "db", "table", "op", "params", "pipeline", "refs",
+        "video", "video2", "audio", "image", "subtitle", "font",
+        "videos", "audios"
+      ]
+    },
+    "indextts": {
+      "serviceName": "maas-agentalgo-klingai-indextts-2-vllm-0805-1",
+      "timeoutSeconds": 300,
+      "defaultFeatures": {
+        "db": "<agentk-artifact-db>",
+        "table": "<agentk-artifact-table>"
+      },
+      "allowedFeatures": [
+        "client_request_id", "client_start_time_ms", "db", "table", "text",
+        "spk_audio", "emo_control_method", "emo_audio", "emo_weight",
+        "emo_vec", "emo_text", "emo_random", "max_text_tokens_per_sentence"
+      ]
+    },
+    "transnet": {
+      "serviceName": "maas-agentalgo-klingai-transnet-v2-pytorch",
+      "timeoutSeconds": 600,
+      "allowedFeatures": ["video", "min_shot_duration"]
+    },
+    "melband": {
+      "serviceName": "maas-agentalgo-klingai-melband-roformer",
+      "timeoutSeconds": 600,
+      "defaultFeatures": {
+        "db": "<agentk-artifact-db>",
+        "table": "<agentk-artifact-table>"
+      },
+      "allowedFeatures": ["db", "table", "audio", "stems"]
+    },
+    "wav2vec2": {
+      "serviceName": "maas-agentalgo-klingai-wav2vec2-0817",
+      "timeoutSeconds": 300,
+      "allowedFeatures": ["audio"]
+    },
+    "qwen3-embedding": {
+      "serviceName": "maas-agentalgo-klingai-qwen3-embedding-8b",
+      "timeoutSeconds": 300,
+      "allowedFeatures": ["texts", "instruction", "normalize", "dimensions"]
+    },
+    "ppocrv6": {
+      "serviceName": "maas-agentalgo-klingai-ppocrv6",
+      "timeoutSeconds": 300,
+      "allowedFeatures": [
+        "image", "text_det_limit_side_len", "text_det_limit_type",
+        "text_det_thresh", "text_det_box_thresh", "text_det_unclip_ratio",
+        "text_rec_score_thresh"
+      ]
+    },
+    "minimax-remover": {
+      "serviceName": "maas-agentalgo-klingai-minimax-remover",
+      "timeoutSeconds": 900,
+      "allowedFeatures": [
+        "db", "table", "video", "mask", "seed", "num_frames", "fps",
+        "num_inference_steps", "dilation_iterations"
+      ]
+    },
+    "minimax-h3": {
+      "serviceName": "maas-agentalgo-klingai-minimax-h3-fl2va",
+      "timeoutSeconds": 1800,
+      "allowedFeatures": [
+        "db", "table", "task", "prompt", "video", "conditions", "seconds",
+        "aspect_ratio", "short_edge", "num_inference_steps", "flow_shift",
+        "audio_flow_shift", "seed"
+      ]
+    }
+  }
+}

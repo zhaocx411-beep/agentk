@@ -1,0 +1,334 @@
+@import url('@/styles/variables.less');
+
+.card {
+  max-width: 100%;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-2;
+  border-radius: @border-radius-lg;
+}
+
+/* 头部 */
+.head {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-xs;
+}
+
+.headIcon {
+  color: @primary-color;
+  font-size: 14px;
+}
+
+.wfName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.runId {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+}
+
+.statusTag {
+  height: 20px;
+  margin: 0;
+  padding: 0 6px;
+  font-size: 10px;
+  line-height: 18px;
+  margin-left: auto;
+}
+
+/* 参数 */
+.params {
+  margin-bottom: @spacing-xs;
+}
+
+.paramsSummary {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: @spacing-xs;
+}
+
+.paramsPre {
+  padding: @spacing-sm;
+  border-radius: @border-radius-sm;
+  background: @surface-3;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  font: 12px/1.5 @font-mono;
+}
+
+/* 节点列表 */
+.nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nodeRow {
+  border: 1px solid @hairline;
+  border-radius: @border-radius-sm;
+  background: @canvas;
+  font-size: @font-size-caption;
+  overflow: hidden;
+}
+
+.nodeRow summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nodeRow summary::-webkit-details-marker {
+  display: none;
+}
+
+.nodeSummary {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  padding: 4px @spacing-sm;
+}
+
+/* 展开/收起指示图标 */
+.nodeToggleIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: @text-color-tertiary;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.nodeRow .iconCollapsed {
+  display: inline-block;
+}
+
+.nodeRow .iconExpanded {
+  display: none;
+}
+
+.nodeRow[open] .iconCollapsed {
+  display: none;
+}
+
+.nodeRow[open] .iconExpanded {
+  display: inline-block;
+}
+
+.nodeDetailContent {
+  padding: @spacing-sm;
+  padding-top: 0;
+  border-top: 1px solid @hairline;
+}
+
+.nodeIcon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.nodeName {
+  min-width: 60px;
+  color: @text-color;
+  font-family: @font-mono;
+  font-weight: 500;
+}
+
+.nodeStatus {
+  color: @text-color-secondary;
+  font-size: 11px;
+  margin-left: auto;
+
+  &.nodeStatus_pending {
+    color: @text-color-tertiary;
+  }
+
+  &.nodeStatus_running {
+    color: @primary-color;
+  }
+
+  &.nodeStatus_completed {
+    color: @success-color;
+  }
+
+  &.nodeStatus_failed {
+    color: @error-color;
+  }
+
+  &.nodeStatus_skipped {
+    color: @text-color-tertiary;
+  }
+}
+
+.nodeDuration {
+  color: @text-color-tertiary;
+  font-size: 10px;
+  font-family: @font-mono;
+}
+
+.nodeError {
+  max-width: 120px;
+  color: @error-color;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== 顶层输出区 ========== */
+.outputSection {
+  margin-top: @spacing-sm;
+  padding-top: @spacing-sm;
+  border-top: 1px solid @hairline;
+}
+
+.outputTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  margin-bottom: @spacing-sm;
+}
+
+.outputPre {
+  padding: @spacing-sm;
+  border-radius: @border-radius-sm;
+  background: @surface-3;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  font: 12px/1.5 @font-mono;
+}
+
+/* ========== 媒体输出 ========== */
+.mediaSection {
+  margin-bottom: @spacing-sm;
+  margin-top: @spacing-sm;
+}
+
+.mediaLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.mediaIcon {
+  color: @primary-color;
+  font-size: 14px;
+}
+
+.mediaCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: @primary-color;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* 视频网格 */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: @spacing-sm;
+}
+
+.videoItem {
+  border: 1px solid @hairline;
+  background: @canvas;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+}
+
+.videoPlayer {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  background: #000;
+}
+
+/* 图片网格 */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: @spacing-sm;
+}
+
+.imageItem {
+  border: 1px solid @hairline;
+  background: @canvas;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+}
+
+.imagePreview {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+/* ========== 节点详情折叠 ========== */
+.nodeOutputDetails {
+  margin-top: @spacing-xs;
+}
+
+.nodeOutputSummary {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: @spacing-xs;
+}
+
+.nodeOutputList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.nodeOutputItem {
+  padding: @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-sm;
+  background: @canvas;
+}
+
+.nodeOutputName {
+  display: block;
+  margin-bottom: @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+  font-weight: 500;
+}
+
+/* 错误条 */
+.errorBar {
+  margin-top: @spacing-xs;
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid #fecaca;
+  border-radius: @border-radius-sm;
+  background: #fef2f2;
+  color: @error-color;
+  font-size: @font-size-caption;
+}

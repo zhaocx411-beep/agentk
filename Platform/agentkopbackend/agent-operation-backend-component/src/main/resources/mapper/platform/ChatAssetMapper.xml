@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.platform.dao.mapper.ChatAssetMapper">
+
+    <select id="listDistinctBoundAgentNames" resultType="java.lang.String">
+        SELECT DISTINCT a.agent_name AS name
+        FROM aop_asset a
+        WHERE a.agent_name IS NOT NULL AND a.agent_name &lt;&gt; ''
+        <if test="userId != null and userId != ''">
+            AND a.user_id = #{userId}
+        </if>
+        <if test="publicOnly">
+            AND (
+                EXISTS (
+                    SELECT 1 FROM aop_agent ag
+                    WHERE ag.name = a.agent_name
+                      AND LOWER(ag.visibility) = 'public'
+                )
+                OR EXISTS (
+                    SELECT 1 FROM aop_workflow w
+                    WHERE LOWER(w.visibility) = 'public'
+                      AND (w.name = a.agent_name OR w.agentk_id = a.agent_name)
+                )
+                OR a.source_kind = 'api'
+            )
+        </if>
+        ORDER BY name ASC
+    </select>
+
+    <select id="listDistinctBoundWorkflowNames" resultType="java.lang.String">
+        SELECT DISTINCT w.name AS name
+        FROM aop_asset a
+        INNER JOIN aop_session s ON s.id = a.session_id
+        INNER JOIN aop_workflow_version wv ON wv.id = s.workflow_version_id
+        INNER JOIN aop_workflow w ON w.id = wv.workflow_id
+        WHERE a.status = 'synced'
+          AND a.asset_type IN ('image', 'video')
+          AND s.session_kind = 'workflow'
+          AND w.name IS NOT NULL AND w.name &lt;&gt; ''
+          AND NOT EXISTS (
+            SELECT 1 FROM aop_execution r
+            WHERE r.`status` = 'failed'
+              AND a.execution_id IS NOT NULL AND a.execution_id &gt; 0 AND r.id = a.execution_id
+          )
+        <if test="userId != null and userId != ''">
+            AND a.user_id = #{userId}
+        </if>
+        ORDER BY name ASC
+    </select>
+
+    <update id="batchRefreshAssetUrls">
+        UPDATE aop_asset
+        SET updated_at = NOW(),
+            asset_url = CASE id
+            <foreach collection="urls" index="id" item="url">
+                WHEN #{id} THEN #{url}
+            </foreach>
+            END
+        WHERE id IN
+        <foreach collection="urls.keys" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>

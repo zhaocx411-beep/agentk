@@ -1,0 +1,39 @@
+[project]
+name = "agentk-python-workspace"
+version = "0.0.0"
+requires-python = ">=3.12,<4"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+  "griffe==2.2.0",
+  "protoc-gen-connectrpc",
+  "protoc-gen-py",
+]
+
+[tool.uv.workspace]
+members = ["client", "protocol", "worker"]
+
+[tool.uv.sources]
+ks-agentk-client = { workspace = true }
+ks-agentk-protocol = { workspace = true }
+ks-resolve = { index = "kuaishou" }
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.ruff]
+extend-exclude = ["README.md"]
+
+[[tool.uv.index]]
+name = "kuaishou"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+explicit = true
+
+[[tool.uv.index]]
+name = "kuaishou-staging"
+url = "https://pypi.corp.kuaishou.com/kuaishou/staging/+simple/"
+explicit = true

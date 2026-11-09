@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.platform.dao.mapper.RunEventMapper">
+
+    <resultMap id="RunEventMap" type="com.kuaishou.agent.operation.backend.platform.entity.RunEvent">
+        <id column="id" property="id"/>
+        <result column="session_id" property="sessionId"/>
+        <result column="execution_id" property="runId"/>
+        <result column="agentk_execution_id" property="agentkRunId"/>
+        <result column="agentk_session_id" property="agentkSessionId"/>
+        <result column="agentk_event_id" property="agentkEventId"/>
+        <result column="round_id" property="roundId"/>
+        <result column="seq" property="seq"/>
+        <result column="kind" property="kind"/>
+        <result column="payload_json" property="payloadJson"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="agentk_created_at" property="agentkCreatedAt"/>
+        <result column="entry_source" property="entrySource"/>
+    </resultMap>
+
+    <sql id="eventColumns">
+        id, session_id, execution_id, agentk_execution_id, agentk_session_id, agentk_event_id,
+        round_id, seq, kind, payload_json, created_at, agentk_created_at, entry_source
+    </sql>
+
+    <insert id="insertEvent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aop_session_event (
+            session_id, execution_id, agentk_execution_id, agentk_session_id, agentk_event_id,
+            round_id, seq, kind, payload_json, created_at, agentk_created_at, entry_source
+        ) VALUES (
+            #{sessionId}, #{runId}, #{agentkRunId}, #{agentkSessionId}, #{agentkEventId},
+            #{roundId}, #{seq}, #{kind}, #{payloadJson}, #{createdAt}, #{agentkCreatedAt}, #{entrySource}
+        )
+    </insert>
+
+    <select id="selectByAgentkExecutionIdAndSeq" resultMap="RunEventMap">
+        SELECT <include refid="eventColumns"/>
+        FROM aop_session_event
+        WHERE agentk_execution_id = #{agentkExecutionId}
+          AND seq = #{seq}
+        LIMIT 1
+    </select>
+</mapper>

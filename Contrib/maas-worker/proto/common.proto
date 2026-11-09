@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package infer;
+
+option go_package = "git.corp.kuaishou.com/klingai-agentk/contrib/maas-worker.git/gen/infer;inferpb";
+
+message Int32Array {
+  repeated int32 int32_elems = 1 [packed = true];
+}
+
+message Int64Array {
+  repeated int64 int64_elems = 1 [packed = true];
+}
+
+message FloatArray {
+  repeated float float_elems = 1 [packed = true];
+}
+
+message StringArray {
+  repeated string str_elems = 1;
+}
+
+message BoolArray {
+  repeated bool bool_elems = 1;
+}
+
+message BytesArray {
+  repeated bytes bytes_elems = 1;
+}
+
+message ExFeatureMap {
+  map<string, ExFeature> map = 1;
+}
+
+message ExFeatureArray {
+  repeated ExFeature array_elems = 1;
+}
+
+message ProtoBlobStoreKey {
+  string db = 1;
+  string table = 2;
+  string key = 3;
+  map<string, string> custom_request_header = 4;
+  string bucket_name = 5;
+}
+
+message MediaData {
+  ProtoBlobStoreKey blobstore_key = 1;
+  map<string, string> extra_params = 2;
+}
+
+message MediaDataArray {
+  repeated MediaData media_data_elems = 1;
+}
+
+message ExFeature {
+  string name = 1;
+  oneof kind {
+    int64 int_val = 2;
+    Int64Array int_array = 3;
+    float float_val = 4;
+    FloatArray float_array = 5;
+    string str_val = 6;
+    StringArray str_array = 7;
+    bytes bytes_val = 8;
+    BytesArray bytes_array = 9;
+    bool bool_val = 10;
+    BoolArray bool_array = 11;
+    MediaData media_data = 12;
+    MediaDataArray media_data_array = 13;
+    int32 int32_val = 14;
+    Int32Array int32_array = 15;
+    ExFeatureMap map_val = 16;
+    ExFeatureArray array_val = 17;
+  }
+}
+
+message TimingInfo {
+  int64 request_time = 1;
+  int64 ack_time = 2;
+  int64 first_response_time = 3;
+  int64 latest_response_time = 4;
+  int64 end_process_time = 5;
+}

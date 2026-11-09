@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- packagingData 对异常发生期间的性能有损耗，具体参考：https://logback.qos.ch/manual/configuration.html#:~:text=Enabling%20packaging%20data%20in%20stack%20traces -->
+<configuration scan="false" debug="false" packagingData="false">
+
+    <!-- 如需覆盖 KsBoot 的默认配置，请在引入 'base.xml' 之前声明 -->
+
+    <!-- 举例：日志中加入 visitorId -->
+    <!-- <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %X{vistorId} [%t] \\(%F:%L\\) - %m%n%wEx"/> -->
+    <!-- 举例：将日志文件保留数量调整为 7 个 -->
+    <!-- <property name="LOG_MAX_HISTORY" value="7"/> -->
+    <!-- 举例：将 main.log 的滚动策略调整为每小时 -->
+    <!-- <property name="MAIN_LOG_FILE_NAME_PATTERN" value="main.log.%d{yyyy-MM-dd-HH}"/> -->
+
+    <include resource="com/kuaishou/infra/boot/logging/logback/base.xml"/>
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+    <!-- 如需新增 logger 或 appender，请在下面声明 -->
+
+    <!-- 举例：将 KsBoot 框架的日志级别调整为 debug -->
+    <!-- <logger name="com.kuaishou.infra.boot" level="debug"/> -->
+
+</configuration>

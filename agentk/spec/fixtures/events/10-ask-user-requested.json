@@ -1,0 +1,24 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a10",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n81m4t",
+  "kind": "ask_user.requested",
+  "data": {
+    "toolCallId": "call_2e5b8c",
+    "questions": [
+      {
+        "id": "q1",
+        "label": "画风",
+        "question": "三个镜头用哪种画风？",
+        "options": ["写实", "赛博朋克", "水墨"]
+      },
+      {
+        "id": "q2",
+        "question": "需要配乐吗？可多选。",
+        "options": ["环境音", "鼓点", "不要配乐"],
+        "multiSelect": true
+      }
+    ]
+  },
+  "createdAt": "2026-07-30T12:00:20Z"
+}

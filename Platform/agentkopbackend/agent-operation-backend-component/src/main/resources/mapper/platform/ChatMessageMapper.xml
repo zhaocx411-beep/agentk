@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.platform.dao.mapper.ChatMessageMapper">
+
+    <resultMap id="ChatMessageMap" type="com.kuaishou.agent.operation.backend.platform.entity.ChatMessage">
+        <id column="id" property="id"/>
+        <result column="session_id" property="sessionId"/>
+        <result column="execution_id" property="runId"/>
+        <result column="agentk_execution_id" property="agentkExecutionId"/>
+        <result column="round_id" property="roundId"/>
+        <result column="event_seq" property="agentkItemSeq"/>
+        <result column="role" property="role"/>
+        <result column="content_json" property="contentJson"/>
+        <result column="status" property="status"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <sql id="messageColumns">
+        id, session_id, execution_id, agentk_execution_id, round_id, event_seq,
+        role, content_json, `status`, created_at, updated_at
+    </sql>
+
+    <insert id="insertMessage" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aop_session_message (
+            session_id, execution_id, agentk_execution_id, round_id, event_seq,
+            role, content_json, `status`, created_at, updated_at
+        ) VALUES (
+            #{sessionId}, #{runId}, #{agentkExecutionId}, #{roundId}, #{agentkItemSeq},
+            #{role}, #{contentJson}, #{status}, #{createdAt}, #{updatedAt}
+        )
+    </insert>
+
+    <update id="updateMessage">
+        UPDATE aop_session_message
+        SET execution_id = #{runId},
+            agentk_execution_id = #{agentkExecutionId},
+            round_id = #{roundId},
+            event_seq = #{agentkItemSeq},
+            role = #{role},
+            content_json = #{contentJson},
+            `status` = #{status},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <select id="listBySessionId" resultMap="ChatMessageMap">
+        SELECT <include refid="messageColumns"/>
+        FROM aop_session_message
+        WHERE session_id = #{sessionId}
+        ORDER BY id ASC
+        LIMIT #{limit}
+    </select>
+
+    <select id="selectBySessionAndEventSeq" resultMap="ChatMessageMap">
+        SELECT <include refid="messageColumns"/>
+        FROM aop_session_message
+        WHERE session_id = #{sessionId}
+          AND event_seq = #{eventSeq}
+        LIMIT 1
+    </select>
+</mapper>

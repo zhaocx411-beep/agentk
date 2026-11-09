@@ -1,0 +1,4 @@
+REVIEWBOARD_URL = "http://rb.corp.kuaishou.com/reviewboard/"
+REPOSITORY = "agentkopbackend"
+BRANCH = "master"
+LAND_DEST_BRANCH = "master"

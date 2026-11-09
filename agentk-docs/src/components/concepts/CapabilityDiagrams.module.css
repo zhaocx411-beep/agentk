@@ -1,0 +1,172 @@
+.diagram {
+  margin: 26px 0;
+  overflow-x: auto;
+  padding: 24px;
+  border: 1px solid var(--agentk-line-strong);
+  background: #fff;
+}
+
+.diagram code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.diagramHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--agentk-line);
+}
+
+.diagramHead strong {
+  font-size: 15px;
+}
+
+.diagramHead code {
+  color: var(--agentk-faint);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.diagramViewport {
+  min-width: 760px;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.lane {
+  border: 1px solid var(--agentk-line-strong);
+  background: var(--agentk-surface);
+}
+
+.lane:nth-of-type(2) {
+  border-color: #9db7ce;
+  background: var(--agentk-surface-blue);
+}
+
+.lane:nth-of-type(3) {
+  border-color: #9ebcae;
+  background: var(--agentk-surface-green);
+}
+
+.lane > header {
+  padding: 15px 17px;
+  border-bottom: 1px solid var(--agentk-line);
+}
+
+.lane > header code {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--agentk-blue);
+  font-size: 10px;
+}
+
+.lane > header strong {
+  font-size: 15px;
+}
+
+.laneBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+  padding: 14px;
+}
+
+.surfaceRoutes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.surfaceRoutes .flowNode {
+  min-height: 86px;
+}
+
+.flowNode {
+  min-height: 86px;
+  padding: 13px 14px;
+  border: 1px solid var(--agentk-line);
+  background: #fff;
+}
+
+.flowNode code {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--agentk-faint);
+  font-size: 10px;
+}
+
+.flowNode strong {
+  display: block;
+  font-size: 13px;
+}
+
+.flowNode span {
+  display: block;
+  margin-top: 5px;
+  color: var(--agentk-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.arrow {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--agentk-faint);
+  text-align: center;
+}
+
+.arrow span {
+  font: 10px/1.4 var(--agentk-mono);
+}
+
+.arrow b {
+  font: 17px/1 var(--agentk-mono);
+}
+
+.runtimeReturn {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  margin-top: 18px;
+  border-top: 1px solid var(--agentk-line-strong);
+  border-bottom: 1px solid var(--agentk-line-strong);
+}
+
+.runtimeReturn > * {
+  padding: 12px 15px;
+  border-left: 1px solid var(--agentk-line);
+  text-align: center;
+}
+
+.runtimeReturn > *:first-child {
+  border-left: 0;
+}
+
+.runtimeReturn span {
+  color: var(--agentk-muted);
+  font-size: 11px;
+}
+
+.runtimeReturn strong {
+  color: var(--agentk-blue-dark);
+  font: 11px/1.5 var(--agentk-mono);
+}
+
+@media (max-width: 920px) {
+  .diagram {
+    overflow-x: auto;
+  }
+}

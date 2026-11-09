@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.batcheval.mapper.persistence.BatchevalDatasetMapper">
+
+    <resultMap id="DatasetMap" type="com.kuaishou.agent.operation.backend.batcheval.model.BatchEvalModels$Dataset">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="version" property="version"/>
+        <result column="dataset_type" property="datasetType"/>
+        <result column="usage_type" property="usage"/>
+        <result column="pipeline_name" property="pipelineName"/>
+        <result column="description" property="description"/>
+        <result column="creator" property="creator"/>
+        <result column="total" property="total"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <sql id="datasetColumns">
+        id, name, version, dataset_type, usage_type, pipeline_name, description, creator,
+        `total`, created_at, updated_at
+    </sql>
+
+    <sql id="datasetFilterWhere">
+        <where>
+            <if test="filter != null and filter.hasName()">
+                AND name = #{filter.name}
+            </if>
+            <if test="filter != null and filter.hasDatasetType()">
+                AND dataset_type = #{filter.datasetType}
+            </if>
+            <if test="filter != null and filter.hasCreator()">
+                AND creator = #{filter.creator}
+            </if>
+            <if test="filter != null and filter.hasUsage()">
+                AND usage_type = #{filter.usage}
+            </if>
+            <if test="filter != null and filter.hasPipelineName()">
+                AND pipeline_name = #{filter.pipelineName}
+            </if>
+        </where>
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO batcheval_dataset (name, version, dataset_type, usage_type, pipeline_name,
+                                       description, creator, `total`, created_at, updated_at)
+        VALUES (#{name}, #{version}, #{datasetType}, #{usage}, #{pipelineName},
+                #{description}, #{creator}, #{total}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <select id="countByFilter" resultType="long">
+        SELECT COUNT(*) FROM batcheval_dataset
+        <include refid="datasetFilterWhere"/>
+    </select>
+
+    <select id="listByFilter" resultMap="DatasetMap">
+        SELECT <include refid="datasetColumns"/>
+        FROM batcheval_dataset
+        <include refid="datasetFilterWhere"/>
+        ORDER BY id DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="findById" resultMap="DatasetMap">
+        SELECT <include refid="datasetColumns"/>
+        FROM batcheval_dataset
+        WHERE id = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE batcheval_dataset
+        SET description = #{description},
+            dataset_type = #{datasetType},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM batcheval_dataset WHERE id = #{id}
+    </delete>
+
+    <select id="existsById" resultType="int">
+        SELECT COUNT(*) FROM batcheval_dataset WHERE id = #{id}
+    </select>
+
+    <select id="selectTotal" resultType="java.lang.Integer">
+        SELECT `total` FROM batcheval_dataset WHERE id = #{id}
+    </select>
+
+    <update id="adjustTotal">
+        UPDATE batcheval_dataset
+        SET `total` = `total` + #{delta},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <update id="touchUpdatedAt">
+        UPDATE batcheval_dataset
+        SET updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+</mapper>

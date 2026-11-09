@@ -1,0 +1,15 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a02",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "round.started",
+  "data": {
+    "model": "deepseek-v3",
+    "dialect": "openai",
+    "profileVersion": "pv_9f2c1a",
+    "promptSha256": "3b1e4c0f9a2d5e7b8c1f0a3d6e9b2c5f8a1d4e7b0c3f6a9d2e5b8c1f4a7d0e3b",
+    "tools": ["kling_image_to_video", "ask_user"],
+    "workerId": "embedded-1"
+  },
+  "createdAt": "2026-07-30T12:00:01Z"
+}

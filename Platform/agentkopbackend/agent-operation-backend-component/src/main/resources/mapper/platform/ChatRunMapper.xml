@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.platform.dao.mapper.ChatRunMapper">
+
+    <resultMap id="ChatRunMap" type="com.kuaishou.agent.operation.backend.platform.entity.ChatRun">
+        <id column="id" property="id"/>
+        <result column="session_id" property="sessionId"/>
+        <result column="agentk_session_id" property="agentkSessionId"/>
+        <result column="agentk_execution_id" property="agentkRunId"/>
+        <result column="trigger_kind" property="triggerKind"/>
+        <result column="status" property="status"/>
+        <result column="error" property="error"/>
+        <result column="profile_version" property="profileVersion"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="started_at" property="startedAt"/>
+        <result column="finished_at" property="finishedAt"/>
+    </resultMap>
+
+    <sql id="executionColumns">
+        id, session_id, agentk_session_id, agentk_execution_id, trigger_kind, `status`,
+        `error`, profile_version, created_at, started_at, finished_at
+    </sql>
+
+    <insert id="insertExecution" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aop_execution (
+            session_id, agentk_session_id, agentk_execution_id, trigger_kind, `status`,
+            `error`, profile_version, created_at, started_at, finished_at
+        ) VALUES (
+            #{sessionId}, #{agentkSessionId}, #{agentkRunId}, #{triggerKind}, #{status},
+            #{error}, #{profileVersion}, #{createdAt}, #{startedAt}, #{finishedAt}
+        )
+    </insert>
+
+    <update id="updateExecution">
+        UPDATE aop_execution
+        SET agentk_session_id = #{agentkSessionId},
+            agentk_execution_id = #{agentkRunId},
+            trigger_kind = #{triggerKind},
+            `status` = #{status},
+            `error` = #{error},
+            profile_version = #{profileVersion},
+            started_at = #{startedAt},
+            finished_at = #{finishedAt}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectExecutionById" resultMap="ChatRunMap">
+        SELECT <include refid="executionColumns"/>
+        FROM aop_execution
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectByAgentkExecutionId" resultMap="ChatRunMap">
+        SELECT <include refid="executionColumns"/>
+        FROM aop_execution
+        WHERE agentk_execution_id = #{agentkExecutionId}
+        LIMIT 1
+    </select>
+</mapper>

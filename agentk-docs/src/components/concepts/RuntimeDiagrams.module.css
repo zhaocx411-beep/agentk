@@ -1,0 +1,257 @@
+.diagram {
+  margin: 26px 0;
+  overflow-x: auto;
+  padding: 24px;
+  border: 1px solid var(--agentk-line-strong);
+  background: #fff;
+}
+
+.diagram code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.diagramHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--agentk-line);
+}
+
+.diagramHead strong {
+  font-size: 15px;
+}
+
+.diagramHead code {
+  color: var(--agentk-faint);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.diagramViewport {
+  min-width: 760px;
+}
+
+.runtimeOverview {
+  display: grid;
+  gap: 20px;
+}
+
+.runtimeFlow {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+.runtimeNode {
+  display: flex;
+  min-height: 92px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid var(--agentk-line-strong);
+  background: var(--agentk-surface);
+}
+
+.runtimeNode code,
+.boundaryHead code,
+.sessionParts code,
+.resultFlow code,
+.stateLaneHead code,
+.stateStage code {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--agentk-blue);
+  font-size: 10px;
+}
+
+.runtimeNode strong,
+.boundaryHead strong {
+  font-size: 15px;
+}
+
+.runtimeNode span {
+  margin-top: 5px;
+  color: var(--agentk-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.oneWay,
+.exchange {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: var(--agentk-faint);
+  text-align: center;
+}
+
+.oneWay span,
+.exchange span {
+  font: 10px/1.5 var(--agentk-mono);
+}
+
+.oneWay b {
+  font: 16px/1 var(--agentk-mono);
+}
+
+.exchange {
+  gap: 28px;
+}
+
+.sessionBoundary {
+  border: 1px solid #9db7ce;
+  background: var(--agentk-surface-blue);
+}
+
+.boundaryHead {
+  padding: 15px 17px;
+  border-bottom: 1px solid #d4e1ec;
+}
+
+.sessionParts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sessionParts > div {
+  padding: 13px 14px;
+  border-left: 1px solid #d4e1ec;
+}
+
+.sessionParts > div:first-child {
+  border-left: 0;
+}
+
+.sessionParts strong {
+  display: block;
+  font-size: 12px;
+}
+
+.resultFlow {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(4, 1fr);
+  border-top: 1px solid var(--agentk-line-strong);
+  border-bottom: 1px solid var(--agentk-line-strong);
+}
+
+.resultFlow > * {
+  padding: 13px 15px;
+  border-left: 1px solid var(--agentk-line);
+}
+
+.resultFlow > *:first-child {
+  border-left: 0;
+}
+
+.resultFlow strong {
+  display: block;
+  font-size: 13px;
+}
+
+.resultFlow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--agentk-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.stateTracks {
+  display: grid;
+  gap: 16px;
+}
+
+.stateLane {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  border: 1px solid var(--agentk-line-strong);
+}
+
+.stateLane.runtime {
+  background: var(--agentk-surface-blue);
+}
+
+.stateLane.log {
+  background: var(--agentk-surface-warm);
+}
+
+.stateLaneHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 19px;
+  border-right: 1px solid var(--agentk-line);
+}
+
+.stateLaneHead strong {
+  font-size: 14px;
+}
+
+.stateLaneHead span {
+  margin-top: 4px;
+  color: var(--agentk-muted);
+  font-size: 11px;
+}
+
+.stateLaneFlow {
+  display: grid;
+  grid-template-columns: 1fr 24px 1.25fr 24px 1fr;
+  align-items: stretch;
+  padding: 14px;
+}
+
+.stateLaneFlow > b {
+  align-self: center;
+  color: var(--agentk-faint);
+  font: 13px/1 var(--agentk-mono);
+  text-align: center;
+}
+
+.stateStage {
+  display: flex;
+  min-height: 74px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 13px;
+  border: 1px solid var(--agentk-line);
+  background: #fff;
+}
+
+.stateStage span {
+  color: var(--agentk-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.responsibilitySplit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--agentk-muted);
+}
+
+.responsibilitySplit span {
+  font-size: 11px;
+}
+
+.responsibilitySplit strong {
+  color: var(--agentk-blue-dark);
+  font: 11px/1.4 var(--agentk-mono);
+}
+
+@media (max-width: 920px) {
+  .diagram {
+    overflow-x: auto;
+  }
+}

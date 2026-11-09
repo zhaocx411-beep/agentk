@@ -1,0 +1,11 @@
+packages:
+  - server
+
+injectWorkspacePackages: true
+
+allowBuilds:
+  '@modelcontextprotocol/inspector': true
+  '@swc/core': true
+  core-js: true
+  protobufjs: true
+  unrs-resolver: true

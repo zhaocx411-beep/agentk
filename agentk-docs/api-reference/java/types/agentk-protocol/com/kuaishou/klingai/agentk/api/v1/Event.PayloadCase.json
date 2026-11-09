@@ -1,0 +1,494 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "Event",
+    "PayloadCase"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase",
+    "kind": "enum",
+    "name": "PayloadCase",
+    "declaration": {
+      "text": "public enum PayloadCase implements Internal.EnumLite, AbstractMessageLite.InternalOneOfEnum",
+      "references": [
+        {
+          "start": 12,
+          "end": 23,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+        }
+      ]
+    },
+    "documentation": [],
+    "nestedTypes": [],
+    "enumConstants": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASK_USER_REQUESTED-",
+        "name": "ASK_USER_REQUESTED",
+        "declaration": {
+          "text": "ASK_USER_REQUESTED",
+          "references": [
+            {
+              "start": 0,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASK_USER_REQUESTED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASK_USER_RESPONDED-",
+        "name": "ASK_USER_RESPONDED",
+        "declaration": {
+          "text": "ASK_USER_RESPONDED",
+          "references": [
+            {
+              "start": 0,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASK_USER_RESPONDED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_REASONING-",
+        "name": "ASSISTANT_REASONING",
+        "declaration": {
+          "text": "ASSISTANT_REASONING",
+          "references": [
+            {
+              "start": 0,
+              "end": 19,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_REASONING-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_TEXT-",
+        "name": "ASSISTANT_TEXT",
+        "declaration": {
+          "text": "ASSISTANT_TEXT",
+          "references": [
+            {
+              "start": 0,
+              "end": 14,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_TEXT-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_TOOL_CALL-",
+        "name": "ASSISTANT_TOOL_CALL",
+        "declaration": {
+          "text": "ASSISTANT_TOOL_CALL",
+          "references": [
+            {
+              "start": 0,
+              "end": 19,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ASSISTANT_TOOL_CALL-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-EXECUTION_FINISHED-",
+        "name": "EXECUTION_FINISHED",
+        "declaration": {
+          "text": "EXECUTION_FINISHED",
+          "references": [
+            {
+              "start": 0,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-EXECUTION_FINISHED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-EXECUTION_STARTED-",
+        "name": "EXECUTION_STARTED",
+        "declaration": {
+          "text": "EXECUTION_STARTED",
+          "references": [
+            {
+              "start": 0,
+              "end": 17,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-EXECUTION_STARTED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-INVOCATION_PROGRESS-",
+        "name": "INVOCATION_PROGRESS",
+        "declaration": {
+          "text": "INVOCATION_PROGRESS",
+          "references": [
+            {
+              "start": 0,
+              "end": 19,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-INVOCATION_PROGRESS-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-PAYLOAD_NOT_SET-",
+        "name": "PAYLOAD_NOT_SET",
+        "declaration": {
+          "text": "PAYLOAD_NOT_SET",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-PAYLOAD_NOT_SET-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ROUND_COMPLETED-",
+        "name": "ROUND_COMPLETED",
+        "declaration": {
+          "text": "ROUND_COMPLETED",
+          "references": [
+            {
+              "start": 0,
+              "end": 15,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ROUND_COMPLETED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ROUND_STARTED-",
+        "name": "ROUND_STARTED",
+        "declaration": {
+          "text": "ROUND_STARTED",
+          "references": [
+            {
+              "start": 0,
+              "end": 13,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-ROUND_STARTED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_FAILED-",
+        "name": "TOOL_EXEC_FAILED",
+        "declaration": {
+          "text": "TOOL_EXEC_FAILED",
+          "references": [
+            {
+              "start": 0,
+              "end": 16,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_FAILED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_STARTED-",
+        "name": "TOOL_EXEC_STARTED",
+        "declaration": {
+          "text": "TOOL_EXEC_STARTED",
+          "references": [
+            {
+              "start": 0,
+              "end": 17,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_STARTED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_SUCCEEDED-",
+        "name": "TOOL_EXEC_SUCCEEDED",
+        "declaration": {
+          "text": "TOOL_EXEC_SUCCEEDED",
+          "references": [
+            {
+              "start": 0,
+              "end": 19,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-TOOL_EXEC_SUCCEEDED-"
+            }
+          ]
+        },
+        "documentation": []
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-USER_INPUT-",
+        "name": "USER_INPUT",
+        "declaration": {
+          "text": "USER_INPUT",
+          "references": [
+            {
+              "start": 0,
+              "end": 10,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-USER_INPUT-"
+            }
+          ]
+        },
+        "documentation": []
+      }
+    ],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-forNumber-int-",
+        "name": "forNumber",
+        "declaration": {
+          "text": "public static Event.PayloadCase forNumber(int value)",
+          "references": [
+            {
+              "start": 14,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            },
+            {
+              "start": 32,
+              "end": 41,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-forNumber-int-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static PayloadCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "forNumber(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-getNumber-",
+        "name": "getNumber",
+        "declaration": {
+          "text": "public int getNumber()",
+          "references": [
+            {
+              "start": 11,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-getNumber-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNumber()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-valueOf-int-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "@Deprecated()public static Event.PayloadCase valueOf(int value)",
+          "references": [
+            {
+              "start": 1,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html"
+            },
+            {
+              "start": 27,
+              "end": 44,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            },
+            {
+              "start": 45,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-valueOf-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The number of the enum to look for."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given number."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Deprecated",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Use "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-forNumber-int-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "forNumber"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " instead."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static PayloadCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-valueOf-java-lang-String-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static Event.PayloadCase valueOf(String name)",
+          "references": [
+            {
+              "start": 14,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            },
+            {
+              "start": 32,
+              "end": 39,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-valueOf-java-lang-String-"
+            },
+            {
+              "start": 40,
+              "end": 46,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static PayloadCase",
+          "references": [
+            {
+              "start": 7,
+              "end": 18,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(String name)",
+          "references": [
+            {
+              "start": 8,
+              "end": 14,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-values-",
+        "name": "values",
+        "declaration": {
+          "text": "public static Array<Event.PayloadCase> values()",
+          "references": [
+            {
+              "start": 20,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            },
+            {
+              "start": 39,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-Event-PayloadCase-values-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Array<PayloadCase>",
+          "references": [
+            {
+              "start": 13,
+              "end": 24,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Event.PayloadCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "values()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

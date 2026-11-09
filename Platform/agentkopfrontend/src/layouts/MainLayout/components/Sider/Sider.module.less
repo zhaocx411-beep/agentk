@@ -1,0 +1,39 @@
+.drawerSider {
+  height: 100%;
+  background: @canvas;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: @header-height;
+  padding: 0 @spacing-lg;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid @divider;
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, @primary-color, @primary-gradient-end);
+  color: @on-primary;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+.logoText {
+  color: @text-color;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.menu {
+  border-inline-end: none !important;
+}

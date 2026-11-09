@@ -1,0 +1,8 @@
+# Collapse dependency lockfile diffs in GitHub reviews and exclude them from
+# Linguist language statistics.
+go.sum linguist-generated=true
+**/go.sum linguist-generated=true
+pnpm-lock.yaml linguist-generated=true
+**/pnpm-lock.yaml linguist-generated=true
+uv.lock linguist-generated=true
+**/uv.lock linguist-generated=true

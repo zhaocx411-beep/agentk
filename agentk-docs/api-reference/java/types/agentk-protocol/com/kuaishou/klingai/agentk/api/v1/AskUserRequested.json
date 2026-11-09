@@ -1,0 +1,553 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "AskUserRequested"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested",
+    "kind": "class",
+    "name": "AskUserRequested",
+    "declaration": {
+      "text": "@Generated()public final class AskUserRequested extends GeneratedMessage implements AskUserRequestedOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 47,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.AskUserRequested"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestions-int-",
+        "name": "getQuestions",
+        "declaration": {
+          "text": "public Question getQuestions(int index)",
+          "references": [
+            {
+              "start": 7,
+              "end": 15,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Question"
+            },
+            {
+              "start": 16,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestions-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Question questions = 2 [json_name = \"questions\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Question",
+          "references": [
+            {
+              "start": 0,
+              "end": 8,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Question"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getQuestions(int index)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestionsCount-",
+        "name": "getQuestionsCount",
+        "declaration": {
+          "text": "public int getQuestionsCount()",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestionsCount-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Question questions = 2 [json_name = \"questions\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getQuestionsCount()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestionsList-",
+        "name": "getQuestionsList",
+        "declaration": {
+          "text": "public List<Question> getQuestionsList()",
+          "references": [
+            {
+              "start": 7,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 12,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Question"
+            },
+            {
+              "start": 22,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getQuestionsList-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Question questions = 2 [json_name = \"questions\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "List<Question>",
+          "references": [
+            {
+              "start": 0,
+              "end": 4,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 5,
+              "end": 13,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Question"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getQuestionsList()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getToolCallId-",
+        "name": "getToolCallId",
+        "declaration": {
+          "text": "public String getToolCallId()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getToolCallId-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_call_id = 1 [json_name = \"toolCallId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The toolCallId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getToolCallId()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getToolCallIdBytes-",
+        "name": "getToolCallIdBytes",
+        "declaration": {
+          "text": "public ByteString getToolCallIdBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-getToolCallIdBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string tool_call_id = 1 [json_name = \"toolCallId\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for toolCallId."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getToolCallIdBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AskUserRequested.Builder newBuilder()",
+          "references": [
+            {
+              "start": 39,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilder-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static AskUserRequested.Builder newBuilder(AskUserRequested prototype)",
+          "references": [
+            {
+              "start": 39,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilder-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-"
+            },
+            {
+              "start": 50,
+              "end": 66,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(AskUserRequested prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public AskUserRequested.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 32,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public AskUserRequested.Builder toBuilder()",
+          "references": [
+            {
+              "start": 32,
+              "end": 41,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AskUserRequested#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AskUserRequested-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

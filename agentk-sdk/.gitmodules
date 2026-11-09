@@ -1,0 +1,3 @@
+[submodule "protocol"]
+	path = protocol
+	url = git@git.corp.kuaishou.com:klingai-agentk/agentk-protocol.git

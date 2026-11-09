@@ -1,0 +1,37 @@
+[project]
+name = "ks-agentk-client"
+version = "0.4.2"
+description = "Async Python client for AgentK"
+requires-python = ">=3.12,<4"
+dependencies = [
+  "ks-agentk-protocol==0.4.2",
+  "connectrpc",
+  "opentelemetry-api",
+]
+
+[project.optional-dependencies]
+grpc = [
+  "ks-resolve[connect]>=0.1.1",
+  "pyqwest",
+]
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "ruff",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "agentk.client"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"

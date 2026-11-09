@@ -1,0 +1,21 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a11",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "kind": "ask_user.responded",
+  "data": {
+    "toolCallId": "call_2e5b8c",
+    "answers": [
+      {
+        "questionId": "q1",
+        "question": "三个镜头用哪种画风？",
+        "selected": ["赛博朋克"]
+      },
+      {
+        "questionId": "q2",
+        "question": "需要配乐吗？可多选。",
+        "selected": ["环境音", "鼓点"]
+      }
+    ]
+  },
+  "createdAt": "2026-07-30T12:03:41Z"
+}

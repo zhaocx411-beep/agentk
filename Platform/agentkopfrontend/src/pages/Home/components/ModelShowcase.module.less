@@ -1,0 +1,205 @@
+/**
+ * 首页视频 / 图像模型展示
+ */
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xl;
+  width: 100%;
+}
+
+.blockTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  gap: @spacing-xxl;
+
+  /* 顶部对齐，减轻列表高度变化时整行上下拉动 */
+  align-items: start;
+  width: 100%;
+}
+
+.rowMediaRight,
+.rowMediaLeft {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+}
+
+.rowMediaLeft {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: @spacing-md @spacing-lg;
+  border: none;
+  border-radius: @border-radius-lg;
+  background: transparent;
+  color: @text-color-secondary;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 transparent;
+  transition:
+    background 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.itemTitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.itemDescWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.itemDescWrapOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition:
+    grid-template-rows 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s 0.04s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.itemDescInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.itemDesc {
+  margin: 0;
+  padding-top: @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.7;
+}
+
+.itemActive {
+  background: @surface-3;
+  color: @text-color;
+  box-shadow: inset 3px 0 0 @primary-color;
+
+  .itemTitle {
+    color: @text-color;
+    font-weight: 600;
+  }
+}
+
+.rowMediaLeft .itemActive {
+  box-shadow: inset -3px 0 0 @primary-color;
+}
+
+.media {
+  position: relative;
+  width: 100%;
+  background: @surface-3;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  border-radius: 20px;
+}
+
+.preview {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: @surface-3;
+  opacity: 0;
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  inset: 0;
+  object-fit: cover;
+  transform: scale(1.02);
+  pointer-events: none;
+}
+
+.previewActive {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 当前视频可点进度条 / 音量等控件；未选中仍拦截点击 */
+video.previewActive {
+  pointer-events: auto;
+}
+
+@media (max-width: @screen-md) {
+  .wrap {
+    gap: @spacing-xxl;
+  }
+
+  .blockTitle {
+    font-size: 28px;
+  }
+
+  .rowMediaRight,
+  .rowMediaLeft {
+    grid-template-columns: 1fr;
+  }
+
+  .rowMediaLeft .media {
+    order: -1;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+  }
+
+  .rowMediaLeft .itemActive,
+  .itemActive {
+    box-shadow: inset 3px 0 0 @primary-color;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item,
+  .itemTitle,
+  .itemDescWrap,
+  .itemDescWrapOpen,
+  .preview {
+    transition: none;
+  }
+
+  .preview {
+    transform: none;
+  }
+}

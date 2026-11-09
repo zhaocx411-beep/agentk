@@ -1,0 +1,318 @@
+---
+sidebar_position: 1
+sidebar_label: AgentK 概览
+slug: /
+title: AgentK：连接能力供给与 Agent 应用的分布式、持久化 Agentic Runtime
+description: AgentK 系统全景、定位与领域架构
+hide_title: true
+pagination_next: development
+pagination_prev: null
+---
+
+import {
+  BoundaryNote,
+  Closing,
+  Conclusion,
+  Content,
+  Definition,
+  DocumentFooter,
+  IdentityBoundary,
+  IntegrationCard,
+  IntegrationGrid,
+  IntroHeader,
+  Lead,
+  ModeCard,
+  ModeComparison,
+  ModeDetail,
+  PainList,
+  PainRow,
+  PositionCard,
+  PositionGrid,
+  PullQuote,
+  SectionLabel,
+  SectionSummary,
+  SharedRuntime,
+  StateCell,
+  StateModel,
+  Thesis,
+  Topic,
+  TopicGrid,
+  TwoModes,
+} from '@site/src/components/intro/IntroBlocks';
+import {
+  CapabilityArchitecture,
+  PlatformEvolution,
+  SystemTopology,
+} from '@site/src/components/intro/Diagrams';
+
+<IntroHeader
+  title="AgentK：连接能力供给与 Agent 应用"
+  runtime="分布式 · 持久化 Agentic Runtime"
+>
+  <Lead>
+    AgentK 将独立 Worker 中的领域实现标准化为可发现、可组合、可复用的 Capability，
+    并通过统一 API 供不同 Agent 应用选择和运行。
+  </Lead>
+  <Thesis>
+    一次标准化供给，可以成为多个 Agent 应用的共享能力；分布式调度、持久化执行和结果协议不再由每个应用重复建设。
+  </Thesis>
+</IntroHeader>
+
+<SystemTopology />
+
+<SectionLabel>01 / CONTEXT</SectionLabel>
+
+## Agent 产能如何落地
+
+<SectionSummary>
+  Agent Harness 将模型、上下文、工具和状态连接起来。实际任务通常表现为开放式循环，或一条确定拓扑的 Workflow。
+</SectionSummary>
+
+<Content>
+
+随着多模态模型和工具调用成熟，生产问题已经不只发生在单次模型请求内部。一次完整任务往往跨越多个模型、多个服务和较长时间，其执行状态也不能只存在于一个请求线程或进程中。
+
+<TwoModes>
+  <ModeCard kind="MODEL-DRIVEN" title="Agent Loop" flow={['Context', 'LLM', 'Tool']} loop>
+    模型根据当前上下文决定下一步，工具结果回到历史，再进入下一轮；任务拓扑在运行时动态形成。
+  </ModeCard>
+  <ModeCard kind="CODE-DRIVEN" title="Pipeline / Workflow" flow={['Input', 'Steps', 'Join', 'Output']}>
+    代码确定依赖、并发和收敛方式；模型可以成为其中一步，但任务推进由 Workflow 控制。
+  </ModeCard>
+</TwoModes>
+
+<Conclusion>
+  Agent Harness 解决模型如何行动；生产环境还需要一个能够跨请求、跨进程持续承载任务的 Runtime。
+</Conclusion>
+
+</Content>
+
+<SectionLabel>02 / FRICTION</SectionLabel>
+
+## 能力之外的重复建设
+
+<SectionSummary>
+  模型和领域服务解决“能做什么”，但任务如何持续运行，仍会进入每条业务链路。
+</SectionSummary>
+
+<Content>
+  <PainList>
+    <PainRow number="01" title="运行环境与 Worker">
+      模型、服务和 Worker 拥有不同依赖、进程生命周期、队列和发布节奏。
+    </PainRow>
+    <PainRow number="02" title="流程手动编织">
+      路由、回调、轮询、状态和错误处理散落在业务代码中，能力越多，胶水逻辑越重。
+    </PainRow>
+    <PainRow number="03" title="长任务与并发">
+      图片、视频等任务涉及 fan-out、等待、超时、进度、聚合和产物追踪。
+    </PainRow>
+    <PainRow number="04" title="中断与恢复">
+      进程重启、网络抖动或下游暂时失败，不应丢失执行现场；重试和幂等也需要一致边界。
+    </PainRow>
+    <PainRow number="05" title="状态回传">
+      应用还需要保存进度、终态、执行历史和 Artifact，并支持断线后的可靠续读。
+    </PainRow>
+  </PainList>
+  <PullQuote>
+    重复建设发生在能力之外：每个应用都在重新实现任务推进、持久化、恢复和状态协议。
+  </PullQuote>
+</Content>
+
+<SectionLabel>03 / POSITION</SectionLabel>
+
+## AgentK 的定位
+
+<SectionSummary>
+  AgentK 是基于 Temporal 的分布式、持久化 Agentic Runtime，统一承载 Agent Loop 与 Pipeline。
+</SectionSummary>
+
+<Content>
+  <Definition term="Capability">
+    是 AgentK 对可执行领域能力的统一称呼，ID 是它的唯一身份。它可以由 Activity 或 Workflow 实现；Tool 是可选入口，所有 Capability 都可以作为 Pipeline。
+  </Definition>
+  <PositionGrid>
+    <PositionCard kind="DISTRIBUTED" title="分布式执行">
+      Temporal task queue 解耦编排与执行位置。Workflow、Activity 和独立 Worker 可以运行在不同进程与队列。
+    </PositionCard>
+    <PositionCard kind="DURABLE" title="持久化推进">
+      等待、定时器、重试和 Workflow 状态跨越请求及进程生命周期；服务重启不等于任务重新开始。
+    </PositionCard>
+    <PositionCard kind="AGENTIC" title="两类任务">
+      模型驱动的 Loop 与代码驱动的 Pipeline 共用 Capability、Session、事件和执行基础设施。
+    </PositionCard>
+  </PositionGrid>
+  <StateModel>
+    <StateCell title="Temporal History">
+      保存执行现场，用于确定性重放、等待、重试和恢复。
+    </StateCell>
+    <StateCell title="Session Event Log">
+      保存对外事件；Agent、Tool、Pipeline 和进度使用同一套 Event 协议。
+    </StateCell>
+  </StateModel>
+  <BoundaryNote>
+    <strong>两类开发路径：</strong>下游应用使用 Client SDK，并优先通过 KESS 发现、直连 AgentK；能力提供方使用 Worker SDK 连接 AgentK 的 Temporal namespace。无法使用 KESS 时，需要联系 AgentK 平台维护方确认对应路径当前可用的连接方式。
+  </BoundaryNote>
+</Content>
+
+<SectionLabel>04 / DECISION</SectionLabel>
+
+## 什么时候需要 AgentK
+
+<SectionSummary>
+  当一次任务无法在单次请求、单个进程或一轮模型上下文中可靠闭合时，应用需要的不再只是模型调用。
+</SectionSummary>
+
+<Content>
+  <ModeComparison>
+    <ModeDetail
+      kind="USE AGENTK"
+      title="任务需要持续推进"
+      items={[
+        '一次视频或内容创作包含规划、并发生成、分钟级等待和汇聚；结果返回后 Agent 还要继续。',
+        '搜索、模型推理、媒体处理和业务操作具有不同的依赖、资源与发布周期，不适合继续绑定在一个服务中。',
+        '用户刷新、断线或服务重启后，任务仍需保留进度，并允许追加要求、中断和恢复。',
+        '应用需要在断线或服务重启后找回同一 Session、Execution 和已提交事件。',
+      ]}
+    />
+    <ModeDetail
+      kind="KEEP IT SIMPLE"
+      title="调用可以自行闭合"
+      items={[
+        '一次短耗时、无状态的模型或服务调用即可完成任务。',
+        '异步任务在提交和查询结果后结束，不需要恢复 Agent 或连接后续步骤。',
+        '现有服务或任务队列已经能够可靠处理状态、失败和结果。',
+        '会话很短，不需要保存执行历史或在后续请求中继续。',
+      ]}
+    />
+  </ModeComparison>
+  <Conclusion>
+    当业务代码开始为了“让任务可靠完成”而建设调度、编排、恢复、事件和上下文管理机制时，AgentK 就开始有价值。
+  </Conclusion>
+</Content>
+
+<SectionLabel>05 / PLATFORM</SectionLabel>
+
+## 从模型平台到 Agent 平台
+
+<SectionSummary>
+  模型平台管理模型版本；Agent 平台管理由模型、Prompt、Capability、Pipeline 和运行配置共同构成的 Agent Release。
+</SectionSummary>
+
+<Content>
+
+NN 时代的平台围绕训练、评测、版本和 Serve 建设。Agent 时代不再以基础模型训练为主要生产环节，但实验评测、版本发布、资源管理和在线运行仍然存在；平台管理的核心产物从模型 Artifact 转向可执行的 Agent 定义。
+
+<PlatformEvolution />
+
+</Content>
+
+<SectionLabel>06 / TASKS</SectionLabel>
+
+## 两类任务，共享一套 Runtime
+
+<SectionSummary>
+  Loop 与 Pipeline 的区别在于谁决定下一步，而不是底层能力不同。
+</SectionSummary>
+
+<Content>
+  <ModeComparison>
+    <ModeDetail
+      kind="OPEN-ENDED"
+      title="Agent Loop"
+      items={[
+        '调用方使用 StartExecution 提交消息。',
+        '模型读取历史并动态选择 Tool。',
+        'Tool 结果进入上下文，形成下一轮。',
+        'Tool 完成后，当前 Agent Execution 继续推进。',
+      ]}
+    />
+    <ModeDetail
+      kind="DETERMINISTIC"
+      title="Pipeline"
+      items={[
+        '调用方显式选择流程并提交参数。',
+        'Workflow 控制步骤、并发、等待和聚合。',
+        '模型可以成为流程中的一个节点。',
+        '执行状态和输出通过统一事件呈现。',
+      ]}
+    />
+  </ModeComparison>
+  <SharedRuntime />
+</Content>
+
+<SectionLabel>07 / DOMAIN</SectionLabel>
+
+## Capability 是原生实现
+
+<SectionSummary>
+  Tool 是可选的模型调用入口，Pipeline 是所有 Capability 的显式调用入口；领域逻辑仍然保留在 Capability 中。
+</SectionSummary>
+
+<Content>
+
+Capability 包含领域输入输出、参数归一、Provider 调用、错误处理和原生执行体。执行形态由能力自身决定：单段 I/O 可以是 Activity，多步骤编排可以是 Workflow。
+
+<CapabilityArchitecture />
+
+</Content>
+
+<SectionLabel>08 / ACCESS</SectionLabel>
+
+## 简化能力供给与 Client 调用路径
+
+<SectionSummary>
+  Worker 发布一次能力契约，AgentK 将其转成可发现、可选择的消费面；下游通过 Profile 选择能力，再使用 Client SDK 调用。
+</SectionSummary>
+
+<Content>
+  <Conclusion>
+    能力供给与下游消费是同一条链路的两端：实现方维护领域逻辑和运行环境，AgentK
+    接管发现、路由与运行协议，下游不需要再为每个 Worker 编写一层适配。
+  </Conclusion>
+  <IntegrationGrid>
+    <IntegrationCard
+      kind="PROVIDE"
+      title="Worker 提供 Capability"
+      items={[
+        '定义稳定的领域输入输出与 JSON Schema。',
+        '在独立 Workflow / Activity Worker 中发布 Capability Manifest。',
+        '按需声明 Tool；Capability 无需额外声明即可作为 Pipeline。',
+        '依赖、内部实现和发布周期保持独立。',
+      ]}
+    />
+    <IntegrationCard
+      kind="CONSUME"
+      title="Client 应用调用"
+      items={[
+        '从能力目录选择裸 Capability ID，并写入 Session Profile 的 capability 字段。',
+        '使用 StartExecution 提交消息、回答或 Pipeline。',
+        '无需感知 TemporalType、task queue 和 Worker 部署位置。',
+        '使用 ListEvents、WatchEvents 和 GetExecution 读取结果。',
+      ]}
+    />
+  </IntegrationGrid>
+  <IdentityBoundary />
+</Content>
+
+<SectionLabel>09 / NEXT</SectionLabel>
+
+## 后续专题
+
+<SectionSummary>
+  本文只建立共同语境；具体执行机制、Client 调用方式和 Worker 发布方式分别展开。
+</SectionSummary>
+
+<Content>
+  <TopicGrid>
+    <Topic number="01" title="AgentK Runtime">Temporal、Session 与 Event Log</Topic>
+    <Topic number="02" title="Capability、Tool 与 Pipeline">领域实现与消费面的关系</Topic>
+    <Topic number="03" title="Agent 定义与运行上下文">Profile 定义 Agent，Session 承载运行事件</Topic>
+    <Topic number="04" title="Events 与 Artifact">持久 Event、Execution 实时流和产物</Topic>
+    <Topic number="05" title="能力执行与进度回传">业务输入、invocation context 和步骤进度</Topic>
+  </TopicGrid>
+  <Closing>
+    Agent 能力可以持续增加，应用可以选择 Loop、Pipeline 或组合使用；运行、恢复和状态协议不需要随每条业务链路重新实现。
+  </Closing>
+</Content>
+
+<DocumentFooter />

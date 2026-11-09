@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "productUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "淘宝、天猫或 Amazon 的公网商品详情页 URL；淘宝/天猫可带 skuId 查询参数选择具体 SKU"
+    },
+    "maxImages": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 6,
+      "description": "下载到受管产物存储并返回的最大图片数；缺省 6，最多 20"
+    }
+  },
+  "required": [
+    "productUrl"
+  ]
+}

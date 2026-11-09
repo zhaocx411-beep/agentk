@@ -1,0 +1,147 @@
+/* Agent-loop 生成过程：紧凑步骤时间线 */
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: @spacing-sm;
+  width: 100%;
+  max-width: 840px;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  flex-shrink: 0;
+}
+
+.eyebrow {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.meta {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-variant-numeric: tabular-nums;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  gap: @spacing-xs;
+  list-style: none;
+}
+
+.node {
+  display: grid;
+  grid-template-columns: 10px 36px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: @spacing-xs;
+  width: 100%;
+  padding: @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  text-align: left;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: @border-radius-pill;
+  background: @text-color-tertiary;
+}
+
+.dotDone {
+  background: @success-color;
+}
+
+.dotRunning {
+  background: @azure-royal;
+}
+
+.dotFailed {
+  background: @error-color;
+}
+
+.dotPending {
+  background: @text-color-tertiary;
+}
+
+.index {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.main {
+  min-width: 0;
+}
+
+.nodeTitleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+}
+
+.nodeTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.badge {
+  margin: 0;
+  border-color: @hairline;
+  background: @surface-2;
+  color: @text-color-secondary;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.detail {
+  display: block;
+  margin-top: @spacing-xxs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.status {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}

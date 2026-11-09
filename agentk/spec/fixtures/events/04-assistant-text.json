@@ -1,0 +1,11 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a04",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "assistant.text",
+  "data": {
+    "block": 1,
+    "text": "分镜我拆成三个镜头，先生成首帧。"
+  },
+  "createdAt": "2026-07-30T12:00:03Z"
+}

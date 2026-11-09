@@ -1,0 +1,279 @@
+---
+sidebar_position: 1
+sidebar_label: 可恢复的 Agent Client
+title: 构建可恢复的 Agent Client
+description: 使用 Python Client SDK 运行多轮 Session，并结合 WatchEvents 与 Event Log 处理实时输出和恢复
+slug: /client/guides/chat-client
+pagination_prev: client/guides/invoke-capability
+pagination_next: client/guides/request-lane
+---
+
+# 构建可恢复的 Agent Client
+
+本文面向通过 Client SDK 调用 AgentK 的下游应用开发者。我们会组成一个 Python Chat CLI：多轮输入
+复用同一个 <Session />，每轮输入启动一个新的 Agent <Execution />；运行时使用 `WatchEvents`
+接收更新，断线或进程重启后再从 Session <EventLog /> 恢复已经提交的事件。
+
+Client 应用不保存一份平行的聊天历史。它只保存业务对象与 `session_id` 的关联，以及已经处理过的
+`event_id`。
+
+## 准备 Client 调用信息
+
+安装带 gRPC transport 的 Python Client SDK：
+
+```bash
+python -m pip install 'ks-agentk-client[grpc]==0.3.2'
+
+export KWS_SERVICE_NAME='<registered-ksn>'
+export AGENTK_MODEL='<chat-model-name>'
+```
+
+运行前向 AgentK 平台维护方登记工作负载 KSN，并完成 Service/App 绑定。本页使用 KESS gRPC h2c
+transport；部署环境由平台注入 KWS 身份。其他连接方式见[选择 Client transport](/client/transports)。
+
+## 1. 创建 Client 和 Session
+
+新建 `chat.py`：
+
+```python title="chat.py"
+import asyncio
+import os
+
+from agentk.api.v1 import model_pb, profile_pb, service_pb
+from agentk.client import AsyncClient, Options
+from agentk.client.grpc import create_client
+from protobuf import Oneof
+
+
+def make_client() -> AsyncClient:
+    return create_client(Options())
+
+
+async def create_session(client: AsyncClient) -> str:
+    response = await client.create_session(
+        service_pb.CreateSessionRequest(
+            title="python-chat",
+            profile=profile_pb.Profile(
+                default_model=os.environ["AGENTK_MODEL"],
+                system="回答简洁；缺少必要信息时先向用户提问。",
+            ),
+        )
+    )
+    return response.session.id
+```
+
+<Profile /> 在创建 Session 时完整提交，并在该 Session 内保持不变。多轮对话只复用
+`session_id`，不重复提交 Profile。
+
+## 2. 提交一轮消息
+
+每条用户消息启动一个 Agent Execution：
+
+```python
+async def start_message(
+    client: AsyncClient,
+    session_id: str,
+    text: str,
+) -> str:
+    response = await client.start_execution(
+        service_pb.StartExecutionRequest(
+            session_id=session_id,
+            input=Oneof(
+                "message",
+                service_pb.AgentMessageExecutionInput(text=text),
+            ),
+        )
+    )
+    return response.execution.id
+```
+
+`StartExecution` 返回时，Execution 通常仍是 `RUNNING`。同一个 Session 一次只能有一个
+active Execution；上一轮尚未结束时继续提交消息、回答或 Pipeline，服务会拒绝新的启动请求。
+
+## 3. 观察当前 Execution
+
+`WatchEvents` 返回三类 frame：
+
+- `delta`：模型生成中的临时文本或推理增量；
+- `committed_event`：已经写入 Session Event Log 的完整 Event；
+- `stream_end`：这次 Execution 的实时流已经结束。
+
+下面先处理持久事件。`event_id` 是稳定身份；同一个 stream 重连后可能再次收到已见事件，
+因此 Client 应用应去重：
+
+```python
+def print_committed(event, seen_event_ids: set[str]) -> None:
+    if event.event_id in seen_event_ids:
+        return
+    seen_event_ids.add(event.event_id)
+
+    if event.payload is None:
+        return
+    if event.payload.field == "user_input":
+        print(f'you> {event.payload.value.text}')
+    elif event.payload.field == "assistant_text":
+        print(event.payload.value.text, end="", flush=True)
+
+
+async def watch_execution(
+    client: AsyncClient,
+    session_id: str,
+    execution_id: str,
+    seen_event_ids: set[str],
+) -> None:
+    async for frame in client.watch_events(
+        service_pb.WatchEventsRequest(
+            session_id=session_id,
+            execution_id=execution_id,
+        )
+    ):
+        if frame.frame is None:
+            continue
+        if frame.frame.field == "committed_event":
+            print_committed(frame.frame.value, seen_event_ids)
+        elif frame.frame.field == "stream_end":
+            return
+```
+
+界面希望逐字展示时，可以同时消费 `delta`。Delta 是临时预览，不进入 Event Log；模型调用
+重试时 `generation` 会变化，Client 应用应替换旧预览，而不是把两代文本拼在一起。最终显示仍以
+`assistant_text` Event 为准。
+
+## 4. 从 Event Log 校准
+
+`WatchEvents` 是低延迟通道，不是唯一记录。断线后使用 `ListEvents` 读取 Session 中已经提交的
+事件。接口按时间从新到旧分页，`next_page_token` 用于读取下一页：
+
+```python
+async def sync_events(
+    client: AsyncClient,
+    session_id: str,
+    execution_id: str,
+    seen_event_ids: set[str],
+) -> None:
+    page_token = ""
+    newest_first = []
+
+    while True:
+        response = await client.list_events(
+            service_pb.ListEventsRequest(
+                session_id=session_id,
+                page_size=100,
+                page_token=page_token,
+            )
+        )
+        newest_first.extend(
+            event
+            for event in response.events
+            if event.execution_id == execution_id
+        )
+        page_token = response.next_page_token
+        if not page_token:
+            break
+
+    for event in reversed(newest_first):
+        print_committed(event, seen_event_ids)
+```
+
+这里按 `execution_id` 过滤，是因为 Event Log 属于 Session，而一次观察只对应其中一个
+Execution。生产应用可以把最后处理过的 `event_id` 集合或业务投影持久化；不要把分页 token
+当成事件的长期业务身份。
+
+## 5. 等待可靠终态
+
+实时流断开不代表 Execution 失败，`stream_end` 也不替代终态。使用 `GetExecution` 判断
+`COMPLETED`、`FAILED` 或 `CANCELLED`：
+
+```python
+async def wait_execution(
+    client: AsyncClient,
+    session_id: str,
+    execution_id: str,
+    seen_event_ids: set[str],
+) -> None:
+    while True:
+        try:
+            await watch_execution(
+                client,
+                session_id,
+                execution_id,
+                seen_event_ids,
+            )
+        except Exception as error:
+            print(f"\n实时连接中断，正在从事件日志恢复：{error}")
+
+        await sync_events(
+            client,
+            session_id,
+            execution_id,
+            seen_event_ids,
+        )
+        response = await client.get_execution(
+            service_pb.GetExecutionRequest(
+                session_id=session_id,
+                execution_id=execution_id,
+            )
+        )
+        execution = response.execution
+        if execution.status == model_pb.ExecutionStatus.COMPLETED:
+            print()
+            return
+        if execution.status in (
+            model_pb.ExecutionStatus.FAILED,
+            model_pb.ExecutionStatus.CANCELLED,
+        ):
+            raise RuntimeError(execution.error or "Agent execution failed")
+
+        await asyncio.sleep(1)
+```
+
+## 6. 组成多轮聊天
+
+把前面的函数串起来：
+
+```python
+async def chat(session_id: str | None = None) -> None:
+    async with make_client() as client:
+        if session_id is None:
+            session_id = await create_session(client)
+        print(f"AgentK chat · {session_id} · 输入 /quit 退出")
+
+        seen_event_ids: set[str] = set()
+        while True:
+            text = input("\nyou> ").strip()
+            if text == "/quit":
+                return
+            if not text:
+                continue
+
+            execution_id = await start_message(client, session_id, text)
+            print("agent> ", end="", flush=True)
+            await wait_execution(
+                client,
+                session_id,
+                execution_id,
+                seen_event_ids,
+            )
+
+
+if __name__ == "__main__":
+    asyncio.run(chat())
+```
+
+运行：
+
+```bash
+python chat.py
+```
+
+应用重启后，只要从自己的业务数据中找回 `session_id`，就可以使用 `ListExecutions` 和
+`ListEvents` 重建所需视图，再启动下一轮。AgentK 管理 Session 和执行历史；终端用户身份、
+业务权限以及终端用户到 Session 的映射仍由下游应用维护。
+
+## 恢复时需要记住的边界
+
+1. `WatchEvents` 绑定一个 Execution；Session 历史使用 `ListEvents` 读取。
+2. Delta 只用于临时预览，已提交 Event 才能用于恢复和业务处理。
+3. 事件使用 `event_id` 去重；分页使用不透明的 `page_token`。
+4. Execution 终态以 `GetExecution` 或 `execution_finished` Event 为准。
+5. 一个 Session 同时只有一个 active Execution；多轮输入按顺序启动。

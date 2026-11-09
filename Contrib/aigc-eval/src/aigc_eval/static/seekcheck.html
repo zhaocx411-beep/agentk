@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>视频 seek 自检</title>
+<style>
+  body{font-family:-apple-system,"PingFang SC",sans-serif;margin:0;padding:20px;background:#f4f5f7;color:#14171f}
+  h1{font-size:18px;margin:0 0 4px}
+  p.sub{margin:0 0 16px;color:#5b6472;font-size:13px}
+  .row{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+  .box{background:#fff;border:1px solid #e4e7ec;border-radius:12px;padding:16px;min-width:0}
+  video{width:520px;max-width:100%;background:#000;border-radius:8px;display:block}
+  .track{position:relative;height:24px;background:#e4e7ec;border-radius:4px;margin-top:10px;cursor:pointer;width:520px;max-width:100%}
+  .fill{position:absolute;left:0;top:0;bottom:0;background:#3a5bd9;border-radius:4px;width:0;pointer-events:none}
+  .mk{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:#e5484d;border:2px solid #fff;transform:translate(-50%,-50%);cursor:pointer}
+  button{font:inherit;padding:6px 12px;border-radius:8px;border:1px solid #d0d0d0;background:#f2f2f4;cursor:pointer;margin:4px 4px 0 0}
+  #log{font-family:ui-monospace,Menlo,monospace;font-size:12px;line-height:1.6;white-space:pre-wrap;
+       background:#0f1117;color:#d5dae3;padding:14px;border-radius:10px;max-height:420px;overflow:auto;min-width:420px;flex:1}
+  .ok{color:#34d399}.bad{color:#ff6b6b}.warn{color:#f59e0b}
+  select{font:inherit;padding:6px}
+</style>
+</head>
+<body>
+<h1>视频 seek 自检</h1>
+<p class="sub">这个页面只做一件事：把浏览器在 seek 时的真实行为记录下来。请选一条你「拖不动」的视频，然后按下面的按钮，把日志整段复制给我。</p>
+
+<div class="row">
+  <div class="box">
+    <select id="pick"></select>
+    <div style="margin-top:10px">
+      <video id="v" playsinline preload="metadata"></video>
+      <div class="track" id="track"><div class="fill" id="fill"></div></div>
+    </div>
+    <div>
+      <button id="b5">seek 到 5s</button>
+      <button id="b10">seek 到 10s</button>
+      <button id="bplay">播放/暂停</button>
+      <button id="bnet">测 Range 请求</button>
+      <button id="bclear">清空日志</button>
+    </div>
+  </div>
+  <div id="log"></div>
+</div>
+
+<script>
+const V = document.getElementById('v');
+const LOG = document.getElementById('log');
+const T = document.getElementById('track');
+const F = document.getElementById('fill');
+
+function log(msg, cls) {
+  const t = new Date().toISOString().slice(11, 23);
+  LOG.innerHTML += `<span class="${cls || ''}">[${t}] ${msg}</span>\n`;
+  LOG.scrollTop = LOG.scrollHeight;
+}
+
+// 候选视频：直接问后端要 0810 数据集的前几条
+fetch('./api/dataset_cases').then(r => r.json()).then(async (data) => {
+  const cases = Array.isArray(data) ? data : (data.cases || []);
+  const sel = document.getElementById('pick');
+  for (const c of cases.slice(0, 12)) {
+    try {
+      const d = await (await fetch('./api/dataset_case?case_id=' + encodeURIComponent(c.case_id))).json();
+      (d.results || []).slice(0, 2).forEach((r) => {
+        const o = document.createElement('option');
+        o.value = r.url; o.textContent = c.case_id + ' / ' + r.file;
+        sel.appendChild(o);
+      });
+    } catch (e) { /* 跳过 */ }
+  }
+  log('候选视频 ' + sel.options.length + ' 条，已就绪。请选一条你拖不动的。', 'ok');
+  sel.onchange = () => load(sel.value, sel.selectedOptions[0].textContent);
+  if (sel.options.length) load(sel.value, sel.options[0].textContent);
+}).catch(e => log('拉数据集失败：' + e.message, 'bad'));
+
+function load(url, label) {
+  log('──────────── 载入 ' + label);
+  log('url = ' + url);
+  V.src = url;
+  V.load();
+}
+
+// 把所有相关事件都记下来
+['loadstart','loadedmetadata','loadeddata','canplay','seeking','seeked','timeupdate','error','stalled','suspend','waiting','progress']
+  .forEach((ev) => {
+    V.addEventListener(ev, () => {
+      if (ev === 'timeupdate') { F.style.width = (V.currentTime / (V.duration || 1) * 100) + '%'; return; }
+      let extra = '';
+      if (ev === 'loadedmetadata') extra = ` duration=${V.duration} ${V.videoWidth}x${V.videoHeight}`;
+      if (ev === 'error') extra = ` code=${V.error && V.error.code} msg=${V.error && V.error.message}`;
+      if (ev === 'progress' || ev === 'canplay') {
+        const b = []; for (let i = 0; i < V.buffered.length; i++) b.push(`${V.buffered.start(i).toFixed(1)}-${V.buffered.end(i).toFixed(1)}`);
+        extra = ` buffered=[${b.join(',')}] seekable=${V.seekable.length ? V.seekable.start(0).toFixed(1)+'-'+V.seekable.end(0).toFixed(1) : '空'}`;
+      }
+      log(ev + extra, ev === 'error' ? 'bad' : '');
+    });
+  });
+
+function trySeek(t) {
+  log(`>>> 请求 seek 到 ${t}s（当前 currentTime=${V.currentTime.toFixed(2)} duration=${V.duration} seekable=${V.seekable.length ? V.seekable.end(0).toFixed(1) : '空'}）`, 'warn');
+  const before = V.currentTime;
+  V.currentTime = t;
+  log(`    赋值后立即读 currentTime=${V.currentTime.toFixed(2)}`);
+  setTimeout(() => {
+    const moved = Math.abs(V.currentTime - before) > 0.3;
+    log(`    600ms 后 currentTime=${V.currentTime.toFixed(2)} → ${moved ? '画面已跳转' : '没动！'}`, moved ? 'ok' : 'bad');
+    if (!moved) {
+      log(`    seekable 区间数=${V.seekable.length}` + (V.seekable.length ? ` 0..${V.seekable.end(0).toFixed(1)}` : ' （空 → 浏览器认为不可 seek，通常是服务端没给 206/Accept-Ranges）'), 'bad');
+    }
+  }, 600);
+}
+
+document.getElementById('b5').onclick = () => trySeek(5);
+document.getElementById('b10').onclick = () => trySeek(10);
+document.getElementById('bplay').onclick = () => { V.paused ? V.play() : V.pause(); log('paused=' + V.paused); };
+document.getElementById('bclear').onclick = () => { LOG.innerHTML = ''; };
+
+T.onmousedown = (e) => {
+  const r = T.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+  log(`>>> 点进度条 ${(ratio * 100).toFixed(0)}%`, 'warn');
+  if (!isFinite(V.duration)) { log('    duration 不是有限值，无法换算！', 'bad'); return; }
+  trySeek(ratio * V.duration);
+};
+
+// 直接用 fetch 验一遍 Range，把真实响应头打出来
+document.getElementById('bnet').onclick = async () => {
+  const url = V.currentSrc || V.src;
+  log('>>> fetch Range: bytes=0-99 → ' + url);
+  try {
+    const r = await fetch(url, { headers: { Range: 'bytes=0-99' } });
+    const buf = await r.arrayBuffer();
+    log(`    HTTP ${r.status}  收到 ${buf.byteLength} 字节`, r.status === 206 ? 'ok' : 'bad');
+    ['content-range','accept-ranges','content-length','cache-control','etag','content-type'].forEach((h) => {
+      log(`    ${h}: ${r.headers.get(h)}`);
+    });
+    if (r.status !== 206) log('    → 服务端没回 206，浏览器因此不肯 seek。这是根因。', 'bad');
+  } catch (e) { log('    fetch 失败：' + e.message, 'bad'); }
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+{
+  "package": "agentk",
+  "view": "client",
+  "modules": {
+    "agentk.client": {
+      "source": {
+        "path": "client/src/agentk/client/__init__.py"
+      },
+      "members": {
+        "AsyncClient": {
+          "kind": "class",
+          "doc": "Authenticated asynchronous access to the AgentK API.\n\nObtain an instance from a transport factory such as\nagentk.client.grpc.create_client. RPC failures are raised by the transport.\nUse the client as an asynchronous context manager or call aclose when it is\nno longer needed.",
+          "source": {
+            "path": "client/src/agentk/client/_core.py",
+            "line": 59,
+            "endLine": 268
+          },
+          "parameters": [
+            {
+              "name": "provider",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "RPCProvider",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 11,
+                    "target": "agentk.client._provider.RPCProvider"
+                  }
+                ]
+              }
+            }
+          ],
+          "members": {
+            "create_session": {
+              "kind": "function",
+              "doc": "Create a Session from the complete Profile in the request.\n\nThe Profile is fixed for the lifetime of the Session.\n\nArgs:\n    request: The Session title and complete Profile.\n\nReturns:\n    The created Session.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 79,
+                "endLine": 93
+              },
+              "returns": {
+                "text": "CreateSessionResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 21,
+                    "target": "agentk.api.v1.service_pb.CreateSessionResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "CreateSessionRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 20,
+                        "target": "agentk.api.v1.service_pb.CreateSessionRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "list_sessions": {
+              "kind": "function",
+              "doc": "Return a page of Sessions ordered from newest to oldest.\n\nArgs:\n    request: Pagination settings.\n\nReturns:\n    The matching Sessions and the next-page token.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 95,
+                "endLine": 107
+              },
+              "returns": {
+                "text": "ListSessionsResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 20,
+                    "target": "agentk.api.v1.service_pb.ListSessionsResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "ListSessionsRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 19,
+                        "target": "agentk.api.v1.service_pb.ListSessionsRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "start_execution": {
+              "kind": "function",
+              "doc": "Start an Execution in an existing Session.\n\nArgs:\n    request: The Session ID and message, answers, or Pipeline input.\n\nReturns:\n    The new Execution.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 109,
+                "endLine": 121
+              },
+              "returns": {
+                "text": "StartExecutionResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 22,
+                    "target": "agentk.api.v1.service_pb.StartExecutionResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "StartExecutionRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 21,
+                        "target": "agentk.api.v1.service_pb.StartExecutionRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "cancel_execution": {
+              "kind": "function",
+              "doc": "Request cancellation of the running Execution in a Session.\n\nArgs:\n    request: The Session whose running Execution should be cancelled.\n\nReturns:\n    The cancellation response.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 123,
+                "endLine": 135
+              },
+              "returns": {
+                "text": "CancelExecutionResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 23,
+                    "target": "agentk.api.v1.service_pb.CancelExecutionResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "CancelExecutionRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 22,
+                        "target": "agentk.api.v1.service_pb.CancelExecutionRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "list_events": {
+              "kind": "function",
+              "doc": "Return a page of persisted Session events, newest first.\n\nArgs:\n    request: The Session ID and pagination settings.\n\nReturns:\n    The matching events and the next-page token.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 137,
+                "endLine": 147
+              },
+              "returns": {
+                "text": "ListEventsResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 18,
+                    "target": "agentk.api.v1.service_pb.ListEventsResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "ListEventsRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 17,
+                        "target": "agentk.api.v1.service_pb.ListEventsRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "watch_events": {
+              "kind": "function",
+              "doc": "Watch live event frames for one Session and Execution.\n\nThe underlying stream is closed when iteration completes, fails, or is\nexplicitly closed by the caller.\n\nArgs:\n    request: The Session and Execution IDs to watch.\n\nYields:\n    Committed events, transient deltas, and the terminal stream frame.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 149,
+                "endLine": 171
+              },
+              "returns": {
+                "text": "AsyncIterator[WatchEventsResponse]",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 13,
+                    "target": "collections.abc.AsyncIterator"
+                  },
+                  {
+                    "start": 14,
+                    "end": 33,
+                    "target": "agentk.api.v1.service_pb.WatchEventsResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "WatchEventsRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 18,
+                        "target": "agentk.api.v1.service_pb.WatchEventsRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "list_pipelines": {
+              "kind": "function",
+              "doc": "Return a page of Pipelines available to a Session, ordered by name.\n\nArgs:\n    request: The Session ID and pagination settings.\n\nReturns:\n    The matching Pipelines and the next-page token.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 173,
+                "endLine": 185
+              },
+              "returns": {
+                "text": "ListPipelinesResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 21,
+                    "target": "agentk.api.v1.service_pb.ListPipelinesResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "ListPipelinesRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 20,
+                        "target": "agentk.api.v1.service_pb.ListPipelinesRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "list_executions": {
+              "kind": "function",
+              "doc": "Return a page of Session Executions ordered from newest to oldest.\n\nArgs:\n    request: The Session ID and pagination settings.\n\nReturns:\n    The matching Executions and the next-page token.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 187,
+                "endLine": 199
+              },
+              "returns": {
+                "text": "ListExecutionsResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 22,
+                    "target": "agentk.api.v1.service_pb.ListExecutionsResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "ListExecutionsRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 21,
+                        "target": "agentk.api.v1.service_pb.ListExecutionsRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "get_execution": {
+              "kind": "function",
+              "doc": "Return one Execution by its Session and Execution IDs.\n\nArgs:\n    request: The Session and Execution IDs.\n\nReturns:\n    The requested Execution.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 201,
+                "endLine": 213
+              },
+              "returns": {
+                "text": "GetExecutionResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 20,
+                    "target": "agentk.api.v1.service_pb.GetExecutionResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "GetExecutionRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 19,
+                        "target": "agentk.api.v1.service_pb.GetExecutionRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "list_capabilities": {
+              "kind": "function",
+              "doc": "Return a page of registered capabilities ordered by capability ID.\n\nArgs:\n    request: Pagination settings.\n\nReturns:\n    The matching capabilities and the next-page token.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 215,
+                "endLine": 227
+              },
+              "returns": {
+                "text": "ListCapabilitiesResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 24,
+                    "target": "agentk.api.v1.service_pb.ListCapabilitiesResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "ListCapabilitiesRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 23,
+                        "target": "agentk.api.v1.service_pb.ListCapabilitiesRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "invoke_capability": {
+              "kind": "function",
+              "doc": "Invoke a capability without creating a Session or Execution.\n\nThe call waits for the capability to complete. Cancelling the caller's\ntask cancels the in-flight RPC.\n\nArgs:\n    request: The capability ID and JSON-compatible input object.\n\nReturns:\n    The capability output.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 229,
+                "endLine": 244
+              },
+              "returns": {
+                "text": "InvokeCapabilityResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 24,
+                    "target": "agentk.api.v1.service_pb.InvokeCapabilityResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "InvokeCapabilityRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 23,
+                        "target": "agentk.api.v1.service_pb.InvokeCapabilityRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "who_am_i": {
+              "kind": "function",
+              "doc": "Return the service and App identity resolved by AgentK.\n\nArgs:\n    request: An empty identity request.\n\nReturns:\n    The caller Service and App identity.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 246,
+                "endLine": 256
+              },
+              "returns": {
+                "text": "WhoAmIResponse",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 14,
+                    "target": "agentk.api.v1.service_pb.WhoAmIResponse"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "request",
+                  "kind": "positional_or_keyword",
+                  "annotation": {
+                    "text": "WhoAmIRequest",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 13,
+                        "target": "agentk.api.v1.service_pb.WhoAmIRequest"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "aclose": {
+              "kind": "function",
+              "doc": "Close transport resources owned by this client.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 258,
+                "endLine": 260
+              },
+              "returns": {
+                "text": "None"
+              },
+              "async": true,
+              "parameters": []
+            },
+            "__aenter__": {
+              "kind": "function",
+              "doc": "Return this client from an asynchronous context manager.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 262,
+                "endLine": 264
+              },
+              "returns": {
+                "text": "Self",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 4,
+                    "target": "typing.Self"
+                  }
+                ]
+              },
+              "async": true,
+              "parameters": []
+            },
+            "__aexit__": {
+              "kind": "function",
+              "doc": "Close the client when leaving an asynchronous context manager.",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 266,
+                "endLine": 268
+              },
+              "returns": {
+                "text": "None"
+              },
+              "async": true,
+              "parameters": [
+                {
+                  "name": "_exc",
+                  "kind": "variadic_positional",
+                  "annotation": {
+                    "text": "object",
+                    "references": [
+                      {
+                        "start": 0,
+                        "end": 6,
+                        "target": "object"
+                      }
+                    ]
+                  },
+                  "default": "()"
+                }
+              ]
+            }
+          },
+          "definedAt": "agentk.client._core.AsyncClient"
+        },
+        "Options": {
+          "kind": "class",
+          "doc": "Options shared by AgentK client transports.\n\nAttributes:\n    endpoint: An absolute AgentK URL that overrides the transport default.\n        When empty, HTTP uses the environment gateway and gRPC uses KESS.",
+          "source": {
+            "path": "client/src/agentk/client/_core.py",
+            "line": 40,
+            "endLine": 49
+          },
+          "decorators": [
+            "dataclass(frozen=True, slots=True)"
+          ],
+          "parameters": [
+            {
+              "name": "endpoint",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "default": "''"
+            }
+          ],
+          "members": {
+            "endpoint": {
+              "kind": "attribute",
+              "source": {
+                "path": "client/src/agentk/client/_core.py",
+                "line": 49,
+                "endLine": 49
+              },
+              "scope": "instance",
+              "annotation": {
+                "text": "str",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 3,
+                    "target": "str"
+                  }
+                ]
+              },
+              "value": "''"
+            }
+          },
+          "definedAt": "agentk.client._core.Options"
+        }
+      }
+    },
+    "agentk.client.grpc": {
+      "source": {
+        "path": "client/src/agentk/client/grpc/__init__.py"
+      },
+      "members": {
+        "create_client": {
+          "kind": "function",
+          "doc": "Create an AgentK gRPC client using an override or KESS discovery.\n\nArgs:\n    options: Endpoint options shared by AgentK client transports.\n\nReturns:\n    An asynchronous AgentK client. Use it as an asynchronous context manager\n    or call aclose when it is no longer needed.\n\nRaises:\n    ValueError: If options has an invalid endpoint.",
+          "source": {
+            "path": "client/src/agentk/client/grpc/__init__.py",
+            "line": 72,
+            "endLine": 89
+          },
+          "returns": {
+            "text": "AsyncClient",
+            "references": [
+              {
+                "start": 0,
+                "end": 11,
+                "target": "agentk.client._core.AsyncClient"
+              }
+            ]
+          },
+          "parameters": [
+            {
+              "name": "options",
+              "kind": "positional_or_keyword",
+              "annotation": {
+                "text": "Options",
+                "references": [
+                  {
+                    "start": 0,
+                    "end": 7,
+                    "target": "agentk.client._core.Options"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

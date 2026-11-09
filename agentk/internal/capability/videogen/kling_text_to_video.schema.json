@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "kling-3.0-t2v"
+      ],
+      "description": "使用的模型。候选：kling-3.0-t2v（可灵 3.0 文生视频）"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "纯自然语言的画面、镜头运动和声音描述；不要附加模型专用命令或参数。画面完全由这段文字决定，主体外观、场景、光线、运镜都要写清楚"
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "720p",
+        "1080p"
+      ],
+      "default": "1080p",
+      "description": "输出清晰度，越高越贵；缺省 1080p"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "description": "片段时长（秒），3~15，缺省 5"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "description": "输出画幅；缺省 16:9。竖屏短视频用 9:16"
+    },
+    "audio": {
+      "type": "string",
+      "enum": [
+        "native",
+        "off"
+      ],
+      "default": "native",
+      "description": "是否生成与画面适配的原生声音：native 有声，off 无声；缺省 native"
+    },
+    "multiShot": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否生成多镜头视频，缺省 true。设为 true 时模型可根据 prompt 生成多镜头；不需要多镜头时显式设为 false"
+    }
+  },
+  "required": [
+    "model",
+    "prompt"
+  ]
+}

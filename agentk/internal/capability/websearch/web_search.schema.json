@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "volc-search",
+        "brightdata-serp"
+      ],
+      "description": "使用的模型。候选：volc-search（火山联网搜索，中文网页覆盖好）；brightdata-serp（Google 检索结果，英文与海外站点覆盖好）"
+    },
+    "query": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "检索词，最多 100 个字符。用关键词而不是整句问句；要限定站点就直接写进检索词（如 site:github.com），不要另造参数。一次问不清楚就分几次搜，别把多个问题挤进一个检索词"
+    },
+    "timeRange": {
+      "type": "string",
+      "enum": [
+        "day",
+        "week",
+        "month",
+        "year"
+      ],
+      "description": "只要该时间范围内的结果；不填为不限。问的是时效性信息（新闻、行情、最新版本、近期政策）时才填"
+    }
+  },
+  "required": [
+    "model",
+    "query"
+  ]
+}

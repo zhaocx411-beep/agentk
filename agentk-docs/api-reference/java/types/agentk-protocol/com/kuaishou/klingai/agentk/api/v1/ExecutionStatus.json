@@ -1,0 +1,858 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ExecutionStatus"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus",
+    "kind": "enum",
+    "name": "ExecutionStatus",
+    "declaration": {
+      "text": "@Generated()public enum ExecutionStatus implements ProtocolMessageEnum",
+      "references": [
+        {
+          "start": 24,
+          "end": 39,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf enum "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.ExecutionStatus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_CANCELLED-",
+        "name": "EXECUTION_STATUS_CANCELLED",
+        "declaration": {
+          "text": "EXECUTION_STATUS_CANCELLED",
+          "references": [
+            {
+              "start": 0,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_CANCELLED-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_CANCELLED = 4;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_COMPLETED-",
+        "name": "EXECUTION_STATUS_COMPLETED",
+        "declaration": {
+          "text": "EXECUTION_STATUS_COMPLETED",
+          "references": [
+            {
+              "start": 0,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_COMPLETED-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_COMPLETED = 2;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_FAILED-",
+        "name": "EXECUTION_STATUS_FAILED",
+        "declaration": {
+          "text": "EXECUTION_STATUS_FAILED",
+          "references": [
+            {
+              "start": 0,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_FAILED-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_FAILED = 3;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_RUNNING-",
+        "name": "EXECUTION_STATUS_RUNNING",
+        "declaration": {
+          "text": "EXECUTION_STATUS_RUNNING",
+          "references": [
+            {
+              "start": 0,
+              "end": 24,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_RUNNING-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_RUNNING = 1;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_UNSPECIFIED-",
+        "name": "EXECUTION_STATUS_UNSPECIFIED",
+        "declaration": {
+          "text": "EXECUTION_STATUS_UNSPECIFIED",
+          "references": [
+            {
+              "start": 0,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_UNSPECIFIED-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_UNSPECIFIED = 0;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-UNRECOGNIZED-",
+        "name": "UNRECOGNIZED",
+        "declaration": {
+          "text": "UNRECOGNIZED",
+          "references": [
+            {
+              "start": 0,
+              "end": 12,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-UNRECOGNIZED-"
+            }
+          ]
+        },
+        "documentation": []
+      }
+    ],
+    "fields": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_CANCELLED_VALUE-",
+        "name": "EXECUTION_STATUS_CANCELLED_VALUE",
+        "declaration": {
+          "text": "public final static int EXECUTION_STATUS_CANCELLED_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_CANCELLED_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_CANCELLED = 4;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_COMPLETED_VALUE-",
+        "name": "EXECUTION_STATUS_COMPLETED_VALUE",
+        "declaration": {
+          "text": "public final static int EXECUTION_STATUS_COMPLETED_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_COMPLETED_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_COMPLETED = 2;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_FAILED_VALUE-",
+        "name": "EXECUTION_STATUS_FAILED_VALUE",
+        "declaration": {
+          "text": "public final static int EXECUTION_STATUS_FAILED_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_FAILED_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_FAILED = 3;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_RUNNING_VALUE-",
+        "name": "EXECUTION_STATUS_RUNNING_VALUE",
+        "declaration": {
+          "text": "public final static int EXECUTION_STATUS_RUNNING_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_RUNNING_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_RUNNING = 1;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_UNSPECIFIED_VALUE-",
+        "name": "EXECUTION_STATUS_UNSPECIFIED_VALUE",
+        "declaration": {
+          "text": "public final static int EXECUTION_STATUS_UNSPECIFIED_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 58,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-EXECUTION_STATUS_UNSPECIFIED_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "EXECUTION_STATUS_UNSPECIFIED = 0;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-forNumber-int-",
+        "name": "forNumber",
+        "declaration": {
+          "text": "public static ExecutionStatus forNumber(int value)",
+          "references": [
+            {
+              "start": 14,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 30,
+              "end": 39,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-forNumber-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The numeric wire value of the corresponding enum entry."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given numeric wire value."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static ExecutionStatus",
+          "references": [
+            {
+              "start": 7,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "forNumber(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getDescriptor-",
+        "name": "getDescriptor",
+        "declaration": {
+          "text": "public static Descriptors.EnumDescriptor getDescriptor()",
+          "references": [
+            {
+              "start": 41,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static EnumDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDescriptor()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getDescriptorForType-",
+        "name": "getDescriptorForType",
+        "declaration": {
+          "text": "public final Descriptors.EnumDescriptor getDescriptorForType()",
+          "references": [
+            {
+              "start": 40,
+              "end": 60,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getDescriptorForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final EnumDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDescriptorForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getNumber-",
+        "name": "getNumber",
+        "declaration": {
+          "text": "public final int getNumber()",
+          "references": [
+            {
+              "start": 17,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getNumber-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNumber()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getValueDescriptor-",
+        "name": "getValueDescriptor",
+        "declaration": {
+          "text": "public final Descriptors.EnumValueDescriptor getValueDescriptor()",
+          "references": [
+            {
+              "start": 45,
+              "end": 63,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-getValueDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final EnumValueDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getValueDescriptor()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-internalGetValueMap-",
+        "name": "internalGetValueMap",
+        "declaration": {
+          "text": "public static Internal.EnumLiteMap<ExecutionStatus> internalGetValueMap()",
+          "references": [
+            {
+              "start": 35,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 52,
+              "end": 71,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-internalGetValueMap-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static EnumLiteMap<ExecutionStatus>",
+          "references": [
+            {
+              "start": 19,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "internalGetValueMap()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-com-google-protobuf-Descriptors-EnumValueDescriptor-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static ExecutionStatus valueOf(Descriptors.EnumValueDescriptor desc)",
+          "references": [
+            {
+              "start": 14,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 30,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-com-google-protobuf-Descriptors-EnumValueDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static ExecutionStatus",
+          "references": [
+            {
+              "start": 7,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(EnumValueDescriptor desc)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-int-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "@Deprecated()public static ExecutionStatus valueOf(int value)",
+          "references": [
+            {
+              "start": 1,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html"
+            },
+            {
+              "start": 27,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 43,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The numeric wire value of the corresponding enum entry."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given numeric wire value."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Deprecated",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Use "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-forNumber-int-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "forNumber"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " instead."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static ExecutionStatus",
+          "references": [
+            {
+              "start": 7,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-java-lang-String-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static ExecutionStatus valueOf(String name)",
+          "references": [
+            {
+              "start": 14,
+              "end": 29,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 30,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-valueOf-java-lang-String-"
+            },
+            {
+              "start": 38,
+              "end": 44,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static ExecutionStatus",
+          "references": [
+            {
+              "start": 7,
+              "end": 22,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(String name)",
+          "references": [
+            {
+              "start": 8,
+              "end": 14,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-values-",
+        "name": "values",
+        "declaration": {
+          "text": "public static Array<ExecutionStatus> values()",
+          "references": [
+            {
+              "start": 20,
+              "end": 35,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            },
+            {
+              "start": 37,
+              "end": 43,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStatus-values-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Array<ExecutionStatus>",
+          "references": [
+            {
+              "start": 13,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStatus"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "values()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

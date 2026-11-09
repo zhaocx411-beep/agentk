@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>AgentK Capability Demo</title>
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="AgentK Capability Demo">
+      <span class="brand-mark">K</span>
+      <span><b>AGENTK</b><small>CAPABILITY DEMO</small></span>
+    </a>
+    <div class="target"><span>GATEWAY</span><code id="gatewayAddress">connecting…</code></div>
+    <div class="connection" id="connection"><i></i><span>CHECKING</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">CAPABILITY / AGENT LOOP / AGENT 100</span>
+        <h1>把每个能力放上<br><em>测试台。</em></h1>
+      </div>
+      <p>从实时 catalog 生成输入表单，直接驱动 Python SDK。保留每一轮文本、推理、工具、问题与产物证据。</p>
+    </section>
+
+    <nav class="mode-tabs" aria-label="工作台">
+      <button class="active" data-mode="capabilities"><span>01</span> CAPABILITY LAB</button>
+      <button data-mode="agents"><span>02</span> AGENT LOOP</button>
+      <button data-mode="agent100"><span>03</span> AGENT 100</button>
+    </nav>
+
+    <section class="workspace active" id="capabilitiesWorkspace">
+      <aside class="rail">
+        <div class="rail-head"><span>LIVE CATALOG</span><b id="capabilityCount">—</b></div>
+        <label class="search"><span>⌕</span><input id="capabilitySearch" placeholder="筛选 capability" autocomplete="off"></label>
+        <div class="item-list" id="capabilityList"><div class="skeleton"></div><div class="skeleton short"></div></div>
+      </aside>
+      <div class="bench">
+        <div class="empty-state" id="capabilityEmpty">
+          <span class="reticle">+</span><h2>选择一个 capability</h2><p>输入 schema 会被自动转换成可执行表单。</p>
+        </div>
+        <div id="capabilityDetail" hidden>
+          <div class="bench-head">
+            <div><span class="kicker" id="capabilitySource">CAPABILITY</span><h2 id="capabilityName"></h2><p id="capabilityDescription"></p></div>
+            <div class="bench-actions"><button class="ghost" id="resetDefaultsButton" type="button">↺ 恢复示例</button><button class="ghost" id="rawModeButton" type="button">{ } RAW JSON</button></div>
+          </div>
+          <form id="capabilityForm">
+            <div class="form-example-note"><span>EXAMPLE INPUT</span><p>必填参数已预填可编辑示例。<code>example.com</code>、<code>your-voice-id</code> 和 <code>*-maas-prod</code> 需要替换为实际值。</p></div>
+            <div class="validation-errors" id="capabilityValidation" role="alert" hidden></div>
+            <div class="schema-form" id="schemaForm"></div>
+            <textarea class="raw-editor" id="rawEditor" spellcheck="false" hidden>{}</textarea>
+            <div class="action-row"><button class="primary" type="submit"><span>▶</span> RUN CAPABILITY</button><button class="danger" type="button" id="cancelCapability" hidden>STOP</button></div>
+          </form>
+          <section class="run-panel" id="capabilityRun" hidden>
+            <div class="panel-title"><span>EXECUTION TRACE</span><code id="capabilityRunId"></code><b id="capabilityRunStatus"></b></div>
+            <div class="event-feed" id="capabilityEvents"></div>
+            <section class="capability-output" id="capabilityResult" hidden>
+              <div class="output-title"><span>CAPABILITY OUTPUT</span><b id="capabilityArtifactCount"></b></div>
+              <div class="output-error" id="capabilityOutputError" hidden></div>
+              <div class="artifact-grid capability-artifacts" id="capabilityArtifacts"></div>
+              <details class="output-json"><summary>RAW JSON</summary><pre id="capabilityResultJson"></pre></details>
+            </section>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="agentsWorkspace">
+      <aside class="rail">
+        <div class="rail-head"><span>COMIC-DRAMA CASES</span><b id="agentCount">—</b></div>
+        <div class="item-list agent-list" id="agentList"><div class="skeleton"></div><div class="skeleton short"></div></div>
+      </aside>
+      <div class="bench agent-bench">
+        <div class="agent-intro" id="agentIntro">
+          <div class="agent-sigil" id="agentIcon">◎</div>
+          <div><span class="kicker">AGENT LOOP CASE</span><h2 id="agentName">选择一个 Agent</h2><p id="agentDescription">复现多轮对话、工具调用、异步进度和 ask_user。</p></div>
+          <button class="ghost" id="newChat">＋ NEW SESSION</button>
+        </div>
+        <div class="starter-grid" id="starterGrid"></div>
+        <div class="chat-feed" id="chatFeed"><div class="chat-zero"><span>READY</span><p>从下方输入一条消息开始本地测试。</p></div></div>
+        <div class="ask-zone" id="askZone"></div>
+        <form class="composer" id="composer">
+          <div class="attachment-strip" id="attachmentStrip"></div>
+          <textarea id="messageInput" rows="2" placeholder="输入测试消息；Shift + Enter 换行"></textarea>
+          <div class="composer-foot">
+            <label class="upload-button" id="chatUploadButton">＋ UPLOAD<input type="file" id="chatUpload" multiple accept="image/*,video/*,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.md,.markdown,.txt"></label>
+            <span id="uploadHint">视频 ≤100MB；其他文件 ≤20MB，支持点击或拖入</span>
+            <button class="danger mini" type="button" id="cancelAgent" hidden>STOP</button>
+            <button class="send" type="submit">SEND <span>↗</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="workspace agent100-workspace" id="agent100Workspace">
+      <aside class="rail">
+        <div class="rail-head"><span>AGENT 100 CASES</span><b id="agent100Count">—</b></div>
+        <div class="item-list agent-list" id="agent100List"><div class="skeleton"></div></div>
+      </aside>
+      <div class="bench narrato-bench" id="narratoRoot">
+        <div class="narrato-head">
+          <div class="agent-sigil narrato-sigil">N/A</div>
+          <div><span class="kicker">AGENT 100 / DOCUMENTARY</span><h2>Narrato Control Room</h2><p>上传、生成、观察、导出；通过 AgentK Pipeline 生成纪录片解说脚本与成片。</p></div>
+          <div class="connection" id="narratoConnection"><i></i><span>CHECKING</span></div>
+        </div>
+        <div class="narrato-grid">
+          <section class="narrato-controls">
+            <div class="panel-title"><span>INPUT CONTRACT</span><b>01</b></div>
+            <div class="narrato-pipelines" role="radiogroup" aria-label="Narrato Pipeline">
+              <button class="active" type="button" data-narrato-pipeline="documentary_video"><b>一键成片</b><small>documentary_video</small></button>
+              <button type="button" data-narrato-pipeline="documentary_script"><b>生成脚本</b><small>documentary_script</small></button>
+              <button type="button" data-narrato-pipeline="documentary_render"><b>脚本渲染</b><small>documentary_render</small></button>
+            </div>
+            <div class="narrato-block" data-narrato-for="documentary_video,documentary_script">
+              <h3><span>A</span> 源视频</h3>
+              <label class="narrato-upload" id="narratoUploadZone"><input id="narratoVideoFile" type="file" accept="video/mp4,video/quicktime,video/x-matroska,video/webm"><b id="narratoUploadTitle">拖入视频，或点击选择</b><small>MP4 / MOV / MKV / WEBM · 最长 1 小时 · MAX 512 MiB</small></label>
+              <label class="narrato-field wide"><span>VIDEO URI *</span><input id="narratoVideoUri" type="url" placeholder="https://cdn.example/source.mp4"></label>
+              <p class="narrato-hint" id="narratoMediaHint"></p>
+            </div>
+            <div class="narrato-block" data-narrato-for="documentary_video,documentary_script">
+              <h3><span>B</span> 创作与分析</h3>
+              <div class="narrato-fields">
+                <div class="narrato-field wide"><span>NARRATION STYLE</span><div class="narrato-styles" id="narratoStyles" role="radiogroup" aria-label="解说风格"></div></div>
+                <label class="narrato-field wide"><span>INSTRUCTIONS</span><textarea id="narratoInstructions" rows="3" placeholder="语气克制，只描述画面可确认的事实"></textarea></label>
+                <label class="narrato-check"><input id="narratoAsrEnabled" type="checkbox" checked><span>ASR 对白识别</span></label>
+                <label class="narrato-field"><span>ASR LANGUAGE</span><input id="narratoAsrLanguage" value="" placeholder="自动检测（可填 zh / en）"></label>
+              </div>
+            </div>
+            <div class="narrato-block" data-narrato-for="documentary_video,documentary_script">
+              <h3><span>C</span> 分阶段模型</h3>
+              <div class="narrato-fields">
+                <label class="narrato-field"><span>VISION</span><select id="narratoVisionModel"></select></label><label class="narrato-field"><span>ASR</span><select id="narratoAsrModel"></select></label>
+                <label class="narrato-field"><span>STORY</span><select id="narratoStoryModel"></select></label><label class="narrato-field"><span>SCRIPT</span><select id="narratoScriptModel"></select></label>
+              </div>
+            </div>
+            <div class="narrato-block hidden" data-narrato-for="documentary_render">
+              <h3><span>A</span> 纪录片脚本</h3>
+              <div class="narrato-script-actions"><label class="ghost">IMPORT JSON<input id="narratoScriptFile" type="file" accept="application/json,.json"></label><button class="ghost" id="narratoSampleScript" type="button">SAMPLE</button></div>
+              <label class="narrato-field wide"><span>SCRIPT JSON *</span><textarea class="raw-editor" id="narratoScriptJson" rows="15" spellcheck="false"></textarea></label>
+            </div>
+            <div class="narrato-block" data-narrato-for="documentary_video,documentary_render">
+              <h3><span>D</span> 渲染参数</h3>
+              <div class="narrato-fields">
+                <label class="narrato-field"><span>TTS PROVIDER *</span><select id="narratoTtsProvider"></select></label><label class="narrato-field"><span>TTS MODEL *</span><select id="narratoTtsModel"></select></label>
+                <label class="narrato-field wide"><span>VOICE *</span><select id="narratoVoice"></select></label>
+                <label class="narrato-field"><span>ASPECT</span><select id="narratoAspect"><option value="source">跟随原视频</option><option value="16:9">16:9</option><option value="9:16">9:16</option><option value="1:1">1:1</option></select></label>
+                <label class="narrato-field"><span>NARRATION VOLUME · <output id="narratoVolumeOutput">1.0</output></span><input id="narratoVolume" type="range" min="0" max="2" step="0.1" value="1"></label>
+                <label class="narrato-field"><span>ORIGINAL AUDIO · <output id="narratoOriginalVolumeOutput">0.20</output></span><input id="narratoOriginalVolume" type="range" min="0" max="2" step="0.01" value="0.2"></label>
+                <label class="narrato-check"><input id="narratoSubtitles" type="checkbox" checked><span>烧录字幕</span></label>
+              </div>
+            </div>
+            <div class="action-row"><button class="primary" id="narratoRun" type="button"><span>▶</span> RUN PIPELINE</button></div>
+            <p class="narrato-submit-hint">支持多个任务后台并发；提交成功后可立即继续创建。</p>
+            <p class="output-error" id="narratoError" hidden></p>
+          </section>
+          <section class="narrato-monitor">
+            <div class="panel-title"><span>EXECUTION TELEMETRY</span><b id="narratoStatus">IDLE</b></div>
+            <div class="narrato-run-meta"><div><span>SESSION</span><code id="narratoSession">—</code></div><div><span>EXECUTION</span><code id="narratoExecution">—</code></div></div>
+            <div class="narrato-progress"><div><span id="narratoStage">WAITING FOR INPUT</span><b id="narratoPercent">0%</b></div><i><span id="narratoProgressBar"></span></i></div>
+            <section class="narrato-history" id="narratoHistory">
+              <div class="narrato-history-head">
+                <div class="narrato-history-copy"><span>BACKGROUND RUNS</span><b>历史生成记录</b><small>任务在后台执行，不会占用左侧创建区</small></div>
+                <div class="narrato-history-actions"><span id="narratoHistoryCount">0 条记录</span><button id="narratoRefreshHistory" type="button">↻ 刷新</button></div>
+              </div>
+              <div class="narrato-history-running" id="narratoHistoryRunning">暂无运行中任务</div>
+              <div class="narrato-history-list" id="narratoHistoryList"><p>暂无生成记录</p></div>
+            </section>
+            <details class="narrato-audit"><summary>AgentK 能力对账 <b id="narratoCapabilitySummary">读取中…</b></summary><div id="narratoCapabilityList"></div></details>
+            <div class="narrato-console-tabs"><button class="active" data-narrato-panel="request">REQUEST</button><button data-narrato-panel="events">EVENTS <span id="narratoEventCount">0</span></button><button data-narrato-panel="output">OUTPUT</button></div>
+            <div class="narrato-console-panel active" id="narratoPanelRequest"><div class="request-ledger" id="narratoRequestJson"></div></div>
+            <div class="narrato-console-panel" id="narratoPanelEvents"><div class="event-feed" id="narratoEvents"></div></div>
+            <div class="narrato-console-panel" id="narratoPanelOutput"><pre id="narratoOutputJson">等待执行结果…</pre></div>
+            <section class="narrato-input-summary" id="narratoInputSummary" aria-label="本次任务输入参数" hidden>
+              <div class="narrato-input-summary-head"><div><span>TASK INPUT</span><b>本次任务输入参数</b></div><button id="narratoCloseInput" type="button" aria-label="收起本次任务输入参数">× CLOSE</button></div>
+              <pre id="narratoInputJson" tabindex="0"></pre>
+            </section>
+            <div class="narrato-output-actions"><a class="ghost" id="narratoInputVideo" target="_blank" rel="noopener noreferrer" title="打开该任务提交时使用的原始视频" hidden>INPUT VIDEO ↗</a><button class="ghost" id="narratoInputParams" type="button" aria-controls="narratoInputSummary" aria-expanded="false" hidden>INPUT PARAMS</button><a class="ghost" id="narratoArtifact" target="_blank" rel="noreferrer" hidden>OPEN VIDEO ↗</a><button class="ghost" id="narratoSaveOutput" type="button" disabled>SAVE JSON</button><button class="ghost" id="narratoRenderScript" type="button" hidden>EDIT &amp; RENDER →</button></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+  <script src="/assets/form-defaults.js" defer></script>
+  <script src="/assets/schema-validation.js" defer></script>
+  <script src="/assets/run-state.js" defer></script>
+  <script src="/assets/composer-state.js" defer></script>
+  <script src="/assets/result-media.js" defer></script>
+  <script src="/assets/request-ledger.js" defer></script>
+  <script src="/assets/markdown.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+  <script src="/assets/narrato.js" defer></script>
+</body>
+</html>

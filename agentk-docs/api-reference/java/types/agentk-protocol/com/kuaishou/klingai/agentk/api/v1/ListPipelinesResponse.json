@@ -1,0 +1,553 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ListPipelinesResponse"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse",
+    "kind": "class",
+    "name": "ListPipelinesResponse",
+    "declaration": {
+      "text": "@Generated()public final class ListPipelinesResponse extends GeneratedMessage implements ListPipelinesResponseOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 52,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.ListPipelinesResponse"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getNextPageToken-",
+        "name": "getNextPageToken",
+        "declaration": {
+          "text": "public String getNextPageToken()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 30,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getNextPageToken-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string next_page_token = 2 [json_name = \"nextPageToken\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The nextPageToken."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getNextPageToken()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getNextPageTokenBytes-",
+        "name": "getNextPageTokenBytes",
+        "declaration": {
+          "text": "public ByteString getNextPageTokenBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 39,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getNextPageTokenBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string next_page_token = 2 [json_name = \"nextPageToken\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for nextPageToken."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNextPageTokenBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelines-int-",
+        "name": "getPipelines",
+        "declaration": {
+          "text": "public Pipeline getPipelines(int index)",
+          "references": [
+            {
+              "start": 7,
+              "end": 15,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Pipeline"
+            },
+            {
+              "start": 16,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelines-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Pipeline pipelines = 1 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "Pipeline",
+          "references": [
+            {
+              "start": 0,
+              "end": 8,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Pipeline"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPipelines(int index)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelinesCount-",
+        "name": "getPipelinesCount",
+        "declaration": {
+          "text": "public int getPipelinesCount()",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelinesCount-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Pipeline pipelines = 1 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getPipelinesCount()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelinesList-",
+        "name": "getPipelinesList",
+        "declaration": {
+          "text": "public List<Pipeline> getPipelinesList()",
+          "references": [
+            {
+              "start": 7,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 12,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Pipeline"
+            },
+            {
+              "start": 22,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-getPipelinesList-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "repeated .agentk.api.v1.Pipeline pipelines = 1 [json_name = \"pipelines\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "List<Pipeline>",
+          "references": [
+            {
+              "start": 0,
+              "end": 4,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 5,
+              "end": 13,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/Pipeline"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPipelinesList()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ListPipelinesResponse.Builder newBuilder()",
+          "references": [
+            {
+              "start": 44,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ListPipelinesResponse.Builder newBuilder(ListPipelinesResponse prototype)",
+          "references": [
+            {
+              "start": 44,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilder-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-"
+            },
+            {
+              "start": 55,
+              "end": 76,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(ListPipelinesResponse prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public ListPipelinesResponse.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 37,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public ListPipelinesResponse.Builder toBuilder()",
+          "references": [
+            {
+              "start": 37,
+              "end": 46,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ListPipelinesResponse-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

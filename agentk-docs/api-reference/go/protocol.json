@@ -1,0 +1,3996 @@
+{
+  "modulePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go",
+  "view": "protocol",
+  "packages": [
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+      "name": "apiv1",
+      "doc": "",
+      "consts": [],
+      "vars": [],
+      "funcs": [],
+      "types": [
+        {
+          "name": "AgentAnswersExecutionInput",
+          "doc": "",
+          "declaration": {
+            "text": "type AgentAnswersExecutionInput struct {\n\tToolCallId string         `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tAnswers    []*AnswerInput `protobuf:\"bytes,2,rep,name=answers\" json:\"answers,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 53,
+                "end": 59,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 172,
+                "end": 183,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AnswerInput",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AgentExecution",
+          "doc": "",
+          "declaration": {
+            "text": "type AgentExecution struct {\n\t// contains filtered or unexported fields\n}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AgentExecutionResult",
+          "doc": "",
+          "declaration": {
+            "text": "type AgentExecutionResult struct {\n\t// contains filtered or unexported fields\n}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AgentExecutionStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type AgentExecutionStarted struct {\n\t// contains filtered or unexported fields\n}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AgentMessageExecutionInput",
+          "doc": "",
+          "declaration": {
+            "text": "type AgentMessageExecutionInput struct {\n\tText string `protobuf:\"bytes,1,opt,name=text\" json:\"text,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Answer",
+          "doc": "",
+          "declaration": {
+            "text": "type Answer struct {\n\tQuestionId string   `protobuf:\"bytes,1,opt,name=question_id,json=questionId\" json:\"question_id,omitempty\"`\n\tQuestion   string   `protobuf:\"bytes,2,opt,name=question\" json:\"question,omitempty\"`\n\tSelected   []string `protobuf:\"bytes,3,rep,name=selected\" json:\"selected,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 33,
+                "end": 39,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 141,
+                "end": 147,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 229,
+                "end": 235,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AnswerInput",
+          "doc": "",
+          "declaration": {
+            "text": "type AnswerInput struct {\n\tQuestionId string   `protobuf:\"bytes,1,opt,name=question_id,json=questionId\" json:\"question_id,omitempty\"`\n\tSelected   []string `protobuf:\"bytes,2,rep,name=selected\" json:\"selected,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 38,
+                "end": 44,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 148,
+                "end": 154,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AskUserRequested",
+          "doc": "",
+          "declaration": {
+            "text": "type AskUserRequested struct {\n\tToolCallId string      `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tQuestions  []*Question `protobuf:\"bytes,2,rep,name=questions\" json:\"questions,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 43,
+                "end": 49,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 159,
+                "end": 167,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Question",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AskUserResponded",
+          "doc": "",
+          "declaration": {
+            "text": "type AskUserResponded struct {\n\tToolCallId string    `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tAnswers    []*Answer `protobuf:\"bytes,2,rep,name=answers\" json:\"answers,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 43,
+                "end": 49,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 157,
+                "end": 163,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Answer",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AssistantReasoning",
+          "doc": "",
+          "declaration": {
+            "text": "type AssistantReasoning struct {\n\tBlock int32  `protobuf:\"varint,1,opt,name=block\" json:\"block,omitempty\"`\n\tText  string `protobuf:\"bytes,2,opt,name=text\" json:\"text,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 40,
+                "end": 45,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 114,
+                "end": 120,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AssistantText",
+          "doc": "",
+          "declaration": {
+            "text": "type AssistantText struct {\n\tBlock int32  `protobuf:\"varint,1,opt,name=block\" json:\"block,omitempty\"`\n\tText  string `protobuf:\"bytes,2,opt,name=text\" json:\"text,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 35,
+                "end": 40,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 109,
+                "end": 115,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "AssistantToolCall",
+          "doc": "",
+          "declaration": {
+            "text": "type AssistantToolCall struct {\n\tToolCallId string           `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tToolName   string           `protobuf:\"bytes,2,opt,name=tool_name,json=toolName\" json:\"tool_name,omitempty\"`\n\tArgs       *structpb.Struct `protobuf:\"bytes,3,opt,name=args\" json:\"args,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 162,
+                "end": 168,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 273,
+                "end": 281,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 282,
+                "end": 288,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CancelExecutionRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type CancelExecutionRequest struct {\n\tSessionId string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 48,
+                "end": 54,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CancelExecutionResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type CancelExecutionResponse struct {\n\t// contains filtered or unexported fields\n}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Capability",
+          "doc": "Capability is the consumer contract view and excludes Temporal routing.\n",
+          "declaration": {
+            "text": "type Capability struct {\n\tId             string                 `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tSource         CapabilitySource       `protobuf:\"varint,2,opt,name=source,enum=agentk.api.v1.CapabilitySource\" json:\"source,omitempty\"`\n\tDescription    string                 `protobuf:\"bytes,3,opt,name=description\" json:\"description,omitempty\"`\n\tInputSchema    *structpb.Struct       `protobuf:\"bytes,4,opt,name=input_schema,json=inputSchema\" json:\"input_schema,omitempty\"`\n\tOutputSchema   *structpb.Struct       `protobuf:\"bytes,5,opt,name=output_schema,json=outputSchema\" json:\"output_schema,omitempty\"`\n\tTimeout        *durationpb.Duration   `protobuf:\"bytes,6,opt,name=timeout\" json:\"timeout,omitempty\"`\n\tTool           *CapabilityTool        `protobuf:\"bytes,7,opt,name=tool\" json:\"tool,omitempty\"`\n\tLastReportedAt *timestamppb.Timestamp `protobuf:\"bytes,8,opt,name=last_reported_at,json=lastReportedAt\" json:\"last_reported_at,omitempty\"`\n\tVariants       []*CapabilityVariant   `protobuf:\"bytes,9,rep,name=variants\" json:\"variants,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 41,
+                "end": 47,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 133,
+                "end": 149,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "CapabilitySource",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 270,
+                "end": 276,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 381,
+                "end": 389,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 390,
+                "end": 396,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 510,
+                "end": 518,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 519,
+                "end": 525,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 642,
+                "end": 652,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 653,
+                "end": 661,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 744,
+                "end": 758,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "CapabilityTool",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 840,
+                "end": 851,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 852,
+                "end": 861,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 982,
+                "end": 999,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "CapabilityVariant",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilitySource",
+          "doc": "",
+          "declaration": {
+            "text": "type CapabilitySource int32",
+            "references": [
+              {
+                "start": 22,
+                "end": 27,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "CapabilitySource_CAPABILITY_SOURCE_UNSPECIFIED",
+                "CapabilitySource_CAPABILITY_SOURCE_CORE",
+                "CapabilitySource_CAPABILITY_SOURCE_CONTRIB"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tCapabilitySource_CAPABILITY_SOURCE_UNSPECIFIED CapabilitySource = 0\n\tCapabilitySource_CAPABILITY_SOURCE_CORE        CapabilitySource = 1\n\tCapabilitySource_CAPABILITY_SOURCE_CONTRIB     CapabilitySource = 2\n)",
+                "references": [
+                  {
+                    "start": 56,
+                    "end": 72,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CapabilitySource",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 125,
+                    "end": 141,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CapabilitySource",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 194,
+                    "end": 210,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CapabilitySource",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityTool",
+          "doc": "",
+          "declaration": {
+            "text": "type CapabilityTool struct {\n\tDescription string `protobuf:\"bytes,1,opt,name=description\" json:\"description,omitempty\"`\n\tMaxAttempts int32  `protobuf:\"varint,2,opt,name=max_attempts,json=maxAttempts\" json:\"max_attempts,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 48,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 133,
+                "end": 138,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityVariant",
+          "doc": "",
+          "declaration": {
+            "text": "type CapabilityVariant struct {\n\tLaneId         string                 `protobuf:\"bytes,1,opt,name=lane_id,json=laneId\" json:\"lane_id,omitempty\"`\n\tDescription    string                 `protobuf:\"bytes,2,opt,name=description\" json:\"description,omitempty\"`\n\tInputSchema    *structpb.Struct       `protobuf:\"bytes,3,opt,name=input_schema,json=inputSchema\" json:\"input_schema,omitempty\"`\n\tOutputSchema   *structpb.Struct       `protobuf:\"bytes,4,opt,name=output_schema,json=outputSchema\" json:\"output_schema,omitempty\"`\n\tTimeout        *durationpb.Duration   `protobuf:\"bytes,5,opt,name=timeout\" json:\"timeout,omitempty\"`\n\tTool           *CapabilityTool        `protobuf:\"bytes,6,opt,name=tool\" json:\"tool,omitempty\"`\n\tLastReportedAt *timestamppb.Timestamp `protobuf:\"bytes,7,opt,name=last_reported_at,json=lastReportedAt\" json:\"last_reported_at,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 48,
+                "end": 54,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 162,
+                "end": 168,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 273,
+                "end": 281,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 282,
+                "end": 288,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 402,
+                "end": 410,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 411,
+                "end": 417,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 534,
+                "end": 544,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 545,
+                "end": 553,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 636,
+                "end": 650,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "CapabilityTool",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 732,
+                "end": 743,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 744,
+                "end": 753,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CreateSessionRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type CreateSessionRequest struct {\n\tTitle   string   `protobuf:\"bytes,1,opt,name=title\" json:\"title,omitempty\"`\n\tProfile *Profile `protobuf:\"bytes,2,opt,name=profile\" json:\"profile,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 122,
+                "end": 129,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Profile",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CreateSessionResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type CreateSessionResponse struct {\n\tSession *Session `protobuf:\"bytes,1,opt,name=session\" json:\"session,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 46,
+                "end": 53,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Session",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Delta",
+          "doc": "",
+          "declaration": {
+            "text": "type Delta struct {\n\tExecutionId string         `protobuf:\"bytes,1,opt,name=execution_id,json=executionId\" json:\"execution_id,omitempty\"`\n\tRoundId     string         `protobuf:\"bytes,2,opt,name=round_id,json=roundId\" json:\"round_id,omitempty\"`\n\tGeneration  string         `protobuf:\"bytes,3,opt,name=generation\" json:\"generation,omitempty\"`\n\tIndex       int32          `protobuf:\"varint,4,opt,name=index\" json:\"index,omitempty\"`\n\tBlock       int32          `protobuf:\"varint,5,opt,name=block\" json:\"block,omitempty\"`\n\tKind        DeltaBlockKind `protobuf:\"varint,6,opt,name=kind,enum=agentk.api.v1.DeltaBlockKind\" json:\"kind,omitempty\"`\n\tText        string         `protobuf:\"bytes,7,opt,name=text\" json:\"text,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 33,
+                "end": 39,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 151,
+                "end": 157,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 257,
+                "end": 263,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 354,
+                "end": 359,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 442,
+                "end": 447,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 530,
+                "end": 544,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "DeltaBlockKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 650,
+                "end": 656,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "DeltaBlockKind",
+          "doc": "",
+          "declaration": {
+            "text": "type DeltaBlockKind int32",
+            "references": [
+              {
+                "start": 20,
+                "end": 25,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "DeltaBlockKind_DELTA_BLOCK_KIND_UNSPECIFIED",
+                "DeltaBlockKind_DELTA_BLOCK_KIND_TEXT",
+                "DeltaBlockKind_DELTA_BLOCK_KIND_REASONING"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tDeltaBlockKind_DELTA_BLOCK_KIND_UNSPECIFIED DeltaBlockKind = 0\n\tDeltaBlockKind_DELTA_BLOCK_KIND_TEXT        DeltaBlockKind = 1\n\tDeltaBlockKind_DELTA_BLOCK_KIND_REASONING   DeltaBlockKind = 2\n)",
+                "references": [
+                  {
+                    "start": 53,
+                    "end": 67,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "DeltaBlockKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 117,
+                    "end": 131,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "DeltaBlockKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 181,
+                    "end": 195,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "DeltaBlockKind",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event",
+          "doc": "Event payload type is the event discriminator; no separate kind field exists.\n",
+          "declaration": {
+            "text": "type Event struct {\n\tEventId string `protobuf:\"bytes,1,opt,name=event_id,json=eventId\" json:\"event_id,omitempty\"`\n\t// Every committed event belongs to one complete agent loop or pipeline execution.\n\tExecutionId string                 `protobuf:\"bytes,2,opt,name=execution_id,json=executionId\" json:\"execution_id,omitempty\"`\n\tRoundId     string                 `protobuf:\"bytes,3,opt,name=round_id,json=roundId\" json:\"round_id,omitempty\"`\n\tCreatedAt   *timestamppb.Timestamp `protobuf:\"bytes,4,opt,name=created_at,json=createdAt\" json:\"created_at,omitempty\"`\n\t// Types that are valid to be assigned to Payload:\n\t//\n\t//\t*Event_UserInput\n\t//\t*Event_RoundStarted\n\t//\t*Event_RoundCompleted\n\t//\t*Event_AssistantText\n\t//\t*Event_AssistantReasoning\n\t//\t*Event_AssistantToolCall\n\t//\t*Event_ToolExecStarted\n\t//\t*Event_ToolExecSucceeded\n\t//\t*Event_ToolExecFailed\n\t//\t*Event_AskUserRequested\n\t//\t*Event_AskUserResponded\n\t//\t*Event_ExecutionStarted\n\t//\t*Event_ExecutionFinished\n\t//\t*Event_InvocationProgress\n\tPayload isEvent_Payload `protobuf_oneof:\"payload\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 29,
+                "end": 35,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 211,
+                "end": 217,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 337,
+                "end": 343,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 452,
+                "end": 463,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 464,
+                "end": 473,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 1003,
+                "end": 1018,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isEvent_Payload",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_AskUserRequested",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_AskUserRequested struct {\n\tAskUserRequested *AskUserRequested `protobuf:\"bytes,14,opt,name=ask_user_requested,json=askUserRequested,oneof\"`\n}",
+            "references": [
+              {
+                "start": 56,
+                "end": 72,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AskUserRequested",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_AskUserResponded",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_AskUserResponded struct {\n\tAskUserResponded *AskUserResponded `protobuf:\"bytes,15,opt,name=ask_user_responded,json=askUserResponded,oneof\"`\n}",
+            "references": [
+              {
+                "start": 56,
+                "end": 72,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AskUserResponded",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_AssistantReasoning",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_AssistantReasoning struct {\n\tAssistantReasoning *AssistantReasoning `protobuf:\"bytes,9,opt,name=assistant_reasoning,json=assistantReasoning,oneof\"`\n}",
+            "references": [
+              {
+                "start": 60,
+                "end": 78,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AssistantReasoning",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_AssistantText",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_AssistantText struct {\n\tAssistantText *AssistantText `protobuf:\"bytes,8,opt,name=assistant_text,json=assistantText,oneof\"`\n}",
+            "references": [
+              {
+                "start": 50,
+                "end": 63,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AssistantText",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_AssistantToolCall",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_AssistantToolCall struct {\n\tAssistantToolCall *AssistantToolCall `protobuf:\"bytes,10,opt,name=assistant_tool_call,json=assistantToolCall,oneof\"`\n}",
+            "references": [
+              {
+                "start": 58,
+                "end": 75,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AssistantToolCall",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_ExecutionFinished",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_ExecutionFinished struct {\n\tExecutionFinished *ExecutionFinished `protobuf:\"bytes,17,opt,name=execution_finished,json=executionFinished,oneof\"`\n}",
+            "references": [
+              {
+                "start": 58,
+                "end": 75,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ExecutionFinished",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_ExecutionStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_ExecutionStarted struct {\n\tExecutionStarted *ExecutionStarted `protobuf:\"bytes,16,opt,name=execution_started,json=executionStarted,oneof\"`\n}",
+            "references": [
+              {
+                "start": 56,
+                "end": 72,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ExecutionStarted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_InvocationProgress",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_InvocationProgress struct {\n\tInvocationProgress *InvocationProgress `protobuf:\"bytes,18,opt,name=invocation_progress,json=invocationProgress,oneof\"`\n}",
+            "references": [
+              {
+                "start": 60,
+                "end": 78,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "InvocationProgress",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_RoundCompleted",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_RoundCompleted struct {\n\tRoundCompleted *RoundCompleted `protobuf:\"bytes,7,opt,name=round_completed,json=roundCompleted,oneof\"`\n}",
+            "references": [
+              {
+                "start": 52,
+                "end": 66,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "RoundCompleted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_RoundStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_RoundStarted struct {\n\tRoundStarted *RoundStarted `protobuf:\"bytes,6,opt,name=round_started,json=roundStarted,oneof\"`\n}",
+            "references": [
+              {
+                "start": 48,
+                "end": 60,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "RoundStarted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_ToolExecFailed",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_ToolExecFailed struct {\n\tToolExecFailed *ToolExecFailed `protobuf:\"bytes,13,opt,name=tool_exec_failed,json=toolExecFailed,oneof\"`\n}",
+            "references": [
+              {
+                "start": 52,
+                "end": 66,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ToolExecFailed",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_ToolExecStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_ToolExecStarted struct {\n\tToolExecStarted *ToolExecStarted `protobuf:\"bytes,11,opt,name=tool_exec_started,json=toolExecStarted,oneof\"`\n}",
+            "references": [
+              {
+                "start": 54,
+                "end": 69,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ToolExecStarted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_ToolExecSucceeded",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_ToolExecSucceeded struct {\n\tToolExecSucceeded *ToolExecSucceeded `protobuf:\"bytes,12,opt,name=tool_exec_succeeded,json=toolExecSucceeded,oneof\"`\n}",
+            "references": [
+              {
+                "start": 58,
+                "end": 75,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ToolExecSucceeded",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Event_UserInput",
+          "doc": "",
+          "declaration": {
+            "text": "type Event_UserInput struct {\n\tUserInput *UserInput `protobuf:\"bytes,5,opt,name=user_input,json=userInput,oneof\"`\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 51,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "UserInput",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Execution",
+          "doc": "Execution is one complete agent loop or pipeline execution within a session.\n",
+          "declaration": {
+            "text": "type Execution struct {\n\tId        string          `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tSessionId string          `protobuf:\"bytes,2,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\tStatus    ExecutionStatus `protobuf:\"varint,3,opt,name=status,enum=agentk.api.v1.ExecutionStatus\" json:\"status,omitempty\"`\n\t// Types that are valid to be assigned to Kind:\n\t//\n\t//\t*Execution_Agent\n\t//\t*Execution_Pipeline\n\tKind           isExecution_Kind       `protobuf_oneof:\"kind\"`\n\tProfileVersion string                 `protobuf:\"bytes,6,opt,name=profile_version,json=profileVersion\" json:\"profile_version,omitempty\"`\n\tError          string                 `protobuf:\"bytes,7,opt,name=error\" json:\"error,omitempty\"`\n\tCreatedAt      *timestamppb.Timestamp `protobuf:\"bytes,8,opt,name=created_at,json=createdAt\" json:\"created_at,omitempty\"`\n\tFinishedAt     *timestamppb.Timestamp `protobuf:\"bytes,9,opt,name=finished_at,json=finishedAt\" json:\"finished_at,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 35,
+                "end": 41,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 115,
+                "end": 121,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 226,
+                "end": 241,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ExecutionStatus",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 453,
+                "end": 469,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isExecution_Kind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 516,
+                "end": 522,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 654,
+                "end": 660,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 753,
+                "end": 764,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 765,
+                "end": 774,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 876,
+                "end": 887,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 888,
+                "end": 897,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionFinished",
+          "doc": "ExecutionFinished closes an execution; status must be completed, failed, or cancelled.\n",
+          "declaration": {
+            "text": "type ExecutionFinished struct {\n\tStatus ExecutionStatus `protobuf:\"varint,1,opt,name=status,enum=agentk.api.v1.ExecutionStatus\" json:\"status,omitempty\"`\n\tError  string          `protobuf:\"bytes,2,opt,name=error\" json:\"error,omitempty\"`\n\t// Types that are valid to be assigned to Result:\n\t//\n\t//\t*ExecutionFinished_Agent\n\t//\t*ExecutionFinished_Pipeline\n\tResult isExecutionFinished_Result `protobuf_oneof:\"result\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 40,
+                "end": 55,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ExecutionStatus",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 161,
+                "end": 167,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 360,
+                "end": 386,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isExecutionFinished_Result",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionFinished_Agent",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionFinished_Agent struct {\n\tAgent *AgentExecutionResult `protobuf:\"bytes,3,opt,name=agent,oneof\"`\n}",
+            "references": [
+              {
+                "start": 46,
+                "end": 66,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AgentExecutionResult",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionFinished_Pipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionFinished_Pipeline struct {\n\tPipeline *PipelineExecutionResult `protobuf:\"bytes,4,opt,name=pipeline,oneof\"`\n}",
+            "references": [
+              {
+                "start": 52,
+                "end": 75,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "PipelineExecutionResult",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionStarted struct {\n\tProfileVersion string `protobuf:\"bytes,1,opt,name=profile_version,json=profileVersion\" json:\"profile_version,omitempty\"`\n\t// Types that are valid to be assigned to Kind:\n\t//\n\t//\t*ExecutionStarted_Agent\n\t//\t*ExecutionStarted_Pipeline\n\tKind isExecutionStarted_Kind `protobuf_oneof:\"kind\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 271,
+                "end": 294,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isExecutionStarted_Kind",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionStarted_Agent",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionStarted_Agent struct {\n\tAgent *AgentExecutionStarted `protobuf:\"bytes,2,opt,name=agent,oneof\"`\n}",
+            "references": [
+              {
+                "start": 45,
+                "end": 66,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AgentExecutionStarted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionStarted_Pipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionStarted_Pipeline struct {\n\tPipeline *PipelineExecutionStarted `protobuf:\"bytes,3,opt,name=pipeline,oneof\"`\n}",
+            "references": [
+              {
+                "start": 51,
+                "end": 75,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "PipelineExecutionStarted",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ExecutionStatus",
+          "doc": "",
+          "declaration": {
+            "text": "type ExecutionStatus int32",
+            "references": [
+              {
+                "start": 21,
+                "end": 26,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "ExecutionStatus_EXECUTION_STATUS_UNSPECIFIED",
+                "ExecutionStatus_EXECUTION_STATUS_RUNNING",
+                "ExecutionStatus_EXECUTION_STATUS_COMPLETED",
+                "ExecutionStatus_EXECUTION_STATUS_FAILED",
+                "ExecutionStatus_EXECUTION_STATUS_CANCELLED"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tExecutionStatus_EXECUTION_STATUS_UNSPECIFIED ExecutionStatus = 0\n\tExecutionStatus_EXECUTION_STATUS_RUNNING     ExecutionStatus = 1\n\tExecutionStatus_EXECUTION_STATUS_COMPLETED   ExecutionStatus = 2\n\tExecutionStatus_EXECUTION_STATUS_FAILED      ExecutionStatus = 3\n\tExecutionStatus_EXECUTION_STATUS_CANCELLED   ExecutionStatus = 4\n)",
+                "references": [
+                  {
+                    "start": 54,
+                    "end": 69,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ExecutionStatus",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 120,
+                    "end": 135,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ExecutionStatus",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 186,
+                    "end": 201,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ExecutionStatus",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 252,
+                    "end": 267,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ExecutionStatus",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 318,
+                    "end": 333,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ExecutionStatus",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Execution_Agent",
+          "doc": "",
+          "declaration": {
+            "text": "type Execution_Agent struct {\n\tAgent *AgentExecution `protobuf:\"bytes,4,opt,name=agent,oneof\"`\n}",
+            "references": [
+              {
+                "start": 38,
+                "end": 52,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AgentExecution",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Execution_Pipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type Execution_Pipeline struct {\n\tPipeline *PipelineExecution `protobuf:\"bytes,5,opt,name=pipeline,oneof\"`\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 61,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "PipelineExecution",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "GetExecutionRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type GetExecutionRequest struct {\n\tSessionId   string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\tExecutionId string `protobuf:\"bytes,2,opt,name=execution_id,json=executionId\" json:\"execution_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 151,
+                "end": 157,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "GetExecutionResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type GetExecutionResponse struct {\n\tExecution *Execution `protobuf:\"bytes,1,opt,name=execution\" json:\"execution,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 56,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Execution",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "InvocationProgress",
+          "doc": "",
+          "declaration": {
+            "text": "type InvocationProgress struct {\n\tInvocationId   string             `protobuf:\"bytes,1,opt,name=invocation_id,json=invocationId\" json:\"invocation_id,omitempty\"`\n\tInvocationKind v11.InvocationKind `protobuf:\"varint,2,opt,name=invocation_kind,json=invocationKind,enum=agentk.invocation.v1.InvocationKind\" json:\"invocation_kind,omitempty\"`\n\tInvocationName string             `protobuf:\"bytes,3,opt,name=invocation_name,json=invocationName\" json:\"invocation_name,omitempty\"`\n\tStepId         string             `protobuf:\"bytes,4,opt,name=step_id,json=stepId\" json:\"step_id,omitempty\"`\n\tMessage        string             `protobuf:\"bytes,5,opt,name=message\" json:\"message,omitempty\"`\n\tData           *structpb.Value    `protobuf:\"bytes,6,opt,name=data\" json:\"data,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 49,
+                "end": 55,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 177,
+                "end": 180,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 181,
+                "end": 195,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                  "symbol": "InvocationKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 353,
+                "end": 359,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 487,
+                "end": 493,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 597,
+                "end": 603,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 696,
+                "end": 704,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 705,
+                "end": 710,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "InvokeCapabilityRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type InvokeCapabilityRequest struct {\n\tCapabilityId string           `protobuf:\"bytes,1,opt,name=capability_id,json=capabilityId\" json:\"capability_id,omitempty\"`\n\tInput        *structpb.Struct `protobuf:\"bytes,2,opt,name=input\" json:\"input,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 52,
+                "end": 58,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 177,
+                "end": 185,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 186,
+                "end": 192,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "InvokeCapabilityResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type InvokeCapabilityResponse struct {\n\tOutput *structpb.Value `protobuf:\"bytes,1,opt,name=output\" json:\"output,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 48,
+                "end": 56,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 57,
+                "end": 62,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListCapabilitiesRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ListCapabilitiesRequest struct {\n\n\t// Capabilities are returned by ID in ascending order.\n\t// Zero uses 20; values above 100 are limited to 100; negative values are invalid.\n\tPageSize        int32  `protobuf:\"varint,1,opt,name=page_size,json=pageSize\" json:\"page_size,omitempty\"`\n\tPageToken       string `protobuf:\"bytes,2,opt,name=page_token,json=pageToken\" json:\"page_token,omitempty\"`\n\tIncludeVariants bool   `protobuf:\"varint,3,opt,name=include_variants,json=includeVariants\" json:\"include_variants,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 196,
+                "end": 201,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 302,
+                "end": 308,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 410,
+                "end": 414,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "bool",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListCapabilitiesResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type ListCapabilitiesResponse struct {\n\tCapabilities  []*Capability `protobuf:\"bytes,1,rep,name=capabilities\" json:\"capabilities,omitempty\"`\n\tNextPageToken string        `protobuf:\"bytes,2,opt,name=next_page_token,json=nextPageToken\" json:\"next_page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 57,
+                "end": 67,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Capability",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 156,
+                "end": 162,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListEventsRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ListEventsRequest struct {\n\tSessionId string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\t// Events are returned newest first.\n\t// Zero uses 20; values above 100 are limited to 100; negative values are invalid.\n\tPageSize  int32  `protobuf:\"varint,2,opt,name=page_size,json=pageSize\" json:\"page_size,omitempty\"`\n\tPageToken string `protobuf:\"bytes,3,opt,name=page_token,json=pageToken\" json:\"page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 43,
+                "end": 49,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 267,
+                "end": 272,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 367,
+                "end": 373,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListEventsResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type ListEventsResponse struct {\n\tEvents        []*Event `protobuf:\"bytes,1,rep,name=events\" json:\"events,omitempty\"`\n\tNextPageToken string   `protobuf:\"bytes,2,opt,name=next_page_token,json=nextPageToken\" json:\"next_page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 51,
+                "end": 56,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Event",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 133,
+                "end": 139,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListExecutionsRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ListExecutionsRequest struct {\n\tSessionId string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\t// Executions are returned newest first.\n\t// Zero uses 20; values above 100 are limited to 100; negative values are invalid.\n\tPageSize  int32  `protobuf:\"varint,2,opt,name=page_size,json=pageSize\" json:\"page_size,omitempty\"`\n\tPageToken string `protobuf:\"bytes,3,opt,name=page_token,json=pageToken\" json:\"page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 275,
+                "end": 280,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 375,
+                "end": 381,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListExecutionsResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type ListExecutionsResponse struct {\n\tExecutions    []*Execution `protobuf:\"bytes,1,rep,name=executions\" json:\"executions,omitempty\"`\n\tNextPageToken string       `protobuf:\"bytes,2,opt,name=next_page_token,json=nextPageToken\" json:\"next_page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 55,
+                "end": 64,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Execution",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 149,
+                "end": 155,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListPipelinesRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ListPipelinesRequest struct {\n\tSessionId string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\t// Pipelines are returned by name in ascending order.\n\t// Zero uses 20; values above 100 are limited to 100; negative values are invalid.\n\tPageSize  int32  `protobuf:\"varint,2,opt,name=page_size,json=pageSize\" json:\"page_size,omitempty\"`\n\tPageToken string `protobuf:\"bytes,3,opt,name=page_token,json=pageToken\" json:\"page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 46,
+                "end": 52,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 287,
+                "end": 292,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 387,
+                "end": 393,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListPipelinesResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type ListPipelinesResponse struct {\n\tPipelines     []*Pipeline `protobuf:\"bytes,1,rep,name=pipelines\" json:\"pipelines,omitempty\"`\n\tNextPageToken string      `protobuf:\"bytes,2,opt,name=next_page_token,json=nextPageToken\" json:\"next_page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 54,
+                "end": 62,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Pipeline",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 145,
+                "end": 151,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListSessionsRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ListSessionsRequest struct {\n\n\t// Sessions are returned newest first.\n\t// Zero uses 20; values above 100 are limited to 100; negative values are invalid.\n\tPageSize  int32  `protobuf:\"varint,1,opt,name=page_size,json=pageSize\" json:\"page_size,omitempty\"`\n\tPageToken string `protobuf:\"bytes,2,opt,name=page_token,json=pageToken\" json:\"page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 170,
+                "end": 175,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 270,
+                "end": 276,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ListSessionsResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type ListSessionsResponse struct {\n\tSessions      []*Session `protobuf:\"bytes,1,rep,name=sessions\" json:\"sessions,omitempty\"`\n\tNextPageToken string     `protobuf:\"bytes,2,opt,name=next_page_token,json=nextPageToken\" json:\"next_page_token,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 53,
+                "end": 60,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Session",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 141,
+                "end": 147,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Pipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type Pipeline struct {\n\tName         string           `protobuf:\"bytes,1,opt,name=name\" json:\"name,omitempty\"`\n\tDisplayName  string           `protobuf:\"bytes,2,opt,name=display_name,json=displayName\" json:\"display_name,omitempty\"`\n\tDescription  string           `protobuf:\"bytes,3,opt,name=description\" json:\"description,omitempty\"`\n\tInputSchema  *structpb.Struct `protobuf:\"bytes,4,opt,name=input_schema,json=inputSchema\" json:\"input_schema,omitempty\"`\n\tOutputSchema *structpb.Struct `protobuf:\"bytes,5,opt,name=output_schema,json=outputSchema\" json:\"output_schema,omitempty\"`\n\tCapabilityId string           `protobuf:\"bytes,6,opt,name=capability_id,json=capabilityId\" json:\"capability_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 37,
+                "end": 43,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 125,
+                "end": 131,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 246,
+                "end": 252,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 349,
+                "end": 357,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 358,
+                "end": 364,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 470,
+                "end": 478,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 479,
+                "end": 485,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 593,
+                "end": 599,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "PipelineExecution",
+          "doc": "",
+          "declaration": {
+            "text": "type PipelineExecution struct {\n\tName         string           `protobuf:\"bytes,1,opt,name=name\" json:\"name,omitempty\"`\n\tArgs         *structpb.Struct `protobuf:\"bytes,2,opt,name=args\" json:\"args,omitempty\"`\n\tOutput       *structpb.Value  `protobuf:\"bytes,3,opt,name=output\" json:\"output,omitempty\"`\n\tCapabilityId string           `protobuf:\"bytes,4,opt,name=capability_id,json=capabilityId\" json:\"capability_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 46,
+                "end": 52,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 135,
+                "end": 143,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 144,
+                "end": 150,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 223,
+                "end": 231,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 232,
+                "end": 237,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 314,
+                "end": 320,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "PipelineExecutionInput",
+          "doc": "",
+          "declaration": {
+            "text": "type PipelineExecutionInput struct {\n\tPipeline string           `protobuf:\"bytes,1,opt,name=pipeline\" json:\"pipeline,omitempty\"`\n\tArgs     *structpb.Struct `protobuf:\"bytes,2,opt,name=args\" json:\"args,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 140,
+                "end": 148,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 149,
+                "end": 155,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "PipelineExecutionResult",
+          "doc": "",
+          "declaration": {
+            "text": "type PipelineExecutionResult struct {\n\tOutput *structpb.Value `protobuf:\"bytes,1,opt,name=output\" json:\"output,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 55,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 56,
+                "end": 61,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "PipelineExecutionStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type PipelineExecutionStarted struct {\n\tName         string           `protobuf:\"bytes,1,opt,name=name\" json:\"name,omitempty\"`\n\tArgs         *structpb.Struct `protobuf:\"bytes,2,opt,name=args\" json:\"args,omitempty\"`\n\tCapabilityId string           `protobuf:\"bytes,3,opt,name=capability_id,json=capabilityId\" json:\"capability_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 53,
+                "end": 59,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 142,
+                "end": 150,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 151,
+                "end": 157,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 229,
+                "end": 235,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Profile",
+          "doc": "",
+          "declaration": {
+            "text": "type Profile struct {\n\tDefaultModel  string                      `protobuf:\"bytes,1,opt,name=default_model,json=defaultModel\" json:\"default_model,omitempty\"`\n\tSystem        string                      `protobuf:\"bytes,2,opt,name=system\" json:\"system,omitempty\"`\n\tTools         []*ProfileTool              `protobuf:\"bytes,3,rep,name=tools\" json:\"tools,omitempty\"`\n\tToolDefaults  map[string]*structpb.Struct `protobuf:\"bytes,4,rep,name=tool_defaults,json=toolDefaults\" json:\"tool_defaults,omitempty\" protobuf_key:\"bytes,1,opt,name=key\" protobuf_val:\"bytes,2,opt,name=value\"`\n\tPipelines     []*ProfilePipeline          `protobuf:\"bytes,5,rep,name=pipelines\" json:\"pipelines,omitempty\"`\n\tMaxToolRounds int32                       `protobuf:\"varint,6,opt,name=max_tool_rounds,json=maxToolRounds\" json:\"max_tool_rounds,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 37,
+                "end": 43,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 173,
+                "end": 179,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 280,
+                "end": 291,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ProfileTool",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 383,
+                "end": 389,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 391,
+                "end": 399,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 400,
+                "end": 406,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 592,
+                "end": 607,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "ProfilePipeline",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 699,
+                "end": 704,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ProfilePipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type ProfilePipeline struct {\n\tCapability  string `protobuf:\"bytes,1,opt,name=capability\" json:\"capability,omitempty\"`\n\tName        string `protobuf:\"bytes,2,opt,name=name\" json:\"name,omitempty\"`\n\tDisplayName string `protobuf:\"bytes,3,opt,name=display_name,json=displayName\" json:\"display_name,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 43,
+                "end": 49,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 132,
+                "end": 138,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 209,
+                "end": 215,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ProfileTool",
+          "doc": "",
+          "declaration": {
+            "text": "type ProfileTool struct {\n\tCapability   string `protobuf:\"bytes,1,opt,name=capability\" json:\"capability,omitempty\"`\n\tName         string `protobuf:\"bytes,2,opt,name=name\" json:\"name,omitempty\"`\n\tInstructions string `protobuf:\"bytes,3,opt,name=instructions\" json:\"instructions,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 40,
+                "end": 46,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 130,
+                "end": 136,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 208,
+                "end": 214,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Question",
+          "doc": "",
+          "declaration": {
+            "text": "type Question struct {\n\tId          string   `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tLabel       string   `protobuf:\"bytes,2,opt,name=label\" json:\"label,omitempty\"`\n\tQuestion    string   `protobuf:\"bytes,3,opt,name=question\" json:\"question,omitempty\"`\n\tOptions     []string `protobuf:\"bytes,4,rep,name=options\" json:\"options,omitempty\"`\n\tMultiSelect bool     `protobuf:\"varint,5,opt,name=multi_select,json=multiSelect\" json:\"multi_select,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 36,
+                "end": 42,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 111,
+                "end": 117,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 192,
+                "end": 198,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 281,
+                "end": 287,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 364,
+                "end": 368,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "bool",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "RoundCompleted",
+          "doc": "",
+          "declaration": {
+            "text": "type RoundCompleted struct {\n\tUsage         *TokenUsage          `protobuf:\"bytes,1,opt,name=usage\" json:\"usage,omitempty\"`\n\tModelDuration *durationpb.Duration `protobuf:\"bytes,2,opt,name=model_duration,json=modelDuration\" json:\"model_duration,omitempty\"`\n\tFinishReason  string               `protobuf:\"bytes,3,opt,name=finish_reason,json=finishReason\" json:\"finish_reason,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 45,
+                "end": 55,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "TokenUsage",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 140,
+                "end": 150,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 151,
+                "end": 159,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 271,
+                "end": 277,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "RoundStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type RoundStarted struct {\n\tModel          string   `protobuf:\"bytes,1,opt,name=model\" json:\"model,omitempty\"`\n\tDialect        string   `protobuf:\"bytes,2,opt,name=dialect\" json:\"dialect,omitempty\"`\n\tProfileVersion string   `protobuf:\"bytes,3,opt,name=profile_version,json=profileVersion\" json:\"profile_version,omitempty\"`\n\tPromptSha256   string   `protobuf:\"bytes,4,opt,name=prompt_sha256,json=promptSha256\" json:\"prompt_sha256,omitempty\"`\n\tTools          []string `protobuf:\"bytes,5,rep,name=tools\" json:\"tools,omitempty\"`\n\tWorkerId       string   `protobuf:\"bytes,6,opt,name=worker_id,json=workerId\" json:\"worker_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 43,
+                "end": 49,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 127,
+                "end": 133,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 215,
+                "end": 221,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 339,
+                "end": 345,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 459,
+                "end": 465,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 541,
+                "end": 547,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "Session",
+          "doc": "",
+          "declaration": {
+            "text": "type Session struct {\n\tId        string                 `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tAppId     string                 `protobuf:\"bytes,2,opt,name=app_id,json=appId\" json:\"app_id,omitempty\"`\n\tTitle     string                 `protobuf:\"bytes,3,opt,name=title\" json:\"title,omitempty\"`\n\tCreatedAt *timestamppb.Timestamp `protobuf:\"bytes,4,opt,name=created_at,json=createdAt\" json:\"created_at,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 33,
+                "end": 39,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 120,
+                "end": 126,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 226,
+                "end": 232,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 320,
+                "end": 331,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 332,
+                "end": 341,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/timestamppb",
+                  "symbol": "Timestamp",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StartExecutionRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type StartExecutionRequest struct {\n\tSessionId string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\t// Types that are valid to be assigned to Input:\n\t//\n\t//\t*StartExecutionRequest_Message\n\t//\t*StartExecutionRequest_Answers\n\t//\t*StartExecutionRequest_Pipeline\n\tInput isStartExecutionRequest_Input `protobuf_oneof:\"input\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 47,
+                "end": 53,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 305,
+                "end": 334,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isStartExecutionRequest_Input",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StartExecutionRequest_Answers",
+          "doc": "",
+          "declaration": {
+            "text": "type StartExecutionRequest_Answers struct {\n\tAnswers *AgentAnswersExecutionInput `protobuf:\"bytes,3,opt,name=answers,oneof\"`\n}",
+            "references": [
+              {
+                "start": 54,
+                "end": 80,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AgentAnswersExecutionInput",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StartExecutionRequest_Message",
+          "doc": "",
+          "declaration": {
+            "text": "type StartExecutionRequest_Message struct {\n\tMessage *AgentMessageExecutionInput `protobuf:\"bytes,2,opt,name=message,oneof\"`\n}",
+            "references": [
+              {
+                "start": 54,
+                "end": 80,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "AgentMessageExecutionInput",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StartExecutionRequest_Pipeline",
+          "doc": "",
+          "declaration": {
+            "text": "type StartExecutionRequest_Pipeline struct {\n\tPipeline *PipelineExecutionInput `protobuf:\"bytes,4,opt,name=pipeline,oneof\"`\n}",
+            "references": [
+              {
+                "start": 56,
+                "end": 78,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "PipelineExecutionInput",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StartExecutionResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type StartExecutionResponse struct {\n\tExecution *Execution `protobuf:\"bytes,1,opt,name=execution\" json:\"execution,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 49,
+                "end": 58,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Execution",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "StreamEnd",
+          "doc": "",
+          "declaration": {
+            "text": "type StreamEnd struct {\n\tExecutionId string `protobuf:\"bytes,1,opt,name=execution_id,json=executionId\" json:\"execution_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 37,
+                "end": 43,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "TokenUsage",
+          "doc": "",
+          "declaration": {
+            "text": "type TokenUsage struct {\n\tInputTokens     int32 `protobuf:\"varint,1,opt,name=input_tokens,json=inputTokens\" json:\"input_tokens,omitempty\"`\n\tOutputTokens    int32 `protobuf:\"varint,2,opt,name=output_tokens,json=outputTokens\" json:\"output_tokens,omitempty\"`\n\tCacheReadTokens int32 `protobuf:\"varint,3,opt,name=cache_read_tokens,json=cacheReadTokens\" json:\"cache_read_tokens,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 47,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 156,
+                "end": 161,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 273,
+                "end": 278,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolExecFailed",
+          "doc": "",
+          "declaration": {
+            "text": "type ToolExecFailed struct {\n\tToolCallId string               `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tError      string               `protobuf:\"bytes,2,opt,name=error\" json:\"error,omitempty\"`\n\tDuration   *durationpb.Duration `protobuf:\"bytes,3,opt,name=duration\" json:\"duration,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 41,
+                "end": 47,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 163,
+                "end": 169,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 256,
+                "end": 266,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 267,
+                "end": 275,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolExecStarted",
+          "doc": "",
+          "declaration": {
+            "text": "type ToolExecStarted struct {\n\tToolCallId string `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 48,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolExecSucceeded",
+          "doc": "",
+          "declaration": {
+            "text": "type ToolExecSucceeded struct {\n\tToolCallId string               `protobuf:\"bytes,1,opt,name=tool_call_id,json=toolCallId\" json:\"tool_call_id,omitempty\"`\n\tResult     *structpb.Value      `protobuf:\"bytes,2,opt,name=result\" json:\"result,omitempty\"`\n\tArtifacts  []*v1.Artifact       `protobuf:\"bytes,3,rep,name=artifacts\" json:\"artifacts,omitempty\"`\n\tDuration   *durationpb.Duration `protobuf:\"bytes,4,opt,name=duration\" json:\"duration,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 167,
+                "end": 175,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 176,
+                "end": 181,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 263,
+                "end": 265,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/common/v1",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 266,
+                "end": 274,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/common/v1",
+                  "symbol": "Artifact",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 361,
+                "end": 371,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 372,
+                "end": 380,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "UserInput",
+          "doc": "",
+          "declaration": {
+            "text": "type UserInput struct {\n\tText string `protobuf:\"bytes,1,opt,name=text\" json:\"text,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 30,
+                "end": 36,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WatchEventsRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type WatchEventsRequest struct {\n\tSessionId   string `protobuf:\"bytes,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\tExecutionId string `protobuf:\"bytes,2,opt,name=execution_id,json=executionId\" json:\"execution_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 46,
+                "end": 52,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 150,
+                "end": 156,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WatchEventsResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type WatchEventsResponse struct {\n\n\t// Types that are valid to be assigned to Frame:\n\t//\n\t//\t*WatchEventsResponse_CommittedEvent\n\t//\t*WatchEventsResponse_Delta\n\t//\t*WatchEventsResponse_StreamEnd\n\tFrame isWatchEventsResponse_Frame `protobuf_oneof:\"frame\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 202,
+                "end": 229,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "isWatchEventsResponse_Frame",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WatchEventsResponse_CommittedEvent",
+          "doc": "",
+          "declaration": {
+            "text": "type WatchEventsResponse_CommittedEvent struct {\n\tCommittedEvent *Event `protobuf:\"bytes,1,opt,name=committed_event,json=committedEvent,oneof\"`\n}",
+            "references": [
+              {
+                "start": 66,
+                "end": 71,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Event",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WatchEventsResponse_Delta",
+          "doc": "",
+          "declaration": {
+            "text": "type WatchEventsResponse_Delta struct {\n\tDelta *Delta `protobuf:\"bytes,2,opt,name=delta,oneof\"`\n}",
+            "references": [
+              {
+                "start": 48,
+                "end": 53,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "Delta",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WatchEventsResponse_StreamEnd",
+          "doc": "",
+          "declaration": {
+            "text": "type WatchEventsResponse_StreamEnd struct {\n\tStreamEnd *StreamEnd `protobuf:\"bytes,3,opt,name=stream_end,json=streamEnd,oneof\"`\n}",
+            "references": [
+              {
+                "start": 56,
+                "end": 65,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                  "symbol": "StreamEnd",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WhoAmIRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type WhoAmIRequest struct {\n\t// contains filtered or unexported fields\n}",
+            "references": []
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "WhoAmIResponse",
+          "doc": "",
+          "declaration": {
+            "text": "type WhoAmIResponse struct {\n\tId          string `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tAppId       string `protobuf:\"bytes,2,opt,name=app_id,json=appId\" json:\"app_id,omitempty\"`\n\tDisplayName string `protobuf:\"bytes,3,opt,name=display_name,json=displayName\" json:\"display_name,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 42,
+                "end": 48,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 115,
+                "end": 121,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 207,
+                "end": 213,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+      "name": "capabilityv1",
+      "doc": "",
+      "consts": [],
+      "vars": [],
+      "funcs": [],
+      "types": [
+        {
+          "name": "Capability",
+          "doc": "",
+          "declaration": {
+            "text": "type Capability struct {\n\tId           string               `protobuf:\"bytes,1,opt,name=id\" json:\"id,omitempty\"`\n\tKind         CapabilityKind       `protobuf:\"varint,2,opt,name=kind,enum=agentk.capability.v1.CapabilityKind\" json:\"kind,omitempty\"`\n\tTemporalType string               `protobuf:\"bytes,3,opt,name=temporal_type,json=temporalType\" json:\"temporal_type,omitempty\"`\n\tDescription  string               `protobuf:\"bytes,4,opt,name=description\" json:\"description,omitempty\"`\n\tInputSchema  *structpb.Struct     `protobuf:\"bytes,5,opt,name=input_schema,json=inputSchema\" json:\"input_schema,omitempty\"`\n\tOutputSchema *structpb.Struct     `protobuf:\"bytes,6,opt,name=output_schema,json=outputSchema\" json:\"output_schema,omitempty\"`\n\tTimeout      *durationpb.Duration `protobuf:\"bytes,7,opt,name=timeout\" json:\"timeout,omitempty\"`\n\tTool         *ToolRegistration    `protobuf:\"bytes,8,opt,name=tool\" json:\"tool,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 39,
+                "end": 45,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 127,
+                "end": 141,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                  "symbol": "CapabilityKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 261,
+                "end": 267,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 389,
+                "end": 395,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 496,
+                "end": 504,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 505,
+                "end": 511,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 621,
+                "end": 629,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 630,
+                "end": 636,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 749,
+                "end": 759,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 760,
+                "end": 768,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/durationpb",
+                  "symbol": "Duration",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 847,
+                "end": 863,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                  "symbol": "ToolRegistration",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityKind",
+          "doc": "",
+          "declaration": {
+            "text": "type CapabilityKind int32",
+            "references": [
+              {
+                "start": 20,
+                "end": 25,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "CapabilityKind_CAPABILITY_KIND_UNSPECIFIED",
+                "CapabilityKind_CAPABILITY_KIND_WORKFLOW",
+                "CapabilityKind_CAPABILITY_KIND_ACTIVITY"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tCapabilityKind_CAPABILITY_KIND_UNSPECIFIED CapabilityKind = 0\n\tCapabilityKind_CAPABILITY_KIND_WORKFLOW    CapabilityKind = 1\n\tCapabilityKind_CAPABILITY_KIND_ACTIVITY    CapabilityKind = 2\n)",
+                "references": [
+                  {
+                    "start": 52,
+                    "end": 66,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                      "symbol": "CapabilityKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 115,
+                    "end": 129,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                      "symbol": "CapabilityKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 178,
+                    "end": 192,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                      "symbol": "CapabilityKind",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "CapabilityManifest",
+          "doc": "",
+          "declaration": {
+            "text": "type CapabilityManifest struct {\n\tProtocolVersion uint32        `protobuf:\"varint,1,opt,name=protocol_version,json=protocolVersion\" json:\"protocol_version,omitempty\"`\n\tTaskQueue       string        `protobuf:\"bytes,2,opt,name=task_queue,json=taskQueue\" json:\"task_queue,omitempty\"`\n\tCapabilities    []*Capability `protobuf:\"bytes,3,rep,name=capabilities\" json:\"capabilities,omitempty\"`\n\tLaneId          string        `protobuf:\"bytes,4,opt,name=lane_id,json=laneId\" json:\"lane_id,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 50,
+                "end": 56,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "uint32",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 184,
+                "end": 190,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 302,
+                "end": 312,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/capability/v1",
+                  "symbol": "Capability",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 403,
+                "end": 409,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ToolRegistration",
+          "doc": "",
+          "declaration": {
+            "text": "type ToolRegistration struct {\n\tDescription string `protobuf:\"bytes,1,opt,name=description\" json:\"description,omitempty\"`\n\tMaxAttempts int32  `protobuf:\"varint,2,opt,name=max_attempts,json=maxAttempts\" json:\"max_attempts,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 44,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 135,
+                "end": 140,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/common/v1",
+      "name": "commonv1",
+      "doc": "",
+      "consts": [],
+      "vars": [],
+      "funcs": [],
+      "types": [
+        {
+          "name": "Artifact",
+          "doc": "",
+          "declaration": {
+            "text": "type Artifact struct {\n\tType        string           `protobuf:\"bytes,1,opt,name=type\" json:\"type,omitempty\"`\n\tUri         string           `protobuf:\"bytes,2,opt,name=uri\" json:\"uri,omitempty\"`\n\tDescription string           `protobuf:\"bytes,3,opt,name=description\" json:\"description,omitempty\"`\n\tModel       string           `protobuf:\"bytes,4,opt,name=model\" json:\"model,omitempty\"`\n\tParams      *structpb.Struct `protobuf:\"bytes,5,opt,name=params\" json:\"params,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 36,
+                "end": 42,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 123,
+                "end": 129,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 208,
+                "end": 214,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 309,
+                "end": 315,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 399,
+                "end": 407,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 408,
+                "end": 414,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Struct",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+      "name": "invocationv1",
+      "doc": "",
+      "consts": [],
+      "vars": [],
+      "funcs": [],
+      "types": [
+        {
+          "name": "InvocationKind",
+          "doc": "",
+          "declaration": {
+            "text": "type InvocationKind int32",
+            "references": [
+              {
+                "start": 20,
+                "end": 25,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int32",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [
+            {
+              "names": [
+                "InvocationKind_INVOCATION_KIND_UNSPECIFIED",
+                "InvocationKind_INVOCATION_KIND_PIPELINE",
+                "InvocationKind_INVOCATION_KIND_TOOL"
+              ],
+              "doc": "",
+              "declaration": {
+                "text": "const (\n\tInvocationKind_INVOCATION_KIND_UNSPECIFIED InvocationKind = 0\n\tInvocationKind_INVOCATION_KIND_PIPELINE    InvocationKind = 1\n\tInvocationKind_INVOCATION_KIND_TOOL        InvocationKind = 2\n)",
+                "references": [
+                  {
+                    "start": 52,
+                    "end": 66,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                      "symbol": "InvocationKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 115,
+                    "end": 129,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                      "symbol": "InvocationKind",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 178,
+                    "end": 192,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                      "symbol": "InvocationKind",
+                      "builtin": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "InvocationMeta",
+          "doc": "",
+          "declaration": {
+            "text": "type InvocationMeta struct {\n\tSessionId      int64          `protobuf:\"varint,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\tSession        string         `protobuf:\"bytes,2,opt,name=session\" json:\"session,omitempty\"`\n\tAppId          string         `protobuf:\"bytes,3,opt,name=app_id,json=appId\" json:\"app_id,omitempty\"`\n\tInvocationId   string         `protobuf:\"bytes,4,opt,name=invocation_id,json=invocationId\" json:\"invocation_id,omitempty\"`\n\tInvocationKind InvocationKind `protobuf:\"varint,5,opt,name=invocation_kind,json=invocationKind,enum=agentk.invocation.v1.InvocationKind\" json:\"invocation_kind,omitempty\"`\n\tInvocationName string         `protobuf:\"bytes,6,opt,name=invocation_name,json=invocationName\" json:\"invocation_name,omitempty\"`\n\t// This queue routes progress callbacks, not capability execution.\n\tCallbackTaskQueue string `protobuf:\"bytes,7,opt,name=callback_task_queue,json=callbackTaskQueue\" json:\"callback_task_queue,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 45,
+                "end": 50,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 161,
+                "end": 167,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 255,
+                "end": 261,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 358,
+                "end": 364,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 482,
+                "end": 496,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                  "symbol": "InvocationKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 654,
+                "end": 660,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 855,
+                "end": 861,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        },
+        {
+          "name": "ReportProgressRequest",
+          "doc": "",
+          "declaration": {
+            "text": "type ReportProgressRequest struct {\n\tSessionId      int64           `protobuf:\"varint,1,opt,name=session_id,json=sessionId\" json:\"session_id,omitempty\"`\n\tInvocationId   string          `protobuf:\"bytes,2,opt,name=invocation_id,json=invocationId\" json:\"invocation_id,omitempty\"`\n\tInvocationKind InvocationKind  `protobuf:\"varint,3,opt,name=invocation_kind,json=invocationKind,enum=agentk.invocation.v1.InvocationKind\" json:\"invocation_kind,omitempty\"`\n\tInvocationName string          `protobuf:\"bytes,4,opt,name=invocation_name,json=invocationName\" json:\"invocation_name,omitempty\"`\n\tStepId         string          `protobuf:\"bytes,5,opt,name=step_id,json=stepId\" json:\"step_id,omitempty\"`\n\tMessage        string          `protobuf:\"bytes,6,opt,name=message\" json:\"message,omitempty\"`\n\tData           *structpb.Value `protobuf:\"bytes,7,opt,name=data\" json:\"data,omitempty\"`\n\t// contains filtered or unexported fields\n}",
+            "references": [
+              {
+                "start": 52,
+                "end": 57,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "int64",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 169,
+                "end": 175,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 294,
+                "end": 308,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/invocation/v1",
+                  "symbol": "InvocationKind",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 467,
+                "end": 473,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 598,
+                "end": 604,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 705,
+                "end": 711,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              },
+              {
+                "start": 801,
+                "end": 809,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 810,
+                "end": 815,
+                "target": {
+                  "packagePath": "google.golang.org/protobuf/types/known/structpb",
+                  "symbol": "Value",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+---
+sidebar_label: Client 开发概览
+title: AgentK Client 开发
+description: 使用 Client SDK 从下游应用调用 AgentK
+slug: /client
+pagination_prev: null
+pagination_next: client/quickstart
+---
+
+# AgentK Client 开发
+
+Client 开发面向调用 AgentK 的下游应用。Go、Python 和 Java Client SDK 提供同一组
+AgentKService 方法和 protobuf 类型，应用使用它们：
+
+- 直接调用一个 <Capability /> 并等待结果；
+- 创建和列出 <Session />；
+- 启动、取消、列出和查询 <Execution />；
+- 列出与实时观察 Event；
+- 列出 <Pipeline /> 与 <Capability />；
+- 查询当前 Client 接入身份。
+
+## 选择调用路径
+
+Client 有两条平行的调用路径：
+
+- **直接调用 Capability**：使用 `InvokeCapability` 按 Capability ID 发起一次阻塞式请求，直接
+  获得 JSON 输出，不创建 Session、Execution 或 Event Log。适合一次性请求/响应调用。
+- **Session / Execution**：先创建 Session，再启动 Agent 或 Pipeline Execution。适合多轮交互、
+  长任务、进度观察、断线恢复以及需要业务运行记录的场景。
+
+直接调用的完整语义和三语言示例见[直接调用 Capability](/client/guides/invoke-capability)；
+Session 路径从 [Client Quickstart](/client/quickstart) 开始。
+
+AgentK 使用工作负载 KSN 识别接入方。平台维护方将登记后的 KSN 绑定到一个 Service，Service
+归属于一个 App；Session 和运行资源按 App 隔离。`WhoAmI` 返回 Service UUID、App UUID 和
+Service display name。
+
+Client SDK 在构造时读取平台 KWS 环境并为请求传播身份。默认 transport 使用 KESS 发现
+`klingai-agentk-api`，再通过 gRPC h2c 直连实例。本地调试可以显式设置 endpoint；生产服务使用
+KESS 默认路径。
+
+使用 Codex、Cursor 辅助开发时，可先[接入文档 MCP](/mcp)，让 Agent 查询指南与 SDK API。
+
+- [Client Quickstart](/client/quickstart)
+- [直接调用 Capability](/client/guides/invoke-capability)
+- [在 Client 请求中使用 Request Lane](/client/guides/request-lane)
+- [选择 Client transport](/client/transports)
+- [Go Client SDK](/client/sdk/go)
+- [Python Client SDK](/client/sdk/python)
+- [Java Client SDK](/client/sdk/java)
+
+:::note[版本]
+
+本文档使用 Go Client `v0.3.2`、Python Client `0.3.2` 和 Java Client `0.3.2`。
+
+:::

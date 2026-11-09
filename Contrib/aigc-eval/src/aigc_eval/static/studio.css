@@ -1,0 +1,2715 @@
+/* 视频质检 Studio —— macOS 原生质感的语义 token。.light/.dark 挂在 <html>。
+ *
+ * 改这个文件前先读这四条约定，它们决定了整份样式的取值来源：
+ *
+ * 1. 组件规则只引用变量，绝不写死颜色。换主题只切 html 的 class。
+ * 2. 尺寸走固定阶梯（--r-* 圆角 / --sh-* 阴影 / --dur-* 时长）。
+ *    阶梯之外的值是"粗糙"的主要来源 —— 别临时发明 11px 圆角或 0.17s 过渡。
+ * 3. **材质分三层**：vibrancy（标题栏 / 侧栏，半透明 + 大半径模糊）、
+ *    content（内容区，不透明）、elevated（弹层）。同一层里不再叠第二种底色。
+ *    这是 macOS 层次感的真正来源，比堆阴影有效得多。
+ * 4. 控件形态照 macOS 抄：推压按钮 6px 圆角带 1px 内高光、开关是胶囊滑块、
+ *    下拉是右侧带双箭头的 popup button、多选一是分段控件。
+ *    强调色就是系统蓝，只用于焦点、选中与主按钮。
+ */
+
+/* ================================================================ tokens */
+
+.light {
+  /* ---- 材质：窗口 / 侧栏 / 内容 / 浮层。带 alpha 的会真的透出下层 ---- */
+  --mat-window: #ffffff;
+  --mat-titlebar: rgba(242, 242, 246, 0.76);
+  --mat-sidebar: rgba(219, 219, 229, 0.8);
+  --blur-vibrancy: saturate(180%) blur(24px);
+
+  --bg: #ffffff;
+  --bg-sidebar: #e4e4ec;       /* 不支持 backdrop-filter 时的回退 */
+  --bg-canvas: #ffffff;        /* 与中栏同为白：内容区是一整片，不再分色 */
+  --bg-fill: #f1f1f5;
+  --bg-fill-hover: #e7e7ee;
+  --bg-elevated: #ffffff;
+
+  /* ---- 描边：发丝级。用半透明而不是实色，叠在任何底上都不会显脏 ---- */
+  --border: rgba(20, 22, 40, 0.09);
+  --border-strong: rgba(20, 22, 40, 0.16);
+  --border-hairline: rgba(20, 22, 40, 0.06);
+  --sep: rgba(20, 22, 40, 0.075);   /* 分组内的行间分隔线 */
+
+  /* ---- 文字：三阶对比，正文 / 次要 / 提示 ---- */
+  --text: #1c1c1e;
+  --text-secondary: rgba(40, 42, 52, 0.76);
+  --text-tertiary: rgba(40, 42, 52, 0.48);
+
+  /* ---- 强调与状态。--brand 就是 macOS 系统蓝，压暗到能承载小字 ---- */
+  --brand: #0068e0;
+  --brand-hover: #0057bd;
+  --brand-soft: rgba(0, 104, 224, 0.08);
+  --brand-ring: rgba(0, 104, 224, 0.28);
+  --on-brand: #ffffff;
+  --success: #17864c;
+  --success-soft: rgba(23, 134, 76, 0.09);
+  --warn: #a5670a;
+  --warn-soft: rgba(165, 103, 10, 0.1);
+  --danger: #ce3131;
+  --danger-soft: rgba(206, 49, 49, 0.09);
+
+  --overlay: rgba(238, 239, 244, 0.55);
+
+  /* ---- 原生控件三件套：白底 + 半像素描边 + 一层极浅投影 ---- */
+  --ctl-bg: #ffffff;
+  --ctl-bg-hover: #fbfbfd;
+  --ctl-bg-active: #ececf2;
+  --ctl-shadow: 0 0 0 0.5px rgba(20, 22, 40, 0.16), 0 1px 1.5px rgba(20, 22, 40, 0.06);
+  --ctl-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  --switch-off: rgba(20, 22, 40, 0.16);
+  /* 主按钮上浅下深的一档渐变。系统按钮的立体感来自这 6% 的明度差，
+     不是来自阴影 —— 拉大就变成 2010 年的拟物按钮了。 */
+  --btn-fill: linear-gradient(180deg, #1a79ef, #0068e0);
+  /* select 背景里的双箭头。background-image 拿不到 currentColor，
+     所以深浅色各存一份，只有描边色不同。 */
+  --chev-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 16 16' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.9 6.5 8 3.4l3.1 3.1M4.9 9.5 8 12.6l3.1-3.1'/%3E%3C/svg%3E");
+
+  /* ---- 阴影：投影色带一点蓝，纯黑阴影在浅底上会发灰 ---- */
+  --sh-1: 0 0.5px 1px rgba(16, 18, 40, 0.05), 0 1px 2px rgba(16, 18, 40, 0.03);
+  --sh-2: 0 1px 2px rgba(16, 18, 40, 0.05), 0 4px 12px -3px rgba(16, 18, 40, 0.07);
+  --sh-3: 0 2px 4px rgba(16, 18, 40, 0.04), 0 14px 34px -8px rgba(16, 18, 40, 0.12);
+  --sh-modal: 0 8px 24px -8px rgba(16, 18, 40, 0.18), 0 32px 72px -16px rgba(16, 18, 40, 0.32);
+  --sh-inset: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  --mat-window: #1c1c1e;
+  --mat-titlebar: rgba(42, 42, 46, 0.72);
+  --mat-sidebar: rgba(24, 24, 27, 0.72);
+  --blur-vibrancy: saturate(180%) blur(24px);
+
+  --bg: #1c1c1e;
+  --bg-sidebar: #1a1a1d;
+  --bg-canvas: #1c1c1e;
+  --bg-fill: #2a2a2e;
+  --bg-fill-hover: #34343a;
+  --bg-elevated: #26262a;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.19);
+  --border-hairline: rgba(255, 255, 255, 0.065);
+  --sep: rgba(255, 255, 255, 0.085);
+
+  --text: #f2f2f5;
+  --text-secondary: rgba(236, 236, 243, 0.74);
+  --text-tertiary: rgba(236, 236, 243, 0.45);
+
+  --brand: #4da3ff;
+  --brand-hover: #75b8ff;
+  --brand-soft: rgba(77, 163, 255, 0.15);
+  --brand-ring: rgba(77, 163, 255, 0.3);
+  --on-brand: #ffffff;
+  --success: #4cc984;
+  --success-soft: rgba(76, 201, 132, 0.15);
+  --warn: #e5a83f;
+  --warn-soft: rgba(229, 168, 63, 0.15);
+  --danger: #ff7070;
+  --danger-soft: rgba(255, 112, 112, 0.15);
+
+  --overlay: rgba(8, 8, 10, 0.62);
+
+  --ctl-bg: #37373d;
+  --ctl-bg-hover: #404047;
+  --ctl-bg-active: #4a4a52;
+  --ctl-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.14), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --ctl-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --switch-off: rgba(255, 255, 255, 0.18);
+  --btn-fill: linear-gradient(180deg, #5aacff, #3d97f5);
+  --chev-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 16 16' fill='none' stroke='%23bbb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.9 6.5 8 3.4l3.1 3.1M4.9 9.5 8 12.6l3.1-3.1'/%3E%3C/svg%3E");
+
+  --sh-1: 0 1px 2px rgba(0, 0, 0, 0.32);
+  --sh-2: 0 1px 2px rgba(0, 0, 0, 0.32), 0 4px 14px -4px rgba(0, 0, 0, 0.5);
+  --sh-3: 0 2px 4px rgba(0, 0, 0, 0.3), 0 16px 38px -10px rgba(0, 0, 0, 0.6);
+  --sh-modal: 0 10px 30px -10px rgba(0, 0, 0, 0.62), 0 40px 90px -20px rgba(0, 0, 0, 0.8);
+  --sh-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+:root {
+  /* 圆角阶梯。macOS 比通用 Web 收得紧得多：控件 6px、分组 10px、
+   * 弹层 12px 是系统控件的实际取值，别往上放大。 */
+  --r-xs: 5px;
+  --r-ctl: 6px;                /* 按钮 / 输入框 / popup —— 一切原生控件 */
+  --r-sm: 7px;
+  --r-md: 9px;
+  --r-lg: 11px;
+  --r-xl: 14px;
+  --r-2xl: 18px;
+  --r-full: 999px;
+
+  /* 动效：短交互 120ms，状态切换 200ms，浮层进场 320ms。
+   * 缓动统一用这条"快出慢入"曲线，它是苹果控件的手感来源。 */
+  --dur-1: 0.12s;
+  --dur-2: 0.2s;
+  --dur-3: 0.32s;
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* macOS 的焦点环：一圈 3.5px 半透明强调色，贴着控件外沿。 */
+  --ring: 0 0 0 3.5px var(--brand-ring);
+
+  --tb-h: 46px;                /* 统一标题栏高度 */
+
+  --font-ui: "SF Pro Text", "SF Pro", -apple-system, BlinkMacSystemFont,
+    system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "SF Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* 空态插画：只做 mask，颜色由 currentColor 给，深浅色都不用换资源 */
+  --art-empty: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='56' viewBox='0 0 60 56' fill='none' stroke='%23000' stroke-width='1.6'%3E%3Crect x='4' y='9' width='36' height='27' rx='6'/%3E%3Cpath d='M18 18.5v9l8-4.5z' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='37' r='10'/%3E%3Cpath d='M47.2 44.2 54 51' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ============================================================ base reset */
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+/* 13px / 19px 是 macOS 系统 UI 的正文字号，不是随手取的小字。
+ * 通用 Web 的 14~16px 放到这种三栏密集界面里会立刻显得"网页化"。 */
+body {
+  margin: 0;
+  background: var(--mat-window);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 19px;
+  /* 西文轻微收紧字距是屏幕排版的默认做法；中文不受影响 */
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button, select, textarea, input { font: inherit; color: inherit; letter-spacing: inherit; }
+button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+
+/* 图标统一约定：block 消掉基线间隙，颜色永远继承容器。
+ * flex:none 是必需的 —— 图标在 flex 行里被压扁比缺图标更难看。 */
+.icn { display: block; flex: none; }
+
+/* 快捷键提示做成实体键帽。macOS 的 ⌘⏎ 在界面里一向是键帽而非纯文字。 */
+kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 3px;
+  border-radius: 4px;
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text-secondary);
+}
+
+::selection { background: var(--brand-ring); color: var(--text); }
+
+/* hidden 必须真的隐藏。
+ * 浏览器的 [hidden]{display:none} 来自 UA 样式表，任何一条写了 display 的类选择器
+ * 都会盖掉它 —— 于是 .vpane{display:flex} 让「问题定位」在空状态下照样显形，
+ * 页面一进来就挂着一个空播放器。这条兜底规则一次性堵掉整类问题，
+ * 后面所有组件都不必再各自写一遍 .x[hidden]。 */
+[hidden] { display: none !important; }
+
+/* 焦点环统一收口：鼠标点击不显形，键盘导航一定显形。
+ * 单独写在这里，后面所有组件都不必再各自定义一遍。 */
+:focus { outline: none; }
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--r-xs);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 滚动条：细、无轨道、悬停才变深。占位用 content-box 撑出留白。 */
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border: 3.5px solid transparent;
+  background-clip: content-box;
+  border-radius: var(--r-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); background-clip: content-box; }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* ---------------------------------------------------------------- layout */
+
+/* 窗口骨架：标题栏一行 + 剩余空间给 .shell。
+ * 标题栏独立于三栏之外，所以任何一栏收起都不会让它跟着重排。 */
+.win {
+  display: grid;
+  grid-template-rows: var(--tb-h) 1fr;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--mat-window);
+}
+
+/* ------------------------------------------------------- 统一标题栏 */
+
+/* macOS 的 unified toolbar：贴顶、半透明、底部一条发丝线。
+ * 内容滚动时它把下面的东西"隔"在磨砂玻璃后面 —— 这是最强的原生信号，
+ * 所以 backdrop-filter 不是装饰，缺了它这条栏就只是个灰条。 */
+.titlebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--mat-titlebar);
+  backdrop-filter: var(--blur-vibrancy);
+  -webkit-backdrop-filter: var(--blur-vibrancy);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 30;
+}
+
+/* 不支持 backdrop-filter 时退回不透明底，否则半透明会直接漏出内容 */
+@supports not (backdrop-filter: blur(1px)) {
+  .titlebar { background: var(--bg-sidebar); }
+}
+
+.tb-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  flex: none;
+  margin: 0 2px;
+}
+
+/* 品牌标记：macOS 应用图标那种带内高光的圆角方块 */
+.tb-mark {
+  width: 22px; height: 22px;
+  border-radius: var(--r-ctl);
+  background: var(--btn-fill);
+  color: var(--on-brand);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 60, 140, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  flex: none;
+}
+
+/* 窗口标题：13px semibold 居左，macOS 工具栏的标准写法。
+   不放大成 H1 —— 标题栏里的标题从不抢内容的视觉重量。 */
+.tb-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  flex: none;
+}
+
+.tb-caption {
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  flex: none;
+  white-space: nowrap;
+}
+
+.tb-spacer { flex: 1 1 auto; }
+
+/* 工具栏图标键：默认无边框无底，悬停才浮出一块填充 —— macOS 工具栏的手感。 */
+.tb-icon {
+  width: 28px; height: 26px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: transparent;
+  color: var(--text-secondary);
+  flex: none;
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+
+.tb-icon:hover { background: var(--bg-fill-hover); color: var(--text); }
+.tb-icon:active { background: var(--ctl-bg-active); }
+.tb-icon[aria-expanded="false"] { color: var(--brand); background: var(--brand-soft); }
+
+/* 主题键：两个图标叠在一处，按当前主题只露一个 */
+.icn-moon, .light .icn-moon { display: none; }
+.dark .icn-moon { display: block; }
+.dark .icn-sun { display: none; }
+
+/* ------------------------------------------------------------- 三栏 */
+
+.shell {
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* 侧栏走 vibrancy：半透明 + 大半径模糊，窗口底色从后面透上来。
+ * 这是 Finder / 邮件 / Xcode 侧栏的共同特征，也是整页最像原生的一处。 */
+/* 宽度来自 --sidebar-w（由 pane-resizer 写在 .win 上）。这里的字面值只是
+   脚本还没跑起来时的初值，改默认宽度要同时改 pane-resizer 里的 def。 */
+.sidebar {
+  width: var(--sidebar-w, 262px);
+  flex: 0 0 var(--sidebar-w, 262px);
+  background: var(--mat-sidebar);
+  backdrop-filter: var(--blur-vibrancy);
+  -webkit-backdrop-filter: var(--blur-vibrancy);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px 10px;
+  gap: 8px;
+}
+
+/* ------------------------------------------------------- 可拖动分隔线 */
+
+/* 分栏线本身就是把手：1px 的可见细线，外加左右各 4px 的透明命中区。
+ * 命中区做在 ::before 上而不是给元素本身加宽 —— 后者会在两栏之间挖出
+ * 一条 9px 的空隙，栏与栏就不再是"贴着的"。 */
+.splitter {
+  flex: 0 0 1px;
+  position: relative;
+  z-index: 20;
+  background: var(--border);
+  /* 延迟变色：鼠标只是路过时不该闪一下蓝线 */
+  transition: background var(--dur-2) var(--ease) 0.08s;
+}
+
+.splitter::before {
+  content: "";
+  position: absolute;
+  inset: 0 -4px;
+  cursor: col-resize;
+}
+
+.splitter:hover,
+.splitter[data-dragging="1"] {
+  background: var(--brand);
+  transition-delay: 0s;
+}
+
+.splitter:focus-visible {
+  box-shadow: none;
+  background: var(--brand);
+  outline: 2px solid var(--brand-ring);
+  outline-offset: 0;
+}
+
+/* 横向那条（判定区 | 问题定位）：同一套做法转 90°，命中区改为上下各 4px。 */
+.splitter-h { flex: 0 0 1px; }
+.splitter-h::before { inset: -4px 0; cursor: row-resize; }
+
+/* 拖动中：全局禁选，并让指针在整个窗口里都保持拖拽光标。
+   video 单独关掉命中，否则指针滑过播放器会被它的控件抢走。 */
+body.resizing-x, body.resizing-y { user-select: none; }
+body.resizing-x { cursor: col-resize; }
+body.resizing-y { cursor: row-resize; }
+body.resizing-x video, body.resizing-y video { pointer-events: none; }
+
+/* 栏收起时对应的分隔线一并消失 —— 留一条拖不动的线是纯粹的噪音 */
+.shell.nav-collapsed .splitter[data-resize="nav"],
+.shell.input-collapsed .splitter[data-resize="input"] { display: none; }
+
+/* 横线只在上下两块都在场时才有意义：空态下判定区和问题定位都是 hidden，
+   那时它会变成一条悬在空白里、拖了也没反应的线。 */
+.splitter-h { display: none; }
+.result-col:has(> .vd:not([hidden])):has(> .vpane:not([hidden])) > .splitter-h { display: block; }
+
+@supports not (backdrop-filter: blur(1px)) {
+  .sidebar { background: var(--bg-sidebar); }
+}
+
+.sidebar-top { padding: 0 2px; }
+
+/* 侧栏分区标题：11px 全大写 + 字距放开，macOS 侧栏 section header 的写法。
+   中文没有大写形态，所以靠字号、字重与字距三者把层级做出来。 */
+.sb-section {
+  margin: 0;
+  padding: 0 8px 4px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+}
+
+/* ------------------------------------------------- 侧边栏 · 历史质检记录 */
+
+/* 侧栏主操作，做成 macOS 推压按钮：白底 + 半像素描边 + 顶部 1px 内高光。
+   那道内高光是"可按下去"的关键暗示，去掉之后立刻变成一块死板的白条。 */
+.btn-new {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: var(--ctl-bg);
+  color: var(--text);
+  font-size: 12.5px;
+  font-weight: 500;
+  box-shadow: var(--ctl-shadow), var(--ctl-highlight);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+
+.btn-new:hover { background: var(--ctl-bg-hover); color: var(--brand); }
+.btn-new:active { background: var(--ctl-bg-active); box-shadow: var(--ctl-shadow); }
+.btn-new-icon { flex: 0 0 auto; }
+
+/* flex:1 + min-height:0 是列表能滚动的前提：不给 min-height，
+   子元素的内容高度会把 flex 容器顶开，overflow 永远不生效。 */
+.hist-pane {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.hist-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0 0 4px;
+  list-style: none;
+  scrollbar-gutter: stable;
+}
+
+.hist-empty {
+  padding: 10px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-tertiary);
+}
+
+/* sticky 分组头：侧栏是半透明的，这里不能用不透明底填一块补丁 ——
+   跟着做 vibrancy，滚过去的行在它后面糊成一片，这正是原生侧栏的样子。 */
+.hist-group {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 9px 8px 5px;
+  background: var(--mat-sidebar);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-tertiary);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .hist-group { background: var(--bg-sidebar); }
+}
+
+.hist-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 4px 8px;
+  border-radius: var(--r-ctl);
+  cursor: pointer;
+  transition: background var(--dur-1) var(--ease);
+}
+
+.hist-row:hover { background: var(--bg-fill); }
+.hist-row:focus-visible { box-shadow: none; outline: 2px solid var(--brand); outline-offset: -2px; }
+
+/* macOS 侧栏选中态就是一整块强调色填充，文字翻白 —— 不是左侧一根竖条，
+   也不是淡淡的底色。这是全页最能一眼认出"这是 mac 应用"的一处。 */
+.hist-row.active { background: var(--brand); }
+.hist-row.active .hist-title { color: var(--on-brand); font-weight: 500; }
+.hist-row.active .hist-meta,
+.hist-row.active .hist-time { color: rgba(255, 255, 255, 0.72); }
+.hist-row.active .hist-icon { color: rgba(255, 255, 255, 0.8); }
+.hist-row.active .hist-icon:hover { background: rgba(255, 255, 255, 0.18); color: #fff; }
+.hist-row.active .hist-icon:last-child:hover { background: rgba(255, 255, 255, 0.22); color: #fff; }
+
+.hist-dot {
+  flex: 0 0 auto;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  box-shadow: 0 0 0 3px transparent;
+  transition: box-shadow var(--dur-1) var(--ease);
+}
+
+.hist-dot.ok { background: var(--success); }
+.hist-dot.warn { background: var(--warn); }
+.hist-dot.bad { background: var(--danger); }
+.hist-row:hover .hist-dot.bad { box-shadow: 0 0 0 3px var(--danger-soft); }
+
+/* 选中行是强调色底，状态圆点必须换成"深底上"的那套亮色，
+   否则 #ce3131 压在蓝底上会糊成一团 —— 状态信息不能因为被选中而丢。 */
+.hist-row.active .hist-dot { background: rgba(255, 255, 255, 0.55); }
+.hist-row.active .hist-dot.ok { background: #7cebae; }
+.hist-row.active .hist-dot.warn { background: #ffd479; }
+.hist-row.active .hist-dot.bad { background: #ff9d9d; box-shadow: none; }
+
+.hist-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hist-title, .hist-meta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hist-title { font-size: 13px; line-height: 17px; }
+.hist-meta { font-size: 11px; line-height: 15px; color: var(--text-tertiary); }
+
+.hist-time {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 时间与操作键共用同一处空间：悬停时让位给改名/删除，
+   两者并排会把 264px 宽的行挤到标题只剩几个字。 */
+.hist-actions { display: none; flex: 0 0 auto; gap: 2px; }
+.hist-row:hover .hist-actions,
+.hist-row:focus-within .hist-actions { display: flex; }
+.hist-row:hover .hist-time,
+.hist-row:focus-within .hist-time { display: none; }
+
+.hist-icon {
+  display: grid;
+  place-items: center;
+  width: 22px; height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-xs);
+  background: transparent;
+  color: var(--text-tertiary);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+
+.hist-icon:hover { background: var(--bg-fill-hover); color: var(--text); }
+.hist-icon:last-child:hover { background: var(--danger-soft); color: var(--danger); }
+
+.hist-rename {
+  width: 100%;
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--brand);
+  border-radius: var(--r-xs);
+  background: var(--bg-elevated);
+  font-size: 13px;
+  box-shadow: var(--ring);
+}
+
+.hist-row.confirming { background: var(--bg-fill); cursor: default; }
+
+.hist-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.hist-confirm-text { font-size: 12px; line-height: 16px; color: var(--text-secondary); }
+.hist-confirm-actions { display: flex; gap: 6px; }
+
+.hist-danger, .hist-cancel {
+  height: 24px;
+  padding: 0 10px;
+  border-radius: var(--r-xs);
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  font-size: 12px;
+  transition: all var(--dur-1) var(--ease);
+}
+
+.hist-danger { border-color: var(--danger); color: var(--danger); }
+.hist-danger:hover { background: var(--danger); color: #fff; }
+.hist-cancel:hover { background: var(--bg-fill-hover); }
+
+/* 侧栏底部的协议说明：优先级最低，做成 macOS disclosure（可折叠三角）。
+   常驻展开会让侧栏底部永远压着一块小字，把注意力从历史列表上拽走。 */
+.sb-note {
+  flex: none;
+  border-top: 1px solid var(--sep);
+  padding-top: 6px;
+}
+
+.sb-note > summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: var(--r-ctl);
+  list-style: none;
+  cursor: pointer;
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+
+.sb-note > summary::-webkit-details-marker { display: none; }
+.sb-note > summary::marker { content: ""; }
+.sb-note > summary:hover { background: var(--bg-fill); color: var(--text-secondary); }
+
+/* 展开时三角右转 90°，这是 disclosure 唯一被认可的动作 */
+.sb-note-chev { transition: transform var(--dur-2) var(--ease); }
+.sb-note[open] > summary .sb-note-chev { transform: rotate(90deg); }
+
+.sb-note-body { padding: 2px 8px 4px; }
+
+.sb-note-body p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--text-tertiary);
+}
+
+.sb-note-body p + p { margin-top: 5px; }
+
+.workbench {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.control-col {
+  flex: 0 0 var(--control-w, 420px);
+  min-width: 0;
+  padding: 18px 20px 32px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  scrollbar-gutter: stable;
+}
+
+.result-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-canvas);
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------- controls */
+
+.mode-badge {
+  flex: 0 0 auto;
+  height: 19px;
+  padding: 0 7px;
+  border-radius: var(--r-xs);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: grid;
+  place-items: center;
+  transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+}
+
+.mode-badge.t2v { background: var(--bg-fill); color: var(--text-secondary); }
+.mode-badge.i2v { background: var(--brand-soft); color: var(--brand); }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+
+/* 字段标题走 macOS 的 section header：11px semibold，字距放开，弱对比。
+   它是"这一块叫什么"，不参与正文的视觉竞争。 */
+.field-label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 2px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+}
+
+.field-required {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: var(--r-xs);
+  background: var(--bg-fill);
+  color: var(--text-tertiary);
+  letter-spacing: 0;
+}
+
+.field-count { font-size: 11px; color: var(--text-secondary); font-variant-numeric: tabular-nums; letter-spacing: 0; }
+
+/* -------------------------------------------------- 分组表单 / 原生控件 */
+
+/* 一组相关字段共用一个圆角容器，行与行之间只有发丝线 ——
+ * macOS 设置面板的排法。比"每个字段一张卡片"安静得多，
+ * 也让"哪些设置是一伙的"不需要靠标题去解释。 */
+.group {
+  border-radius: var(--r-md);
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow);
+  overflow: hidden;
+}
+
+.ctl-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 34px;
+  padding: 5px 12px;
+  border-top: 1px solid var(--sep);
+  cursor: pointer;
+}
+
+.ctl-row:first-child { border-top: 0; }
+.ctl-row:hover { background: var(--bg-fill); }
+
+.ctl-label { flex: 1; min-width: 0; font-size: 12.5px; }
+
+/* 整行按钮（打开数据集）：跟 .ctl-row 同一套行高与内距，
+   右端一个 chevron 表示"会打开另一个界面"，即 macOS 的 disclosure row。 */
+.row-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 36px;
+  padding: 6px 10px 6px 9px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  transition: background var(--dur-1) var(--ease);
+}
+
+.row-btn:hover { background: var(--bg-fill); }
+.row-btn:active { background: var(--bg-fill-hover); }
+
+.row-icon { display: flex; color: var(--brand); flex: none; }
+.row-label { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 500; }
+.row-chev { color: var(--text-tertiary); }
+
+/* macOS 开关：26×16 胶囊 + 12px 白色滑块。
+ * 用 appearance:none 直接改造原生 checkbox，JS 读到的还是 .checked，
+ * 不需要额外的状态同步。 */
+.switch-input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  margin: 0;
+  width: 28px;
+  height: 17px;
+  border-radius: var(--r-full);
+  background: var(--switch-off);
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  position: relative;
+  transition: background var(--dur-2) var(--ease);
+}
+
+.switch-input::after {
+  content: "";
+  position: absolute;
+  top: 1.5px; left: 1.5px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22), 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  transition: transform var(--dur-2) var(--ease);
+}
+
+.switch-input:checked { background: var(--brand); }
+.switch-input:checked::after { transform: translateX(11px); }
+
+/* popup button：macOS 下拉的固定形态 —— 右端一个强调色小方块托着双箭头。
+ * 这一个细节几乎单独就能让人认出这是 mac 控件。 */
+.popup { position: relative; display: flex; flex: none; }
+
+.popup select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 22px;
+  min-width: 140px;
+  max-width: 220px;
+  padding: 0 26px 0 8px;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow), var(--ctl-highlight);
+  font-size: 12px;
+  color: var(--text);
+  cursor: pointer;
+  text-overflow: ellipsis;
+  transition: background var(--dur-1) var(--ease);
+}
+
+.popup select:hover:not(:disabled) { background: var(--ctl-bg-hover); }
+.popup select:disabled { opacity: 0.5; cursor: default; }
+
+.popup-chev {
+  position: absolute;
+  top: 50%; right: 3px;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  padding: 2.5px;
+  border-radius: 4px;
+  background: var(--brand);
+  color: var(--on-brand);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.popup select:disabled ~ .popup-chev { background: var(--text-tertiary); }
+
+/* 搜索框：macOS 的 search field —— 胶囊、内嵌放大镜、无外描边 */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 9px;
+  border-radius: var(--r-ctl);
+  background: var(--bg-fill);
+  color: var(--text-tertiary);
+  transition: box-shadow var(--dur-2) var(--ease), background var(--dur-2) var(--ease);
+}
+
+.search-field:focus-within {
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow), var(--ring);
+}
+
+.search-icon { flex: none; }
+
+/* 分段控件：一个填充底的容器，被选中的那一段浮成白色小卡。
+ * 这是 macOS 表达"多选一"的唯一形态，比一排独立按钮准确得多。 */
+.segmented {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--r-ctl);
+  background: var(--bg-fill);
+  box-shadow: inset 0 0 0 0.5px var(--border-hairline);
+}
+
+/* 内容被清空时整个控件消失，否则会剩一颗没有内容的小灰胶囊 */
+.segmented:empty { display: none; }
+
+.btn-link {
+  margin-left: auto;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  transition: color var(--dur-1) var(--ease);
+}
+.btn-link:hover { color: var(--brand); }
+
+/* 文本输入区：macOS 的 text field —— 白底、半像素描边、顶部一道内阴影
+ * 表示"内容凹进去了"。原来那个 24px 圆角的大灰块是聊天 App 的语言，
+ * 放在一个检验工具里就是没风格；这里换成系统输入框的形态。 */
+.composer {
+  background: var(--ctl-bg);
+  border-radius: var(--r-md);
+  box-shadow: var(--ctl-shadow), inset 0 1px 2px rgba(20, 22, 40, 0.05);
+  padding: 9px 11px 7px;
+  transition: box-shadow var(--dur-2) var(--ease);
+}
+
+.composer:focus-within {
+  box-shadow: 0 0 0 0.5px var(--brand), var(--ring);
+}
+
+.composer-input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  resize: vertical;
+  min-height: 92px;
+  outline: none;
+  font-size: 13px;
+  line-height: 20px;
+  caret-color: var(--brand);
+}
+.composer-input:focus-visible { box-shadow: none; }
+
+.composer-input::placeholder { color: var(--text-tertiary); }
+
+.composer-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--sep);
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.composer-hint { display: inline-flex; align-items: center; gap: 3px; color: var(--text-tertiary); }
+.composer-count { font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------- video slot */
+
+.video-slot {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px;
+  border-radius: var(--r-md);
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow);
+  cursor: pointer;
+  position: relative;
+  transition: background var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
+}
+
+.video-slot:hover {
+  background: var(--ctl-bg-hover);
+  box-shadow: 0 0 0 0.5px var(--brand), var(--sh-2);
+}
+
+.video-slot.empty .slot-icon {
+  width: 50px; height: 50px;
+  flex: 0 0 50px;
+  border-radius: var(--r-sm);
+  background: var(--bg-fill);
+  display: grid;
+  place-items: center;
+  color: var(--text-tertiary);
+  transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+}
+.video-slot.empty:hover .slot-icon { background: var(--brand-soft); color: var(--brand); }
+
+.slot-video {
+  width: 86px; height: 52px;
+  flex: 0 0 86px;
+  border-radius: var(--r-ctl);
+  object-fit: cover;
+  background: #000;
+}
+
+.slot-copy { min-width: 0; }
+.slot-title {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.slot-hint { margin: 2px 0 0; font-size: 11px; line-height: 15px; color: var(--text-tertiary); }
+
+/* 删除键：macOS 那种半透明深底的小圆键，压在素材缩略图右上角 */
+.slot-remove, .asset-remove {
+  position: absolute;
+  top: 7px; right: 7px;
+  width: 19px; height: 19px;
+  border: 0;
+  border-radius: var(--r-full);
+  background: var(--bg-fill-hover);
+  color: var(--text-secondary);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity var(--dur-1) var(--ease),
+              background var(--dur-1) var(--ease),
+              color var(--dur-1) var(--ease);
+}
+/* 删除键默认藏起来：常驻的 × 会让每张卡都像"待关闭"，
+   悬停或键盘聚焦时再出现，卡片静态时更干净。 */
+.video-slot:hover .slot-remove,
+.video-slot:focus-within .slot-remove,
+.asset-card:hover .asset-remove,
+.asset-card:focus-within .asset-remove { opacity: 1; }
+.slot-remove:focus-visible, .asset-remove:focus-visible { opacity: 1; }
+.slot-remove:hover, .asset-remove:hover { background: var(--danger); color: #fff; }
+
+/* ---------------------------------------------------------- dropzone */
+
+/* 拖放区保留虚线：虚线在整套语言里表示"这里还是空的 / 待填"。
+   但线宽收到 1px、圆角对齐控件档，不再是一个突兀的大虚框。 */
+.dropzone {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-md);
+  background: transparent;
+  padding: 18px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--dur-2) var(--ease),
+              background var(--dur-2) var(--ease);
+}
+
+.dropzone:hover { border-color: var(--brand); background: var(--brand-soft); }
+
+.dropzone-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: var(--r-full);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+}
+.dropzone:hover .dropzone-icon { background: var(--brand); color: var(--on-brand); }
+
+.dropzone-title { margin: 0; font-size: 12.5px; font-weight: 500; }
+.dropzone-hint { margin: 4px 0 0; font-size: 11px; line-height: 16px; color: var(--text-tertiary); }
+
+/* ------------------------------------------------------- asset cards */
+
+.asset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.asset-card {
+  position: relative;
+  display: flex;
+  gap: 11px;
+  padding: 8px;
+  border-radius: var(--r-md);
+  background: var(--ctl-bg);
+  box-shadow: var(--ctl-shadow);
+  transition: box-shadow var(--dur-2) var(--ease);
+}
+.asset-card:hover { box-shadow: var(--ctl-shadow), var(--sh-2); }
+
+.asset-thumb {
+  width: 84px; height: 58px;
+  flex: 0 0 84px;
+  border-radius: var(--r-ctl);
+  overflow: hidden;
+  background: var(--bg-fill);
+  display: grid;
+  place-items: center;
+}
+
+.asset-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb-glyph { display: flex; color: var(--text-tertiary); }
+.asset-thumb.kind-audio { background: var(--brand-soft); }
+.asset-thumb.kind-audio .thumb-glyph { color: var(--brand); }
+.asset-thumb.kind-video { background: var(--bg-fill-hover); }
+
+.asset-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 3px; }
+
+.asset-name {
+  margin: 0;
+  padding-right: 22px;
+  font-size: 12.5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.asset-meta { margin: 0; font-size: 11px; color: var(--text-tertiary); }
+
+/* 素材标签也是 popup button，只是尺寸更小。用同一套形态，
+   避免页面上出现两种不同长相的下拉。 */
+.asset-label { display: flex; margin-top: 1px; }
+
+.asset-label select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 21px;
+  padding: 0 20px 0 7px;
+  border: 0;
+  border-radius: var(--r-xs);
+  background: var(--ctl-bg) var(--chev-mask) no-repeat right 5px center;
+  box-shadow: var(--ctl-shadow), var(--ctl-highlight);
+  font-size: 11.5px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color var(--dur-1) var(--ease);
+}
+
+.asset-label select:hover { background-color: var(--ctl-bg-hover); }
+
+.run-bar { display: flex; align-items: center; gap: 11px; }
+
+/* 主按钮 = macOS 的 default push button：强调色填充、6px 圆角、
+ * 顶部一道内高光、一层贴身的投影。刻意不做大圆角和发光，
+ * 系统按钮从来不发光 —— 那是 Web 的做法。 */
+.btn-primary {
+  height: 28px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: var(--btn-fill);
+  color: var(--on-brand);
+  font-size: 12.5px;
+  font-weight: 500;
+  box-shadow: 0 0.5px 1.5px rgba(0, 40, 100, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: filter var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+.btn-primary:hover:not(:disabled) { filter: brightness(1.06); }
+.btn-primary:active:not(:disabled) { filter: brightness(0.9); }
+.btn-primary:disabled {
+  background: var(--bg-fill-hover);
+  color: var(--text-tertiary);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* 次要按钮 = 普通推压按钮：白底 + 半像素描边 + 内高光 */
+.btn-secondary {
+  height: 24px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: var(--ctl-bg);
+  color: var(--text);
+  font-size: 11.5px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-grid;
+  place-items: center;
+  box-shadow: var(--ctl-shadow), var(--ctl-highlight);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+.btn-secondary:hover { background: var(--ctl-bg-hover); color: var(--brand); }
+.btn-secondary:active { background: var(--ctl-bg-active); }
+
+/* 带图标的按钮改成 flex 行；.btn-secondary 默认是 grid 居中的纯文字键 */
+.btn-secondary:has(.icn) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 弹层右上角的关闭键：macOS sheet 用的是无边框圆形图标键 */
+.btn-close {
+  width: 26px; height: 26px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--r-full);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease);
+}
+.btn-close:hover { background: var(--bg-fill-hover); color: var(--text); }
+
+.run-hint { margin: 0; font-size: 11.5px; color: var(--text-tertiary); }
+
+.error-box {
+  margin: 0;
+  padding: 9px 11px;
+  border-radius: var(--r-ctl);
+  background: var(--danger-soft);
+  box-shadow: inset 0 0 0 0.5px rgba(206, 49, 49, 0.28);
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 18px;
+  animation: riseIn var(--dur-3) var(--ease);
+}
+
+/* ------------------------------------------------------------ result */
+
+/* 结果区顶栏 sticky：往下翻看维度卡时，"这是什么报告 + 跑到哪一步"必须还在。
+   跟着做 vibrancy，与窗口标题栏同一种材质，读起来是同一个层。 */
+.result-head {
+  position: relative;
+  z-index: 3;
+  flex: none;
+  padding: 12px 20px 10px;
+  border-bottom: 1px solid var(--border);
+  background: var(--mat-titlebar);
+  backdrop-filter: var(--blur-vibrancy);
+  -webkit-backdrop-filter: var(--blur-vibrancy);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .result-head { background: var(--bg); }
+}
+
+.result-title {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+}
+
+/* 回看历史记录时没有阶段日志，标题下方那 10px 空隙就变成一条无主的留白。
+ * :has 不支持的浏览器只是保留原来的间距，不影响任何功能。 */
+.result-head:has(.stage-list:empty) { padding-bottom: 11px; }
+.result-head:has(.stage-list:empty) .result-title { margin-bottom: 0; }
+
+.stage-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+
+.stage-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+  animation: riseIn var(--dur-3) var(--ease);
+}
+
+.stage-dot {
+  width: 7px; height: 7px;
+  flex: 0 0 7px;
+  border-radius: var(--r-full);
+  background: var(--text-tertiary);
+}
+
+.stage-row[data-status="running"] .stage-dot { background: var(--brand); animation: pulse 1.4s ease-in-out infinite; }
+.stage-row[data-status="done"] .stage-dot { background: var(--success); }
+.stage-row[data-status="error"] .stage-dot { background: var(--danger); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--brand-ring); }
+  50% { opacity: 0.55; box-shadow: 0 0 0 4px transparent; }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+.stage-name { flex: 0 0 auto; font-weight: 500; color: var(--text); }
+
+.stage-note {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-tertiary);
+}
+
+.stage-state {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------- 八维三档判定区 (native8)
+ *
+ * 编码规则，改这一段前先读：
+ *
+ * · 颜色只是第二信道。每个状态另有一个形状（勾 / 叉 / 半实心 / 虚线问号 /
+ *   短横）和一句中文，三者同时出现，任缺其二仍可辨认。
+ * · **虚线描边 + 斜纹底 = 没核实**，全站独占这一对记号。把它做得像「通过」
+ *   就等于把「我们没查」印成「查过没问题」，这是本页最不能犯的错。
+ * · 「不适用」是灰、实线、低对比：它是一条中性信息，不该抢注意力。
+ */
+
+/* 默认按内容长高、封顶 54vh。刻意不给固定高度 —— 短报告下面不该挂一块空白。 */
+.vd {
+  flex: 0 0 auto;
+  max-height: min(54vh, 620px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 20px 18px;
+  background: var(--bg);
+  scrollbar-gutter: stable;
+}
+
+/* 用户拖过横线之后才切成显式高度，此时封顶要撤掉，否则拖不过 54vh。
+   双击横线会移除这个标记，交还给上面的自适应行为。 */
+.result-col[data-vd-sized="1"] > .vd {
+  flex: 0 0 var(--vd-h);
+  max-height: none;
+}
+
+/* 判定区的下边界通常由那条横线画。只有问题定位缺席（分析中还没出视频）时，
+   才需要自己补一条，不然这块区域下沿会没有收口。 */
+.result-col:has(> .vpane[hidden]) > .vd { border-bottom: 1px solid var(--border); }
+
+/* 判定区自己能滚，标题行必须 sticky，否则往下翻就不知道这些卡属于哪一块。
+   负 margin + padding 是为了让 sticky 底色铺满整个横向内边距。 */
+.vd-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 -20px 12px;
+  padding: 12px 20px 10px;
+  background: var(--bg);
+}
+
+.vd-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+}
+
+.vd-schema {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0;
+  color: var(--text-tertiary);
+}
+
+.vd-tally {
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 计数做成 chip：三档并排时用底色分块，比纯文字更容易一眼分开 */
+.vd-tallyitem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2.5px 9px;
+  border-radius: var(--r-full);
+  background: var(--bg-fill);
+  font-size: 11.5px;
+}
+.vd-tallyitem[data-tier="bad"] { background: var(--danger-soft); }
+.vd-tallyitem[data-tier="flaw"] { background: var(--warn-soft); }
+.vd-tallyitem[data-tier="ok"] { background: var(--success-soft); }
+/* 「未完全核实」沿用全站的虚线记号：它不是一档结论，是一块缺口 */
+.vd-tallyitem[data-tier="unverified"] {
+  background: transparent;
+  border: 1px dashed var(--border-strong);
+  padding: 1.5px 8px;
+}
+.vd-tallynum { font-weight: 600; font-variant-numeric: tabular-nums; }
+.vd-tallylabel { color: var(--text-secondary); }
+.vd-reportlink { flex: 0 0 auto; }
+
+.vglyph { flex: none; display: block; }
+
+/* 一档一色 —— 但每处都同时带着形状与文字，颜色掉了也读得出来。 */
+[data-tier="bad"], [data-verdict="violated"] { color: var(--danger); }
+[data-tier="flaw"] { color: var(--warn); }
+[data-tier="ok"], [data-verdict="pass"] { color: var(--success); }
+[data-tier="unverified"], [data-tier="review"], [data-verdict="not_observable"] { color: var(--text-secondary); }
+[data-tier="na"], [data-verdict="not_applicable"] { color: var(--text-tertiary); }
+
+/* ---- 八个维度卡 ---- */
+
+/* 固定 4 列。维度恒为 8 个，4×2 是唯一能整齐收边的排法；
+   auto-fit 会按容器宽度算出 5+3 这种断行，最后一行永远缺口。 */
+.vd-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* 维度卡跟其它控件共用一套表面：白底 + 半像素描边 + 一层贴身投影。
+   不再自带 1px 实线边框 —— 8 张卡各画一圈实线，整块区域会显得像表格。 */
+.vd-tilebtn {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 11px 12px 10px;
+  border: 0;
+  border-radius: var(--r-md);
+  background: var(--ctl-bg);
+  text-align: left;
+  /* 让导轨能贴着卡片上沿铺满并被圆角切齐。
+     自身 box-shadow 不受 overflow 影响，焦点环仍然完整。 */
+  overflow: hidden;
+  box-shadow: var(--ctl-shadow);
+  transition: background var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
+}
+
+.vd-tilebtn:hover { background: var(--ctl-bg-hover); box-shadow: var(--ctl-shadow), var(--sh-2); }
+.vd-tilebtn.on { box-shadow: 0 0 0 0.5px var(--brand), var(--ring); }
+
+/* 顶部导轨：档位的第一眼信号，卡片折叠后仍在。
+   2px 就够 —— 8 条并排的 3px 色带会盖过整页的视觉重心。 */
+.vd-rail {
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 2px;
+  background: currentColor;
+}
+
+/* 还有子判据没核实 → 导轨改斜纹。纹理在整页里只表示「不完整」。 */
+.vd-tile[data-unresolved="1"] .vd-rail {
+  background: repeating-linear-gradient(
+    115deg,
+    currentColor 0 3px,
+    transparent 3px 6px
+  );
+}
+
+.vd-tile[data-tier="na"] .vd-tilebtn { background: var(--bg-fill); box-shadow: none; opacity: 0.72; }
+
+.vd-tiletop { display: flex; align-items: center; gap: 6px; }
+.vd-tiertext { font-size: 11.5px; font-weight: 600; }
+
+.vd-dimname {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 17px;
+}
+
+.vd-dimmeta { font-size: 11px; color: var(--text-tertiary); line-height: 16px; }
+
+/* ---- 维度详情抽屉 ---- */
+
+.vd-drawer {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-elevated);
+  padding: 13px 15px;
+  box-shadow: var(--sh-1);
+}
+
+/* 没选中维度时抽屉只是一句提示：这时它不该长得像一张空卡片，
+   收成虚线占位条，明确表达"这里等你点一下"。 */
+.vd-drawer[data-open="0"] {
+  border-style: dashed;
+  border-color: var(--border-strong);
+  background: transparent;
+  padding: 9px 15px;
+  box-shadow: none;
+  text-align: center;
+}
+.vd-drawer[data-open="0"] .vd-drawer-hint { display: block; }
+.vd-drawer[data-open="1"] { animation: riseIn var(--dur-3) var(--ease); }
+
+.vd-drawer-hint { margin: 0; font-size: 11.5px; color: var(--text-tertiary); }
+
+.vd-drawer-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.vd-drawer-title { margin: 0; font-size: 13.5px; font-weight: 600; }
+
+.vd-drawer-tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.vd-escalated {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--warn);
+  background: var(--warn-soft);
+  border: 1px solid currentColor;
+  border-radius: var(--r-full);
+  padding: 1px 8px;
+}
+
+.vd-drawer-close {
+  margin-left: auto;
+  border: 0;
+  background: none;
+  color: var(--text-tertiary);
+  font-size: 17px;
+  line-height: 1;
+  padding: 0 2px;
+  border-radius: var(--r-xs);
+  transition: color var(--dur-1) var(--ease);
+}
+.vd-drawer-close:hover { color: var(--text); }
+
+.vd-critlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+
+.vd-crit {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) 62px auto;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-top: 1px solid var(--border-hairline);
+  font-size: 12.5px;
+}
+.vd-crit:first-child { border-top: 0; }
+
+.vd-critmark { display: flex; }
+.vd-critname { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.vd-critverdict { font-size: 11.5px; font-weight: 600; text-align: right; }
+
+/* 未核实的整行套一层斜纹底：扫视时它自成一块，绝不会和 pass 行混起来。 */
+.vd-crit[data-verdict="not_observable"] {
+  background: repeating-linear-gradient(
+    115deg,
+    var(--bg-fill-hover) 0 5px,
+    transparent 5px 10px
+  );
+  margin: 0 -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: var(--r-xs);
+}
+
+.vd-crit[data-verdict="not_applicable"] { opacity: 0.55; }
+
+.vd-critissues { display: flex; gap: 4px; flex-wrap: wrap; justify-self: end; }
+
+.vd-critbasis {
+  grid-column: 2 / -1;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vd-issue {
+  border: 1px solid var(--border);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding: 1px 7px;
+  border-radius: var(--r-full);
+  transition: all var(--dur-1) var(--ease);
+}
+.vd-issue:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
+
+/* ---- 单条原子事实 ---- */
+
+.vd-issue-cards { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+
+.vd-issue-card {
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--r-md);
+  background: var(--bg-fill);
+  padding: 11px 13px;
+}
+
+.vd-issue-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.vd-issue-source, .vd-issue-frames { font-size: 11px; color: var(--text-tertiary); }
+.vd-issue-summary { margin: 7px 0 0; font-size: 12.5px; line-height: 19px; }
+
+.vd-evilist { list-style: none; margin: 7px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+
+.vd-eviline { display: flex; gap: 8px; font-size: 12px; color: var(--text-secondary); }
+
+.vd-evitime {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--text-tertiary);
+}
+
+.vd-facts, .vd-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 7px 16px;
+  margin: 10px 0 0;
+}
+
+.vd-fact, .vd-metric { min-width: 0; }
+.vd-fact dt, .vd-metric dt { font-size: 10.5px; color: var(--text-tertiary); }
+
+.vd-fact dd, .vd-metric dd {
+  margin: 1px 0 0;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- 未采信 / V2V 对齐 ---- */
+
+.vd-flags { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+
+.vd-flag {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-elevated);
+  box-shadow: var(--sh-1);
+  overflow: hidden;
+}
+
+/* 未采信的条目也带斜纹，和维度卡里的「未核实」是同一套语言。
+ * 纹理只铺在标题行和左侧导轨上：整块铺满会盖住正文，反而读不下去。 */
+.vd-flag[data-flag="review"] {
+  position: relative;
+  border-color: var(--border-strong);
+  padding-left: 3px;
+}
+
+.vd-flag[data-flag="review"]::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    115deg, var(--text-tertiary) 0 4px, transparent 4px 8px
+  );
+}
+
+.vd-flag[data-flag="review"] .vd-flag-sum {
+  background: repeating-linear-gradient(
+    115deg, var(--bg-fill) 0 6px, transparent 6px 13px
+  );
+}
+
+.vd-flag-sum {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text-secondary);
+  transition: background var(--dur-1) var(--ease);
+}
+.vd-flag-sum::-webkit-details-marker { display: none; }
+.vd-flag-sum:hover { background: var(--bg-fill); }
+
+.vd-flag-title { font-size: 12.5px; font-weight: 600; color: var(--text); }
+.vd-flag-note { font-size: 11px; color: var(--text-tertiary); margin-left: auto; }
+
+.vd-flag-body { padding: 0 14px 12px; }
+
+/* "没有被驳回的判断"是好消息，但它是个空结果。做成虚线细条而不是实心卡片：
+   它只需要被确认一眼，不该在页面上占掉一张卡的视觉份量。 */
+.vd-flag-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 0;
+  padding: 8px 14px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-lg);
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+}
+.vd-flag-empty .vglyph { color: var(--success); }
+
+.vd-funnel { margin: 0 0 8px; font-size: 11.5px; color: var(--text-tertiary); }
+
+.vd-rejectlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+
+.vd-reject {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.vd-reject-where { font-weight: 500; }
+.vd-reject-why { color: var(--text-tertiary); }
+
+.vd-bandtrack {
+  position: relative;
+  height: 8px;
+  margin-top: 10px;
+  border-radius: var(--r-xs);
+  background: var(--bg-fill);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.vd-band { position: absolute; top: 0; bottom: 0; background: var(--brand); opacity: 0.75; }
+
+.vd-bandnote { margin: 6px 0 0; font-size: 11px; color: var(--text-tertiary); }
+
+/* 空态：撑满右栏剩余高度并居中。原来是一段顶在上边的小字，
+   下面一大片空白没有归属，是"粗糙"最直观的一处。 */
+.empty-state {
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  padding: 40px 32px 56px;
+  text-align: center;
+  max-width: 40ch;
+  align-self: center;
+  font-size: 12px;
+  line-height: 19px;
+  color: var(--text-tertiary);
+  animation: riseIn var(--dur-3) var(--ease);
+}
+
+/* 插画本身当"容器"：mask 会连 box-shadow 一起裁掉，所以不能给它加圆底板。
+   改为放大线稿 + 压低不透明度，让它读成一张淡淡的水印而不是缺图。 */
+.empty-state::before {
+  content: "";
+  width: 76px; height: 71px;
+  flex: none;
+  background: currentColor;
+  opacity: 0.32;
+  -webkit-mask: var(--art-empty) center / contain no-repeat;
+  mask: var(--art-empty) center / contain no-repeat;
+}
+
+
+/* ------------------------------------------------- 问题定位视频组件
+ * 机制移植自 frame-annotation-modal，去掉 modal 外壳（overlay / 交通灯 /
+ * iframe 展开协议）改成内嵌。视觉换成 studio 的语义 token。
+ *
+ * 报告出来后进度列表会收成一条紧凑滚动区，把纵向空间让给视频。
+ */
+
+.result-col[data-phase="done"] .stage-list {
+  max-height: 84px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.vpane {
+  /* 报告改为新窗口打开后，右栏的剩余高度全部归视频区 */
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.vpane-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px 0;
+}
+
+.vpane-title { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: -0.008em; }
+.vpane-count { font-size: 11px; color: var(--text-tertiary); }
+
+/* 档位筛选是"多选一"，所以它就该是分段控件而不是一排独立胶囊。
+ * 容器由 .segmented 提供（填充底 + 2px 内距），这里只管每一段。 */
+.vpane-filters { margin-left: auto; }
+
+.vfilter {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 4px;
+  transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease),
+              box-shadow var(--dur-1) var(--ease);
+}
+.vfilter .vglyph { width: 12px; height: 12px; }
+.vfilter[data-tier="bad"] .vglyph { color: var(--danger); }
+.vfilter[data-tier="flaw"] .vglyph { color: var(--warn); }
+.vfilter[data-tier="review"] .vglyph { color: var(--text-tertiary); }
+.vfilter:hover { color: var(--text); }
+
+/* 选中的一段浮成一张白色小卡。macOS 的分段控件靠"这一段被抬起来"表达选中，
+   不靠整段刷成强调色 —— 后者是 iOS 早期的做法，在深浅色下都太重。 */
+.vfilter.on {
+  background: var(--ctl-bg);
+  color: var(--text);
+  box-shadow: var(--ctl-shadow);
+}
+
+/* minmax(0,..) 让两列都能收缩，否则 JSON 长句会把面板撑破。
+ * 右列改成上限 340px 的固定档：标签面板内容很窄，按 1fr 分会白白吃掉
+ * 视频的宽度，画面反而看不清。 */
+.vpane-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 16px;
+  padding: 12px 20px 20px;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.vcol { min-width: 0; display: flex; flex-direction: column; }
+.jcol { min-width: 0; display: flex; min-height: 0; }
+
+/* 播放器容器：1px 边框 + 圆角 + 阴影的黑底盒子，
+ * 控件条交给浏览器原生 controls（音量与全屏都由它提供，不再自绘）。 */
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-3);
+  aspect-ratio: 16 / 9;
+  max-height: 68vh;
+  flex: none;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity var(--dur-2) var(--ease);
+}
+
+/* grounding 框层。尺寸与位置由 fitAnnotationLayer() 按视频自身的
+ * letterbox 内容矩形算，不是按 wrapper —— 否则每个框都会偏黑边的一半。 */
+.annotation-layer {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+  opacity: 1;
+  transition: opacity var(--dur-2) var(--ease);
+}
+
+.annotation-box {
+  position: absolute;
+  border: 2px solid #ff3b30;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 0 12px rgba(255, 59, 48, 0.38);
+  animation: annotationPulse 1.15s ease-in-out infinite alternate;
+}
+
+.annotation-box[data-tier="flaw"] {
+  border-color: #d4a017;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 0 12px rgba(212, 160, 23, 0.38);
+  animation: none;
+}
+
+/* 未采信的问题也画框，但用虚线：框住的是「疑点」，不是已认定的缺陷。 */
+.annotation-box[data-tier="review"] {
+  border-style: dashed;
+  border-color: #cbd2dd;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65);
+  animation: none;
+}
+
+.annotation-box span {
+  position: absolute;
+  left: -2px;
+  top: -23px;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 3px 6px;
+  border-radius: 3px 3px 3px 0;
+  background: rgba(155, 18, 15, 0.92);
+  color: #ffcbc7;
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-shadow: 0 1px 1px #000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.annotation-box[data-tier="flaw"] span { background: rgba(133, 99, 8, 0.92); color: #ffeec0; }
+.annotation-box[data-tier="review"] span { background: rgba(48, 54, 66, 0.92); color: #dfe4ec; }
+
+/* 贴顶的框把标签翻进框内，否则会被裁掉 */
+.annotation-box.near-top span { top: 2px; left: 2px; border-radius: 3px; }
+
+@keyframes annotationPulse {
+  from { border-color: #ff3b30; }
+  to {
+    border-color: #ff7b72;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.65), 0 0 18px rgba(255, 59, 48, 0.62);
+  }
+}
+
+/* 问题帧时间轴：原生 controls 占了视频底部，所以标记点单独挪到视频下方一条
+ * 浅色轨道上。功能不变（点圆点跳该帧），只是不再压在画面上、也不会和原生
+ * 控件条打架。 */
+.vtimeline { display: flex; align-items: center; gap: 12px; margin-top: 12px; }
+
+.track { position: relative; height: 20px; flex: 1; display: flex; align-items: center; cursor: pointer; }
+.rail {
+  position: absolute;
+  left: 0; right: 0;
+  height: 5px;
+  border-radius: var(--r-full);
+  background: var(--bg-fill-hover);
+}
+.rfill {
+  position: absolute;
+  left: 0;
+  height: 5px;
+  border-radius: var(--r-full);
+  background: var(--brand);
+  width: 0;
+  pointer-events: none;
+}
+
+.mark {
+  position: absolute;
+  top: 50%;
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--bg);
+  cursor: pointer;
+  transition: transform var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);
+  z-index: 2;
+}
+
+.mark:hover { transform: translate(-50%, -50%) scale(1.28); }
+.mark.act { box-shadow: 0 0 0 3px var(--brand-ring); }
+
+/* 13px 的圆点写不下图形，改用「实心 / 甜甜圈 / 虚线空心」三种轮廓：
+ * 缩到时间轴这个尺寸，形状仍然分得开，不必靠红黄之分。 */
+.mark[data-tier="bad"] { background: #e5484d; }
+
+.mark[data-tier="flaw"] {
+  background: #d4a017;
+  box-shadow: inset 0 0 0 3px var(--bg);
+}
+
+.mark[data-tier="review"] {
+  background: var(--bg);
+  border-style: dashed;
+  border-color: var(--text-tertiary);
+}
+.mark[data-tier="review"].act { border-color: var(--brand); }
+.mark[data-tier="flaw"].act { box-shadow: inset 0 0 0 3px var(--bg), 0 0 0 3px var(--brand-ring); }
+
+.ctime {
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+
+/* 真实报告最多 37 条证据、且大量共享同一时刻，chips 必须能滚 */
+.jumpwrap {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  max-height: 92px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.jump {
+  border: 1px solid var(--border);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding: 4px 9px;
+  border-radius: var(--r-sm);
+  transition: all var(--dur-1) var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jump:hover { border-color: var(--border-strong); color: var(--text); }
+.jump.act { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
+.jump .jd { display: flex; flex: none; }
+.jump .jd .vglyph { width: 12px; height: 12px; }
+.jump .jd[data-tier="bad"] { color: var(--danger); }
+.jump .jd[data-tier="flaw"] { color: var(--warn); }
+.jump .jd[data-tier="review"] { color: var(--text-tertiary); }
+.jump .jn { font-weight: 700; }
+
+/* 没有时间戳的问题在时间轴上没有位置，收进折叠区而不是丢掉 */
+.vorphans { margin-top: 12px; font-size: 12px; }
+.vorphans > summary { color: var(--text-tertiary); cursor: pointer; border-radius: var(--r-xs); }
+.vorphans > summary:hover { color: var(--text); }
+.vorphans-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+
+.vorphan {
+  display: flex;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--r-sm);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.vorphan-title { font-weight: 600; color: var(--text); flex: none; }
+
+/* ---- 质检标签面板 ----------------------------------------------------
+ * 原来是一整块深色卡片嵌在浅色页面里，浮在右上角像另一个应用的窗口。
+ * 现在改用页面同一套 token：只有 JSON 代码块保留深底（代码本来就该深底）。 */
+
+.jcard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-1);
+  overflow: hidden;
+  /* 标签面板不再撑满整列：默认只占一段，纵向空间留给视频。
+   * align-self:flex-start 让它按内容收高，而不是被 grid 拉平。 */
+  max-height: min(52vh, 100%);
+  align-self: flex-start;
+}
+
+.jhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  background: var(--bg-sidebar);
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+
+/* 标题从文件名换成「质检标签」后不再是代码，改回 UI 字体 */
+.jhead .jt {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* 复制键：平时是复制图标，复制成功后 1.6s 内换成对勾。
+   两个图标都在 DOM 里，只靠 .copied 切换显示，不改 DOM 内容。 */
+.jhead .jc {
+  margin-left: auto;
+  display: flex;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  border-radius: var(--r-xs);
+  transition: color var(--dur-1) var(--ease);
+}
+.jhead .jc:hover { color: var(--text); }
+.jhead .jc.copied { color: var(--success); }
+.jhead .jc .icn-done { display: none; }
+.jhead .jc.copied .icn-copy { display: none; }
+.jhead .jc.copied .icn-done { display: block; }
+
+.jbodywrap { padding: 11px 12px; overflow: auto; min-height: 0; overscroll-behavior: contain; }
+
+/* 一个时刻可能压着多条标注，每条一个可勾选的按钮：勾中才把框画到视频上。
+ * 默认只勾第一条 —— 同一时刻的框常常大面积重叠，全画上去谁也看不清。 */
+.tagwrap { display: flex; flex-direction: column; gap: 7px; }
+
+.tagbtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  /* flex item 默认 min-width:auto，长标题会把按钮顶宽、把右边的 JSON 键挤出面板。
+   * 证据：真实数据里最长的 title 有 44 个字。必须允许收缩。 */
+  min-width: 0;
+  text-align: left;
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg-fill);
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.35;
+  transition: all var(--dur-1) var(--ease);
+}
+
+.tagbtn:hover { border-color: var(--border-strong); background: var(--bg-fill-hover); color: var(--text); }
+.tagbtn.on { border-color: var(--brand); background: var(--brand-soft); color: var(--text); }
+
+/* 勾选态用对勾填充方框，未勾是空框 —— 只靠描边色区分看不出来。
+   对勾常驻在 DOM 里，未勾时染成透明色，这样勾与不勾的方框尺寸完全一致。 */
+.tagbox {
+  width: 14px; height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  background: var(--ctl-bg);
+  display: grid;
+  place-items: center;
+  color: transparent;
+  flex: none;
+}
+.tagbtn.on .tagbox { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+
+.tagtier { display: flex; flex: none; }
+.tagtier .vglyph { width: 14px; height: 14px; }
+.tagtier[data-tier="bad"] { color: var(--danger); }
+.tagtier[data-tier="flaw"] { color: var(--warn); }
+.tagtier[data-tier="review"] { color: var(--text-tertiary); }
+
+.tagtext { min-width: 0; flex: 1; }
+
+/* 标题最长的真实样本有 44 个字，不截断就会把整行顶宽。
+ * 完整文案仍在 title 属性里（hover 可看），也可以展开 JSON 看原文。 */
+.tagtitle {
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tagnote {
+  display: block;
+  color: var(--text-tertiary);
+  font-size: 11px;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 无框标记：一个不占宽度的小菱形。整片级属性（运镜/音画/时序）按设计就没有
+ * 定位框，所以它是状态说明，不是错误提示 —— 别做得像警告。 */
+.tagnobox { color: var(--text-tertiary); font-size: 11px; flex: none; cursor: help; }
+
+/* 没框的条目勾了也画不出框，勾选框弱化一点，避免看起来"点了没反应" */
+.tagbtn.nobox .tagbox { border-style: dashed; }
+
+/* 每条标签自己一行：左边勾选键撑开，右边一个「› JSON」展开键。
+ * min-width:0 是关键 —— 不加的话长标题会把 JSON 键推出面板。 */
+.tagrow { display: flex; flex-direction: column; min-width: 0; }
+.tagline { display: flex; align-items: stretch; gap: 6px; min-width: 0; }
+.tagline .tagbtn { flex: 1 1 auto; min-width: 0; }
+
+.tagjson-btn {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg-fill);
+  color: var(--text-tertiary);
+  font-size: 10.5px;
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+  padding: 0 7px;
+  flex: none;
+  white-space: nowrap;
+  transition: all var(--dur-1) var(--ease);
+}
+.tagjson-btn:hover { border-color: var(--border-strong); color: var(--text); }
+.tagjson-btn.on { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
+
+/* 展开时三角右转 90°，跟侧栏的 disclosure 是同一个动作 */
+.tagjson-chev { transition: transform var(--dur-2) var(--ease); }
+.tagjson-btn.on .tagjson-chev { transform: rotate(90deg); }
+
+/* JSON 保留深底：它是代码，深底 + 语法着色是这类内容的通行读法。
+ * pre-wrap 而非 pre：reasoning 是整句话，pre 会拖出一条谁也找不到的横向滚动条。 */
+pre.json {
+  margin: 6px 0 2px;
+  padding: 9px 11px;
+  border-radius: var(--r-sm);
+  background: #10121a;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #dfe3ea;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.json .jk { color: #7fb0ff; }
+.json .js { color: #56d69a; }
+.json .jn { color: #f2ab48; }
+.json .jp { color: #7b8393; }
+
+.jempty { color: var(--text-tertiary); font-size: 12px; line-height: 18px; white-space: normal; margin: 0; }
+
+/* 窄屏时右列换到视频下方，两列并排会把画面压到看不清 */
+@media (max-width: 1240px) {
+  .vpane-body { grid-template-columns: 1fr; }
+  .jcard { max-height: none; }
+}
+
+/* --------------------------------------------------------- 拖拽遮罩 */
+
+.drop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--overlay);
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  animation: fadeIn var(--dur-2) var(--ease);
+}
+
+
+.drop-overlay-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--brand);
+  border-radius: var(--r-2xl);
+  background: var(--brand-soft);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.drop-overlay-title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--brand);
+}
+.drop-overlay-hint { margin: 0; font-size: 13px; color: var(--text-secondary); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ── 左栏 / 中栏收起 ──────────────────────────────────────────────
+ * 只压 flex-basis + 隐藏内容，不用 display:none —— 后者会让收起前
+ * 已挂载的 video/JSON 面板全部重新布局，fitAnnotationLayer 量到 0 就废了。
+ * 开合键住在标题栏（.tb-icon），一颗键管收也管展，这里只管收缩本身。 */
+.shell.nav-collapsed .sidebar { flex-basis: 0; width: 0; padding-left: 0; padding-right: 0; overflow: hidden; }
+.shell.nav-collapsed .sidebar > * { display: none; }
+
+.shell.input-collapsed .control-col { flex-basis: 0; min-width: 0; width: 0; padding: 0; overflow: hidden; }
+.shell.input-collapsed .control-col > * { display: none; }
+
+/* ── 离线数据集浏览器 ─────────────────────────────────────────── */
+
+.ds-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: var(--overlay);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+  animation: fadeIn var(--dur-2) var(--ease);
+}
+
+
+.ds-panel-inner {
+  width: min(900px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--sh-modal);
+  overflow: hidden;
+  animation: modalIn var(--dur-3) var(--ease);
+}
+
+.ds-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ds-panel-title { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -0.014em; }
+.ds-panel-hint { margin: 4px 0 0; font-size: 11.5px; color: var(--text-tertiary); }
+
+.ds-panel-search { padding: 10px 18px; border-bottom: 1px solid var(--border); }
+
+/* 搜索框自己不再画边框：外面那层 .search-field 已经是完整的原生控件 */
+.ds-search-input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.ds-search-input::placeholder { color: var(--text-tertiary); }
+/* 焦点环画在外层 .search-field 上（见 :focus-within），内部输入框不再自画 */
+.ds-search-input:focus,
+.ds-search-input:focus-visible { outline: none; box-shadow: none; }
+.ds-search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.ds-list {
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ds-empty, .ds-loading {
+  margin: 0;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.ds-case { border: 1px solid transparent; border-radius: var(--r-lg); transition: background var(--dur-1) var(--ease); }
+.ds-case.open { border-color: var(--border); background: var(--bg); box-shadow: var(--sh-1); }
+
+/* 头部是整行按钮：编号 / 模式 / 素材统计 一行，prompt 摘要单独占一行。 */
+.ds-case-head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--r-lg);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ds-case-head:hover { background: var(--bg-fill); }
+
+.ds-case-id { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.ds-badge {
+  height: 20px;
+  padding: 0 8px;
+  border-radius: var(--r-full);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  display: grid;
+  place-items: center;
+}
+
+.ds-badge.t2v { background: var(--bg-fill); color: var(--text-secondary); }
+.ds-badge.i2v { background: var(--brand-soft); color: var(--brand); }
+
+.ds-case-meta { font-size: 11.5px; color: var(--text-tertiary); white-space: nowrap; }
+.ds-chevron { display: flex; color: var(--text-tertiary); transition: transform var(--dur-2) var(--ease); }
+.ds-case.open .ds-chevron { transform: rotate(90deg); }
+
+.ds-case-prompt {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ds-detail {
+  padding: 4px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: riseIn var(--dur-3) var(--ease);
+}
+
+.ds-section-title {
+  margin: 6px 0 0;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.ds-prompt {
+  margin: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--r-md);
+  background: var(--bg-fill);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.ds-ref-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ds-ref { width: 76px; display: flex; flex-direction: column; gap: 4px; }
+
+.ds-ref-thumb {
+  width: 76px; height: 56px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: var(--bg-fill);
+  display: grid;
+  place-items: center;
+}
+
+.ds-ref-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ds-ref-thumb.kind-audio { background: var(--brand-soft); }
+.ds-ref-thumb.kind-video { background: var(--bg-fill-hover); }
+
+.ds-ref-label {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.ds-result-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ds-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg);
+  transition: border-color var(--dur-1) var(--ease);
+}
+.ds-result:hover { border-color: var(--border-strong); }
+
+.ds-result-video {
+  width: 88px; height: 56px;
+  flex: 0 0 88px;
+  border-radius: var(--r-sm);
+  object-fit: cover;
+  background: var(--bg-fill);
+  display: block;
+}
+
+/* 海报占位 + 播放按钮：默认不加载视频，点了才换成 <video>。 */
+.ds-result-media {
+  position: relative;
+  width: 88px; height: 56px;
+  flex: 0 0 88px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: var(--bg-fill);
+}
+
+.ds-result-poster { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.ds-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  cursor: pointer;
+  transition: background var(--dur-1) var(--ease);
+}
+
+.ds-play:hover { background: rgba(0, 0, 0, 0.48); }
+/* 播放三角外面套一圈半透明圆片，这是所有原生播放器的做法 —— 
+   直接画在画面上的裸三角在亮画面上会消失。 */
+.ds-play .icn {
+  padding: 5px 4px 5px 6px;
+  box-sizing: content-box;
+  border-radius: var(--r-full);
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.ds-result-media .ds-result-video { width: 100%; height: 100%; flex: none; }
+
+.ds-result-body { flex: 1; min-width: 0; }
+.ds-result-name { margin: 0; font-size: 13px; font-weight: 500; }
+.ds-result-meta { margin: 3px 0 0; font-size: 11.5px; color: var(--text-tertiary); }
+.ds-pick { flex: 0 0 auto; height: 30px; padding: 0 13px; font-size: 12px; }
+
+/* ── 素材放大预览 ─────────────────────────────────────────────── */
+
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: var(--overlay);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+  animation: fadeIn var(--dur-2) var(--ease);
+}
+
+
+.lb-inner {
+  width: min(1100px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--sh-modal);
+  overflow: hidden;
+  animation: modalIn var(--dur-3) var(--ease);
+}
+
+.lb-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 20px 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lb-titles { min-width: 0; }
+.lb-title {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lb-meta { margin: 4px 0 0; font-size: 11.5px; color: var(--text-tertiary); }
+
+.lb-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px 20px 22px;
+  background: var(--bg);
+}
+
+.lb-image, .lb-video {
+  max-width: 100%;
+  max-height: calc(100vh - 230px);
+  border-radius: var(--r-md);
+  object-fit: contain;
+  box-shadow: var(--sh-2);
+}
+
+.lb-video { background: #000; }
+
+.lb-audio { width: min(520px, 100%); }
+
+.lb-zoom {
+  position: absolute;
+  bottom: 8px; right: 8px;
+  width: 24px; height: 24px;
+  border: 0;
+  border-radius: var(--r-full);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--dur-1) var(--ease), background var(--dur-1) var(--ease);
+}
+
+.video-slot:hover .lb-zoom, .video-slot:focus-within .lb-zoom { opacity: 1; }
+.lb-zoom:hover { background: rgba(0, 0, 0, 0.78); }
+.lb-zoom:focus-visible { opacity: 1; }
+
+.asset-thumb.zoomable, .asset-thumb.zoomable img { cursor: zoom-in; }
+
+/* ------------------------------------------------------------ 响应式 */
+
+@media (max-width: 1180px) {
+  .workbench { flex-direction: column; overflow-y: auto; }
+  .control-col {
+    flex: 0 0 auto;
+    min-width: 0;
+    overflow: visible;
+    border-bottom: 1px solid var(--border);
+  }
+  .result-col { min-height: 60vh; }
+  /* 两栏改成上下堆叠后，竖向的分隔线没有意义了：
+     它会变成一条横躺着、却还挂着 col-resize 光标的线。 */
+  .splitter[data-resize="input"] { display: none; }
+}
+
+@media (max-width: 1000px) {
+  .vd-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .sidebar, .splitter[data-resize="nav"] { display: none; }
+  .control-col { padding: 20px 18px 28px; }
+  .result-head, .vd { padding-left: 18px; padding-right: 18px; }
+  .vd-head { margin-left: -18px; margin-right: -18px; padding-left: 18px; padding-right: 18px; }
+  .vpane-head { padding-left: 18px; padding-right: 18px; }
+  .vpane-body { padding-left: 18px; padding-right: 18px; }
+}
+
+/* 关掉动效偏好：只留下颜色与描边的变化，位移与缩放全部停掉。 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

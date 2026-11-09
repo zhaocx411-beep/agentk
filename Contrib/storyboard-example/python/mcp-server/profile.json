@@ -1,0 +1,12 @@
+{
+  "defaultModel": "deepseek-v4-pro",
+  "system": "Use the declared pipeline when the caller explicitly starts it.",
+  "tools": [],
+  "pipelines": [
+    {
+      "capability": "contrib.storyboard_example.storyboard_film_python",
+      "name": "storyboard_film_example",
+      "displayName": "Python 分镜成片示例"
+    }
+  ]
+}

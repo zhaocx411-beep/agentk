@@ -1,0 +1,73 @@
+agentk:
+  # 公司部署环境留空，通过 SDK/KESS 自动发现 klingai-agentk-api；本地联调填 URL。
+  base_url: ""
+  # 兼容旧配置；SDK 0.3.0 改用 KWS_SERVICE_NAME/KWS_SERVICE_CREDENTIAL，此项不再生效。
+  api_key: ""
+
+# 留空时使用 AgentK SDK 的 KESS Temporal（namespace=agentk）；本地联调时
+# 指向与 AgentK API/Core Worker 相同的 Temporal。
+temporal:
+  address: ""
+  namespace: "default"
+
+models:
+  vision: "gemini-3.1-flash-lite"
+  text: "deepseek-v4-pro"
+  asr: "azure-whisper"
+  search: "volc-search"
+  story: "deepseek-v4-pro"
+  script: "deepseek-v4-pro"
+  # Qwen TTS 的部署回退默认；页面优先读取 AgentK capability schema 的默认值。
+  tts: "qwen3-tts-flash"
+  # MiniMax TTS 的部署回退默认。
+  minimax_tts: "minimax-speech-2.8-hd"
+
+# Agent 100 页面只允许用户从这些部署白名单中选择。默认模型即使未重复
+# 填写，也会自动加入对应候选。候选仍必须存在于 AgentK model catalog。
+model_candidates:
+  vision:
+    - "gemini-3.1-flash-lite"
+    - "gemini-3-flash-preview"
+    - "gemini-3.1-pro-preview"
+  text:
+    - "deepseek-v4-pro"
+    - "deepseek-v4-flash"
+    - "gpt-5.4"
+    - "claude-sonnet-4-6"
+    - "claude-haiku-4-5"
+    - "glm-5.1"
+    - "kimi-k2.6"
+    - "qwen3.7-max"
+    - "qwen3.5-plus"
+  asr:
+    - "azure-whisper"
+  search:
+    - "volc-search"
+    - "brightdata-serp"
+  tts:
+    - "qwen3-tts-instruct-flash"
+    - "qwen3-tts-flash"
+  minimax_tts:
+    - "minimax-speech-2.8-hd"
+    - "minimax-speech-2.8-turbo"
+    - "minimax-speech-2.6-hd"
+    - "minimax-speech-2.6-turbo"
+    - "minimax-speech-02-hd"
+    - "minimax-speech-02-turbo"
+    - "minimax-speech-01-hd"
+    - "minimax-speech-01-turbo"
+
+analysis_window_seconds: 30
+analysis_concurrency: 3
+# Whisper 的 Azure deployment 配额为每分钟 6 次：单任务串行，全局只允许
+# 一个在途请求，并把相邻请求起始时间隔开 11 秒。所有 worker 必须使用相同
+# Temporal namespace 和 workflow_id，才能共享同一个全局限流器。
+asr_concurrency: 1
+asr_min_interval_seconds: 11
+asr_global_concurrency: 1
+asr_lease_timeout_seconds: 900
+asr_rate_limiter_workflow_id: "narrato-asr-global-rate-limiter-v1"
+tts_concurrency: 4
+worker_task_queue: "demo-worker"
+# 生产环境保持 agentk；仅在隔离的本地 AgentK E2E 环境使用唯一队列。
+core_task_queue: "agentk"

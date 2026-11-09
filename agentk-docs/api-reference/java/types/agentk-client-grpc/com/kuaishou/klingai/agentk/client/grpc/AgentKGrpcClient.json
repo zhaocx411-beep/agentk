@@ -1,0 +1,148 @@
+{
+  "view": "client",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-client-grpc"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.client.grpc",
+  "classNames": [
+    "AgentKGrpcClient"
+  ],
+  "type": {
+    "id": "agentk-client-grpc-com-kuaishou-klingai-agentk-client-grpc-AgentKGrpcClient",
+    "kind": "class",
+    "name": "AgentKGrpcClient",
+    "declaration": {
+      "text": "public final class AgentKGrpcClient",
+      "references": [
+        {
+          "start": 19,
+          "end": 35,
+          "href": "/reference/java/client/agentk-client-grpc/com/kuaishou/klingai/agentk/client/grpc/AgentKGrpcClient"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Creates AgentK clients that use KESS service discovery and gRPC over h2c."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-client-grpc-com-kuaishou-klingai-agentk-client-grpc-AgentKGrpcClient-create-com-kuaishou-klingai-agentk-client-ClientOptions-",
+        "name": "create",
+        "declaration": {
+          "text": "public final static AgentKClient create(ClientOptions options)",
+          "references": [
+            {
+              "start": 20,
+              "end": 32,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient"
+            },
+            {
+              "start": 33,
+              "end": 39,
+              "href": "/reference/java/client/agentk-client-grpc/com/kuaishou/klingai/agentk/client/grpc/AgentKGrpcClient#agentk-client-grpc-com-kuaishou-klingai-agentk-client-grpc-AgentKGrpcClient-create-com-kuaishou-klingai-agentk-client-ClientOptions-"
+            },
+            {
+              "start": 40,
+              "end": 53,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Creates an authenticated AgentK client."
+                  }
+                ]
+              },
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The returned client owns its transport resources and must be closed when it is no longer needed."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "options",
+            "href": "/reference/java/client/agentk-client-grpc/com/kuaishou/klingai/agentk/client/grpc/AgentKGrpcClient#agentk-client-grpc-com-kuaishou-klingai-agentk-client-grpc-AgentKGrpcClient-create-com-kuaishou-klingai-agentk-client-ClientOptions-",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "endpoint options for the client"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a client that connects directly when an endpoint is configured, or discovers AgentK endpoints through KESS otherwise"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static final AgentKClient",
+          "references": [
+            {
+              "start": 13,
+              "end": 25,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/AgentKClient"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "create(ClientOptions options)",
+          "references": [
+            {
+              "start": 7,
+              "end": 20,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/ClientOptions"
+            }
+          ]
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

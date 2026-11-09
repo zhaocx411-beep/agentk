@@ -1,0 +1,13 @@
+batcheval:
+  store: memory
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+agent:
+  operation:
+    backend:
+      auth:
+        enabled: false

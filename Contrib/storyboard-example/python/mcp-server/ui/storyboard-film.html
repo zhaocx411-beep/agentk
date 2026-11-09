@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Storyboard Film</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 16px;
+      }
+
+      main {
+        max-width: 760px;
+        overflow: hidden;
+        border: 1px solid light-dark(#ddd, #444);
+        border-radius: 10px;
+      }
+
+      header,
+      section {
+        padding: 14px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid light-dark(#ddd, #444);
+      }
+
+      h1,
+      p,
+      dl {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+
+      #badge {
+        color: #7c3aed;
+        font-size: 13px;
+      }
+
+      #status {
+        margin-bottom: 12px;
+        color: light-dark(#666, #bbb);
+        font-size: 13px;
+      }
+
+      #status.error {
+        color: #dc2626;
+      }
+
+      video {
+        width: 100%;
+        max-height: 420px;
+        border-radius: 8px;
+        background: #000;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      dl div {
+        min-width: 0;
+        padding: 8px;
+        border-radius: 6px;
+        background: light-dark(#f4f4f5, #27272a);
+      }
+
+      dt {
+        color: light-dark(#666, #aaa);
+        font-size: 11px;
+      }
+
+      dd {
+        overflow: hidden;
+        margin: 2px 0 0;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      [hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Storyboard Film</h1>
+        <span id="badge">Generating</span>
+      </header>
+      <section>
+        <p id="status" role="status">AgentK is generating the film…</p>
+        <video id="player" controls preload="metadata" hidden></video>
+        <dl id="metadata" hidden>
+          <div>
+            <dt>Clips</dt>
+            <dd id="clips">—</dd>
+          </div>
+          <div>
+            <dt>Session</dt>
+            <dd id="session">—</dd>
+          </div>
+          <div>
+            <dt>Execution</dt>
+            <dd id="execution">—</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <script>
+      const badge = document.getElementById("badge");
+      const status = document.getElementById("status");
+      const player = document.getElementById("player");
+      const metadata = document.getElementById("metadata");
+
+      window.addEventListener("message", (event) => {
+        const result =
+          event.data?.result ??
+          (event.data?.method === "ui/notifications/tool-result"
+            ? event.data.params
+            : undefined);
+
+        if (!result) return;
+
+        if (result.isError) {
+          badge.textContent = "Failed";
+          status.textContent =
+            result.content?.find((item) => item.type === "text")?.text ??
+            "Film generation failed.";
+          status.classList.add("error");
+          return;
+        }
+
+        const output = result.structuredContent;
+        const artifact = output?.artifacts?.[0];
+        if (
+          output?.status !== "completed" ||
+          output.artifacts?.length !== 1 ||
+          artifact?.type !== "video" ||
+          typeof artifact.uri !== "string" ||
+          typeof output.clipCount !== "number"
+        ) {
+          return;
+        }
+
+        player.src = artifact.uri;
+        player.hidden = false;
+        metadata.hidden = false;
+        document.getElementById("clips").textContent = output.clipCount;
+        document.getElementById("session").textContent = output.sessionId;
+        document.getElementById("execution").textContent = output.executionId;
+        badge.textContent = "Completed";
+        status.textContent = "Your storyboard film is ready.";
+      });
+    </script>
+  </body>
+</html>

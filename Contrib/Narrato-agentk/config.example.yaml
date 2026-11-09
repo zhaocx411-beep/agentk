@@ -1,0 +1,27 @@
+agentk:
+  base_url: "https://agentk.internal"
+  api_key: "replace-me"
+
+# 仅本机访问可留空；浏览器从其他主机访问时必须设置。
+console_token: ""
+api_host: "127.0.0.1"
+
+media:
+  api_url: "http://127.0.0.1:8000"
+  upload_bucket: "ylab-stunt"
+  bs3_endpoint: "https://bs3.internal"
+  cdn_base: "https://cdn.internal/ylab-stunt"
+  key_prefix: "narrato-agentk"
+
+models:
+  vision: "gemini-3.1-flash-lite"
+  text: "deepseek-v4-pro"
+  tts: "qwen3-tts-flash"
+
+qwen_voice_id: "replace-with-qwen-voice-id"
+analysis_window_seconds: 30
+analysis_concurrency: 3
+tts_concurrency: 4
+worker_task_queue: "contrib-narrato-documentary-v1"
+# 生产环境保持 agentk；仅在隔离的本地 AgentK E2E 环境使用唯一队列。
+core_task_queue: "agentk"

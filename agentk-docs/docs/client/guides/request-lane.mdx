@@ -1,0 +1,214 @@
+---
+sidebar_position: 3
+sidebar_label: 使用 Request Lane
+title: 在 Client 请求中使用 Request Lane
+description: 从 HTTP、gRPC、KESS Debug 或测试代码发起泳道请求，并由 Client SDK 自动传播
+slug: /client/guides/request-lane
+pagination_prev: client/guides/chat-client
+pagination_next: client/transports
+---
+
+# 在 Client 请求中使用 Request Lane
+
+本页说明 Client 侧如何产生和传播 Request Lane。泳道的用途、基线回落和隔离边界见
+[Request Lane：共享环境中的任务路由隔离](/concepts/request-lane)。
+
+一次泳道请求从请求源获得泳道标识，入口适配器将公司基础设施的 HTTP 或 gRPC 载体转换为
+AgentK Context，Client SDK 再把当前 Context 中的泳道写入 AgentK RPC：
+
+```text
+KESS Debug / HTTP 请求 / 测试代码 / Runner
+  → 入口适配器或显式 Context
+  → AgentK Client SDK
+  → agentk-lane-id
+  → AgentK API
+```
+
+泳道属于当前请求。中间服务只负责传播，它自己的部署环境不会成为 Request Lane 的来源。
+
+## 安装 HTTP 或 gRPC 入口适配器
+
+当 Client 应用本身是 HTTP 或 gRPC 服务时，在最外层请求边界安装一个适配器。适配器读取公司
+基础设施使用的 `trace-context` 或 `trace_context-bin`，并把其中的 `laneId` 放入当前请求的
+AgentK Context。业务处理函数继续把这个 Context 传给 Client SDK 即可。
+
+### Go
+
+Go 入口适配器随 AgentK Go SDK 提供：
+
+```go
+adapter, err := ksingress.New()
+if err != nil {
+    return err
+}
+
+httpHandler := adapter.HTTPMiddleware(appHandler)
+
+grpcServer := grpc.NewServer(
+    grpc.ChainUnaryInterceptor(adapter.UnaryServerInterceptor()),
+    grpc.ChainStreamInterceptor(adapter.StreamServerInterceptor()),
+)
+```
+
+HTTP handler 中将 `request.Context()` 传给 AgentK Client；gRPC handler 中使用收到的 `ctx`。
+
+### Python
+
+ASGI 应用直接包裹 middleware：
+
+```python
+from agentk.request_lane.ks_ingress import ASGIMiddleware
+
+app = ASGIMiddleware(app)
+```
+
+`grpc.aio` 服务安装 server interceptor：
+
+```python
+import grpc
+
+from agentk.request_lane.grpc import AioServerInterceptor
+
+server = grpc.aio.server(interceptors=[AioServerInterceptor()])
+```
+
+ASGI 适配器包含在 `ks-agentk-request-lane` 中；使用 gRPC 适配器时安装其 `grpc` extra。Client SDK
+已经依赖同版本的 request-lane 包。
+
+```bash
+python -m pip install 'ks-agentk-request-lane[grpc]==0.3.2'
+```
+
+### Java
+
+Jakarta Servlet 服务将 `KsRequestLaneFilter` 注册为入口 Filter；gRPC 服务将
+`KsRequestLaneServerInterceptor` 注册到 Server：
+
+```java
+serverBuilder.intercept(new KsRequestLaneServerInterceptor());
+```
+
+对应 Maven artifact 分别是 `agentk-request-lane-servlet-jakarta` 和
+`agentk-request-lane-grpc`，版本与 `agentk-client` 保持一致。
+
+同一条入口链只安装一次适配器。格式错误或重复的泳道载体会被拒绝，而不是降级为普通请求。
+
+## Client SDK 自动传播的内容
+
+Go、Python 和 Java Client SDK 会在每次公开 RPC 调用时读取当前 AgentK Context。如果存在泳道，
+SDK 写入一个 `agentk-lane-id`；不存在时不写入，调用按基线请求处理。HTTP 与 gRPC transport 的
+行为一致。
+
+因此应用无需手工拼接 `agentk-lane-id`，也无需把公司基础设施的 `trace-context` 原样转发给
+AgentK。入口适配器完成格式转换后，后续代码只使用 Context。
+
+每次 RPC 都独立读取当前 Context，泳道不会因为创建过 Session 就永久保存到 Session。应让
+`StartExecution`、`InvokeCapability` 等实际发起任务的调用处于原请求的 Context 中。
+
+## 发起泳道请求
+
+### KESS Debug
+
+通过 KESS Debug 调用 Client 应用的 gRPC 接口时，在泳道配置中填写目标 `laneId`。KESS Debug
+负责生成公司基础设施的 gRPC 载体；应用侧的 gRPC 入口适配器负责解析。基础操作可参考
+[泳道使用 101](https://techlink.corp.kuaishou.com/help/docs/05e428ad26da5b5bfc9463d6875b8f13)。
+
+目标值应与 Worker 启动日志中的 `lane` 一致。本地 Worker 会自动生成一个以 `local-` 开头的
+隔离泳道，直接复制该值即可。
+
+### HTTP Header
+
+调用 Client 应用的 HTTP 接口时，可以在 `trace-context` 的 `laneId` 中指定泳道：
+
+```bash
+curl \
+  -H 'trace-context: {"laneId":"dev/zhangsan"}' \
+  https://example.test/jobs
+```
+
+`trace-context` 可以包含公司基础设施定义的其他字段；AgentK 入口适配器只提取 `laneId`。
+
+### 测试代码
+
+没有 HTTP/gRPC 入口的单元测试或集成测试，可以在调用 AgentK Client 前显式建立 Context。
+
+Go：
+
+```go
+lane, err := requestlane.Parse("dev/zhangsan")
+if err != nil {
+    return err
+}
+ctx := requestlane.ContextWithLane(context.Background(), lane)
+
+response, err := client.InvokeCapability(ctx, request)
+```
+
+Python：
+
+```python
+from agentk.request_lane import use
+
+with use("dev/zhangsan"):
+    response = await client.invoke_capability(request)
+```
+
+Java：
+
+```java
+RequestLane lane = RequestLane.parse("dev/zhangsan");
+try (Scope ignored = RequestLane.makeCurrent(lane)) {
+    response = client.invokeCapability(request).toCompletableFuture().get();
+}
+```
+
+泳道值是不透明标识，必须是 1 到 256 字节的可见 ASCII，不能包含空格。应用原样传播即可，
+无需解析或重写。
+
+## Runner 等没有上游泳道载体的入口
+
+Runner 或其他请求源可能没有上游 HTTP/gRPC 载体，但部署环境已经提供 `KWS_LANE_ID`。这类入口
+可以显式开启适配器的环境回退：
+
+```bash
+export KWS_LANE_ID='dev/zhangsan'
+export FALLBACK_TO_ENV_LANE_ID=true
+```
+
+入口请求本身已经携带泳道时，以请求中的值为准；没有携带时，适配器才使用 `KWS_LANE_ID`。
+`FALLBACK_TO_ENV_LANE_ID` 缺省关闭，设置为 `true` 时必须同时提供有效的 `KWS_LANE_ID`。
+
+这项回退属于入口适配器，Client SDK 不会自行读取这两个变量。完全没有入口适配器的定时任务或
+测试程序，应使用上一节的显式 Context，并把作用域限制在本次调用。
+
+## 何时需要手动设置 Context
+
+以下情况需要显式建立 Context：
+
+- 测试代码直接调用 Client SDK，没有经过 HTTP/gRPC 入口；
+- 定时任务或命令行程序本身就是请求源，也没有可安装适配器的入口；
+- 自定义入口已经解析出泳道，但需要把它转换为 AgentK Context。
+
+已经安装标准入口适配器时，业务代码无需重复设置。当前请求是否带泳道，始终由请求源和上游
+传播链决定。
+
+## 确认泳道已经进入请求 Context
+
+最直接的检查位置是入口适配器之后、调用 AgentK Client 之前：
+
+```go
+lane, ok := requestlane.FromContext(ctx)
+log.Printf("request lane: %q, present: %t", lane, ok)
+```
+
+Python 使用 `agentk.request_lane.current()`，Java 使用 `RequestLane.current()`。无泳道时应分别返回
+`None` 或空值，而不是某个默认泳道。
+
+端到端验证时使用一个可识别的泳道 Worker：
+
+1. 从 Worker 启动日志复制 `lane`；
+2. 发起一次带该值的测试请求，确认命中泳道实现；
+3. 再发起一次不带泳道的对照请求，确认只命中基线实现。
+
+如果 Context 中已有泳道但没有命中目标 Worker，继续核对 Worker 的 `lane` 和 Capability 发布状态。
+Worker 侧检查见[配置 Worker Lane](/worker/guides/worker-lane)。

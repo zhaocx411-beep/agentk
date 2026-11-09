@@ -1,0 +1,86 @@
+/* Agent-loop 灵感触发：弹窗目录 + 工具栏数量角标 */
+
+.count {
+  margin-left: @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 400;
+}
+
+.modal :global(.ant-modal-body) {
+  display: flex;
+  flex-direction: column;
+  padding-top: @spacing-sm;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  max-height: min(52vh, 420px);
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  width: 100%;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    background-color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: @hairline;
+    background: @surface-2;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: @primary-color;
+    box-shadow: @focus-ring-neutral;
+  }
+}
+
+.itemTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.itemHint {
+  display: -webkit-box;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.listFooter {
+  padding: @spacing-xs 0 @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+.empty {
+  padding: @spacing-xl 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}

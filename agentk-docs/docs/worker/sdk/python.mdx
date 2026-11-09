@@ -1,0 +1,67 @@
+---
+sidebar_position: 7
+title: Python Worker SDK
+description: 使用 Python Worker SDK 发布和组合 AgentK Capability
+slug: /worker/sdk/python
+pagination_prev: worker/sdk/go
+pagination_next: null
+---
+
+# Python Worker SDK
+
+Python Worker SDK 基于 Temporal Python SDK，要求 Python 3.11 或更高版本。
+
+## 安装
+
+```bash
+python -m pip install 'ks-agentk-worker==0.3.2'
+```
+
+## 公开接口
+
+```python
+from agentk.worker import (
+    Artifact,
+    Capability,
+    Tool,
+    Worker,
+    auto_heartbeat,
+    connect_temporal,
+    current_meta,
+    invoke_capability,
+    report_progress,
+)
+```
+
+## 基本生命周期
+
+```python
+client = await connect_temporal(data_converter=data_converter)
+worker = Worker(
+    client,
+    task_queue="contrib.example-worker",
+    workflows=[ExampleWorkflow],
+    activities=[example_activity],
+)
+worker.publish_workflow(capability)
+await worker.run()
+```
+
+`connect_temporal` 通过 KESS 连接固定的 `agentk` namespace。`Worker` 接收 Temporal 原生的
+`workflows`、`activities` 和其他 Worker 参数，并自动加入 invocation interceptor 与 announce。
+
+## Capability 声明
+
+<Capability /> 包含 `id`、`temporal_type`、说明、输入输出 Schema、`timedelta` 超时和可选
+<Tool />。Pydantic Model 的 `model_json_schema()` 可以直接作为 Schema。
+
+`Tool` 只有 `description` 和 `max_attempts`，没有 background mode。
+
+## Workflow 内组合
+
+`await invoke_capability(id, input, result_type=...)` 按 Capability ID 调用目标 Workflow 或
+Activity。它只能在 Temporal Workflow 中使用；普通下游应用使用 Client SDK 的
+`invoke_capability(...)` RPC。`await report_progress(step_id, message, data)` 上报 <Pipeline />
+业务阶段；没有 AgentK context 时直接返回。
+
+完整实现见 [Python Storyboard MCP 示例](/examples/python-storyboard-mcp)。

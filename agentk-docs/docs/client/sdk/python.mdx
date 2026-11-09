@@ -1,0 +1,106 @@
+---
+sidebar_position: 4
+title: Python Client SDK
+description: 使用异步 Python Client SDK 调用 AgentKService
+slug: /client/sdk/python
+pagination_prev: client/sdk/go
+pagination_next: client/sdk/java
+---
+
+# Python Client SDK
+
+Python Client 是异步 API，要求 Python 3.11 或更高版本。
+
+## 安装
+
+```bash
+python -m pip install 'ks-agentk-client[grpc]==0.3.2'
+```
+
+## 创建客户端
+
+```python
+from agentk.client import Options
+from agentk.client.grpc import create_client
+
+client = create_client(Options())
+```
+
+Client 支持异步上下文管理器：
+
+```python
+async with create_client(Options()) as client:
+    identity = await client.who_am_i(service_pb.WhoAmIRequest())
+```
+
+运行前向 AgentK 平台维护方登记工作负载 KSN，并完成 Service/App 绑定。本机连接 staging 时设置
+`KWS_SERVICE_NAME='<registered-ksn>'`；部署环境由平台注入 KWS 身份。默认 Client 使用 KESS gRPC
+h2c，固定 endpoint 配置见[选择 Client transport](/client/transports)。`WhoAmI` 返回 Service UUID、
+App UUID 和 Service display name。
+
+## 直接调用 Capability
+
+```python
+from agentk.api.v1 import service_pb
+from protobuf.wkt import Struct
+
+response = await client.invoke_capability(
+    service_pb.InvokeCapabilityRequest(
+        capability_id="contrib.example.render",
+        input=Struct.from_python({"prompt": "雨夜里的霓虹街道"}),
+    )
+)
+output = None if response.output is None else response.output.to_python()
+```
+
+调用会等待 Capability 返回，并且不创建 Session、Execution 或 Event。取消等待这个 RPC 的
+`asyncio.Task` 会取消进行中的调用。完整语义见
+[直接调用 Capability](/client/guides/invoke-capability)。
+
+## 请求与 oneof
+
+Python 协议包使用 `protobuf` 生成类型。`StartExecutionRequest.input` 使用 `Oneof`：
+
+```python
+from agentk.api.v1 import service_pb
+from protobuf import Oneof
+
+response = await client.start_execution(
+    service_pb.StartExecutionRequest(
+        session_id=session_id,
+        input=Oneof(
+            "message",
+            service_pb.AgentMessageExecutionInput(text="你好"),
+        ),
+    )
+)
+```
+
+读取 oneof 时检查 `field`：
+
+```python
+if event.payload is not None and event.payload.field == "assistant_text":
+    print(event.payload.value.text)
+```
+
+## WatchEvents
+
+```python
+async for frame in client.watch_events(
+    service_pb.WatchEventsRequest(
+        session_id=session_id,
+        execution_id=execution_id,
+    )
+):
+    if frame.frame is None:
+        continue
+    if frame.frame.field == "committed_event":
+        handle_event(frame.frame.value)
+    elif frame.frame.field == "delta":
+        preview(frame.frame.value)
+    elif frame.frame.field == "stream_end":
+        break
+```
+
+公开方法与 Go Client 一致，使用 snake_case 命名。完整 Client 应用模式见
+[构建可恢复的 Agent Client](/client/guides/chat-client)。

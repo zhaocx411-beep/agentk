@@ -1,0 +1,32 @@
+[project]
+name = "storyboard-example-worker"
+version = "0.1.0"
+description = "Python Temporal worker for the agent-k storyboard example"
+requires-python = ">=3.12"
+dependencies = [
+  "ks-agentk-worker==0.2.2",
+  "dsc-auth",
+  "infra-component",
+  "infra-framework==1.17.27",
+  "infra-kconf",
+  "infra-kess",
+  "infra-keycenter",
+  "infra-storage",
+  "ks-kafka-python",
+  "pydantic>=2.13.4",
+  "temporalio",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]

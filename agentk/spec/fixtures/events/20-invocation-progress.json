@@ -1,0 +1,16 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a20",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "kind": "invocation.progress",
+  "data": {
+    "invocationId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+    "invocationKind": "pipeline",
+    "invocationName": "storyboard_film",
+    "stepId": "clip/1",
+    "message": "镜头 1 片段完成",
+    "data": {
+      "videoUrl": "https://cdn.example.com/agentk/video/clip1.mp4"
+    }
+  },
+  "createdAt": "2026-08-01T09:03:20Z"
+}

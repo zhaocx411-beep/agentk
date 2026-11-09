@@ -1,0 +1,719 @@
+/* Agent-loop 生成过程：流式输出区 */
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: 840px;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.panelStage {
+  flex: 1;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+}
+
+.scrollWrap {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.scrollNav {
+  position: absolute;
+  right: @spacing-sm;
+  bottom: @spacing-sm;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.scrollNavBtn:global(.ant-btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  min-width: 36px;
+  max-width: 36px;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  padding: 0;
+  border: 1px solid @hairline;
+  border-radius: 50%;
+  background: @surface-1;
+  color: @text-color;
+  line-height: 1;
+  box-shadow: @shadow-sm;
+
+  &:hover:not(:disabled) {
+    background: @surface-1;
+    color: @text-color;
+    border-color: @hairline-strong;
+  }
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  padding: @spacing-sm @spacing-xs;
+  overflow: auto;
+}
+
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  min-height: min-content;
+}
+
+.askUserBlock {
+  width: 100%;
+  padding-top: @spacing-xs;
+}
+
+.historyLoadMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-xxs;
+  padding: @spacing-xs 0 @spacing-sm;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.historyLoadMoreDots {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentcolor;
+  animation: stream-history-dots 1.2s ease-in-out infinite;
+}
+
+@keyframes stream-history-dots {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.bodyEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: @spacing-xl @spacing-lg;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-pill;
+  background: @surface-2;
+  color: @text-color-secondary;
+}
+
+.emptyTitle {
+  margin: 0 0 @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.emptyDesc {
+  margin: 0 0 @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.65;
+}
+
+.emptyHints {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  width: 100%;
+  margin: 0;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  list-style: none;
+  text-align: left;
+
+  li {
+    position: relative;
+    padding-left: @spacing-md;
+    color: @text-color-tertiary;
+    font-size: @font-size-caption;
+    line-height: 1.55;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      color: @text-color-tertiary;
+      content: '·';
+    }
+  }
+}
+
+.loadingText {
+  margin: @spacing-sm 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.textBlock {
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.65;
+  word-break: break-word;
+
+  :global(p) {
+    margin: 0 0 @spacing-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  :global(a) {
+    color: @primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  :global(ul),
+  :global(ol) {
+    margin: @spacing-xs 0;
+    padding-left: 20px;
+  }
+
+  :global(li) {
+    margin: @spacing-xxs 0;
+  }
+
+  :global(blockquote) {
+    margin: @spacing-xs 0;
+    padding: @spacing-sm @spacing-md;
+    border-left: 3px solid @primary-color;
+    border-radius: 0 @border-radius-sm @border-radius-sm 0;
+    background: @primary-subdued;
+    color: @text-color-secondary;
+  }
+
+  :global(hr) {
+    margin: @spacing-md 0;
+    border: none;
+    border-top: 1px solid @divider;
+  }
+
+  :global(h1),
+  :global(h2),
+  :global(h3),
+  :global(h4),
+  :global(h5),
+  :global(h6) {
+    margin: @spacing-sm 0 @spacing-xs;
+    color: @text-color;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  :global(h1) {
+    font-size: 18px;
+  }
+
+  :global(h2) {
+    font-size: 16px;
+  }
+
+  :global(h3) {
+    font-size: 14px;
+  }
+
+  :global(code) {
+    padding: 2px 4px;
+    border-radius: @border-radius-xs;
+    background: @surface-2;
+    font: 12px/1.6 @font-mono;
+  }
+
+  :global(pre) {
+    margin: 0 0 @spacing-sm;
+    padding: @spacing-sm;
+    border: 1px solid @divider;
+    border-radius: @border-radius-md;
+    background: @surface-3;
+    overflow: auto;
+
+    :global(code) {
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: @font-size-caption;
+
+    th,
+    td {
+      padding: 6px 8px;
+      border: 1px solid @divider;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: @surface-2;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(even) td {
+      background: @surface-1;
+    }
+  }
+}
+
+.markdownParagraph {
+  margin: 0 0 @spacing-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.textBlockCopyable {
+  position: relative;
+  padding-right: @spacing-xxl;
+}
+
+.streamCopyButton {
+  color: @text-color-tertiary;
+  opacity: 0;
+  transition: opacity @transition-duration-fast @transition-timing;
+}
+
+.textBlockCopyable > .streamCopyButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.textBlockCopyable:hover > .streamCopyButton,
+.textBlockCopyable:focus-within > .streamCopyButton,
+.userMsg:hover .streamCopyButton,
+.userMsg:focus-within .streamCopyButton,
+.reason:hover .streamCopyButton,
+.reason:focus-within .streamCopyButton,
+.toolCall:hover .streamCopyButton,
+.toolCall:focus-within .streamCopyButton {
+  opacity: 1;
+}
+
+.markdownTableWrap {
+  max-width: 100%;
+  margin: @spacing-xs 0 @spacing-sm;
+  overflow-x: auto;
+}
+
+.textStreaming {
+  :global(p:last-child) {
+    display: inline;
+    margin-bottom: 0;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: @primary-color;
+  vertical-align: text-bottom;
+  animation: stream-cursor-blink 1s step-end infinite;
+}
+
+@keyframes stream-cursor-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.reason {
+  margin-bottom: @spacing-sm;
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+}
+
+.reasonSummary {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.reasonIcon {
+  color: @azure-royal;
+}
+
+.reasonChevron {
+  margin-left: auto;
+  font-size: 10px;
+  transition: transform @transition-duration-fast @transition-timing;
+}
+
+.reason[open] .reasonChevron {
+  transform: rotate(180deg);
+}
+
+.reasonText {
+  margin-top: @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.toolCall {
+  margin-bottom: @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  overflow: hidden;
+}
+
+.toolCallSummary {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  padding: @spacing-sm;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.toolCallIcon {
+  color: @primary-color;
+}
+
+.toolCallLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.toolCallName {
+  color: @text-color;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.toolCallModel {
+  max-width: 240px;
+  padding: 2px @spacing-xs;
+  border-radius: @border-radius-xs;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolCallStatus {
+  margin-left: auto;
+  font-size: @font-size-caption;
+  white-space: nowrap;
+}
+
+.toolCallStatusRunning {
+  color: @primary-color;
+}
+
+.toolCallStatusOk {
+  color: @success-color;
+}
+
+.toolCallStatusErr {
+  color: @error-color;
+}
+
+.toolCallChevron {
+  color: @text-color-tertiary;
+  font-size: 10px;
+  transition: transform @transition-duration-fast @transition-timing;
+}
+
+.toolCall[open] .toolCallChevron {
+  transform: rotate(180deg);
+}
+
+.toolCallDetails {
+  border-top: 1px solid @divider;
+  background: @surface-2;
+
+  section + section {
+    border-top: 1px solid @hairline;
+  }
+
+  .mediaList {
+    padding: 0 @spacing-sm @spacing-sm;
+  }
+}
+
+.toolCallSectionTitle {
+  margin: 0;
+  padding: @spacing-xs @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.toolCallInput {
+  max-height: 320px;
+  margin: 0;
+  padding: @spacing-sm;
+  border-top: 1px solid @hairline;
+  background: @canvas;
+  color: @text-color-secondary;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+  line-height: 1.55;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.userMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: @spacing-lg;
+}
+
+.userMsgHeader {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-xs;
+}
+
+.userMsgAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid @text-color;
+  border-radius: @border-radius-sm;
+  background: @text-color;
+  color: @canvas;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.userMsgName {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.userMsgContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 72%;
+}
+
+.userBubbleStack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: @spacing-xs;
+  max-width: 100%;
+}
+
+.userAttachments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: @spacing-xs;
+  max-width: 100%;
+
+  :global(.ant-image) {
+    line-height: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* 与 MediaUpload compact 一致的小缩略图，多张自动换行 */
+.userAttachImage,
+.userAttachments :global(.ant-image-img) {
+  width: calc(@spacing-section + @spacing-md);
+  height: calc(@spacing-section + @spacing-md);
+  object-fit: cover;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+}
+
+.userAttachVideo {
+  width: calc(@spacing-section + @spacing-md);
+  height: calc(@spacing-section + @spacing-md);
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-3;
+}
+
+.userAttachAudio {
+  width: min(100%, 320px);
+}
+
+.userAttachFile {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-1;
+  color: @text-color;
+  font-size: @font-size-caption;
+  text-decoration: none;
+  box-shadow: @shadow-sm;
+
+  &:hover {
+    background: @primary-subdued;
+    color: @primary-color;
+  }
+}
+
+.userMsgText {
+  display: inline-block;
+  max-width: 100%;
+  padding: @spacing-sm @spacing-md;
+  border-radius: @border-radius-lg @border-radius-lg @border-radius-xs @border-radius-lg;
+  background: @text-color;
+  color: @canvas;
+  font-size: @font-size-base;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.mediaList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  margin-top: @spacing-xs;
+}
+
+.mediaAudioWrap {
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: 999px;
+  background: @surface-2;
+}
+
+.mediaVideo,
+.mediaAudio {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  border-radius: @border-radius-md;
+}
+
+.mediaAudio {
+  height: 36px;
+}
+
+.mediaImg {
+  max-width: 400px;
+  max-height: 300px;
+  object-fit: contain;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor,
+  .streamCopyButton {
+    transition: none;
+    animation: none;
+  }
+
+  .reasonChevron,
+  .toolCallChevron {
+    transition: none;
+  }
+}
+
+@media (max-width: @screen-sm) {
+  .streamCopyButton {
+    opacity: 1;
+  }
+}

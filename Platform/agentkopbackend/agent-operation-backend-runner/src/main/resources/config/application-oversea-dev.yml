@@ -1,0 +1,9 @@
+logging:
+  level:
+    com.kuaishou.agent.operation.backend: debug
+    com.kuaishou.infra.boot: debug
+
+# 海外 staging / 开发环境配置，按实际 runner 数据源补充。
+# ksboot:
+#   data-sources:
+#     - name: agentOperationBackendOversea

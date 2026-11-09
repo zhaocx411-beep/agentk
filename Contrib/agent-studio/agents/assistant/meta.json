@@ -1,0 +1,20 @@
+{
+  "id": "assistant",
+  "name": "对话",
+  "description": "统一对话入口：system prompt 列出全部子 agent。未指定时按意图自动路由；指定某一能力时仍由模型路由，只是本轮必须交给该子 agent。",
+  "category": "通用",
+  "tags": ["对话入口", "子 agent 路由"],
+  "kind": "chat",
+  "href": "/agents/assistant/chat/",
+  "status": "可使用",
+  "visual": "creative",
+  "visualLabel": "CHAT · 00",
+  "icon": "◎",
+  "accent": "#0f766e",
+  "welcomeMessage": "直接说需求，或先指定一个能力。未指定时我会按意图路由到对应的子 agent。",
+  "starterPrompts": [
+    "帮我做一张猫咪咖啡馆的开业海报",
+    "按漫剧的方式把这个故事做成一集短片：雨夜，一只橘猫躲进便利店",
+    "搜一下最近 AI 视频生成的进展，整理成简报"
+  ]
+}

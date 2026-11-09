@@ -1,0 +1,1054 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "AgentKServiceClientInterface"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface",
+    "kind": "interface",
+    "name": "AgentKServiceClientInterface",
+    "declaration": {
+      "text": "public interface AgentKServiceClientInterface",
+      "references": [
+        {
+          "start": 17,
+          "end": 45,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface"
+        }
+      ]
+    },
+    "documentation": [],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-cancelExecution-com-kuaishou-klingai-agentk-api-v1-CancelExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "cancelExecution",
+        "declaration": {
+          "text": "public abstract ResponseMessage<CancelExecutionResponse> cancelExecution(CancelExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 55,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            },
+            {
+              "start": 57,
+              "end": 72,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-cancelExecution-com-kuaishou-klingai-agentk-api-v1-CancelExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 73,
+              "end": 95,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionRequest"
+            },
+            {
+              "start": 105,
+              "end": 108,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 109,
+              "end": 115,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 117,
+              "end": 121,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 122,
+              "end": 128,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<CancelExecutionResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 47,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "cancelExecution(CancelExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 16,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CancelExecutionRequest"
+            },
+            {
+              "start": 48,
+              "end": 51,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 52,
+              "end": 58,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 60,
+              "end": 64,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 65,
+              "end": 71,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-createSession-com-kuaishou-klingai-agentk-api-v1-CreateSessionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "createSession",
+        "declaration": {
+          "text": "public abstract ResponseMessage<CreateSessionResponse> createSession(CreateSessionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionResponse"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-createSession-com-kuaishou-klingai-agentk-api-v1-CreateSessionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 69,
+              "end": 89,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionRequest"
+            },
+            {
+              "start": 99,
+              "end": 102,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 103,
+              "end": 109,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 111,
+              "end": 115,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 116,
+              "end": 122,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<CreateSessionResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "createSession(CreateSessionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 14,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/CreateSessionRequest"
+            },
+            {
+              "start": 44,
+              "end": 47,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 48,
+              "end": 54,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 56,
+              "end": 60,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 61,
+              "end": 67,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-getExecution-com-kuaishou-klingai-agentk-api-v1-GetExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "getExecution",
+        "declaration": {
+          "text": "public abstract ResponseMessage<GetExecutionResponse> getExecution(GetExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            },
+            {
+              "start": 54,
+              "end": 66,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-getExecution-com-kuaishou-klingai-agentk-api-v1-GetExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 67,
+              "end": 86,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionRequest"
+            },
+            {
+              "start": 96,
+              "end": 99,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 100,
+              "end": 106,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 108,
+              "end": 112,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 113,
+              "end": 119,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<GetExecutionResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 44,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getExecution(GetExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 13,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/GetExecutionRequest"
+            },
+            {
+              "start": 42,
+              "end": 45,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 46,
+              "end": 52,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 54,
+              "end": 58,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 59,
+              "end": 65,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-invokeCapability-com-kuaishou-klingai-agentk-api-v1-InvokeCapabilityRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "invokeCapability",
+        "declaration": {
+          "text": "public abstract ResponseMessage<InvokeCapabilityResponse> invokeCapability(InvokeCapabilityRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityResponse"
+            },
+            {
+              "start": 58,
+              "end": 74,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-invokeCapability-com-kuaishou-klingai-agentk-api-v1-InvokeCapabilityRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 75,
+              "end": 98,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityRequest"
+            },
+            {
+              "start": 108,
+              "end": 111,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 112,
+              "end": 118,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 120,
+              "end": 124,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 125,
+              "end": 131,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<InvokeCapabilityResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "invokeCapability(InvokeCapabilityRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 17,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/InvokeCapabilityRequest"
+            },
+            {
+              "start": 50,
+              "end": 53,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 62,
+              "end": 66,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 67,
+              "end": 73,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listCapabilities-com-kuaishou-klingai-agentk-api-v1-ListCapabilitiesRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "listCapabilities",
+        "declaration": {
+          "text": "public abstract ResponseMessage<ListCapabilitiesResponse> listCapabilities(ListCapabilitiesRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 56,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesResponse"
+            },
+            {
+              "start": 58,
+              "end": 74,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listCapabilities-com-kuaishou-klingai-agentk-api-v1-ListCapabilitiesRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 75,
+              "end": 98,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesRequest"
+            },
+            {
+              "start": 108,
+              "end": 111,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 112,
+              "end": 118,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 120,
+              "end": 124,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 125,
+              "end": 131,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<ListCapabilitiesResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 48,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listCapabilities(ListCapabilitiesRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 17,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListCapabilitiesRequest"
+            },
+            {
+              "start": 50,
+              "end": 53,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 54,
+              "end": 60,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 62,
+              "end": 66,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 67,
+              "end": 73,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listEvents-com-kuaishou-klingai-agentk-api-v1-ListEventsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "listEvents",
+        "declaration": {
+          "text": "public abstract ResponseMessage<ListEventsResponse> listEvents(ListEventsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsResponse"
+            },
+            {
+              "start": 52,
+              "end": 62,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listEvents-com-kuaishou-klingai-agentk-api-v1-ListEventsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 63,
+              "end": 80,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsRequest"
+            },
+            {
+              "start": 90,
+              "end": 93,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 94,
+              "end": 100,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 102,
+              "end": 106,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 107,
+              "end": 113,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<ListEventsResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listEvents(ListEventsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 11,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListEventsRequest"
+            },
+            {
+              "start": 38,
+              "end": 41,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 42,
+              "end": 48,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 50,
+              "end": 54,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 55,
+              "end": 61,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listExecutions-com-kuaishou-klingai-agentk-api-v1-ListExecutionsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "listExecutions",
+        "declaration": {
+          "text": "public abstract ResponseMessage<ListExecutionsResponse> listExecutions(ListExecutionsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsResponse"
+            },
+            {
+              "start": 56,
+              "end": 70,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listExecutions-com-kuaishou-klingai-agentk-api-v1-ListExecutionsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 71,
+              "end": 92,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsRequest"
+            },
+            {
+              "start": 102,
+              "end": 105,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 106,
+              "end": 112,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 114,
+              "end": 118,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 119,
+              "end": 125,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<ListExecutionsResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 46,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listExecutions(ListExecutionsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 15,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListExecutionsRequest"
+            },
+            {
+              "start": 46,
+              "end": 49,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 50,
+              "end": 56,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 58,
+              "end": 62,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 63,
+              "end": 69,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listPipelines-com-kuaishou-klingai-agentk-api-v1-ListPipelinesRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "listPipelines",
+        "declaration": {
+          "text": "public abstract ResponseMessage<ListPipelinesResponse> listPipelines(ListPipelinesRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 53,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listPipelines-com-kuaishou-klingai-agentk-api-v1-ListPipelinesRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 69,
+              "end": 89,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesRequest"
+            },
+            {
+              "start": 99,
+              "end": 102,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 103,
+              "end": 109,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 111,
+              "end": 115,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 116,
+              "end": 122,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<ListPipelinesResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 45,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listPipelines(ListPipelinesRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 14,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListPipelinesRequest"
+            },
+            {
+              "start": 44,
+              "end": 47,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 48,
+              "end": 54,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 56,
+              "end": 60,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 61,
+              "end": 67,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listSessions-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "listSessions",
+        "declaration": {
+          "text": "public abstract ResponseMessage<ListSessionsResponse> listSessions(ListSessionsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsResponse"
+            },
+            {
+              "start": 54,
+              "end": 66,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-listSessions-com-kuaishou-klingai-agentk-api-v1-ListSessionsRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 67,
+              "end": 86,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            },
+            {
+              "start": 96,
+              "end": 99,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 100,
+              "end": 106,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 108,
+              "end": 112,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 113,
+              "end": 119,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<ListSessionsResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 44,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "listSessions(ListSessionsRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 13,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ListSessionsRequest"
+            },
+            {
+              "start": 42,
+              "end": 45,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 46,
+              "end": 52,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 54,
+              "end": 58,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 59,
+              "end": 65,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-startExecution-com-kuaishou-klingai-agentk-api-v1-StartExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "startExecution",
+        "declaration": {
+          "text": "public abstract ResponseMessage<StartExecutionResponse> startExecution(StartExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionResponse"
+            },
+            {
+              "start": 56,
+              "end": 70,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-startExecution-com-kuaishou-klingai-agentk-api-v1-StartExecutionRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 71,
+              "end": 92,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionRequest"
+            },
+            {
+              "start": 102,
+              "end": 105,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 106,
+              "end": 112,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 114,
+              "end": 118,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 119,
+              "end": 125,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<StartExecutionResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 46,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "startExecution(StartExecutionRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 15,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/StartExecutionRequest"
+            },
+            {
+              "start": 46,
+              "end": 49,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 50,
+              "end": 56,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 58,
+              "end": 62,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 63,
+              "end": 69,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-watchEvents-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "watchEvents",
+        "declaration": {
+          "text": "public abstract ServerOnlyStreamInterface<WatchEventsRequest, WatchEventsResponse> watchEvents(Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 42,
+              "end": 60,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsRequest"
+            },
+            {
+              "start": 62,
+              "end": 81,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsResponse"
+            },
+            {
+              "start": 83,
+              "end": 94,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-watchEvents-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 95,
+              "end": 98,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 99,
+              "end": 105,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 107,
+              "end": 111,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 112,
+              "end": 118,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ServerOnlyStreamInterface<WatchEventsRequest, WatchEventsResponse>",
+          "references": [
+            {
+              "start": 34,
+              "end": 52,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsRequest"
+            },
+            {
+              "start": 54,
+              "end": 73,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "watchEvents(Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 12,
+              "end": 15,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 16,
+              "end": 22,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 24,
+              "end": 28,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 29,
+              "end": 35,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-whoAmI-com-kuaishou-klingai-agentk-api-v1-WhoAmIRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-",
+        "name": "whoAmI",
+        "declaration": {
+          "text": "public abstract ResponseMessage<WhoAmIResponse> whoAmI(WhoAmIRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 32,
+              "end": 46,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIResponse"
+            },
+            {
+              "start": 48,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentKServiceClientInterface#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-AgentKServiceClientInterface-whoAmI-com-kuaishou-klingai-agentk-api-v1-WhoAmIRequest-kotlin-collections-Map-kotlin-String-kotlin-collections-List-kotlin-String-"
+            },
+            {
+              "start": 55,
+              "end": 68,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIRequest"
+            },
+            {
+              "start": 78,
+              "end": 81,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 82,
+              "end": 88,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 90,
+              "end": 94,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 95,
+              "end": 101,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "suspend ResponseMessage<WhoAmIResponse>",
+          "references": [
+            {
+              "start": 24,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIResponse"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "whoAmI(WhoAmIRequest request, Map<String, List<String>> headers)",
+          "references": [
+            {
+              "start": 7,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WhoAmIRequest"
+            },
+            {
+              "start": 30,
+              "end": 33,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html"
+            },
+            {
+              "start": 34,
+              "end": 40,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 42,
+              "end": 46,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+            },
+            {
+              "start": 47,
+              "end": 53,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

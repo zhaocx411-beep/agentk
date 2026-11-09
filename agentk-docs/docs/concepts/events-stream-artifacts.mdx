@@ -1,0 +1,156 @@
+---
+sidebar_position: 4
+sidebar_label: Events、Stream 与 Artifact
+title: 观察运行：Events、WatchEvents 与 Artifact
+description: 理解持久事件、Execution 实时流、断线恢复和产物返回
+pagination_prev: concepts/profile-session
+pagination_next: concepts/capability-execution-progress
+---
+
+# 观察运行：Events、WatchEvents 与 Artifact
+
+AgentK 为下游提供两类事件读取方式：
+
+- **Session <EventLog />** 保存已经提交的 Event，负责历史、恢复和最终校准；
+- **WatchEvents** 观察一个 <Execution />，负责实时传递模型增量和新提交的 Event。
+
+Artifact 随 <Tool /> 成功事件或 <Pipeline /> 输出返回，不要求下游读取 Temporal History。
+
+```text
+Agent / Tool / Pipeline
+          │
+          ├── Event ──→ Session Event Log ──→ 历史与恢复
+          │
+          └── Delta + Event ──→ WatchEvents ──→ 当前 Execution 的实时界面
+```
+
+<span id="event-log" className="concept-anchor" />
+
+## Event 是持久记录
+
+Event 使用统一信封：
+
+```text
+event_id      稳定的事件身份
+execution_id  所属 Execution
+round_id      所属模型 Round；不适用时为空
+created_at    提交时间
+payload       具体事件类型及内容
+```
+
+`payload` 的类型就是事件判别信息，不存在另一层 `kind` 字符串或通用 `data` 对象。当前事件包括：
+
+- `user_input`；
+- `round_started`、`round_completed`；
+- `assistant_text`、`assistant_reasoning`、`assistant_tool_call`；
+- `tool_exec_started`、`tool_exec_succeeded`、`tool_exec_failed`；
+- `ask_user_requested`、`ask_user_responded`；
+- `execution_started`、`execution_finished`；
+- `invocation_progress`。
+
+各语言 Client SDK 直接返回生成的 protobuf 类型。应用根据 payload variant 读取对应字段，
+不需要维护手写事件联合类型。
+
+## ListEvents 用于历史与恢复
+
+`ListEvents` 按时间从新到旧返回 Session Event：
+
+- `page_size` 为 `0` 时使用 20；
+- 单页最多 100；
+- `page_token` 是不透明的分页位置；
+- `next_page_token` 为空表示没有下一页。
+
+Event Log 属于 Session，因此响应可能包含多次 Execution。需要重建某次运行时，按
+`execution_id` 过滤；需要重建完整会话时，再按 `created_at` 和返回顺序恢复所需投影。
+
+Client 应用应使用 `event_id` 识别已经处理过的事件。分页 token 只用于继续当前分页，不应作为
+事件身份或长期业务游标。
+
+## WatchEvents 只观察一个 Execution
+
+`WatchEvents` 请求同时包含 `session_id` 和 `execution_id`，返回三类 frame：
+
+### Delta
+
+Delta 是模型生成中的临时文本或推理增量，包含：
+
+- `execution_id` 与 `round_id`；
+- `generation`：一次模型尝试的标识；
+- `index` 与 `block`：增量在本次生成中的位置；
+- `kind`：文本或推理；
+- `text`：本段增量。
+
+模型调用重试时 `generation` 会变化。Client 应用应替换旧 generation 的预览，不要把不同尝试的
+增量相加。Delta 不写入 Event Log，不能用于恢复或最终业务处理。
+
+### Committed event
+
+`committed_event` 是刚刚写入 Session Event Log 的完整 Event。它与 `ListEvents` 返回相同的
+protobuf 类型，可以共用一套解码和去重逻辑。
+
+### Stream end
+
+`stream_end` 表示本次 Execution 的实时流已经结束。可靠终态仍由 `execution_finished` Event
+或 `GetExecution` 给出。
+
+## 断线后如何恢复
+
+Watch stream 可能因网络、服务重启或缓冲区生命周期而关闭。可靠的 Client 应用使用以下路径：
+
+```text
+StartExecution
+  → WatchEvents 显示 Delta 和新 Event
+  → 连接结束或中断
+  → ListEvents 补齐已提交 Event
+  → GetExecution 判断终态
+  → RUNNING 时重新观察或稍后重试
+```
+
+WatchEvents 不提供 Event Log 游标。重连后可能再次看到同一 committed Event，应用使用稳定的
+`event_id` 去重。实时缓冲区不可用时，`ListEvents` 和 `GetExecution` 仍然提供持久状态。
+
+完整实现见[构建可恢复的 Agent Client](/client/guides/chat-client)。
+
+<span id="artifact" className="concept-anchor" />
+
+## Artifact 随执行结果返回
+
+产生文件或媒体的 Capability 使用统一 Artifact 结构：
+
+```json
+{
+  "type": "video",
+  "uri": "https://...",
+  "description": "雨夜霓虹街道短片",
+  "model": "<video-model>",
+  "params": {"duration": 5}
+}
+```
+
+`type` 和 `uri` 标识产物；`description`、`model` 与 `params` 是可选元数据。一次执行可以返回
+多个 Artifact。
+
+### Tool Artifact
+
+Tool 成功时，原始结果位于 `tool_exec_succeeded.result`。AgentK 同时从结果中的
+`artifacts` 提取合法项，放入同一 Event 的 `tool_exec_succeeded.artifacts`，便于下游直接读取。
+
+### Pipeline Artifact
+
+Pipeline 保持输出透明。Capability 返回的完整结果位于：
+
+- 完成后的 `execution.pipeline.output`；
+- `execution_finished.pipeline.output` Event。
+
+如果 Pipeline 输出包含 `artifacts`，调用方从这个业务输出读取。当前公开 API 没有独立的
+Artifact 列表资源。
+
+Artifact `uri` 是产物句柄，实际访问权限和生命周期由对应存储或下游应用管理。
+
+## 需要记住的边界
+
+1. Event Log 是历史与恢复依据；WatchEvents 是一个 Execution 的实时通道。
+2. Event payload variant 是事件类型，不存在额外的 `kind + data` 信封。
+3. Delta 是临时预览；committed Event 才能用于持久处理。
+4. `event_id` 用于事件去重，`page_token` 只用于分页。
+5. Tool Artifact 位于成功事件；Pipeline Artifact 位于透明输出。

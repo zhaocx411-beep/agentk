@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package infer;
+
+option go_package = "git.corp.kuaishou.com/klingai-agentk/contrib/maas-worker.git/gen/infer;inferpb";
+
+message InferRequest {
+  string request_id = 1;
+  map<string, ExFeature> feature = 2;
+  bool finish = 3;
+  string model_name = 4;
+}
+
+message InferResponse {
+  string request_id = 1;
+  map<string, ExFeature> feature = 2;
+  bool finish = 3;
+}
+
+service StreamInferService {
+  rpc Infer(stream InferRequest) returns (stream InferResponse);
+}
+
+service LocalInferService {
+  rpc Infer(InferRequest) returns (InferResponse);
+}

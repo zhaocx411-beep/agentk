@@ -1,0 +1,12 @@
+{
+  "id": "comic-drama",
+  "name": "漫剧工坊",
+  "description": "输入题材、梗概或完整剧本，自动完成人物定妆、分镜、首帧、视频生成与成片合成。",
+  "category": "内容创作",
+  "tags": ["剧本生成", "角色定妆", "视频合成"],
+  "kind": "workshop",
+  "href": "/agents/comic-drama/",
+  "status": "可使用",
+  "visual": "comic",
+  "visualLabel": "COMIC DRAMA · 01"
+}

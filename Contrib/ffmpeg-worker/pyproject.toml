@@ -1,0 +1,53 @@
+# agent-k ffmpeg 能力 Worker。
+# infra-kess 依赖处理与 kess_client/pyproject.toml 同源：显式补两个未声明
+# 运行时依赖（cachetools/infra-kconf），override 过时的 cityhash/lz4/snappy 上限。
+[project]
+name = "ffmpeg-worker"
+version = "0.1.0"
+description = "agent-k capability worker bridging the ffmpeg kess service"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "agentk-worker",
+    "pydantic>=2",
+    "temporalio",
+    "infra-kess==1.1.18",
+    "cachetools",
+    "infra-kconf",
+    "requests",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+    "cityhash==0.4.9",
+    "grpcio==1.76.0",
+    "lxml==6.0.2",
+    "lz4==4.4.5",
+    "python-snappy==0.7.3",
+    "setuptools<82",
+]
+
+# agentk-worker 直接 vendor wheel（源头 agentk-sdk.git 的 python/worker，
+# rev aefd947bf2f59b02d27e5ce5f8f84a5f35abde48），构建镜像不需要访问 Git。
+[tool.uv.sources]
+agentk-worker = { path = "vendor/agentk_worker-0.1.0-py3-none-any.whl" }
+
+[tool.uv.extra-build-dependencies]
+dsc-auth = ["setuptools_scm"]
+cchardet = ["cython"]
+
+[[tool.uv.index]]
+name = "ks"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+default = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]

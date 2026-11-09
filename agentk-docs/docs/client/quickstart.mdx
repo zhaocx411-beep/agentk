@@ -1,0 +1,167 @@
+---
+sidebar_position: 1
+sidebar_label: Quickstart
+title: Client Quickstart：运行第一个 AgentK Session
+description: 使用 Python Client SDK 创建 Session、启动 Agent 执行并接收回复
+slug: /client/quickstart
+pagination_prev: client/index
+pagination_next: client/guides/invoke-capability
+---
+
+# Client Quickstart：运行第一个 AgentK Session
+
+本页介绍需要持久业务状态的 Session / Execution 路径。如果只需要按 Capability ID 发起一次
+阻塞式请求并直接取得结果，阅读[直接调用 Capability](/client/guides/invoke-capability)。
+
+下面使用 Python Client SDK 创建一个 <Session />，提交一条消息，并实时接收 Agent 的回复。
+Client SDK 负责认证、服务发现和传输；应用直接使用 AgentK 的 protobuf 类型，不需要拼接
+HTTP 路径或解析自定义事件格式。
+
+这个示例只启用一个对话模型，不配置 <Tool />。运行前完成以下准备：
+
+- 向 AgentK 平台维护方登记工作负载 KSN，并完成 Service/App 绑定；
+- 当前环境可用的对话模型名称；
+- staging 环境的 KESS 访问权限。
+
+## 安装 Client SDK
+
+安装带 gRPC transport 的 Python Client SDK：
+
+```bash
+python -m pip install 'ks-agentk-client[grpc]==0.3.2'
+```
+
+本机连接 staging 时配置已登记的 KSN 和模型：
+
+```bash
+export KWS_SERVICE_NAME='<registered-ksn>'
+export AGENTK_MODEL='<chat-model>'
+```
+
+部署环境由平台注入 KWS 身份。Client SDK 在构造时读取这份环境并为请求传播身份，应用代码无需
+处理身份 header 或 credential。
+
+本例使用 gRPC h2c，通过 KESS 发现 AgentK 实例并直连。部署环境无法访问 KESS 时，先阅读
+[选择 Client transport](/client/transports)并联系 AgentK 平台维护方确认当前可用的 Client 调用方式。
+
+需要把这次调用定向到共享环境中的开发 Worker 时，参见
+[在 Client 请求中使用 Request Lane](/client/guides/request-lane)。Quickstart 以下流程无需改动。
+
+## 先认识三个对象
+
+- <Profile /> 定义这个 Agent 使用的模型、系统指令、Tool 和 <Pipeline />。创建 Session 时必须提交
+  完整 Profile，创建后在该 Session 内保持不变。本例只设置模型和系统指令。
+- **Session** 承载一段持续交互。后续多轮消息可以复用同一个 `ses_...` Session。
+- <Execution /> 是 Session 中的一次完整运行。每次提交消息都会创建一个 Agent Execution，
+  返回独立的 `exe_...` ID；显式运行 Pipeline 时也会创建同一种 Execution。一个 Session 同时
+  只能有一个正在运行的 Execution。
+
+```text
+Profile ──创建并冻结──> Session
+                         ├── Execution 1 ──> Events
+                         ├── Execution 2 ──> Events
+                         └── Execution 3 ──> Events
+```
+
+Session 用来找回整段交互，Execution 用来观察或查询其中某一次运行。下面的程序会创建一个
+Session，再在其中启动第一个 Execution。
+
+## 创建并运行 Session
+
+新建 `hello_agentk.py`：
+
+```python title="hello_agentk.py"
+import asyncio
+import os
+
+from agentk.api.v1 import profile_pb, service_pb
+from agentk.client import Options
+from agentk.client.grpc import create_client
+from protobuf import Oneof
+
+
+async def main() -> None:
+    async with create_client(Options()) as client:
+        created = await client.create_session(
+            service_pb.CreateSessionRequest(
+                title="quickstart",
+                profile=profile_pb.Profile(
+                    default_model=os.environ["AGENTK_MODEL"],
+                    system="直接、准确地回答用户问题。",
+                ),
+            )
+        )
+        session_id = created.session.id
+
+        started = await client.start_execution(
+            service_pb.StartExecutionRequest(
+                session_id=session_id,
+                input=Oneof(
+                    "message",
+                    service_pb.AgentMessageExecutionInput(
+                        text="用三句话解释为什么长任务需要持久化执行。"
+                    ),
+                ),
+            )
+        )
+        execution_id = started.execution.id
+
+        answer: list[str] = []
+        async for frame in client.watch_events(
+            service_pb.WatchEventsRequest(
+                session_id=session_id,
+                execution_id=execution_id,
+            )
+        ):
+            if frame.frame is None:
+                continue
+            if frame.frame.field == "stream_end":
+                break
+            if frame.frame.field != "committed_event":
+                continue
+
+            event = frame.frame.value
+            if event.payload is None:
+                continue
+            if event.payload.field == "assistant_text":
+                text = event.payload.value.text
+                answer.append(text)
+                print(text, end="", flush=True)
+
+        print(f"\n\nsession: {session_id}")
+        print(f"execution: {execution_id}")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+运行：
+
+```bash
+python hello_agentk.py
+```
+
+输出包含模型回复，以及这次运行的两个坐标：
+
+```text
+...
+
+session: ses_...
+execution: exe_...
+```
+
+## 刚才发生了什么
+
+`CreateSession` 接收完整 Profile；AgentK 不会替应用补一个默认 Profile。
+
+`StartExecution` 提交消息并立即返回一个 `Execution`。Agent Loop 在后台继续运行，模型文本、
+Tool 调用和终态作为 Event 写入 Session Event Log。
+
+`WatchEvents` 只观察这一个 Execution，适合实时显示增量和已提交事件。Event Log 才是持久记录；
+需要处理断线恢复、多轮交互和历史回读时，继续阅读
+[构建可恢复的 Agent Client](/client/guides/chat-client)。
+
+如果你的团队负责提供自定义能力，转到 Worker 开发并阅读
+[实现并发布 Capability](/worker/guides/capability)；如果还需要让模型选择并调用它，继续阅读
+[将 Capability 暴露为 Tool](/worker/guides/tool)。

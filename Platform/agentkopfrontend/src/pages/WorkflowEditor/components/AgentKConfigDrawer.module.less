@@ -1,0 +1,110 @@
+.panel {
+  :global(.ant-drawer-header) {
+    padding: 12px 16px;
+    border-bottom: 1px solid @divider;
+  }
+
+  :global(.ant-drawer-title) {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  :global(.ant-drawer-body) {
+    padding: 12px 16px 16px;
+  }
+}
+
+.hintBar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  background: @primary-subdued;
+  border-radius: @border-radius-sm;
+  color: @text-color-secondary;
+  font-size: 12px;
+  line-height: 1.5;
+
+  :global(.anticon) {
+    color: @primary-color;
+    font-size: 13px;
+    margin-top: 1px;
+  }
+}
+
+.profileMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.profileTag {
+  margin: 0;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.profileHint {
+  color: @text-color-tertiary;
+  font-size: 11px;
+}
+
+.divider {
+  margin: 12px 0 8px;
+}
+
+.formItem {
+  margin-bottom: 16px;
+
+  :global(.ant-form-item-label) {
+    padding-bottom: 4px;
+  }
+
+  :global(.ant-form-item-label > label) {
+    color: @text-color;
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.select {
+  width: 100%;
+}
+
+.textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.fieldHint {
+  margin-top: 4px;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.toolCheckboxes {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  padding: 8px 10px;
+  border: 1px solid @divider;
+  background: @surface-2;
+  gap: 4px;
+  border-radius: @border-radius-sm;
+  overflow-y: auto;
+}
+
+.toolCheckbox {
+  font-size: 12px;
+
+  :global(.ant-checkbox + span) {
+    font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+}
+
+.toolEmpty {
+  margin: 8px 0;
+}

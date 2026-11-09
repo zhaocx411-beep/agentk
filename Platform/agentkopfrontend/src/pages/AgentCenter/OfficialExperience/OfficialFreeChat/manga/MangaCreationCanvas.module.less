@@ -1,0 +1,214 @@
+/* 漫剧创作画布：工序条 + 分列产物 + 血缘连线 */
+
+.canvas {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  background: @surface-2;
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @spacing-sm @spacing-md 0;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xs;
+  padding: @spacing-sm @spacing-md @spacing-sm;
+  flex-shrink: 0;
+}
+
+.chip {
+  padding: @spacing-xxs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.chipDone {
+  border-color: @hairline-strong;
+  color: @text-color;
+}
+
+.chipActive {
+  border-color: @error-color;
+  color: @error-color;
+}
+
+.board {
+  flex: 1;
+  min-height: 0;
+  background:
+    radial-gradient(circle, @hairline-strong 1px, transparent 1.4px) 0 0 / 24px 24px,
+    @canvas-soft;
+  overflow: auto;
+  border-top: 1px solid @divider;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-xxl * 2;
+  width: max-content;
+  min-width: 100%;
+  padding: @spacing-lg @spacing-xl @spacing-xxl;
+  overflow: visible;
+}
+
+.links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.link {
+  fill: none;
+  stroke: @text-color-disabled;
+  stroke-width: 1.25;
+}
+
+.linkPending {
+  stroke: fade(@error-color, 45%);
+  stroke-dasharray: 6 5;
+}
+
+.linkDot {
+  fill: @text-color-disabled;
+}
+
+.linkDotPending {
+  fill: fade(@error-color, 45%);
+}
+
+.col {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  min-width: 176px;
+  gap: @spacing-md;
+}
+
+.colTitle {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.blank,
+.generating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  padding: @spacing-md;
+  border: 1px dashed @hairline-strong;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+.generating {
+  border-color: @error-color;
+  color: @error-color;
+}
+
+.node {
+  width: 176px;
+  padding: @spacing-xxs;
+  border: 1px solid @hairline-strong;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  box-shadow: @shadow-sm;
+}
+
+.nodeVideo {
+  width: 248px;
+}
+
+.media {
+  display: block;
+  line-height: 0;
+}
+
+.media img,
+.media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  background: @surface-3;
+}
+
+.caption {
+  display: -webkit-box;
+  padding: @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  margin-top: @spacing-xxs;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.emptyHint {
+  max-width: 420px;
+  margin: @spacing-sm 0 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.boardEmpty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: @spacing-xl @spacing-md;
+  border-top: 1px solid @divider;
+  background:
+    radial-gradient(circle, @hairline-strong 1px, transparent 1.4px) 0 0 / 24px 24px,
+    @canvas-soft;
+  overflow: hidden;
+}
+
+.empty {
+  max-width: 420px;
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+  line-height: 1.7;
+  text-align: center;
+}

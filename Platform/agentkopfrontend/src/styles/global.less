@@ -1,0 +1,79 @@
+/* ==========================================
+ * 全局样式重置与基础样式
+ * ========================================== */
+
+/* 全局盒模型 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 基础 HTML 重置 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.5715;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif;
+  background-color: @canvas;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 根节点撑满 */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================
+ * 细滚动条 — 全局规范（唯一权威定义见 DESIGN.md > Scrollbar）
+ * 4px 宽、透明轨道、hairline-strong 滑块、hover 加深；
+ * 组件内无需再重复定义滚动条样式
+ * ========================================== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: @hairline-strong transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @hairline-strong;
+  border-radius: @border-radius-pill;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: @text-color-tertiary;
+}
+
+/* 链接样式 */
+a {
+  color: @primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten(@primary-color, 10%);
+  }
+}

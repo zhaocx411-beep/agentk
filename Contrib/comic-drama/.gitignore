@@ -1,0 +1,24 @@
+# Go
+*.test
+*.out
+/cmd/apiserver/apiserver
+/cmd/drama-worker/drama-worker
+/apiserver
+/drama-worker
+
+# 编辑器与系统
+.DS_Store
+.idea/
+.vscode/
+
+# 本地凭证（一律走环境变量，不落文件）
+.env
+*.local
+
+# Seedance 路径的本地备份，不进 git
+/backup-seedance/
+
+# Local browser end-to-end tests
+/e2e/node_modules/
+/e2e/playwright-report/
+/e2e/test-results/

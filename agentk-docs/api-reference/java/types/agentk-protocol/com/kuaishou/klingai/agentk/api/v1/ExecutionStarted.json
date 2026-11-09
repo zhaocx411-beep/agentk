@@ -1,0 +1,686 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.api.v1",
+  "classNames": [
+    "ExecutionStarted"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted",
+    "kind": "class",
+    "name": "ExecutionStarted",
+    "declaration": {
+      "text": "@Generated()public final class ExecutionStarted extends GeneratedMessage implements ExecutionStartedOrBuilder",
+      "references": [
+        {
+          "start": 31,
+          "end": 47,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf type "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.api.v1.ExecutionStarted"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [
+      {
+        "kind": "enum",
+        "name": "KindCase",
+        "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted.KindCase",
+        "summary": ""
+      }
+    ],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getAgent-",
+        "name": "getAgent",
+        "declaration": {
+          "text": "public AgentExecutionStarted getAgent()",
+          "references": [
+            {
+              "start": 7,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecutionStarted"
+            },
+            {
+              "start": 29,
+              "end": 37,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getAgent-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.AgentExecutionStarted agent = 2 [json_name = \"agent\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The agent."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "AgentExecutionStarted",
+          "references": [
+            {
+              "start": 0,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/AgentExecutionStarted"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getAgent()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getKindCase-",
+        "name": "getKindCase",
+        "declaration": {
+          "text": "public ExecutionStarted.KindCase getKindCase()",
+          "references": [
+            {
+              "start": 7,
+              "end": 32,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted.KindCase"
+            },
+            {
+              "start": 33,
+              "end": 44,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getKindCase-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "KindCase",
+          "references": [
+            {
+              "start": 0,
+              "end": 8,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted.KindCase"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getKindCase()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getPipeline-",
+        "name": "getPipeline",
+        "declaration": {
+          "text": "public PipelineExecutionStarted getPipeline()",
+          "references": [
+            {
+              "start": 7,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecutionStarted"
+            },
+            {
+              "start": 32,
+              "end": 43,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getPipeline-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.PipelineExecutionStarted pipeline = 3 [json_name = \"pipeline\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The pipeline."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "PipelineExecutionStarted",
+          "references": [
+            {
+              "start": 0,
+              "end": 24,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/PipelineExecutionStarted"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getPipeline()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getProfileVersion-",
+        "name": "getProfileVersion",
+        "declaration": {
+          "text": "public String getProfileVersion()",
+          "references": [
+            {
+              "start": 7,
+              "end": 13,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            },
+            {
+              "start": 14,
+              "end": 31,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getProfileVersion-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string profile_version = 1 [json_name = \"profileVersion\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The profileVersion."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "String",
+          "references": [
+            {
+              "start": 0,
+              "end": 6,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "getProfileVersion()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getProfileVersionBytes-",
+        "name": "getProfileVersionBytes",
+        "declaration": {
+          "text": "public ByteString getProfileVersionBytes()",
+          "references": [
+            {
+              "start": 18,
+              "end": 40,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-getProfileVersionBytes-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "string profile_version = 1 [json_name = \"profileVersion\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The bytes for profileVersion."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "ByteString",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getProfileVersionBytes()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-hasAgent-",
+        "name": "hasAgent",
+        "declaration": {
+          "text": "public boolean hasAgent()",
+          "references": [
+            {
+              "start": 15,
+              "end": 23,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-hasAgent-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.AgentExecutionStarted agent = 2 [json_name = \"agent\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the agent field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasAgent()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-hasPipeline-",
+        "name": "hasPipeline",
+        "declaration": {
+          "text": "public boolean hasPipeline()",
+          "references": [
+            {
+              "start": 15,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-hasPipeline-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": ".agentk.api.v1.PipelineExecutionStarted pipeline = 3 [json_name = \"pipeline\"];"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Whether the pipeline field is set."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "boolean",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "hasPipeline()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilder-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ExecutionStarted.Builder newBuilder()",
+          "references": [
+            {
+              "start": 39,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilder-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-",
+        "name": "newBuilder",
+        "declaration": {
+          "text": "public static ExecutionStarted.Builder newBuilder(ExecutionStarted prototype)",
+          "references": [
+            {
+              "start": 39,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilder-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-"
+            },
+            {
+              "start": 50,
+              "end": 66,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilder(ExecutionStarted prototype)",
+          "references": [
+            {
+              "start": 11,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilderForType-",
+        "name": "newBuilderForType",
+        "declaration": {
+          "text": "public ExecutionStarted.Builder newBuilderForType()",
+          "references": [
+            {
+              "start": 32,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-newBuilderForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "newBuilderForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-toBuilder-",
+        "name": "toBuilder",
+        "declaration": {
+          "text": "public ExecutionStarted.Builder toBuilder()",
+          "references": [
+            {
+              "start": 32,
+              "end": 41,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/ExecutionStarted#agentk-protocol-com-kuaishou-klingai-agentk-api-v1-ExecutionStarted-toBuilder-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "Builder",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "toBuilder()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": [
+      {
+        "declaringType": "AbstractMessage",
+        "members": [
+          {
+            "name": "UserInput.findInitializationErrors"
+          },
+          {
+            "name": "UserInput.getInitializationErrorString"
+          },
+          {
+            "name": "UserInput.toString"
+          }
+        ]
+      },
+      {
+        "declaringType": "AbstractMessageLite",
+        "members": [
+          {
+            "name": "UserInput.toByteArray"
+          },
+          {
+            "name": "UserInput.toByteString"
+          },
+          {
+            "name": "UserInput.writeDelimitedTo"
+          }
+        ]
+      },
+      {
+        "declaringType": "GeneratedMessage",
+        "members": [
+          {
+            "name": "UserInput.getAllFields"
+          },
+          {
+            "name": "UserInput.getField"
+          },
+          {
+            "name": "UserInput.getOneofFieldDescriptor"
+          },
+          {
+            "name": "UserInput.getRepeatedField"
+          },
+          {
+            "name": "UserInput.getRepeatedFieldCount"
+          },
+          {
+            "name": "UserInput.getUnknownFields"
+          },
+          {
+            "name": "UserInput.hasField"
+          },
+          {
+            "name": "UserInput.hasOneof"
+          },
+          {
+            "name": "UserInput.newFileScopedGeneratedExtension"
+          },
+          {
+            "name": "UserInput.newMessageScopedGeneratedExtension"
+          }
+        ]
+      },
+      {
+        "declaringType": "Message",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLite",
+        "members": [
+          {
+            "name": "UserInput.getParserForType"
+          }
+        ]
+      },
+      {
+        "declaringType": "MessageLiteOrBuilder",
+        "members": [
+          {
+            "name": "UserInput.Builder.getDefaultInstanceForType"
+          }
+        ]
+      }
+    ]
+  }
+}

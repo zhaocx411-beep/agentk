@@ -1,0 +1,89 @@
+{
+  "name": "keling-agent-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "可灵Agent后台管理平台",
+  "type": "module",
+  "packageManager": "pnpm@10.29.1",
+  "scripts": {
+    "dev": "vite",
+    "dev:prt": "vite --mode prt",
+    "dev:staging": "vite --mode staging",
+    "dev:production": "vite --mode production",
+    "build": "tsc -b && vite build --mode production",
+    "build:prt": "tsc -b && vite build --mode prt",
+    "build:staging": "tsc -b && vite build --mode staging",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:style": "stylelint \"src/**/*.{css,less}\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,less,json,md}\"",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepare": "test \"$CI\" = true && echo 'skip husky in CI' || husky",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@tanstack/react-query": "^5.51.0",
+    "@xyflow/react": "^12.11.2",
+    "antd": "^5.20.0",
+    "axios": "^1.7.0",
+    "dayjs": "^1.11.12",
+    "js-yaml": "^5.2.2",
+    "lodash-es": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.7.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.26.0",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/js-yaml": "^4.0.9",
+    "@types/lodash-es": "^4.17.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "3.2.7",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "husky": "^9.1.4",
+    "jsdom": "26.1.0",
+    "less": "^4.2.0",
+    "lint-staged": "^15.2.8",
+    "postcss": "^8.4.40",
+    "postcss-less": "^6.0.0",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.8.1",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vitest": "^3.2.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+/* 对话空态：居中欢迎 + 快捷提问 */
+
+.wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: @spacing-xxl @spacing-lg;
+  text-align: center;
+  animation: empty-in 0.28s @transition-timing;
+}
+
+.mark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(160deg, @primary-subdued 0%, @primary-soft 100%);
+  color: @primary-color;
+  margin-bottom: @spacing-lg;
+  border-radius: @border-radius-xl;
+  box-shadow: @shadow-sm;
+}
+
+.glow {
+  position: absolute;
+  z-index: -1;
+  inset: -16px;
+  background: radial-gradient(circle, fade(@primary-soft, 80%) 0%, transparent 72%);
+  border-radius: @border-radius-xl;
+}
+
+.title {
+  margin: 0 0 @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  text-wrap: balance;
+}
+
+.desc {
+  max-width: 28em;
+  margin: 0 0 @spacing-lg;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: @spacing-xs;
+  max-width: 520px;
+}
+
+.promptExtra {
+  width: min(100%, 720px);
+  margin-top: @spacing-md;
+}
+
+.chip {
+  padding: @spacing-xs @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.4;
+  border-radius: @border-radius-pill;
+  cursor: pointer;
+  transition:
+    color @transition-duration-fast @transition-timing,
+    border-color @transition-duration-fast @transition-timing,
+    background-color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: @primary-color;
+    background: @primary-subdued;
+    color: @primary-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 2px;
+  }
+}
+
+.chipSkeleton {
+  width: 100% !important;
+  min-height: @control-height-lg;
+  border-radius: @border-radius-md !important;
+
+  :global(.ant-skeleton-button) {
+    width: 100% !important;
+    min-height: @control-height-lg;
+    border-radius: @border-radius-md !important;
+  }
+}
+
+.quiet {
+  padding: @spacing-xl @spacing-lg;
+
+  .mark {
+    width: 56px;
+    height: 56px;
+    margin-bottom: @spacing-md;
+    border: 1px solid @hairline;
+    border-radius: @border-radius-lg;
+    background: @surface-2;
+    color: @text-color;
+    box-shadow: none;
+  }
+
+  .glow {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: @spacing-sm;
+    font-size: @font-size-xxl;
+    line-height: 1.25;
+  }
+
+  .desc {
+    max-width: none;
+    margin-bottom: @spacing-lg;
+    color: @text-color-tertiary;
+    white-space: nowrap;
+  }
+
+  .chips {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: @spacing-sm;
+    width: min(100%, 720px);
+    max-width: none;
+  }
+
+  .promptExtra {
+    width: min(100%, 720px);
+    margin-top: @spacing-sm;
+  }
+
+  .chip {
+    display: flex;
+    align-items: center;
+    min-height: calc(@control-height-lg + @spacing-md);
+    padding: @spacing-sm @spacing-md;
+    border-radius: @border-radius-md;
+    background: @canvas;
+    color: @text-color;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal;
+
+    &:hover {
+      border-color: @hairline-strong;
+      background: @surface-2;
+      color: @text-color;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: @focus-ring-neutral;
+    }
+  }
+
+  .chipSkeleton {
+    min-height: calc(@control-height-lg + @spacing-md);
+  }
+}
+
+@media (max-width: @screen-md) {
+  .quiet {
+    .title {
+      font-size: @font-size-xl;
+    }
+
+    .desc {
+      white-space: normal;
+    }
+
+    .chips {
+      grid-template-columns: 1fr;
+      width: min(100%, 420px);
+    }
+
+    .chip {
+      min-height: @control-height-lg;
+    }
+  }
+}
+
+@keyframes empty-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrap {
+    animation: none;
+  }
+
+  .chip {
+    transition: none;
+  }
+}

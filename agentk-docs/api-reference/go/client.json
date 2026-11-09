@@ -1,0 +1,3082 @@
+{
+  "modulePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go",
+  "view": "client",
+  "packages": [
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+      "name": "client",
+      "doc": "Package client defines the public AgentK client API.\n",
+      "consts": [],
+      "vars": [],
+      "funcs": [],
+      "types": [
+        {
+          "name": "Client",
+          "doc": "Client provides transport-independent access to the AgentK API. Create a\nClient with a transport package such as client/grpc.\n",
+          "declaration": {
+            "text": "type Client = clientcore.Client",
+            "references": [
+              {
+                "start": 14,
+                "end": 24,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 25,
+                "end": 31,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                  "symbol": "Client",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": [
+            {
+              "name": "CancelExecution",
+              "doc": "CancelExecution requests cancellation of the running Execution in a Session.\n",
+              "declaration": {
+                "text": "func (c *Client) CancelExecution(ctx context.Context, request *apiv1.CancelExecutionRequest) (*apiv1.CancelExecutionResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 37,
+                    "end": 44,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 45,
+                    "end": 52,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 63,
+                    "end": 68,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 69,
+                    "end": 91,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CancelExecutionRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 95,
+                    "end": 100,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 101,
+                    "end": 124,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CancelExecutionResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 126,
+                    "end": 131,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.CancelExecutionRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 29,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "CancelExecutionRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.CancelExecutionResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 30,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "CancelExecutionResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "CreateSession",
+              "doc": "CreateSession creates a Session from the complete Profile in request. The\nProfile is fixed for the lifetime of the Session.\n",
+              "declaration": {
+                "text": "func (c *Client) CreateSession(ctx context.Context, request *apiv1.CreateSessionRequest) (*apiv1.CreateSessionResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 35,
+                    "end": 42,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 43,
+                    "end": 50,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 61,
+                    "end": 66,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 67,
+                    "end": 87,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CreateSessionRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 91,
+                    "end": 96,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 97,
+                    "end": 118,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "CreateSessionResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 120,
+                    "end": 125,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.CreateSessionRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 27,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "CreateSessionRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.CreateSessionResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 28,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "CreateSessionResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "GetExecution",
+              "doc": "GetExecution returns one Execution identified by its Session and Execution\nIDs.\n",
+              "declaration": {
+                "text": "func (c *Client) GetExecution(ctx context.Context, request *apiv1.GetExecutionRequest) (*apiv1.GetExecutionResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 34,
+                    "end": 41,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 42,
+                    "end": 49,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 60,
+                    "end": 65,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 66,
+                    "end": 85,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "GetExecutionRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 89,
+                    "end": 94,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 95,
+                    "end": 115,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "GetExecutionResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 117,
+                    "end": 122,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.GetExecutionRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 26,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "GetExecutionRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.GetExecutionResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 27,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "GetExecutionResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "InvokeCapability",
+              "doc": "InvokeCapability invokes a registered capability without creating a Session\nor Execution and waits for its result.\n",
+              "declaration": {
+                "text": "func (c *Client) InvokeCapability(ctx context.Context, request *apiv1.InvokeCapabilityRequest) (*apiv1.InvokeCapabilityResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 38,
+                    "end": 45,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 46,
+                    "end": 53,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 64,
+                    "end": 69,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 70,
+                    "end": 93,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "InvokeCapabilityRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 97,
+                    "end": 102,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 103,
+                    "end": 127,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "InvokeCapabilityResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 129,
+                    "end": 134,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.InvokeCapabilityRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 30,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "InvokeCapabilityRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.InvokeCapabilityResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 31,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "InvokeCapabilityResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ListCapabilities",
+              "doc": "ListCapabilities returns a page of registered capabilities, ordered by\ncapability ID.\n",
+              "declaration": {
+                "text": "func (c *Client) ListCapabilities(ctx context.Context, request *apiv1.ListCapabilitiesRequest) (*apiv1.ListCapabilitiesResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 38,
+                    "end": 45,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 46,
+                    "end": 53,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 64,
+                    "end": 69,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 70,
+                    "end": 93,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListCapabilitiesRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 97,
+                    "end": 102,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 103,
+                    "end": 127,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListCapabilitiesResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 129,
+                    "end": 134,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.ListCapabilitiesRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 30,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListCapabilitiesRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.ListCapabilitiesResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 31,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListCapabilitiesResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ListEvents",
+              "doc": "ListEvents returns a page of persisted Session events, ordered from newest to\noldest.\n",
+              "declaration": {
+                "text": "func (c *Client) ListEvents(ctx context.Context, request *apiv1.ListEventsRequest) (*apiv1.ListEventsResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 32,
+                    "end": 39,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 40,
+                    "end": 47,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 58,
+                    "end": 63,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 64,
+                    "end": 81,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListEventsRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 85,
+                    "end": 90,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 91,
+                    "end": 109,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListEventsResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 111,
+                    "end": 116,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.ListEventsRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 24,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListEventsRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.ListEventsResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 25,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListEventsResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ListExecutions",
+              "doc": "ListExecutions returns a page of Executions for a Session, ordered from newest\nto oldest.\n",
+              "declaration": {
+                "text": "func (c *Client) ListExecutions(ctx context.Context, request *apiv1.ListExecutionsRequest) (*apiv1.ListExecutionsResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 36,
+                    "end": 43,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 44,
+                    "end": 51,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 62,
+                    "end": 67,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 68,
+                    "end": 89,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListExecutionsRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 93,
+                    "end": 98,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 99,
+                    "end": 121,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListExecutionsResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 123,
+                    "end": 128,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.ListExecutionsRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 28,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListExecutionsRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.ListExecutionsResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 29,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListExecutionsResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ListPipelines",
+              "doc": "ListPipelines returns a page of Pipelines available to a Session, ordered by\nname.\n",
+              "declaration": {
+                "text": "func (c *Client) ListPipelines(ctx context.Context, request *apiv1.ListPipelinesRequest) (*apiv1.ListPipelinesResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 35,
+                    "end": 42,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 43,
+                    "end": 50,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 61,
+                    "end": 66,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 67,
+                    "end": 87,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListPipelinesRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 91,
+                    "end": 96,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 97,
+                    "end": 118,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListPipelinesResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 120,
+                    "end": 125,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.ListPipelinesRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 27,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListPipelinesRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.ListPipelinesResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 28,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListPipelinesResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ListSessions",
+              "doc": "ListSessions returns a page of Sessions, ordered from newest to oldest.\n",
+              "declaration": {
+                "text": "func (c *Client) ListSessions(ctx context.Context, request *apiv1.ListSessionsRequest) (*apiv1.ListSessionsResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 34,
+                    "end": 41,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 42,
+                    "end": 49,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 60,
+                    "end": 65,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 66,
+                    "end": 85,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListSessionsRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 89,
+                    "end": 94,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 95,
+                    "end": 115,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "ListSessionsResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 117,
+                    "end": 122,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.ListSessionsRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 26,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListSessionsRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.ListSessionsResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 27,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "ListSessionsResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "StartExecution",
+              "doc": "StartExecution starts an Execution in an existing Session using the input in\nrequest and returns the new Execution.\n",
+              "declaration": {
+                "text": "func (c *Client) StartExecution(ctx context.Context, request *apiv1.StartExecutionRequest) (*apiv1.StartExecutionResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 36,
+                    "end": 43,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 44,
+                    "end": 51,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 62,
+                    "end": 67,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 68,
+                    "end": 89,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "StartExecutionRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 93,
+                    "end": 98,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 99,
+                    "end": 121,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "StartExecutionResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 123,
+                    "end": 128,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.StartExecutionRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 28,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "StartExecutionRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.StartExecutionResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 29,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "StartExecutionResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "WatchEvents",
+              "doc": "WatchEvents opens a live stream for the Session and Execution named in\nrequest. The caller must receive from and close the returned stream.\n",
+              "declaration": {
+                "text": "func (c *Client) WatchEvents(ctx context.Context, request *apiv1.WatchEventsRequest) (*clientcore.EventStream, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 33,
+                    "end": 40,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 41,
+                    "end": 48,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 59,
+                    "end": 64,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 65,
+                    "end": 83,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "WatchEventsRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 87,
+                    "end": 97,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 98,
+                    "end": 109,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                      "symbol": "EventStream",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 111,
+                    "end": 116,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.WatchEventsRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 25,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "WatchEventsRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*clientcore.EventStream",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 11,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 12,
+                          "end": 23,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                            "symbol": "EventStream",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "WhoAmI",
+              "doc": "WhoAmI returns the service and App identity resolved by AgentK.\n",
+              "declaration": {
+                "text": "func (c *Client) WhoAmI(ctx context.Context, request *apiv1.WhoAmIRequest) (*apiv1.WhoAmIResponse, error)",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 15,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "Client",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 28,
+                    "end": 35,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 36,
+                    "end": 43,
+                    "target": {
+                      "packagePath": "context",
+                      "symbol": "Context",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 54,
+                    "end": 59,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 60,
+                    "end": 73,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "WhoAmIRequest",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 77,
+                    "end": 82,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 83,
+                    "end": 97,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "WhoAmIResponse",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 99,
+                    "end": 104,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "c"
+                  ],
+                  "type": {
+                    "text": "*Client",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 7,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "Client",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [
+                  {
+                    "names": [
+                      "ctx"
+                    ],
+                    "type": {
+                      "text": "context.Context",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 7,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 8,
+                          "end": 15,
+                          "target": {
+                            "packagePath": "context",
+                            "symbol": "Context",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [
+                      "request"
+                    ],
+                    "type": {
+                      "text": "*apiv1.WhoAmIRequest",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 20,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "WhoAmIRequest",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.WhoAmIResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 21,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "WhoAmIResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  },
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "EventStream",
+          "doc": "EventStream receives live event frames for one Session and Execution. Call\nReceive in a loop, inspect Msg after each successful receive, and check Err\nwhen Receive returns false.\n",
+          "declaration": {
+            "text": "type EventStream = clientcore.EventStream",
+            "references": [
+              {
+                "start": 19,
+                "end": 29,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 30,
+                "end": 41,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/internal/clientcore",
+                  "symbol": "EventStream",
+                  "builtin": false
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": [
+            {
+              "name": "Close",
+              "doc": "Close stops receiving and releases the stream resources. Call Close when the\nstream is no longer needed, including when iteration ends early.\n",
+              "declaration": {
+                "text": "func (s *EventStream) Close() error",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "EventStream",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 30,
+                    "end": 35,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "s"
+                  ],
+                  "type": {
+                    "text": "*EventStream",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 12,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "EventStream",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Err",
+              "doc": "Err returns the first non-EOF receive error after Receive returns false.\n",
+              "declaration": {
+                "text": "func (s *EventStream) Err() error",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "EventStream",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 28,
+                    "end": 33,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "error",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "s"
+                  ],
+                  "type": {
+                    "text": "*EventStream",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 12,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "EventStream",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "error",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 5,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "error",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Msg",
+              "doc": "Msg returns the frame from the most recent successful call to Receive. The\nreturned message must not be used after the next call to Receive.\n",
+              "declaration": {
+                "text": "func (s *EventStream) Msg() *apiv1.WatchEventsResponse",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "EventStream",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 29,
+                    "end": 34,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 35,
+                    "end": 54,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                      "symbol": "WatchEventsResponse",
+                      "builtin": false
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "s"
+                  ],
+                  "type": {
+                    "text": "*EventStream",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 12,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "EventStream",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "*apiv1.WatchEventsResponse",
+                      "references": [
+                        {
+                          "start": 1,
+                          "end": 6,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "",
+                            "builtin": false
+                          }
+                        },
+                        {
+                          "start": 7,
+                          "end": 26,
+                          "target": {
+                            "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen/api/v1",
+                            "symbol": "WatchEventsResponse",
+                            "builtin": false
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Receive",
+              "doc": "Receive advances the stream to the next frame and reports whether a frame is\navailable. When it returns false, call Err to distinguish a clean end from a\nreceive failure.\n",
+              "declaration": {
+                "text": "func (s *EventStream) Receive() bool",
+                "references": [
+                  {
+                    "start": 9,
+                    "end": 20,
+                    "target": {
+                      "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                      "symbol": "EventStream",
+                      "builtin": false
+                    }
+                  },
+                  {
+                    "start": 32,
+                    "end": 36,
+                    "target": {
+                      "packagePath": "",
+                      "symbol": "bool",
+                      "builtin": true
+                    }
+                  }
+                ]
+              },
+              "signature": {
+                "receiver": {
+                  "names": [
+                    "s"
+                  ],
+                  "type": {
+                    "text": "*EventStream",
+                    "references": [
+                      {
+                        "start": 1,
+                        "end": 12,
+                        "target": {
+                          "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                          "symbol": "EventStream",
+                          "builtin": false
+                        }
+                      }
+                    ]
+                  },
+                  "variadic": false
+                },
+                "typeParameters": [],
+                "parameters": [],
+                "results": [
+                  {
+                    "names": [],
+                    "type": {
+                      "text": "bool",
+                      "references": [
+                        {
+                          "start": 0,
+                          "end": 4,
+                          "target": {
+                            "packagePath": "",
+                            "symbol": "bool",
+                            "builtin": true
+                          }
+                        }
+                      ]
+                    },
+                    "variadic": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Options",
+          "doc": "Options configures an AgentK client created by a transport package.\n",
+          "declaration": {
+            "text": "type Options struct {\n\t// Endpoint overrides the transport's default AgentK endpoint. It must be an\n\t// absolute URL. When empty, each transport uses its environment default.\n\tEndpoint string\n}",
+            "references": [
+              {
+                "start": 185,
+                "end": 191,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "string",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "consts": [],
+          "vars": [],
+          "funcs": [],
+          "methods": []
+        }
+      ]
+    },
+    {
+      "importPath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client/grpc",
+      "name": "grpc",
+      "doc": "Package grpc connects to AgentK over gRPC using KESS service discovery.\n",
+      "consts": [],
+      "vars": [],
+      "funcs": [
+        {
+          "name": "New",
+          "doc": "New creates an AgentK Client that uses unencrypted HTTP/2 gRPC. It connects\ndirectly to options.Endpoint when set, or uses KESS service discovery\notherwise.\n",
+          "declaration": {
+            "text": "func New(options client.Options) (*client.Client, error)",
+            "references": [
+              {
+                "start": 17,
+                "end": 23,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 24,
+                "end": 31,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                  "symbol": "Options",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 35,
+                "end": 41,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                  "symbol": "",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 42,
+                "end": 48,
+                "target": {
+                  "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                  "symbol": "Client",
+                  "builtin": false
+                }
+              },
+              {
+                "start": 50,
+                "end": 55,
+                "target": {
+                  "packagePath": "",
+                  "symbol": "error",
+                  "builtin": true
+                }
+              }
+            ]
+          },
+          "signature": {
+            "receiver": null,
+            "typeParameters": [],
+            "parameters": [
+              {
+                "names": [
+                  "options"
+                ],
+                "type": {
+                  "text": "client.Options",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 6,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 7,
+                      "end": 14,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                        "symbol": "Options",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ],
+            "results": [
+              {
+                "names": [],
+                "type": {
+                  "text": "*client.Client",
+                  "references": [
+                    {
+                      "start": 1,
+                      "end": 7,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                        "symbol": "",
+                        "builtin": false
+                      }
+                    },
+                    {
+                      "start": 8,
+                      "end": 14,
+                      "target": {
+                        "packagePath": "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client",
+                        "symbol": "Client",
+                        "builtin": false
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              },
+              {
+                "names": [],
+                "type": {
+                  "text": "error",
+                  "references": [
+                    {
+                      "start": 0,
+                      "end": 5,
+                      "target": {
+                        "packagePath": "",
+                        "symbol": "error",
+                        "builtin": true
+                      }
+                    }
+                  ]
+                },
+                "variadic": false
+              }
+            ]
+          }
+        }
+      ],
+      "types": []
+    }
+  ]
+}

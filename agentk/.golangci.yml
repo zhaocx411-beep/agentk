@@ -1,0 +1,9 @@
+version: "2"
+
+linters:
+  enable:
+    # 封闭联合（//sumtype:decl）的 type switch 穷尽性检查——event.Payload 的底线：
+    # 加一种事件，所有该处理它的地方都会编译期暴露出来
+    - gochecksumtype
+    # enum 常量 switch 的穷尽性检查（event.Kind / chat.Role / WakePolicy 等）
+    - exhaustive

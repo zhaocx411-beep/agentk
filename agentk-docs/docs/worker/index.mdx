@@ -1,0 +1,36 @@
+---
+sidebar_label: Worker 开发概览
+title: AgentK Worker 开发
+description: 使用 Worker SDK 发布和运行 AgentK Capability
+slug: /worker
+pagination_prev: null
+pagination_next: worker/guides/capability
+---
+
+# AgentK Worker 开发
+
+Worker 开发面向发布 <Capability /> 的能力提供方。Go 和 Python Worker SDK 用于把独立 Temporal
+Worker 接入 AgentK 使用的 Temporal namespace：
+
+- 通过 KESS 连接 AgentK 使用的 Temporal namespace；
+- 创建带 Capability 发布能力的 Worker；
+- 发布 Workflow 或 Activity 的 Manifest；
+- 在 Workflow 中按 Capability ID 调用其他能力；
+- 传播 invocation context 并上报 <Pipeline /> 进度。
+
+Worker SDK 不替代 Temporal。业务 Workflow、Activity、注册、确定性和重试仍遵循对应语言的
+Temporal SDK。
+
+使用 Codex、Cursor 辅助开发时，可先[接入文档 MCP](/mcp)，让 Agent 查询指南与 SDK API。
+
+- [实现并发布 Capability](/worker/guides/capability)
+- [将 Capability 暴露为 Tool](/worker/guides/tool)
+- [配置 Worker Lane](/worker/guides/worker-lane)
+- [Go Worker SDK](/worker/sdk/go)
+- [Python Worker SDK](/worker/sdk/python)
+
+:::note[版本]
+
+本文档使用 Go Worker `v0.3.2` 和 Python Worker `0.3.2`。
+
+:::

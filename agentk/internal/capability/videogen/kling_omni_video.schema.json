@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "enum": [
+        "kling-3.0-omni"
+      ],
+      "description": "使用的模型。候选：kling-3.0-omni（可灵 3.0 Omni 多模态视频）"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "纯自然语言的画面、镜头运动和声音描述。可用 @image_1、@image_2… 指名 referImages 里第 n 张参考图，用 @video_1 指参考视频；不写 @ 时模型自行取用素材"
+    },
+    "firstFrame": {
+      "type": "string",
+      "description": "首帧图片 URL（可选）；给了它输出画幅跟随该图，不必再给 aspectRatio"
+    },
+    "lastFrame": {
+      "type": "string",
+      "description": "尾帧图片 URL（可选）；必须与 firstFrame 同时给，不能只给尾帧"
+    },
+    "referImages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 7,
+      "description": "元素参考图 URL 列表：提供角色形象、物体、风格或构图参考，不作为首帧。最多 7 张；同时给了参考视频时最多 4 张。按给定顺序在 prompt 里记作 @image_1、@image_2…"
+    },
+    "featureVideo": {
+      "type": "string",
+      "description": "特征参考视频 URL（可选）：借鉴它的运镜、动作或整体风格来生成新视频；用了它 audio 只能是 off"
+    },
+    "resolution": {
+      "type": "string",
+      "enum": [
+        "720p",
+        "1080p"
+      ],
+      "default": "1080p",
+      "description": "输出清晰度，越高越贵；缺省 1080p"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "description": "片段时长（秒），3~15，缺省 5"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "description": "输出画幅。既没有 firstFrame 也没有参考视频时必须给（不给按 16:9）；有首帧或参考视频时留空，画幅跟随素材"
+    },
+    "audio": {
+      "type": "string",
+      "enum": [
+        "native",
+        "off"
+      ],
+      "default": "native",
+      "description": "声音：native 生成与画面适配的声音，off 无声；缺省 native。featureVideo 模式受上游限制必须为 off"
+    },
+    "multiShot": {
+      "type": "boolean",
+      "default": true,
+      "description": "是否生成多镜头视频，缺省 true。设为 true 时模型可根据 prompt 生成多镜头；不需要多镜头时显式设为 false。baseVideo 编辑模式不支持多镜头，必须设为 false"
+    }
+  },
+  "required": [
+    "model",
+    "prompt"
+  ],
+  "anyOf": [
+    {
+      "required": ["referImages"]
+    },
+    {
+      "required": ["featureVideo"]
+    }
+  ]
+}

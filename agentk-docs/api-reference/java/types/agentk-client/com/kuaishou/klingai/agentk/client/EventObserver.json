@@ -1,0 +1,266 @@
+{
+  "view": "client",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-client"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.client",
+  "classNames": [
+    "EventObserver"
+  ],
+  "type": {
+    "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventObserver",
+    "kind": "interface",
+    "name": "EventObserver",
+    "declaration": {
+      "text": "public interface EventObserver",
+      "references": [
+        {
+          "start": 17,
+          "end": 30,
+          "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Receives frames and terminal signals from a WatchEvents stream. "
+              }
+            ]
+          },
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "A normally completed stream calls "
+              },
+              {
+                "kind": "DocumentationLink",
+                "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onComplete-",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "onComplete"
+                  }
+                ]
+              },
+              {
+                "kind": "Text",
+                "text": "; a stream failure or an exception thrown by "
+              },
+              {
+                "kind": "DocumentationLink",
+                "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onNext-com-kuaishou-klingai-agentk-api-v1-WatchEventsResponse-",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "onNext"
+                  }
+                ]
+              },
+              {
+                "kind": "Text",
+                "text": " is delivered to "
+              },
+              {
+                "kind": "DocumentationLink",
+                "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onError-java-lang-Throwable-",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "onError"
+                  }
+                ]
+              },
+              {
+                "kind": "Text",
+                "text": ". Cancelling the stream does not invoke either terminal callback."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [],
+    "fields": [],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onComplete-",
+        "name": "onComplete",
+        "declaration": {
+          "text": "public abstract void onComplete()",
+          "references": [
+            {
+              "start": 21,
+              "end": 31,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onComplete-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Handles a normal end of the event stream."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "onComplete()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onError-java-lang-Throwable-",
+        "name": "onError",
+        "declaration": {
+          "text": "public abstract void onError(Throwable error)",
+          "references": [
+            {
+              "start": 21,
+              "end": 28,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onError-java-lang-Throwable-"
+            },
+            {
+              "start": 29,
+              "end": 38,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Handles a stream or observer failure."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "error",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "the failure that ended the stream"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "onError(Throwable error)",
+          "references": [
+            {
+              "start": 8,
+              "end": 17,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onNext-com-kuaishou-klingai-agentk-api-v1-WatchEventsResponse-",
+        "name": "onNext",
+        "declaration": {
+          "text": "public abstract void onNext(WatchEventsResponse event)",
+          "references": [
+            {
+              "start": 21,
+              "end": 27,
+              "href": "/reference/java/client/agentk-client/com/kuaishou/klingai/agentk/client/EventObserver#agentk-client-com-kuaishou-klingai-agentk-client-EventObserver-onNext-com-kuaishou-klingai-agentk-api-v1-WatchEventsResponse-"
+            },
+            {
+              "start": 28,
+              "end": 47,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsResponse"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Handles the next event frame."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Param",
+            "name": "event",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "a committed event, transient delta, or terminal stream frame"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "void",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "onNext(WatchEventsResponse event)",
+          "references": [
+            {
+              "start": 7,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/api/v1/WatchEventsResponse"
+            }
+          ]
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

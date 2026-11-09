@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuaishou.agent.operation.backend.platform.dao.mapper.ChatSessionMapper">
+
+    <resultMap id="ChatSessionMap" type="com.kuaishou.agent.operation.backend.platform.entity.ChatSession">
+        <id column="id" property="id"/>
+        <result column="public_id" property="publicId"/>
+        <result column="user_id" property="userId"/>
+        <result column="agentk_session_id" property="agentkSessionId"/>
+        <result column="title" property="title"/>
+        <result column="agent_version_id" property="agentVersionId"/>
+        <result column="workflow_version_id" property="workflowVersionId"/>
+        <result column="session_kind" property="sessionKind"/>
+        <result column="entry_source" property="entrySource"/>
+        <result column="profile_json" property="profileYaml"/>
+        <result column="profile_version" property="profileVersion"/>
+        <result column="effective_model" property="effectiveModel"/>
+        <result column="effective_tools_json" property="effectiveToolsJson"/>
+        <result column="effective_tool_models_json" property="effectiveToolModelsJson"/>
+        <result column="status" property="status"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <sql id="sessionColumns">
+        id, public_id, user_id, agentk_session_id, title, agent_version_id, workflow_version_id,
+        session_kind, entry_source, profile_json, profile_version, effective_model,
+        effective_tools_json, effective_tool_models_json, `status`, created_at, updated_at
+    </sql>
+
+    <insert id="insertSession" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aop_session (
+            public_id, user_id, agentk_session_id, title,
+            agent_version_id, workflow_version_id, session_kind, entry_source,
+            profile_json, profile_version, effective_model, effective_tools_json,
+            effective_tool_models_json, `status`, created_at, updated_at
+        ) VALUES (
+            #{publicId}, #{userId}, #{agentkSessionId}, #{title},
+            #{agentVersionId}, #{workflowVersionId}, #{sessionKind}, #{entrySource},
+            #{profileYaml}, #{profileVersion}, #{effectiveModel}, #{effectiveToolsJson},
+            #{effectiveToolModelsJson}, #{status}, #{createdAt}, #{updatedAt}
+        )
+    </insert>
+
+    <update id="updateSession">
+        UPDATE aop_session
+        SET agentk_session_id = #{agentkSessionId},
+            title = #{title},
+            agent_version_id = #{agentVersionId},
+            workflow_version_id = #{workflowVersionId},
+            session_kind = #{sessionKind},
+            entry_source = #{entrySource},
+            profile_json = #{profileYaml},
+            profile_version = #{profileVersion},
+            effective_model = #{effectiveModel},
+            effective_tools_json = #{effectiveToolsJson},
+            effective_tool_models_json = #{effectiveToolModelsJson},
+            `status` = #{status},
+            updated_at = #{updatedAt}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectSessionById" resultMap="ChatSessionMap">
+        SELECT <include refid="sessionColumns"/>
+        FROM aop_session
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectByPublicId" resultMap="ChatSessionMap">
+        SELECT <include refid="sessionColumns"/>
+        FROM aop_session
+        WHERE public_id = #{publicId}
+        LIMIT 1
+    </select>
+
+    <select id="selectByAgentkSessionId" resultMap="ChatSessionMap">
+        SELECT <include refid="sessionColumns"/>
+        FROM aop_session
+        WHERE agentk_session_id = #{agentkSessionId}
+        LIMIT 1
+    </select>
+
+    <select id="listByUserId" resultMap="ChatSessionMap">
+        SELECT <include refid="sessionColumns"/>
+        FROM aop_session
+        WHERE user_id = #{userId}
+        ORDER BY updated_at DESC
+        LIMIT #{limit}
+    </select>
+</mapper>

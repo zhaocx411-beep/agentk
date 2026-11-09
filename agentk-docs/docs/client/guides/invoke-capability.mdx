@@ -1,0 +1,128 @@
+---
+sidebar_position: 1
+sidebar_label: 直接调用 Capability
+title: 直接调用 Capability
+description: 使用 Client SDK 阻塞调用 Capability，不创建 Session、Execution 或 Event Log
+slug: /client/guides/invoke-capability
+pagination_prev: client/quickstart
+pagination_next: client/guides/chat-client
+---
+
+# 直接调用 Capability
+
+`InvokeCapability` 让下游应用通过稳定的 Capability ID 调用一个已发布能力，并在同一个 RPC 中
+等待结果。它与创建 <Session />、启动 <Execution /> 的调用路径平行：应用不需要先创建
+Profile 或 Session，也不会得到 Session ID、Execution ID 或 Event 流。
+
+## 选择直接调用还是 Session
+
+| 调用方式 | 适合场景 | 调用结果与观察方式 |
+| --- | --- | --- |
+| `InvokeCapability` | 一次性、请求/响应式调用；调用方可以保持连接直到能力结束 | RPC 阻塞返回一个 JSON 值 |
+| Session / Execution | 多轮交互、长任务、需要进度、断线恢复或业务运行记录 | 立即返回 `exe_...`，再使用 Events 和 Execution 状态观察 |
+
+直接调用是业务语义上的 transient 调用：AgentK 不创建 Session、Execution、Event Log 或
+invocation meta。能力仍由 Temporal Workflow 或 Activity 执行，Temporal execution、History、
+重试、超时和取消语义仍然存在。
+
+如果调用方不能持续等待，或者需要在进程重启后重新找到同一次运行，应使用
+[Session / Execution 路径](/client/quickstart)，不要依赖一个长时间保持的 unary RPC。
+
+## 准备调用
+
+直接调用使用与其他 Client API 相同的 KSN 身份和 transport。运行前向 AgentK 平台维护方登记
+工作负载 KSN，并完成 Service/App 绑定；本机连接 staging 时设置：
+
+```bash
+export KWS_SERVICE_NAME='<registered-ksn>'
+```
+
+应用按 Capability ID 调用。可以先用 `ListCapabilities` 查看当前环境可用的 ID、说明、输入输出
+Schema 和超时；这不是每次调用的前置步骤。
+
+`input` 是一个 JSON object；不填写时按 `{}` 处理。`output` 可以是任意 JSON 值，包括 object、
+array、string、number、boolean 或 `null`。
+
+## Python
+
+```python
+from agentk.api.v1 import service_pb
+from agentk.client import Options
+from agentk.client.grpc import create_client
+from protobuf.wkt import Struct
+
+async with create_client(Options()) as client:
+    response = await client.invoke_capability(
+        service_pb.InvokeCapabilityRequest(
+            capability_id="contrib.example.render",
+            input=Struct.from_python({"prompt": "雨夜里的霓虹街道"}),
+        )
+    )
+
+    if response.output is None:
+        raise RuntimeError("capability returned no output")
+    print(response.output.to_python())
+```
+
+Python Client 是异步 API。取消等待这个 RPC 的 `asyncio.Task` 会取消进行中的调用。
+
+## Go
+
+```go
+input, err := structpb.NewStruct(map[string]any{
+	"prompt": "雨夜里的霓虹街道",
+})
+if err != nil {
+	return err
+}
+
+response, err := client.InvokeCapability(ctx, &apiv1.InvokeCapabilityRequest{
+	CapabilityId: "contrib.example.render",
+	Input:        input,
+})
+if err != nil {
+	return err
+}
+
+fmt.Printf("%v\n", response.GetOutput().AsInterface())
+```
+
+取消传入的 `context.Context`，或让它超过 deadline，会取消进行中的调用。
+
+## Java
+
+```java
+Struct input = Struct.newBuilder()
+    .putFields(
+        "prompt",
+        Value.newBuilder().setStringValue("雨夜里的霓虹街道").build())
+    .build();
+
+InvokeCapabilityResponse response = client.invokeCapability(
+    InvokeCapabilityRequest.newBuilder()
+        .setCapabilityId("contrib.example.render")
+        .setInput(input)
+        .build()
+).toCompletableFuture().get();
+
+System.out.println(response.getOutput());
+```
+
+取消返回的 `CompletableFuture` 会取消进行中的调用。应用退出时仍应关闭 `AgentKClient`。
+
+## 取消与错误
+
+Client 取消、请求 deadline 或连接中断后，AgentK 会向本次 Temporal Workflow 提交正常取消请求。
+这是 request cancellation，不是强制 terminate；目标 Workflow、Activity 及其内部 context 如何响应
+取消，由能力实现决定。调用方不能据此假设已经发生的业务副作用被回滚。
+
+常见 RPC 状态包括：
+
+- `InvalidArgument`：Capability ID 或请求不合法；
+- `NotFound`：当前环境无法解析这个 Capability；
+- `Canceled` 或 `DeadlineExceeded`：调用方取消或请求超时；
+- `Unavailable`：AgentK 无法连接或启动 Temporal execution；
+- `Unknown`：目标 Capability 返回业务失败。
+
+调用失败不会产生可供应用随后查询的 Execution ID。需要独立管理任务生命周期时，使用
+Session 中的 Pipeline Execution。

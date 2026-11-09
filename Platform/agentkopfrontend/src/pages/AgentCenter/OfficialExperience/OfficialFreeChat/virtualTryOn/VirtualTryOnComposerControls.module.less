@@ -1,0 +1,42 @@
+@import url('@/styles/variables.less');
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  padding: @spacing-xs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  min-width: 0;
+}
+
+.fieldHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-xs;
+}
+
+.label {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.meta {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  white-space: nowrap;
+}
+
+.requiredMark {
+  margin-left: 2px;
+  color: @error-color;
+}

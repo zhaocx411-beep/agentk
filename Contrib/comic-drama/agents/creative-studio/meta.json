@@ -1,0 +1,20 @@
+{
+  "id": "creative-studio",
+  "name": "完整创作助手",
+  "description": "从一个想法出发，协助完成文本、图片和视频的整套创作交付。",
+  "category": "内容创作",
+  "tags": ["创意策划", "图像生成", "视频制作"],
+  "kind": "chat",
+  "href": "/agents/creative-studio/chat/",
+  "status": "可使用",
+  "visual": "creative",
+  "visualLabel": "CREATIVE STUDIO · 02",
+  "icon": "✦",
+  "accent": "#536fb7",
+  "welcomeMessage": "把目标、受众和想要的交付形式告诉我，我们从第一版开始。",
+  "starterPrompts": [
+    "为一款夏日气泡水设计一套社交媒体创意",
+    "把这个零散想法整理成完整的视觉提案",
+    "策划一支 15 秒新品发布视频"
+  ]
+}

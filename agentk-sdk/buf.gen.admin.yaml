@@ -1,0 +1,17 @@
+version: v2
+clean: false
+inputs:
+  - directory: protocol
+    paths:
+      - protocol/agentk/admin
+plugins:
+  - local: protoc-gen-go
+    out: admin/gen
+    opt:
+      - paths=import
+      - module=git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/admin/gen
+  - local: protoc-gen-connect-go
+    out: admin/gen
+    opt:
+      - paths=import
+      - module=git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/admin/gen

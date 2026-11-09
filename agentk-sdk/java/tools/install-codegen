@@ -1,0 +1,52 @@
+#!/bin/sh
+
+set -eu
+
+version="0.9.0"
+expected_sha256="c23657189f8f31beda517497d2c60610de71725c3748a011577bc546af0796e5"
+filename="protoc-gen-connect-kotlin-${version}.jar"
+download_url="https://github.com/connectrpc/connect-kotlin/releases/download/v${version}/${filename}"
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+tools_dir="${script_dir}/../.tools"
+jar_path="${tools_dir}/${filename}"
+
+checksum() {
+  if command -v sha256sum >/dev/null 2>&1; then
+    sha256sum "$1" | awk '{print $1}'
+  elif command -v shasum >/dev/null 2>&1; then
+    shasum -a 256 "$1" | awk '{print $1}'
+  else
+    echo "error: sha256sum or shasum is required" >&2
+    exit 1
+  fi
+}
+
+verify() {
+  actual_sha256=$(checksum "$1")
+  if [ "$actual_sha256" != "$expected_sha256" ]; then
+    echo "error: SHA256 mismatch for $1" >&2
+    echo "expected: ${expected_sha256}" >&2
+    echo "actual:   ${actual_sha256}" >&2
+    return 1
+  fi
+}
+
+mkdir -p "$tools_dir"
+
+if [ -f "$jar_path" ]; then
+  verify "$jar_path"
+  echo "Connect-Kotlin code generator v${version} is already installed."
+  exit 0
+fi
+
+tmp_path="${jar_path}.tmp.$$"
+trap 'rm -f "$tmp_path"' EXIT HUP INT TERM
+
+echo "Downloading Connect-Kotlin code generator v${version}..."
+curl -fL "$download_url" -o "$tmp_path"
+verify "$tmp_path"
+mv "$tmp_path" "$jar_path"
+trap - EXIT HUP INT TERM
+
+echo "Installed ${jar_path}"

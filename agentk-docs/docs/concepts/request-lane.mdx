@@ -1,0 +1,201 @@
+---
+sidebar_position: 6
+sidebar_label: Request Lane（请求泳道）
+title: Request Lane：共享环境中的任务路由隔离
+description: 理解请求泳道如何定向路由测试任务，并在未覆盖的能力上回落到基线环境
+pagination_prev: concepts/capability-execution-progress
+pagination_next: examples/go-storyboard-job-api
+---
+
+# Request Lane：共享环境中的任务路由隔离
+
+分布式能力的开发通常只涉及调用链中的部分节点。测试流量需要进入开发者启动的 Worker，同时
+继续复用未修改的上下游，而不应要求整条调用链都为一次联调部署独立副本。
+
+AgentK 的 **Request Lane（请求泳道）**是用于此类场景的路由选择器：同一个 Capability 可以同时
+存在基线实现和泳道实现；带泳道标识的请求优先使用同泳道实现，某个环节没有同泳道实现时
+回落到基线实现。没有泳道标识的普通请求只使用基线实现，不会进入开发者的泳道 Worker。
+
+```text
+Request Lane = 请求级泳道标识
+             + 按泳道发现 Capability
+             + Temporal Task Queue 路由
+             + 基线回落
+```
+
+## HTTP / RPC 泳道的基本模型
+
+在 HTTP 或 RPC 服务中，泳道表示：**同一个地址或服务名背后存在多组实例，其中一组实例只
+定向接收带有特定泳道标识的请求。**
+
+如果之前没有接触过公司基础设施的泳道，可以先阅读[泳道使用 101](https://techlink.corp.kuaishou.com/help/docs/05e428ad26da5b5bfc9463d6875b8f13)。
+它从 A → B → C 这类服务调用链讲起，介绍请求上的泳道标识、泳道实例以及没有对应实例时如何
+回落主干。本文沿用这些基础概念，再说明它们在 Temporal Worker 中有什么不同。
+
+例如，服务 B 的基线版本是 B，开发者正在测试的版本是 B1：
+
+```text
+普通请求                 测试请求：lane = dev/zhangsan
+
+A ──→ B ──→ C            A ──→ B1 ──→ C
+     baseline                         baseline
+```
+
+该模型与快手基础设施中的 KESS gRPC 泳道一致：请求源为测试流量设置 `laneId`，即为请求附加
+泳道标识；路由层据此优先选择同泳道实例。KESS Debug、压测平台或测试入口都可以提供这一
+标识。其核心规则包括：
+
+1. 泳道属于一次请求，不属于某个终端用户，也不是服务实例的全局开关。
+2. 基线流量不能进入泳道实例；泳道流量可以在没有对应实例的环节复用基线。
+
+第二条体现的是 **基线回落（Fallback）**。上图中只有 B 部署了开发版本，上游 A 和下游 C 不需要
+配合启动测试实例。`dev/zhangsan` 请求在 B 命中 B1，在 A、C 则回落到已有基线版本。因此泳道
+表达的是“局部覆盖，其余复用”，而不是复制一套完整环境。
+
+AgentK 采用这套请求标识与局部覆盖语义，但不依赖公司基础设施的 HTTP/gRPC 机制自动穿过
+Temporal。请求进入 AgentK 后，SDK 使用 AgentK 自己的 Context、RPC metadata、Temporal
+header 和 Task Queue 路由继续传播泳道。
+
+## Temporal Worker 的任务隔离需求
+
+HTTP/RPC 实例通常由服务发现和路由层决定是否收到请求。Temporal Worker 则通过连接 Temporal
+并轮询 Task Queue 获得任务。从任务分发的角度看，Worker 建立连接并开始轮询，即表示它加入
+对应 Task Queue 的消费者集合：
+
+- Worker 不连接 Temporal、不轮询 Task Queue，就无法执行任务；
+- Worker 一旦轮询共享的基线 Task Queue，就可能立即收到共享环境中的任务。
+
+因此，“Workflow Type 或 Activity Type 相同”只说明 Worker 能执行什么，不能隔离它应该执行
+哪一类任务。如果开发者在本地直接连接测试环境（staging）的 Temporal 并轮询基线队列，普通
+测试请求就可能由本地代码处理；本地进程退出后，已经进入该执行路径的任务还可能长时间等待。
+
+AgentK 通过不同的物理 Task Queue 实现任务隔离：
+
+```text
+同一个 Capability / base Task Queue
+
+baseline Worker       poll  queue-b
+dev/zhangsan Worker   poll  queue-b@dev/zhangsan
+```
+
+Worker 启动时声明自己的实例泳道，并只轮询对应队列。请求携带的 Request Lane 决定新任务应被
+调度到哪条队列。开发 Worker 因而可以连接与基线 Worker 相同的 Temporal 集群，同时避免消费
+普通基线任务。
+
+## GPU 能力的局部联调场景
+
+假设一条视频生成链路包含三个 Capability：
+
+```text
+脚本规划 A  →  分镜编排 B  →  GPU 视频生成 C
+```
+
+开发者只修改分镜编排 B。为了联调真实链路，该开发者需要复用测试环境的脚本规划和 GPU 视频
+生成，但无需且通常没有足够资源为 A、C 分别启动一套实例。使用 Request Lane 后：
+
+```text
+带 dev/zhangsan 的测试请求
+
+A baseline  →  B1 dev/zhangsan  →  C baseline（共享 GPU）
+```
+
+只有测试请求进入 B1；A、C 因为没有同泳道实现而回落基线。普通测试请求仍使用
+`A → B → C`，不会路由到本地 B1。
+
+当修改目标为 GPU 能力 C 时，只需为 C 部署一个泳道 Worker。带泳道的少量测试任务进入 C1，
+普通任务继续由基线 GPU Worker 处理，从而保护共享流量，并避免为局部验证复制整套高成本环境。
+
+同样的模式也适用于新模型或算法版本验证、多服务联合调试、问题复现，以及多人共享 staging
+环境时的并行开发。
+
+## 端到端路由机制
+
+Request Lane 的端到端链路可以简化为：
+
+```text
+请求源设置 lane
+  → HTTP/gRPC 入口解析到当前请求 Context
+  → AgentK Client SDK 写入 RPC metadata
+  → AgentK API 解析并写入 Temporal header
+  → Workflow / Activity / Child Workflow 继续传播
+  → 每次调用 Capability 时按 lane 解析 Task Queue
+  → 命中泳道 Worker，或回落到 baseline Worker
+```
+
+### 请求泳道与 Worker 实例泳道
+
+两类泳道标识承担不同职责：
+
+- **Request Lane（请求泳道）**随一次请求及其派生调用传播，表示本次调用选择的泳道；
+- **Worker Instance Lane（Worker 实例泳道）**是 Worker 启动时确定的静态身份，表示该 Worker
+  所属的泳道。
+
+Worker 实例泳道不得为正在处理的请求附加泳道标识，也不得覆盖请求原有的 Request Lane。请求
+泳道只应由请求源产生，中间服务负责原样传播。
+
+### Capability 调用的逐次解析
+
+对于一次新的 Capability 调用，AgentK 按以下顺序选择目标：
+
+```text
+存在 (lane, capability) 实现  → 泳道 Task Queue
+不存在泳道实现                → baseline Task Queue
+baseline 也不存在              → Capability 不可用
+```
+
+回落按 Capability 逐段发生，因此同一条调用链可以在基线实现与泳道实现之间多次切换。
+Request Lane 不会将整个 Execution 永久绑定到一组 Worker 进程。
+
+### 基线回落的生效边界
+
+基线回落发生在**调度新任务时没有找到泳道实现**的情况下。已经调度到泳道 Task Queue 的任务，
+不会因为 Worker 随后离线而迁移到基线队列；在泳道 Worker 的注册租约过期前，新任务也仍可能
+进入该泳道队列并等待 Worker 恢复。租约过期后产生的新调用，才会重新解析并回落基线。
+
+泳道实现已经命中但业务执行失败时，AgentK 也不会将其静默改派给基线实现。业务重试、失败
+处理和路由回落属于不同机制。
+
+## 隔离范围与非目标
+
+Request Lane 隔离的是 **Capability 发现、任务路由和 Worker 消费**：
+
+- 普通基线请求不会进入泳道 Worker；
+- 带泳道的请求优先进入同泳道 Worker；
+- 未被泳道覆盖的 Capability 可以继续使用基线 Worker；
+- Worker 可以共享同一个 Temporal 集群，而轮询不同的 Task Queue。
+
+Request Lane 不会自动提供以下隔离：
+
+- 数据库、缓存、消息队列和对象存储；
+- 外部模型或 GPU 服务中的账号、配额和数据；
+- 独立 Temporal 集群或完整 PRT 环境；
+
+如果测试会修改共享数据或产生不可逆副作用，接入方仍需为这些资源设计独立命名空间、测试账号、
+幂等键或清理策略。
+
+## 接入责任边界
+
+使用 AgentK 提供的入口适配器、Client SDK 和 Worker SDK 后，AgentK 负责：
+
+- 在 AgentK RPC 与 Temporal 边界传播 Request Lane；
+- 管理泳道 Worker 的 Capability 发布及对应 Task Queue 轮询；
+- 按 `(lane, capability)` 选择实现，并在未覆盖时回落基线；
+- 保证基线请求不被路由到泳道 Worker。
+
+接入方仍需负责：
+
+- 在实际请求源设置泳道，或安装对应的快手基础设施 HTTP/gRPC 入口适配器；
+- 明确哪些 Worker 属于目标泳道，并使用 AgentK Worker SDK 启动；
+- 对数据库、缓存、消息等非 AgentK 资源单独设计隔离。
+
+具体的入口适配器、Client 发起方式和验证步骤见
+[在 Client 请求中使用 Request Lane](/client/guides/request-lane)；Worker 配置见
+[配置 Worker Lane](/worker/guides/worker-lane)。
+
+## 核心边界
+
+1. Request Lane 是随调用链传播的请求级路由选择器，不是完整测试环境。
+2. 泳道允许局部覆盖：命中同泳道实现时定向路由，否则按 Capability 回落基线。
+3. Temporal Worker 一旦轮询基线队列就可能消费共享任务，因此必须用不同 Task Queue 隔离。
+4. 基线回落只影响尚未调度的新调用，不会迁移已经进入泳道队列的任务。
+5. Request Lane 隔离任务路由，不会自动隔离数据和其它外部资源。

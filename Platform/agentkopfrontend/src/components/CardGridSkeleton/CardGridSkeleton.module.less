@@ -1,0 +1,153 @@
+/* 卡片骨架：形状对齐真实卡片，避免数据返回时的布局跳动 */
+
+/* 骨架块通用底纹，与 Ant Design Skeleton 的扫光观感保持一致 */
+.block {
+  display: block;
+  background: linear-gradient(90deg, @surface-3 25%, @surface-2 37%, @surface-3 63%);
+  background-size: 400% 100%;
+  border-radius: @border-radius-sm;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+@keyframes skeleton-shimmer {
+  from {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0 50%;
+  }
+}
+
+/* —— 封面卡（官方 Agent）—— */
+.coverCard {
+  .surface-card();
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cover {
+  height: 168px;
+  background: linear-gradient(90deg, @surface-3 25%, @surface-2 37%, @surface-3 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+/* —— 信息卡（我的 Agent）—— */
+.infoCard {
+  .surface-card();
+
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  padding: @spacing-lg;
+}
+
+.headRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.headText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: @spacing-xs;
+  min-width: 0;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+.footRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-top: @spacing-xs;
+  padding-top: @spacing-sm;
+  border-top: 1px solid @divider;
+}
+
+/* —— 紧凑卡（工具）—— */
+.compactCard {
+  .surface-card();
+
+  display: flex;
+  min-height: 148px;
+  padding: @spacing-md;
+  gap: @spacing-sm;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+/* —— 文本块 —— */
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: @spacing-xs;
+  min-width: 0;
+}
+
+/* 封面卡的文本区需要自带内边距，紧凑卡的内边距由卡片本身提供 */
+.coverCard .body {
+  padding: @spacing-lg;
+}
+
+.lineTitle {
+  width: 60%;
+  height: 16px;
+}
+
+.line {
+  width: 100%;
+  height: 12px;
+}
+
+.lineShort {
+  width: 78%;
+  height: 12px;
+}
+
+.lineTiny {
+  width: 40%;
+  height: 10px;
+}
+
+.tagRow {
+  display: flex;
+  gap: @spacing-xs;
+  margin-top: auto;
+  padding-top: @spacing-xs;
+}
+
+.tag {
+  width: 64px;
+  height: 20px;
+  border-radius: @border-radius-pill;
+}
+
+.tagSm {
+  width: 44px;
+  height: 20px;
+  border-radius: @border-radius-pill;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block,
+  .cover {
+    animation: none;
+  }
+}

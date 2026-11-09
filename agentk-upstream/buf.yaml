@@ -1,0 +1,10 @@
+version: v2
+modules:
+  - path: protocol
+lint:
+  # protocol/ 下全是上游平台 proto 的镜像，本仓无权修改，不做风格检查
+  ignore:
+    - protocol
+breaking:
+  use:
+    - FILE

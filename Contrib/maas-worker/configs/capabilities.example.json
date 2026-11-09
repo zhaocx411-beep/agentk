@@ -1,0 +1,582 @@
+{
+  "capabilities": {
+    "ffmpeg": {
+      "timeoutSeconds": 600,
+      "artifactOutputs": {
+        "audio": "audio",
+        "image": "image",
+        "video": "video"
+      },
+      "agentk": {
+        "id": "contrib.maas.ffmpeg",
+        "description": "使用受限的 FFmpeg 操作处理图片、音频和视频。",
+        "toolDescription": "当需要裁剪、拼接、变速、抽帧、抽取或混合音频、缩放、叠加文字、烧录字幕、探测媒体信息或检测场景时使用。params 和 pipeline 必须是 JSON 字符串，不能传任意命令行参数；媒体产物会登记为 AgentK artifact。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "extract_frame", "contact_sheet", "fit_image", "freeze", "animate_image",
+                "process_video", "trim", "trim_av", "clip_av", "cut", "retime", "retime_av",
+                "concat", "concat_av", "strip_audio", "add_silent_audio", "restore_audio",
+                "extract_audio", "prepare_asr_audio", "trim_leading_silence",
+                "fit_audio_duration", "mix_bgm", "mix_audio", "crop", "keyint",
+                "scale_short_edge", "overlay_region", "overlay_text", "title_card",
+                "burn_subtitles", "probe", "scene_detect", "read_aigc_label",
+                "write_aigc_label", "strip_aigc_label"
+              ],
+              "description": "单操作名称；与 pipeline 二选一"
+            },
+            "db": {
+              "type": "string",
+              "minLength": 1,
+              "description": "可选媒体产物 BlobStore db；必须与 table 同时提供，显式值覆盖 Gateway route 默认目标"
+            },
+            "table": {
+              "type": "string",
+              "minLength": 1,
+              "description": "可选媒体产物 BlobStore table；必须与 db 同时提供，显式值覆盖 Gateway route 默认目标"
+            },
+            "params": {
+              "type": "string",
+              "description": "单操作参数的 JSON 对象字符串，例如 {\"start\":1.5,\"end\":4.0}"
+            },
+            "pipeline": {
+              "type": "string",
+              "description": "多步操作的 JSON 数组字符串；与 op/params 二选一"
+            },
+            "video": {"type": "string", "minLength": 1, "description": "主视频媒体引用"},
+            "video2": {"type": "string", "minLength": 1, "description": "第二路视频媒体引用"},
+            "audio": {"type": "string", "minLength": 1, "description": "主音频媒体引用"},
+            "image": {"type": "string", "minLength": 1, "description": "图片媒体引用"},
+            "subtitle": {"type": "string", "minLength": 1, "description": "字幕媒体引用"},
+            "font": {"type": "string", "minLength": 1, "description": "字体媒体引用"},
+            "videos": {"type": "string", "minLength": 2, "description": "视频媒体引用组成的 JSON 数组字符串"},
+            "audios": {"type": "string", "minLength": 2, "description": "音频媒体引用组成的 JSON 数组字符串"}
+          },
+          "oneOf": [
+            {"required": ["op"], "not": {"required": ["pipeline"]}},
+            {"required": ["pipeline"], "not": {"required": ["op"]}}
+          ],
+          "allOf": [
+            {"if": {"required": ["db"]}, "then": {"required": ["table"]}},
+            {"if": {"required": ["table"]}, "then": {"required": ["db"]}}
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "FFmpeg 返回的媒体引用、分析结果及媒体元信息",
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"enum": ["audio", "image", "video"]},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "video": {"type": "string"},
+            "audio": {"type": "string"},
+            "image": {"type": "string"},
+            "result": {"type": "string", "description": "分析类操作返回的 JSON 字符串"},
+            "output_size": {"type": "integer"}
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "process-video": {
+      "timeoutSeconds": 660,
+      "gatewayRoute": "ffmpeg",
+      "adapter": "process_video",
+      "agentk": {
+        "id": "contrib.maas.process_video",
+        "description": "通过 MaaS Gateway 的受限 FFmpeg 服务按顺序处理单个视频。",
+        "toolDescription": "处理一个已有视频并返回新的 MP4/H.264 视频；有声音时统一编码为 AAC。支持按顺序裁剪、规格归一化、保留原声的背景降噪、画幅重构、缩放、0.5～2 倍变速和静音；多视频拼接或混入其他音频请用 compose_video，不接受原始 FFmpeg 参数。",
+        "maxAttempts": 2,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["videoUrl", "operations"],
+          "properties": {
+            "db": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore db；必须与 table 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "table": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore table；必须与 db 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "videoUrl": {"type": "string", "minLength": 1, "description": "blob://db-table/key、db:table:key 或 HTTP/HTTPS 视频引用"},
+            "operations": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "description": "按数组顺序执行的处理操作",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type", "startSeconds", "durationSeconds"],
+                    "properties": {
+                      "type": {"type": "string", "const": "trim", "description": "按时间范围精确裁剪"},
+                      "startSeconds": {"type": "number", "minimum": 0, "description": "起始秒数"},
+                      "durationSeconds": {"type": "number", "exclusiveMinimum": 0, "description": "保留时长，单位秒"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type"],
+                    "properties": {
+                      "type": {"type": "string", "const": "normalize", "description": "统一为 30fps、方形像素；有音轨时统一为 48kHz 立体声"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type"],
+                    "properties": {
+                      "type": {"type": "string", "const": "denoise", "description": "保留原始对白和有效声音，过滤稳定底噪与低频电流声"},
+                      "strength": {"type": "string", "enum": ["light", "medium", "strong"], "default": "medium", "description": "降噪强度；越强越可能损失细弱声音"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type", "width", "height"],
+                    "properties": {
+                      "type": {"type": "string", "enum": ["reframe", "resize"], "description": "reframe 默认保持比例并铺满；resize 默认拉伸"},
+                      "width": {"type": "integer", "minimum": 2, "maximum": 3840, "description": "目标宽度，会向下取偶数"},
+                      "height": {"type": "integer", "minimum": 2, "maximum": 3840, "description": "目标高度，会向下取偶数"},
+                      "fit": {"type": "string", "enum": ["cover", "contain", "stretch"], "description": "cover 裁切铺满；contain 黑边完整展示；stretch 拉伸"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type", "factor"],
+                    "properties": {
+                      "type": {"type": "string", "const": "speed", "description": "同步改变视频和音频速度"},
+                      "factor": {"type": "number", "minimum": 0.5, "maximum": 2, "description": "速度倍数"}
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["type"],
+                    "properties": {
+                      "type": {"type": "string", "const": "mute", "description": "移除全部音轨"}
+                    }
+                  }
+                ]
+              }
+            },
+            "quality": {"type": "string", "enum": ["high", "balanced", "small"], "default": "balanced", "description": "输出质量与文件大小档位"}
+          },
+          "allOf": [
+            {"if": {"required": ["db"]}, "then": {"required": ["table"]}},
+            {"if": {"required": ["table"]}, "then": {"required": ["db"]}}
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "required": ["artifacts", "durationSeconds", "width", "height"],
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"const": "video"},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"},
+                  "params": {
+                    "type": "object",
+                    "properties": {
+                      "format": {"const": "mp4"},
+                      "videoCodec": {"const": "h264"},
+                      "audioCodec": {"const": "aac"},
+                      "quality": {"type": "string", "enum": ["high", "balanced", "small"]}
+                    }
+                  }
+                }
+              }
+            },
+            "durationSeconds": {"type": "number"},
+            "width": {"type": "integer"},
+            "height": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "compose-video": {
+      "timeoutSeconds": 960,
+      "gatewayRoute": "ffmpeg",
+      "adapter": "compose_video",
+      "agentk": {
+        "id": "contrib.maas.compose_video",
+        "description": "通过 MaaS Gateway 的受限 FFmpeg 服务把多个视频、音轨和字幕合成为成片。",
+        "toolDescription": "把 1～20 个视频按 videoUrls 顺序归一为 30fps H.264/AAC MP4，可叠加最多 8 条支持偏移、裁剪、时长、音量和循环的配音或背景音频并烧录 SRT/ASS 字幕；缺失原声音轨会自动补静音。媒体处理全部在 MaaS ffmpeg 服务执行，不接受原始 FFmpeg 参数。",
+        "maxAttempts": 2,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["videoUrls"],
+          "properties": {
+            "db": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore db；必须与 table 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "table": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore table；必须与 db 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "videoUrls": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {"type": "string", "minLength": 1},
+              "description": "按成片顺序排列的 blob://db-table/key、db:table:key 或 HTTP/HTTPS 视频引用"
+            },
+            "size": {
+              "type": "string",
+              "enum": ["auto", "1080p"],
+              "default": "auto",
+              "description": "auto 跟随首段显示尺寸；1080p 保持首段比例归一到 1080 档"
+            },
+            "audioTracks": {
+              "type": "array",
+              "maxItems": 8,
+              "description": "要叠加到视频时间线的配音或背景音轨",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["url"],
+                "properties": {
+                  "url": {"type": "string", "minLength": 1, "description": "blob://db-table/key、db:table:key 或 HTTP/HTTPS 音频引用"},
+                  "startSeconds": {"type": "number", "minimum": 0, "description": "该音轨在成片时间线上的开始时间"},
+                  "trimStartSeconds": {"type": "number", "minimum": 0, "description": "从音轨自身这个时间点开始使用"},
+                  "durationSeconds": {"type": "number", "minimum": 0, "description": "最多使用该音轨多少秒；0 或缺省表示使用到音轨结尾"},
+                  "volume": {"type": "number", "minimum": 0, "maximum": 2, "default": 1, "description": "该音轨音量，0 为静音"},
+                  "loop": {"type": "boolean", "default": false, "description": "是否循环音轨直到成片结束或 durationSeconds 截止"}
+                }
+              }
+            },
+            "preserveOriginalAudio": {"type": "boolean", "default": true, "description": "是否保留拼接视频原声"},
+            "subtitleUrl": {"type": "string", "minLength": 1, "description": "可选 blob://db-table/key、db:table:key 或 HTTP/HTTPS SRT/ASS 字幕引用"},
+            "subtitleFormat": {"type": "string", "enum": ["srt", "ass"], "default": "srt"},
+            "subtitleSegments": {
+              "type": "array",
+              "maxItems": 500,
+              "description": "直接烧录的字幕时间轴；不要与 subtitleUrl 同时使用",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["startSeconds", "endSeconds", "text"],
+                "properties": {
+                  "startSeconds": {"type": "number", "minimum": 0},
+                  "endSeconds": {"type": "number", "exclusiveMinimum": 0},
+                  "text": {"type": "string", "minLength": 1}
+                }
+              }
+            }
+          },
+          "allOf": [
+            {"not": {"required": ["subtitleUrl", "subtitleSegments"]}},
+            {"if": {"required": ["db"]}, "then": {"required": ["table"]}},
+            {"if": {"required": ["table"]}, "then": {"required": ["db"]}}
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "required": ["artifacts", "durationSeconds", "clipCount", "width", "height"],
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"const": "video"},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "durationSeconds": {"type": "number"},
+            "clipCount": {"type": "integer"},
+            "width": {"type": "integer"},
+            "height": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "extract-audio": {
+      "timeoutSeconds": 660,
+      "gatewayRoute": "ffmpeg",
+      "adapter": "extract_audio",
+      "agentk": {
+        "id": "contrib.maas.extract_audio",
+        "description": "通过 MaaS Gateway 的受限 FFmpeg 服务从视频提取音频 artifact。",
+        "toolDescription": "从一个含音轨的视频中提取真实音频 artifact，可选时间范围、MP3/AAC/WAV、码率、采样率、声道与响度归一化；媒体处理全部在 MaaS ffmpeg 服务执行，不做语音识别。",
+        "maxAttempts": 2,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["videoUrl"],
+          "properties": {
+            "db": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore db；必须与 table 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "table": {"type": "string", "minLength": 1, "description": "可选媒体产物 BlobStore table；必须与 db 同时提供，显式值覆盖 Gateway route 默认目标"},
+            "videoUrl": {"type": "string", "minLength": 1, "description": "blob://db-table/key、db:table:key 或 HTTP/HTTPS 视频引用"},
+            "startSeconds": {"type": "number", "minimum": 0, "description": "可选起始秒数；缺省从头开始"},
+            "durationSeconds": {"type": "number", "exclusiveMinimum": 0, "description": "可选提取时长；缺省提取到结尾"},
+            "format": {"type": "string", "enum": ["mp3", "aac", "wav"], "default": "mp3", "description": "aac 以 M4A 容器交付"},
+            "bitRate": {"type": "string", "enum": ["96k", "128k", "192k", "256k"], "default": "192k", "description": "MP3/AAC 码率；WAV 忽略"},
+            "sampleRate": {"type": "integer", "enum": [16000, 24000, 44100, 48000], "default": 44100},
+            "channels": {"type": "integer", "enum": [1, 2], "default": 2, "description": "1 为单声道，2 为立体声"},
+            "normalizeLoudness": {"type": "boolean", "default": false, "description": "是否使用 loudnorm 做响度归一化"}
+          },
+          "allOf": [
+            {"if": {"required": ["db"]}, "then": {"required": ["table"]}},
+            {"if": {"required": ["table"]}, "then": {"required": ["db"]}}
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "required": ["artifacts", "durationSeconds", "format", "sampleRate", "channels"],
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"const": "audio"},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "durationSeconds": {"type": "number"},
+            "format": {"type": "string", "enum": ["mp3", "aac", "wav"]},
+            "sampleRate": {"type": "integer"},
+            "channels": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "indextts": {
+      "timeoutSeconds": 300,
+      "artifactOutputs": {"audio": "audio"},
+      "agentk": {
+        "id": "contrib.maas.indextts",
+        "description": "使用 IndexTTS 根据文本、参考音色和可选情感控制合成语音。",
+        "toolDescription": "当需要用参考音频克隆音色并合成中文语音时使用。必须提供文本和音色参考音频；情感模式 1/2/3 分别需要 emo_audio、emo_vec、emo_text。生成音频会登记为 AgentK artifact。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text", "spk_audio"],
+          "properties": {
+            "text": {"type": "string", "minLength": 1, "description": "待合成文本"},
+            "spk_audio": {"type": "string", "minLength": 1, "description": "音色参考音频的 db:table:key 或 base64: 引用"},
+            "emo_control_method": {"type": "integer", "enum": [0, 1, 2, 3], "default": 0},
+            "emo_audio": {"type": "string", "minLength": 1, "description": "模式 1 使用的情感参考音频"},
+            "emo_weight": {"type": "number", "minimum": 0, "maximum": 1, "default": 1},
+            "emo_vec": {
+              "type": "array",
+              "minItems": 8,
+              "maxItems": 8,
+              "items": {"type": "number", "minimum": 0},
+              "description": "模式 2 使用的八维情感向量，分量之和应不超过 1.5"
+            },
+            "emo_text": {"type": "string", "minLength": 1, "description": "模式 3 使用的情感描述"},
+            "emo_random": {"type": "boolean", "default": false},
+            "max_text_tokens_per_sentence": {"type": "integer", "minimum": 1, "default": 120},
+            "client_request_id": {"type": "string", "minLength": 1},
+            "client_start_time_ms": {"type": "integer", "minimum": 0}
+          },
+          "allOf": [
+            {"if": {"required": ["emo_control_method"], "properties": {"emo_control_method": {"const": 1}}}, "then": {"required": ["emo_audio"]}},
+            {"if": {"required": ["emo_control_method"], "properties": {"emo_control_method": {"const": 2}}}, "then": {"required": ["emo_vec"]}},
+            {"if": {"required": ["emo_control_method"], "properties": {"emo_control_method": {"const": 3}}}, "then": {"required": ["emo_text"]}}
+          ]
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "IndexTTS 生成的 WAV 媒体引用和音频元信息",
+          "required": ["artifacts"],
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"const": "audio"},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "audio": {"type": "string"},
+            "sample_rate": {"type": "integer"},
+            "duration_seconds": {"type": "number"},
+            "output_size": {"type": "integer"}
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "transnet": {
+      "timeoutSeconds": 600,
+      "agentk": {
+        "id": "contrib.maas.transnet",
+        "description": "使用 TransNet 检测视频中的镜头边界。",
+        "toolDescription": "当需要识别视频镜头切分、镜头起止时间或分镜结构时使用。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["video"],
+          "properties": {
+            "video": {"type": "string", "minLength": 1, "description": "MaaS 可访问的 db:table:key 或 base64: 媒体引用"},
+            "min_shot_duration": {"type": "number", "exclusiveMinimum": 0, "description": "可选的最短镜头时长，单位秒"}
+          }
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "TransNet 镜头检测结果",
+          "properties": {
+            "detector": {"type": "string"},
+            "fps": {"type": "number"},
+            "duration": {"type": "number"},
+            "shots": {"type": "string", "description": "JSON 编码的 [start,end] 镜头数组"},
+            "min_shot_duration": {"type": "number"}
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "melband": {
+      "timeoutSeconds": 600,
+      "artifactOutputs": {
+        "instrumental": "audio",
+        "vocals": "audio"
+      },
+      "agentk": {
+        "id": "contrib.maas.melband",
+        "description": "使用 Mel-Band Roformer 从混合音频中分离人声和伴奏。",
+        "toolDescription": "当需要从歌曲、音频或视频音轨中提取人声、伴奏，或同时返回两条声部时使用。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["audio"],
+          "properties": {
+            "audio": {"type": "string", "minLength": 1, "description": "混合音频或带音轨视频的媒体引用"},
+            "stems": {"type": "string", "enum": ["both", "vocals", "instrumental"], "default": "both"}
+          }
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "按 stems 返回人声和/或伴奏 WAV 媒体引用",
+          "required": ["artifacts"],
+          "properties": {
+            "artifacts": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["type", "uri"],
+                "properties": {
+                  "type": {"const": "audio"},
+                  "uri": {"type": "string"},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "vocals": {"type": "string"},
+            "instrumental": {"type": "string"},
+            "sample_rate": {"type": "integer"},
+            "duration_seconds": {"type": "number"},
+            "output_size": {"type": "integer"}
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "wav2vec2": {
+      "timeoutSeconds": 300,
+      "agentk": {
+        "id": "contrib.maas.wav2vec2",
+        "description": "使用 Wav2Vec2 CTC 将中文语音或视频音轨转写为文本。",
+        "toolDescription": "当需要把中文语音、音频或视频中的人声转写成文本时使用；结果内联返回，不生成媒体文件。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["audio"],
+          "properties": {
+            "audio": {"type": "string", "minLength": 1, "description": "语音或带音轨视频的 db:table:key 或 base64: 媒体引用"}
+          }
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "Wav2Vec2 中文转写结果",
+          "properties": {
+            "text": {"type": "string"},
+            "sample_rate": {"type": "integer"},
+            "duration_seconds": {"type": "number"},
+            "model": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "qwen3-embedding": {
+      "timeoutSeconds": 300,
+      "agentk": {
+        "id": "contrib.maas.qwen3_embedding",
+        "description": "使用 Qwen3-Embedding-8B 为一批文本生成向量。",
+        "toolDescription": "当需要文本语义向量、相似度检索或聚类输入时使用。query 可提供 instruction，document 侧应留空；大批量或高维结果应拆批。",
+        "maxAttempts": 1,
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["texts"],
+          "properties": {
+            "texts": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 256,
+              "items": {"type": "string", "minLength": 1},
+              "description": "需要生成向量的非空文本列表"
+            },
+            "instruction": {"type": "string", "description": "仅 query 侧使用的检索指令"},
+            "normalize": {"type": "boolean", "default": true},
+            "dimensions": {
+              "type": "integer",
+              "anyOf": [
+                {"const": 0},
+                {"minimum": 32, "maximum": 4096}
+              ],
+              "default": 0,
+              "description": "0 表示完整 4096 维，否则为 32 到 4096"
+            }
+          }
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "Qwen3 文本向量结果",
+          "properties": {
+            "embeddings": {"type": "string", "description": "JSON 编码的二维浮点数组"},
+            "count": {"type": "integer"},
+            "dimensions": {"type": "integer"},
+            "model": {"type": "string"}
+          },
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

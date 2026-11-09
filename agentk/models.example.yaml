@@ -1,0 +1,266 @@
+# agent-k 模型目录示例（与 profile 分离的独立文档，全系统唯一的秘密载体）。
+# 线上经 kconf 下发（AGENTK_MODELS_KCONF_KEY），本地开发用文件（AGENTK_MODELS）。
+# profile 只能按名引用这里的条目；本文档不被任何 HTTP 端点回显。
+#
+# key 两种写法：
+#   apiKey    直接给值（kconf 下发形态，访问控制靠 kconf key 权限，对齐 krow-llm 实践）
+#   apiKeyEnv 声明环境变量名（本地文件形态，key 不落文件）
+# 直接给值优先。经内网网关的条目（chat、Seedance、gptimage、qwenedit）
+# 改用 headers 携带鉴权。Kling video 通过 keffects 工作流执行，不需要模型凭证。
+
+version: "models-example-v1"   # 可选；省略时取文档内容 hash 前 12 位
+
+# 商品详情页结构化抓取配置（可选）：工具随代码固定存在，未配置时调用会明确失败。
+# 仅支持淘宝/天猫与 Amazon 商品详情页，分别调用两个 Apify Actor；
+# timeout 是同步调用总等待秒数，需略大于 Apify 接口固定的 300 秒上限。
+# 本地文件用 token_env 避免凭证落盘；线上 kconf 可改为 token 直接注入。
+# apify:
+#   base_url: https://api.apify.com
+#   token_env: APIFY_API_TOKEN
+#   taobao_actor: zen-studio~taobao-detail-scraper
+#   amazon_actor: junglee~amazon-crawler
+#   timeout: 310.0
+
+# name 是随代码发布的逻辑模型 ID；所属能力、协议方言和工具 schema 均由代码固定。
+# 本文件只提供 endpoint、凭证、上游 modelName 与账号资源等部署信息。
+# 未知 name 会被当前版本忽略；缺少某个已知模型不会删除对应 Tool，
+# 但实际调用未配置模型时会明确失败。
+models:
+  - name: deepseek-v4-pro
+    baseUrl: https://api.deepseek.com
+    apiKeyEnv: DS_API_KEY      # kconf 下发时改写成 apiKey: sk-xxx 直接给值
+  - name: qwen3.5-plus
+    baseUrl: https://dashscope.aliyuncs.com/compatible-mode/v1
+    apiKeyEnv: QWEN_API_KEY
+
+  # 对话模型经 kigress 内网网关：协议仍是 OpenAI 兼容的 /chat/completions，
+  # 但鉴权与路由走 headers（x-api-key + x-ks-*）而非 Bearer，故不写 apiKey。
+  # baseUrl 含租户路由前缀，截到 /v1（含），代码再拼 /chat/completions；
+  # 条目名同时是请求体的 model 字段，须与 x-ks-llm-model 指向同一模型。
+  # 同一网关下每个模型一条目，差异只在条目名与 x-ks-llm-model。
+  # - name: gpt-5.4
+  #   baseUrl: http://kigress-gateway.internal/<租户>/v1
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: gpt-5.4
+  #     x-ks-biz-scene: online
+
+  # 三条 Kling 逻辑模型保留现有 tool/profile 契约，执行后端统一为 keffects
+  # tenant=agent 的 kling_video 工作流。服务由 Kess 发现，媒体使用
+  # AGENTK_BLOB_BUCKET；可选 AGENTK_KEFFECTS_WORK_BUCKET 指定 keffects 工作桶，
+  # 未设置或与业务桶相同时不转存。因此这里不再配置 Kling endpoint 或凭证。
+  - name: kling-3.0
+
+  # 文生视频：工作流首帧传空 Media，并显式传 aspect_ratio。
+  - name: kling-3.0-t2v
+
+  # Omni：参考视频场景由 adapter 显式选择 v3_0_1 模型；baseVideo 当前不支持。
+  - name: kling-3.0-omni
+
+  # doubao-seedance-2.0 固定属于 seedance_generate_video，走火山方舟 Contents Generations API：
+  # 提交 POST {baseUrl}/contents/generations/tasks；
+  # 轮询 GET {baseUrl}/contents/generations/tasks/{id}。
+  # 一个接口覆盖文生视频、首/首尾帧图生视频与多模态参考（图 + 视频 + 音频）。
+  # modelName 是请求体中的真实接入点 ID。
+  # Kigress 网关使用 headers 原样下发鉴权与路由信息。线上由 kconf 注入真实值；
+  # 本地 models.yaml 已被 gitignore，勿把真实 x-api-key 写入本示例。
+  # - name: doubao-seedance-2.0
+  #   baseUrl: https://kigress-gateway.corp.kuaishou.com/<tenant>/doubao-seedance-2.0/api/v3
+  #   modelName: ep-xxxxxxxxxxxxxxxx-xxxxx
+  #   headers:
+  #     x-api-key: <gateway-key>
+  #     x-ks-user-key: <tenant>
+  #     x-ks-llm-model: ep-xxxxxxxxxxxxxxxx-xxxxx
+  #     x-ks-biz-scene: offline
+
+  # 三个语音合成 Tool 及其 model enum 随代码发布；这里仅配置对应账号。
+  # MiniMax：modelName 是上游模型名，groupId 是 MiniMax 账号组；
+  # 本地用 apiKeyEnv，线上 kconf 可改为 apiKey 直接注入。公网服务，IDC 需 proxyUrl。
+  # speech-2.8 系列通过文本中的 sound tags（如 (sighs)）和 <#0.3#> 控制演绎与停顿。
+  # voices 可省略：省略时用内置系统音色列表（见 tts.DefaultMiniMaxVoices）；
+  # 显式配置则整表覆盖（可只留系统音色子集，或加上账号复刻音色）。
+  # - name: minimax-speech-2.8-hd
+  #   modelName: speech-2.8-hd
+  #   groupId: "<MiniMax GroupId>"
+  #   apiKeyEnv: MINIMAX_API_KEY
+  #   # voices:                         # 可选；省略即用内置默认
+  #   #   - id: CustomVoice001
+  #   #     description: 本账号的复刻音色
+  #   # proxyUrl: http://10.68.24.18:11080
+  #
+  # Qwen3-TTS：调用 DashScope multimodal-generation 非流式接口。
+  # languageType 支持 Auto/Chinese/English 等；instructions 仅 instruct 型号支持。
+  # 上游返回的 Base64 或 24 小时临时 URL 会被立即转存，不把临时 URL 暴露为产物。
+  # voices 可省略：省略时用内置系统音色列表（见 tts.DefaultDashScopeVoices）；
+  # 显式配置则整表覆盖。
+  # - name: qwen3-tts-flash
+  #   modelName: qwen3-tts-flash
+  #   apiKeyEnv: DASHSCOPE_API_KEY
+  #   # voices:                         # 可选；省略即用内置默认
+  #   #   - id: Cherry
+  #   #     description: 只暴露这一个音色
+  #   # baseUrl: https://dashscope.aliyuncs.com
+  #   # proxyUrl: http://10.68.24.18:11080
+  #
+  # CosyVoice 3.5 Plus：调用 Workspace 的非实时
+  # SpeechSynthesizer HTTP 接口。该型号不支持系统音色，只能配置已创建完成的声音
+  # 复刻/设计 voice ID；本接入不负责创建或轮询账号级音色资源。
+  # instructions 支持自然语言演绎控制，加权长度不超过 100 字符。
+  # - name: cosyvoice-v3.5-plus
+  #   baseUrl: https://<WorkspaceId>.cn-beijing.maas.aliyuncs.com/api/v1
+  #   modelName: cosyvoice-v3.5-plus
+  #   apiKeyEnv: DASHSCOPE_API_KEY
+  #   voices:
+  #     - id: <VoiceEnrollmentService 返回的 voice_id>
+  #       description: 已完成部署的复刻音色
+  #   # proxyUrl: http://10.68.24.18:11080
+  #
+  # azure-whisper 固定属于 transcribe_audio。默认 transcribe 保留
+  # 原语言；task=translate 使用 Azure /audio/translations 翻译成英文。
+  # modelName 同时作为 Azure deployment 路径段和 multipart model 字段。
+  # audioUrl 可引用 agent-k 受管音频产物或公网 HTTP/HTTPS 音频，最大 25 MB。
+  # responseFormat 可选 json / verbose_json，缺省 verbose_json；后者返回分段时间轴。
+  # - name: azure-whisper
+  #   baseUrl: https://<resource>.openai.azure.com
+  #   modelName: <whisper-deployment>
+  #   apiVersion: "2024-06-01"
+  #   responseFormat: verbose_json
+  #   apiKeyEnv: AZURE_WHISPER_API_KEY
+  #   # proxyUrl: http://10.68.24.18:11080
+  #
+  # web_search 及其固定 model enum 随代码发布；这里配置检索账号。
+  # 两个方言都是静态 API Key + Bearer，直接给值或 apiKeyEnv 均可；
+  # 结果只回标题、链接与摘要（正文用 web_fetch 抓，别在检索这一步把上下文吃光）。
+  #
+  # volc-search —— 火山联网搜索，中文覆盖好。
+  # baseUrl 省略即官方端点；上游并发配额 5，客户端已内置同额信号量，无需配置。
+  # 公网服务，IDC 需 proxyUrl。
+  # - name: volc-search
+  #   apiKeyEnv: VOLC_SEARCH_API_KEY
+  #   # proxyUrl: http://10.68.24.18:11080
+  #
+  # brightserp —— Bright Data SERP API，抓 Google 检索结果页（由上游代抓并解析成
+  # 结构化结果，不碰 SERP HTML）。
+  # zone 用 modelName 承载：条目名是业务别名，zone 是上游标识，与 kling 用
+  # modelName 装模型段同一性质。
+  # - name: brightdata-serp
+  #   modelName: <Bright Data 控制台里的 zone 名>
+  #   apiKeyEnv: BRIGHTDATA_API_KEY
+
+  # generate_image 及其固定 model enum 随代码发布。调用后生成图片并写入产物存储，
+  # 返回 imageUrl，该 URL 可作为生视频工具的首帧入参：受管私有产物由各视频方言
+  # 读取后内联，配了 CDN 的公共产物则原样透传 URL）。
+  # z-image-turbo 的 DashScope 协议由代码固定。
+  - name: z-image-turbo
+    apiKeyEnv: IMAGE_API_KEY
+  #
+  # dashscope —— 阿里云 DashScope 同步生图协议（z-image-turbo 等）。
+  # baseUrl 省略即官网 https://dashscope.aliyuncs.com；公网服务，IDC 需 proxyUrl。
+  # - name: z-image-turbo
+  #   apiKeyEnv: DASHSCOPE_API_KEY
+  #   # proxyUrl: http://10.68.24.18:11080
+
+  # edit_image 及其固定 model enum 随代码发布，
+  # 语义同 generate_image 但必须带至少一张参考图（上下文里的 imageUrl 占位符），
+  # 模型据图 + 文字指令重绘/编辑。同样需配 AGENTK_BLOB_* 产物存储。
+  #
+  # gptimage —— Azure OpenAI gpt-image 经 kigress 内网网关（鉴权走 x-api-key + x-ks-* 头）。
+  # 参考图编辑走 /images/edits（multipart，仅允许读取当前 artifact storage 识别的受管
+  # 产物并作为文件段上传，避免任意 URL 下载造成 SSRF）；
+  # baseUrl 截到 .../openai/deployments/{deployment}（含），代码拼 /images/edits?api-version=...；
+  # apiVersion 即 edits 版本（缺省 2025-04-01-preview）；quality low/medium/high（缺省 medium）；
+  # headers 用 FORM 形态（不含 Content-Type，multipart 由代码设置）。
+  # 同一部署也能做文生图时，使用代码已声明的 gpt-image-2 逻辑 ID 单独配置。
+  # - name: gpt-image-2-edit
+  #   baseUrl: http://kigress-gateway.internal/<租户>/openai/deployments/<deployment>
+  #   apiVersion: "2025-04-01-preview"
+  #   quality: medium
+  #   maxReferenceImages: 4
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: <deployment>
+  #     x-ks-biz-scene: offline
+  #
+  # qwenedit —— 阿里 qwen-image-edit 系列经 kigress 网关（沿用 DashScope multimodal-generation
+  # 协议体，参考图作为 image 段进入 content；受管私有产物会内联为 data URI，公网 URL
+  # 原样透传。鉴权走 x-api-key + x-ks-* 头，非 Bearer）。
+  # baseUrl 含租户/模型路由前缀，截到 /api/v1（含）；条目名 = 请求体 model 字段。
+  # - name: qwen-image-edit-plus-2025-10-30
+  #   baseUrl: http://kigress-gateway.internal/<租户>/<模型id>/api/v1
+  #   maxReferenceImages: 3
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: qwen-image-edit-plus-2025-10-30
+  #     x-ks-biz-scene: online
+
+  # understand_media、understand_video_segment 与 read_file 的 model enum 随代码发布。
+  # read_file 在 PDF vision 模式下使用这里配置的媒体理解模型；可通过 Profile
+  # toolDefaults 为 read_file 设置默认 model。understand_video_segment 通过
+  # Gemini videoMetadata 在模型侧按
+  # 原视频时间区间和 FPS 精查，不生成裁剪文件。两者均同步执行并返回文字。
+  # 方向与生成类工具相反——
+  # 它消费产物而不产出产物，故不声明产物，也不需要产物存储
+  #（配了就多一条读私有产物的路；没配则一律按 http(s) 下载）。
+  #
+  # gemini-3.1-pro-preview 固定走 Vertex generateContent 协议：
+  # generateContent 协议（鉴权走 x-api-key + x-ks-* 头，非 Bearer）。
+  # 素材（视频与图片可混在一次调用里）缺省取回后内联为 base64 的 inlineData 段。
+  #
+  # remoteFetch: true 可改为把公网可达的素材 URL 直接交给上游自取（fileData），
+  # 省掉一次下载与 base64 往返。缺省关闭是实测定的：上游是从公网回来抓这个 URL 的，
+  # 内网对象存储与 staging 域名它解析不了（回 URL_ERROR-ERROR_DNS）。而这条路的
+  # 视频上限 15MB 比内联预算还紧，从来不能让你送更大的素材，只省字节搬运——
+  # 为这点收益让默认行为依赖部署环境不划算。产物确实走公网 CDN 时再打开。
+  # 打开后仍逐段判定（受管产物看 artifact.Public，另有每请求 1 视频 / 10 图的配额），
+  # 判定不过或上游实际取不到，都会自动回落内联，不必额外配置。
+  # baseUrl 含租户/项目路由前缀，截到 .../publishers/google（含），
+  # 代码再拼 /models/{模型id}:generateContent；模型 id 缺省取条目名，可用 modelName 覆盖。
+  # 注意 gemini-3-pro-image 不吃视频输入（官方文档 Video: Not supported）。
+  #
+  # 网关主机要按实际分配填，未必和其它模型同一台：gemini 这批可能只在某个地域的
+  # 网关上注册（如 -sgp 后缀那台）。打错主机时网关回 404 且响应体为空——请求根本
+  # 没转发到后端，看着像"模型不存在"，其实是路由不存在。同租户换条已知可用的路由
+  # 试一下就能分辨：能打到后端的会回业务层错误（400 之类），而不是空的 404。
+  # - name: gemini-3.1-pro-preview
+  #   baseUrl: http://kigress-gateway.internal/normal/<租户>/v1beta1/projects/<项目>/locations/global/publishers/google
+  #   # remoteFetch: true   # 产物有公网 CDN 时才打开，见上文
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: gemini-3.1-pro-preview
+  #     x-ks-biz-scene: offline
+  #
+  # gemini-3-pro-image 固定走同一个 generateContent 端点，图片作为响应里的
+  # inlineData 段回来。画幅与清晰度是 imageConfig 里两个
+  # 正交的旋钮，故不用 azure/dashscope 那套像素 size：imageSize 取 512/1K/2K/4K
+  #（缺省 1K，大小写敏感——小写的 2k 会被上游静默忽略并回一张 1K 的图；注意 512 只有
+  # flash 型号支持，pro 最低 1K）。需要产物存储。
+  # - name: gemini-3-pro-image
+  #   baseUrl: http://kigress-gateway.internal/normal/<租户>/v1beta1/projects/<项目>/locations/global/publishers/google
+  #   imageSize: "2K"
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: gemini-3-pro-image
+  #     x-ks-biz-scene: offline
+  #
+  # 参考图生图使用独立逻辑 ID gemini-3-pro-image-edit。
+  # 端点与鉴权完全一样，只是参考图作为 inlineData 段摆在指令之前（官方文档的
+  # text-and-image-to-image，支持多轮编辑与多张参考图）。
+  # 参考图张数上限：上游单请求收 14 张，省略 maxReferenceImages 时按方言缺省收窄到 10
+  #（参考图整张内联进请求，张数直接乘上传字节与输入 token）。
+  # 画幅留空时不下发 aspectRatio，由模型按输入图推断——编辑场景下强塞一个 1:1
+  # 会把不是方图的参考图裁掉。
+  # - name: gemini-3-pro-image-edit
+  #   modelName: gemini-3-pro-image   # 条目名只是标签，上游模型 id 用它指定
+  #   baseUrl: http://kigress-gateway.internal/normal/<租户>/v1beta1/projects/<项目>/locations/global/publishers/google
+  #   imageSize: "2K"
+  #   maxReferenceImages: 10
+  #   headers:
+  #     x-api-key: <网关 key>
+  #     x-ks-user-key: <租户>
+  #     x-ks-llm-model: gemini-3-pro-image
+  #     x-ks-biz-scene: offline

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>kuaishou</groupId>
+        <artifactId>agentkopbackend</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>agent-operation-backend-runner</artifactId>
+
+    <dependencies>
+        <!-- 内部依赖 -->
+        <dependency>
+            <groupId>kuaishou</groupId>
+            <artifactId>agent-operation-backend-component</artifactId>
+        </dependency>
+        <!-- 引入 ksboot runner相关依赖，以下依赖按需引入，需要开发什么类型runner引入什么类型，其余的删除 -->
+
+        <!-- 按需引入，kafka consumer 所需依赖 -->
+        <dependency>
+            <groupId>com.kuaishou.infra.boot</groupId>
+            <artifactId>ks-boot-starter-runner-kafka</artifactId>
+        </dependency>
+        <!-- 按需引入，kbus client 所需依赖 -->
+        <dependency>
+            <groupId>com.kuaishou.infra.boot</groupId>
+            <artifactId>ks-boot-starter-runner-kbus</artifactId>
+        </dependency>
+        <!-- 按需引入，rocketmq cnsumer 所需依赖 -->
+        <dependency>
+            <groupId>com.kuaishou.infra.boot</groupId>
+            <artifactId>ks-boot-starter-runner-rocketmq</artifactId>
+        </dependency>
+        <!-- 按需引入，task 所需依赖 -->
+        <dependency>
+            <groupId>com.kuaishou.infra.boot</groupId>
+            <artifactId>ks-boot-starter-runner-task</artifactId>
+        </dependency>
+        <!-- 按需引入，kess-rpc 所需依赖 -->
+        <dependency>
+            <groupId>com.kuaishou.infra.boot</groupId>
+            <artifactId>ks-boot-starter-krpc</artifactId>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- 更改打包之后的 jar name，去掉 version 信息，便于部署 -->
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.kuaishou.infra.boot.loader.DoNotMove</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

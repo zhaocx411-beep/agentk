@@ -1,0 +1,38 @@
+name: 前端质量检查
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 单元测试与覆盖率门禁
+        run: pnpm test:coverage
+
+      - name: 类型检查
+        run: pnpm type-check
+
+      - name: 代码检查
+        run: pnpm exec eslint . --ext .ts,.tsx

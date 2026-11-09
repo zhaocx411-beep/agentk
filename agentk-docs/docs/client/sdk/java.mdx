@@ -1,0 +1,96 @@
+---
+sidebar_position: 5
+title: Java Client SDK
+description: 使用 Java Client SDK 和 CompletionStage 调用 AgentKService
+slug: /client/sdk/java
+pagination_prev: client/sdk/python
+pagination_next: null
+---
+
+# Java Client SDK
+
+Java Client 提供 transport-independent 的 `AgentKClient`。普通 RPC 返回 `CompletionStage`，
+`WatchEvents` 使用 observer 与可关闭 subscription。
+
+## Maven 依赖
+
+KESS gRPC 使用：
+
+```xml
+<dependency>
+  <groupId>com.kuaishou.klingai.agentk</groupId>
+  <artifactId>agentk-client-grpc</artifactId>
+  <version>0.3.2</version>
+</dependency>
+```
+
+## 创建客户端
+
+```java
+AgentKClient client = AgentKGrpcClient.create(
+    new ClientOptions());
+```
+
+Client 实现 `AutoCloseable`，应用退出时调用 `close()`。
+
+运行前向 AgentK 平台维护方登记工作负载 KSN，并完成 Service/App 绑定。本机连接 staging 时设置
+`KWS_SERVICE_NAME='<registered-ksn>'`；部署环境由平台注入 KWS 身份。默认 Client 使用 KESS gRPC
+h2c，固定 endpoint 配置见[选择 Client transport](/client/transports)。
+
+## 直接调用 Capability
+
+```java
+Struct input = Struct.newBuilder()
+    .putFields(
+        "prompt",
+        Value.newBuilder().setStringValue("雨夜里的霓虹街道").build())
+    .build();
+
+CompletionStage<InvokeCapabilityResponse> invocation = client.invokeCapability(
+    InvokeCapabilityRequest.newBuilder()
+        .setCapabilityId("contrib.example.render")
+        .setInput(input)
+        .build());
+```
+
+`invokeCapability` 不创建 Session、Execution 或 Event。它在 Capability 完成后返回；取消对应的
+`CompletableFuture` 会取消进行中的调用。完整语义见
+[直接调用 Capability](/client/guides/invoke-capability)。
+
+## 创建 Session 并启动 Pipeline
+
+```java
+CreateSessionResponse created = client.createSession(
+    CreateSessionRequest.newBuilder()
+        .setTitle("storyboard")
+        .setProfile(profile)
+        .build()
+).toCompletableFuture().get();
+
+StartExecutionResponse started = client.startExecution(
+    StartExecutionRequest.newBuilder()
+        .setSessionId(created.getSession().getId())
+        .setPipeline(PipelineExecutionInput.newBuilder()
+            .setPipeline("storyboard_film_example")
+            .setArgs(args))
+        .build()
+).toCompletableFuture().get();
+```
+
+生成的 protobuf Java 类型位于 `com.kuaishou.klingai.agentk.api.v1`。
+
+## 观察事件
+
+```java
+EventSubscription subscription = client.watchEvents(
+    WatchEventsRequest.newBuilder()
+        .setSessionId(sessionId)
+        .setExecutionId(executionId)
+        .build(),
+    observer);
+```
+
+结束实时更新时关闭 `EventSubscription`。流结束或失败由 `EventObserver` 回调通知；持久恢复
+仍使用 `listEvents` 和 `getExecution`。
+
+真实的 Pipeline 调用见 [Go/Java Storyboard Job API](/examples/go-storyboard-job-api)。

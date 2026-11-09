@@ -1,0 +1,20 @@
+{
+  "id": "audio",
+  "name": "语音合成与识别",
+  "description": "完成文字转语音、语音转写、英文翻译和 TTS-ASR 端到端测试。",
+  "category": "音频工具",
+  "tags": ["TTS", "ASR", "语音翻译"],
+  "kind": "chat",
+  "href": "/agents/audio/chat/",
+  "status": "可使用",
+  "visual": "creative",
+  "visualLabel": "AUDIO LAB · 06",
+  "icon": "≈",
+  "accent": "#9a643d",
+  "welcomeMessage": "输入要合成的文本或提供音频 URL，并说明合成、转写或翻译目标。",
+  "starterPrompts": [
+    "把这段文字合成为自然中文语音",
+    "转写这段音频并按时间轴展示",
+    "做一次 TTS 到 ASR 的端到端测试"
+  ]
+}

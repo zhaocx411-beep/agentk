@@ -1,0 +1,34 @@
+---
+sidebar_label: 选择开发路径
+title: 选择 Client 或 Worker 开发路径
+description: 根据下游应用或能力提供方角色进入 AgentK Client 与 Worker 开发文档
+slug: /development
+pagination_prev: intro
+pagination_next: mcp
+---
+
+# 选择 Client 或 Worker 开发路径
+
+AgentK 有两条职责明确的开发路径。下游应用通过 **Client SDK** 调用 AgentK；能力提供方通过
+**Worker SDK** 发布和运行 <Capability />。两类开发者使用不同的连接方式、运行边界和公开接口。
+
+使用 Codex、Cursor 辅助开发时，可以先[接入文档 MCP](/mcp)，让 Agent 直接查询指南与 SDK API。
+
+## Client 开发
+
+Client 开发面向调用 AgentK 的下游应用。Client SDK 提供 AgentKService 方法和 protobuf 类型，
+用于创建 <Session />、启动 <Execution />、读取 Event，以及查询 <Pipeline /> 与 Capability。
+
+- [进入 Client 开发](/client)
+- [运行第一个 AgentK Session](/client/quickstart)
+
+## Worker 开发
+
+Worker 开发面向发布 Capability 的能力提供方。Worker SDK 装饰原生 Temporal Worker，负责发布
+Manifest、传播 invocation context，并支持 Workflow 组合 Capability 和上报进度。
+
+- [进入 Worker 开发](/worker)
+- [实现并发布 Capability](/worker/guides/capability)
+
+Client SDK 与 Worker SDK 不共享同一条接入链路。Client 通过 AgentKService 调用 Runtime；Worker
+连接 AgentK 使用的 Temporal namespace，并在自己的 task queue 上运行。

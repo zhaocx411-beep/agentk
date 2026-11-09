@@ -1,0 +1,262 @@
+/* Agent-Loop 详情：摄影封面 Hero + 图文三步，描述走接口 */
+
+.page {
+  .page-scroll();
+
+  padding-bottom: @spacing-section;
+}
+
+.shell {
+  .page-container();
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin: @spacing-md 0 @spacing-lg;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  cursor: pointer;
+  transition: color @transition-duration-base @transition-timing;
+
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 420px;
+  background: @azure-abyss;
+  color: @on-primary;
+  overflow: hidden;
+  border-radius: @border-radius-xl;
+}
+
+.heroPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroScrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, fade(@azure-abyss, 82%) 0%, fade(@azure-abyss, 42%) 48%, fade(@azure-abyss, 8%) 100%),
+    linear-gradient(180deg, fade(@azure-abyss, 12%) 0%, fade(@azure-abyss, 72%) 100%);
+  pointer-events: none;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 40em;
+  padding: @spacing-xxl;
+}
+
+.eyebrow {
+  margin-bottom: @spacing-sm;
+  color: fade(@on-primary, 78%);
+  font-size: @font-size-caption;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  margin: 0 0 @spacing-md;
+  color: @on-primary;
+  font-size: @font-size-display-lg;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  text-wrap: balance;
+}
+
+.pitch {
+  margin: 0 0 @spacing-md;
+  color: fade(@on-primary, 88%);
+  font-size: @font-size-lg;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.version {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: @spacing-lg;
+  padding: @spacing-xxs @spacing-sm;
+  border: 1px solid fade(@on-primary, 28%);
+  border-radius: @border-radius-sm;
+  background: fade(@on-primary, 10%);
+  color: @on-primary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.ctaSecondary:global(.ant-btn) {
+  border-color: fade(@on-primary, 48%);
+  background: fade(@on-primary, 10%);
+  color: @on-primary;
+
+  &:hover,
+  &:focus-visible {
+    border-color: @on-primary;
+    background: fade(@on-primary, 18%);
+    color: @on-primary;
+  }
+}
+
+.guide {
+  margin-top: @spacing-section;
+}
+
+.sectionTitle {
+  margin: 0 0 @spacing-xl;
+  color: @text-color;
+  font-size: @font-size-display;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+.guideList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxl;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: guide;
+}
+
+.guideItem {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.95fr) minmax(0, 1.15fr);
+  gap: @spacing-xl;
+  align-items: center;
+  counter-increment: guide;
+
+  &:nth-child(even) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.95fr);
+
+    .guideMedia {
+      order: 2;
+    }
+  }
+}
+
+.guideMedia {
+  background: @surface-3;
+  overflow: hidden;
+  border-radius: @border-radius-lg;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+}
+
+.guideCopy {
+  min-width: 0;
+
+  h3 {
+    margin: 0 0 @spacing-sm;
+    color: @text-color;
+    font-size: @font-size-xl;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+
+    &::before {
+      display: block;
+      margin-bottom: @spacing-xs;
+      color: @primary-color;
+      font-size: @font-size-caption;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      content: counter(guide, decimal-leading-zero);
+    }
+  }
+
+  p {
+    max-width: 38em;
+    margin: 0;
+    color: @text-color-secondary;
+    font-size: @font-size-lg;
+    line-height: 1.7;
+  }
+}
+
+.bottomBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  margin-top: @spacing-section;
+  padding: @spacing-lg @spacing-xl;
+  .surface-card(@border-radius-lg);
+}
+
+.bottomLead {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+@media (max-width: @screen-lg) {
+  .hero {
+    min-height: 360px;
+  }
+
+  .heroCopy {
+    padding: @spacing-xl;
+  }
+
+  .title {
+    font-size: @font-size-display;
+  }
+
+  .guideItem,
+  .guideItem:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .guideItem:nth-child(even) .guideMedia {
+    order: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back {
+    transition: none;
+  }
+}

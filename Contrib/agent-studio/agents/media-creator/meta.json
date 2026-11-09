@@ -1,0 +1,20 @@
+{
+  "id": "media-creator",
+  "name": "图文视频创作",
+  "description": "生成与编辑图片、制作和处理视频，并理解已有媒体素材。",
+  "category": "视觉创作",
+  "tags": ["图片编辑", "视频生成", "素材理解"],
+  "kind": "chat",
+  "href": "/agents/media-creator/chat/",
+  "status": "可使用",
+  "visual": "media",
+  "visualLabel": "MEDIA CREATOR · 03",
+  "icon": "◫",
+  "accent": "#dd5b46",
+  "welcomeMessage": "描述画面，或提供素材与修改目标，我会选择合适的视觉工具。",
+  "starterPrompts": [
+    "生成一张编辑部风格的咖啡品牌海报",
+    "把我的产品图改成自然光棚拍效果",
+    "根据一张首帧制作 5 秒动态视频"
+  ]
+}

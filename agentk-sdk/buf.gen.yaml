@@ -1,0 +1,45 @@
+version: v2
+clean: false
+inputs:
+  - directory: protocol
+    exclude_paths:
+      - protocol/agentk/admin
+plugins:
+  - local: protoc-gen-go
+    out: go/gen
+    opt:
+      - paths=import
+      - module=git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen
+  - local: protoc-gen-connect-go
+    out: go/gen
+    opt:
+      - paths=import
+      - module=git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/gen
+  - local: python/.venv/bin/protoc-gen-py
+    out: python/protocol/src
+    opt:
+      - init_files=false
+  - local: python/.venv/bin/protoc-gen-connectrpc
+    out: python/protocol/src
+  - protoc_builtin: java
+    protoc_path: protoc
+    out: java/protocol/src/main/java
+  - local:
+      - java
+      - -jar
+      - java/.tools/protoc-gen-connect-kotlin-0.9.0.jar
+    out: java/protocol/src/main/kotlin
+    opt:
+      - generateCoroutineMethods=true
+      - generateCallbackMethods=false
+      - generateBlockingUnaryMethods=false
+  - local: typescript/node_modules/.bin/protoc-gen-es
+    out: typescript/protocol/gen
+    include_imports: true
+    types:
+      - agentk.api.v1
+      - agentk.common.v1
+      - agentk.invocation.v1
+    opt:
+      - target=js+dts
+      - import_extension=js

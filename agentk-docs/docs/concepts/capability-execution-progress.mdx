@@ -1,0 +1,158 @@
+---
+sidebar_position: 5
+sidebar_label: 能力执行与进度回传
+title: 能力执行与进度回传
+description: 理解 Worker 如何保持业务输入纯净，并把 Workflow 进度关联到 AgentK Execution
+pagination_prev: concepts/events-stream-artifacts
+pagination_next: concepts/request-lane
+---
+
+# 能力执行与进度回传
+
+短 Activity 返回最终结果通常就够了。但视频生成、批量处理和多步骤 Workflow 可能持续数分钟：
+调用方不仅需要知道 <Execution /> 仍在运行，还希望看到“分镜已经完成”或“第一个片段已经生成”
+这类业务进度。
+
+把 `session_id`、`execution_id` 或回调地址塞进业务输入虽然可行，却会让 <Capability /> 依赖
+AgentK 的运行方式，也降低它被其他 Workflow 复用的能力。
+
+AgentK Worker SDK 使用 invocation context 传递这些坐标：
+
+```text
+下游启动 Pipeline Execution
+  → AgentK 注入 invocation context
+  → Worker SDK 传给目标 Workflow
+  → Workflow 按业务阶段上报进度
+  → AgentK 写入 Session Event Log
+  → 下游按 execution_id 读取
+```
+
+业务 Workflow 仍然只接收领域参数。
+
+## Invocation 表示一次能力调用
+
+Capability 是可复用的实现定义，invocation 是它的一次具体调用。上下文包含：
+
+- 当前 Session；
+- 当前 App；
+- `invocation_id`；
+- 调用来源和 Profile 中的名称；
+- 接收进度的内部回调队列。
+
+对于当前 <Pipeline /> 调用，`invocation_id` 与公开的 `exe_...` Execution ID 相同。下游不需要
+维护另一种 Pipeline Run ID。
+
+这些字段用于关联和路由，不属于 Capability 的业务输入。例如 Storyboard Workflow 仍然只接收：
+
+```json
+{
+  "topic": "雨夜里走过霓虹街道的猫",
+  "shots": 3,
+  "chatModel": "deepseek-v4-pro",
+  "imageModel": "z-image-turbo",
+  "videoModel": "kling-3.0"
+}
+```
+
+## Worker SDK 传播上下文
+
+AgentK 启动 Pipeline 时解析 Capability，并将 invocation context 放入 Temporal header。
+Worker SDK 在 Workflow、Child Workflow 和 Activity 之间继续传播它，不改变每一层函数签名。
+
+能力实现不需要手动解析 header。Go Worker 使用 `agentkworker.Worker`，Python Worker 使用
+`agentk.worker.Worker` 后，传播逻辑自动生效。
+
+## Workflow 按业务阶段上报
+
+Go Workflow 使用 `invocation.ReportProgress`：
+
+```go
+if err := invocation.ReportProgress(
+    ctx,
+    "board",
+    "分镜完成，共 3 镜",
+    nil,
+); err != nil {
+    workflow.GetLogger(ctx).Warn("report progress failed", "error", err)
+}
+```
+
+Python Workflow 使用等价接口：
+
+```python
+await report_progress(
+    "board",
+    "分镜完成，共 3 镜",
+)
+```
+
+每次进度包含：
+
+- `step_id`：本次 invocation 内稳定的业务步骤，例如 `board`、`clip/0`；
+- `message`：面向人的简短说明；
+- `data`：可选的结构化细节。
+
+`step_id` 不是百分比。能力提供方按领域步骤定义它；`step_id` 与 invocation 身份共同用于防止
+Activity 重试造成重复进度。并行步骤可以使用 `clip/0`、`clip/1` 这类稳定位置。
+
+## 下游从 Event 读取进度
+
+每次成功上报形成一个 `invocation_progress` Event，包含：
+
+```text
+invocation_id    对应 exe_... Execution ID
+invocation_kind  当前为 PIPELINE
+invocation_name  Profile 中的 Pipeline 名称
+step_id          业务步骤
+message          面向人的说明
+data             可选结构化内容
+```
+
+调用方可以在 `WatchEvents` 中实时收到，也可以在断线后通过 `ListEvents` 恢复。进度不替代终态：
+
+- `invocation_progress` 说明过程中完成了什么；
+- `execution_finished` 关闭本次运行；
+- `GetExecution` 提供当前状态、错误和最终 Pipeline 输出。
+
+## 进度不是 Heartbeat 或日志
+
+这些机制解决不同问题：
+
+- **Temporal Activity Heartbeat** 用于 Activity 存活检测、取消和重试；
+- **Worker 日志** 用于开发和排障；
+- **Invocation progress** 是下游可以消费的业务阶段事件。
+
+不要把日志当作产品进度，也不要把 Temporal Heartbeat 直接暴露为 AgentK Event。需要上报的
+步骤应当对能力使用者有稳定含义。
+
+## 进度回传是可选旁路
+
+同一个 Workflow 可能由 AgentK Pipeline 调用，也可能在测试中运行，或由其他 Workflow 直接
+调用。没有 invocation context 时，Worker SDK 的进度接口直接返回，业务 Workflow 继续执行。
+
+进度回传失败也不应默认让昂贵流程失败。示例 Worker 记录 replay-safe 告警并继续；是否将进度
+失败提升为业务失败，由能力自身决定。
+
+```text
+业务输入与最终输出：Capability 的稳定契约
+执行坐标与进度事件：AgentK invocation context
+```
+
+## 当前适用范围
+
+当前由 AgentK 启动的 Pipeline Workflow 可以主动上报进度。Pipeline Activity 可以正常返回
+最终结果，但 Worker SDK 暂不提供从运行中 Activity 主动上报 invocation 进度的公开接口。
+
+Tool 仍使用普通 Tool 执行事件表达开始、成功和失败；不要为 Tool 文档虚构独立的后台 Job 或
+另一套进度生命周期。
+
+完整 Worker 示例见[实现并发布 Capability](/worker/guides/capability)，Client 事件读取方式见
+[观察运行：Events、WatchEvents 与 Artifact](/concepts/events-stream-artifacts)。
+
+## 需要记住的边界
+
+1. Capability 定义业务契约，invocation 表示其中一次具体调用。
+2. Pipeline invocation ID 与公开 Execution ID 相同，使用 `exe_...`。
+3. Session 和 Execution 坐标通过 Worker SDK 传播，不进入业务参数。
+4. 进度是过程事件，最终结果仍由 Execution 终态闭合。
+5. 没有 AgentK context 时，能力仍应可以独立运行。

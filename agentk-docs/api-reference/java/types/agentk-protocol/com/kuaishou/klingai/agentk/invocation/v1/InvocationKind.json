@@ -1,0 +1,706 @@
+{
+  "view": "protocol",
+  "artifact": {
+    "groupId": "com.kuaishou.klingai.agentk",
+    "artifactId": "agentk-protocol"
+  },
+  "packageName": "com.kuaishou.klingai.agentk.invocation.v1",
+  "classNames": [
+    "InvocationKind"
+  ],
+  "type": {
+    "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind",
+    "kind": "enum",
+    "name": "InvocationKind",
+    "declaration": {
+      "text": "@Generated()public enum InvocationKind implements ProtocolMessageEnum",
+      "references": [
+        {
+          "start": 24,
+          "end": 38,
+          "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+        }
+      ]
+    },
+    "documentation": [
+      {
+        "kind": "Description",
+        "children": [
+          {
+            "kind": "P",
+            "children": [
+              {
+                "kind": "Text",
+                "text": "Protobuf enum "
+              },
+              {
+                "kind": "CodeInline",
+                "attributes": {
+                  "lang": "java"
+                },
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "agentk.invocation.v1.InvocationKind"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nestedTypes": [],
+    "enumConstants": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_PIPELINE-",
+        "name": "INVOCATION_KIND_PIPELINE",
+        "declaration": {
+          "text": "INVOCATION_KIND_PIPELINE",
+          "references": [
+            {
+              "start": 0,
+              "end": 24,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_PIPELINE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_PIPELINE = 1;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_TOOL-",
+        "name": "INVOCATION_KIND_TOOL",
+        "declaration": {
+          "text": "INVOCATION_KIND_TOOL",
+          "references": [
+            {
+              "start": 0,
+              "end": 20,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_TOOL-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_TOOL = 2;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_UNSPECIFIED-",
+        "name": "INVOCATION_KIND_UNSPECIFIED",
+        "declaration": {
+          "text": "INVOCATION_KIND_UNSPECIFIED",
+          "references": [
+            {
+              "start": 0,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_UNSPECIFIED-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_UNSPECIFIED = 0;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-UNRECOGNIZED-",
+        "name": "UNRECOGNIZED",
+        "declaration": {
+          "text": "UNRECOGNIZED",
+          "references": [
+            {
+              "start": 0,
+              "end": 12,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-UNRECOGNIZED-"
+            }
+          ]
+        },
+        "documentation": []
+      }
+    ],
+    "fields": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_PIPELINE_VALUE-",
+        "name": "INVOCATION_KIND_PIPELINE_VALUE",
+        "declaration": {
+          "text": "public final static int INVOCATION_KIND_PIPELINE_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_PIPELINE_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_PIPELINE = 1;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_TOOL_VALUE-",
+        "name": "INVOCATION_KIND_TOOL_VALUE",
+        "declaration": {
+          "text": "public final static int INVOCATION_KIND_TOOL_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 50,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_TOOL_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_TOOL = 2;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_UNSPECIFIED_VALUE-",
+        "name": "INVOCATION_KIND_UNSPECIFIED_VALUE",
+        "declaration": {
+          "text": "public final static int INVOCATION_KIND_UNSPECIFIED_VALUE",
+          "references": [
+            {
+              "start": 24,
+              "end": 57,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-INVOCATION_KIND_UNSPECIFIED_VALUE-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Description",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "CodeInline",
+                    "attributes": {
+                      "lang": "java"
+                    },
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "INVOCATION_KIND_UNSPECIFIED = 0;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "constructors": [],
+    "methods": [
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-forNumber-int-",
+        "name": "forNumber",
+        "declaration": {
+          "text": "public static InvocationKind forNumber(int value)",
+          "references": [
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 29,
+              "end": 38,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-forNumber-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The numeric wire value of the corresponding enum entry."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given numeric wire value."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static InvocationKind",
+          "references": [
+            {
+              "start": 7,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "forNumber(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getDescriptor-",
+        "name": "getDescriptor",
+        "declaration": {
+          "text": "public static Descriptors.EnumDescriptor getDescriptor()",
+          "references": [
+            {
+              "start": 41,
+              "end": 54,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static EnumDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDescriptor()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getDescriptorForType-",
+        "name": "getDescriptorForType",
+        "declaration": {
+          "text": "public final Descriptors.EnumDescriptor getDescriptorForType()",
+          "references": [
+            {
+              "start": 40,
+              "end": 60,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getDescriptorForType-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final EnumDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getDescriptorForType()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getNumber-",
+        "name": "getNumber",
+        "declaration": {
+          "text": "public final int getNumber()",
+          "references": [
+            {
+              "start": 17,
+              "end": 26,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getNumber-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final int",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getNumber()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getValueDescriptor-",
+        "name": "getValueDescriptor",
+        "declaration": {
+          "text": "public final Descriptors.EnumValueDescriptor getValueDescriptor()",
+          "references": [
+            {
+              "start": 45,
+              "end": 63,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-getValueDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "final EnumValueDescriptor",
+          "references": []
+        },
+        "summarySignature": {
+          "text": "getValueDescriptor()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-internalGetValueMap-",
+        "name": "internalGetValueMap",
+        "declaration": {
+          "text": "public static Internal.EnumLiteMap<InvocationKind> internalGetValueMap()",
+          "references": [
+            {
+              "start": 35,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 51,
+              "end": 70,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-internalGetValueMap-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static EnumLiteMap<InvocationKind>",
+          "references": [
+            {
+              "start": 19,
+              "end": 33,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "internalGetValueMap()",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-com-google-protobuf-Descriptors-EnumValueDescriptor-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static InvocationKind valueOf(Descriptors.EnumValueDescriptor desc)",
+          "references": [
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 29,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-com-google-protobuf-Descriptors-EnumValueDescriptor-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static InvocationKind",
+          "references": [
+            {
+              "start": 7,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(EnumValueDescriptor desc)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-int-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "@Deprecated()public static InvocationKind valueOf(int value)",
+          "references": [
+            {
+              "start": 1,
+              "end": 11,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html"
+            },
+            {
+              "start": 27,
+              "end": 41,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 42,
+              "end": 49,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-int-"
+            }
+          ]
+        },
+        "documentation": [
+          {
+            "kind": "Param",
+            "name": "value",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The numeric wire value of the corresponding enum entry."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Return",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "The enum associated with the given numeric wire value."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Deprecated",
+            "children": [
+              {
+                "kind": "P",
+                "children": [
+                  {
+                    "kind": "Text",
+                    "text": "Use "
+                  },
+                  {
+                    "kind": "DocumentationLink",
+                    "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-forNumber-int-",
+                    "children": [
+                      {
+                        "kind": "Text",
+                        "text": "forNumber"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Text",
+                    "text": " instead."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "summaryType": {
+          "text": "static InvocationKind",
+          "references": [
+            {
+              "start": 7,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(int value)",
+          "references": []
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-java-lang-String-",
+        "name": "valueOf",
+        "declaration": {
+          "text": "public static InvocationKind valueOf(String name)",
+          "references": [
+            {
+              "start": 14,
+              "end": 28,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 29,
+              "end": 36,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-valueOf-java-lang-String-"
+            },
+            {
+              "start": 37,
+              "end": 43,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static InvocationKind",
+          "references": [
+            {
+              "start": 7,
+              "end": 21,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "valueOf(String name)",
+          "references": [
+            {
+              "start": 8,
+              "end": 14,
+              "href": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-values-",
+        "name": "values",
+        "declaration": {
+          "text": "public static Array<InvocationKind> values()",
+          "references": [
+            {
+              "start": 20,
+              "end": 34,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            },
+            {
+              "start": 36,
+              "end": 42,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind#agentk-protocol-com-kuaishou-klingai-agentk-invocation-v1-InvocationKind-values-"
+            }
+          ]
+        },
+        "documentation": [],
+        "summaryType": {
+          "text": "static Array<InvocationKind>",
+          "references": [
+            {
+              "start": 13,
+              "end": 27,
+              "href": "/reference/java/protocol/agentk-protocol/com/kuaishou/klingai/agentk/invocation/v1/InvocationKind"
+            }
+          ]
+        },
+        "summarySignature": {
+          "text": "values()",
+          "references": []
+        }
+      }
+    ],
+    "inheritedMembers": []
+  }
+}

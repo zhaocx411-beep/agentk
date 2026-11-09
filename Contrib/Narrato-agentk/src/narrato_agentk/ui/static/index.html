@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Narrato AgentK 纪录片解说 Pipeline 测试控制台"
+    />
+    <title>Narrato Control Room</title>
+    <link rel="stylesheet" href="/static/app.css?v=20260818-voices" />
+    <script src="/static/app.js?v=20260818-voices" defer></script>
+  </head>
+  <body>
+    <div class="page-grid" aria-hidden="true"></div>
+
+    <header class="masthead reveal reveal-1">
+      <div class="brand-lockup">
+        <span class="brand-mark">N/A</span>
+        <div>
+          <p class="overline">NARRATO / CONTROL ROOM</p>
+          <p class="edition">DOCUMENTARY PIPELINE · MVP 0.1</p>
+        </div>
+      </div>
+      <div class="system-state" id="system-state">
+        <span class="signal"></span>
+        <span id="system-state-label">正在连接控制台</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal reveal-2">
+        <div class="hero-index">01 / TEST BENCH</div>
+        <h1>把一段影像，<br />拆成<span>可审计</span>的成片流水线。</h1>
+        <p>
+          上传、生成、观察、导出。左侧定义输入，右侧逐帧查看 AgentK
+          的请求、进度事件和最终输出。
+        </p>
+      </section>
+
+      <div class="workbench reveal reveal-3">
+        <section class="control-deck" aria-labelledby="input-heading">
+          <div class="section-heading">
+            <div>
+              <span class="section-no">01</span>
+              <h2 id="input-heading">输入台</h2>
+            </div>
+            <span class="section-note">INPUT CONTRACT</span>
+          </div>
+
+          <fieldset class="pipeline-picker">
+            <legend>选择 Pipeline</legend>
+            <div class="pipeline-tabs" role="radiogroup" aria-label="Pipeline">
+              <button
+                class="pipeline-tab active"
+                type="button"
+                role="radio"
+                aria-checked="true"
+                data-pipeline="documentary_video"
+              >
+                <strong>一键成片</strong>
+                <small>documentary_video</small>
+              </button>
+              <button
+                class="pipeline-tab"
+                type="button"
+                role="radio"
+                aria-checked="false"
+                data-pipeline="documentary_script"
+              >
+                <strong>生成脚本</strong>
+                <small>documentary_script</small>
+              </button>
+              <button
+                class="pipeline-tab"
+                type="button"
+                role="radio"
+                aria-checked="false"
+                data-pipeline="documentary_render"
+              >
+                <strong>脚本渲染</strong>
+                <small>documentary_render</small>
+              </button>
+            </div>
+          </fieldset>
+
+          <div class="model-rack" aria-label="当前部署模型">
+            <div class="rack-head">
+              <span>当前部署模型</span>
+              <span class="locked-tag">LOCKED BY DEPLOYMENT</span>
+            </div>
+            <div class="model-row">
+              <div class="model-chip">
+                <span>VISION</span>
+                <strong id="vision-model">—</strong>
+              </div>
+              <div class="model-chip">
+                <span>TEXT</span>
+                <strong id="text-model">—</strong>
+              </div>
+              <div class="model-chip">
+                <span>TTS</span>
+                <strong id="tts-model">—</strong>
+              </div>
+            </div>
+            <p class="model-hint">
+              当前版本按部署配置固定；逐任务模型选择已完成架构设计，尚未接入执行契约。
+            </p>
+          </div>
+
+          <div class="form-block" data-for="documentary_video,documentary_script">
+            <div class="block-title">
+              <span>A</span>
+              <h3>源视频</h3>
+            </div>
+            <label class="upload-zone" id="upload-zone" for="video-file">
+              <input
+                id="video-file"
+                type="file"
+                accept="video/mp4,video/quicktime,video/x-matroska,video/webm"
+              />
+              <span class="upload-glyph">↥</span>
+              <strong id="upload-title">拖入视频，或点击选择</strong>
+              <small>MP4 / MOV / MKV / WEBM · MAX 512 MiB</small>
+            </label>
+            <button class="secondary-action" id="upload-button" type="button">
+              上传并生成 Artifact URI
+            </button>
+            <label class="field full">
+              <span>VIDEO URI <em>必填</em></span>
+              <input
+                id="video-uri"
+                type="url"
+                placeholder="https://cdn.example/source.mp4"
+                autocomplete="off"
+              />
+            </label>
+          </div>
+
+          <div class="form-block" data-for="documentary_video,documentary_script">
+            <div class="block-title">
+              <span>B</span>
+              <h3>创作要求</h3>
+            </div>
+            <div class="field-grid">
+              <label class="field">
+                <span>THEME</span>
+                <input id="theme" type="text" placeholder="自然纪录片" />
+              </label>
+              <label class="field full">
+                <span>INSTRUCTIONS</span>
+                <textarea
+                  id="instructions"
+                  rows="3"
+                  placeholder="语气克制，只描述画面可确认的事实"
+                ></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block hidden" data-for="documentary_render">
+            <div class="block-title">
+              <span>A</span>
+              <h3>纪录片脚本</h3>
+            </div>
+            <div class="script-tools">
+              <label class="secondary-action file-action" for="script-file">
+                导入 script.json
+                <input id="script-file" type="file" accept="application/json,.json" />
+              </label>
+              <button class="text-action" id="sample-script" type="button">填入示例</button>
+            </div>
+            <label class="field full">
+              <span>SCRIPT JSON <em>必填</em></span>
+              <textarea
+                id="script-json"
+                class="code-input"
+                rows="17"
+                spellcheck="false"
+                placeholder='{"version":"1","sourceVideoUri":"https://...","segments":[]}'
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="form-block" data-for="documentary_video,documentary_render">
+            <div class="block-title">
+              <span>C</span>
+              <h3>渲染参数</h3>
+            </div>
+            <div class="field-grid two-col">
+              <label class="field full">
+                <span>QWEN VOICE ID <em>必填</em></span>
+                <select id="voice-id" aria-describedby="voice-description">
+                  <option value="">正在读取 AgentK 音色…</option>
+                </select>
+                <small class="field-note" id="voice-description">
+                  候选由当前 AgentK Qwen TTS 音色目录提供
+                </small>
+              </label>
+              <label class="field">
+                <span>ASPECT</span>
+                <select id="aspect">
+                  <option value="source">跟随原视频</option>
+                  <option value="16:9">16:9 横屏</option>
+                  <option value="9:16">9:16 竖屏</option>
+                  <option value="1:1">1:1 方形</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>NARRATION VOLUME</span>
+                <div class="range-wrap">
+                  <input id="volume" type="range" min="0" max="2" step="0.1" value="1" />
+                  <output id="volume-output">1.0</output>
+                </div>
+              </label>
+              <label class="switch-field full">
+                <span>
+                  <strong>烧录字幕</strong>
+                  <small>AgentK Core / libass 默认样式</small>
+                </span>
+                <input id="subtitles" type="checkbox" checked />
+                <i aria-hidden="true"></i>
+              </label>
+            </div>
+          </div>
+
+          <details class="advanced-block">
+            <summary>高级：Session 与远程访问</summary>
+            <label class="field full">
+              <span>SESSION ID</span>
+              <input id="session-id" type="text" placeholder="留空则自动创建" />
+            </label>
+            <label class="field full console-token-field">
+              <span>CONSOLE TOKEN</span>
+              <input
+                id="console-token"
+                type="password"
+                placeholder="远程访问时填写 NARRATO_CONSOLE_TOKEN"
+                autocomplete="off"
+              />
+            </label>
+          </details>
+
+          <div class="run-strip">
+            <button class="primary-action" id="run-button" type="button">
+              <span>启动 Pipeline</span>
+              <b aria-hidden="true">→</b>
+            </button>
+            <button class="danger-action" id="cancel-button" type="button" disabled>
+              取消远端执行
+            </button>
+          </div>
+          <p class="form-error" id="form-error" role="alert"></p>
+        </section>
+
+        <section class="monitor-deck" aria-labelledby="monitor-heading">
+          <div class="section-heading dark-heading">
+            <div>
+              <span class="section-no">02</span>
+              <h2 id="monitor-heading">监看台</h2>
+            </div>
+            <span class="section-note">EXECUTION TELEMETRY</span>
+          </div>
+
+          <div class="execution-card">
+            <div>
+              <span>SESSION</span>
+              <strong id="active-session">尚未启动</strong>
+            </div>
+            <div>
+              <span>EXECUTION</span>
+              <strong id="active-execution">—</strong>
+            </div>
+            <div class="execution-status idle" id="execution-status">IDLE</div>
+          </div>
+
+          <div class="progress-panel">
+            <div class="progress-readout">
+              <div>
+                <span id="current-stage">WAITING FOR INPUT</span>
+                <strong id="progress-percent">0%</strong>
+              </div>
+              <div class="progress-track" aria-label="执行进度">
+                <i id="progress-bar"></i>
+              </div>
+            </div>
+            <ol class="stage-rail" id="stage-rail">
+              <li data-stage="validate_input"><i></i><span>验证输入</span><b>05</b></li>
+              <li data-stage="analyze_video"><i></i><span>视频理解</span><b>10—35</b></li>
+              <li data-stage="generate_script"><i></i><span>生成脚本</span><b>40</b></li>
+              <li data-stage="synthesize_speech"><i></i><span>合成配音</span><b>45—60</b></li>
+              <li data-stage="cut_segments"><i></i><span>裁剪片段</span><b>60—75</b></li>
+              <li data-stage="compose_batches"><i></i><span>批次合成</span><b>75—95</b></li>
+              <li data-stage="finalize"><i></i><span>整理产物</span><b>98</b></li>
+              <li data-stage="complete"><i></i><span>完成</span><b>100</b></li>
+            </ol>
+          </div>
+
+          <div class="data-console">
+            <div class="console-tabs" role="tablist">
+              <button class="console-tab active" type="button" data-panel="request">请求 JSON</button>
+              <button class="console-tab" type="button" data-panel="events">
+                事件 <span id="event-count">0</span>
+              </button>
+              <button class="console-tab" type="button" data-panel="output">输出 JSON</button>
+            </div>
+
+            <div class="console-panel active" id="panel-request">
+              <div class="panel-toolbar">
+                <span>即将提交给 AgentK 的 Pipeline 参数</span>
+                <button type="button" data-copy="request-json">复制</button>
+              </div>
+              <pre id="request-json"></pre>
+            </div>
+
+            <div class="console-panel" id="panel-events">
+              <div class="panel-toolbar">
+                <span>按时间顺序恢复的执行事件</span>
+                <button type="button" id="clear-events">清空显示</button>
+              </div>
+              <div class="event-log" id="event-log">
+                <p class="empty-state">执行启动后，进度事件会出现在这里。</p>
+              </div>
+            </div>
+
+            <div class="console-panel" id="panel-output">
+              <div class="panel-toolbar">
+                <span>Pipeline 最终输出</span>
+                <div>
+                  <button type="button" data-copy="output-json">复制</button>
+                  <button type="button" id="save-output" disabled>保存 JSON</button>
+                </div>
+              </div>
+              <pre id="output-json">等待执行结果…</pre>
+            </div>
+          </div>
+
+          <div class="artifact-card hidden" id="artifact-card">
+            <div class="artifact-stamp">FINAL<br />ARTIFACT</div>
+            <div>
+              <span>成片已经生成</span>
+              <strong id="artifact-description">纪录片解说成片</strong>
+              <a id="artifact-link" href="#" target="_blank" rel="noreferrer">打开 / 下载视频 ↗</a>
+            </div>
+          </div>
+
+          <button class="render-script-action hidden" id="render-script-button" type="button">
+            使用这份脚本进入渲染台 →
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <span>NARRATO AGENTK · LOCAL TEST CONSOLE</span>
+      <span>服务端持有 AgentK 凭证 · 浏览器仅提交业务参数</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

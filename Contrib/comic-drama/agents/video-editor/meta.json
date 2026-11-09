@@ -1,0 +1,20 @@
+{
+  "id": "video-editor",
+  "name": "视频剪辑与生成",
+  "description": "组合视频生成、裁剪、合成、字幕、音频提取和质量理解工具。",
+  "category": "视觉创作",
+  "tags": ["视频剪辑", "自动字幕", "多轨合成"],
+  "kind": "chat",
+  "href": "/agents/video-editor/chat/",
+  "status": "可使用",
+  "visual": "media",
+  "visualLabel": "VIDEO EDITOR · 07",
+  "icon": "✂",
+  "accent": "#dd5b46",
+  "welcomeMessage": "提供已有素材 URL 与剪辑目标，我会选择正确的处理和生成流程。",
+  "starterPrompts": [
+    "裁剪视频并统一为竖屏 1080p",
+    "为这个视频自动转写并烧录字幕",
+    "把多个片段和配音合成为一条视频"
+  ]
+}

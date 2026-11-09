@@ -1,0 +1,27 @@
+.tableWrapper {
+  flex: 1;
+  width: 100%;
+  min-height: 300px;
+  background: @canvas;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+
+  :global(.ant-table-wrapper) {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  // 滚动条样式由 global.less 全局细滚动条规范统一提供，无需重复定义
+}
+
+// --- 移动端适配：表格横向滚动 ---
+@media (max-width: @screen-md) {
+  .tableWrapper {
+    overflow-x: auto;
+
+    :global(.ant-table) {
+      min-width: 600px;
+    }
+  }
+}

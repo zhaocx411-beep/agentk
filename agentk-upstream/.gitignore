@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+*.iml
+.vscode/
+*.swp
+*.test
+coverage.out
+.coverage
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.py[cod]
+dist/

@@ -1,0 +1,16 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a03",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "round.completed",
+  "data": {
+    "usage": {
+      "inputTokens": 1842,
+      "outputTokens": 176,
+      "cacheReadTokens": 1536
+    },
+    "modelMillis": 2140,
+    "finishReason": "tool_calls"
+  },
+  "createdAt": "2026-07-30T12:00:04Z"
+}

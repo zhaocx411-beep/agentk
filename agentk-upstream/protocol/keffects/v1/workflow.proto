@@ -1,0 +1,139 @@
+syntax = "proto3";
+
+package com.ytech.keffects.rpc.protobuf.workflow;
+
+message SubmitRequest {
+  string request_id = 1;
+  int64 tenant_id = 2;
+  int64 workflow_id = 3;
+  repeated Argument arguments = 4;
+  map<string, string> callback_payload = 5;
+  MqTopic callback_topic = 6;
+  string output_bucket_name = 7;
+  string tenant_name = 8;
+  string workflow_name = 9;
+}
+
+message MqTopic {
+  string name = 1;
+  string app_key = 2;
+  MqType type = 3;
+}
+
+enum MqType {
+  UNKNOWN_MQ_TYPE = 0;
+  KAFKA = 1;
+  ROCKET_MQ = 2;
+}
+
+message SubmitResponse {
+  string request_id = 1;
+  int64 workflow_instance_id = 2;
+  int32 code = 3;
+  string message = 4;
+}
+
+message QueryRequest {
+  string request_id = 1;
+  int64 tenant_id = 2;
+  int64 workflow_instance_id = 3;
+  string tenant_name = 4;
+}
+
+message QueryResponse {
+  string request_id = 1;
+  int64 workflow_instance_id = 2;
+  int32 status = 3;
+  string message = 4;
+  repeated Argument outputs = 5;
+  map<string, string> callback_payload = 6;
+  ErrorDetail error_detail = 7;
+}
+
+message EstimateTimeResponse {
+  string request_id = 1;
+  int64 workflow_instance_id = 2;
+  int64 estimate_end_time = 3;
+  int32 code = 4;
+  string message = 5;
+}
+
+message CancelRequest {
+  string request_id = 1;
+  int64 tenant_id = 2;
+  int64 workflow_instance_id = 3;
+  string tenant_name = 4;
+}
+
+message CancelResponse {
+  string request_id = 1;
+  int64 workflow_instance_id = 2;
+  int32 code = 3;
+  string message = 4;
+}
+
+message ErrorDetail {
+  string reason = 1;
+  string message = 2;
+  map<string, string> extra_info = 3;
+}
+
+message Argument {
+  string name = 1;
+  oneof value {
+    int32 int32_value = 2;
+    int64 int64_value = 3;
+    bool bool_value = 4;
+    double float_value = 5;
+    string string_value = 6;
+    Media media_value = 7;
+    ListInt32 int32_values = 8;
+    ListInt64 int64_values = 9;
+    ListBool bool_values = 10;
+    ListDouble float_values = 11;
+    ListString string_values = 12;
+    ListMedia media_values = 13;
+    MapStringString object = 14;
+  }
+}
+
+message ListInt32 {
+  repeated int32 value = 1;
+}
+
+message ListInt64 {
+  repeated int64 value = 1;
+}
+
+message ListBool {
+  repeated bool value = 1;
+}
+
+message ListDouble {
+  repeated double value = 1;
+}
+
+message ListString {
+  repeated string value = 1;
+}
+
+message ListMedia {
+  repeated Media value = 1;
+}
+
+message MapStringString {
+  map<string, string> value = 1;
+}
+
+message Media {
+  string bucket = 1;
+  string key = 2;
+}
+
+service WorkflowService {
+  rpc Submit(SubmitRequest) returns (SubmitResponse);
+  rpc QuerySubmitRequest(QueryRequest) returns (SubmitRequest);
+  rpc QueryResult(QueryRequest) returns (QueryResponse);
+  rpc EstimateTime(QueryRequest) returns (EstimateTimeResponse);
+  rpc Cancel(CancelRequest) returns (CancelResponse);
+}

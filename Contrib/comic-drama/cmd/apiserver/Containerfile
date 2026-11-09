@@ -1,0 +1,37 @@
+# 通用容器镜像（Docker / Podman）：Agent Studio API Server。
+# 公司容器云部署用 deploy/container/Dockerfile；这个文件用于本地或
+# 标准容器环境。从仓库根目录构建：
+#   podman build -f cmd/apiserver/Containerfile -t agent-studio-apiserver .
+
+FROM docker.io/library/golang:1.26-bookworm AS build
+
+WORKDIR /src
+
+# 私有 SDK 依赖公司 Go 代理；构建时可用 --build-arg 覆盖。
+ARG GOPROXY=https://goproxy.corp.kuaishou.com,direct
+ENV GOPROXY=${GOPROXY} GOSUMDB=off
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -trimpath -ldflags="-s -w" -o /out/apiserver ./cmd/apiserver
+
+FROM docker.io/library/debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV API_HOST=0.0.0.0 \
+    API_PORT=8080
+
+# 前端与漫剧缺省 profile 都内嵌在二进制里；热修 prompt 用 PROFILE_FILE。
+COPY --from=build /out/apiserver /usr/local/bin/agent-studio-apiserver
+
+USER 65532:65532
+
+EXPOSE 8080
+
+ENTRYPOINT ["/usr/local/bin/agent-studio-apiserver"]

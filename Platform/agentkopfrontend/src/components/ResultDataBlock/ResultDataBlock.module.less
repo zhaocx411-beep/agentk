@@ -1,0 +1,145 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  min-height: @control-height-sm;
+}
+
+.title {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.kv {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 1px solid @hairline;
+  background: @canvas;
+  border-radius: @border-radius-md;
+}
+
+.kvRow {
+  display: grid;
+  grid-template-columns: minmax(0, 9em) minmax(0, 1fr);
+  align-items: start;
+  gap: @spacing-md;
+  padding: @spacing-sm @spacing-md;
+  border-bottom: 1px solid @divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  dt {
+    min-width: 0;
+    padding-top: 2px;
+    color: @text-color-tertiary;
+    font-size: @font-size-caption;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  dd {
+    min-width: 0;
+    margin: 0;
+    color: @text-color;
+    font-size: @font-size-base;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+.kvRowStack {
+  grid-template-columns: minmax(0, 1fr);
+  gap: @spacing-xs;
+}
+
+.text {
+  display: block;
+  max-width: 100%;
+  color: @text-color;
+
+  &:global(.ant-typography) {
+    color: @text-color;
+    font-size: @font-size-base;
+  }
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  max-width: 280px;
+}
+
+.mediaList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: @spacing-sm;
+  width: 100%;
+}
+
+.thumb {
+  display: block;
+  width: 160px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid @hairline;
+  background: @surface-3;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+}
+
+.mediaList .thumb {
+  width: 100%;
+}
+
+.jsonBlock {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.jsonLabel {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.json {
+  max-height: 280px;
+  margin: 0;
+  padding: @spacing-sm @spacing-md;
+  border: 1px solid @hairline;
+  background: @canvas;
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+  line-height: 1.55;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: @border-radius-md;
+}
+
+@media (max-width: @screen-md) {
+  .kvRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: @spacing-xxs;
+  }
+}

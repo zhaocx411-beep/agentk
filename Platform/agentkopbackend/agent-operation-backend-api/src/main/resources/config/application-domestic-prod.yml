@@ -1,0 +1,47 @@
+logging:
+  level:
+    com.kuaishou.agent.operation.backend: info
+    com.kuaishou.infra.boot: info
+
+# 国内生产 / PRT 配置（与 domestic-dev 对齐，可用环境变量覆盖）
+agent:
+  operation:
+    backend:
+      auth:
+        enabled: true
+      # 开启媒体上传：密钥请用环境变量 AGENTKOP_BLOBSTORE_ACCESS_KEY / AGENTKOP_BLOBSTORE_SECRET_KEY
+      # （与 playground BlobStoreConfig 同一套 bucket 凭据；下方为联调默认，可用环境变量覆盖）
+      media:
+        enabled: true
+        bucket: user-zhangyuchen05
+        key-prefix: agentkopbackend/
+        cdn-project-name: playground-battle
+        office-http-base: https://bs3-hb1.corp.kuaishou.com
+        access-key: ${AGENTKOP_BLOBSTORE_ACCESS_KEY:7f194195353a4ec6a91041ab62adbf9e}
+        secret-key: ${AGENTKOP_BLOBSTORE_SECRET_KEY:YmYwNWU5MzYtNGIwMy00NzdkLTkwMTgtMmRkYzdjMmYzZTRl}
+      agentk:
+        # 出站 gRPC（KESS）；base-url 仅 batch-eval 遗留。天上自动过身份。
+        connect-timeout-ms: 3000
+        json-read-timeout-ms: 120000
+        grpc-read-timeout-ms: 120000
+        grpc-invoke-timeout-ms: 900000
+
+# 国内环境：通过 kwaiproxy 连接 gifshow 库（agenkopgifshow）
+ksboot:
+  data-sources:
+    - name: agenkopgifshow
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://kwaiproxy.staging.mysql.internal:6032/gifshow?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: gifshow_49580_v1_rw
+#    password: REDACTED
+
+# 本机 MySQL 联调（需要时注释掉上方 spring.datasource，改用下方配置）
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/gifshow?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: root
+#    password:

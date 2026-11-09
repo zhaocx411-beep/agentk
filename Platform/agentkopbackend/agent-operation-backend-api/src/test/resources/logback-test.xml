@@ -1,0 +1,28 @@
+<configuration debug="false" scan="false">
+
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>
+
+    <property name="DEFAULT_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] \\(%F:%L\\) - %msg%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${DEFAULT_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.kuaishou.infra.kws.util.KwsUtils" level="error"/>
+    <logger name="com.kuaishou.kess.common.DruidLogger" level="warn"/>
+    <logger name="com.kuaishou.kess.configurator.FileSystemConfigReader" level="warn"/>
+    <logger name="org.apache.kafka.clients.producer.KafkaProducer" level="error"/>
+
+    <logger name="com.kuaishou.framework.zookeeper" level="warn"/>
+    <logger name="org.apache.zookeeper" level="warn"/>
+    <logger name="org.apache.curator" level="warn"/>
+    <logger name="org.apache.kafka" level="warn"/>
+    <logger name="speed4j" level="warn"/>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

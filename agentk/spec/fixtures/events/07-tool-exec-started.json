@@ -1,0 +1,10 @@
+{
+  "eventId": "evt_0191f38d-99f2-7d91-9f2b-712ab18e0a07",
+  "executionId": "exe_0191f38d-99f2-7d91-9f2b-712ab18e0a00",
+  "roundId": "rnd_01k1n7yq8x",
+  "kind": "tool.exec_started",
+  "data": {
+    "toolCallId": "call_9f2c1a"
+  },
+  "createdAt": "2026-07-30T12:00:04Z"
+}

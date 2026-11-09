@@ -1,0 +1,20 @@
+{
+  "id": "web-research",
+  "name": "电商信息爬取",
+  "description": "提取淘宝、天猫和 Amazon 商品详情，并补充品牌与市场检索。",
+  "category": "电商工具",
+  "tags": ["商品详情", "电商图片", "品牌检索"],
+  "kind": "chat",
+  "href": "/agents/web-research/chat/",
+  "status": "可使用",
+  "visual": "research",
+  "visualLabel": "WEB RESEARCH · 04",
+  "icon": "⌕",
+  "accent": "#167860",
+  "welcomeMessage": "提供商品详情页 URL，或告诉我需要查找的商品与品牌资料。",
+  "starterPrompts": [
+    "提取这个淘宝商品详情页的完整信息",
+    "整理这个 Amazon 商品的规格、评价和图片",
+    "检索一个品牌及其同类商品的市场资料"
+  ]
+}

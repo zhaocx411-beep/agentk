@@ -1,0 +1,289 @@
+.page {
+  .page-scroll();
+
+  background: @canvas-soft;
+}
+
+.container {
+  .page-container();
+
+  padding-top: @spacing-xl;
+  padding-bottom: @spacing-xxl;
+}
+
+.hero {
+  max-width: 48em;
+  margin-bottom: @spacing-lg;
+}
+
+.contextLabel {
+  margin: 0 0 @spacing-xs;
+  color: @primary-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.title {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-display;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.description {
+  margin: @spacing-sm 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-lg;
+  line-height: 1.6;
+}
+
+.notice {
+  margin-bottom: @spacing-lg;
+  padding: @spacing-sm @spacing-md;
+  border-color: @hairline;
+  background: @surface-2;
+
+  :global(.ant-alert-message) {
+    color: @text-color;
+    font-size: @font-size-base;
+    font-weight: 500;
+  }
+
+  :global(.ant-alert-description) {
+    color: @text-color-secondary;
+    font-size: @font-size-caption;
+  }
+}
+
+.filterPanel {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  margin-bottom: @spacing-lg;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  border-radius: @border-radius-lg;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  gap: @spacing-sm;
+}
+
+.search,
+.filterSelect {
+  width: 100%;
+}
+
+.searchIcon {
+  color: @text-color-tertiary;
+}
+
+.resultMeta {
+  margin-top: @spacing-sm;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: @spacing-md;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  border-radius: @border-radius-lg;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    transform @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: @hairline-strong;
+    transform: translateY(@card-lift);
+  }
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-sm;
+}
+
+.toolMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: @control-height-base;
+  height: @control-height-base;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-size: @font-size-xl;
+  flex-shrink: 0;
+  border-radius: @border-radius-md;
+}
+
+.cardHeading {
+  min-width: 0;
+}
+
+.cardTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+  margin-top: @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.sourceTag {
+  margin-inline: @spacing-xxs 0;
+  background: @primary-subdued;
+  color: @primary-color;
+}
+
+.cardSummary {
+  .text-clamp(2);
+
+  margin: @spacing-md 0 @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.55;
+}
+
+.cardCapabilities {
+  .text-clamp(2);
+
+  margin: 0 0 @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.capabilityLabel {
+  color: @text-color;
+  font-weight: 500;
+}
+
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+  margin-top: auto;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: @spacing-sm;
+  padding-top: @spacing-xs;
+  border-top: 1px solid @divider;
+}
+
+.detailButton {
+  padding-inline: 0;
+}
+
+.stateFrame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: @spacing-md;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+}
+
+.drawerTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xxs;
+}
+
+.drawerSummary {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-lg;
+  line-height: 1.6;
+}
+
+.tagSection h4 {
+  margin: 0 0 @spacing-sm;
+  color: @text-color;
+  font-size: @font-size-base;
+}
+
+.drawerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-sm;
+}
+
+@media (max-width: @screen-lg) {
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: @screen-md) {
+  .container {
+    padding-top: @spacing-lg;
+  }
+
+  .title {
+    font-size: @font-size-xxl;
+  }
+
+  .description {
+    font-size: @font-size-base;
+  }
+
+  .filterPanel {
+    position: static;
+  }
+
+  .filters,
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

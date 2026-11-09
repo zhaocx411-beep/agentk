@@ -1,0 +1,287 @@
+@import url('@/styles/variables.less');
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+
+  > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding-right: @spacing-xs;
+}
+
+/* ========== 顶部：媒体展示 + 配置信息 ========== */
+.topSection {
+  display: flex;
+  gap: @spacing-lg;
+
+  @media (max-width: @screen-md) {
+    flex-direction: column;
+  }
+}
+
+/* 左侧媒体展示 */
+.mediaArea {
+  flex: 1;
+  min-width: 0;
+}
+
+.videoPlayer {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  background: @azure-abyss;
+  border-radius: @border-radius-lg;
+  object-fit: contain;
+}
+
+.mainImageButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: @border-radius-lg;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: @focus-ring;
+  }
+}
+
+.displayImage {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: @border-radius-lg;
+  background: @surface-3;
+}
+
+/* 右侧配置信息 */
+.configArea {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  flex-shrink: 0;
+  gap: @spacing-md;
+
+  @media (max-width: @screen-md) {
+    width: 100%;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.sectionIcon {
+  color: @primary-color;
+  font-size: @font-size-base;
+}
+
+.sectionContent {
+  padding: @spacing-sm;
+  border: 1px solid @hairline;
+  background: @surface-2;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  border-radius: @border-radius-md;
+  word-break: break-word;
+}
+
+.promptContent {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.systemPromptContent {
+  max-height: 160px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.modelTag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border: none;
+  background: @primary-soft;
+  color: @primary-color;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+  border-radius: @border-radius-pill;
+}
+
+.toolTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xs;
+}
+
+.toolTag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid @hairline;
+  background: @surface-3;
+  color: @text-color-secondary;
+  font-size: 11px;
+  font-family: @font-mono;
+  border-radius: @border-radius-sm;
+}
+
+.mutedText {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+/* ========== 图片画廊区 ========== */
+.gallerySection {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.galleryTitle {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  gap: @spacing-xs;
+}
+
+.galleryCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: @primary-color;
+  color: @on-primary;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: @spacing-sm;
+}
+
+.galleryItem {
+  position: relative;
+  padding: 0;
+  border: 1px solid @hairline;
+  background: @surface-3;
+  overflow: hidden;
+  transition: box-shadow @transition-duration-base @transition-timing;
+  aspect-ratio: 4 / 3;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: @shadow-md;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: @focus-ring;
+  }
+}
+
+.galleryItemActive {
+  border-color: @primary-color;
+  box-shadow: @focus-ring;
+}
+
+.galleryImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 图片预览弹窗 */
+.previewOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 70%);
+  cursor: pointer;
+}
+
+.previewImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: @border-radius-md;
+}
+
+/* ========== 作者信息 ========== */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  padding: @spacing-sm 0;
+  border-top: 1px solid @divider;
+}
+
+.avatar {
+  background: @success-color;
+  color: @on-primary;
+  font-size: @font-size-caption;
+}
+
+.authorName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 500;
+}
+
+.updateTime {
+  margin-left: auto;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+}
+
+/* ========== 底部导航 ========== */
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

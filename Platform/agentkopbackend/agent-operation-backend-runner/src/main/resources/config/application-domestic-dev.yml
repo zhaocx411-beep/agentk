@@ -1,0 +1,24 @@
+logging:
+  level:
+    com.kuaishou.agent.operation.backend: debug
+    com.kuaishou.infra.boot: debug
+
+# 国内 staging 环境：通过 kwaiproxy 连接 gifshow 库（agenkopgifshow）
+ksboot:
+  data-sources:
+    - name: agenkopgifshow
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://kwaiproxy.staging.mysql.internal:6032/gifshow?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: gifshow_49580_v1_rw
+#    password: REDACTED
+
+# 本机 MySQL 联调（需要时注释掉上方 spring.datasource，改用下方配置）
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/agentkopbackend?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: root
+#    password:

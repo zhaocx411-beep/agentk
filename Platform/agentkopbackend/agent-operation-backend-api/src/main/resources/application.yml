@@ -1,0 +1,147 @@
+logging:
+  access:
+    enabled: true
+
+spring:
+  autoconfigure:
+    include:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  profiles:
+    active: @mvn.profile.active@
+  application:
+    name: agent-operation-backend-api
+  mvc:
+    throw-exception-if-no-handler-found: true
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      write_null_map_values: true
+      write_dates_as_timestamps: false
+    deserialization:
+      fail_on_unknown_properties: false
+    parser:
+      allow_single_quotes: true
+  servlet:
+    multipart:
+      # 对话素材（图/视频/音频）上传；上限见 agent.operation.backend.media.max-*-bytes
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+ksboot:
+  health-check:
+    enabled: true
+    path: "/"
+  filter:
+    auto-registry:
+      disabled: true
+
+mybatis:
+  mapper-locations:
+    - classpath*:mapper/*.xml
+    - classpath*:mapper/platform/*.xml
+    - classpath:mapper/batcheval/*.xml
+  type-aliases-package: com.kuaishou.agent.operation.backend.platform.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+mybatis-plus:
+  mapper-locations:
+    - classpath*:mapper/*.xml
+    - classpath*:mapper/platform/*.xml
+    - classpath:mapper/batcheval/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+agent:
+  operation:
+    backend:
+      auth:
+        enabled: true
+        # 仅本地联调；生产管理员请写入表 aop_platform_admin
+        permission-stub: false
+        interceptor-exclude-path-patterns:
+          - /agent/operation/backend/platform/chat/portfolio/**
+          # 同步 aop_agentk_capability，允许无登录直接刷
+          - /agent/operation/backend/agentk/capabilities/refresh
+      keffects:
+        # 未匹配到 adapter 时的兜底 base-url（各 taskType 上游域名见对应 adapter）
+        base-url: https://kling-aigc-engine.test.gifshow.com
+        # upload-ylab-stunt 等产物桶：线上 BlobStore HTTP endpoint
+        blob-http-base: http://bs3-hb1.internal
+        blob-http-buckets:
+          - upload-ylab-stunt
+        connect-timeout-ms: 3000
+        read-timeout-ms: 120000
+      agentk:
+        # 出站统一走 gRPC（KESS klingai-agentk-api）。身份只认进程里的 KWS_SERVICE_NAME（天上注入）。
+        connect-timeout-ms: 3000
+        json-read-timeout-ms: 120000
+        grpc-read-timeout-ms: 120000
+        # InvokeCapability 后台等 Temporal（HTTP 已立即返回 inv_*）；覆盖解析 2min + 文生文 10min / 生图 6min
+        grpc-invoke-timeout-ms: 900000
+        batch-eval:
+          # 每轮轮询都会整页拉回 events 并逐条落库，间隔直接决定写入放大；
+          # 半小时级用例按 500ms 会打出几十万次大 JSON 重写，故放到 5s。
+          poll-interval-ms: 5000
+          # 单条用例等待会话空闲上限；对齐 agent-k 异步视频 workflow 的 24h 上限
+          run-timeout-seconds: 86400
+          max-retries: 3
+          # 同一任务内相邻用例提交间隔，平滑 StartExecution 突发
+          submit-stagger-ms: 3000
+          # 同时在跑的用例数上限，其余排队。每条在跑的用例都在攒事件 + 写库，
+          # 2C4G 容器下放开跑会把内存和 DB 写入一起顶满。
+          max-concurrent-cells: 2
+          # 同时打到 agent-k 的 RPC 路数。OkHttp 同 host 默认 5 路，unary 10s 含排队，
+          # 连接失败不重试；离线占 3 路，留给在线对话。
+          max-outbound-in-flight: 3
+          # 删除任务时单批删除的事件行数，一批一个小事务（事件 payload 有几 KB~几十 KB）
+          purge-batch-size: 500
+          # 事件数不超过它就当场删完再返回；超过只标记 DELETING，转后台分批清理
+          inline-purge-event-threshold: 2000
+          # 清理器扫 DELETING 的间隔，兼作进程重启后的续删入口
+          purge-sweep-interval-seconds: 60
+          # 模型名单优先读 KConf klingai.agentk.models（与 agent-k 同源）。
+          # 下列 chat-models / tool-models 仅本地无 Kess / kconf 空时的兜底。
+          chat-models:
+            - deepseek-v4-pro
+            - qwen3.5-plus
+          default-chat-model: deepseek-v4-pro
+          # 工具名单优先拉 agent-k GET /v1/capabilities；失败/空时用代码内第一方 mock，
+          # 下列仅作额外并入（一般无需再列，mock 已覆盖 kling_* 等）。
+          tools: []
+          tool-models:
+            kling_text_to_video:
+              - kling-3.0-t2v
+            kling_image_to_video:
+              - kling-3.0
+            kling_omni_video:
+              - kling-3.0-omni
+        regression:
+          agent-timeout-ms: 120000
+          workflow-timeout-ms: 600000
+          poll-interval-ms: 500
+          job-wait-timeout-ms: 600000
+
+      # 对话素材上传 + KEffects 产物按 bucket/key 查 BlobStore 签发 URL（BS3Client）。写资产库前请开启。
+      media:
+        enabled: false
+        bucket: mmu-playground
+        key-prefix: klingAgentK/
+        # KCDN 项目英文名（与 playground 共用时可填 playground-battle）
+        cdn-project-name: ${AGENTKOP_CDN_PROJECT_NAME:playground-battle}
+        # 浏览器访问用办公网域名；IDC 的 bs3-*.internal 会替换成这个
+        office-http-base: ${AGENTKOP_BLOBSTORE_OFFICE_HTTP_BASE:}
+        access-key: ${AGENTKOP_BLOBSTORE_ACCESS_KEY:}
+        secret-key: ${AGENTKOP_BLOBSTORE_SECRET_KEY:}
+        max-image-bytes: 52428800
+        max-video-bytes: 209715200
+        max-audio-bytes: 104857600
+
+batcheval:
+  store: mybatis

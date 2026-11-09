@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>漫剧工坊</title>
+<style>
+  /* ============ 设计变量 ============ */
+  :root {
+    --bg: #08080d;
+    --glass: rgba(255, 255, 255, .045);
+    --glass-2: rgba(255, 255, 255, .07);
+    --stroke: rgba(255, 255, 255, .09);
+    --stroke-strong: rgba(255, 255, 255, .16);
+    --text: #f2f2f7;
+    --text-2: #b9b9c9;
+    --muted: #74748a;
+    --violet: #8b5cf6;
+    --pink: #ec4899;
+    --cyan: #22d3ee;
+    --green: #34d399;
+    --amber: #fbbf24;
+    --red: #fb7185;
+    --grad: linear-gradient(135deg, #a78bfa 0%, #ec4899 55%, #f97316 100%);
+    --grad-btn: linear-gradient(135deg, #8b5cf6, #d946ef);
+    --radius: 16px;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC",
+            "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============ 背景光晕 ============ */
+  .aurora {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .aurora::before, .aurora::after {
+    content: "";
+    position: absolute;
+    width: 60vw; height: 60vw;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .16;
+  }
+  .aurora::before {
+    background: #7c3aed;
+    top: -25vw; right: -15vw;
+    animation: drift1 24s ease-in-out infinite alternate;
+  }
+  .aurora::after {
+    background: #0ea5e9;
+    bottom: -30vw; left: -10vw;
+    animation: drift2 30s ease-in-out infinite alternate;
+  }
+  @keyframes drift1 { to { transform: translate(-8vw, 10vh) scale(1.15); } }
+  @keyframes drift2 { to { transform: translate(10vw, -8vh) scale(.9); } }
+
+  /* ============ 侧栏 ============ */
+  aside {
+    position: relative;
+    z-index: 2;
+    width: 272px; min-width: 272px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--stroke);
+    background: rgba(10, 10, 16, .72);
+    backdrop-filter: blur(24px);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 18px 18px;
+  }
+  .logo {
+    width: 38px; height: 38px;
+    border-radius: 12px;
+    background: var(--grad-btn);
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, .45);
+    flex: none;
+  }
+  .brand .name { font-size: 16px; font-weight: 700; letter-spacing: .3px; }
+  .brand .tag  { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .new-btn {
+    margin: 2px 14px 14px;
+    padding: 11px;
+    border-radius: 12px;
+    border: 1px solid var(--stroke-strong);
+    background: var(--glass);
+    color: var(--text);
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .new-btn:hover {
+    border-color: var(--violet);
+    background: rgba(139, 92, 246, .12);
+    box-shadow: 0 0 24px rgba(139, 92, 246, .18);
+  }
+
+  .list-label {
+    padding: 4px 20px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  #dramaList { flex: 1; overflow-y: auto; padding: 0 10px 16px; }
+  #dramaList::-webkit-scrollbar { width: 3px; }
+  #dramaList::-webkit-scrollbar-thumb { background: var(--stroke-strong); border-radius: 2px; }
+
+  .drama-item {
+    padding: 11px 12px;
+    margin-bottom: 4px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .18s;
+  }
+  .drama-item:hover { background: var(--glass); }
+  .drama-item.active {
+    background: rgba(139, 92, 246, .1);
+    border-color: rgba(139, 92, 246, .35);
+  }
+  .drama-item .t {
+    font-size: 13.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .drama-item .m {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 5px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .empty-tip {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    padding: 32px 16px;
+    line-height: 1.8;
+  }
+
+  /* ============ 状态点 & 徽标 ============ */
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .dot.running { background: var(--amber); box-shadow: 0 0 8px var(--amber); animation: breathe 1.6s ease-in-out infinite; }
+  .dot.idle    { background: var(--green); box-shadow: 0 0 6px rgba(52, 211, 153, .5); }
+  .dot.error   { background: var(--red);   box-shadow: 0 0 6px rgba(251, 113, 133, .5); }
+  @keyframes breathe { 50% { opacity: .3; } }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    border: 1px solid var(--stroke);
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+  }
+  .pill.running { border-color: rgba(251, 191, 36, .35); color: var(--amber); }
+  .pill.idle    { border-color: rgba(52, 211, 153, .35); color: var(--green); }
+  .pill.error   { border-color: rgba(251, 113, 133, .4); color: var(--red); }
+
+  /* ============ 主区 ============ */
+  main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  main::-webkit-scrollbar { width: 4px; }
+  main::-webkit-scrollbar-thumb { background: var(--stroke-strong); border-radius: 2px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 32px 96px; }
+  .view { animation: rise .4s cubic-bezier(.22,.8,.35,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+  /* ============ 新建页 ============ */
+  .hero { text-align: center; margin-bottom: 40px; }
+  .hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+    line-height: 1.25;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero p {
+    margin-top: 14px;
+    font-size: 14.5px;
+    color: var(--text-2);
+    line-height: 1.8;
+  }
+  .hero .steps {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .hero .steps b { color: var(--text-2); font-weight: 600; }
+  .hero .steps i { font-style: normal; opacity: .5; }
+
+  .panel {
+    background: var(--glass);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    backdrop-filter: blur(16px);
+    padding: 24px;
+  }
+  .panel + .panel { margin-top: 16px; }
+
+  .field-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-2);
+    margin-bottom: 12px;
+  }
+  .field-label small { font-weight: 400; color: var(--muted); font-size: 11.5px; }
+
+  input[type=text], textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, .28);
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    padding: 13px 14px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  input[type=text]:focus, textarea:focus {
+    border-color: rgba(139, 92, 246, .6);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, .14);
+  }
+  textarea { min-height: 128px; resize: vertical; line-height: 1.7; }
+  .title-row { margin-top: 14px; }
+
+  /* ============ 风格卡片 ============ */
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 900px) { .style-grid { grid-template-columns: repeat(2, 1fr); } }
+  .style-card {
+    position: relative;
+    border-radius: 14px;
+    border: 1px solid var(--stroke);
+    background: rgba(0, 0, 0, .25);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+  }
+  .style-card:hover { transform: translateY(-3px); border-color: var(--stroke-strong); }
+  .style-card.selected {
+    border-color: rgba(139, 92, 246, .8);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, .18), 0 8px 32px rgba(139, 92, 246, .16);
+  }
+  .style-card .art { height: 66px; position: relative; }
+  .style-card .art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 8, 13, .55), transparent 60%);
+  }
+  .style-card .body { padding: 11px 13px 12px; }
+  .style-card .name { font-size: 13.5px; font-weight: 650; }
+  .style-card .fit {
+    margin-top: 4px;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+  .style-card .check {
+    position: absolute;
+    top: 8px; right: 8px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--grad-btn);
+    display: none;
+    place-items: center;
+    font-size: 12px;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(139, 92, 246, .5);
+  }
+  .style-card.selected .check { display: grid; }
+
+  /* 每个风格的 CSS 封面 */
+  .art-cyberpunk-neon      { background: linear-gradient(120deg, #0f0326, #4c1d95 40%, #06b6d4 90%), repeating-linear-gradient(90deg, transparent 0 14px, rgba(236,72,153,.5) 14px 15px); background-blend-mode: screen; }
+  .art-stop-motion-clay    { background: radial-gradient(circle at 30% 30%, #fb923c, #b45309 70%), radial-gradient(circle at 75% 70%, #fcd34d55, transparent 50%); }
+  .art-japanese-anime-cel  { background: linear-gradient(135deg, #f9a8d4 0%, #93c5fd 60%, #fef3c7 100%); }
+  .art-ancient-3d-donghua  { background: linear-gradient(160deg, #065f46 0%, #0f172a 55%, #b45309 110%); }
+  .art-pixar-like-3d       { background: linear-gradient(135deg, #38bdf8 0%, #fbbf24 75%, #fb7185 110%); }
+  .art-ink-wash-oriental   { background: radial-gradient(ellipse at 30% 40%, #1c1917 0%, #f5f5f4 85%); }
+  .art-cinematic-realism   { background: linear-gradient(120deg, #0f172a 0%, #334155 55%, #94a3b8 110%); }
+  .art-american-comic      { background: radial-gradient(circle, #dc2626 2px, transparent 2.6px) 0 0/12px 12px, linear-gradient(120deg, #facc15, #dc2626 85%); }
+  .art-healing-picture-book{ background: linear-gradient(135deg, #bbf7d0 0%, #fde68a 55%, #fecaca 100%); }
+
+  /* ============ 主按钮 ============ */
+  .cta {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #fff;
+    letter-spacing: .5px;
+    background: var(--grad-btn);
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    box-shadow: 0 8px 28px rgba(139, 92, 246, .35);
+    transition: transform .15s, box-shadow .2s, opacity .2s;
+  }
+  .cta:hover { transform: translateY(-1px); box-shadow: 0 12px 36px rgba(139, 92, 246, .5); }
+  .cta:active { transform: translateY(0); }
+  .cta:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* ============ 详情页 ============ */
+  .detail-head { margin-bottom: 22px; }
+  .detail-head h1 {
+    font-size: 26px;
+    font-weight: 750;
+    letter-spacing: -.3px;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--text-2);
+    border: 1px solid var(--stroke);
+    background: var(--glass);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--stroke);
+  }
+
+  .says {
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.85;
+    font-size: 14px;
+    color: var(--text-2);
+  }
+  .brief-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.7;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  details summary {
+    cursor: pointer;
+    font-size: 12.5px;
+    color: var(--muted);
+    user-select: none;
+  }
+  details summary:hover { color: var(--text-2); }
+
+  .error-box {
+    border: 1px solid rgba(251, 113, 133, .35);
+    background: rgba(251, 113, 133, .07);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    color: var(--red);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    white-space: pre-wrap;
+  }
+
+  .film-item { margin-bottom: 20px; }
+  .film-item:last-child { margin-bottom: 0; }
+  .film-item video {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    background: #000;
+    border: 1px solid var(--stroke);
+  }
+  .film-item .film-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .film-item .film-name { font-size: 12.5px; color: var(--text-2); font-weight: 600; }
+  .film-item a { color: var(--violet); font-size: 12px; text-decoration: none; }
+  .film-item a:hover { text-decoration: underline; }
+
+  .working {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-2);
+    font-size: 13.5px;
+  }
+  .working .bars { display: flex; gap: 3px; align-items: flex-end; height: 16px; }
+  .working .bars i {
+    width: 3px;
+    background: var(--grad-btn);
+    border-radius: 2px;
+    animation: eq 1s ease-in-out infinite;
+  }
+  .working .bars i:nth-child(1) { height: 60%; animation-delay: 0s; }
+  .working .bars i:nth-child(2) { height: 100%; animation-delay: .15s; }
+  .working .bars i:nth-child(3) { height: 45%; animation-delay: .3s; }
+  .working .bars i:nth-child(4) { height: 80%; animation-delay: .45s; }
+  @keyframes eq { 50% { transform: scaleY(.35); } }
+
+  .composer { display: flex; gap: 10px; }
+  .composer textarea { min-height: 76px; flex: 1; }
+  .composer .send {
+    align-self: flex-end;
+    padding: 12px 22px;
+    font-size: 13.5px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #fff;
+    background: var(--grad-btn);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(139, 92, 246, .3);
+    transition: transform .15s, opacity .2s;
+  }
+  .composer .send:hover { transform: translateY(-1px); }
+  .composer .send:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+  .composer-hint { margin-top: 10px; font-size: 11.5px; color: var(--muted); }
+
+  /* ============ Toast ============ */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: rgba(24, 24, 34, .92);
+    border: 1px solid var(--stroke-strong);
+    backdrop-filter: blur(12px);
+    padding: 11px 22px;
+    border-radius: 12px;
+    font-size: 13px;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s, transform .25s;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+<link rel="stylesheet" href="/art-modern.css">
+</head>
+<body>
+
+<div class="aurora"></div>
+
+<aside>
+  <a class="market-back" href="/">← 返回 Agent 集市</a>
+  <div class="brand">
+    <div class="logo">🎬</div>
+    <div>
+      <div class="name">漫剧工坊</div>
+      <div class="tag">comic-drama · AgentK</div>
+    </div>
+  </div>
+  <button class="new-btn" id="newBtn">＋ 新建漫剧</button>
+  <div class="list-label">我的漫剧</div>
+  <div id="dramaList"><div class="empty-tip">还没有作品<br>从一个想法开始吧</div></div>
+</aside>
+
+<main>
+  <!-- 新建 -->
+  <div class="wrap view" id="createView">
+    <div class="hero">
+      <h1>把一个想法，<br>变成一部<em>漫剧</em></h1>
+      <p>写下题材、梗概或完整剧本，挑一个视觉风格，流水线自动走完全部工序。</p>
+      <div class="steps">
+        <b>剧本</b><i>→</i><b>定妆</b><i>→</i><b>分镜</b><i>→</i><b>首帧</b><i>→</i><b>视频</b><i>→</i><b>成片</b>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="field-label">故事梗概 / 剧本 <small>必填</small></div>
+      <textarea id="briefInput" placeholder="例如：做一个 3 幕的短篇漫剧：一只猫学会了开门，从此家里再无秘密…"></textarea>
+      <div class="title-row">
+        <input type="text" id="titleInput" placeholder="标题（可选，留空自动取梗概前 24 字）">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="field-label">视觉风格 <small>可选 · 不选则使用默认二维漫画风格 · 再次点击可取消</small></div>
+      <div class="style-grid" id="styleGrid"></div>
+    </div>
+
+    <button class="cta" id="createBtn">✦ 开始创作</button>
+  </div>
+
+  <!-- 详情 -->
+  <div class="wrap view" id="detailView" style="display:none">
+    <div class="detail-head">
+      <h1 id="dTitle"></h1>
+      <div class="meta-row">
+        <span class="pill" id="dStatus"></span>
+        <span class="chip" id="dCounts"></span>
+        <span class="chip" id="dUpdated"></span>
+      </div>
+    </div>
+
+    <div class="error-box" id="dError" style="display:none"></div>
+
+    <div class="panel" id="dFilmsCard" style="display:none">
+      <div class="section-title">成片</div>
+      <div id="dFilms"></div>
+    </div>
+
+    <div class="panel" id="dStagesCard" style="margin-top:16px">
+      <div class="section-title">创作进度</div>
+      <div class="working" id="dWorking" style="display:none">
+        <span class="bars"><i></i><i></i><i></i><i></i></span>
+        流水线正在推进，各阶段完成后自动更新…
+      </div>
+      <div class="stage-list" id="dStages"></div>
+    </div>
+
+    <!-- agent 模式：创作画布 / Agent 输出 双视图，tab 切换 -->
+    <div class="mode-tabs" id="dTabs" style="display:none" role="tablist">
+      <button class="tab active" id="tabCanvas" type="button">创作画布</button>
+      <button class="tab" id="tabOutput" type="button">Agent 输出</button>
+    </div>
+
+    <div id="canvasPane" style="display:none">
+      <div class="panel">
+        <div class="canvas-head">
+          <div class="section-title">创作画布</div>
+          <button class="canvas-expand" id="canvasExpandBtn" type="button">⛶ 展开</button>
+        </div>
+        <div class="canvas" id="dCanvas"></div>
+      </div>
+    </div>
+
+    <div id="outputPane" style="display:none">
+      <div class="panel">
+        <div class="section-title">对话记录</div>
+        <div class="msg-list" id="dMsgs"></div>
+        <div class="working" id="dAgentWorking" style="display:none">
+          <span class="bars"><i></i><i></i><i></i><i></i></span>
+          Agent 正在创作中，画面与镜头陆续生成…
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="dCharsCard" style="display:none">
+      <div class="section-title">人物定妆</div>
+      <div class="char-grid" id="dChars"></div>
+    </div>
+
+    <div class="panel" id="dShotsCard" style="display:none">
+      <div class="section-title">分镜</div>
+      <div class="shot-grid" id="dShots"></div>
+    </div>
+
+    <div class="panel" id="dScriptCard" style="display:none">
+      <details>
+        <summary>查看剧本</summary>
+        <div class="brief-text" id="dScript"></div>
+      </details>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <details>
+        <summary>查看原始输入</summary>
+        <div class="brief-text" id="dBrief"></div>
+      </details>
+    </div>
+
+    <!-- agent 模式：继续对话 -->
+    <div class="panel" id="dComposerCard" style="margin-top:16px; display:none">
+      <div class="section-title">继续对话</div>
+      <div class="composer">
+        <textarea id="msgInput" placeholder="追加下一集、修改设定、要求重做…"></textarea>
+        <button class="send" id="msgBtn">发送</button>
+      </div>
+      <div class="composer-hint">⌘ + Enter 快速发送 · AgentK 忙时消息会排队，不会丢</div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+
+/* ================= 预设风格（来自 agentq drama-workflow 的九个预设） ================= */
+const STYLE_PRESETS = [
+  {
+    id: "cyberpunk-neon",
+    label: "赛博朋克霓虹风",
+    prompt: "赛博朋克霓虹视觉，未来都市、雨夜反光、青紫与玫红高对比配色，电影级体积光，精密机械与全息界面细节，人物轮廓鲜明，竖屏动态漫画构图。",
+    bestFor: "未来科技、悬疑、犯罪、都市异能",
+  },
+  {
+    id: "stop-motion-clay",
+    label: "定格动画黏土风",
+    prompt: "手工黏土定格动画风格，可见细腻手作纹理与轻微指纹质感，微缩布景，柔和棚拍光，造型夸张可爱，逐帧动画氛围，画面温暖而富有童趣。",
+    bestFor: "喜剧、童话、治愈、轻冒险",
+  },
+  {
+    id: "japanese-anime-cel",
+    label: "日漫赛璐珞风",
+    prompt: "高品质日漫赛璐珞风格，清晰线稿、平涂色块与利落阴影，角色五官精致，表情张力强，背景细节丰富，动画电影级构图与光影，避免写实CG质感。",
+    bestFor: "青春、校园、热血、恋爱、奇幻",
+  },
+  {
+    id: "ancient-3d-donghua",
+    label: "古风3D国漫",
+    prompt: "古风3D国漫风格，东方写实审美，精致古装材质与发饰，电影级PBR光影，山水云雾与宏大建筑，人物比例自然，动作飘逸，画面华丽而克制。",
+    bestFor: "仙侠、权谋、武侠、历史传奇",
+  },
+  {
+    id: "pixar-like-3d",
+    label: "皮克斯式3D动画",
+    prompt: "温暖明亮的高品质3D动画电影风格，圆润友好的角色造型，夸张但可信的表情与肢体语言，柔和全局光照，丰富材质细节，色彩鲜活，家庭动画电影氛围，不使用任何现有IP角色。",
+    bestFor: "家庭、友情、成长、轻喜剧、冒险",
+  },
+  {
+    id: "ink-wash-oriental",
+    label: "新中式水墨风",
+    prompt: "新中式水墨动画风格，宣纸肌理、墨色晕染与留白构图，局部点彩，东方山水意境，人物线条飘逸，传统绘画与现代电影光影结合，画面诗意克制。",
+    bestFor: "东方志怪、诗意故事、武侠、神话",
+  },
+  {
+    id: "cinematic-realism",
+    label: "写实电影风",
+    prompt: "写实电影视觉，真实人物比例与自然皮肤质感，电影级布光与景深，精确环境材质，克制调色，镜头语言成熟，画面具有高端剧集质感，避免过度磨皮和塑料感。",
+    bestFor: "都市、悬疑、商战、现实题材、情感",
+  },
+  {
+    id: "american-comic",
+    label: "欧美漫画风",
+    prompt: "欧美图像小说风格，粗细变化明显的墨线，高对比阴影，强烈透视与动态构图，半色调颗粒和印刷质感，英雄式人物塑造，色彩浓烈，画面充满冲击力。",
+    bestFor: "超级英雄、动作、末日、硬核冒险",
+  },
+  {
+    id: "healing-picture-book",
+    label: "治愈绘本风",
+    prompt: "治愈系手绘绘本风格，柔软笔触与纸张纹理，低饱和暖色调，简洁圆润造型，柔和自然光，细腻情绪表达，画面清新温柔，具有童话般的生活气息。",
+    bestFor: "萌宠、亲情、日常、治愈、儿童故事",
+  },
+];
+
+// pipeline 模式：running/completed/failed/cancelled；agent 模式：running/idle/error。
+const STATUS_TEXT = {
+  running: "创作中", completed: "已完成", failed: "失败", cancelled: "已取消",
+  idle: "已完成", error: "出错了",
+};
+// 复用样式表里既有的三态配色。
+const STATUS_CLASS = {
+  running: "running", completed: "idle", failed: "error", cancelled: "error",
+  idle: "idle", error: "error",
+};
+
+/* 流水线阶段（与 worker 汇报的 stepId 前缀一一对应）。 */
+const STAGES = [
+  { id: "script", label: "剧本", match: (s) => s === "script" },
+  { id: "characters", label: "人物设定", match: (s) => s === "characters" },
+  { id: "portraits", label: "定妆照", match: (s) => s.startsWith("portrait/") },
+  { id: "board", label: "分镜", match: (s) => s === "board" },
+  { id: "shots", label: "逐镜生成", match: (s) => s.startsWith("shot/") },
+  { id: "film", label: "合成成片", match: (s) => s === "film" },
+];
+
+/* ================= 状态 ================= */
+let dramas = [];            // 列表缓存
+let currentID = null;       // 当前查看的 drama；null = 新建页
+let selectedStyle = null;   // 选中的预设风格 id
+let pollTimer = null;
+let activeTab = "canvas";   // agent 模式的当前视图：canvas / output
+
+const $ = (id) => document.getElementById(id);
+
+/* ================= API ================= */
+async function api(path, options) {
+  const response = await fetch(path, options);
+  let body = null;
+  try { body = await response.json(); } catch { /* 非 JSON 响应 */ }
+  if (!response.ok) {
+    throw new Error((body && body.error) || ("HTTP " + response.status));
+  }
+  return body;
+}
+
+/* ================= 风格卡片 ================= */
+function renderStyleGrid() {
+  const grid = $("styleGrid");
+  grid.innerHTML = "";
+  for (const preset of STYLE_PRESETS) {
+    const card = document.createElement("div");
+    card.className = "style-card" + (selectedStyle === preset.id ? " selected" : "");
+    card.innerHTML =
+      '<div class="art art-' + preset.id + '"></div>' +
+      '<div class="check">✓</div>' +
+      '<div class="body"><div class="name">' + preset.label + "</div>" +
+      '<div class="fit">' + preset.bestFor + "</div></div>";
+    card.title = preset.prompt;
+    card.onclick = () => {
+      selectedStyle = selectedStyle === preset.id ? null : preset.id;
+      renderStyleGrid();
+    };
+    grid.appendChild(card);
+  }
+}
+
+/* 选中的预设风格作为 stylePrompt 单独提交，由 pipeline 注入到每个阶段。 */
+function stylePromptOf(styleID) {
+  const preset = STYLE_PRESETS.find((item) => item.id === styleID);
+  return preset ? preset.label + "。" + preset.prompt : "";
+}
+
+/* ================= 列表 ================= */
+function renderList() {
+  const container = $("dramaList");
+  if (!dramas.length) {
+    container.innerHTML = '<div class="empty-tip">还没有作品<br>从一个想法开始吧</div>';
+    return;
+  }
+  container.innerHTML = "";
+  for (const drama of dramas) {
+    const item = document.createElement("div");
+    item.className = "drama-item" + (drama.id === currentID ? " active" : "");
+    let extra = "";
+    if (drama.output && drama.output.film) {
+      extra = " · " + drama.output.clipCount + " 镜成片";
+    } else if (drama.films && drama.films.length) {
+      extra = " · " + drama.films.length + " 部成片";
+    }
+    item.innerHTML =
+      '<div class="t">' + escapeHTML(drama.title) + "</div>" +
+      '<div class="m"><span class="dot ' + STATUS_CLASS[drama.status] + '"></span>' +
+      STATUS_TEXT[drama.status] + extra + "</div>";
+    item.onclick = () => showDetail(drama.id);
+    container.appendChild(item);
+  }
+}
+
+async function refreshList() {
+  try {
+    const body = await api("/v1/dramas");
+    dramas = body.dramas || [];
+    renderList();
+    if (currentID) {
+      const found = dramas.find((item) => item.id === currentID);
+      if (found) renderDetail(found);
+    }
+  } catch (error) {
+    console.warn("刷新列表失败:", error.message);
+  }
+}
+
+/* ================= 视图切换 ================= */
+function replay(element) {
+  element.classList.remove("view");
+  void element.offsetWidth; // 强制 reflow，让入场动画重放
+  element.classList.add("view");
+}
+
+function showCreate() {
+  currentID = null;
+  $("createView").style.display = "";
+  $("detailView").style.display = "none";
+  replay($("createView"));
+  renderList();
+}
+
+function showDetail(id) {
+  const switching = currentID !== id;
+  currentID = id;
+  $("createView").style.display = "none";
+  $("detailView").style.display = "";
+  if (switching) replay($("detailView"));
+  const cached = dramas.find((item) => item.id === id);
+  if (cached) renderDetail(cached);
+  refreshDetail();
+  renderList();
+}
+
+async function refreshDetail() {
+  if (!currentID) return;
+  try {
+    const drama = await api("/v1/dramas/" + currentID);
+    const index = dramas.findIndex((item) => item.id === drama.id);
+    if (index >= 0) dramas[index] = drama; else dramas.unshift(drama);
+    renderDetail(drama);
+    renderList();
+  } catch (error) {
+    console.warn("刷新详情失败:", error.message);
+  }
+}
+
+function renderDetail(drama) {
+  if (drama.id !== currentID) return;
+  const agentMode = drama.mode === "agent";
+  $("dTitle").textContent = (drama.output && drama.output.title) || drama.title;
+
+  const statusClass = STATUS_CLASS[drama.status] || "running";
+  const pill = $("dStatus");
+  pill.className = "pill " + statusClass;
+  pill.innerHTML = '<span class="dot ' + statusClass + '"></span>' + STATUS_TEXT[drama.status];
+
+  $("dUpdated").textContent = "更新于 " + formatTime(drama.updatedAt);
+  $("dBrief").textContent = drama.brief;
+
+  // 模式相关面板的显隐。
+  $("dStagesCard").style.display = agentMode ? "none" : "";
+  $("dComposerCard").style.display = agentMode ? "" : "none";
+
+  const errorBox = $("dError");
+  if (drama.error) {
+    errorBox.textContent = agentMode
+      ? "任务中断：" + drama.error + "\n可以在下方继续发消息，Agent 会接着做。"
+      : "任务失败：" + drama.error;
+    errorBox.style.display = "";
+  } else {
+    errorBox.style.display = "none";
+  }
+
+  if (agentMode) {
+    $("dCounts").textContent =
+      "图片 " + (drama.imageCount || 0) + " · 视频 " + (drama.videoCount || 0) +
+      (drama.films && drama.films.length ? " · 成片 " + drama.films.length : "");
+    $("dTabs").style.display = "flex";
+    updateTabs();
+    renderCanvas(drama);
+    renderMessages(drama);
+    renderFilms([]);
+    $("dCharsCard").style.display = "none";
+    $("dShotsCard").style.display = "none";
+    $("dScriptCard").style.display = "none";
+    return;
+  }
+  $("dTabs").style.display = "none";
+  $("canvasPane").style.display = "none";
+  $("outputPane").style.display = "none";
+
+  const doneSteps = (drama.progress || []).length;
+  $("dCounts").textContent = drama.output
+    ? "成片 " + drama.output.clipCount + " 镜 · 人物 " + (drama.output.characters || []).length
+    : "已完成 " + doneSteps + " 个阶段";
+
+  $("dWorking").style.display = drama.status === "running" ? "flex" : "none";
+  renderStages(drama);
+
+  renderFilms(drama.output && drama.output.film
+    ? [{ url: drama.output.film, name: "全剧成片 · " + drama.output.clipCount + " 镜" }]
+    : []);
+  renderCharacters(drama);
+  renderShots(drama);
+
+  const scriptCard = $("dScriptCard");
+  if (drama.output && drama.output.script) {
+    scriptCard.style.display = "";
+    $("dScript").textContent = drama.output.script;
+  } else {
+    scriptCard.style.display = "none";
+  }
+}
+
+/* ================= agent 模式：画布 / 输出 双视图 ================= */
+function setTab(tab) {
+  activeTab = tab;
+  updateTabs();
+}
+
+function updateTabs() {
+  $("tabCanvas").classList.toggle("active", activeTab === "canvas");
+  $("tabOutput").classList.toggle("active", activeTab === "output");
+  $("canvasPane").style.display = activeTab === "canvas" ? "" : "none";
+  $("outputPane").style.display = activeTab === "output" ? "" : "none";
+}
+
+const STAGE_STATUS_TEXT = { pending: "待开始", active: "进行中", done: "已完成" };
+/* 画布列：资产按产出工序分列，左 → 右即生成方向（类节点编辑器的 DAG 布局）。 */
+const GRAPH_COLUMNS = [
+  { id: "characters", label: "定妆 · 场景 · 道具", title: "设定图" },
+  { id: "frames", label: "分镜首帧", title: "首帧" },
+  { id: "clips", label: "镜头视频", title: "镜头" },
+  { id: "film", label: "成片", title: "成片" },
+];
+
+/* 创作画布：生成血缘 DAG（类 ComfyUI / tldraw image-pipeline 的观感，
+   仅展示不交互）。每张图、每个视频是一个节点，按工序分列左 → 右摆放；
+   谁参与了谁的生成，就用贝塞尔曲线连过去。只画已完成的产物——
+   生成中的东西不上画布，出了结果再补节点和连线。 */
+const SVG_NS = "http://www.w3.org/2000/svg";
+let boardObserver = null;
+
+/* 血缘匹配用的 URI 归一化：同一产物在工具入参与产物事件里可能带
+   不同的签名/查询串，比对时去掉 query 部分。 */
+function assetKey(uri) {
+  return String(uri || "").split("?")[0];
+}
+
+function assetNode(asset, title) {
+  const node = document.createElement("div");
+  node.className = "gnode kind-" + asset.kind;
+  node.dataset.uri = assetKey(asset.uri);
+  const thumb = document.createElement(asset.kind === "image" ? "a" : "div");
+  thumb.className = "gmedia " + asset.kind;
+  if (asset.kind === "video") {
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+    video.src = asset.uri;
+    thumb.appendChild(video);
+  } else if (asset.kind === "audio") {
+    const audio = document.createElement("audio");
+    audio.controls = true;
+    audio.preload = "metadata";
+    audio.src = asset.uri;
+    thumb.appendChild(audio);
+  } else {
+    thumb.href = asset.uri;
+    thumb.target = "_blank";
+    thumb.rel = "noopener";
+    const img = document.createElement("img");
+    img.src = asset.uri;
+    img.loading = "lazy";
+    img.alt = "";
+    thumb.appendChild(img);
+  }
+  node.appendChild(thumb);
+  const caption = document.createElement("div");
+  caption.className = "gcaption";
+  caption.textContent = title;
+  caption.title = asset.description || "";
+  node.appendChild(caption);
+  return node;
+}
+
+function renderCanvas(drama) {
+  const box = $("dCanvas");
+  const stages = drama.stages || [];
+  const assets = drama.assets || [];
+  const edges = drama.edges || [];
+  const key = JSON.stringify([
+    stages.map((stage) => stage.status),
+    assets.map((asset) => asset.uri),
+    edges.length,
+  ]);
+  if (box.dataset.key === key) return;
+  box.dataset.key = key;
+  if (boardObserver) { boardObserver.disconnect(); boardObserver = null; }
+  box.innerHTML = "";
+
+  // 顶部工序状态条。
+  const chips = document.createElement("div");
+  chips.className = "stage-chips";
+  stages.forEach((stage, index) => {
+    const chip = document.createElement("span");
+    chip.className = "stage-chip " + stage.status;
+    chip.textContent = String(index + 1).padStart(2, "0") + " " + stage.name +
+      " · " + (STAGE_STATUS_TEXT[stage.status] || "");
+    chips.appendChild(chip);
+  });
+  box.appendChild(chips);
+
+  if (!assets.length) {
+    const empty = document.createElement("div");
+    empty.className = "cv-empty";
+    empty.textContent = "画布会在第一张图生成后开始生长：每个产物是一个节点，参与生成的素材会连线过去。";
+    box.appendChild(empty);
+    return;
+  }
+
+  const board = document.createElement("div");
+  board.className = "gboard";
+  const inner = document.createElement("div");
+  inner.className = "board-inner";
+  const links = document.createElementNS(SVG_NS, "svg");
+  links.setAttribute("class", "board-links");
+  inner.appendChild(links);
+
+  const columns = {};
+  const counters = {};
+  GRAPH_COLUMNS.forEach((column) => {
+    const col = document.createElement("div");
+    col.className = "gcol gcol-" + column.id;
+    const title = document.createElement("div");
+    title.className = "gcol-title";
+    title.textContent = column.label;
+    col.appendChild(title);
+    columns[column.id] = col;
+    counters[column.id] = 0;
+    inner.appendChild(col);
+  });
+
+  assets.forEach((asset) => {
+    const stage = columns[asset.stage] ? asset.stage : "frames";
+    counters[stage] += 1;
+    const def = GRAPH_COLUMNS.find((column) => column.id === stage);
+    const title = def.title + " " + String(counters[stage]).padStart(2, "0");
+    columns[stage].appendChild(assetNode(asset, title));
+  });
+  // 空列显示占位，保持四列结构可读。
+  GRAPH_COLUMNS.forEach((column) => {
+    if (columns[column.id].children.length === 1) {
+      const blank = document.createElement("div");
+      blank.className = "gblank";
+      blank.textContent = "待生成";
+      columns[column.id].appendChild(blank);
+    }
+  });
+
+  board.appendChild(inner);
+  box.appendChild(board);
+
+  const drawAll = () => drawGraphLinks(inner, links, edges);
+  drawAll();
+  // 图片加载、窗口变化都会改变节点位置：任何尺寸变化后重画连线。
+  boardObserver = new ResizeObserver(drawAll);
+  boardObserver.observe(inner);
+  inner.querySelectorAll(".gnode").forEach((node) => boardObserver.observe(node));
+}
+
+/* 依节点当前位置画血缘连线：源节点右侧中部 → 目标节点左侧中部。
+   坐标一律用 getBoundingClientRect 相对 board-inner 换算——不要用
+   offsetLeft 累加（gnode 的 offsetParent 就是 board-inner，再叠列偏移
+   会整体错位）。 */
+function drawGraphLinks(inner, svg, edges) {
+  svg.setAttribute("width", inner.scrollWidth);
+  svg.setAttribute("height", inner.scrollHeight);
+  svg.innerHTML = "";
+  const nodeOf = {};
+  inner.querySelectorAll(".gnode[data-uri]").forEach((node) => {
+    nodeOf[node.dataset.uri] = node;
+  });
+
+  const innerRect = inner.getBoundingClientRect();
+  const positionOf = (node) => {
+    const rect = node.getBoundingClientRect();
+    return {
+      left: rect.left - innerRect.left,
+      top: rect.top - innerRect.top,
+      width: rect.width,
+      height: rect.height,
+    };
+  };
+  const drawEdge = (fromNode, toNode) => {
+    const from = positionOf(fromNode);
+    const to = positionOf(toNode);
+    const x1 = from.left + from.width;
+    const y1 = from.top + Math.min(60, from.height / 2);
+    const x2 = to.left;
+    const y2 = to.top + Math.min(60, to.height / 2);
+    const bend = Math.max(48, (x2 - x1) / 2);
+    const path = document.createElementNS(SVG_NS, "path");
+    path.setAttribute("d",
+      "M " + x1 + " " + y1 +
+      " C " + (x1 + bend) + " " + y1 + ", " + (x2 - bend) + " " + y2 +
+      ", " + x2 + " " + y2);
+    path.setAttribute("class", "link done");
+    svg.appendChild(path);
+    [[x1, y1], [x2, y2]].forEach(([cx, cy]) => {
+      const dot = document.createElementNS(SVG_NS, "circle");
+      dot.setAttribute("cx", cx);
+      dot.setAttribute("cy", cy);
+      dot.setAttribute("r", 3.2);
+      dot.setAttribute("class", "link-dot done");
+      svg.appendChild(dot);
+    });
+  };
+
+  edges.forEach((edge) => {
+    const fromNode = nodeOf[assetKey(edge.from)];
+    const toNode = nodeOf[assetKey(edge.to)];
+    if (fromNode && toNode && fromNode !== toNode) drawEdge(fromNode, toNode);
+  });
+}
+
+/* Agent 输出：完整的对话往来（用户指令 + 模型各轮正文），不再只留最后一段。 */
+function renderMessages(drama) {
+  $("dAgentWorking").style.display = drama.status === "running" ? "flex" : "none";
+  const box = $("dMsgs");
+  const messages = drama.messages || [];
+  const last = messages.length ? messages[messages.length - 1].text : "";
+  const key = messages.length + ":" + last.length;
+  if (box.dataset.key === key) return;
+  box.dataset.key = key;
+  box.innerHTML = "";
+  if (!messages.length) {
+    box.innerHTML = '<div class="msg-empty">（暂无输出）</div>';
+    return;
+  }
+  messages.forEach((message) => {
+    const item = document.createElement("div");
+    item.className = "msg " + message.role;
+    const who = document.createElement("div");
+    who.className = "msg-who";
+    who.textContent = (message.role === "user" ? "我" : "Agent") +
+      (message.at ? " · " + formatTime(message.at) : "");
+    const text = document.createElement("div");
+    if (message.role === "assistant") {
+      // Agent 的输出大多是 Markdown：渲染后展示（renderMarkdown 内部先转义）。
+      text.className = "msg-text md";
+      text.innerHTML = renderMarkdown(message.text);
+    } else {
+      text.className = "msg-text";
+      text.textContent = message.text;
+    }
+    item.appendChild(who);
+    item.appendChild(text);
+    box.appendChild(item);
+  });
+}
+
+/* ================= 轻量 Markdown 渲染 =================
+   覆盖 Agent 输出常见语法：标题、粗斜体、行内/围栏代码、链接、图片、
+   无序/有序列表、引用、分隔线、表格降级为原文。所有文本先 HTML 转义，
+   再做结构替换，不引入外部依赖。 */
+function mdInline(text) {
+  let out = escapeHTML(text);
+  // 图片（产物 URL 直接内嵌预览）与链接。
+  out = out.replace(/!\[([^\]]*)\]\((https?:[^)\s]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener"><img src="$2" alt="$1" loading="lazy"></a>');
+  out = out.replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // 裸 URL 转链接（避开刚生成的属性值：要求前面不是引号或 = ）。
+  out = out.replace(/(^|[^"=\]>])(https?:\/\/[^\s<]+)/g,
+    '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+  out = out.replace(/`([^`]+)`/g, "<code>$1</code>");
+  out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  out = out.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1<em>$2</em>");
+  return out;
+}
+
+function renderMarkdown(source) {
+  const lines = String(source || "").split(/\r?\n/);
+  const html = [];
+  let list = null;        // "ul" | "ol" | null
+  let inCode = false;
+  let codeBuf = [];
+  let paragraph = [];
+  let tableRows = null;   // 连续的 |...| 行缓冲
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      html.push("<p>" + paragraph.map(mdInline).join("<br>") + "</p>");
+      paragraph = [];
+    }
+  };
+  const closeList = () => {
+    if (list) { html.push("</" + list + ">"); list = null; }
+  };
+  const splitCells = (row) =>
+    row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => cell.trim());
+  const isDivider = (row) => /^\s*\|?[\s|:-]+\|?\s*$/.test(row) && row.includes("-");
+  const flushTable = () => {
+    if (!tableRows) return;
+    const rows = tableRows;
+    tableRows = null;
+    if (!rows.length) return;
+    let head = null;
+    let body = rows;
+    if (rows.length >= 2 && isDivider(rows[1])) {
+      head = splitCells(rows[0]);
+      body = rows.slice(2);
+    }
+    let table = "<table>";
+    if (head) {
+      table += "<thead><tr>" +
+        head.map((cell) => "<th>" + mdInline(cell) + "</th>").join("") +
+        "</tr></thead>";
+    }
+    table += "<tbody>" + body.map((row) =>
+      "<tr>" + splitCells(row).map((cell) => "<td>" + mdInline(cell) + "</td>").join("") + "</tr>"
+    ).join("") + "</tbody></table>";
+    html.push(table);
+  };
+
+  lines.forEach((line) => {
+    if (/^\s*```/.test(line)) {
+      if (inCode) {
+        html.push("<pre><code>" + escapeHTML(codeBuf.join("\n")) + "</code></pre>");
+        codeBuf = [];
+      } else {
+        flushParagraph(); closeList(); flushTable();
+      }
+      inCode = !inCode;
+      return;
+    }
+    if (inCode) { codeBuf.push(line); return; }
+
+    // 表格：连续的 |…| 行进缓冲，遇到非表格行时整体产出。
+    if (/^\s*\|.*\|\s*$/.test(line)) {
+      flushParagraph(); closeList();
+      (tableRows = tableRows || []).push(line);
+      return;
+    }
+    flushTable();
+
+    const heading = line.match(/^(#{1,4})\s+(.*)$/);
+    if (heading) {
+      flushParagraph(); closeList();
+      const level = Math.min(heading[1].length + 2, 6); // # → h3 起步，别撑爆消息流
+      html.push("<h" + level + ">" + mdInline(heading[2]) + "</h" + level + ">");
+      return;
+    }
+    if (/^\s*(---+|\*\*\*+)\s*$/.test(line)) {
+      flushParagraph(); closeList();
+      html.push("<hr>");
+      return;
+    }
+    const quote = line.match(/^\s*>\s?(.*)$/);
+    if (quote) {
+      flushParagraph(); closeList();
+      html.push("<blockquote>" + mdInline(quote[1]) + "</blockquote>");
+      return;
+    }
+    const bullet = line.match(/^\s*[-*+]\s+(.*)$/);
+    const ordered = line.match(/^\s*\d+[.、)]\s+(.*)$/);
+    if (bullet || ordered) {
+      flushParagraph();
+      const want = bullet ? "ul" : "ol";
+      if (list !== want) { closeList(); html.push("<" + want + ">"); list = want; }
+      html.push("<li>" + mdInline((bullet || ordered)[1]) + "</li>");
+      return;
+    }
+    if (!line.trim()) {
+      flushParagraph(); closeList();
+      return;
+    }
+    paragraph.push(line);
+  });
+  if (inCode && codeBuf.length) {
+    html.push("<pre><code>" + escapeHTML(codeBuf.join("\n")) + "</code></pre>");
+  }
+  flushParagraph(); closeList(); flushTable();
+  return html.join("");
+}
+
+/* 阶段时间线：每个阶段显示状态与最近一条汇报文案。 */
+function renderStages(drama) {
+  const progress = drama.progress || [];
+  const box = $("dStages");
+  box.innerHTML = "";
+  let reachedPending = false;
+  STAGES.forEach((stage) => {
+    const entries = progress.filter((step) => stage.match(step.stepId));
+    const done = entries.length > 0;
+    let state;
+    if (done) {
+      state = "done";
+    } else if (!reachedPending && drama.status === "running") {
+      state = "active";
+      reachedPending = true;
+    } else {
+      state = "pending";
+      reachedPending = true;
+    }
+    if (drama.status !== "running" && !done) state = "pending";
+
+    const row = document.createElement("div");
+    row.className = "stage " + state;
+    const mark = state === "done" ? "✓" : state === "active" ? "…" : "";
+    const message = entries.length ? entries[entries.length - 1].message || "" : "";
+    row.innerHTML =
+      '<span class="stage-mark">' + mark + "</span>" +
+      '<span class="stage-name">' + stage.label + "</span>" +
+      '<span class="stage-msg">' + escapeHTML(message) + "</span>";
+    box.appendChild(row);
+  });
+}
+
+// renderFilms 渲染成片列表（pipeline 单部 / agent 多部同一形状）。
+function renderFilms(films) {
+  const filmsCard = $("dFilmsCard");
+  const filmsBox = $("dFilms");
+  if (!films.length) {
+    filmsCard.style.display = "none";
+    filmsBox.dataset.urls = "";
+    return;
+  }
+  filmsCard.style.display = "";
+  // 只在成片列表变化时重建，避免打断正在播放的视频。
+  const key = films.map((f) => f.url).join("|");
+  if (filmsBox.dataset.urls === key) return;
+  filmsBox.dataset.urls = key;
+  filmsBox.innerHTML = "";
+  films.forEach((film) => {
+    const div = document.createElement("div");
+    div.className = "film-item";
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+    video.src = film.url;
+    const foot = document.createElement("div");
+    foot.className = "film-foot";
+    const name = document.createElement("span");
+    name.className = "film-name";
+    name.textContent = film.name;
+    const link = document.createElement("a");
+    link.href = film.url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "打开原始链接 ↗";
+    foot.appendChild(name);
+    foot.appendChild(link);
+    div.appendChild(video);
+    div.appendChild(foot);
+    filmsBox.appendChild(div);
+  });
+}
+
+function renderCharacters(drama) {
+  const card = $("dCharsCard");
+  const box = $("dChars");
+  const characters = (drama.output && drama.output.characters) || [];
+  if (!characters.length) {
+    card.style.display = "none";
+    return;
+  }
+  card.style.display = "";
+  const key = characters.map((c) => c.imageUrl || c.name).join("|");
+  if (box.dataset.key === key) return;
+  box.dataset.key = key;
+  box.innerHTML = "";
+  characters.forEach((character) => {
+    const item = document.createElement("div");
+    item.className = "char-card";
+    if (character.imageUrl) {
+      const img = document.createElement("img");
+      img.src = character.imageUrl;
+      img.alt = character.name;
+      img.loading = "lazy";
+      item.appendChild(img);
+    }
+    const name = document.createElement("div");
+    name.className = "char-name";
+    name.textContent = character.name + (character.error ? "（定妆失败）" : "");
+    item.appendChild(name);
+    box.appendChild(item);
+  });
+}
+
+function renderShots(drama) {
+  const card = $("dShotsCard");
+  const box = $("dShots");
+  const shots = (drama.output && drama.output.shots) || [];
+  if (!shots.length) {
+    card.style.display = "none";
+    return;
+  }
+  card.style.display = "";
+  const key = shots.map((s) => s.videoUrl || s.frameUrl || s.error || "").join("|");
+  if (box.dataset.key === key) return;
+  box.dataset.key = key;
+  box.innerHTML = "";
+  shots.forEach((shot) => {
+    const item = document.createElement("div");
+    item.className = "shot-card";
+    if (shot.videoUrl) {
+      const video = document.createElement("video");
+      video.controls = true;
+      video.preload = "metadata";
+      video.src = shot.videoUrl;
+      if (shot.frameUrl) video.poster = shot.frameUrl;
+      item.appendChild(video);
+    } else if (shot.frameUrl) {
+      const img = document.createElement("img");
+      img.src = shot.frameUrl;
+      img.alt = shot.scene;
+      img.loading = "lazy";
+      item.appendChild(img);
+    }
+    const label = document.createElement("div");
+    label.className = "shot-label";
+    label.textContent =
+      "镜头 " + (shot.index + 1) + " · " + shot.scene +
+      (shot.durationSeconds ? " · " + shot.durationSeconds + "s" : "");
+    item.appendChild(label);
+    if (shot.error) {
+      const err = document.createElement("div");
+      err.className = "shot-error";
+      err.textContent = "本镜失败：" + shot.error;
+      item.appendChild(err);
+    }
+    box.appendChild(item);
+  });
+}
+
+/* ================= 操作 ================= */
+async function createDrama() {
+  const brief = $("briefInput").value.trim();
+  if (!brief) { toast("请先填写故事梗概或剧本"); return; }
+  const button = $("createBtn");
+  button.disabled = true;
+  button.textContent = "创建中…";
+  try {
+    const drama = await api("/v1/dramas", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: $("titleInput").value.trim(),
+        brief,
+        stylePrompt: stylePromptOf(selectedStyle),
+      }),
+    });
+    $("briefInput").value = "";
+    $("titleInput").value = "";
+    selectedStyle = null;
+    renderStyleGrid();
+    dramas.unshift(drama);
+    showDetail(drama.id);
+    toast("已开始创作，流水线正在推进 ✦");
+  } catch (error) {
+    toast("创建失败：" + error.message);
+  } finally {
+    button.disabled = false;
+    button.textContent = "✦ 开始创作";
+  }
+}
+
+/* agent 模式：继续对话。 */
+async function sendMessage() {
+  const text = $("msgInput").value.trim();
+  if (!text || !currentID) return;
+  const button = $("msgBtn");
+  button.disabled = true;
+  try {
+    const drama = await api("/v1/dramas/" + currentID + "/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    });
+    $("msgInput").value = "";
+    const index = dramas.findIndex((item) => item.id === drama.id);
+    if (index >= 0) dramas[index] = drama;
+    renderDetail(drama);
+    renderList();
+    toast("已发送");
+  } catch (error) {
+    toast("发送失败：" + error.message);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+/* ================= 工具 ================= */
+function escapeHTML(value) {
+  const div = document.createElement("div");
+  div.textContent = value;
+  return div.innerHTML;
+}
+
+function formatTime(iso) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  const pad = (n) => String(n).padStart(2, "0");
+  return pad(date.getMonth() + 1) + "-" + pad(date.getDate()) + " " +
+    pad(date.getHours()) + ":" + pad(date.getMinutes());
+}
+
+let toastTimer = null;
+function toast(message) {
+  const box = $("toast");
+  box.textContent = message;
+  box.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => box.classList.remove("show"), 2600);
+}
+
+/* ================= 轮询 =================
+   查看创作中的任务时 4 秒刷一次详情；其余情况 12 秒刷一次列表。 */
+function schedulePoll() {
+  clearTimeout(pollTimer);
+  const current = dramas.find((item) => item.id === currentID);
+  const busy = current && current.status === "running";
+  pollTimer = setTimeout(async () => {
+    if (currentID) await refreshDetail(); else await refreshList();
+    schedulePoll();
+  }, busy ? 4000 : 12000);
+}
+
+/* ================= 启动 ================= */
+$("newBtn").onclick = showCreate;
+$("createBtn").onclick = createDrama;
+$("tabCanvas").onclick = () => setTab("canvas");
+$("tabOutput").onclick = () => setTab("output");
+
+// 画布展开：全屏覆层看大图，Esc 或按钮收起。
+// 展开时把整个 pane 挪到 body 下再定位——页面里多个容器带 transform
+// 动画/位移，会把 position:fixed 的定位基准劫持成那个容器，导致覆层
+// 只有局部大小、下半截被裁；挂到 body 下才真正相对视口铺满。
+let canvasHomeMark = null;
+function setCanvasExpanded(expanded) {
+  const pane = $("canvasPane");
+  if (expanded) {
+    if (!canvasHomeMark) {
+      canvasHomeMark = document.createComment("canvas-home");
+      pane.parentNode.insertBefore(canvasHomeMark, pane);
+    }
+    document.body.appendChild(pane);
+  } else if (canvasHomeMark) {
+    canvasHomeMark.parentNode.insertBefore(pane, canvasHomeMark);
+  }
+  pane.classList.toggle("expanded", expanded);
+  $("canvasExpandBtn").textContent = expanded ? "✕ 收起" : "⛶ 展开";
+  document.body.classList.toggle("canvas-lock", expanded);
+}
+$("canvasExpandBtn").onclick = () =>
+  setCanvasExpanded(!$("canvasPane").classList.contains("expanded"));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && $("canvasPane").classList.contains("expanded")) {
+    setCanvasExpanded(false);
+  }
+});
+$("msgBtn").onclick = sendMessage;
+$("msgInput").addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) sendMessage();
+});
+
+renderStyleGrid();
+refreshList().then(schedulePoll);
+</script>
+</body>
+</html>

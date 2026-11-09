@@ -1,0 +1,26 @@
+{
+  "version": "2",
+  "sourceVideoUri": "https://bs3-hb1.staging.kuaishou.com/user-zhangyuchen05/capabilities/videos/compose/bf568e6e89d88c6473bdd05c79c1653e.mp4",
+  "sourceDurationSeconds": 5.04,
+  "narrativeProfile": {
+    "primaryGenre": "科幻片",
+    "secondaryGenres": ["纪录片"],
+    "thesis": "未来工作环境与自然景观形成的反差。",
+    "hook": "当一只猫坐上未来工作台，它究竟在等待什么？",
+    "style": "简洁、有画面感、略带好奇",
+    "pacing": "开场迅速建立反差，结尾留白",
+    "globalTtsInstruction": "温暖、清晰，带轻微好奇感。"
+  },
+  "narrationCues": [
+    {
+      "id": "cue-001",
+      "startSeconds": 0.4,
+      "endSeconds": 5,
+      "narration": "一只橘猫坐在未来工作台前，背景是温暖的日落海边。",
+      "evidenceWindowIndexes": [0],
+      "ttsInstruction": "开头轻快，未来工作台稍加重，结尾放缓。",
+      "importance": 5,
+      "emotion": "surprised"
+    }
+  ]
+}

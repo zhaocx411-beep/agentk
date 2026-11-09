@@ -1,0 +1,250 @@
+/* 离线跑数 Tab 样式 */
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: @spacing-lg;
+  min-height: 0;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* 固定操作列与普通单元格保持一致的整行 hover 背景。 */
+.jobsTable {
+  :global(.ant-table-tbody > .ant-table-row:hover > .ant-table-cell-fix-right) {
+    background: @surface-3;
+  }
+}
+
+.tableCellEllipsis {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.promptTooltip {
+  max-width: 360px;
+  max-height: 240px;
+  line-height: 1.6;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.toolsCell {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: @spacing-xxs;
+  max-width: 100%;
+  overflow: hidden;
+
+  :global(.ant-tag) {
+    margin-inline-end: 0;
+    max-width: 88px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.toolsTooltip {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  max-height: 240px;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: auto;
+}
+
+.datasetLoadingMore {
+  padding: @spacing-xs @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  text-align: center;
+}
+
+/* Trace 详情 */
+.traceItems {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+}
+
+.traceItem {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.traceItemUser {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.traceItemAssistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.traceItemHeader {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-xs;
+}
+
+.traceItemSeq {
+  color: @text-color-secondary;
+  font-size: 12px;
+}
+
+.traceItemParts {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.tracePart {
+  display: flex;
+  flex-direction: column;
+}
+
+.traceBubble {
+  padding: @spacing-sm @spacing-md;
+  background: @surface-2;
+  color: @text-color;
+  font-size: 13px;
+  line-height: 1.6;
+  border-radius: @border-radius-lg;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.traceItemUser .traceBubble {
+  background: @primary-soft;
+  color: @text-color;
+  border-bottom-right-radius: @border-radius-xs;
+}
+
+.traceItemAssistant .traceBubble {
+  background: @surface-2;
+  color: @text-color;
+  border-bottom-left-radius: @border-radius-xs;
+}
+
+.traceBubbleReasoning {
+  background: fade(@primary-color, 6%);
+  color: @text-color-secondary;
+  font-style: italic;
+  border-bottom-left-radius: @border-radius-xs;
+}
+
+.traceBubbleToolCall {
+  background: fade(@warning-color, 8%);
+  border-bottom-left-radius: @border-radius-xs;
+}
+
+.traceBubbleToolResult {
+  background: fade(@info-color, 6%);
+  border-bottom-left-radius: @border-radius-xs;
+}
+
+.traceToolLabel {
+  display: block;
+  color: @text-color-secondary;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: @spacing-xs;
+}
+
+.traceToolArgs {
+  max-height: 200px;
+  margin: 0;
+  padding: @spacing-xs @spacing-sm;
+  background: @canvas;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow: auto;
+  border-radius: @border-radius-sm;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: @font-mono;
+}
+
+.traceText {
+  max-height: 300px;
+  margin: 0;
+  padding: @spacing-sm;
+  background: @surface-1;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow: auto;
+  border-radius: @border-radius-md;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.traceReasoning {
+  max-height: 200px;
+  margin: 0;
+  padding: @spacing-sm;
+  background: fade(@primary-color, 4%);
+  color: @text-color-secondary;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow: auto;
+  border-radius: @border-radius-md;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-style: italic;
+}
+
+.eventPayload {
+  max-height: 150px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.traceMeta {
+  margin-bottom: @spacing-md;
+}
+
+.detailModalBody {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: @spacing-xs;
+}
+
+.systemPrompt {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+  line-height: 1.6;
+}
+
+/* 事件表格 */
+
+.eventPayloadThin {
+  max-height: 150px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

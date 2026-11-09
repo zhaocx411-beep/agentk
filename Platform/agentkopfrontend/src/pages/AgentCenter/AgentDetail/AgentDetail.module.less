@@ -1,0 +1,1836 @@
+/* AgentDetail - Agent 配置详情页样式 */
+
+.page {
+  height: 100%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* —— 分栏顶部栏内容 —— */
+.identityHeaderContent,
+.configHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: @spacing-md;
+}
+
+.headerTitleBox {
+  flex: 1;
+  min-width: 0;
+}
+
+.headerNameRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  flex-wrap: wrap;
+}
+
+.headerName {
+  max-width: 100%;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headerTag {
+  margin-inline-end: 0;
+  flex-shrink: 0;
+}
+
+/* 详情页版本：标签 + 紧凑下拉 */
+.versionField {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  flex-shrink: 0;
+}
+
+.versionLabel {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  white-space: nowrap;
+}
+
+.versionSelect {
+  width: 112px;
+  flex-shrink: 0;
+
+  :global(.ant-select-selector) {
+    border-radius: @border-radius-sm !important;
+  }
+}
+
+.versionPendingTip {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  white-space: nowrap;
+  cursor: default;
+}
+
+/* 自动保存时间：嵌在副标题里，替代原来的「更新于」 */
+.autoSavedInline {
+  color: @text-color-tertiary;
+}
+
+.headerSub {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  margin-top: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: @spacing-xs;
+  flex-shrink: 0;
+}
+
+.configHeaderInfo {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  min-width: 0;
+}
+
+.configHeaderTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.workflowHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: @spacing-md;
+}
+
+.workflowHeaderIdentity {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  gap: @spacing-sm;
+}
+
+/* —— 左侧角色指令 —— */
+.promptPanel {
+  min-width: 0;
+  padding: @spacing-md @spacing-lg @spacing-lg;
+  background: @canvas;
+}
+
+/* —— 中间模型与能力 —— */
+.capabilityPanel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: @spacing-md @spacing-lg @spacing-lg;
+  background: @canvas;
+  gap: @spacing-md;
+}
+
+.section {
+  padding: @spacing-sm 0;
+  background: transparent;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-md;
+}
+
+.sectionIcon {
+  color: @text-color-secondary;
+}
+
+.helpIcon {
+  color: @text-color-tertiary;
+  cursor: help;
+}
+
+.charCount {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 400;
+  margin-left: auto;
+}
+
+.promptArea {
+  min-height: (@spacing-section * 6);
+  border: none;
+  border-top: 1px solid @divider;
+  border-radius: 0;
+  background: @canvas;
+  font-size: @font-size-base;
+  line-height: 1.7;
+
+  &:global(.ant-input):hover,
+  &:global(.ant-input):focus {
+    border-color: transparent;
+    border-top-color: @hairline-strong;
+    background: @canvas;
+    box-shadow: none;
+  }
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  margin: @spacing-md 0 @spacing-xs;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  font-weight: 500;
+  gap: @spacing-xs;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.fieldHint {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 400;
+}
+
+.fieldTip {
+  margin: 0 0 @spacing-sm;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+/* —— 模型选择：触发条 + 下拉滚动面板 —— */
+.modelTrigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: @spacing-sm;
+  min-height: @control-height-lg;
+  padding: @spacing-xs @spacing-sm;
+  border: none;
+  border-bottom: 1px solid @divider;
+  background: @canvas;
+  color: inherit;
+  text-align: left;
+  appearance: none;
+  font: inherit;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: @surface-2;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background: @surface-2;
+  }
+}
+
+.modelTriggerFilled {
+  background: @canvas;
+}
+
+.modelTriggerOpen {
+  background: @surface-2;
+  box-shadow: none;
+}
+
+.modelTriggerArrow {
+  flex-shrink: 0;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  transition: transform @transition-duration-fast @transition-timing;
+}
+
+.modelTriggerOpen .modelTriggerArrow {
+  transform: rotate(180deg);
+  color: @primary-color;
+}
+
+.modelSummaryIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: @control-height-sm;
+  height: @control-height-sm;
+  border-radius: @border-radius-md;
+}
+
+.modelSummaryBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.modelSummaryLine {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  min-width: 0;
+}
+
+.modelSummaryName {
+  min-width: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.modelSummaryDesc {
+  margin: @spacing-xxs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.modelSummaryProvider {
+  flex-shrink: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.modelSummaryEmpty {
+  flex: 1;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.modelSearchIcon {
+  color: @text-color-tertiary;
+}
+
+.modelDropdown {
+  width: min((@spacing-section * 6), 92vw);
+  border: none;
+  background: @surface-1;
+  overflow: hidden;
+  border-radius: @border-radius-md;
+  box-shadow: @shadow-md;
+}
+
+.modelDropdownHead {
+  padding: @spacing-sm;
+}
+
+.modelDropdownSearch {
+  width: 100%;
+}
+
+.modelDropdownBody {
+  max-height: (@spacing-section * 4);
+  padding: @spacing-xs;
+  overflow-y: auto;
+}
+
+.modelDropdownGroup {
+  padding: @spacing-xs @spacing-sm @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.modelOption {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: @spacing-sm;
+  padding: @spacing-sm;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  appearance: none;
+  font: inherit;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+  transition: background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: @surface-2;
+  }
+
+  & + & {
+    margin-top: 2px;
+  }
+}
+
+.modelOptionActive {
+  background: @primary-subdued;
+}
+
+.modelIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: @border-radius-md;
+}
+
+.modelMark {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.modelBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.modelTitleRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  min-width: 0;
+}
+
+.modelName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.modelBadge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 6px;
+  background: fade(@warning-color, 14%);
+  color: darken(@warning-color, 12%);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: @border-radius-xs;
+
+  .anticon {
+    font-size: 10px;
+  }
+}
+
+.modelTagRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: @spacing-xxs;
+}
+
+.modelProvider {
+  color: @text-color-secondary;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.modelTag {
+  padding: 0 6px;
+  background: @surface-3;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: @border-radius-xs;
+}
+
+.modelOptionActive .modelTag {
+  background: fade(@primary-color, 8%);
+  color: @primary-color;
+}
+
+.modelDesc {
+  display: -webkit-box;
+  margin: @spacing-xxs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.modelRadio {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1.5px solid @hairline-strong;
+  background: @canvas;
+  color: @on-primary;
+  font-size: 10px;
+  border-radius: @border-radius-pill;
+}
+
+.modelRadioOn {
+  border-color: @primary-color;
+  background: @primary-color;
+}
+
+.modelEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-sm;
+  padding: @spacing-md;
+  background: transparent;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+  border-radius: @border-radius-md;
+}
+
+/* —— 工具：已选卡片 + 添加工具弹窗 —— */
+.toolSection {
+  margin-top: 0;
+}
+
+.toolSectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-sm;
+}
+
+.toolSectionLabel {
+  display: flex;
+  align-items: center;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  font-weight: 500;
+  gap: @spacing-xs;
+}
+
+.toolAddBtn {
+  color: @primary-color;
+}
+
+.toolGrid {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  padding: 0;
+  background: @canvas;
+  border-radius: @border-radius-lg;
+  overflow: hidden;
+}
+
+.selectedToolCard {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  min-width: 0;
+  min-height: @control-height-lg;
+  padding: @spacing-xs;
+  border: none;
+  background: @surface-2;
+  border-radius: @border-radius-md;
+  transition: background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: @surface-3;
+  }
+
+  .toolIcon {
+    width: @control-height-sm;
+    height: @control-height-sm;
+    font-size: @font-size-base;
+  }
+}
+
+.selectedToolMain {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: @spacing-sm;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+
+    .toolName,
+    .toolDesc {
+      text-decoration: underline;
+      text-decoration-color: @text-color-tertiary;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.selectedToolActions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.selectedToolRemove {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  border-radius: @border-radius-sm;
+  cursor: pointer;
+  transition:
+    background @transition-duration-fast @transition-timing,
+    color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: fade(@error-color, 10%);
+    color: @error-color;
+  }
+}
+
+.toolEditAction {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: @border-radius-sm;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background: @primary-subdued;
+    color: @primary-color;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .selectedToolCard {
+    transition: none;
+  }
+}
+
+.toolEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: @spacing-xxs;
+  padding: @spacing-xl @spacing-md;
+  border: 1px dashed @hairline-strong;
+  background: @surface-2;
+  color: @text-color-secondary;
+  appearance: none;
+  font: inherit;
+  border-radius: @border-radius-lg;
+  cursor: pointer;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    background @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: fade(@primary-color, 45%);
+    background: fade(@primary-color, 3%);
+    color: @primary-color;
+  }
+}
+
+.toolEmptyIcon {
+  color: @text-color-tertiary;
+  font-size: 22px;
+  margin-bottom: @spacing-xxs;
+}
+
+.toolEmpty:hover .toolEmptyIcon {
+  color: @primary-color;
+}
+
+.toolEmptyHint {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.addToolTitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.compactModal {
+  :global(.ant-modal-content) {
+    padding: @spacing-lg;
+    border-radius: @border-radius-lg;
+  }
+
+  :global(.ant-modal-header) {
+    margin-bottom: @spacing-md;
+  }
+
+  :global(.ant-modal-footer) {
+    margin-top: @spacing-md;
+  }
+}
+
+.addToolBack {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  color: @text-color;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+
+  &:hover {
+    background: @surface-2;
+  }
+}
+
+.addToolCount {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 400;
+}
+
+.addToolToolbar {
+  display: flex;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-sm;
+}
+
+.addToolSearch {
+  flex: 1;
+}
+
+.addToolCategory {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.addToolList {
+  max-height: (@spacing-section * 6);
+  margin: 0 -@spacing-xxs;
+  padding: 0 @spacing-xxs;
+  overflow-y: auto;
+}
+
+.addToolRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  padding: @spacing-sm @spacing-xs;
+  border-bottom: 1px solid @divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .toolIcon {
+    width: @control-height-sm;
+    height: @control-height-sm;
+    font-size: @font-size-base;
+  }
+}
+
+.addToolRowBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.addToolRowDesc {
+  display: -webkit-box;
+  margin: @spacing-xxs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.softTag {
+  flex-shrink: 0;
+  padding: 0 @spacing-xs;
+  background: @surface-3;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  white-space: nowrap;
+  border-radius: @border-radius-sm;
+}
+
+.toolConfigPreview {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+}
+
+.toolConfigHero {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-sm;
+  padding: 0 0 @spacing-md;
+  border: none;
+  border-bottom: 1px solid @divider;
+  background: transparent;
+  border-radius: 0;
+}
+
+.toolConfigHeroIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: @control-height-sm;
+  height: @control-height-sm;
+  font-size: @font-size-base;
+  border-radius: @border-radius-md;
+  box-shadow: none;
+}
+
+.toolConfigHeroBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.toolConfigHeroTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xs;
+}
+
+.toolConfigHeroName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+  letter-spacing: -0.2px;
+}
+
+.toolConfigHeroCat {
+  padding: 2px 8px;
+  background: @surface-3;
+  color: @text-color-secondary;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: @border-radius-sm;
+}
+
+.toolConfigHeroDesc {
+  display: -webkit-box;
+  margin: @spacing-xxs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.toolConfigBlock {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.toolConfigBlockHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-sm;
+}
+
+.toolConfigTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.toolConfigCount {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 500;
+}
+
+.toolConfigEmpty {
+  margin: 0;
+  padding: @spacing-lg;
+  background: @primary-subdued;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+  text-align: center;
+  border-radius: @border-radius-lg;
+}
+
+.toolConfigHint {
+  margin: 0;
+  padding: @spacing-sm 0 0;
+  border-top: 1px solid @divider;
+  background: transparent;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.6;
+}
+
+.toolParamForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: (@spacing-section * 5);
+  padding: 0;
+  overflow: auto;
+}
+
+.toolParamCard {
+  padding: @spacing-md 0;
+  border: none;
+  border-bottom: 1px solid @divider;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.toolParamCardHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.toolParamName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.toolParamRequiredMark {
+  margin-left: 2px;
+  color: @error-color;
+  font-weight: 700;
+}
+
+.toolParamCardInvalid {
+  margin: 0 calc(-1 * @spacing-sm);
+  padding: @spacing-md @spacing-sm;
+  border: 1px solid fade(@error-color, 45%);
+  border-radius: @border-radius-md;
+  background: fade(@error-color, 4%);
+}
+
+.toolParamType {
+  color: @primary-color;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.toolParamRequired {
+  padding: 0 6px;
+  background: fade(@error-color, 10%);
+  color: @error-color;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1.6;
+  border-radius: @border-radius-sm;
+}
+
+.toolParamOptional {
+  padding: 0 6px;
+  background: @primary-soft;
+  color: @primary-color-pressed;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: inherit;
+  line-height: 1.6;
+  border-radius: @border-radius-sm;
+}
+
+.toolParamDesc {
+  margin: 6px 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.toolParamMeta {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+  margin-top: @spacing-xs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+
+  em {
+    color: @text-color-secondary;
+    font-style: normal;
+  }
+}
+
+.toolParamEnums {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.toolParamEnum {
+  padding: 0 6px;
+  border-radius: @border-radius-sm;
+  background: @surface-2;
+  color: @text-color-secondary;
+  font-family: @font-mono;
+  font-size: 11px;
+}
+
+.toolParamChildren {
+  margin-top: @spacing-xs;
+}
+
+.toolParamChildrenLabel {
+  margin: 0 0 @spacing-xxs;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.toolParamChildrenList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+  margin: 0;
+  padding: 0 0 0 @spacing-md;
+  list-style: none;
+  border-left: 2px solid @divider;
+}
+
+.toolParamChildItem {
+  padding-left: @spacing-sm;
+}
+
+.toolParamChildHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.toolParamChildName {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.objectArrayEditor {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.objectArrayEmpty {
+  margin: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.objectArrayList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.objectArrayItem {
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-lg;
+  background: @surface-2;
+}
+
+.objectArrayItemInvalid {
+  border-color: fade(@error-color, 45%);
+  background: fade(@error-color, 4%);
+}
+
+.objectArrayItemHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  margin-bottom: @spacing-sm;
+}
+
+.objectArrayItemTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+.objectArrayItemFields {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+}
+
+.objectArrayChildField {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xxs;
+}
+
+.objectArrayChildHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.objectArrayChildName {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.schemaObjectNest {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+  margin-top: @spacing-xs;
+  padding: @spacing-xs 0 @spacing-xs @spacing-lg;
+  border-left: 2px solid @hairline;
+}
+
+.objectArrayUrlField {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.toolParamControlWrap {
+  margin-top: @spacing-sm;
+}
+
+.toolParamUploadRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-xs;
+}
+
+.toolParamFileInput {
+  display: none;
+}
+
+.toolParamUploadHint {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.4;
+}
+
+.toolParamMediaWrap {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.toolParamMediaWrapInvalid {
+  padding: @spacing-sm;
+  border: 1px solid fade(@error-color, 45%);
+  border-radius: @border-radius-md;
+  background: fade(@error-color, 4%);
+}
+
+.toolParamUrlInput {
+  width: 100%;
+}
+
+.toolParamLocalUpload {
+  padding: @spacing-xxs @spacing-sm;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-1;
+  color: @text-color;
+  font-size: @font-size-caption;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.toolParamUrlList {
+  margin: 0;
+  padding-left: @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.toolParamControl {
+  width: 100%;
+}
+
+.toolParamTextarea {
+  border-radius: @border-radius-md !important;
+}
+
+.toolParamSwitchRow {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  gap: @spacing-sm;
+}
+
+.toolParamSwitchLabel {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+}
+
+.toolParamSwitchLabelInvalid {
+  color: @error-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.toolParamFull {
+  width: 100%;
+}
+
+.toolParamMono {
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+}
+
+.addToolRowActions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: @spacing-xxs;
+}
+
+.toolIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: @font-size-lg;
+  border-radius: @border-radius-md;
+}
+
+.toolIconIndigo {
+  background: @primary-subdued;
+  color: @primary-color;
+}
+
+.toolIconSky {
+  background: fade(@info-color, 10%);
+  color: @info-color;
+}
+
+.toolIconEmerald {
+  background: fade(@success-color, 12%);
+  color: @success-color;
+}
+
+.toolIconAmber {
+  background: fade(@warning-color, 14%);
+  color: darken(@warning-color, 8%);
+}
+
+.toolIconRose {
+  background: fade(@error-color, 10%);
+  color: @error-color;
+}
+
+.toolIconViolet {
+  background: @primary-soft;
+  color: @primary-color-pressed;
+}
+
+.toolBody {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.toolTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+  min-width: 0;
+}
+
+.toolMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xxs;
+  margin-top: 4px;
+  min-width: 0;
+}
+
+.toolName {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolCategory {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  background: @surface-3;
+  color: @text-color-tertiary;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: @border-radius-xs;
+}
+
+.toolDesc {
+  display: -webkit-box;
+  margin: @spacing-xxs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-word;
+}
+
+@media (width <= calc(@screen-lg + @sider-width)) {
+  .promptPanel,
+  .capabilityPanel,
+  .historyPane {
+    padding-right: @spacing-md;
+    padding-left: @spacing-md;
+  }
+
+  .configHeaderTitle,
+  .versionLabel {
+    display: none;
+  }
+}
+
+@media (width <= @screen-md) {
+  .promptPanel,
+  .capabilityPanel,
+  .previewPanel {
+    flex: none;
+    width: 100%;
+  }
+
+  .promptPanel,
+  .capabilityPanel {
+    overflow: visible;
+  }
+
+  .previewPanel {
+    flex: none;
+    min-height: calc(@spacing-section * 8);
+  }
+}
+
+/* —— Pipeline / HTTP 能力卡片 —— */
+.capabilityList {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-sm;
+}
+
+.capabilityCard {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-sm;
+  padding: @spacing-md;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  border-radius: @border-radius-lg;
+  transition:
+    border-color @transition-duration-fast @transition-timing,
+    box-shadow @transition-duration-fast @transition-timing;
+
+  &:hover {
+    border-color: @hairline-strong;
+    box-shadow: @shadow-sm;
+  }
+}
+
+.capabilityIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-size: @font-size-lg;
+  border-radius: @border-radius-md;
+}
+
+.capabilityIconHttp {
+  background: fade(@info-color, 10%);
+  color: @info-color;
+}
+
+.capabilityBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.capabilityTitleRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: @spacing-xs;
+}
+
+.capabilityName {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.capabilityTag {
+  margin-inline-end: 0;
+  border: none;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-weight: 500;
+}
+
+.capabilityTagAsync {
+  margin-inline-end: 0;
+  border: none;
+  background: fade(@warning-color, 14%);
+  color: darken(@warning-color, 8%);
+  font-weight: 500;
+}
+
+.capabilityDesc {
+  margin: @spacing-xs 0 0;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.capabilityMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xs @spacing-md;
+  margin-top: @spacing-sm;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+
+  em {
+    margin-right: 4px;
+    color: @text-color-disabled;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.httpLine {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-top: @spacing-sm;
+  min-width: 0;
+}
+
+.httpMethod {
+  border: none;
+  background: @primary-subdued;
+  color: @primary-color;
+  font-weight: 600;
+  margin-inline-end: 0;
+  font-family: @font-mono;
+}
+
+.httpUrl {
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  font-family: @font-mono;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schemaList {
+  margin-top: @spacing-sm;
+  border-top: 1px dashed @hairline;
+  padding-top: @spacing-sm;
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-xs;
+}
+
+.schemaItem {
+  display: flex;
+  align-items: baseline;
+  gap: @spacing-xs;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+}
+
+.schemaName {
+  color: @text-color;
+  font-weight: 600;
+  font-family: @font-mono;
+}
+
+.schemaRequired {
+  color: @error-color;
+  margin-left: 2px;
+}
+
+.schemaType {
+  font-family: @font-mono;
+  color: @primary-color;
+  flex-shrink: 0;
+}
+
+.schemaDesc {
+  color: @text-color-tertiary;
+}
+
+/* —— 右侧预览面板 —— */
+.previewPanel {
+  min-width: 320px;
+}
+
+.previewHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: @spacing-sm;
+}
+
+.previewPaneContent {
+  overflow: hidden;
+}
+
+.previewTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* 嵌入 Playground ChatArea：占满右侧剩余高度 */
+.previewChatWrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* —— 历史会话（右侧 Tab） —— */
+.historyPane {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: @spacing-md @spacing-lg;
+  overflow: hidden;
+  gap: @spacing-sm;
+
+  :global(.ant-empty) {
+    margin: auto 0;
+  }
+
+  :global(.ant-spin) {
+    margin: auto;
+  }
+}
+
+.historyHint {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  flex-shrink: 0;
+}
+
+.historyList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  gap: @spacing-xxs;
+}
+
+.historyLoading {
+  padding: @spacing-sm 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.historyItem {
+  display: flex;
+  align-items: stretch;
+  gap: @spacing-xxs;
+  min-width: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: @border-radius-md;
+  transition: background @transition-duration-fast;
+
+  &:hover {
+    background: @surface-2;
+  }
+}
+
+.historyItemBody {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @spacing-sm;
+  min-width: 0;
+  padding: @spacing-sm @spacing-md;
+  border-radius: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid @primary-color;
+    outline-offset: 1px;
+  }
+}
+
+.historyItemActive {
+  border-color: @primary-color;
+  background: @primary-soft;
+
+  &:hover {
+    background: @primary-soft;
+  }
+}
+
+.historyItemMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.historyTitle {
+  color: @text-color;
+  font-size: @font-size-base;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.historyMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-top: 2px;
+}
+
+.historyVersion,
+.historyVersionCurrent {
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+}
+
+.historyVersion {
+  color: @text-color-tertiary;
+}
+
+.historyVersionCurrent {
+  color: @primary-color;
+}
+
+.historyTime {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.previewBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: @spacing-xl @spacing-lg;
+  overflow-y: auto;
+  gap: @spacing-lg;
+}
+
+.previewIdentity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @spacing-sm;
+  text-align: center;
+}
+
+.previewName {
+  color: @text-color;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.previewDesc {
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+  line-height: 1.6;
+}
+
+.previewStats {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: @spacing-sm;
+}
+
+.statItem {
+  padding: @spacing-sm;
+  border: 1px solid @hairline;
+  background: @surface-2;
+  text-align: center;
+  border-radius: @border-radius-md;
+}
+
+.statLabel {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  margin-bottom: @spacing-xxs;
+}
+
+.statValue {
+  margin-inline-end: 0;
+  font-family: @font-mono;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.previewTools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: @spacing-xxs;
+}
+
+.previewToolTag {
+  margin-inline-end: 0;
+  font-family: @font-mono;
+  font-size: @font-size-caption;
+}
+
+.previewInputBox {
+  display: flex;
+  gap: @spacing-xs;
+  padding: @spacing-md @spacing-lg;
+  border-top: 1px solid @divider;
+}
+
+.previewInput {
+  flex: 1;
+}
+
+.saveNameHint {
+  margin: 0 0 @spacing-md;
+  color: @text-color-tertiary;
+  font-size: @font-size-base;
+}

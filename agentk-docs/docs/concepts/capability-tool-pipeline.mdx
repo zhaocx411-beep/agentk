@@ -1,0 +1,213 @@
+---
+sidebar_position: 2
+sidebar_label: Capability、Tool 与 Pipeline
+title: Capability、Tool 与 Pipeline：从实现到使用
+description: 理解 Worker 如何发布 Capability，以及 Agent 和下游应用如何使用它
+pagination_prev: concepts/runtime-model
+pagination_next: concepts/profile-session
+---
+
+import {CapabilityLifecycle} from '@site/src/components/concepts/CapabilityDiagrams';
+
+# Capability、Tool 与 Pipeline：从实现到使用
+
+[AgentK 运行模型](/concepts/runtime-model)解释了 Session 和 Execution 如何承载任务。本文沿
+另一条路径展开：独立 Worker 中的领域实现如何进入 AgentK，并成为 Agent 或下游应用可以
+选择的能力。
+
+核心关系是：
+
+> Capability 是带有稳定 ID 和输入输出契约的领域实现；Agent、下游应用和其他 Workflow
+> 都通过这个稳定身份使用它。
+
+<CapabilityLifecycle />
+
+<span id="capability" className="concept-anchor" />
+
+## Capability 是领域契约
+
+一个 Capability 由 Workflow 或 Activity 实现。公开契约包括：
+
+- 全局唯一的 Capability ID；
+- 面向使用者的说明；
+- 输入与输出 JSON Schema；
+- 最长执行时间；
+- 可选的 Tool 声明。
+
+AgentK 内置能力使用 `agentk.<name>`，独立 Worker 使用
+`contrib.<owner>.<name>`。Capability ID 是调用和组合时使用的稳定身份。
+
+Temporal Workflow Type 和 task queue 只负责把任务路由到正确 Worker。它们属于 Worker
+部署信息，不是下游接口，也不应复制到 Session Profile。
+
+## Worker SDK 发布 Capability
+
+能力提供方仍然编写普通 Temporal Workflow 或 Activity。AgentK Worker SDK 在原生 Worker
+之外增加连接、契约发布和调用上下文支持，不替代 Temporal 编程模型。
+
+下面是一个 Go Workflow 的发布结构：
+
+```go
+temporalClient, err := agentktemporal.Dial(ctx)
+if err != nil {
+    return err
+}
+defer temporalClient.Close()
+
+w := agentkworker.New(
+    temporalClient,
+    "contrib.example-renderer",
+    temporalworker.Options{},
+)
+w.RegisterWorkflowWithOptions(
+    RenderWorkflow,
+    workflow.RegisterOptions{Name: "RenderWorkflow"},
+)
+w.PublishWorkflow(capability.Capability{
+    ID:             "contrib.example.render",
+    TemporalType:   "RenderWorkflow",
+    Description:    "根据脚本生成视频。",
+    InputSchema:    capability.SchemaOf[RenderInput](),
+    OutputSchema:   capability.SchemaOf[RenderOutput](),
+    TimeoutSeconds: 60 * 60,
+    Tool:           &capability.Tool{},
+})
+
+return w.Run(temporalworker.InterruptCh())
+```
+
+这里有两个必要动作：
+
+1. `RegisterWorkflowWithOptions` 向 Temporal Worker 注册执行体；
+2. `PublishWorkflow` 把同一实现及其公开契约加入 Capability Manifest。
+
+Worker SDK 在 Worker 启动前校验并冻结 Manifest，运行后自动向 AgentK 上报。Contributor Worker
+必须使用自己的 task queue，不能监听核心 `agentk` task queue。
+
+## Catalog 提供当前可用目录
+
+AgentK 将内置能力和 Worker 上报的能力组成 Capability Catalog。下游通过
+`ListCapabilities` 获取 ID、说明、Schema、超时和 Tool 声明；公开结果不包含 Temporal
+Workflow Type 或 task queue。
+
+Catalog 反映当前环境中可解析的能力，不是永久注册表。独立 Worker 停止上报并超过有效期后，
+对应条目会暂时消失；Worker 恢复后，同一个 Capability ID 可以重新可用。
+
+## 下游可以直接调用 Capability
+
+下游应用可以使用 Client SDK 的 `InvokeCapability`，按裸 Capability ID 发起一次阻塞式调用：
+
+```text
+Client → InvokeCapability(capability ID, JSON object) → JSON value
+```
+
+这条路径不需要 Profile，也不创建 Session、Execution、Event Log 或 invocation meta。它适合
+一次性请求/响应调用；RPC 会等待 Capability 完成、失败、超时或被调用方取消。这里的
+transient 是业务语义：目标仍然作为 Temporal Workflow 或 Activity 执行，Temporal History、
+重试、超时和取消正常保留。
+
+需要进度、断线恢复、运行 ID 或独立生命周期管理时，应在 Session 中将 Capability 作为
+Pipeline 启动。三语言示例见[直接调用 Capability](/client/guides/invoke-capability)。
+
+## Profile 选择使用方式
+
+Profile 使用裸 Capability ID 选择能力，并为当前 Session 指定一个名称：
+
+```json
+{
+  "defaultModel": "<chat-model>",
+  "system": "根据用户意图生成视频。",
+  "tools": [
+    {
+      "capability": "contrib.example.render",
+      "name": "render_video",
+      "instructions": "用户确认脚本后调用。"
+    }
+  ],
+  "pipelines": [
+    {
+      "capability": "contrib.example.render",
+      "name": "render_video",
+      "displayName": "视频生成"
+    }
+  ]
+}
+```
+
+这几层名称回答不同问题：
+
+- `contrib.example.render` 是能力提供方维护的全局身份；
+- `render_video` 是这个 Session 提供给模型或下游调用方的名称；
+- `RenderWorkflow` 是 Worker 内部的 Temporal Workflow Type。
+
+Profile 固化 Capability 选择和 Session 内名称，不复制 Worker 路由。
+
+<span id="tool" className="concept-anchor" />
+
+## Tool 由模型选择
+
+Capability 带有 Tool 声明，并被 Profile 加入 `tools` 后，模型可以在 Agent Loop 中选择它。
+当前 Tool 都是 blocking：Agent Loop 等待 Activity 或 Workflow 返回，再把结果交给下一轮模型。
+
+Tool 声明可以设置面向模型的说明和最大尝试次数，但没有 background 模式。需要让应用显式管理
+分钟级流程时，将同一 Capability 配置为 Pipeline，并独立观察对应 Execution。
+
+完整 Tool 暴露方式见[将 Capability 暴露为 Tool](/worker/guides/tool)。
+
+<span id="pipeline" className="concept-anchor" />
+
+## Pipeline 由调用方选择
+
+所有已发布 Capability 都可以作为 Pipeline，不需要在 Manifest 中增加单独的 Pipeline 声明。
+Profile 将 Capability 加入 `pipelines` 后，下游可以：
+
+1. 使用 `ListPipelines` 读取当前 Session 的名称、说明和 Schema；
+2. 使用 `StartExecution` 提交 Pipeline 名称和业务参数；
+3. 使用 `WatchEvents` 观察进度，或使用 `GetExecution` 读取终态和输出。
+
+Pipeline 适合调用顺序由代码确定、执行时间较长，或者调用方需要直接管理生命周期的任务。
+完整 Worker 发布方式见[实现并发布 Capability](/worker/guides/capability)。
+
+## Workflow 组合使用 Capability
+
+一个 Capability Workflow 调用其他 Capability 时，不需要知道目标 Workflow Type 或 task queue。
+Worker SDK 按 Capability ID 解析当前路由，再执行对应 Child Workflow 或 Activity：
+
+```go
+var output GenerateImageOutput
+if err := capability.Invoke(
+    ctx,
+    "agentk.generate_image",
+    GenerateImageInput{Prompt: "雨夜里的霓虹街道"},
+    &output,
+); err != nil {
+    return err
+}
+```
+
+Python Worker 使用等价的 `invoke_capability(...)`。这种调用保留 Temporal 的持久化、取消和
+重试语义，同时让调用代码依赖稳定 Capability ID，而不是另一个 Worker 的部署细节。
+
+这两个 Worker API 只能从 Temporal Workflow 内调用。Workflow 外的普通下游应用使用 Client
+SDK 的 `InvokeCapability`，不直接连接 Temporal。
+
+## 解析发生在使用时
+
+Profile 创建后保持不变，但独立 Worker 的在线状态可以变化：
+
+- Agent Execution 开始时，AgentK 从当前 Catalog 解析可用 Tool；
+- `ListPipelines` 和 Pipeline 启动从当前 Catalog 解析契约；
+- `InvokeCapability` 在每次直接调用时从当前 Catalog 解析目标；
+- Execution 真正启动后，本次采用的目标进入 Temporal History，不受后续 Catalog 变化影响。
+
+核心内置 Capability 在创建 Session 时校验。Contributor Capability 可以在创建 Session 时暂时
+离线；真正使用时如果仍无法解析，AgentK 会返回明确错误，而不是选择另一个实现。
+
+## 需要记住的边界
+
+1. Capability ID 是领域实现的稳定身份；Temporal Type 和 task queue 是内部路由。
+2. Temporal 注册提供执行体，Worker SDK 发布提供发现契约；二者职责不同。
+3. Tool 由模型选择；Pipeline 和 Direct Invoke 都由下游应用显式发起。
+4. Direct Invoke 不创建 Session 或 Execution；需要进度与恢复时使用 Pipeline Execution。
+5. 所有 Capability 都可以配置为 Pipeline，只有需要模型调用时才声明 Tool。
+6. Workflow 组合能力时使用 Worker SDK 的 Capability ID 调用，不直接依赖目标 task queue。

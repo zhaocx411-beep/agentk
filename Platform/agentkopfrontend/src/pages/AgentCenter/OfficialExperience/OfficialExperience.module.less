@@ -1,0 +1,220 @@
+/* 官方立即体验：顶栏 + 创作工作台 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  background: @page-ambient;
+  background-attachment: fixed;
+
+  /* 整页上下滚：第一屏工作台，第二屏成品展示 */
+  overflow: hidden auto;
+}
+
+/* 自主 Agent 自由对话：固定视口，内部左右栏各自滚动 */
+.pageChat {
+  overflow: hidden;
+}
+
+/* 工作流：高度随内容，超出视口后由页面滚动 */
+.pageStudio {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.loadingPlaceholder {
+  min-width: 160px;
+  min-height: 80px;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  min-width: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  min-width: 0;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  color: @text-color-secondary;
+  border-radius: @border-radius-md;
+  cursor: pointer;
+  transition:
+    background @transition-duration-fast @transition-timing,
+    border-color @transition-duration-fast @transition-timing,
+    color @transition-duration-fast @transition-timing;
+
+  &:hover {
+    background: @surface-3;
+    color: @text-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: @focus-ring-neutral;
+  }
+}
+
+.headerAvatar {
+  background: @text-color;
+  color: @canvas;
+  box-shadow: none;
+}
+
+.headerText {
+  min-width: 0;
+}
+
+.headerNameRow {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.headerName {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  .text-clamp(1);
+}
+
+.headerDesc {
+  max-width: 72ch;
+  margin: @spacing-xxs 0 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.5;
+  .text-clamp(1);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  flex-shrink: 0;
+}
+
+.headerMeta {
+  flex-shrink: 0;
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+  line-height: 1.4;
+}
+
+/* 运行状态徽标：让用户在顶栏一眼看到这次体验跑到哪一步 */
+.runTag {
+  display: inline-flex;
+  align-items: center;
+  gap: @spacing-xxs;
+  padding: @spacing-xxs;
+  border: none;
+  font-size: @font-size-caption;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: @border-radius-sm;
+
+  &::before {
+    width: 6px;
+    height: 6px;
+    border-radius: @border-radius-pill;
+    background: currentcolor;
+    content: '';
+  }
+}
+
+.runIdle {
+  background: transparent;
+  color: @success-color;
+}
+
+.runRunning {
+  background: transparent;
+  color: @primary-color;
+}
+
+.runProcessing {
+  background: transparent;
+  color: @warning-color;
+}
+
+.runFailed {
+  background: transparent;
+  color: @error-color;
+}
+
+.createButton {
+  height: @control-height-base;
+  border-color: @text-color;
+  background: @text-color;
+  color: @canvas;
+
+  &:global(.ant-btn):hover:not(:disabled) {
+    border-color: @text-color-secondary;
+    background: @text-color-secondary;
+  }
+
+  &:focus-visible {
+    box-shadow: @focus-ring-neutral;
+  }
+}
+
+@media (max-width: @screen-md) {
+  .page {
+    margin: 0;
+  }
+
+  .header {
+    padding: @spacing-sm @spacing-md;
+  }
+
+  .headerAvatar,
+  .headerMeta,
+  .runTag {
+    display: none;
+  }
+
+  .headerNameRow {
+    flex-wrap: nowrap;
+  }
+
+  .headerDesc {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backBtn {
+    transition: none;
+  }
+}

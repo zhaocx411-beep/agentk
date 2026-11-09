@@ -1,0 +1,48 @@
+[project]
+name = "storyboard-example-python"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
+override-dependencies = [
+  "cityhash==0.4.9",
+  "grpcio==1.76.0",
+  "lxml==6.0.2",
+  "lz4==4.4.5",
+  "setuptools<82.0.0",
+]
+
+[tool.uv.sources]
+dsc-auth = { index = "kuaishou" }
+infra-component = { index = "kuaishou" }
+infra-framework = { index = "kuaishou" }
+infra-kconf = { index = "kuaishou" }
+infra-kess = { index = "kuaishou" }
+infra-keycenter = { index = "kuaishou" }
+infra-storage = { index = "kuaishou" }
+ks-kafka-python = { index = "kuaishou" }
+ks-agentk-worker = { index = "kuaishou" }
+ks-agentk-client = { index = "kuaishou" }
+ks-agentk-protocol = { index = "kuaishou" }
+
+[[tool.uv.index]]
+name = "kuaishou"
+url = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/"
+explicit = true
+
+[[tool.uv.index]]
+name = "kuaishou-staging"
+url = "https://pypi.corp.kuaishou.com/kuaishou/staging/+simple/"
+explicit = true
+
+[tool.uv.extra-build-dependencies]
+cchardet = ["cython"]
+dsc-auth = ["setuptools_scm"]
+
+[tool.uv.workspace]
+members = [
+  "worker",
+  "mcp-server",
+]

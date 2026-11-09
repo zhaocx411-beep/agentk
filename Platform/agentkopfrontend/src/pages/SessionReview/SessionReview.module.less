@@ -1,0 +1,583 @@
+/* 数据回看页面样式 */
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  color: @text-color-secondary;
+  font-size: 14px;
+  margin-bottom: @spacing-lg;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.subtitleIcon {
+  color: @primary-color;
+  font-size: 16px;
+}
+
+/* 搜索筛选区 */
+.searchSection {
+  padding: @spacing-lg;
+  border: 1px solid @hairline;
+  background: @canvas;
+  border-radius: @border-radius-lg;
+  margin-bottom: @spacing-lg;
+  flex-shrink: 0;
+}
+
+.searchForm {
+  :global(.ant-form-item) {
+    margin-bottom: @spacing-sm;
+  }
+}
+
+/* 时间选择器窄屏占满一行 */
+.formItemWide {
+  min-width: 100%;
+  margin-bottom: @spacing-md;
+
+  @media (min-width: @screen-md) {
+    min-width: auto;
+    margin-bottom: @spacing-sm;
+  }
+}
+
+.input {
+  width: 160px;
+}
+
+.numberInput {
+  width: 150px;
+}
+
+.picker {
+  width: 100%;
+
+  @media (min-width: @screen-md) {
+    width: auto;
+  }
+}
+
+/* 结果区域头部 */
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: @spacing-md;
+  flex-shrink: 0;
+}
+
+.resultsTitle {
+  color: @text-color;
+  font-size: @font-size-lg;
+  font-weight: 600;
+}
+
+/* Profile YAML 展示 */
+.profileYaml {
+  max-height: 50vh;
+  margin: 0;
+  padding: @spacing-md;
+  background: @surface-3;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow: auto;
+  border-radius: @border-radius-md;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.profileRejectAlert {
+  margin-bottom: @spacing-md;
+}
+
+/* 独立对话回看页 */
+.conversationPageToolbar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  margin-bottom: @spacing-xs;
+}
+
+.conversationPageToolbarMain {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+}
+
+.conversationPageTitle {
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-xxl;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.conversationPageIntro {
+  margin-bottom: @spacing-md;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.conversationPagePanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  overflow: hidden;
+  border-radius: @border-radius-lg;
+}
+
+.conversationPageLoading {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-sm;
+  min-height: 0;
+}
+
+.chatHeader {
+  padding: @spacing-lg @spacing-xl @spacing-md;
+  background: @canvas;
+  border-bottom: 1px solid @hairline;
+}
+
+.chatTitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: @spacing-sm;
+  margin: 0;
+  color: @text-color;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.chatTitleSub {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  font-weight: 500;
+}
+
+.chatMetaChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: @spacing-xs;
+}
+
+.metaChip,
+.metaChipAccent {
+  display: inline-flex;
+  align-items: center;
+  max-width: 280px;
+  padding: 2px @spacing-sm;
+  border: 1px solid @hairline;
+  background: @surface-1;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  overflow: hidden;
+  border-radius: @border-radius-pill;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metaChipAccent {
+  border-color: fade(@primary-color, 28%);
+  background: @primary-subdued;
+  color: @primary-color;
+  font-weight: 600;
+}
+
+.conversationAlert {
+  margin: @spacing-md @spacing-xl 0;
+}
+
+.conversationPageBody {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: @canvas;
+  overflow: hidden;
+}
+
+.conversationLoading,
+.conversationEmpty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-sm;
+  width: 100%;
+  min-height: 0;
+}
+
+.loadingText {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.chatThread {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+  width: 100%;
+  height: 100%;
+  padding: @spacing-lg @spacing-xl;
+  overflow: auto;
+}
+
+.chatHistoryLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: @spacing-xs;
+  padding: @spacing-sm 0 @spacing-md;
+}
+
+.chatRow {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-sm;
+  width: 100%;
+}
+
+.chatRowUser {
+  justify-content: flex-end;
+}
+
+.chatRowAssistant,
+.chatRowTool,
+.chatRowSystem {
+  justify-content: flex-start;
+}
+
+.chatAvatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: @border-radius-pill;
+  font-size: 14px;
+}
+
+.avatarUser {
+  background: @primary-color;
+  color: @on-primary;
+  box-shadow: 0 4px 12px fade(@primary-color, 28%);
+}
+
+.avatarAssistant {
+  border: 1px solid @hairline;
+  background: @surface-1;
+  color: @primary-color;
+  box-shadow: @shadow-sm;
+}
+
+.avatarTool {
+  border: 1px solid @hairline-strong;
+  background: @surface-3;
+  color: @text-color-secondary;
+}
+
+.avatarSystem {
+  border: 1px solid fade(@warning-color, 30%);
+  background: fade(@warning-color, 12%);
+  color: @warning-color;
+}
+
+.chatBubble {
+  max-width: min(90%, 1040px);
+  padding: @spacing-sm @spacing-md @spacing-md;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-xl;
+  background: @surface-1;
+  box-shadow: @shadow-sm;
+}
+
+.chatRowUser .chatBubble {
+  max-width: min(78%, 840px);
+  border-color: fade(@primary-color, 18%);
+  background: linear-gradient(160deg, @primary-soft 0%, @primary-subdued 100%);
+  border-bottom-right-radius: @border-radius-xs;
+}
+
+.chatRowAssistant .chatBubble {
+  width: min(90%, 1040px);
+  background: @surface-1;
+  border-bottom-left-radius: @border-radius-xs;
+}
+
+.chatRowTool .chatBubble {
+  width: min(94%, 1120px);
+  max-width: min(94%, 1120px);
+  background: @surface-2;
+  border-color: @hairline-strong;
+}
+
+.chatRowSystem .chatBubble {
+  width: min(94%, 1120px);
+  max-width: min(94%, 1120px);
+  background: fade(@warning-color, 8%);
+  border-color: fade(@warning-color, 26%);
+}
+
+.chatHead {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: @spacing-xs @spacing-sm;
+  margin-bottom: @spacing-xs;
+}
+
+.chatRole {
+  color: @text-color;
+  font-size: @font-size-caption;
+  font-weight: 600;
+}
+
+.chatRowUser .chatRole {
+  color: @primary-color-pressed;
+}
+
+.chatKind,
+.chatTime {
+  color: @text-color-tertiary;
+  font-size: @font-size-caption;
+}
+
+.chatCopyButton {
+  margin-left: auto;
+  color: @text-color-tertiary;
+  opacity: 0;
+  transition: opacity @transition-duration-fast @transition-timing;
+}
+
+.chatBubble:hover .chatCopyButton,
+.chatBubble:focus-within .chatCopyButton {
+  opacity: 1;
+}
+
+.chatText {
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: 1.7;
+  word-break: break-word;
+
+  :global(p) {
+    margin: 0 0 @spacing-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  :global(a) {
+    color: @primary-color;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  :global(h2),
+  :global(h3) {
+    margin: @spacing-md 0 @spacing-xs;
+    color: @text-color;
+    font-size: @font-size-base;
+    font-weight: 600;
+  }
+
+  :global(ul),
+  :global(ol) {
+    margin: @spacing-xs 0;
+    padding-left: @spacing-lg;
+  }
+
+  :global(li) {
+    margin: @spacing-xxs 0;
+  }
+
+  :global(li > p) {
+    margin: 0;
+  }
+}
+
+.chatTextPlain {
+  white-space: pre-wrap;
+}
+
+.reviewReasoning {
+  border-radius: @border-radius-md;
+  background: @surface-2;
+  overflow: hidden;
+}
+
+.reviewReasoningSummary {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  padding: @spacing-xs @spacing-sm;
+  color: @text-color-secondary;
+  font-size: @font-size-caption;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.reviewReasoningIcon {
+  color: @primary-color;
+}
+
+.reviewReasoningChevron {
+  margin-left: auto;
+  color: @text-color-tertiary;
+  transition: transform @transition-duration-fast @transition-timing;
+}
+
+.reviewReasoning[open] .reviewReasoningChevron {
+  transform: rotate(180deg);
+}
+
+.reviewReasoningBody {
+  padding: @spacing-sm;
+  border-top: 1px solid @divider;
+}
+
+.chatRowUser .chatText {
+  color: fade(@text-color, 92%);
+}
+
+.chatMarkdownTable {
+  max-width: 100%;
+  margin: @spacing-sm 0;
+  overflow: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: normal;
+  }
+
+  th,
+  td {
+    padding: @spacing-xs @spacing-sm;
+    border: 1px solid @hairline;
+    text-align: left;
+  }
+
+  th {
+    background: @surface-2;
+    color: @text-color-secondary;
+    font-weight: 600;
+  }
+}
+
+.chatMarkdownMedia {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: @spacing-sm 0;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+  overflow: hidden;
+}
+
+.chatMarkdownImage {
+  display: block;
+  width: auto;
+  max-width: min(100%, 560px);
+  max-height: 360px;
+  object-fit: contain;
+}
+
+.mediaList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: @spacing-sm;
+  margin-top: @spacing-sm;
+}
+
+.mediaVideo {
+  width: min(100%, 560px);
+  max-height: 360px;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+  object-fit: contain;
+}
+
+.mediaAudio {
+  width: 100%;
+  max-width: 560px;
+}
+
+.mediaImg {
+  width: auto;
+  max-width: min(100%, 560px);
+  max-height: 360px;
+  object-fit: contain;
+  border: 1px solid @hairline;
+  border-radius: @border-radius-md;
+  background: @surface-2;
+}
+
+@media (max-width: @screen-sm) {
+  .conversationPageToolbar {
+    align-items: flex-start;
+  }
+
+  .conversationPageToolbarMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: @spacing-xxs;
+  }
+
+  .chatHeader,
+  .chatThread {
+    padding: @spacing-md;
+  }
+
+  .conversationPageBody {
+    min-height: 0;
+  }
+
+  .chatBubble,
+  .chatRowTool .chatBubble,
+  .chatRowSystem .chatBubble {
+    max-width: 88%;
+  }
+
+  .chatRowAssistant .chatBubble {
+    width: 88%;
+  }
+
+  .chatCopyButton {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviewReasoningChevron,
+  .chatCopyButton {
+    transition: none;
+  }
+}

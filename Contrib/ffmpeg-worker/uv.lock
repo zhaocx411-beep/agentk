@@ -1,0 +1,867 @@
+version = 1
+revision = 3
+requires-python = ">=3.12, <3.14"
+
+[manifest]
+overrides = [
+    { name = "cityhash", specifier = "==0.4.9" },
+    { name = "grpcio", specifier = "==1.76.0" },
+    { name = "lxml", specifier = "==6.0.2" },
+    { name = "lz4", specifier = "==4.4.5" },
+    { name = "python-snappy", specifier = "==0.7.3" },
+    { name = "setuptools", specifier = "<82" },
+]
+
+[[package]]
+name = "agentk-worker"
+version = "0.1.0"
+source = { path = "vendor/agentk_worker-0.1.0-py3-none-any.whl" }
+dependencies = [
+    { name = "temporalio" },
+]
+wheels = [
+    { filename = "agentk_worker-0.1.0-py3-none-any.whl", hash = "sha256:c4a016ff56075980ca46a87647320013be0e8c79e1e8f21a0f6a92a1e1e53818" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "temporalio", specifier = ">=1.31.0" }]
+
+[[package]]
+name = "annotated-types"
+version = "0.8.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/annotated-types/0.8.0/annotated_types-0.8.0.tar.gz", hash = "sha256:13b2beaad985e05e2d6407ee4c4f35590b11f8d693a258a561055cac8f64cab7" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/annotated-types/0.8.0/annotated_types-0.8.0-py3-none-any.whl", hash = "sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0" },
+]
+
+[[package]]
+name = "apscheduler"
+version = "3.11.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "tzlocal" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/apscheduler/3.11.3/apscheduler-3.11.3.tar.gz", hash = "sha256:cd2fcc9330039a81a5893472ad49facf23a6d5604cbe1d918c835c6de7834d5a" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/apscheduler/3.11.3/apscheduler-3.11.3-py3-none-any.whl", hash = "sha256:bbeb2ec02d23d3c06a6c07ed7f0f3939ada6680eb121fae809a69bb42c537a30" },
+]
+
+[[package]]
+name = "blinker"
+version = "1.9.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/blinker/1.9.0/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/blinker/1.9.0/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc" },
+]
+
+[[package]]
+name = "cachetools"
+version = "7.1.7"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cachetools/7.1.7/cachetools-7.1.7.tar.gz", hash = "sha256:a3e2a00b14d8f8a6b70c1dae7b4685e7ad3bc965c5b42124a2d6ce895da6cf50" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cachetools/7.1.7/cachetools-7.1.7-py3-none-any.whl", hash = "sha256:ef98ef375ad188819ef2f9b3645e3987f4b8c5b7550e436ad998c2de78296df0" },
+]
+
+[[package]]
+name = "certifi"
+version = "2026.7.22"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/certifi/2026.7.22/certifi-2026.7.22.tar.gz", hash = "sha256:741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/certifi/2026.7.22/certifi-2026.7.22-py3-none-any.whl", hash = "sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775" },
+]
+
+[[package]]
+name = "charset-normalizer"
+version = "3.4.9"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9.tar.gz", hash = "sha256:673611bbd43f0810bec0b0f028ddeaaa501190339cac411f347ac76917c3ae7b" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:45b0cc4e3556cd875e09102988d1ab8356c998b596c9fced84547c8138b487a0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:9b2aff1c7b3884512b9512c3eaadd9bab39fb45042ffaaa1dd08ff2b9f8109d9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:9104ed0bd76a429d46f9ec0dbc9b08ad1d2dcdf2b00a5a0daa1c145329b35b44" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:7b86a2b16095d250c6f58b3d9b2eee6f4147754344f3dab0922f7c9bf7d226c9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5e226f6218febc71f6c1fc2fafb91c226f75bdc1d8fb12d66823716e891608fd" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux_2_31_armv7l.whl", hash = "sha256:90c44bc373b7687f6948b693cceaea1348ae0975d7474746559494468e3c1d84" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:9cdef90ae47919cae358d8ab15797a800ed41da7aba5d72419fb510729e2ed4b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:60f44ade2cf573dad7a277e6f8ca9a51a21dda572b13bd7d8539bb3cd5dbedde" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:a1786910334ed46ab1dd73222f2cd1e05c2c3bb39f6dddb4f8b36fc382058a39" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:03d07803992c6c7bbc976327f34b18b6160327fc81cb82c9d504720ac0be3b62" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-win32.whl", hash = "sha256:78841cccf1af7b40f6f716338d50c0902dbe88d9f800b3c973b7a9a0a693a642" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-win_amd64.whl", hash = "sha256:4b3dac63058cc36820b0dd072f89898604e2d39686fe05321729d00d8ac185a0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp312-cp312-win_arm64.whl", hash = "sha256:78fa18e436a1a0e58dbd7e02fc4473f3f32cceb12df9dfca542d075961c307d2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:440eede837960000d74978f0eba527be106b5b9aee0daf779d395276ed0b0614" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:21e764fd1e70b6a3e205a0e46f3051701f98a8cb3fad66eeb80e48bb502f8698" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:e4fd89cc178bced6ad29cb3e6dd4aa63fa5017c3524dbd0b25998fb64a87cc8b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:bd47ba7fc3ca94896759ea0109775132d3e7ab921fbf54038e1bab2e46c313c9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:84fd18bcc17526fc2b3c1af7d2b9217d32c9c04448c16ec693b9b4f1985c3d33" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux_2_31_armv7l.whl", hash = "sha256:5b10cd92fc5c498b35a8635df6d5a100207f88b63a4dc1de7ef9a548e1e2cd63" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:a4fbdde9dd4a9ce5fd52c2b3a347bb50cc89483ef783f1cb00d408c13f7a96c0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:416c229f77e5ea25b3dfd4b582f8d73d7e43c22320302b9ab128a2d3a0b38efe" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:75286256590a6320cf106a0d28970d3560aad9ee09aa7b34fb40524792436d35" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:69b157c5d3292bcd443faca052f3096f637f1e074b98212a933c074ae23dc3b8" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-win32.whl", hash = "sha256:51307f5c71007673a2bf8232ad973483d281e74cb99c8c5a990af1eefa6277d9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-win_amd64.whl", hash = "sha256:fe2c7201c642b7c308f1675355ad7ff7b66acfe3541625efe5a3ad38f29d6115" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-cp313-cp313-win_arm64.whl", hash = "sha256:611057cc5d5c0afc743ba8be6bd828c17e0aaa8643f9d0a9b9bb7dea80eb8012" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/charset-normalizer/3.4.9/charset_normalizer-3.4.9-py3-none-any.whl", hash = "sha256:68e5f26a1ad57ded6d1cfb85331d1c1a195314756471d97758c48498bb4dcdf5" },
+]
+
+[[package]]
+name = "cityhash"
+version = "0.4.9"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9.tar.gz", hash = "sha256:e897d5d4faa6eff7c6c706d488e5e9eee129b7f41f9db498a4ba8701ce89122f" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:c7a81b5477022abdcfa503ee52c1b3bebf28c91bff0755c1f96356a6141b5d88" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:27fe33f98fd262ed10d53c5b16ab21f90de1f23caf69153d42f0758d770ee3d1" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0d1fca9199836a29b9bf5644ba8416729c04a66bcf3640d2706159963a2a666d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7345a05b193b7b1c46c0e92e8826430f4158edebd071163b26185c50daf392f5" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-win32.whl", hash = "sha256:d3668a2c5df26f08d62506ab13c02a90d2db50e5e07ede5a453808c507185317" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp312-cp312-win_amd64.whl", hash = "sha256:3e3098eb7388c3c3cb98a7bd4e8f2b776192d7bcf0fb72eb2075a5e47cb3ef4f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:5e69a3151cfe5b68d3b782a15f4e88413cdd4585fbc0bfd5dc3669d9fcf9c9de" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:fc45b13f6ac8262228cd8bf1cda067f3171dcb4b93ff524996055ba0baccc6ee" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:af85636b98b5bacc60cfbcd5b5ed5d430f4c8120b00f9c98026300674200e9d4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fe89d80d6f9552402ba7ec9dc701f31a2747b4e31dc0cb3313bb9db825902b6e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-win32.whl", hash = "sha256:a332fff36af7fac5e5b831307f2edb0254ea513c4356bbccf0274700445be678" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cityhash/0.4.9/cityhash-0.4.9-cp313-cp313-win_amd64.whl", hash = "sha256:04418829e01f114427b8c401db2da25f0286d3ae9471e6af37357f2d51dba062" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/colorama/0.4.6/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/colorama/0.4.6/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6" },
+]
+
+[[package]]
+name = "cramjam"
+version = "2.11.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0.tar.gz", hash = "sha256:5c82500ed91605c2d9781380b378397012e25127e89d64f460fea6aeac4389b4" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:dba5c14b8b4f73ea1e65720f5a3fe4280c1d27761238378be8274135c60bbc6e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:11eb40722b3fcf3e6890fba46c711bf60f8dc26360a24876c85e52d76c33b25b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:aeb26e2898994b6e8319f19a4d37c481512acdcc6d30e1b5ecc9d8ec57e835cb" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:4f8d82081ed7d8fe52c982bd1f06e4c7631a73fe1fb6d4b3b3f2404f87dc40fe" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:092a3ec26e0a679305018380e4f652eae1b6dfe3fc3b154ee76aa6b92221a17c" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:529d6d667c65fd105d10bd83d1cd3f9869f8fd6c66efac9415c1812281196a92" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:555eb9c90c450e0f76e27d9ff064e64a8b8c6478ab1a5594c91b7bc5c82fd9f0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:5edf4c9e32493035b514cf2ba0c969d81ccb31de63bd05490cc8bfe3b431674e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2fa2fe41f48c4d58d923803383b0737f048918b5a0d10390de9628bb6272b107" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:9ca14cf1cabdb0b77d606db1bb9e9ca593b1dbd421fcaf251ec9a5431ec449f3" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-musllinux_1_1_armv7l.whl", hash = "sha256:309e95bf898829476bccf4fd2c358ec00e7ff73a12f95a3cdeeba4bb1d3683d5" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-musllinux_1_1_i686.whl", hash = "sha256:86dca35d2f15ef22922411496c220f3c9e315d5512f316fe417461971cc1648d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:193c6488bd2f514cbc0bef5c18fad61a5f9c8d059dd56edf773b3b37f0e85496" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-win32.whl", hash = "sha256:514e2c008a8b4fa823122ca3ecab896eac41d9aa0f5fc881bd6264486c204e32" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp312-cp312-win_amd64.whl", hash = "sha256:53fed080476d5f6ad7505883ec5d1ec28ba36c2273db3b3e92d7224fe5e463db" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:2c289729cc1c04e88bafa48b51082fb462b0a57dbc96494eab2be9b14dca62af" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:045201ee17147e36cf43d8ae2fa4b4836944ac672df5874579b81cf6d40f1a1f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:619cd195d74c9e1d2a3ad78d63451d35379c84bd851aec552811e30842e1c67a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:6eb3ae5ab72edb2ed68bdc0f5710f0a6cad7fd778a610ec2c31ee15e32d3921e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:df7da3f4b19e3078f9635f132d31b0a8196accb2576e3213ddd7a77f93317c20" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:57286b289cd557ac76c24479d8ecfb6c3d5b854cce54ccc7671f9a2f5e2a2708" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:28952fbbf8b32c0cb7fa4be9bcccfca734bf0d0989f4b509dc7f2f70ba79ae06" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:78ed2e4099812a438b545dfbca1928ec825e743cd253bc820372d6ef8c3adff4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7d9aecd5c3845d415bd6c9957c93de8d93097e269137c2ecb0e5a5256374bdc8" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:362fcf4d6f5e1242a4540812455f5a594949190f6fbc04f2ffbfd7ae0266d788" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-musllinux_1_1_armv7l.whl", hash = "sha256:13240b3dea41b1174456cb9426843b085dc1a2bdcecd9ee2d8f65ac5703374b0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-musllinux_1_1_i686.whl", hash = "sha256:c54eed83726269594b9086d827decc7d2015696e31b99bf9b69b12d9063584fe" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:f8195006fdd0fc0a85b19df3d64a3ef8a240e483ae1dfc7ac6a4316019eb5df2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-win32.whl", hash = "sha256:ccf30e3fe6d770a803dcdf3bb863fa44ba5dc2664d4610ba2746a3c73599f2e4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/cramjam/2.11.0/cramjam-2.11.0-cp313-cp313-win_amd64.whl", hash = "sha256:ee36348a204f0a68b03400f4736224e9f61d1c6a1582d7f875c1ca56f0254268" },
+]
+
+[[package]]
+name = "dbpool"
+version = "1.2.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "mysql-connector-python" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/dbpool/1.2.0/dbpool-1.2.0.tar.gz", hash = "sha256:d291caa05f354e39afe6dfec98fec3db330dd9be0dafc88c7393b910405aa9ea" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/dbpool/1.2.0/dbpool-1.2.0-py3-none-any.whl", hash = "sha256:e2796fbc3de4c5d94ca77fa9adfa328e4aa03bc0c6bae49a2fad9e2e02cd5ef4" },
+]
+
+[[package]]
+name = "dsc-auth"
+version = "0.1.18"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "setuptools-scm" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/dsc-auth/0.1.18/dsc-auth-0.1.18.tar.gz", hash = "sha256:6b361b60a66e486cf0af0a377025e1ec7674706c79a6ce66e452203dadad64e6" }
+
+[[package]]
+name = "ffmpeg-worker"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "agentk-worker" },
+    { name = "cachetools" },
+    { name = "infra-kconf" },
+    { name = "infra-kess" },
+    { name = "pydantic" },
+    { name = "requests" },
+    { name = "temporalio" },
+]
+
+[package.optional-dependencies]
+test = [
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "agentk-worker", path = "vendor/agentk_worker-0.1.0-py3-none-any.whl" },
+    { name = "cachetools" },
+    { name = "infra-kconf" },
+    { name = "infra-kess", specifier = "==1.1.18" },
+    { name = "pydantic", specifier = ">=2" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-asyncio", marker = "extra == 'test'" },
+    { name = "requests" },
+    { name = "temporalio" },
+]
+provides-extras = ["test"]
+
+[[package]]
+name = "grpcio"
+version = "1.76.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0.tar.gz", hash = "sha256:7be78388d6da1a25c0d5ec506523db58b18be22d9c37d8d3a32c08be4987bd73" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-linux_armv7l.whl", hash = "sha256:81fd9652b37b36f16138611c7e884eb82e0cec137c40d3ef7c3f9b3ed00f6ed8" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:04bbe1bfe3a68bbfd4e52402ab7d4eb59d72d02647ae2042204326cf4bbad280" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:d388087771c837cdb6515539f43b9d4bf0b0f23593a24054ac16f7a960be16f4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:9f8f757bebaaea112c00dba718fc0d3260052ce714e25804a03f93f5d1c6cc11" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:980a846182ce88c4f2f7e2c22c56aefd515daeb36149d1c897f83cf57999e0b6" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:f92f88e6c033db65a5ae3d97905c8fea9c725b63e28d5a75cb73b49bda5024d8" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:4baf3cbe2f0be3289eb68ac8ae771156971848bb8aaff60bad42005539431980" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:615ba64c208aaceb5ec83bfdce7728b80bfeb8be97562944836a7a0a9647d882" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-win32.whl", hash = "sha256:45d59a649a82df5718fd9527ce775fd66d1af35e6d31abdcdc906a49c6822958" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp312-cp312-win_amd64.whl", hash = "sha256:c088e7a90b6017307f423efbb9d1ba97a22aa2170876223f9709e9d1de0b5347" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-linux_armv7l.whl", hash = "sha256:26ef06c73eb53267c2b319f43e6634c7556ea37672029241a056629af27c10e2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:45e0111e73f43f735d70786557dc38141185072d7ff8dc1829d6a77ac1471468" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:83d57312a58dcfe2a3a0f9d1389b299438909a02db60e2f2ea2ae2d8034909d3" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:3e2a27c89eb9ac3d81ec8835e12414d73536c6e620355d65102503064a4ed6eb" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:61f69297cba3950a524f61c7c8ee12e55c486cb5f7db47ff9dcee33da6f0d3ae" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:6a15c17af8839b6801d554263c546c69c4d7718ad4321e3166175b37eaacca77" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:25a18e9810fbc7e7f03ec2516addc116a957f8cbb8cbc95ccc80faa072743d03" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:931091142fd8cc14edccc0845a79248bc155425eee9a98b2db2ea4f00a235a42" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-win32.whl", hash = "sha256:5e8571632780e08526f118f74170ad8d50fb0a48c23a746bef2a6ebade3abd6f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio/1.76.0/grpcio-1.76.0-cp313-cp313-win_amd64.whl", hash = "sha256:f9f7bd5faab55f47231ad8dba7787866b69f5e93bc306e3915606779bbfb4ba8" },
+]
+
+[[package]]
+name = "grpcio-reflection"
+version = "1.48.2"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "grpcio" },
+    { name = "protobuf" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio-reflection/1.48.2/grpcio-reflection-1.48.2.tar.gz", hash = "sha256:b687acc86c736ba8273523e1cdd5f31155dccabf7f9b2acfb62bf4e9c79d3b5a" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/grpcio-reflection/1.48.2/grpcio_reflection-1.48.2-py3-none-any.whl", hash = "sha256:280bf4569149126050b587ff9177051a409ee98882028dcf0c9caa3c2d31f6fe" },
+]
+
+[[package]]
+name = "idna"
+version = "3.18"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/idna/3.18/idna-3.18.tar.gz", hash = "sha256:ffb385a7e039654cef1ab9ef32c6fafe283c0c0467bba1d9029738ce4a14a848" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/idna/3.18/idna-3.18-py3-none-any.whl", hash = "sha256:7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2" },
+]
+
+[[package]]
+name = "infra-component"
+version = "1.4.13"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "apscheduler" },
+    { name = "dbpool" },
+    { name = "dsc-auth" },
+    { name = "grpcio" },
+    { name = "grpcio-reflection" },
+    { name = "kazoo" },
+    { name = "ks-kafka-python" },
+    { name = "lxml" },
+    { name = "lz4" },
+    { name = "mysql-connector-python" },
+    { name = "protobuf" },
+    { name = "pysmhasher" },
+    { name = "python-dateutil" },
+    { name = "python-snappy" },
+    { name = "pytz" },
+    { name = "requests" },
+    { name = "sqlparse" },
+    { name = "tzlocal" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-component/1.4.13/infra-component-1.4.13.tar.gz", hash = "sha256:340d2d161e9fa09ad2a130cdd4a1f6144d7fa773c0c81df57dfa4279a920c500" }
+
+[[package]]
+name = "infra-kconf"
+version = "0.5.10"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "certifi" },
+    { name = "cityhash" },
+    { name = "infra-component" },
+    { name = "infra-kess" },
+    { name = "infra-keycenter" },
+    { name = "setuptools-scm" },
+    { name = "tornado" },
+    { name = "urllib3" },
+]
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-kconf/0.5.10/infra_kconf-0.5.10-py3-none-any.whl", hash = "sha256:150ac98e9bda10bb213d4ec41743f04906e13121580c43124031842788697998" },
+]
+
+[[package]]
+name = "infra-kess"
+version = "1.1.18"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "blinker" },
+    { name = "infra-component" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-kess/1.1.18/infra-kess-1.1.18.tar.gz", hash = "sha256:fa88ccafe8eb6f33b97c9e49023532e260153d71351b3e7228ddde2385520cb8" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-kess/1.1.18/infra_kess-1.1.18-py3-none-any.whl", hash = "sha256:57765bd7725160382d39dcefab7b9bf38b8ed24b027872ce0c9720b54f4feca7" },
+]
+
+[[package]]
+name = "infra-keycenter"
+version = "0.2.7"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "cachetools" },
+    { name = "infra-kconf" },
+    { name = "infra-kess" },
+    { name = "pycryptodome" },
+    { name = "unpaddedbase64" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-keycenter/0.2.7/infra-keycenter-0.2.7.tar.gz", hash = "sha256:cbceb82835dedd97fde64c392bb2584f311fe530a815aec8511e20e9d570ba29" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/infra-keycenter/0.2.7/infra_keycenter-0.2.7-py3-none-any.whl", hash = "sha256:c3207cd5480eadd6b3596b5c15d6969a05bff8f5ccc58837d64cdd13720de2bc" },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/iniconfig/2.3.0/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/iniconfig/2.3.0/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12" },
+]
+
+[[package]]
+name = "kazoo"
+version = "2.11.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/kazoo/2.11.0/kazoo-2.11.0.tar.gz", hash = "sha256:57e7e6f69295c8f922511488eeb79680729e14bb8eb382d5cad83aa11345c36c" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/kazoo/2.11.0/kazoo-2.11.0-py2.py3-none-any.whl", hash = "sha256:aa6be17159540dae4087661b8d4e24c7b58d4dc26170a2d5b8468b06712d84a9" },
+]
+
+[[package]]
+name = "ks-kafka-python"
+version = "2.0.4"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/ks-kafka-python/2.0.4/ks-kafka-python-2.0.4.tar.gz", hash = "sha256:f2068ec9b7e705cab097e9a17c3704fd0f7b8c7c77977190a35c3fd29b2a910a" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/ks-kafka-python/2.0.4/ks_kafka_python-2.0.4-py2.py3-none-any.whl", hash = "sha256:d2e9f3ff0eba0227b42eac4b91875f1cb440db9f0718c70561b5e00f7dacfff9" },
+]
+
+[[package]]
+name = "lxml"
+version = "6.0.2"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2.tar.gz", hash = "sha256:cd79f3367bd74b317dda655dc8fcfa304d9eb6e4fb06b7168c5cf27f96e0cd62" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:a59f5448ba2ceccd06995c95ea59a7674a10de0810f2ce90c9006f3cbc044456" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:e8113639f3296706fbac34a30813929e29247718e88173ad849f57ca59754924" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:a8bef9b9825fa8bc816a6e641bb67219489229ebc648be422af695f6e7a4fa7f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:65ea18d710fd14e0186c2f973dc60bb52039a275f82d3c44a0e42b43440ea534" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c371aa98126a0d4c739ca93ceffa0fd7a5d732e3ac66a46e74339acd4d334564" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_26_i686.manylinux_2_28_i686.whl", hash = "sha256:700efd30c0fa1a3581d80a748157397559396090a51d306ea59a70020223d16f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_26_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:c33e66d44fe60e72397b487ee92e01da0d09ba2d66df8eae42d77b6d06e5eba0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:90a345bbeaf9d0587a3aaffb7006aa39ccb6ff0e96a57286c0cb2fd1520ea192" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_31_armv7l.whl", hash = "sha256:064fdadaf7a21af3ed1dcaa106b854077fbeada827c18f72aec9346847cd65d0" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-manylinux_2_38_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:fbc74f42c3525ac4ffa4b89cbdd00057b6196bcefe8bce794abd42d33a018092" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:6ddff43f702905a4e32bc24f3f2e2edfe0f8fde3277d481bffb709a4cced7a1f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:6da5185951d72e6f5352166e3da7b0dc27aa70bd1090b0eb3f7f7212b53f1bb8" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:57a86e1ebb4020a38d295c04fc79603c7899e0df71588043eb218722dabc087f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-musllinux_1_2_riscv64.whl", hash = "sha256:2047d8234fe735ab77802ce5f2297e410ff40f5238aec569ad7c8e163d7b19a6" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:6f91fd2b2ea15a6800c8e24418c0775a1694eefc011392da73bc6cef2623b322" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-win32.whl", hash = "sha256:3ae2ce7d6fedfb3414a2b6c5e20b249c4c607f72cb8d2bb7cc9c6ec7c6f4e849" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-win_amd64.whl", hash = "sha256:72c87e5ee4e58a8354fb9c7c84cbf95a1c8236c127a5d1b7683f04bed8361e1f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp312-cp312-win_arm64.whl", hash = "sha256:61cb10eeb95570153e0c0e554f58df92ecf5109f75eacad4a95baa709e26c3d6" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:9b33d21594afab46f37ae58dfadd06636f154923c4e8a4d754b0127554eb2e77" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:6c8963287d7a4c5c9a432ff487c52e9c5618667179c18a204bdedb27310f022f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:1941354d92699fb5ffe6ed7b32f9649e43c2feb4b97205f75866f7d21aa91452" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:bb2f6ca0ae2d983ded09357b84af659c954722bbf04dea98030064996d156048" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:eb2a12d704f180a902d7fa778c6d71f36ceb7b0d317f34cdc76a5d05aa1dd1df" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_26_i686.manylinux_2_28_i686.whl", hash = "sha256:6ec0e3f745021bfed19c456647f0298d60a24c9ff86d9d051f52b509663feeb1" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_26_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:846ae9a12d54e368933b9759052d6206a9e8b250291109c48e350c1f1f49d916" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ef9266d2aa545d7374938fb5c484531ef5a2ec7f2d573e62f8ce722c735685fd" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_31_armv7l.whl", hash = "sha256:4077b7c79f31755df33b795dc12119cb557a0106bfdab0d2c2d97bd3cf3dffa6" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-manylinux_2_38_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:a7c5d5e5f1081955358533be077166ee97ed2571d6a66bdba6ec2f609a715d1a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:8f8d0cbd0674ee89863a523e6994ac25fd5be9c8486acfc3e5ccea679bad2679" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:2cbcbf6d6e924c28f04a43f3b6f6e272312a090f269eff68a2982e13e5d57659" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:dfb874cfa53340009af6bdd7e54ebc0d21012a60a4e65d927c2e477112e63484" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-musllinux_1_2_riscv64.whl", hash = "sha256:fb8dae0b6b8b7f9e96c26fdd8121522ce5de9bb5538010870bd538683d30e9a2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:358d9adae670b63e95bc59747c72f4dc97c9ec58881d4627fe0120da0f90d314" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-win32.whl", hash = "sha256:e8cd2415f372e7e5a789d743d133ae474290a90b9023197fd78f32e2dc6873e2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:b30d46379644fbfc3ab81f8f82ae4de55179414651f110a1514f0b1f8f6cb2d7" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lxml/6.0.2/lxml-6.0.2-cp313-cp313-win_arm64.whl", hash = "sha256:13dcecc9946dca97b11b7c40d29fba63b55ab4170d3c0cf8c0c164343b9bfdcf" },
+]
+
+[[package]]
+name = "lz4"
+version = "4.4.5"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5.tar.gz", hash = "sha256:5f0b9e53c1e82e88c10d7c180069363980136b9d7a8306c4dca4f760d60c39f0" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:df5aa4cead2044bab83e0ebae56e0944cc7fcc1505c7787e9e1057d6d549897e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:6d0bf51e7745484d2092b3a51ae6eb58c3bd3ce0300cf2b2c14f76c536d5697a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:7b62f94b523c251cf32aa4ab555f14d39bd1a9df385b72443fd76d7c7fb051f5" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:2c3ea562c3af274264444819ae9b14dbbf1ab070aff214a05e97db6896c7597e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:24092635f47538b392c4eaeff14c7270d2c8e806bf4be2a6446a378591c5e69e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-win32.whl", hash = "sha256:214e37cfe270948ea7eb777229e211c601a3e0875541c1035ab408fbceaddf50" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-win_amd64.whl", hash = "sha256:713a777de88a73425cf08eb11f742cd2c98628e79a8673d6a52e3c5f0c116f33" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp312-cp312-win_arm64.whl", hash = "sha256:a88cbb729cc333334ccfb52f070463c21560fca63afcf636a9f160a55fac3301" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:6bb05416444fafea170b07181bc70640975ecc2a8c92b3b658c554119519716c" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:b424df1076e40d4e884cfcc4c77d815368b7fb9ebcd7e634f937725cd9a8a72a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:216ca0c6c90719731c64f41cfbd6f27a736d7e50a10b70fad2a9c9b262ec923d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:533298d208b58b651662dd972f52d807d48915176e5b032fb4f8c3b6f5fe535c" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:451039b609b9a88a934800b5fc6ee401c89ad9c175abf2f4d9f8b2e4ef1afc64" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-win32.whl", hash = "sha256:a5f197ffa6fc0e93207b0af71b302e0a2f6f29982e5de0fbda61606dd3a55832" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-win_amd64.whl", hash = "sha256:da68497f78953017deb20edff0dba95641cc86e7423dfadf7c0264e1ac60dc22" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313-win_arm64.whl", hash = "sha256:c1cfa663468a189dab510ab231aad030970593f997746d7a324d40104db0d0a9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:67531da3b62f49c939e09d56492baf397175ff39926d0bd5bd2d191ac2bff95f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:a1acbbba9edbcbb982bc2cac5e7108f0f553aebac1040fbec67a011a45afa1ba" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:a482eecc0b7829c89b498fda883dbd50e98153a116de612ee7c111c8bcf82d1d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:e099ddfaa88f59dd8d36c8a3c66bd982b4984edf127eb18e30bb49bdba68ce67" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a2af2897333b421360fdcce895c6f6281dc3fab018d19d341cf64d043fc8d90d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-win32.whl", hash = "sha256:66c5de72bf4988e1b284ebdd6524c4bead2c507a2d7f172201572bac6f593901" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-win_amd64.whl", hash = "sha256:cdd4bdcbaf35056086d910d219106f6a04e1ab0daa40ec0eeef1626c27d0fddb" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/lz4/4.4.5/lz4-4.4.5-cp313-cp313t-win_arm64.whl", hash = "sha256:28ccaeb7c5222454cd5f60fcd152564205bcb801bd80e125949d2dfbadc76bbd" },
+]
+
+[[package]]
+name = "mysql-connector-python"
+version = "8.0.29"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "protobuf" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/mysql-connector-python/8.0.29/mysql-connector-python-8.0.29.tar.gz", hash = "sha256:29ec05ded856b4da4e47239f38489c03b31673ae0f46a090d0e4e29c670e6181" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/mysql-connector-python/8.0.29/mysql_connector_python-8.0.29-py2.py3-none-any.whl", hash = "sha256:047420715bbb51d3cba78de446c8a6db4666459cd23e168568009c620a3f5b90" },
+]
+
+[[package]]
+name = "nexus-rpc"
+version = "1.4.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/nexus-rpc/1.4.0/nexus_rpc-1.4.0.tar.gz", hash = "sha256:3b8b373d4865671789cc43623e3dc0bcbf192562e40e13727e17f1c149050fba" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/nexus-rpc/1.4.0/nexus_rpc-1.4.0-py3-none-any.whl", hash = "sha256:14c953d3519113f8ccec533a9efdb6b10c28afef75d11cdd6d422640c40b3a49" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/packaging/26.3/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/packaging/26.3/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.6.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pluggy/1.6.0/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pluggy/1.6.0/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746" },
+]
+
+[[package]]
+name = "protobuf"
+version = "3.20.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/protobuf/3.20.3/protobuf-3.20.3.tar.gz", hash = "sha256:2e3427429c9cffebf259491be0af70189607f365c2f41c7c3764af6f337105f2" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/protobuf/3.20.3/protobuf-3.20.3-py2.py3-none-any.whl", hash = "sha256:a7ca6d488aa8ff7f329d4c545b2dbad8ac31464f1d8b1c87ad1346717731e4db" },
+]
+
+[[package]]
+name = "pycryptodome"
+version = "3.23.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0.tar.gz", hash = "sha256:447700a657182d60338bab09fdb27518f8856aecd80ae4c6bdddb67ff5da44ef" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:0011f7f00cdb74879142011f95133274741778abba114ceca229adbf8e62c3e4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:90460fc9e088ce095f9ee8356722d4f10f86e5be06e2354230a9880b9c549aae" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4764e64b269fc83b00f682c47443c2e6e85b18273712b98aa43bcb77f8570477" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eb8f24adb74984aa0e5d07a2368ad95276cf38051fe2dc6605cbcf482e04f2a7" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d97618c9c6684a97ef7637ba43bdf6663a2e2e77efe0f863cce97a76af396446" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:9a53a4fe5cb075075d515797d6ce2f56772ea7e6a1e5e4b96cf78a14bac3d265" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-musllinux_1_2_i686.whl", hash = "sha256:763d1d74f56f031788e5d307029caef067febf890cd1f8bf61183ae142f1a77b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:954af0e2bd7cea83ce72243b14e4fb518b18f0c1649b576d114973e2073b273d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-win32.whl", hash = "sha256:257bb3572c63ad8ba40b89f6fc9d63a2a628e9f9708d31ee26560925ebe0210a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-win_amd64.whl", hash = "sha256:6501790c5b62a29fcb227bd6b62012181d886a767ce9ed03b303d1f22eb5c625" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp313-cp313t-win_arm64.whl", hash = "sha256:9a77627a330ab23ca43b48b130e202582e91cc69619947840ea4d2d1be21eb39" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:187058ab80b3281b1de11c2e6842a357a1f71b42cb1e15bce373f3d238135c27" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-macosx_10_9_x86_64.whl", hash = "sha256:cfb5cd445280c5b0a4e6187a7ce8de5a07b5f3f897f235caa11f1f435f182843" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:67bd81fcbe34f43ad9422ee8fd4843c8e7198dd88dd3d40e6de42ee65fbe1490" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c8987bd3307a39bc03df5c8e0e3d8be0c4c3518b7f044b0f4c15d1aa78f52575" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:aa0698f65e5b570426fc31b8162ed4603b0c2841cbb9088e2b01641e3065915b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:53ecbafc2b55353edcebd64bf5da94a2a2cdf5090a6915bcca6eca6cc452585a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-musllinux_1_2_i686.whl", hash = "sha256:156df9667ad9f2ad26255926524e1c136d6664b741547deb0a86a9acf5ea631f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:dea827b4d55ee390dc89b2afe5927d4308a8b538ae91d9c6f7a5090f397af1aa" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-win32.whl", hash = "sha256:507dbead45474b62b2bbe318eb1c4c8ee641077532067fec9c1aa82c31f84886" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-win_amd64.whl", hash = "sha256:c75b52aacc6c0c260f204cbdd834f76edc9fb0d8e0da9fbf8352ef58202564e2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pycryptodome/3.23.0/pycryptodome-3.23.0-cp37-abi3-win_arm64.whl", hash = "sha256:11eeeb6917903876f134b56ba11abe95c0b0fd5e3330def218083c7d98bbcb3c" },
+]
+
+[[package]]
+name = "pydantic"
+version = "2.13.4"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "annotated-types" },
+    { name = "pydantic-core" },
+    { name = "typing-extensions" },
+    { name = "typing-inspection" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic/2.13.4/pydantic-2.13.4.tar.gz", hash = "sha256:c40756b57adaa8b1efeeced5c196f3f3b7c435f90e84ea7f443901bec8099ef6" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic/2.13.4/pydantic-2.13.4-py3-none-any.whl", hash = "sha256:45a282cde31d808236fd7ea9d919b128653c8b38b393d1c4ab335c62924d9aba" },
+]
+
+[[package]]
+name = "pydantic-core"
+version = "2.46.4"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4.tar.gz", hash = "sha256:62f875393d7f270851f20523dd2e29f082bcc82292d66db2b64ea71f64b6e1c1" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:3245406455a5d98187ec35530fd772b1d799b26667980872c8d4614991e2c4a2" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:962ccbab7b642487b1d8b7df90ef677e03134cf1fd8880bf698649b22a69371f" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8233f2947cf85404441fd7e0085f53b10c93e0ee78611099b5c7237e36aacbf7" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:3a233125ac121aa3ffba9a2b59edfc4a985a76092dc8279586ab4b71390875e7" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:5b712b53160b79a5850310b912a5ef8e57e56947c8ad690c227f5c9d7e561712" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:9401557acd873c3a7f3eb9383edef8ac4968f9510e340f4808d427e75667e7b4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:926c9541b14b12b1681dca8a0b75feb510b06c6341b70a8e500c2fdcff837cce" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_31_riscv64.whl", hash = "sha256:56cb4851bcaf3d117eddcef4fe66afd750a50274b0da8e22be256d10e5611987" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:c68fcd102d71ea85c5b2dfac3f4f8476eff42a9e078fd5faefff6d145063536b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:b2f69dec1725e79a012d920df1707de5caf7ed5e08f3be4435e25803efc47458" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-musllinux_1_1_armv7l.whl", hash = "sha256:8d0820e8192167f80d88d64038e609c31452eeca865b4e1d9950a27a4609b00b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:fbdb89b3e1c94a30cc5edfce477c6e6a5dc4d8f84665b455c27582f211a1c72c" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-win32.whl", hash = "sha256:9aa768456404a8bf48a4406685ac2bec8e72b62c69313734fa3b73cf33b3a894" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-win_amd64.whl", hash = "sha256:e9c26f834c65f5752f3f06cb08cb86a913ceb7274d0db6e267808a708b46bc89" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp312-cp312-win_arm64.whl", hash = "sha256:4fc73cb559bdb54b1134a706a2802a4cddd27a0633f5abb7e53056268751ac6a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:5d5902252db0d3cedf8d4a1bc68f70eeb430f7e4c7104c8c476753519b423008" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:c94f0688e7b8d0a67abf40e57a7eaaecd17cc9586706a31b76c031f63df052b4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f027324c56cd5406ca49c124b0db10e56c69064fec039acc571c29020cc87c76" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:e739fee756ba1010f8bcccb534252e85a35fe45ae92c295a06059ce58b74ccd3" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:9d56801be94b86a9da183e5f3766e6310752b99ff647e38b09a9500d88e46e76" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2412e734dcb48da14d4e4006b82b46b74f2518b8a26ee7e58c6844a6cd6d03c4" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9551187363ffc0de2a00b2e47c25aeaeb1020b69b668762966df15fc5659dd5a" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_31_riscv64.whl", hash = "sha256:0186750b482eefa11d7f435892b09c5c606193ef3375bcf94aa00ae6bfb66262" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:5855698a4856556d86e8e6cd8434bc3ac0314ee8e12089ae0e143f64c6256e4e" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:cbaf13819775b7f769bf4a1f066cb6df7a28d4480081a589828ef190226881cd" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-musllinux_1_1_armv7l.whl", hash = "sha256:633147d34cf4550417f12e2b1a0383973bdf5cdfde212cb09e9a581cf10820be" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:82cf5301172168103724d49a1444d3378cb20cdee30b116a1bd6031236298a5d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-win32.whl", hash = "sha256:9fa8ae11da9e2b3126c6426f147e0fba88d96d65921799bb30c6abd1cb2c97fb" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-win_amd64.whl", hash = "sha256:6b3ace8194b0e5204818c92802dcdca7fc6d88aabbb799d7c795540d9cd6d292" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4/pydantic_core-2.46.4-cp313-cp313-win_arm64.whl", hash = "sha256:184c081504d17f1c1066e430e117142b2c77d9448a97f7b65c6ac9fd9aee238d" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4-graalpy312-graalpy250_312_native-macosx_10_12_x86_64.whl/pydantic_core-2.46.4-graalpy312-graalpy250_312_native-macosx_10_12_x86_64.whl", hash = "sha256:1d8ba486450b14f3b1d63bc521d410ec7565e52f887b9fb671791886436a42f7" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4-graalpy312-graalpy250_312_native-macosx_11_0_arm64.whl/pydantic_core-2.46.4-graalpy312-graalpy250_312_native-macosx_11_0_arm64.whl", hash = "sha256:3009f12e4e90b7f88b4f9adb1b0c4a3d58fe7820f3238c190047209d148026df" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4-graalpy312-graalpy250_312_native-manylinux_2_17_aarch64.manylinux2014_aarch64.whl/pydantic_core-2.46.4-graalpy312-graalpy250_312_native-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ad785e92e6dc634c21555edc8bd6b64957ab844541bcb96a1366c202951ae526" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pydantic-core/2.46.4-graalpy312-graalpy250_312_native-manylinux_2_17_x86_64.manylinux2014_x86_64.whl/pydantic_core-2.46.4-graalpy312-graalpy250_312_native-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:00c603d540afdd6b80eb39f078f33ebd46211f02f33e34a32d9f053bba711de0" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.20.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pygments/2.20.0/pygments-2.20.0.tar.gz", hash = "sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pygments/2.20.0/pygments-2.20.0-py3-none-any.whl", hash = "sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176" },
+]
+
+[[package]]
+name = "pysmhasher"
+version = "0.2.5"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pysmhasher/0.2.5/pysmhasher-0.2.5.tar.gz", hash = "sha256:da9aa2f9a64fee2b29f7e8dfaa50f86113cbdf4828e134a33cf3576daaa8b61e" }
+
+[[package]]
+name = "pytest"
+version = "9.1.1"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytest/9.1.1/pytest-9.1.1.tar.gz", hash = "sha256:1088fbde8f2b49d95a549a195707afa7a76a3ce9bcadc26b6d71f0ffda5fe313" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytest/9.1.1/pytest-9.1.1-py3-none-any.whl", hash = "sha256:37a86b45efb9a47a61a36449063e8e18d0cab3161329fc099eb21783169c4f0c" },
+]
+
+[[package]]
+name = "pytest-asyncio"
+version = "1.4.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "pytest" },
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytest-asyncio/1.4.0/pytest_asyncio-1.4.0.tar.gz", hash = "sha256:c6c0d2259945122819f171a32ecea2c349ead889ee28176caaf492143424be42" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytest-asyncio/1.4.0/pytest_asyncio-1.4.0-py3-none-any.whl", hash = "sha256:933ca923a23075a87fb7070c0ec272a6848489824d887c85c812670932835aa1" },
+]
+
+[[package]]
+name = "python-dateutil"
+version = "2.9.0.post0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/python-dateutil/2.9.0.post0/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/python-dateutil/2.9.0.post0/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427" },
+]
+
+[[package]]
+name = "python-snappy"
+version = "0.7.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "cramjam" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/python-snappy/0.7.3/python_snappy-0.7.3.tar.gz", hash = "sha256:40216c1badfb2d38ac781ecb162a1d0ec40f8ee9747e610bcfefdfa79486cee3" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/python-snappy/0.7.3/python_snappy-0.7.3-py3-none-any.whl", hash = "sha256:074c0636cfcd97e7251330f428064050ac81a52c62ed884fc2ddebbb60ed7f50" },
+]
+
+[[package]]
+name = "pytz"
+version = "2021.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytz/2021.3/pytz-2021.3.tar.gz", hash = "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytz/2021.3/pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c" },
+]
+
+[[package]]
+name = "pytz-deprecation-shim"
+version = "0.1.0.post0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "tzdata" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytz-deprecation-shim/0.1.0.post0/pytz_deprecation_shim-0.1.0.post0.tar.gz", hash = "sha256:af097bae1b616dde5c5744441e2ddc69e74dfdcb0c263129610d85b87445a59d" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/pytz-deprecation-shim/0.1.0.post0/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl", hash = "sha256:8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6" },
+]
+
+[[package]]
+name = "requests"
+version = "2.34.2"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "certifi" },
+    { name = "charset-normalizer" },
+    { name = "idna" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/requests/2.34.2/requests-2.34.2.tar.gz", hash = "sha256:f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/requests/2.34.2/requests-2.34.2-py3-none-any.whl", hash = "sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0" },
+]
+
+[[package]]
+name = "setuptools"
+version = "81.0.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/setuptools/81.0.0/setuptools-81.0.0.tar.gz", hash = "sha256:487b53915f52501f0a79ccfd0c02c165ffe06631443a886740b91af4b7a5845a" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/setuptools/81.0.0/setuptools-81.0.0-py3-none-any.whl", hash = "sha256:fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6" },
+]
+
+[[package]]
+name = "setuptools-scm"
+version = "10.2.1"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "packaging" },
+    { name = "setuptools" },
+    { name = "vcs-versioning" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/setuptools-scm/10.2.1/setuptools_scm-10.2.1.tar.gz", hash = "sha256:4fa7dd82cf8c800df59c9a288c90299b1657ff1ecfc3f5cc00287c5dbf5e27a9" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/setuptools-scm/10.2.1/setuptools_scm-10.2.1-py3-none-any.whl", hash = "sha256:b7c82f4102d389ee57dc66ccdb4f9b4bca3c40ba83b43f1f63d68ccd72db2580" },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/six/1.17.0/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/six/1.17.0/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274" },
+]
+
+[[package]]
+name = "sqlparse"
+version = "0.4.4"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/sqlparse/0.4.4/sqlparse-0.4.4.tar.gz", hash = "sha256:d446183e84b8349fa3061f0fe7f06ca94ba65b426946ffebe6e3e8295332420c" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/sqlparse/0.4.4/sqlparse-0.4.4-py3-none-any.whl", hash = "sha256:5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3" },
+]
+
+[[package]]
+name = "temporalio"
+version = "1.31.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "nexus-rpc" },
+    { name = "protobuf" },
+    { name = "types-protobuf" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0.tar.gz", hash = "sha256:2993f4b880170825414116dec7d7159a5d199efc279f29570be6b5c4a9f6edd5" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-macosx_10_12_x86_64.whl", hash = "sha256:5f9aaf06000768eb80cf5774457d227379dae455a3099aa0a18c4dca631c0d27" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-macosx_11_0_arm64.whl", hash = "sha256:abbfb486ba00053ccfa57c9c38b38f80f5dbfd08c67beb7a621515a57a9b9e9b" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9e840b462125274cb0d4748e7cedc386c303b2a51bf76bab30b96f1ebbc657ae" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:04d26f0f634f5325f6a19a45cd67cc5a2da4bd35268d27997f6723134d38c8be" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:f23f36d0e5d2e67f2129fc1cb876cf1e4e614f791a717d692f7c15fb732abe41" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:52f8cc7f0b5a19d49f0c2d748420267aaacc2be0bb614743de8d10faf77a57c9" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/temporalio/1.31.0/temporalio-1.31.0-cp310-abi3-win_amd64.whl", hash = "sha256:aa6e9602829584b22037da6ccf99d2e089f02cec86ee7178206b1afb115cf092" },
+]
+
+[[package]]
+name = "tornado"
+version = "6.5.8"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8.tar.gz", hash = "sha256:9452e1b208a8bd771e2cb1f2ff564985b9b214bdebbe622793e1799e0a6bd23f" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:cc6aa787d7cfab7c3d35189dc7a56fbd2399a569624c730c6b55b3d6531d0403" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-macosx_10_9_x86_64.whl", hash = "sha256:9715b5eb79735b2bcd454ce216a9275b7c0470e64ea1bf5742f78b2f72b26eeb" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:547d63f450d570c14fe0e8db2cfb14c9bbd1c2503b4a6612586267955aa47b58" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:7e2360a0ffbe145eca8af0b19cb7203d79b1a98dd4cccdd6b368f6f49c2e3808" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:5d242290bdf7ab3151bc1065fdd75c0dcc21cbc7b49f22a4c56329c2d6566d22" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:7b94ff0e128fe0542f3bd331fb44d06260fc4ac16881545159f34ef08aad4195" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-win32.whl", hash = "sha256:67832909c4779c64942380cb5f044a5c6163d00831472d80e25e115de9917836" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-win_amd64.whl", hash = "sha256:11881db6b7c168494be2c2d12e65931451bdf7ee718535418ae1d8855dd5a0ee" },
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tornado/6.5.8/tornado-6.5.8-cp39-abi3-win_arm64.whl", hash = "sha256:68a7468c7e289f8514d7d664101753903217eff1bb6822c6b5994a0b5f5bcb26" },
+]
+
+[[package]]
+name = "types-protobuf"
+version = "7.34.1.20260518"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/types-protobuf/7.34.1.20260518/types_protobuf-7.34.1.20260518.tar.gz", hash = "sha256:28cfaded25889cb83ebfb63cfb0a43628f0b6f3785767bec17287dc6468795f2" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/types-protobuf/7.34.1.20260518/types_protobuf-7.34.1.20260518-py3-none-any.whl", hash = "sha256:a0a5337413347166439c0e07cbc26c6164d091401c6f01b1dfd8cdb966c4dd8f" },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.16.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/typing-extensions/4.16.0/typing_extensions-4.16.0.tar.gz", hash = "sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/typing-extensions/4.16.0/typing_extensions-4.16.0-py3-none-any.whl", hash = "sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8" },
+]
+
+[[package]]
+name = "typing-inspection"
+version = "0.4.2"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/typing-inspection/0.4.2/typing_inspection-0.4.2.tar.gz", hash = "sha256:ba561c48a67c5958007083d386c3295464928b01faa735ab8547c5692e87f464" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/typing-inspection/0.4.2/typing_inspection-0.4.2-py3-none-any.whl", hash = "sha256:4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7" },
+]
+
+[[package]]
+name = "tzdata"
+version = "2026.3"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tzdata/2026.3/tzdata-2026.3.tar.gz", hash = "sha256:4a1518b8993086a7982523e071643f3c0e5f213e75b21318e78bcabfff9d1415" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tzdata/2026.3/tzdata-2026.3-py2.py3-none-any.whl", hash = "sha256:dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931" },
+]
+
+[[package]]
+name = "tzlocal"
+version = "4.3.1"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "pytz-deprecation-shim" },
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tzlocal/4.3.1/tzlocal-4.3.1.tar.gz", hash = "sha256:ee32ef8c20803c19a96ed366addd3d4a729ef6309cb5c7359a0cc2eeeb7fa46a" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/tzlocal/4.3.1/tzlocal-4.3.1-py3-none-any.whl", hash = "sha256:67d7e7f4ce0a98e9dfde2e02474c60fe846ed032d78b555c554c2e9cba472d84" },
+]
+
+[[package]]
+name = "unpaddedbase64"
+version = "2.1.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/unpaddedbase64/2.1.0/unpaddedbase64-2.1.0.tar.gz", hash = "sha256:7273c60c089de39d90f5d6d4a7883a79e319dc9d9b1c8924a7fab96178a5f005" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/unpaddedbase64/2.1.0/unpaddedbase64-2.1.0-py3-none-any.whl", hash = "sha256:485eff129c30175d2cd6f0cd8d2310dff51e666f7f36175f738d75dfdbd0b1c6" },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.7.0"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/urllib3/2.7.0/urllib3-2.7.0.tar.gz", hash = "sha256:231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/urllib3/2.7.0/urllib3-2.7.0-py3-none-any.whl", hash = "sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897" },
+]
+
+[[package]]
+name = "vcs-versioning"
+version = "2.2.4"
+source = { registry = "https://pypi.corp.kuaishou.com/kuaishou/prod/+simple/" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/vcs-versioning/2.2.4/vcs_versioning-2.2.4.tar.gz", hash = "sha256:ed718fdee42170e128a8add6f23f53aa64dc7d9ab2de87d3083a691df881a809" }
+wheels = [
+    { url = "https://pypi.corp.kuaishou.com/kuaishou/prod/vcs-versioning/2.2.4/vcs_versioning-2.2.4-py3-none-any.whl", hash = "sha256:48ffea8a6a175c37a718c7ee2e5f508d0e500c2cf3371791f7948bccb2b44628" },
+]

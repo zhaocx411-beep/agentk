@@ -1,0 +1,71 @@
+@import url('@/styles/variables.less');
+
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: @spacing-xs;
+  margin-bottom: @spacing-lg;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.subtitleIcon {
+  color: @primary-color;
+  font-size: @font-size-lg;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @spacing-md;
+  margin-bottom: @spacing-md;
+}
+
+.tableWrap {
+  flex: 1;
+  min-height: 0;
+}
+
+.mockHint {
+  margin-bottom: @spacing-md;
+}
+
+.detailModalBody {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: @spacing-xs;
+}
+
+.detailSummary {
+  margin: @spacing-md 0 0;
+}
+
+.detailWarn {
+  margin: @spacing-sm 0 0;
+}
+
+.detailBlock {
+  margin-top: @spacing-md;
+}
+
+.detailImage {
+  max-width: 240px;
+  border-radius: @border-radius-md;
+}
+
+.detailPre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: @font-size-caption;
+  font-family: @font-mono;
+  line-height: 1.6;
+}

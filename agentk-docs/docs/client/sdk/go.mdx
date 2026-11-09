@@ -1,0 +1,112 @@
+---
+sidebar_position: 3
+title: Go Client SDK
+description: 使用 Go Client SDK 调用 AgentKService
+slug: /client/sdk/go
+pagination_prev: client/transports
+pagination_next: client/sdk/python
+---
+
+# Go Client SDK
+
+## 安装
+
+```bash
+go get git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go@v0.3.2
+```
+
+## 创建客户端
+
+```go
+import (
+    agentkclient "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client"
+    agentkgrpc "git.corp.kuaishou.com/klingai-agentk/agentk-sdk.git/go/client/grpc"
+)
+
+client, err := agentkgrpc.New(agentkclient.Options{})
+```
+
+运行前向 AgentK 平台维护方登记工作负载 KSN，并完成 Service/App 绑定。本机连接 staging 时设置
+`KWS_SERVICE_NAME='<registered-ksn>'`；部署环境由平台注入 KWS 身份。默认 Client 使用 KESS gRPC
+h2c，固定 endpoint 配置见[选择 Client transport](/client/transports)。
+
+## 直接调用 Capability
+
+`InvokeCapability` 按稳定 Capability ID 发起阻塞式请求，不创建 Session、Execution 或 Event：
+
+```go
+input, err := structpb.NewStruct(map[string]any{
+	"prompt": "雨夜里的霓虹街道",
+})
+if err != nil {
+	return err
+}
+
+response, err := client.InvokeCapability(ctx, &apiv1.InvokeCapabilityRequest{
+	CapabilityId: "contrib.example.render",
+	Input:        input,
+})
+if err != nil {
+	return err
+}
+output := response.GetOutput().AsInterface()
+```
+
+取消 `ctx` 或超过它的 deadline 会取消进行中的 RPC，并由 AgentK 请求取消对应的 Temporal
+Workflow。完整语义见[直接调用 Capability](/client/guides/invoke-capability)。
+
+## 启动 Agent Execution
+
+```go
+created, err := client.CreateSession(ctx, &apiv1.CreateSessionRequest{
+    Title: "go-client",
+    Profile: &apiv1.Profile{
+        DefaultModel: os.Getenv("AGENTK_MODEL"),
+        System:       "直接回答用户问题。",
+    },
+})
+
+started, err := client.StartExecution(ctx, &apiv1.StartExecutionRequest{
+    SessionId: created.GetSession().GetId(),
+    Input: &apiv1.StartExecutionRequest_Message{
+        Message: &apiv1.AgentMessageExecutionInput{Text: "你好"},
+    },
+})
+```
+
+## 观察事件
+
+```go
+stream, err := client.WatchEvents(ctx, &apiv1.WatchEventsRequest{
+    SessionId:   created.GetSession().GetId(),
+    ExecutionId: started.GetExecution().GetId(),
+})
+if err != nil {
+    return err
+}
+defer stream.Close()
+
+for stream.Receive() {
+    frame := stream.Msg()
+    switch value := frame.Frame.(type) {
+    case *apiv1.WatchEventsResponse_CommittedEvent:
+        handleEvent(value.CommittedEvent)
+    case *apiv1.WatchEventsResponse_Delta:
+        preview(value.Delta)
+    case *apiv1.WatchEventsResponse_StreamEnd:
+        return nil
+    }
+}
+return stream.Err()
+```
+
+`EventStream` 提供 `Receive`、`Msg`、`Err` 和 `Close`。断线后使用 `ListEvents` 补齐已提交 Event，
+并使用 `GetExecution` 判断终态。
+
+## 公开方法
+
+`CreateSession`、`ListSessions`、`StartExecution`、`CancelExecution`、`ListEvents`、
+`WatchEvents`、`ListPipelines`、`ListExecutions`、`GetExecution`、`ListCapabilities`、
+`InvokeCapability` 和 `WhoAmI`。
+
+请求和响应类型位于 `go/gen/api/v1`。
