@@ -1,0 +1,375 @@
+[P09-BP0226] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=2. 项目实施范围 6
+    2. 项目实施范围 6
+  R(heading) sec=3. 系统架构 6
+    3. 系统架构 6
+[P09-BP0227] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 移动端 > 功能设计 > 环境监测 > 处理逻辑（IPO）
+    表头: （1）菜单页 | （1）菜单页 | （1）菜单页 | （1）菜单页 | （1）菜单页 数据行: （3）实时数据页 | （3）实时数据页 | （3）实时数据页 | （3）实时数据页 | （3）实时数据页
+  R(table_row) sec=<same>
+    表头: （1）菜单页 | （1）菜单页 | （1）菜单页 | （1）菜单页 | （1）菜单页 数据行: 序号 | 钮/功能 | 输入（Input） | 处理逻辑（Process） | 输出（Output）
+[P09-BP0228] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 环保成本管理 > 功能设计 > 【EPEC103】计划收支费用维护作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 序号 | 按钮/功能 | 输入（Input） | 处理逻辑（Process） | 输出（Output）
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 1 | 【确认】按钮 | 设施名称：必填，选择设施信息 收支日期：必填，日期选择 根据设施信息带出设施下全部费用类型： 消耗量：必填，浮点数字 备注：选填，字符数不超50个 | 处理逻辑 （1）同一日期，同一设施只能录入一次 （2）根据消耗乘以单价算出金额 | 处理成功：提示讯息【新增成功】 处理失败：提示讯息【新增失败，重复录入】
+[P09-BP0229] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=详细设计 > 环保绩效管理 > 系统流程图 > 系统流程说明 > 环保绩效目标确认与实施流程
+    环保绩效目标确认与实施流程
+  R(paragraph) sec=<same>
+    （一）活动说明
+[P09-BP0230] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 危固废管理 > 固废台账
+    固废台账
+  R(paragraph) sec=<same>
+    针对一般工业固体废物（如钢渣等）建立精细化管理体系，记录其产生（产生车间/工段、日期、名称、代码、重量）、分类收集（投放至指定一般固废堆场或仓）、内部转运及贮存状态；重点跟踪其资源化利用或合规处置的完整流向，包括接收单位名称（如水泥厂、建材厂）、实际转移数量及日期；同时对无法利用需填埋的固废记录入场接收凭证及处置量，支撑企业固废综合利用率统计与环境责任报告编制。
+[P09-BP0231] stratum=table_transition doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > YD_EP_B_01（获取危废入库环节台账数据）
+    表头: 主档 | 主档 | 主档 | 主档 | 主档 | 主档 数据行: | 结束时间（时间区间） | endTime | String | 格式yyyy-MM-dd HH:mm:ss |
+  R(paragraph) sec=<same>
+    (3)响应报文
+[P09-BP0232] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 报表设计 > 报表设计说明 > RP0013 环保事故统计
+    表头: 查询字段 | 查询条件说明 | 查询条件要求 | 备注 数据行: 事故发生部门 | 按照部门统计 | |
+  R(paragraph) sec=<same>
+    （二）报表字段说明
+[P09-BP0233] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=(none)
+    烟台华新数智化改造项目一期
+  R(paragraph) sec=<same>
+    需求设计说明书
+[P09-BP0234] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环境监测管理 > DB定义 > ep_outlet（排口基础信息）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | license_company | 排污许可单位 | | | varchar(20) | 20 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | process | 工序 | | | varchar(10) | 10 | N | |
+[P09-BP0235] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 环境监测管理 > 自行检测管理 > 自行检测计划
+    自行检测计划
+  R(paragraph) sec=<same>
+    本模块实现自行监测计划的全流程线上化管理。环保科根据管控要求及生产计划编制检测计划并发起线上评审，系统自动将审批通过的检测任务推送至公司环保员。环保员接收任务后协调第三方检测单位开展监测工作，确保计划高效执行，同时实现任务分配、进度跟踪的全程留痕与可追溯。
+[P09-BP0236] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=硬件清单
+    2、根据本模块业务及数据平台运行需求，由支撑平台组统一规划服务器资源及部署架构，本技术协议中不再单独列示。
+  R(heading) sec=约束及限制
+    约束及限制
+[P09-BP0237] stratum=heading_transition doc_type=API
+  L(heading) sec=4. 通讯接口 11 > 4.1 危固废管理 11 > 4.1.1 接口清单 11
+    4.1.1 接口清单 11
+  R(heading) sec=4. 通讯接口 11 > 4.1 危固废管理 11 > 4.1.2 详细定义 11
+    4.1.2 详细定义 11
+[P09-BP0238] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > EP_LM_A_01（获取危固废内部转移信息）
+    序号 | 项目 | 项目说明 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 业务触发时机 | 审批通过时 |
+[P09-BP0239] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > YD_EP_B_01（获取危废入库环节台账数据）
+    表头: 主档 | 主档 | 主档 | 主档 | 主档 | 主档 数据行: | 起始时间（时间区间） | startTime | String | 格式yyyy-MM-dd HH:mm:ss |
+  R(table_row) sec=<same>
+    表头: 主档 | 主档 | 主档 | 主档 | 主档 | 主档 数据行: | 结束时间（时间区间） | endTime | String | 格式yyyy-MM-dd HH:mm:ss |
+[P09-BP0240] stratum=noise_candidate doc_type=API
+  L(table_row) sec=(none)
+    表头: 日期 | 作者 | 版本号 | 修改原因 | 主要修改内容 数据行: 2026.01.30 | 张洋、卫夏风 | 1.0 | 业务需求变动 | 删除了获取危废公司年度处置计划，获取危废各股年度处置计划接口描述 修改了获取危废出库环节台账数据，获取固废出厂环节台账数据发送方
+  R(paragraph) sec=<same>
+    目 录
+[P09-BP0241] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 环境监测管理 > 详细定义 > EM_EP_A_02（获取气排口设备启停状态）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: | 设备编号 | equipmentNo | String | |
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: | 设备名称 | equipmentName | String | |
+[P09-BP0242] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 接口清单
+    表头: 序号 | 接口代码 | 接口名称 | 发送方 | 接收方 | 备注 数据行: | AM_EP_A_02 | 获取固废出厂环节台账数据 | 计量管理 | 环保管理 |
+  R(table_row) sec=<same>
+    表头: 序号 | 接口代码 | 接口名称 | 发送方 | 接收方 | 备注 数据行: | EP_LM_A_01 | 获取危固废内部转移信息 | 环保管理 | 物流管理 |
+[P09-BP0243] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环境应急管理 > DB定义 > ep_accident_node_operation（环保事故处置节点跟踪操作）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | operation_date_time | 操作时间 | | | varchar(20) | 20 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | create_user_no | 创建人 | | | varchar(40) | 40 | N | |
+[P09-BP0244] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 环境监测管理 > 自行检测管理 > 自行检测方案
+    自行检测方案
+  R(paragraph) sec=<same>
+    为落实政府对企业排污口定期自行监测的监管要求，本模块实现监测方案的全流程数字化管理。环保员在线编制并提交年度检测方案，同时实现方案审批的线上留痕、实时共享与长期归档，全面替代传统纸质管理模式。
+[P09-BP0245] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环保成本管理 > DB定义 > ep_plan_cost_details（计划收支费用）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | unit_price_amt | 单价 | | | decimal(8,2) | 8 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | consume_qty | 消耗量 | | | decimal(8,2) | 8 | N | |
+[P09-BP0246] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 危固废管理 > 功能设计 > 【EPHW502】产生环节台账作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 1 | 【模板下载】按钮 | / | 下载Excle导入模板文件 |
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 2 | 【确认】按钮 | | 点击上传图标，选择导入文件，点击确认，导入数据 关闭导入页，刷新列表页 |
+[P09-BP0247] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=培训与知识转移 > 知识转移
+    知识产权：本项目产生的知识产权归双方所有。
+  R(heading) sec=项目验收
+    项目验收
+[P09-BP0248] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 危固废管理 > 功能设计 > 【EPHW107】各股处置计划收集作业 > 画面交互（原型）
+    （4）历史版本页
+  R(paragraph) sec=<same>
+    （5）查看页
+[P09-BP0249] stratum=same_section_continuity doc_type=DB
+  L(heading) sec=设计概述 > 命名规范 > 表字段命名规范
+    表字段命名规范
+  R(paragraph) sec=<same>
+    （一）基本命名原则
+[P09-BP0250] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 危固废管理 > 功能设计 > 【EPHW508】废物流向台账作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 9 | 【月度】按钮 | / | 跳转至月度台账 | /
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 10 | 【年度】按钮 | / | 跳转至年度台账 | /
+[P09-BP0251] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=系统目标
+    基于烟台华新环保管理规划方向，遵循钢铁行业“高效化、集约化、绿色化、智能化”的先进技术理念，通过提升信息互联、数据融合、管理闭环，建设适合烟台华新的环保管理系统，有效促进环保和信息深度融合，支撑安全、经济、绿色、高效的环保运行体系，项目建设的目标如下：
+  R(paragraph) sec=<same>
+    数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础。
+[P09-BP0252] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 隐患排查管理 > 功能设计 > 【EPHI102】隐患排查计划作业 > 画面交互（原型）
+    （1）列表页
+  R(paragraph) sec=<same>
+    （2）详情页
+[P09-BP0253] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=培训与知识转移 > 培训
+    表头: 序号 | 阶段 | 培训主题 | 培训时长 | 培训对象 | 形式及场地 数据行: 2 | 上线 | 系统操作培训 | 4小时 | 环保科/各用户单位 | 演示，项目现场
+  R(table_row) sec=<same>
+    表头: 序号 | 阶段 | 培训主题 | 培训时长 | 培训对象 | 形式及场地 数据行: 3 | 上线 | 系统操作培训 | 2小时 | 管理层人员 | 演示，项目现场
+[P09-BP0254] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 危固废管理 > 功能设计 > 【EPHW101】危废基础信息编辑作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 3 | 【重置】按钮 | / | 将废物名称输入框、废物类型下拉框清空 | /
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 4 | 【新增】按钮 | / | 跳转至【详情页】 | /
+[P09-BP0255] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 隐患排查管理 > DB定义 > ep_danger_check_task（隐患排查任务）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | check_pernames | 检查人姓名(逗号分隔) | | | varchar(200) | 200 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | check_purpose | 检查目的 | | | varchar(200) | 200 | N | |
+[P09-BP0256] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > AM_EP_A_02（获取固废出厂环节台账数据）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 2. | 状态码 | code | String | |
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 3. | 提示信息 | message | String | |
+[P09-BP0257] stratum=heading_transition doc_type=API
+  L(heading) sec=通讯接口 > 环境监测管理 > 详细定义
+    详细定义
+  R(heading) sec=通讯接口 > 环境监测管理 > 详细定义 > YE_EP_B_01（获取监测设备列表）
+    YE_EP_B_01（获取监测设备列表）
+[P09-BP0258] stratum=table_transition doc_type=Technical Agreement
+  L(paragraph) sec=培训与知识转移 > 培训
+    普通用户培训：保证培训环境(包括培训教室、投影仪和实验用机器)；保证被培训人员的培训时间；保证客户方系统管理员能协助培训；被培训人员在培训前应具有以下技能：具有计算机基本操作技能；具有办公软件的基本操作技能。
+  R(table_row) sec=<same>
+    序号 | 阶段 | 培训主题 | 培训时长 | 培训对象 | 形式及场地
+[P09-BP0259] stratum=table_transition doc_type=Technical Agreement
+  L(paragraph) sec=数据采集设计 > 采集范围
+    本次项目需完成轧钢厂6套、冷精厂2套烟气在线监测设备采集工作，采集清单如下表所示：
+  R(table_row) sec=<same>
+    序号 | 设备名称 | 所属分厂
+[P09-BP0260] stratum=same_section_continuity doc_type=API
+  L(heading) sec=通讯接口 > 环境监测管理 > 详细定义 > EM_EP_A_01（获取自行监测计划计划监测时间区间）
+    EM_EP_A_01（获取自行监测计划计划监测时间区间）
+  R(paragraph) sec=<same>
+    (1) 触发条件：
+[P09-BP0261] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=(none)
+    烟台华新不锈钢有限公司
+  R(paragraph) sec=<same>
+    烟台华新数智化改造项目一期
+[P09-BP0262] stratum=same_section_continuity doc_type=DB
+  L(heading) sec=设计概述 > 命名规范 > 数据字典代码命名规范
+    数据字典代码命名规范
+  R(paragraph) sec=<same>
+    数据字典代码命名：由模块简称+对象名+枚举用途组成，示例：模块简称_对象名1_对象名2_枚举用途。
+[P09-BP0263] stratum=heading_transition doc_type=DB
+  L(paragraph) sec=设计概述 > 命名规范
+    （2）本节的命名规范适应于本系统中定制功能的数据库对象。
+  R(heading) sec=设计概述 > 命名规范 > 表命名规范
+    表命名规范
+[P09-BP0264] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=系统目标
+    基于烟台华新环保管理规划方向，遵循钢铁行业“高效化、集约化、绿色化、智能化”的先进技术理念，通过提升信息互联、数据融合、管理闭环，建设适合烟台华新的环保管理系统，有效促进环保和信息深度融合，支撑安全、经济、绿色、高效的环保运行体系，项目建设的目标如下：
+  R(paragraph) sec=<same>
+    数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础。
+[P09-BP0265] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=项目实施方案 > 项目组人员配置
+    项目领导小组由烟台华新主要领导组成，负责任命各自的项目负责人，监督项目的执行、协调双方关系、处理决策重要事件。在项目全过程中发挥决策作用，需要参与阶段是项目启动、项目试运行、项目/系统推广、项目验收。
+  R(paragraph) sec=<same>
+    项目负责人（总监），双方各派遣一名中高层管理人员在项目出任总监，监督项目团队实施工作；协调公司资源对项目进行支持。主要参与的项目阶段是：项目全过程。
+[P09-BP0266] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=系统功能设计 > 环保成本管理 > 环保成本统计报表
+    依据不同的时间维度（日/月/年）和结算口径，统计对应的环保成本状况，生成相应的成本统计图表，并进行比对分析，以明确环保成本的实际组成情况，为环保成本的节流工作提供数据支撑。
+  R(heading) sec=系统功能设计 > 移动端管理
+    移动端管理
+[P09-BP0267] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 危固废管理 > DB定义 > ep_supplier_review_details（供应商技术评审详情）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | eia_content | 环评手续所报内容 | | | varchar(100) | 100 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | discharge_license_content | 排污许可所报内容 | | | varchar(100) | 100 | N | |
+[P09-BP0268] stratum=noise_candidate doc_type=Technical Agreement
+  L(heading) sec=2025年12月
+    2025年12月
+  R(paragraph) sec=<same>
+    目录
+[P09-BP0269] stratum=heading_transition doc_type=API
+  L(heading) sec=4. 通讯接口 11 > 4.2 环境监测管理 26 > 4.2.2 详细定义 27
+    4.2.2 详细定义 27
+  R(heading) sec=4. 通讯接口 11 > 4.3 环境成本管理 40
+    4.3 环境成本管理 40
+[P09-BP0270] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环境监测管理 > DB定义 > ep_radiation_source_ledger（放射源台账）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | factory_activity | 出厂活度 (贝可) | | | varchar(10) | 10 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | radiation_label | 标号 | | | varchar(20) | 20 | N | |
+[P09-BP0271] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > SP_EP_B_01（获取危固废运输车辆信息）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: | 运输单位 | transportCompany | String | | 固废出厂环节台账
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: | 运输人姓名 | transportUserName | String | | 固废出厂环节台账
+[P09-BP0272] stratum=same_section_continuity doc_type=API
+  L(heading) sec=设计概述 > 系统定义规范
+    系统定义规范
+  R(paragraph) sec=<same>
+    系统代码定义：由两位英文字符组成，详见下表：
+[P09-BP0273] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 环境监测管理 > 详细定义 > YE_EP_B_03（获取生产设备列表）
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 通信协议 | http/消息队列 |
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 电文格式 | json |
+[P09-BP0274] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=详细设计 > 环保绩效管理 > 功能设计 > 【EPEP103】绩效考评评价作业
+    【EPEP103】绩效考评评价作业
+  R(heading) sec=详细设计 > 环保绩效管理 > 功能设计 > 【EPEP103】绩效考评评价作业 > 画面交互（原型）
+    画面交互（原型）
+[P09-BP0275] stratum=table_transition doc_type=API
+  L(paragraph) sec=通讯接口 > 危固废管理 > 详细定义 > AM_EP_A_01（获取危废出库环节台账数据）
+    (3)响应报文
+  R(table_row) sec=<same>
+    序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注
+[P09-BP0276] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=(none)
+    第一卷 环保模块
+  R(paragraph) sec=<same>
+    数据库设计
+[P09-BP0277] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 环境监测管理 > 功能设计 > 【EPEM104】自行监测计划作业 > 处理逻辑（IPO）
+    （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 序号 | 按钮/功能 | 输入（Input） | 处理逻辑（Process） | 输出（Output）
+[P09-BP0278] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=培训与知识转移 > 培训
+    负责对项目中所有产品的基本知识、系统或参数配置、管理维护、系统使用、流程和表单的配置等提供相应的技术培训和操作培训。
+  R(paragraph) sec=<same>
+    确保用户方相关工作人员能熟悉操作软件相应功能模块，信息化技术人员能独立安装、调试，能进行日常维护和简单故障处理，系统管理人员能进行用户配置、流程和表单的定制。
+[P09-BP0279] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=数据采集设计 > 采集范围
+    表头: 序号 | 设备名称 | 所属分厂 数据行: 5 | 气氛保护炉3#排气筒烟气在线监测设备 | 轧钢厂
+  R(table_row) sec=<same>
+    表头: 序号 | 设备名称 | 所属分厂 数据行: 6 | 气氛保护炉2#排气筒烟气在线监测设备 | 轧钢厂
+[P09-BP0280] stratum=table_transition doc_type=DB
+  L(heading) sec=数据库设计 > 环境应急管理 > DB清单
+    DB清单
+  R(table_row) sec=<same>
+    序号 | 表英文名称 | 表中文名称 | 所属模块 | 主键 | 关联表-外键 | 备注
+[P09-BP0281] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=项目验收 > 验收标准
+    表头: 序号 | 经营指标名称 | 基准点 | 基准点 | 检测点 | 检测点 | 检测点 | 检测点 | 模型 数据行: 序号 | 经营指标名称 | 基准点 | 基准点数值 (预估) | 检测点 | 检测点目标 | 检测点数值（预估） | 备注 | 模型
+  R(table_row) sec=<same>
+    表头: 序号 | 经营指标名称 | 基准点 | 基准点 | 检测点 | 检测点 | 检测点 | 检测点 | 模型 数据行: 1 | 人力成本 | / | 10万 | 功能验收后3个月 | 0 | 0 | 节约因超低创A水平保持新增人力需求成本约10万元/年，超低创A水平保持依赖于生产状况、设备运行等多方面因素，系统仅保证功能运行稳定性、便捷性。 | /
+[P09-BP0282] stratum=heading_transition doc_type=DB
+  L(heading) sec=数据库设计 > 危固废管理 > ER图
+    ER图
+  R(heading) sec=数据库设计 > 危固废管理 > DB清单
+    DB清单
+[P09-BP0283] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 环境监测管理 > 功能设计 > 【EPEM307】污染物统计台账作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 序号 | 按钮/功能 | 输入（Input） | 处理逻辑（Process） | 输出（Output）
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 1 | 【查询】按钮 | 时间维度：选择日、月、年 时间区间：时间格式根据时间维度联动 | 根据时间维度查询时间区间内各排口台账数据 在线排口数据来源于超低排放管控治一体化平台，从接口获取，具体接口请查看接口文档获取监测、治理、生产设备历史数据接 | 排口台账数据列表，包含在线、不在线排口
+[P09-BP0284] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 隐患排查管理 > 隐患排查记录
+    隐患排查记录
+  R(paragraph) sec=<same>
+    各级负责人在查阅年度隐患排查计划之后，依照要求定期对其所负责区域执行该计划。隐患排查工作完成后，各级负责人于隐患排查记录页面新增记录，填报排查信息，形成一条排查记录。
+[P09-BP0285] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环保成本管理 > DB定义 > ep_actual_cost_details（实际收支费用）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | unit_price_amt | 单价 | | | decimal(8,2) | 8 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | consume_qty | 消耗量 | | | decimal(8,2) | 8 | N | |
+[P09-BP0286] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=系统功能设计 > 涉及接口
+    表头: 序号 | 发起方 | 接收方 | 接口协议（可选） | 实现方式（可选） | 接口业务说明 | 备注 数据行: 1 | 五即化管理平台 | 环保管理系统 | HTTP/HTTPS | 五即化管理平台提供数据接口，环保管理系统定期调用接口获取信息 | 获取危废台账相关数据 | 甲供
+  R(table_row) sec=<same>
+    表头: 序号 | 发起方 | 接收方 | 接口协议（可选） | 实现方式（可选） | 接口业务说明 | 备注 数据行: 2 | 超低排放管控治一体化平台 | 环保管理系统 | HTTP/HTTPS | 超低排放管控治一体化平台 提供数据接口，环保管理系统定期调用接口获取信息 | 获取有组织、无组织、清洁运输等相关数据 | 甲供
+[P09-BP0287] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 报表设计 > 报表设计说明 > RP0013 环保事故统计
+    表头: 字段编码 | 字段名称 | 示例 | 统计口径说明 | 原数据来源 | 原页面名称 | 原表及字段名 | 数据平台 数据行: accident_department_array | 事故部门数组 | | 事故部门统计 | 环保事故处置跟踪 | | |
+  R(table_row) sec=<same>
+    表头: 字段编码 | 字段名称 | 示例 | 统计口径说明 | 原数据来源 | 原页面名称 | 原表及字段名 | 数据平台 数据行: accident_department_data_array | 事故部门数量数组 | | 事故部门统计 | 环保事故处置跟踪 | | |
+[P09-BP0288] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 环境监测管理 > DB定义 > ep_self_monitor_scheme（自行监测方案）
+    序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | id | 主键ID | Pk | | varchar(40) | 40 | N | |
+[P09-BP0289] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 危固废管理 > 详细定义 > LM_EP_A_01（获取危固废内部转移实际接受数量）
+    序号 | 项目 | 项目说明 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 业务触发时机 | 确认接受时 |
+[P09-BP0290] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 危固废管理 > DB定义 > ep_warehousing_link_ledger（危废入库环节台账）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | internal_name | 行业俗称/单位内部名称 | | | varchar(20) | 20 | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 空否 | 缺省 | 备注 数据行: | standard_waste_name | 国家危险废物名录名称 | | | varchar(20) | 20 | N | |
+[P09-BP0291] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=系统功能设计 > 危固废管理 > 固废台账
+    针对一般工业固体废物（如钢渣等）建立精细化管理体系，记录其产生（产生车间/工段、日期、名称、代码、重量）、分类收集（投放至指定一般固废堆场或仓）、内部转运及贮存状态；重点跟踪其资源化利用或合规处置的完整流向，包括接收单位名称（如水泥厂、建材厂）、实际转移数量及日期；同时对无法利用需填埋的固废记录入场接收凭证及处置量，支撑企业固废综合利用率统计与环境责任报告编制。
+  R(heading) sec=系统功能设计 > 隐患排查管理
+    隐患排查管理
+[P09-BP0292] stratum=inside_table doc_type=API
+  L(table_row) sec=接口命名
+    表头: 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 数据行: | EM_EP_A_01 | 获取自行监测计划计划监测时间区间 | 设备管理 | 环保管理 |
+  R(table_row) sec=<same>
+    表头: 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 | 危固废管理 数据行: | EM_EP_A_02 | 获取气排口设备启停状态 | 设备管理 | 环保管理 |
+[P09-BP0293] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=详细设计 > 数据需求表
+    数据需求表
+  R(heading) sec=详细设计 > 数据需求表 > 数据输入表
+    数据输入表
+[P09-BP0294] stratum=same_section_continuity doc_type=DB
+  L(heading) sec=设计概述 > 命名规范
+    命名规范
+  R(paragraph) sec=<same>
+    （1）数据库对象采用统一的“小写+下划线”的命名方式。
+[P09-BP0295] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 报表设计 > 报表设计说明 > RP002 危废入库环节统计
+    （三）报表样式
+  R(heading) sec=详细设计 > 报表设计 > 报表设计说明 > RP003 危废出库环节统计
+    RP003 危废出库环节统计
+[P09-BP0296] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 环境应急管理 > 功能设计 > 【EPEE205】应急演练记录作业 > 画面交互（原型）
+    （2）详情页
+  R(paragraph) sec=<same>
+    （3）发布页
+[P09-BP0297] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 隐患排查管理 > 隐患排查计划
+    隐患排查计划
+  R(paragraph) sec=<same>
+    计划依据国家法规、企业安全标准及历史隐患数据编制，涵盖具体检查项目（如设备老化、操作规范、环境风险）、执行时间表与资源分配方案，明确检查周期（如月度、季度或年度）、覆盖范围（包括生产车间、仓储区域、设备设施等关键点位）、检查方法（如目视巡查、仪器检测或专项审核）及责任主体（指定区域负责人），确保全面覆盖潜在风险，支撑后续隐患排查记录与整改跟踪。
+[P09-BP0298] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 环境监测管理 > 系统流程图 > 系统流程与作业画面对照表
+    表头: 系统流程编号 | 活动编号 | 作业编号及名称 | 页面说明 数据行: EPEM-A-03 | EPEM-A-03-E-03 | EPEM303预警处置跟踪作业 | 新系统页面
+  R(table_row) sec=<same>
+    表头: 系统流程编号 | 活动编号 | 作业编号及名称 | 页面说明 数据行: EPEM-A-03 | EPEM-A-03-E-04 | EPEM304预警统计报表作业 | 新系统页面
+[P09-BP0299] stratum=inside_table doc_type=API
+  L(table_row) sec=设计概述 > 系统定义规范
+    表头: 系统归属 | 系统名称 | 系统代码 | 系统归属 | 备注 数据行: 烟台华新不锈钢数智化改造一期系统 | 成本管理 | CO | 金恒自有 |
+  R(table_row) sec=<same>
+    表头: 系统归属 | 系统名称 | 系统代码 | 系统归属 | 备注 数据行: 烟台华新不锈钢数智化改造一期系统 | 营销管理 | SM | 金恒自有 |
+[P09-BP0300] stratum=table_transition doc_type=Technical Agreement
+  L(table_row) sec=培训与知识转移 > 培训
+    表头: 序号 | 阶段 | 培训主题 | 培训时长 | 培训对象 | 形式及场地 数据行: 3 | 上线 | 系统操作培训 | 2小时 | 管理层人员 | 演示，项目现场
+  R(paragraph) sec=<same>
+    培训计划如下：

@@ -1,0 +1,254 @@
+[
+  {
+    "qa_id": "QA001",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题清晰，答案准确，证据'1）请求方式：POST'直接支持答案。关键词完全匹配。"
+  },
+  {
+    "qa_id": "QA002",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "与QA001模式相同，不同接口。问题唯一指向四方会签人员信息接口，证据直接支持。"
+  },
+  {
+    "qa_id": "QA003",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题清晰指向正式工信息同步接口，答案准确，证据直接匹配。"
+  },
+  {
+    "qa_id": "QA004",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题清晰指向具体参数agtNo的多个属性。答案准确（String/最大200字节/非必填）。证据block是包含该参数的表格行，能独立支持。需要从表格行中抽取信息，非简单关键词匹配。"
+  },
+  {
+    "qa_id": "QA005",
+    "keep_for_experiment": "NO",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题与QA004高度相似（同接口不同参数），且答案完全相同（String/最大200字节/非必填），gold_evidence_id相同(B0021)。这导致检索测试中两个问题指向同一个block，过于重复。建议只保留其中一个。"
+  },
+  {
+    "qa_id": "QA006",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向返回参数code（与请求参数不同表），答案准确（Int/必填）。证据是返回参数表B0027，能独立支持。注意：取值范围为空（答案未说明），实际答案应补充'取值范围未明确限定'，但当前表述可接受。"
+  },
+  {
+    "qa_id": "QA007",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向返回参数message，答案准确。证据block B0027同时包含code和message两行，能支持。与QA006指向同一block但不同参数，从检索角度是合理的。"
+  },
+  {
+    "qa_id": "QA008",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向不同接口（四方会签人员信息）的参数signIds。答案准确（array/最大2000字节/必填）。证据能独立支持。"
+  },
+  {
+    "qa_id": "QA009",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题清晰询问表用途，答案直接来自表描述字段。证据直接包含答案。"
+  },
+  {
+    "qa_id": "QA010",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "与QA009相同模式，不同表。问题唯一，答案准确，证据直接。"
+  },
+  {
+    "qa_id": "QA011",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "同上模式。表名唯一，答案直接从证据获取。"
+  },
+  {
+    "qa_id": "QA012",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "同上模式。注意此表名与QA011表名相似（VICE后缀），但问题和证据都能唯一对应。"
+  },
+  {
+    "qa_id": "QA013",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "同上模式。"
+  },
+  {
+    "qa_id": "QA014",
+    "keep_for_experiment": "NO",
+    "difficulty": "Easy",
+    "review_status": "需修改",
+    "review_notes": "与QA009-013模式高度重复（都是'XXX表用于记录什么信息'）。已经有5个相同模式的数据库表问题，再加这个过于冗余。如果要保留应在总量上控制此类型不超过3个。"
+  },
+  {
+    "qa_id": "QA015",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向具体约束（72学时要求）。答案准确完整。证据block包含完整上下文能独立支持。需要理解'班组级培训实施'的含义定位到正确段落。"
+  },
+  {
+    "qa_id": "QA016",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题'安全可靠性原则中规定了什么约束？'过于宽泛，该段落可能有多个约束。当前答案只选了其中一部分内容。建议将问题改为更具体的形式，如'安全可靠性原则对系统运行时间有什么要求？'。证据本身没问题。"
+  },
+  {
+    "qa_id": "QA017",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向权限约束（仅限内审员），答案准确。证据block为单独一段，能独立支持。问题与QA019类似但来源不同文档，从检索多源角度有价值。"
+  },
+  {
+    "qa_id": "QA018",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题'技术支持与服务中规定了什么约束？'过于宽泛。该章节有很多内容（质保期、响应时间等），答案只摘取了现场服务这一条。建议问题改为'什么情况下金恒公司需要派工程师到现场？'使其更唯一。证据本身准确。"
+  },
+  {
+    "qa_id": "QA019",
+    "keep_for_experiment": "NO",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "与QA017完全重复！同一内容（管理手册权限约束），只是来源从详设文档换成技术协议。问题措辞几乎相同，答案完全相同。对检索实验而言是重复。"
+  },
+  {
+    "qa_id": "QA020",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向具体的存储时长约束（至少1个月、回调7天）。答案准确，证据能独立支持。需要定位到特定章节。"
+  },
+  {
+    "qa_id": "QA021",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题'功能描述支持或提供什么能力？'过于模糊——哪个模块的功能描述？建议改为'智能动态监督模块的功能描述支持什么能力？'。答案只是证据中后半句话，而证据block完整描述了AI识别+报表两个能力。答案应更完整。"
+  },
+  {
+    "qa_id": "QA022",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "需修改",
+    "review_notes": "问题'功能概述支持或提供什么能力？'同样模糊。应改为'安全视频监控的功能概述是什么？'。答案和证据本身准确。"
+  },
+  {
+    "qa_id": "QA023",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题'技术架构图支持或提供什么能力？'——架构图本身不提供能力，是平台提供能力。建议改为'JH4J-CLOUD微服务平台提供了哪些底层服务？'。答案和证据准确。"
+  },
+  {
+    "qa_id": "QA024",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题指向'易于扩展性原则'，章节名唯一。答案是该原则的完整表述。证据即为整段内容。"
+  },
+  {
+    "qa_id": "QA025",
+    "keep_for_experiment": "NO",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "与QA021高度重复！同一模块（智能动态监督），同一答案（对违规行为自动记录分析...），只是章节层级不同。证据block也高度相似。删除。"
+  },
+  {
+    "qa_id": "QA026",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向三级培训教育流程中班组级培训的下发过程。答案准确，证据能独立支持。需要从多步骤流程中定位正确环节。"
+  },
+  {
+    "qa_id": "QA027",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "需修改",
+    "review_notes": "问题'项目实施范围描述了什么实现或处理过程？'——这不太像自然提问。建议改为'项目实施范围中安全一期功能深化提升包含什么内容？'。答案和证据准确。"
+  },
+  {
+    "qa_id": "QA028",
+    "keep_for_experiment": "YES",
+    "difficulty": "Medium",
+    "review_status": "通过",
+    "review_notes": "问题指向必要性分析的核心论述。答案完整引用了政策要求的核心要点。证据能独立支持。"
+  },
+  {
+    "qa_id": "QA029",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题指向子系统功能描述中的数量信息（13个/12个模块）。答案准确。证据为完整单句。"
+  },
+  {
+    "qa_id": "QA030",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "与QA029内容相近（同样说改造/新增模块数量）但来源不同文档。答案多了'21个功能模块'和'企业微信->飞书'信息，从不同角度描述。有保留价值。"
+  },
+  {
+    "qa_id": "QA031",
+    "keep_for_experiment": "NO",
+    "difficulty": "Easy",
+    "review_status": "需修改",
+    "review_notes": "与QA027使用完全相同的证据(B0095)和答案！只是问题类型从Process变为Numeric constraint。同一evidence block不应生成两个问题。"
+  },
+  {
+    "qa_id": "QA032",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题指向监控实施范围的具体数量（7类区域、23台）。答案准确。证据完整支持。"
+  },
+  {
+    "qa_id": "QA033",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题指向职业健康模块新增的7个功能板块数量。答案列举完整，证据直接支持。"
+  },
+  {
+    "qa_id": "QA034",
+    "keep_for_experiment": "NO",
+    "difficulty": "Easy",
+    "review_status": "需修改",
+    "review_notes": "与QA029使用几乎相同的证据内容（同样的'13个模块改造/12个功能板块'），只是来源block不同(B0113 vs B0177)但文字完全一样。答案完全相同。与QA035也重复。高度冗余。"
+  },
+  {
+    "qa_id": "QA035",
+    "keep_for_experiment": "NO",
+    "difficulty": "Easy",
+    "review_status": "需修改",
+    "review_notes": "与QA034使用完全相同的证据block(B0113)和答案！只是问题类型不同（Process vs Numeric constraint）。同一evidence不应生成两个问题。"
+  },
+  {
+    "qa_id": "QA036",
+    "keep_for_experiment": "YES",
+    "difficulty": "Easy",
+    "review_status": "通过",
+    "review_notes": "问题指向风险分级管控台账的具体功能（增删改查/导入/导出）。答案准确，证据为完整单句直接支持。"
+  }
+]

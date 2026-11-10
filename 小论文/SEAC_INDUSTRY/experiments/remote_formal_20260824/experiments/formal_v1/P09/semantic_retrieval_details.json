@@ -1,0 +1,387 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0297"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0072",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0076",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0071",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0074",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0075"
+    ],
+    "query_latency_ms": 18.735368736088276
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0306"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0078",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0067",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0082",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0070",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0055"
+    ],
+    "query_latency_ms": 17.857715487480164
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0334"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0083",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0109",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0538",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0225",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0082"
+    ],
+    "query_latency_ms": 17.752498388290405
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0106",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0020",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0034",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0023",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0013",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0021",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0014",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0012"
+    ],
+    "query_latency_ms": 10.723860934376717
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "Numeric constraint",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0085"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0033",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0020",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0004",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0012",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0003"
+    ],
+    "query_latency_ms": 10.155794210731983
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0112"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0014",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0023",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0021",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0013",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0012"
+    ],
+    "query_latency_ms": 17.670465633273125
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Process",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0113"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0014",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0024",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0021",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0013",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0026"
+    ],
+    "query_latency_ms": 16.740253195166588
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0129"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0021",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0069",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0020",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0009",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0024"
+    ],
+    "query_latency_ms": 9.846591390669346
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0149"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0029",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0092",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0030",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0031",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0094"
+    ],
+    "query_latency_ms": 10.282115079462528
+  },
+  {
+    "qa_id": "QS001",
+    "question_type": "API",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045#R026"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0066",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0016",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0018",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0019",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0017"
+    ],
+    "query_latency_ms": 18.63626576960087
+  },
+  {
+    "qa_id": "QS002",
+    "question_type": "API",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0254#R004"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0058",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0067",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0057",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0049",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0047"
+    ],
+    "query_latency_ms": 16.96484535932541
+  },
+  {
+    "qa_id": "QS003",
+    "question_type": "API parameter",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066#R007",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0071#R003",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0078#R003"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0041",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0039",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0045",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0038",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0051"
+    ],
+    "query_latency_ms": 17.513824626803398
+  },
+  {
+    "qa_id": "QS004",
+    "question_type": "Constraint",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042#R004"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0015",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0067",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0027",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0012",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx:C0021"
+    ],
+    "query_latency_ms": 17.073439434170723
+  },
+  {
+    "qa_id": "QS005",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047#R011"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0071",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0070",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0069",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0474",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0217"
+    ],
+    "query_latency_ms": 16.954446211457253
+  },
+  {
+    "qa_id": "QS006",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050#R013"
+    ],
+    "top_chunk_ids": [
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0075",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0076",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0077",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0074",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx:C0102"
+    ],
+    "query_latency_ms": 17.146573401987553
+  },
+  {
+    "qa_id": "QS007",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0326#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0079",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0083",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0082",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0081",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0080"
+    ],
+    "query_latency_ms": 17.751826904714108
+  },
+  {
+    "qa_id": "QS008",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0326#R004"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0079",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0081",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0080",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0083",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0538"
+    ],
+    "query_latency_ms": 17.0427979901433
+  },
+  {
+    "qa_id": "QS009",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0131"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0022",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0021",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0024",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0023",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0063"
+    ],
+    "query_latency_ms": 17.08354987204075
+  },
+  {
+    "qa_id": "QS010",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277#R003"
+    ],
+    "top_chunk_ids": [
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0040",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0246",
+      "semantic:模块8-环保管理-技术协议-1218.docx:C0035",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0247",
+      "semantic:烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx:C0315"
+    ],
+    "query_latency_ms": 17.051709815859795
+  }
+]

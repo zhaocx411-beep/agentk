@@ -1,0 +1,16 @@
+{"id":"P09-QA001","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY","PROPRIETARY_BUSINESS_DATA"],"note":"“培训中规定了什么约束”在该节13个块中无法唯一定位，同节客户配合条款B0301、B0302同样是合理答案，需限定到普通用户培训阶段的配合责任。"}
+{"id":"P09-QA002","content_verdict":"NEEDS_REWRITE","difficulty":"Easy","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"答案以“至少包含以下材料”悬空结尾，且同节代码交付、知识产权条款同样属约束，建议改问系统交付文档的移交形式。"}
+{"id":"P09-QA003","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"同节功能验收段落含试运行60天、15个工作日等时限，问题需明确指向指标验证轮次上限才能保证答案唯一。"}
+{"id":"P09-QA004","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"证据不唯一：“数据一体化”整句在技术协议、数据库设计、系统接口设计、系统需求设计中共出现4次，且“系统目标”节含4条并列目标，不指明文件无法定位唯一证据。"}
+{"id":"P09-QA005","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"证据不唯一：同一句在项目语料中跨4个块重复，且“项目目标”节另有3条并列目标，证据与答案均不唯一。"}
+{"id":"P09-QA006","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":[],"note":"证据为带页码的目录标题行，问题复述标题且答案与问题同文，无实质过程描述，题目不成立。"}
+{"id":"P09-QA007","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"与QA004的证据单元、片段和答案完全相同仅题型不同，属重复题，且该句跨4个文档块重复，证据不唯一。"}
+{"id":"P09-QA008","content_verdict":"NEEDS_REWRITE","difficulty":"Easy","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY"],"note":"一期7个功能模块由片段直接支持，但技术协议“业务架构图”节（QA010）有几乎相同表述，问题需限定“一期建设内容”以免与另一文档同句冲突。"}
+{"id":"P09-QA009","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"同节B0120“轧钢厂6套、冷精厂2套共8套烟气在线监测设备”同样是数量要求，问题未限定导致答案不唯一。"}
+{"id":"P09-QA010","content_verdict":"NEEDS_REWRITE","difficulty":"Easy","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY"],"note":"与QA008内容近重复且问题仅差一个“图”字，同一7个模块事实在两份文档并存，建议合并或在问题中明确区分协议与详细设计层级。"}
+{"id":"P09-QA011","content_verdict":"APPROVED","difficulty":"Easy","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"轧钢厂6套、冷精厂2套烟气在线监测设备采集范围由片段直接支持且语料内唯一，同节备注只是实施说明不影响答案成立。"}
+{"id":"P09-QA012","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"与QA005的证据单元、片段和答案完全相同仅题型不同，属重复题，且该句在项目内跨4个块重复，证据不唯一。"}
+{"id":"P09-QA013","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"片段以“同时，依托……”开头脱离上文不能自足，且同节5条并列效果块均可作答，需改取完整效果句并具体化问题。"}
+{"id":"P09-QA014","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"与QA013同属“项目效果”节的模板化近重复问题，同节多条并列效果使答案不唯一，需明确问办公效率与协同能力的实现方式。"}
+{"id":"P09-QA015","content_verdict":"NEEDS_REWRITE","difficulty":"Hard","suggested_privacy_flags":["SECURITY_ARCHITECTURE"],"note":"“技术架构图支持或提供什么能力”在12个技术组件并列段落中无法唯一定位，需把问题限定到负载均衡组件的技术选型。"}
+{"id":"P09-QA016","content_verdict":"APPROVED","difficulty":"Medium","suggested_privacy_flags":[],"note":"问题指向明确的危固废厂商基础信息功能，答案由片段末句直接支持，证据单元在节内唯一，题型与章节正确。"}

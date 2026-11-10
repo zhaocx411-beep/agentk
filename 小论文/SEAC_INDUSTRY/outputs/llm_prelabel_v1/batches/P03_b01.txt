@@ -1,0 +1,375 @@
+[P03-BP0001] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=智慧防汛子系统设计 > 隐患排查模块 > 检查计划管理 > 逻辑处理
+    输入
+  R(paragraph) sec=<same>
+    无
+[P03-BP0002] stratum=inside_table doc_type=API
+  L(table_row) sec=(none)
+    表头: 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 数据行: 变更日期 | 新版本号 | 标志 | 变更概要 | 编写人 | 审核人
+  R(table_row) sec=<same>
+    表头: 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 数据行: 2025.06.06 | V1.0 | 新建 | 新建 | 许子扬 | 吴浩
+[P03-BP0003] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=2. 项目范围 > 2.1. 软件实施范围
+    表头: 3 | 防汛资源管理 | 应急物资管理与应急小组管理 数据行: 5 | 应急演练 | 演练计划制定、统计及演练记录
+  R(table_row) sec=<same>
+    表头: 3 | 防汛资源管理 | 应急物资管理与应急小组管理 数据行: 6 | 防汛简报 | 防汛感知数据及重点事项汇总
+[P03-BP0004] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软件开发明细
+    表头: 模块功能 | 二级模块 | 工作量 | 单位 | 单价 | 小计 数据行: 地图管理 | 监控对接 | 6 | 人日 | 2000 | 12000
+  R(table_row) sec=<same>
+    表头: 模块功能 | 二级模块 | 工作量 | 单位 | 单价 | 小计 数据行: 地图管理 | 预案执行联动 | 5 | 人日 | 2000 | 10000
+[P03-BP0005] stratum=inside_table doc_type=DB
+  L(table_row) sec=电子地图 > ITFP_MAP_LAYER_ATTR_COLUMN
+    表头: 3、 | 表名 | ITFP_MAP_LAYER_ATTR_COLUMN | 表的描述 | 图层要素属性配置 | | | 数据行: | ATTR_COLUMN_ISSHOW | NUMBER | | 11 | | Y | 是否显示
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | ITFP_MAP_LAYER_ATTR_COLUMN | 表的描述 | 图层要素属性配置 | | | 数据行: | IS_BASE | VARCHAR2 | | 10 | | Y | 是否基础字段(1是2否)
+[P03-BP0006] stratum=table_transition doc_type=SRS
+  L(paragraph) sec=2 业务描述 > 2.3 业务流程 > 2.3.2 详细流程 > 2.3.2.5 FP-04 应急演练流程
+    应急演练流程图
+  R(table_row) sec=<same>
+    流程编号 | 活动名称 | 活动说明
+[P03-BP0007] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 硬件设备清单
+    表头: 序号 | 名称 | 规格参数 | 单位 | 数量 | 能耗 | 使用寿命 | 单价 | 小计 数据行: | 合计 | | | | | | | 86775
+  R(paragraph) sec=<same>
+    注：设备电源、网络就近接入，暂不涉及公辅配套。
+[P03-BP0008] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.3获取各点位的雨量数据
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: data | String | | 是 | 返回的数据
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: pointCode | String | | 是 | 点位在IOT平台的ID
+[P03-BP0009] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.4获取实时的气象数据
+    返回信息
+  R(paragraph) sec=<same>
+    返回信息参数：
+[P03-BP0010] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.1获取各点位的水位数据接口
+    2）请求路径：
+  R(paragraph) sec=<same>
+    http://esb.nisco.cn:6001/esb/ZHYYCS./CENTERIOTSYS/services/getLastValueOfPointFromCenterIot
+[P03-BP0011] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 移动端 > 隐患排查 > 逻辑处理
+    输入参数 | 类型 | 取值范围 | 必输 | 备注
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 隐患ID | 字符串 | 选中的隐患ID | 是 |
+[P03-BP0012] stratum=noise_candidate doc_type=Technical Agreement
+  L(paragraph) sec=3. 系统架构 > 3.1. 业务架构图
+    2025-03-24
+  R(paragraph) sec=<same>
+    第2页，共24页
+[P03-BP0013] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 感知预警 > 水位检测 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 语音播报标记 | 单选按钮 | 1：是 2：否 | 否 | 默认否
+  R(paragraph) sec=<same>
+    处理逻辑
+[P03-BP0014] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 感知预警 > 预警中心 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(heading) sec=智慧防汛子系统设计 > 隐患排查模块
+    隐患排查模块
+[P03-BP0015] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 2. 接口设计 1
+    2. 接口设计 1
+  R(heading) sec=1. 概述 1 > 2. 接口设计 1 > 2.1感知预警 1
+    2.1感知预警 1
+[P03-BP0016] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 感知预警 > 预警推送
+    各类预警信息可分级推送，不同的预警级别推送相应的责任人。
+  R(heading) sec=项目建设方案 > 系统功能设计 > 防汛隐患排查处理
+    防汛隐患排查处理
+[P03-BP0017] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=3 五月份调水 能源动力事 能源管理处 墟坝、泵站、排水… 202505 2 02 特惨查 ②详情区蝙帽自的
+    共3条 10 前往 1 页
+  R(paragraph) sec=<same>
+    2、新增计划检查
+[P03-BP0018] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 硬件设备清单
+    序号 | 名称 | 规格参数 | 单位 | 数量 | 能耗 | 使用寿命 | 单价 | 小计
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 规格参数 | 单位 | 数量 | 能耗 | 使用寿命 | 单价 | 小计 数据行: 1 | 一体化自动雨量站 | 一体化自动雨量监测仪系统，具备翻斗式雨量计，带2.5米立杆、户外信息箱，具备网络通讯功能 | 套 | 5 | 5w | 3-5年 | 4180 | 20900
+[P03-BP0019] stratum=noise_candidate doc_type=Proposal
+  L(table_row) sec=(none)
+    表头: 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 数据行: 2025/1/21 | V0.5 | 修改 | 必要性、可行性、设计原则、系统架构、数据治理、清单等 | 吴浩 | 数研院
+  R(paragraph) sec=<same>
+    目 录
+[P03-BP0020] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目的目标与范围 > 项目实施范围
+    在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知；
+  R(paragraph) sec=<same>
+    智能摄像机及雨量计共10套设备网络、电源就近接入。
+[P03-BP0021] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.3获取各点位的雨量数据
+    3）请求信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P03-BP0022] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.8.PC端防汛一张图 > 4.1.8.6.重点区域监控
+    对接南钢统一监控平台，接入码头、道口、道路等重点区域监控，可轮询播 放。
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.8.PC端防汛一张图 > 4.1.8.7.防汛图层
+    4.1.8.7.防汛图层
+[P03-BP0023] stratum=inside_table doc_type=DB
+  L(table_row) sec=防汛简报 > ITFP_BR_WATER_RECORD
+    表头: 4、 | 表名 | ITFP_BR_WATER_RECORD | 表的描述 | 防汛简报水雨情 | | | 数据行: | WATER_SITUATION | NUMBER | | | | Y | 当日七点水情
+  R(table_row) sec=<same>
+    表头: 4、 | 表名 | ITFP_BR_WATER_RECORD | 表的描述 | 防汛简报水雨情 | | | 数据行: | CREATE_USER_NO | NVARCHAR2 | | 40 | | N | 创建人员
+[P03-BP0024] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=智慧防汛子系统设计 > 感知预警 > 内涝监测 > 画面设计
+    画面设计
+  R(paragraph) sec=<same>
+    查询
+[P03-BP0025] stratum=inside_table doc_type=DB
+  L(table_row) sec=隐患排查 > ITFP_HT_RISK_CORRECT
+    表头: 8、 | 表名 | ITFP_HT_RISK_CORRECT | 表的描述 | 隐患整改管理 | | | | 数据行: | REJECT_REASON | VARCHAR2 | | 100 | | Y | 驳回理由 |
+  R(table_row) sec=<same>
+    表头: 8、 | 表名 | ITFP_HT_RISK_CORRECT | 表的描述 | 隐患整改管理 | | | | 数据行: | ACCEPT_RESULTS_DESC | VARCHAR2 | | 400 | | Y | 整改验收结果描述 |
+[P03-BP0026] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 概述
+    本文档是水情应急预案各板块可视化项目感知预警和电子地图的接口设计。
+  R(heading) sec=1. 概述 1 > 接口设计
+    接口设计
+[P03-BP0027] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.1.感知预警 > 4.1.1.1.水位监测
+    4.1.1.1.水位监测
+  R(paragraph) sec=<same>
+    (1)对接loT平台，获取原料码头、港池码头、石头河(四号岗桥)及3 个明渠水位数据(该部分水位监测设备利旧，数据已接入loT平台),设置水位 阈值进行异常预警；
+[P03-BP0028] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=智慧防汛子系统设计 > 移动端 > 感知数据 > 画面设计
+    1、画面入口：智慧防汛->数据监测
+  R(paragraph) sec=<same>
+    2、界面展示码头/明渠水位的点位名称和当前实时值；
+[P03-BP0029] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 硬件设备清单
+    表头: 序号 | 名称 | 规格参数 | 单位 | 数量 | 能耗 | 使用寿命 | 单价 | 小计 数据行: 8 | 光纤收发器 | 千兆、SC接口，单模单芯 | 台 | 10 | 5w | 2-3年 | 180 | 1800
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 规格参数 | 单位 | 数量 | 能耗 | 使用寿命 | 单价 | 小计 数据行: 9 | RJ45水晶头 | 非屏蔽超五类RJ45水晶头，25只/包 | 包 | 2 | | | 11.5 | 23
+[P03-BP0030] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=10 安全环保都
+    问题描述
+  R(paragraph) sec=<same>
+    整改措施描述
+[P03-BP0031] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=1 模板下载 > 3.4.3.2 检查计划管理
+    1 、检查计划管理列表画面
+  R(paragraph) sec=<same>
+    年度□调2择年段 事业器 消选挥 生产 厂 请选择 检查状态 请选择状5
+[P03-BP0032] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=智慧防汛子系统设计 > 防汛资源管理模块 > 防汛知识库 > 画面设计
+    画面入口：防汛资源管理->防汛知识库
+  R(paragraph) sec=<same>
+    管理防汛知识库，对于历史的防汛应急事故事件进行登记，主要包括事故名称、事故地点、事故时间、事故经过等。
+[P03-BP0033] stratum=table_transition doc_type=DB
+  L(table_row) sec=感知预警 > ITFP_EW_METEOROLOGY_CONFIG
+    表头: 3、 | 表名 | ITFP_EW_METEOROLOGY_CONFIG | 表的描述 | 气象配置 | | | | 数据行: | COMPANY_ID | NVARCHAR2 | | 100 | | Y | 授权公司 |
+  R(table_row) sec=感知预警 > ITFP_EW_WATER_RECORD
+    4、 | 表名 | ITFP_EW_WATER_RECORD | 表的描述 | 水位监测历史记录 | | | |
+[P03-BP0034] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=5. 设备清单
+    表头: 序 号 | 名称 | 品牌 | 品牌 | 型号规格 | 单位 | 数量 数据行: 9 | RJ45水晶 头 | 普天 | 非屏蔽超五类RJ45水晶头，25只/包 | 非屏蔽超五类RJ45水晶头，25只/包 | 包 | 2
+  R(table_row) sec=<same>
+    表头: 序 号 | 名称 | 品牌 | 品牌 | 型号规格 | 单位 | 数量 数据行: 10 | 室外网线 | 普天 | HSYV-5e 4×2×0.50 非屏蔽超五类室外网线，305米/箱 | HSYV-5e 4×2×0.50 非屏蔽超五类室外网线，305米/箱 | 箱 | 1
+[P03-BP0035] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=项目建设方案 > 系统功能设计 > 防汛资源管理 > 防汛案例文件库
+    防汛案例文件库
+  R(heading) sec=项目建设方案 > 系统功能设计 > 防汛资源管理 > 防汛案例文件库 > 防汛知识库管理
+    防汛知识库管理
+[P03-BP0036] stratum=table_transition doc_type=DB
+  L(table_row) sec=应急管理 > ITFP_EP_EMERGENCY_EVENT
+    表头: 5、 | 表名 | ITFP_EP_EMERGENCY_EVENT | 表的描述 | 应急处置事件 | | | 数据行: | COMPANY_ID | NVARCHAR2 | | 100 | | Y | 授权公司
+  R(table_row) sec=应急管理 > ITFP_EP_EMERGENCY_EVENT_POINT
+    6、 | 表名 | ITFP_EP_EMERGENCY_EVENT_POINT | 表的描述 | 应急处置事件报警点位 | | |
+[P03-BP0037] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=2 中板厂生厂安金事故应急满热计解 中厚板移厂生产安全罪的应患滨络计划 > 3.4.6.2 演练结果管理
+    演练单位
+  R(paragraph) sec=<same>
+    演练时间
+[P03-BP0038] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.3.防汛资源管理
+    4.1.3.防汛资源管理
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.3.防汛资源管理 > 4.1.3.1.防汛案例文件库
+    4.1.3.1.防汛案例文件库
+[P03-BP0039] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 电子地图模块 > 图层要素管理 > 画面设计
+    表头: 功能 | 说明 数据行: 查询 | 查询图层要素信息
+  R(table_row) sec=<same>
+    表头: 功能 | 说明 数据行: 新增 | 新增图层要素信息
+[P03-BP0040] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.10. 移动端 > 4.1.10.3. 应急处置
+    应急预案启动后，各节点责任人根据下发的应急措施项进行应急处置， 并通过手机APP 现场拍照上传至平台，记录处置过程及状态。
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.10. 移动端 > 4.1.10.4. 防汛简报
+    4.1.10.4. 防汛简报
+[P03-BP0041] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.1获取各点位的水位数据接口
+    }
+  R(heading) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值
+    2.1.2.2获取各点位的水位预测值
+[P03-BP0042] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=概述 > 项目背景
+    近年来，我国极端强降雨频发，部分地区城市降雨量已屡次刷新，且来势猛、速度快、历时短，造成了严重的洪水内涝灾害，影响企业生产安全。
+  R(paragraph) sec=<same>
+    南京地处长江下游，境内江河湖库水系众多，是全国31座重点防洪城市之一。南钢南临长江南京段的下游，拥有自备长江货运码头。每年汛期伴随降雨增多，长江水位升高，南钢原料码头、港池码头水位直逼近地面平台，强降雨时厂区内通达路、沿桥路、兴源路等重点道路及厂区内明渠、低洼地段易积水内涝，特别是2020年汛期水位持续上涨，淹没地面平台，连续多日红色洪涝灾害预警，给原燃料物资进厂、生产安全、人员通勤安全等带来了严峻的压力和挑战，防汛应急指挥部组织经过持续多日昼夜应急奋战，通过利用潮汐水位差，调集大量汽车在落潮间隙转运原料的方式，艰难保障了南钢正常生产。
+[P03-BP0043] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 数据治理 > 数据治理范围
+    组织范围：
+  R(paragraph) sec=<same>
+    主要涉及组织为制造部。
+[P03-BP0044] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=4. 系统功能设计
+    4. 系统功能设计
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述
+    4.1. 主要功能概述
+[P03-BP0045] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=1. 项目目标与效果 > 1.2. 项目效果
+    1.2. 项目效果
+  R(paragraph) sec=<same>
+    (1)通过新增汛情感知设备，整合防汛各项数据资源，通过可视化展示，提升 南钢码头水位、厂区内涝等重点区域汛情的感知能力与效率，为决策提供依据， 整体汛情感知效率较往期提升50%;
+[P03-BP0046] stratum=inside_table doc_type=SRS
+  L(table_row) sec=3功能性需求 > 2.21正常 > 3.4.2.2 雨量监测 > 3.4.2.3 内涝监测
+    表头: 涉及岗位 | 防汛管理员 | 防汛管理员 数据行: 积水监测摄像机新增 | 积水监测摄像机新增 | 包括监测摄像机编码、监测摄 像机位置、阈值等
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 防汛管理员 | 防汛管理员 数据行: 积水监测摄像机修改 | 积水监测摄像机修改 |
+[P03-BP0047] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=1 概述 1 > 1.2 标准符合性 1
+    1.2 标准符合性 1
+  R(heading) sec=1 概述 1 > 1.3 设计约束 1
+    1.3 设计约束 1
+[P03-BP0048] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=4. 系统功能设计 > 4.2. 数据治理 > 4.2.2. 数据治理范围
+    系统范围：
+  R(paragraph) sec=<same>
+    ● 南钢智慧运营中心-数字防汛模块。
+[P03-BP0049] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=2 BJnm admn
+    3 、隐患下发
+  R(paragraph) sec=<same>
+    下发整改：七月份防汛物资储备及管理检查
+[P03-BP0050] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 接口设计 > 2.2电子地图 > 2.2.2接口定义
+    2.2.2接口定义
+  R(heading) sec=1. 概述 1 > 接口设计 > 2.2电子地图 > 2.2.2接口定义 > 2.2.2.1获取点位列表信息
+    2.2.2.1获取点位列表信息
+[P03-BP0051] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 防汛资源管理模块 > 防汛物资存放点 > 逻辑处理
+    表头: 输入参数 | 参数类型 | 取值范围 | 必输 | 备注 数据行: 联系电话 | 输入框 | 字符串 | 否 |
+  R(paragraph) sec=<same>
+    处理逻辑
+[P03-BP0052] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.1获取各点位的水位数据接口
+    {
+  R(paragraph) sec=<same>
+    "statusCode": 200,
+[P03-BP0053] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=4. 系统功能设计 > 4.5. 感知设备 > 4.5.1.一体化自动雨量站
+    2 | 港池码头
+  R(table_row) sec=<same>
+    表头: 2 | 港池码头 数据行: 3 | 智慧中心
+[P03-BP0054] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 接口设计 > 2.2电子地图 > 2.2.2接口定义 > 2.2.2.1获取点位列表信息
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: message | String | | 是 | 返回提示说明
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: data | String | | 是 | 返回的数据
+[P03-BP0055] stratum=inside_table doc_type=SRS
+  L(table_row) sec=2 业务描述 > 2.3 业务流程 > 2.3.2 详细流程 > 2.3.2.2 FP- 02 气象预警流程
+    气象预警流程图 | 气象预警流程图 | 气象预警流程图
+  R(table_row) sec=<same>
+    表头: 气象预警流程图 | 气象预警流程图 | 气象预警流程图 数据行: | 感知预警(气象数据) | 第三方气象平台
+[P03-BP0056] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值
+    1）返回信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P03-BP0057] stratum=inside_table doc_type=SRS
+  L(table_row) sec=2. 检查填报：
+    涉及岗位 | 各防汛小组成员 | 各防汛小组成员
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 各防汛小组成员 | 各防汛小组成员 数据行: 功能 | 说明 | 备注
+[P03-BP0058] stratum=inside_table doc_type=DB
+  L(table_row) sec=防汛资源管理 > ITFP_RM_GOODS_RELATIONSHIP
+    表头: 4、 | 表名 | ITFP_RM_GOODS_RELATIONSHIP | 表的描述 | 防汛物资与存放点关联关系 | | | 数据行: | ID | NVARCHAR2 | 主键 | 40 | | N | 业务主键
+  R(table_row) sec=<same>
+    表头: 4、 | 表名 | ITFP_RM_GOODS_RELATIONSHIP | 表的描述 | 防汛物资与存放点关联关系 | | | 数据行: | GOODS_ID | NVARCHAR2 | | 40 | | Y | 物资表ID
+[P03-BP0059] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 应急演练管理 > 演练计划管理 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 演练人员 | 人员复选 | | 是 |
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 审批人员 | 人员复选 | | 是 |
+[P03-BP0060] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=智慧防汛子系统设计 > 感知预警 > 预警角色配置 > 逻辑处理
+    输入
+  R(table_row) sec=<same>
+    输入参数 | 类型 | 取值范围 | 必输 | 备注
+[P03-BP0061] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.6获取预测的气象数据（逐日）
+    {
+  R(paragraph) sec=<same>
+    ...
+[P03-BP0062] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    用户单位： [参与人员签字]
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司： [参与人员签字]
+[P03-BP0063] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.1获取各点位的水位数据接口
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: statusCode | Int | | 是 | 返回状态码，200是成功，其余是失败
+[P03-BP0064] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=10 安全环保都
+    整改期限
+  R(paragraph) sec=<same>
+    具体负贵人
+[P03-BP0065] stratum=same_section_continuity doc_type=Proposal
+  L(heading) sec=项目总体设计原则 > 统一规划、设计
+    统一规划、设计
+  R(paragraph) sec=<same>
+    结合南钢信息化现状以及防汛管理和未来发展要求进行统一规划、统一设计，建设防汛信息管理系统，支持后期该业务相关功能扩展。
+[P03-BP0066] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 接口设计 > 2.2电子地图 > 2.2.2接口定义 > 2.2.2.1获取点位列表信息
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: data | String | | 是 | 返回的数据
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: id | String | | 是 | 点位ID
+[P03-BP0067] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值
+    请求信息样例
+  R(paragraph) sec=<same>
+    HTTP GET请求：
+[P03-BP0068] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.5.应急演练管理 > 4.1.5.2.应急演练计划通知
+    审核通过后，根据演练日期临期推送演练任务至应急演练组织及参与人员。
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.5.应急演练管理 > 4.1.5.3.应急演练记录
+    4.1.5.3.应急演练记录
+[P03-BP0069] stratum=same_section_continuity doc_type=Proposal
+  L(heading) sec=项目总体设计原则 > 易于扩展性原则
+    易于扩展性原则
+  R(paragraph) sec=<same>
+    系统应具有良好的扩展性以适应未来个性化的需求，系统还应具有较好的兼容性以适应不同场景应用。
+[P03-BP0070] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.3.防汛资源管理 > 4.1.3.1.防汛案例文件库
+    4.1.3.1.防汛案例文件库
+  R(heading) sec=4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.3.防汛资源管理 > 4.1.3.1.防汛案例文件库 > 4.1.3.1.1. 防汛知识库管理
+    4.1.3.1.1. 防汛知识库管理
+[P03-BP0071] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=智慧防汛子系统设计 > 应急管理模块 > 应急处置流程 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P03-BP0072] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=智慧防汛子系统设计 > 隐患排查模块 > 检查记录管理 > 数据库表
+    表头: 序号 | 数据库表名 | 数据库表描述 | 备注 数据行: 2 | ITFP_HT_PLAN_INSPECTION_MANAGE_CHECK_RECORD | 检查计划管理检查明细表 | 表的详细定义见“数据库说明书”
+  R(table_row) sec=<same>
+    表头: 序号 | 数据库表名 | 数据库表描述 | 备注 数据行: 3 | ITFP_HT_PLAN_TISK_CORRECT | 闭环管理表 |
+[P03-BP0073] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.6获取预测的气象数据（逐日）
+    }
+  R(heading) sec=1. 概述 1 > 接口设计 > 2.2电子地图
+    2.2电子地图
+[P03-BP0074] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.3获取各点位的雨量数据
+    }
+  R(heading) sec=1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.4获取实时的气象数据
+    2.1.2.4获取实时的气象数据
+[P03-BP0075] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=(none)
+    目 录
+  R(heading) sec=1. 概述 1
+    1. 概述 1

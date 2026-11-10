@@ -1,0 +1,40 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P10",
+  "split": "locked_test",
+  "source_dir": "巨能特钢智慧管控一体化平台",
+  "processed": [
+    {
+      "file": "巨能特钢智慧管控一体化平台-技术协议.docx",
+      "suffix": ".docx",
+      "sha256": "53beadaae4249e9e75becf4cc772de72837bb88fca6341b1ee9a7c1cf1337a5c",
+      "bytes": 47819,
+      "document_type": "Technical Agreement"
+    },
+    {
+      "file": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+      "suffix": ".docx",
+      "sha256": "b774aa26324cc6bc61b71493f23afb123fb9a62c050d02b613395c1257245f3d",
+      "bytes": 22630512,
+      "document_type": "SRS"
+    },
+    {
+      "file": "巨能特钢智慧管控一体化平台-需求调研会议纪要.docx",
+      "suffix": ".docx",
+      "sha256": "8bb7dedb2bbac1e6a0f3c47221d83becc3de17a15c2dd1817d8e0e43ccfae6e6",
+      "bytes": 26045,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+      "suffix": ".docx",
+      "sha256": "ac2f04ccfff4bdf46d0a7291ca03acb6c18d60c9e89645555b5a73916b93bf1b",
+      "bytes": 8027251,
+      "document_type": "Proposal"
+    }
+  ],
+  "skipped": [],
+  "document_count": 4,
+  "block_count": 1062,
+  "approx_token_count": 52903
+}

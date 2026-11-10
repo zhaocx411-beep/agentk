@@ -1,0 +1,22 @@
+{
+  "protocol_version": "industrial-seac-workbook-import-v1.0",
+  "validated_at_utc": "2026-08-24T08:07:25.091441+00:00",
+  "check_only": false,
+  "boundary_projects": [],
+  "qa_projects": [
+    "P01"
+  ],
+  "input_workbook_sha256": {
+    "qa": "6792dd4a29506f6e18614f3424b826583d11becfb4e10692783b084ff1425ba4"
+  },
+  "projects": {
+    "P01": {
+      "qa_reviewed_count": 27,
+      "qa_approved_count": 24,
+      "qa_rejected_count": 3
+    }
+  },
+  "output_sha256": {
+    "P01/annotation_review/qa_reviewed.json": "deed1483bd3fd7311e92878553174ab3a1bf013ff0e43546362ecc6ca6e1d39f"
+  }
+}

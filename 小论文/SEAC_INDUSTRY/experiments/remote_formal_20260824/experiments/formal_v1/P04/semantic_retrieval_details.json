@@ -1,0 +1,456 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "天津钢管设备管理系统-需求调研会议纪要20251110（下午）.docx",
+    "rank": 7,
+    "span_rank": 7,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251113(上午) .docx:C0001",
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx:C0001",
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251118.docx:C0001",
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0001",
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251111（上午）.docx:C0001"
+    ],
+    "query_latency_ms": 19.688992761075497
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "API",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "rank": 87,
+    "span_rank": 87,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-接口文档.docx:C0001",
+      "semantic:天津钢管设备管理系统-详细设计规格书-接口文档.docx:C0006",
+      "semantic:天津钢管设备管理系统-需求调研会议纪要20251113(上午) .docx:C0011",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0013",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0005"
+    ],
+    "query_latency_ms": 18.471384420990944
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0060",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0059",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0063",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0062",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0061"
+    ],
+    "query_latency_ms": 10.668942704796791
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0062",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0063",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0061",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0060",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0081"
+    ],
+    "query_latency_ms": 17.559746280312538
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 6,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0072",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0068",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0078",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0082",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0070"
+    ],
+    "query_latency_ms": 12.69214041531086
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0082",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0078",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0074",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0081",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0075"
+    ],
+    "query_latency_ms": 12.406572699546814
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0084",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0083",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0087",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0086",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0085"
+    ],
+    "query_latency_ms": 10.974881239235401
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0087",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0086",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0085",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0083",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0084"
+    ],
+    "query_latency_ms": 17.584674060344696
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0010",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0092",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0087",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0005",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0083"
+    ],
+    "query_latency_ms": 18.098757602274418
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "Constraint",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0102",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0127",
+      "semantic:天管设备二期技术要求-4.25.docx:C0102",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0092",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0455"
+    ],
+    "query_latency_ms": 17.59419310837984
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+      "天管设备二期技术要求-4.25:B0263"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0035",
+      "semantic:天管设备二期技术要求-4.25.docx:C0043",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0321",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0305",
+      "semantic:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0319"
+    ],
+    "query_latency_ms": 10.93120127916336
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0090",
+      "semantic:天管设备二期技术要求-4.25.docx:C0091",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0091",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0089",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0087"
+    ],
+    "query_latency_ms": 18.259046599268913
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0127",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0131",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0006",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0097",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0444"
+    ],
+    "query_latency_ms": 17.709506675601006
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0020"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0007",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0090",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0433",
+      "semantic:天津钢管设备管理系统-详细设计规格书-接口文档.docx:C0006",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0027"
+    ],
+    "query_latency_ms": 17.755811102688313
+  },
+  {
+    "qa_id": "QA027",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+      "天津钢管设备管理系统-需求规格说明书:B0045",
+      "天管设备二期技术要求-4.25:B0130"
+    ],
+    "top_chunk_ids": [
+      "semantic:天管设备二期技术要求-4.25.docx:C0017",
+      "semantic:天管设备二期技术要求-4.25.docx:C0094",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0093",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0011",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0014"
+    ],
+    "query_latency_ms": 17.419041134417057
+  },
+  {
+    "qa_id": "QA028",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 6,
+    "span_rank": 6,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0321"
+    ],
+    "top_chunk_ids": [
+      "semantic:天管设备二期技术要求-4.25.docx:C0034",
+      "semantic:天管设备二期技术要求-4.25.docx:C0035",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0027",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0109",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0074"
+    ],
+    "query_latency_ms": 17.72680226713419
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0080"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0023",
+      "semantic:天管设备二期技术要求-4.25.docx:C0089",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0024",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0084",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0089"
+    ],
+    "query_latency_ms": 10.912767611443996
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 10,
+    "span_rank": 10,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+      "天津钢管设备管理系统-详细设计规格书:B0026",
+      "天津钢管设备管理系统-需求规格说明书:B0078"
+    ],
+    "top_chunk_ids": [
+      "semantic:天管设备二期技术要求-4.25.docx:C0010",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0011",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0005",
+      "semantic:天管设备二期技术要求-4.25.docx:C0066",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0068"
+    ],
+    "query_latency_ms": 10.439756326377392
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 157,
+    "span_rank": 157,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0032"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0031",
+      "semantic:天管设备二期技术要求-4.25.docx:C0040",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0221",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0032",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0217"
+    ],
+    "query_latency_ms": 17.73141138255596
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0035"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0017",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0016",
+      "semantic:天管设备二期技术要求-4.25.docx:C0022",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0019",
+      "semantic:天津钢管设备管理系统-需求规格说明书.docx:C0030"
+    ],
+    "query_latency_ms": 17.894484102725983
+  },
+  {
+    "qa_id": "QA033",
+    "question_type": "Numeric constraint",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0038"
+    ],
+    "top_chunk_ids": [
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0018",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0089",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0419",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0333",
+      "semantic:天津钢管设备管理系统-详细设计规格书.docx:C0568"
+    ],
+    "query_latency_ms": 17.983716912567616
+  },
+  {
+    "qa_id": "QA036",
+    "question_type": "Feature",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+    ],
+    "top_chunk_ids": [
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0010",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0104",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0092",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0087",
+      "semantic:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0090"
+    ],
+    "query_latency_ms": 17.65053067356348
+  }
+]

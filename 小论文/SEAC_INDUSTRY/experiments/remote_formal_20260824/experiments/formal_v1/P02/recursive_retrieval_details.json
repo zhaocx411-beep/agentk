@@ -1,0 +1,633 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0708.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0708:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0003"
+    ],
+    "query_latency_ms": 18.16909108310938
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0722 .docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0003"
+    ],
+    "query_latency_ms": 17.775554209947586
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0903.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0903:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0003"
+    ],
+    "query_latency_ms": 17.060878686606884
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0018",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0050",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0145",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0210",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0229"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002"
+    ],
+    "query_latency_ms": 10.68336796015501
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0020"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009"
+    ],
+    "query_latency_ms": 9.737348183989525
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0052"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0069",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0174",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0187",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0379"
+    ],
+    "query_latency_ms": 10.262358002364635
+  },
+  {
+    "qa_id": "QA012",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 16,
+    "span_rank": 16,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0147"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003"
+    ],
+    "query_latency_ms": 10.080837644636631
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0183"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005"
+    ],
+    "query_latency_ms": 16.661660745739937
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0185",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0190"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005"
+    ],
+    "query_latency_ms": 16.665566712617874
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0017",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007"
+    ],
+    "query_latency_ms": 17.976529896259308
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R003"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0011"
+    ],
+    "query_latency_ms": 17.043759115040302
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 13,
+    "span_rank": 13,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R002",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0017",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0020",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014"
+    ],
+    "query_latency_ms": 17.052575014531612
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R003",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R003",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0172#R003"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0011"
+    ],
+    "query_latency_ms": 17.330127768218517
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 18,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0002#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0278",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0021",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0035"
+    ],
+    "query_latency_ms": 17.028991132974625
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 4,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0003#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0004",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0278"
+    ],
+    "query_latency_ms": 16.73515047878027
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 4,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0004#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0024"
+    ],
+    "query_latency_ms": 16.677918843925
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0005#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0011",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0010",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0290",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0288"
+    ],
+    "query_latency_ms": 17.024239525198936
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0006#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0169",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0179"
+    ],
+    "query_latency_ms": 16.85011014342308
+  },
+  {
+    "qa_id": "QA024",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0007#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0221",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0326"
+    ],
+    "query_latency_ms": 17.499856650829315
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0764",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0766",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0768"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0071",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0069",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0126",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0054",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0096"
+    ],
+    "query_latency_ms": 16.791390255093575
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Constraint",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0068"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0011",
+      "recursive:调研报告 （晋钢安全）.docx:C0009",
+      "recursive:调研报告 （晋钢安全）.docx:C0010",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0006",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0017"
+    ],
+    "query_latency_ms": 17.40905735641718
+  },
+  {
+    "qa_id": "QA027",
+    "question_type": "Constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B2197",
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002#R006"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0220",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0007",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0013",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0019",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0025"
+    ],
+    "query_latency_ms": 16.993166878819466
+  },
+  {
+    "qa_id": "QA028",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0010"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0003",
+      "recursive:调研报告 （晋钢安全）.docx:C0004",
+      "recursive:调研报告 （晋钢安全）.docx:C0012",
+      "recursive:调研报告 （晋钢安全）.docx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0010"
+    ],
+    "query_latency_ms": 17.402193509042263
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Feature",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0249"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0009",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0002",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0230",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0005"
+    ],
+    "query_latency_ms": 17.796752974390984
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 10,
+    "span_rank": 10,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0017"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0025",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:调研报告 （晋钢安全）.docx:C0005",
+      "recursive:调研报告 （晋钢安全）.docx:C0034",
+      "recursive:调研报告 （晋钢安全）.docx:C0027"
+    ],
+    "query_latency_ms": 16.833439469337463
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Feature",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0279"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0018",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0010",
+      "recursive:调研报告 （晋钢安全）.docx:C0007"
+    ],
+    "query_latency_ms": 17.33279973268509
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0036"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0086",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0088",
+      "recursive:调研报告 （晋钢安全）.docx:C0005"
+    ],
+    "query_latency_ms": 10.078804567456245
+  },
+  {
+    "qa_id": "QA033",
+    "question_type": "Process",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0248"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0008",
+      "recursive:调研报告 （晋钢安全）.docx:C0003",
+      "recursive:调研报告 （晋钢安全）.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0026"
+    ],
+    "query_latency_ms": 16.60983730107546
+  },
+  {
+    "qa_id": "QA034",
+    "question_type": "Process",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0008"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0003",
+      "recursive:调研报告 （晋钢安全）.docx:C0009",
+      "recursive:调研报告 （晋钢安全）.docx:C0012",
+      "recursive:调研报告 （晋钢安全）.docx:C0002",
+      "recursive:调研报告 （晋钢安全）.docx:C0007"
+    ],
+    "query_latency_ms": 17.02164765447378
+  },
+  {
+    "qa_id": "QA035",
+    "question_type": "Numeric constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B3377"
+    ],
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0326",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0020",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0019",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0011"
+    ],
+    "query_latency_ms": 17.097119241952896
+  },
+  {
+    "qa_id": "QA036",
+    "question_type": "Numeric constraint",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0032"
+    ],
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0005",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0098",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0020"
+    ],
+    "query_latency_ms": 10.028389282524586
+  }
+]

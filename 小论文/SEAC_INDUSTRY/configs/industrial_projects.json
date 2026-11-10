@@ -1,0 +1,66 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "source_root": "../../项目材料",
+  "projects": [
+    {
+      "project_id": "P01",
+      "source_dir": "镔鑫智慧安全二期",
+      "split": "development",
+      "status": "gold_boundary_and_unit_aligned_qa_privacy_review_pending"
+    },
+    {
+      "project_id": "P02",
+      "source_dir": "晋钢安全预警平台",
+      "split": "development",
+      "status": "blind_annotation_pack_ready_human_review_pending"
+    },
+    {
+      "project_id": "P03",
+      "source_dir": "水情应急预案各板块可视化",
+      "split": "validation",
+      "status": "blind_annotation_pack_ready_human_review_pending"
+    },
+    {
+      "project_id": "P04",
+      "source_dir": "天津钢管设备管理系统",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P05",
+      "source_dir": "津西钢铁设备管理系统项目",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P06",
+      "source_dir": "综合服务一体化管理平台",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P07",
+      "source_dir": "财务人资供应链及基础设施建设",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P08",
+      "source_dir": "烟台华新-能源管理",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P09",
+      "source_dir": "烟台华新-环保管理",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    },
+    {
+      "project_id": "P10",
+      "source_dir": "巨能特钢智慧管控一体化平台",
+      "split": "locked_test",
+      "status": "locked_corpus_and_blind_annotation_pack_ready"
+    }
+  ]
+}

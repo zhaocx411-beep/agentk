@@ -1,0 +1,398 @@
+[
+  {
+    "qa_id": "QA001",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0002"
+    ]
+  },
+  {
+    "qa_id": "QA002",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0002"
+    ]
+  },
+  {
+    "qa_id": "QA003",
+    "rank": 2,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0002"
+    ]
+  },
+  {
+    "qa_id": "QA004",
+    "rank": 4,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:调研报告 （晋钢安全）.docx:C0001"
+    ]
+  },
+  {
+    "qa_id": "QA005",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:调研报告 （晋钢安全）.docx:C0001"
+    ]
+  },
+  {
+    "qa_id": "QA006",
+    "rank": 3,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-需求调研会议纪要0708.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0722 .docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0717.docx:C0001",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0001",
+      "recursive:调研报告 （晋钢安全）.docx:C0001"
+    ]
+  },
+  {
+    "qa_id": "QA007",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002"
+    ]
+  },
+  {
+    "qa_id": "QA008",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009"
+    ]
+  },
+  {
+    "qa_id": "QA009",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0069",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0035",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0187",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0174"
+    ]
+  },
+  {
+    "qa_id": "QA010",
+    "rank": 3,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0069",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0174",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0187",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0379"
+    ]
+  },
+  {
+    "qa_id": "QA011",
+    "rank": 16,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003"
+    ]
+  },
+  {
+    "qa_id": "QA012",
+    "rank": 16,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003"
+    ]
+  },
+  {
+    "qa_id": "QA013",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005"
+    ]
+  },
+  {
+    "qa_id": "QA014",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0005"
+    ]
+  },
+  {
+    "qa_id": "QA015",
+    "rank": 2,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0017",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007"
+    ]
+  },
+  {
+    "qa_id": "QA016",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0011"
+    ]
+  },
+  {
+    "qa_id": "QA017",
+    "rank": 13,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0017",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0020",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014"
+    ]
+  },
+  {
+    "qa_id": "QA018",
+    "rank": 15,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0011"
+    ]
+  },
+  {
+    "qa_id": "QA019",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0002",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0278",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0021",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0035"
+    ]
+  },
+  {
+    "qa_id": "QA020",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0005",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0004",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0003",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0278"
+    ]
+  },
+  {
+    "qa_id": "QA021",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0009",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0006",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0024"
+    ]
+  },
+  {
+    "qa_id": "QA022",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0011",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0010",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0290",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0288"
+    ]
+  },
+  {
+    "qa_id": "QA023",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0013",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0169",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0179"
+    ]
+  },
+  {
+    "qa_id": "QA024",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0015",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0014",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0221",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0016",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0326"
+    ]
+  },
+  {
+    "qa_id": "QA025",
+    "rank": 209,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0274",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0045",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0339",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0222",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0340"
+    ]
+  },
+  {
+    "qa_id": "QA026",
+    "rank": 57,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0010",
+      "recursive:调研报告 （晋钢安全）.docx:C0009",
+      "recursive:调研报告 （晋钢安全）.docx:C0031",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0008"
+    ]
+  },
+  {
+    "qa_id": "QA027",
+    "rank": 2,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0191",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0219",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0277",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0011",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0220"
+    ]
+  },
+  {
+    "qa_id": "QA028",
+    "rank": 11,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0013",
+      "recursive:调研报告 （晋钢安全）.docx:C0011",
+      "recursive:调研报告 （晋钢安全）.docx:C0008",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:调研报告 （晋钢安全）.docx:C0032"
+    ]
+  },
+  {
+    "qa_id": "QA029",
+    "rank": 225,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0289",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0290",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0008"
+    ]
+  },
+  {
+    "qa_id": "QA030",
+    "rank": 3,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0025",
+      "recursive:调研报告 （晋钢安全）.docx:C0023",
+      "recursive:调研报告 （晋钢安全）.docx:C0004",
+      "recursive:调研报告 （晋钢安全）.docx:C0005",
+      "recursive:调研报告 （晋钢安全）.docx:C0007"
+    ]
+  },
+  {
+    "qa_id": "QA031",
+    "rank": 65,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0169",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0034",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0032",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0040",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0356"
+    ]
+  },
+  {
+    "qa_id": "QA032",
+    "rank": 2,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:调研报告 （晋钢安全）.docx:C0008",
+      "recursive:调研报告 （晋钢安全）.docx:C0023",
+      "recursive:调研报告 （晋钢安全）.docx:C0005"
+    ]
+  },
+  {
+    "qa_id": "QA033",
+    "rank": 10,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0007",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0008",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0290",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0289",
+      "recursive:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0009"
+    ]
+  },
+  {
+    "qa_id": "QA034",
+    "rank": 6,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0013",
+      "recursive:调研报告 （晋钢安全）.docx:C0008",
+      "recursive:调研报告 （晋钢安全）.docx:C0032",
+      "recursive:调研报告 （晋钢安全）.docx:C0034",
+      "recursive:调研报告 （晋钢安全）.docx:C0011"
+    ]
+  },
+  {
+    "qa_id": "QA035",
+    "rank": 13,
+    "top_chunk_ids": [
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0246",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0191",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0277",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0012",
+      "recursive:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0011"
+    ]
+  },
+  {
+    "qa_id": "QA036",
+    "rank": 1,
+    "top_chunk_ids": [
+      "recursive:调研报告 （晋钢安全）.docx:C0006",
+      "recursive:调研报告 （晋钢安全）.docx:C0005",
+      "recursive:调研报告 （晋钢安全）.docx:C0007",
+      "recursive:调研报告 （晋钢安全）.docx:C0008",
+      "recursive:晋钢安全预警平台-需求调研会议纪要0903.docx:C0013"
+    ]
+  }
+]

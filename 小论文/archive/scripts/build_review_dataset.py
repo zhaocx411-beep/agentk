@@ -1,0 +1,198 @@
+import json
+from pathlib import Path
+
+
+INPUT = Path("workbench/P01/corpus.json")
+OUTPUT_DIR = Path("workbench/P01")
+
+
+def shorten(text, limit=420):
+    text = " ".join(str(text).split())
+    return text if len(text) <= limit else text[: limit - 1] + "…"
+
+
+def block_evidence(block):
+    if block.get("rows"):
+        return " || ".join(" | ".join(row) for row in block["rows"])
+    return block.get("text", "")
+
+
+def make_candidates(documents):
+    candidates = []
+    counter = 1
+    for doc in documents:
+        blocks = doc["blocks"]
+
+        heading_boundaries = []
+        for index in range(1, len(blocks)):
+            right = blocks[index]
+            if right["block_type"] == "heading":
+                heading_boundaries.append(index)
+        if heading_boundaries:
+            picks = sorted(set(heading_boundaries[i * (len(heading_boundaries) - 1) // 4] for i in range(5)))
+            for index in picks:
+                left, right = blocks[index - 1], blocks[index]
+                candidates.append(
+                    {
+                        "candidate_id": f"BP{counter:03d}",
+                        "project_id": doc["project_id"],
+                        "source_document": doc["file_name"],
+                        "boundary_type": "heading_transition",
+                        "left_unit_id": left["block_id"],
+                        "right_unit_id": right["block_id"],
+                        "left_section": left.get("heading_path", ""),
+                        "right_section": right.get("heading_path", ""),
+                        "left_evidence": shorten(block_evidence(left)),
+                        "right_evidence": shorten(block_evidence(right)),
+                        "suggested_label": "BREAK",
+                        "suggested_reason": "右侧进入新的标题/功能单元，适合作为结构边界。",
+                        "human_label": "",
+                        "review_status": "待人工复核",
+                        "review_notes": "",
+                    }
+                )
+                counter += 1
+
+        same_section = []
+        for index in range(1, len(blocks)):
+            left, right = blocks[index - 1], blocks[index]
+            if (
+                left.get("heading_path")
+                and left.get("heading_path") == right.get("heading_path")
+                and right["block_type"] != "heading"
+                and left["block_type"] != "heading"
+            ):
+                same_section.append(index)
+        if same_section:
+            picks = sorted(set(same_section[i * (len(same_section) - 1) // 3] for i in range(4)))
+            for index in picks:
+                left, right = blocks[index - 1], blocks[index]
+                candidates.append(
+                    {
+                        "candidate_id": f"BP{counter:03d}",
+                        "project_id": doc["project_id"],
+                        "source_document": doc["file_name"],
+                        "boundary_type": "same_section_continuity",
+                        "left_unit_id": left["block_id"],
+                        "right_unit_id": right["block_id"],
+                        "left_section": left.get("heading_path", ""),
+                        "right_section": right.get("heading_path", ""),
+                        "left_evidence": shorten(block_evidence(left)),
+                        "right_evidence": shorten(block_evidence(right)),
+                        "suggested_label": "NO_BREAK",
+                        "suggested_reason": "相邻内容位于同一标题路径，优先保持上下文连续。",
+                        "human_label": "",
+                        "review_status": "待人工复核",
+                        "review_notes": "",
+                    }
+                )
+                counter += 1
+
+        tables = [block for block in blocks if block.get("rows") and len(block["rows"]) >= 3]
+        if tables:
+            picks = sorted(set(i * (len(tables) - 1) // 2 for i in range(3)))
+            for table_index in picks:
+                table = tables[table_index]
+                row_index = min(max(1, len(table["rows"]) // 2), len(table["rows"]) - 2)
+                candidates.append(
+                    {
+                        "candidate_id": f"BP{counter:03d}",
+                        "project_id": doc["project_id"],
+                        "source_document": doc["file_name"],
+                        "boundary_type": "inside_table",
+                        "left_unit_id": f'{table["block_id"]}#R{row_index:03d}',
+                        "right_unit_id": f'{table["block_id"]}#R{row_index+1:03d}',
+                        "left_section": table.get("heading_path", ""),
+                        "right_section": table.get("heading_path", ""),
+                        "left_evidence": shorten(" | ".join(table["rows"][row_index - 1])),
+                        "right_evidence": shorten(" | ".join(table["rows"][row_index])),
+                        "suggested_label": "NO_BREAK",
+                        "suggested_reason": "候选位置位于同一表格内部，切分可能破坏表头—字段或相邻记录关系。",
+                        "human_label": "",
+                        "review_status": "待人工复核",
+                        "review_notes": "",
+                    }
+                )
+                counter += 1
+    return candidates
+
+
+def qa_items():
+    meeting = "镔鑫智慧安全二期-需求调研会议纪要.docx"
+    api = "镔鑫智慧安全二期-详细设计规格-接口文档.docx"
+    srs = "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx"
+    db = "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx"
+    tech = "镔鑫安全二期技术协议V1.0.docx"
+
+    rows = [
+        ("会议召开日期是什么？", "2025年6月17日。", meeting, "会议纪要表格", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "会议时间 | 2025年6月17日", "Meeting fact"),
+        ("会议地点在哪里？", "镔鑫智慧大楼4楼。", meeting, "会议纪要表格", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "会议地点 | 镔鑫智慧大楼4楼", "Meeting fact"),
+        ("绑定4合1设备的危险作业开工后，气体检测数据自动记录频率是多少？", "每1小时记录一次。", meeting, "会议内容/零星优化需求", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "自动记录气体检测数据（频率1小时）", "Constraint"),
+        ("危险作业自动完工默认从开工确认完成后多少小时触发？", "10.5小时；若许可证剩余时间不足10.5小时，则按许可证结束时间自动完工。", meeting, "会议内容/零星优化需求", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "危险作业自动完工，从开工确认完成，10.5小时。若许可证时间不足10.5小时，按许可证结束时间", "Constraint"),
+        ("演练签到如何实现？", "针对每次演练生成二维码，参会人员扫码签到。", meeting, "会议内容/零星优化需求", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "演练签到，针对每次演练生成二维码，可扫码签到", "Feature"),
+        ("移动端适配飞书后要求提供什么登录能力？", "直接登录功能。", meeting, "会议内容/零星优化需求", "镔鑫智慧安全二期-需求调研会议纪要:B0002", "移动端，适配飞书，直接登录功能", "Feature"),
+        ("合同四方会签接口使用什么请求方式？", "POST。", api, "内部接口设计/合同四方会签", "镔鑫智慧安全二期-详细设计规格-接口文档:B0018", "1）请求方式：POST", "API"),
+        ("合同四方会签接口的请求路径是什么？", "http://10.10.93.140/uat-api/relatedparty/ehsRelvtSign/extern/list", api, "内部接口设计/合同四方会签", "镔鑫智慧安全二期-详细设计规格-接口文档:B0019", "2）请求路径：http://10.10.93.140/uat-api/relatedparty/ehsRelvtSign/extern/list", "API"),
+        ("查询合同四方会签时，合同编号和合同名称是否可以同时缺失？", "不可以，两者必须至少填写一个；都不存在时提示“请填写合同编号或者合同名称”。", api, "内部接口设计/合同四方会签/参数表", "镔鑫智慧安全二期-详细设计规格-接口文档:B0021", "合同名称与合同编号必须至少存在一个，若都不存在，则提示“请填写合同编号或者合同名称”", "API constraint"),
+        ("四方会签人员信息接口中的signIds参数是否必填，最大长度是多少？", "必填，最大2000个字节。", api, "内部接口设计/四方会签人员信息/参数表", "镔鑫智慧安全二期-详细设计规格-接口文档:B0062", "signIds | array | 最大2000个字节 | 是 | 四方会签id数组", "API parameter"),
+        ("正式工信息同步接口的开始时间和结束时间是否必填？", "均为必填的String类型参数，最大20个字节，并且必须符合时间格式。", api, "外部接口设计/OA系统/正式工信息同步接口", "镔鑫智慧安全二期-详细设计规格-接口文档:B0128", "startTime ... 是 ... 开始时间；EndTime ... 是 ... 结束时间；必须为时间格式", "API parameter"),
+        ("正式工信息同步接口中哪个返回状态码表示成功？", "200表示成功。", api, "外部接口设计/OA系统/正式工信息同步接口", "镔鑫智慧安全二期-详细设计规格-接口文档:B0133", "statusCode | Int | 是 | 返回状态码，200是成功，其余是失败100", "API response"),
+        ("企业监测预警模块计划接入多少台现场视频监控？", "17台。", srs, "功能性需求/功能范围/新建功能模块", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0057", "接入现场相关视频监控17台", "Numeric constraint"),
+        ("企业监测预警模块要求视频至少存储多少天？", "至少7天。", srs, "功能性需求/功能范围/新建功能模块", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0057", "保证视频存储时间至少7天", "Numeric constraint"),
+        ("作业步骤固化清单覆盖哪八类危险作业？", "动火、有限空间、高处、吊装、临时用电、断路、动土、抽堵盲板阀作业。", srs, "危险作业管理提升/作业步骤固化清单配置", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0079", "八类危险作业：动火作业、有限空间作业、高处作业、吊装作业、临时用电作业、断路作业、动土作业、抽堵盲板阀作业", "List"),
+        ("新增危险作业固化步骤时，状态默认值是什么？", "启用。", srs, "危险作业管理提升/作业步骤固化清单配置", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0081", "状态（二类下拉选择：启用、禁用，默认状态为“启用”）", "Constraint"),
+        ("危险作业固化步骤在什么状态下才允许修改或删除？", "仅限已禁用状态。", srs, "危险作业管理提升/作业步骤固化清单配置", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0081", "选择需修改数据（仅限已禁用状态）；勾选需删除的数据（仅限已禁用状态）", "Constraint"),
+        ("危险作业许可证一键填报展示最近多少条作业？", "最近5条作业。", srs, "危险作业管理提升/危险作业许可证一键填报", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0108", "展示最近的5条作业", "Numeric constraint"),
+        ("一键填报危险作业许可证时，哪些时间字段不会被带出？", "作业开始时间和作业结束时间。", srs, "危险作业管理提升/危险作业许可证一键填报", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0108", "不包括字段：作业开始时间、作业结束时间", "Constraint"),
+        ("危险作业常用小组中的人员需要满足什么条件？", "小组人员必须属于同一作业单位。", srs, "危险作业管理提升/作业小组维护", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0097", "小组人员是同一作业单位中人员", "Business rule"),
+        ("三级培训题库支持哪些题型？", "选择题、判断题和填空题。", srs, "安全培训提升/三级培训教育/三级培训资料管理", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0216", "体型包括选择题、判断题、填空题", "List"),
+        ("三级培训教育包含哪三级？", "公司级、车间级和班组级。", srs, "安全培训提升/三级培训教育", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0225", "公司级培训任务...车间级、班组级培训", "Process"),
+        ("三级培训上午或下午的培训时长如何计算？", "上午或下午均按4小时计算。", srs, "安全培训提升/三级培训教育", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0225", "上午下午按4小时计算", "Numeric constraint"),
+        ("危险作业远程监管的监控信号从哪里对接？", "从海康平台对接。", srs, "危险作业管理提升/危险作业监控能力提升", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0116", "从海康平台中对接更多监控设备信号", "Feature"),
+        ("危险作业安全交底资料应在什么阶段上传？", "在开工作业申请阶段上传，而不是办理作业票时上传。", srs, "危险作业管理提升/危险作业流程优化", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0125", "安全交底取消办理作业票的时候上传，等到开工作业申请再上传", "Process constraint"),
+        ("熔融金属点检如何执行？", "设置熔融金属点检部位，分配任务给对应人员，并进行周期性点检。", srs, "新建功能模块/熔融金属管控/熔融金属点检", "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0852", "设置熔融金属点检部位，分配任务至对应人员，进行熔融金属周期性点检", "Process"),
+        ("EHS_REL_CONTRACT_INFO表用于记录什么信息？", "用于记录从OA同步的正式工信息。", db, "相关方管理系统", "镔鑫智慧安全二期-详细设计规格-数据库设计:B0003", "表名 EHS_REL_CONTRACT_INFO；说明：记录同步OA的正式工信息", "Database"),
+        ("EHS_REL_CONTRACT_INFO表的主键字段是什么，类型和长度是多少？", "主键字段为ID，类型VARCHAR2，长度VARCHAR2(40)，不可为空。", db, "相关方管理系统", "镔鑫智慧安全二期-详细设计规格-数据库设计:B0003", "ID | VARCHAR2 | 主键 | VARCHAR2(40) | N", "Database"),
+        ("点巡检计划表的表名是什么？", "EHS_INSPECTION_PLAN。", db, "点巡检管理系统", "镔鑫智慧安全二期-详细设计规格-数据库设计:B0017", "表名 | EHS_INSPECTION_PLAN | 表的描述 | 点巡检计划表", "Database"),
+        ("项目服务器资源由哪一方提供？", "由甲方提供。", tech, "项目实施范围/服务器资源", "镔鑫安全二期技术协议V1.0:B0108", "服务器资源由甲方提供", "Responsibility"),
+        ("清洁运输模块依据什么标准优化？", "依据HJ1321标准。", tech, "项目实施范围/软件实施范围/清洁运输优化", "镔鑫安全二期技术协议V1.0:B0106", "根据HJ1321标准优化清洁运输模块", "Standard"),
+        ("重点场所区域视频通过什么协议与地方应急管理部门平台对接？", "GB/T 28181—2022国标协议。", tech, "系统功能设计/企业监测预警/视频监控", "镔鑫安全二期技术协议V1.0:B0450", "采用 GB/T 28181—2022 国标协议与地方应急管理部门视频图像平台对接", "Standard"),
+    ]
+    output = []
+    for index, row in enumerate(rows, 1):
+        question, answer, document, section, evidence_id, evidence, question_type = row
+        output.append(
+            {
+                "qa_id": f"QA{index:03d}",
+                "project_id": "P01",
+                "question": question,
+                "reference_answer": answer,
+                "source_document": document,
+                "source_section": section,
+                "gold_evidence_id": evidence_id,
+                "gold_evidence_span": evidence,
+                "question_type": question_type,
+                "difficulty": "待人工标注",
+                "review_status": "待人工复核",
+                "review_notes": "",
+            }
+        )
+    return output
+
+
+def main():
+    documents = json.loads(INPUT.read_text(encoding="utf-8"))
+    candidates = make_candidates(documents)
+    questions = qa_items()
+    (OUTPUT_DIR / "candidate_breakpoints.json").write_text(
+        json.dumps(candidates, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (OUTPUT_DIR / "qa_review_set.json").write_text(
+        json.dumps(questions, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"candidate_breakpoints={len(candidates)}")
+    print(f"qa_items={len(questions)}")
+
+
+if __name__ == "__main__":
+    main()

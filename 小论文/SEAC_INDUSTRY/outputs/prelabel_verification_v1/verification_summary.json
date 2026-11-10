@@ -1,0 +1,429 @@
+{
+  "protocol_version": "industrial-seac-prelabel-promotion-v1.0",
+  "kappa_threshold": 0.7,
+  "verification_workbook_sha256": "ac0d555a521a395116e6f38e82dc5ccdd224c20de424050ffc54c886a270f74b",
+  "projects": {
+    "P02": {
+      "project_id": "P02",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 17,
+      "rule_determined_reasons": {
+        "LEFT_CONVERSION_FRAGMENT": 4,
+        "LEFT_STRUCTURAL_LABEL": 8,
+        "RIGHT_CONVERSION_FRAGMENT": 1,
+        "RIGHT_STRUCTURAL_LABEL": 4
+      },
+      "agreement_sample_size": 83,
+      "agreement_count": 78,
+      "disagreement_count": 5,
+      "raw_agreement": 0.9397590361445783,
+      "cohen_kappa": 0.8689611619829493,
+      "cohen_kappa_before_rule_amendment": 0.6053373426047736,
+      "flagged_review_size": 18,
+      "flagged_corrected_count": 1,
+      "needs_discussion_count": 3,
+      "needs_discussion_ids": [
+        "P02-BP0097",
+        "P02-BP0135",
+        "P02-BP0278"
+      ],
+      "human_label_distribution": {
+        "BREAK": 19,
+        "NOISE": 6,
+        "NO_BREAK": 58
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 24,
+        "NOISE": 3,
+        "NO_BREAK": 56
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 19,
+          "NOISE": 3,
+          "NO_BREAK": 2
+        },
+        "NOISE": {
+          "NOISE": 3
+        },
+        "NO_BREAK": {
+          "NO_BREAK": 56
+        }
+      },
+      "blockers": []
+    },
+    "P03": {
+      "project_id": "P03",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 20,
+      "rule_determined_reasons": {
+        "LEFT_CHUNKER_NOISE": 1,
+        "LEFT_CONVERSION_FRAGMENT": 5,
+        "LEFT_STRUCTURAL_LABEL": 9,
+        "RIGHT_STRUCTURAL_LABEL": 5
+      },
+      "agreement_sample_size": 80,
+      "agreement_count": 71,
+      "disagreement_count": 9,
+      "raw_agreement": 0.8875,
+      "cohen_kappa": 0.7614314115308151,
+      "cohen_kappa_before_rule_amendment": 0.5556378448435475,
+      "flagged_review_size": 13,
+      "flagged_corrected_count": 4,
+      "needs_discussion_count": 1,
+      "needs_discussion_ids": [
+        "P03-BP0201"
+      ],
+      "human_label_distribution": {
+        "BREAK": 14,
+        "NOISE": 12,
+        "NO_BREAK": 54
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 14,
+        "NOISE": 9,
+        "NO_BREAK": 57
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 14
+        },
+        "NOISE": {
+          "NOISE": 6,
+          "NO_BREAK": 3
+        },
+        "NO_BREAK": {
+          "NOISE": 6,
+          "NO_BREAK": 51
+        }
+      },
+      "blockers": []
+    },
+    "P04": {
+      "project_id": "P04",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 18,
+      "rule_determined_reasons": {
+        "LEFT_CONVERSION_FRAGMENT": 2,
+        "LEFT_STRUCTURAL_LABEL": 6,
+        "RIGHT_SIGNATURE_BLOCK": 6,
+        "RIGHT_STRUCTURAL_LABEL": 4
+      },
+      "agreement_sample_size": 82,
+      "agreement_count": 79,
+      "disagreement_count": 3,
+      "raw_agreement": 0.9634146341463414,
+      "cohen_kappa": 0.8924825174825174,
+      "cohen_kappa_before_rule_amendment": 0.8129675810473816,
+      "flagged_review_size": 9,
+      "flagged_corrected_count": 3,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 10,
+        "NOISE": 6,
+        "NO_BREAK": 66
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 11,
+        "NOISE": 6,
+        "NO_BREAK": 65
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 9,
+          "NO_BREAK": 2
+        },
+        "NOISE": {
+          "NOISE": 6
+        },
+        "NO_BREAK": {
+          "BREAK": 1,
+          "NO_BREAK": 64
+        }
+      },
+      "blockers": []
+    },
+    "P05": {
+      "project_id": "P05",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 20,
+      "rule_determined_reasons": {
+        "LEFT_CONVERSION_FRAGMENT": 2,
+        "LEFT_SIGNATURE_BLOCK": 7,
+        "LEFT_STRUCTURAL_LABEL": 6,
+        "RIGHT_SIGNATURE_BLOCK": 5
+      },
+      "agreement_sample_size": 80,
+      "agreement_count": 79,
+      "disagreement_count": 1,
+      "raw_agreement": 0.9875,
+      "cohen_kappa": 0.9637023593466426,
+      "cohen_kappa_before_rule_amendment": 0.6575342465753423,
+      "flagged_review_size": 12,
+      "flagged_corrected_count": 1,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 12,
+        "NOISE": 5,
+        "NO_BREAK": 63
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 12,
+        "NOISE": 4,
+        "NO_BREAK": 64
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 12
+        },
+        "NOISE": {
+          "NOISE": 4
+        },
+        "NO_BREAK": {
+          "NOISE": 1,
+          "NO_BREAK": 63
+        }
+      },
+      "blockers": []
+    },
+    "P06": {
+      "project_id": "P06",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 29,
+      "rule_determined_reasons": {
+        "LEFT_CONVERSION_FRAGMENT": 8,
+        "LEFT_SIGNATURE_BLOCK": 6,
+        "LEFT_STRUCTURAL_LABEL": 7,
+        "RIGHT_CONVERSION_FRAGMENT": 1,
+        "RIGHT_SIGNATURE_BLOCK": 2,
+        "RIGHT_STRUCTURAL_LABEL": 5
+      },
+      "agreement_sample_size": 71,
+      "agreement_count": 69,
+      "disagreement_count": 2,
+      "raw_agreement": 0.971830985915493,
+      "cohen_kappa": 0.9102402022756007,
+      "cohen_kappa_before_rule_amendment": 0.41736259467857834,
+      "flagged_review_size": 7,
+      "flagged_corrected_count": 3,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 8,
+        "NOISE": 4,
+        "NO_BREAK": 59
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 10,
+        "NOISE": 4,
+        "NO_BREAK": 57
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 8,
+          "NO_BREAK": 2
+        },
+        "NOISE": {
+          "NOISE": 4
+        },
+        "NO_BREAK": {
+          "NO_BREAK": 57
+        }
+      },
+      "blockers": []
+    },
+    "P07": {
+      "project_id": "P07",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 15,
+      "rule_determined_reasons": {
+        "LEFT_CONVERSION_FRAGMENT": 1,
+        "LEFT_STRUCTURAL_LABEL": 10,
+        "RIGHT_STRUCTURAL_LABEL": 4
+      },
+      "agreement_sample_size": 85,
+      "agreement_count": 84,
+      "disagreement_count": 1,
+      "raw_agreement": 0.9882352941176471,
+      "cohen_kappa": 0.9753551754131633,
+      "cohen_kappa_before_rule_amendment": 0.7493734335839599,
+      "flagged_review_size": 9,
+      "flagged_corrected_count": 1,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 14,
+        "NOISE": 12,
+        "NO_BREAK": 59
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 15,
+        "NOISE": 12,
+        "NO_BREAK": 58
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 14,
+          "NO_BREAK": 1
+        },
+        "NOISE": {
+          "NOISE": 12
+        },
+        "NO_BREAK": {
+          "NO_BREAK": 58
+        }
+      },
+      "blockers": []
+    },
+    "P08": {
+      "project_id": "P08",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 3,
+      "rule_determined_reasons": {
+        "LEFT_STRUCTURAL_LABEL": 2,
+        "RIGHT_STRUCTURAL_LABEL": 1
+      },
+      "agreement_sample_size": 97,
+      "agreement_count": 82,
+      "disagreement_count": 15,
+      "raw_agreement": 0.845360824742268,
+      "cohen_kappa": 0.6503244412400866,
+      "cohen_kappa_before_rule_amendment": 0.6753246753246752,
+      "flagged_review_size": 40,
+      "flagged_corrected_count": 19,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 6,
+        "NOISE": 26,
+        "NO_BREAK": 65
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 8,
+        "NOISE": 15,
+        "NO_BREAK": 74
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 4,
+          "NOISE": 2,
+          "NO_BREAK": 2
+        },
+        "NOISE": {
+          "NOISE": 15
+        },
+        "NO_BREAK": {
+          "BREAK": 2,
+          "NOISE": 9,
+          "NO_BREAK": 63
+        }
+      },
+      "blockers": [
+        "human-LLM kappa 0.650 is below the 0.70 threshold"
+      ]
+    },
+    "P09": {
+      "project_id": "P09",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 3,
+      "rule_determined_reasons": {
+        "LEFT_STRUCTURAL_LABEL": 3
+      },
+      "agreement_sample_size": 97,
+      "agreement_count": 85,
+      "disagreement_count": 12,
+      "raw_agreement": 0.8762886597938144,
+      "cohen_kappa": 0.7209302325581395,
+      "cohen_kappa_before_rule_amendment": 0.7451146983857264,
+      "flagged_review_size": 28,
+      "flagged_corrected_count": 18,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 24,
+        "NOISE": 9,
+        "NO_BREAK": 64
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 16,
+        "NOISE": 6,
+        "NO_BREAK": 75
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 16
+        },
+        "NOISE": {
+          "BREAK": 1,
+          "NOISE": 5
+        },
+        "NO_BREAK": {
+          "BREAK": 7,
+          "NOISE": 4,
+          "NO_BREAK": 64
+        }
+      },
+      "blockers": []
+    },
+    "P10": {
+      "project_id": "P10",
+      "candidate_count": 300,
+      "verification_sample_size": 100,
+      "rule_determined_count": 1,
+      "rule_determined_reasons": {
+        "RIGHT_STRUCTURAL_LABEL": 1
+      },
+      "agreement_sample_size": 99,
+      "agreement_count": 89,
+      "disagreement_count": 10,
+      "raw_agreement": 0.898989898989899,
+      "cohen_kappa": 0.76264684727883,
+      "cohen_kappa_before_rule_amendment": 0.7697974217311234,
+      "flagged_review_size": 14,
+      "flagged_corrected_count": 3,
+      "needs_discussion_count": 0,
+      "needs_discussion_ids": [],
+      "human_label_distribution": {
+        "BREAK": 16,
+        "NOISE": 15,
+        "NO_BREAK": 68
+      },
+      "prelabel_distribution_on_sample": {
+        "BREAK": 11,
+        "NOISE": 10,
+        "NO_BREAK": 78
+      },
+      "confusion_prelabel_to_human": {
+        "BREAK": {
+          "BREAK": 11
+        },
+        "NOISE": {
+          "NOISE": 10
+        },
+        "NO_BREAK": {
+          "BREAK": 5,
+          "NOISE": 5,
+          "NO_BREAK": 68
+        }
+      },
+      "blockers": []
+    }
+  },
+  "withheld_projects": [
+    "P08"
+  ],
+  "blocked_projects": [
+    "P08"
+  ],
+  "promotable": true
+}

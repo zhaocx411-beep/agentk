@@ -1,0 +1,384 @@
+[
+  {
+    "id": "P09-QA001",
+    "qa_id": "QA001",
+    "project_id": "P09",
+    "question": "培训中规定了什么约束？",
+    "reference_answer": "该阶段的工作效果将直接影响整个系统日后的运行与推广，因此该阶段应该得到双方的充分重视与配合尤其是客户方必须给予培训工作准备与开展的重要支持，而金恒也将在此阶段根据客户方的实际情况给予培训方式、培训效果保证的建议与配合",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "该阶段的工作效果将直接影响整个系统日后的运行与推广，因此该阶段应该得到双方的充分重视与配合尤其是客户方必须给予培训工作准备与开展的重要支持，而金恒也将在此阶段根据客户方的实际情况给予培训方式、培训效果保证的建议与配合",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0297",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "“培训中规定了什么约束”在该节13个块中无法唯一定位，同节客户配合条款B0301、B0302同样是合理答案，需限定到普通用户培训阶段的配合责任。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0297",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "培训与知识转移 > 培训"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA002",
+    "qa_id": "QA002",
+    "project_id": "P09",
+    "question": "知识转移中规定了什么约束？",
+    "reference_answer": "项目完成后乙方对系统交付文档以电子版的pdf文件形式进行移交，项目至少包含以下材料",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "项目完成后乙方对系统交付文档以电子版的pdf文件形式进行移交，项目至少包含以下材料",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0306",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "答案以“至少包含以下材料”悬空结尾，且同节代码交付、知识产权条款同样属约束，建议改问系统交付文档的移交形式。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0306",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "培训与知识转移 > 知识转移"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA003",
+    "qa_id": "QA003",
+    "project_id": "P09",
+    "question": "验收方式中规定了什么约束？",
+    "reference_answer": "验证周期最多不超过3轮，如3轮验证周期后指标仍无法通过，则双方共同分析原因并出具分析与改进报告，经甲方认可后视同通过指标验证",
+    "question_type": "Constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "验证周期最多不超过3轮，如3轮验证周期后指标仍无法通过，则双方共同分析原因并出具分析与改进报告，经甲方认可后视同通过指标验证",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0334",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "同节功能验收段落含试运行60天、15个工作日等时限，问题需明确指向指标验证轮次上限才能保证答案唯一。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0334",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目验收 > 验收方式"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA004",
+    "qa_id": "QA004",
+    "project_id": "P09",
+    "question": "系统目标支持或提供什么能力？",
+    "reference_answer": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "gold_evidence_span": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "declared_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "证据不唯一：“数据一体化”整句在技术协议、数据库设计、系统接口设计、系统需求设计中共出现4次，且“系统目标”节含4条并列目标，不指明文件无法定位唯一证据。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 4,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0106",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0020",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0034",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "系统目标"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA005",
+    "qa_id": "QA005",
+    "project_id": "P09",
+    "question": "项目目标支持或提供什么能力？",
+    "reference_answer": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0106",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "证据不唯一：同一句在项目语料中跨4个块重复，且“项目目标”节另有3条并列目标，证据与答案均不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 4,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0106",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0020",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0034",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "系统目标"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA006",
+    "qa_id": "QA006",
+    "project_id": "P09",
+    "question": "3.1.3 流程/活动/作业编码定义 10描述了什么实现或处理过程？",
+    "reference_answer": "3.1.3 流程/活动/作业编码定义 10",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "gold_evidence_span": "3.1.3 流程/活动/作业编码定义 10",
+    "declared_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0025",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "证据为带页码的目录标题行，问题复述标题且答案与问题同文，无实质过程描述，题目不成立。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0025",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "3. 设计概述 9 > 3.1 流程图编制规范 9 > 3.1.3 流程/活动/作业编码定义 10"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA007",
+    "qa_id": "QA007",
+    "project_id": "P09",
+    "question": "系统目标描述了什么实现或处理过程？",
+    "reference_answer": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "gold_evidence_span": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "declared_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA004的证据单元、片段和答案完全相同仅题型不同，属重复题，且该句跨4个文档块重复，证据不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 4,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0106",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0020",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0034",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "系统目标"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA008",
+    "qa_id": "QA008",
+    "project_id": "P09",
+    "question": "业务架构中描述了什么数量、时长或比例要求？",
+    "reference_answer": "本次项目建设依据烟台华新环保管控要求对环保管理系统进行整体设计，一期建设内容主要包含危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划，以实现环保管理信息化、精细化、闭环化管理",
+    "question_type": "Numeric constraint",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "gold_evidence_span": "本次项目建设依据烟台华新环保管控要求对环保管理系统进行整体设计，一期建设内容主要包含危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划，以实现环保管理信息化、精细化、闭环化管理",
+    "declared_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0085",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "一期7个功能模块由片段直接支持，但技术协议“业务架构图”节（QA010）有几乎相同表述，问题需限定“一期建设内容”以免与另一文档同句冲突。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0085",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "总体设计 > 业务架构"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA009",
+    "qa_id": "QA009",
+    "project_id": "P09",
+    "question": "项目实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "完成危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划与设计以及软件功能的开发、部署、调试、上线等工作",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "完成危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划与设计以及软件功能的开发、部署、调试、上线等工作",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0119",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "同节B0120“轧钢厂6套、冷精厂2套共8套烟气在线监测设备”同样是数量要求，问题未限定导致答案不唯一。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0119",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA010",
+    "qa_id": "QA010",
+    "project_id": "P09",
+    "question": "业务架构图中描述了什么数量、时长或比例要求？",
+    "reference_answer": "本次项目建设依据烟台华新环保管控要求对环保管理系统进行整体设计，主要包含危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划，以实现环保管理信息化、精细化、闭环化管理",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "本次项目建设依据烟台华新环保管控要求对环保管理系统进行整体设计，主要包含危固废管理、隐患排查管理、环境监测管理、环境应急管理、环保绩效管理、环保成本管理及移动端管理7个功能模块的整体规划，以实现环保管理信息化、精细化、闭环化管理",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0124",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "与QA008内容近重复且问题仅差一个“图”字，同一7个模块事实在两份文档并存，建议合并或在问题中明确区分协议与详细设计层级。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0124",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "系统架构 > 业务架构图"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA012",
+    "qa_id": "QA012",
+    "project_id": "P09",
+    "question": "项目目标描述了什么实现或处理过程？",
+    "reference_answer": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "question_type": "Process",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "数据一体化：通过整合环境监测、危废数据、生产设备、治理设施等多维度数据，打破部门间信息壁垒，构建统一的数据平台，实现环保数据的标准化、集中化管理和高效共享，为业务协同提供坚实基础",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0106",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA005的证据单元、片段和答案完全相同仅题型不同，属重复题，且该句在项目内跨4个块重复，证据不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 4,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0106",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0020",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0034",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+        "heading_path": "系统目标"
+      },
+      {
+        "unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0068",
+        "document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+        "heading_path": "系统目标"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA013",
+    "qa_id": "QA013",
+    "project_id": "P09",
+    "question": "项目效果支持或提供什么能力？",
+    "reference_answer": "同时，依托数据整合与标准化处理，进一步提高了数据的规范性和可用性，为深度分析与应用提供可靠支撑",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "同时，依托数据整合与标准化处理，进一步提高了数据的规范性和可用性，为深度分析与应用提供可靠支撑",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0112",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "片段以“同时，依托……”开头脱离上文不能自足，且同节5条并列效果块均可作答，需改取完整效果句并具体化问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0112",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目效果"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA014",
+    "qa_id": "QA014",
+    "project_id": "P09",
+    "question": "项目效果描述了什么实现或处理过程？",
+    "reference_answer": "提高办公效率与协同能力：借助线上化、无纸化的业务办理模式，系统大幅减少了人工操作与冗余流程，实现了环保业务的高效处理",
+    "question_type": "Process",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "提高办公效率与协同能力：借助线上化、无纸化的业务办理模式，系统大幅减少了人工操作与冗余流程，实现了环保业务的高效处理",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0113",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "与QA013同属“项目效果”节的模板化近重复问题，同节多条并列效果使答案不唯一，需明确问办公效率与协同能力的实现方式。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0113",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "项目目标与效果 > 项目效果"
+      }
+    ]
+  },
+  {
+    "id": "P09-QA015",
+    "qa_id": "QA015",
+    "project_id": "P09",
+    "question": "技术架构图支持或提供什么能力？",
+    "reference_answer": "负载均衡组件：项目采用Nginx集群实现项目的负载均衡，Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "gold_evidence_span": "负载均衡组件：项目采用Nginx集群实现项目的负载均衡，Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务",
+    "declared_unit_id": "模块8-环保管理-技术协议-1218:B0129",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "“技术架构图支持或提供什么能力”在12个技术组件并列段落中无法唯一定位，需把问题限定到负载均衡组件的技术选型。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "模块8-环保管理-技术协议-1218:B0129",
+        "document": "模块8-环保管理-技术协议-1218.docx",
+        "heading_path": "系统架构 > 技术架构图"
+      }
+    ]
+  }
+]

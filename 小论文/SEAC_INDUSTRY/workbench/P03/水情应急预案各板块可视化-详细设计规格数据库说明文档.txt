@@ -1,0 +1,177 @@
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0001] [worksheet] [封面]
+ |  |  |  | 江苏金恒信息科技股份有限公司 |  |  | 密级：内部 |  |  |  |  ||  |  |  |  | 数据库说明文档 |  |  | 版本：V2.0 |  |  |  | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0002] [worksheet] [目录]
+1、感知预警 |  |  | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0003] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_EW_IOT_POINT_CONFIG | 水位/雨量点位配置
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0004] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_HT_PLAN_TASK | 检查标准库
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0005] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_RM_KNOWLEDGE_BASE | 防汛知识库
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0006] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_EP_PLAN_CONFIG | 应急预案配置
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0007] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_MAP_CAMERA | 摄像头名称
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0008] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | ITFP_BR_PAPER | 防汛简报主表
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0009] [table] [感知预警 > ITFP_EW_IOT_POINT_CONFIG]
+1、 | 表名 | ITFP_EW_IOT_POINT_CONFIG | 表的描述 | 水位/雨量点位配置 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0010] [table] [感知预警 > ITFP_EW_CAMERA_CONFIG]
+2、 | 表名 | ITFP_EW_CAMERA_CONFIG | 表的描述 | 积水相机配置 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0011] [table] [感知预警 > ITFP_EW_METEOROLOGY_CONFIG]
+3、 | 表名 | ITFP_EW_METEOROLOGY_CONFIG | 表的描述 | 气象配置 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0012] [table] [感知预警 > ITFP_EW_WATER_RECORD]
+4、 | 表名 | ITFP_EW_WATER_RECORD | 表的描述 | 水位监测历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0013] [table] [感知预警 > ITFP_EW_WATER_FORECAST_RECORD]
+5、 | 表名 | ITFP_EW_WATER_FORECAST_RECORD | 表的描述 | 水位预测历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0014] [table] [感知预警 > ITFP_EW_RAINFALL_RECORD]
+6、 | 表名 | ITFP_EW_RAINFALL_RECORD | 表的描述 | 雨量监测历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0015] [table] [感知预警 > ITFP_EW_WATERLOG_RECORD]
+7、 | 表名 | ITFP_EW_WATERLOG_RECORD | 表的描述 | 积水监测历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0016] [table] [感知预警 > ITFP_EW_METEOROLOGY_RECORD]
+8、 | 表名 | ITFP_EW_METEOROLOGY_RECORD | 表的描述 | 气象监测历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0017] [table] [感知预警 > ITFP_EW_METEOROLOGY_FORECAST_RECORD]
+9、 | 表名 | ITFP_EW_METEOROLOGY_FORECAST_RECORD | 表的描述 | 气象预报逐小时历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0018] [table] [感知预警 > ITFP_EW_METE_DAILY_FORECAST_RECORD]
+10、 | 表名 | ITFP_EW_METE_DAILY_FORECAST_RECORD | 表的描述 | 气象预报逐日历史记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0019] [table] [感知预警 > ITFP_EW_ALARM_ROLE]
+11、 | 表名 | ITFP_EW_ALARM_ROLE | 表的描述 | 预警角色管理 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0020] [table] [感知预警 > ITFP_EW_ALARM_ROLE_DETAIL]
+12、 | 表名 | ITFP_EW_ALARM_ROLE_DETAIL | 表的描述 | 预警角色人员明细 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0021] [table] [感知预警 > ITFP_EW_ALARM]
+13、 | 表名 | ITFP_EW_ALARM | 表的描述 | 预警中心 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0022] [table] [感知预警 > ITFP_EW_ALARM_RECORD]
+14、 | 表名 | ITFP_EW_ALARM_RECORD | 表的描述 | 预警变动过程记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0023] [table] [感知预警 > ITFP_EW_WEATHER_POINT]
+15、 | 表名 | ITFP_EW_WEATHER_POINT | 表的描述 | 天气监测点位 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0024] [table] [隐患排查 > ITFP_HT_PLAN_TASK]
+1、 | 表名 | ITFP_HT_PLAN_TASK | 表的描述 | 检查标准库 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0025] [table] [隐患排查 > ITFP_HT_PLAN_TASK_DETAIL]
+2、 | 表名 | ITFP_HT_PLAN_TASK_DETAIL | 表的描述 | 检查标准库明细 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0026] [table] [隐患排查 > ITFP_HT_PLAN_INSPECTION_MANAGE]
+3、 | 表名 | ITFP_HT_PLAN_INSPECTION_MANAGE | 表的描述 | 计划检查管理 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0027] [table] [隐患排查 > ITFP_HT_PLAN_INSPECTION_MANAGE_BRANCH]
+4、 | 表名 | ITFP_HT_PLAN_INSPECTION_MANAGE_BRANCH | 表的描述 | 计划性检查任务关联表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0028] [table] [隐患排查 > ITFP_HT_PLAN_INSPECTION_MANAGE_CHECKER_RECORD]
+5、 | 表名 | ITFP_HT_PLAN_INSPECTION_MANAGE_CHECKER_RECORD | 表的描述 | 计划性检查检查人员填报记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0029] [table] [隐患排查 > ITFP_HT_PLAN_INSPECTION_MANAGE_STAFF]
+6、 | 表名 | ITFP_HT_PLAN_INSPECTION_MANAGE_STAFF | 表的描述 | 计划性检查人员关联表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0030] [table] [隐患排查 > ITFP_HT_POSSESSION_PRINCIPAL]
+7、 | 表名 | ITFP_HT_POSSESSION_PRINCIPAL | 表的描述 | 属地负责人管理 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0031] [table] [隐患排查 > ITFP_HT_RISK_CORRECT]
+8、 | 表名 | ITFP_HT_RISK_CORRECT | 表的描述 | 隐患整改管理 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0032] [table] [防汛资源管理 > ITFP_RM_KNOWLEDGE_BASE]
+1、 | 表名 | ITFP_RM_KNOWLEDGE_BASE | 表的描述 | 防汛知识库 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0033] [table] [防汛资源管理 > ITFP_RM_GOODS_SITE]
+2、 | 表名 | ITFP_RM_GOODS_SITE | 表的描述 | 防汛物资存放点 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0034] [table] [防汛资源管理 > ITFP_RM_GOODS]
+3、 | 表名 | ITFP_RM_GOODS | 表的描述 | 防汛物资 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0035] [table] [防汛资源管理 > ITFP_RM_GOODS_RELATIONSHIP]
+4、 | 表名 | ITFP_RM_GOODS_RELATIONSHIP | 表的描述 | 防汛物资与存放点关联关系 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0036] [table] [防汛资源管理 > ITFP_RM_EMERGENCY_TEAM]
+5、 | 表名 | ITFP_RM_EMERGENCY_TEAM | 表的描述 | 应急小组 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0037] [table] [防汛资源管理 > ITFP_RM_EMERGENCY_TEAM_DETAIL]
+6、 | 表名 | ITFP_RM_EMERGENCY_TEAM_DETAIL | 表的描述 | 应急小组人员明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0038] [table] [应急管理 > ITFP_EP_PLAN_CONFIG]
+1、 | 表名 | ITFP_EP_PLAN_CONFIG | 表的描述 | 应急预案配置 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0039] [table] [应急管理 > ITFP_EP_PLAN_CONFIG_DETAIL]
+2、 | 表名 | ITFP_EP_PLAN_CONFIG_DETAIL | 表的描述 | 应急预案措施配置 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0040] [table] [应急管理 > ITFP_EP_RULE_CONFIG]
+3、 | 表名 | ITFP_EP_RULE_CONFIG | 表的描述 | 应急预案规则配置 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0041] [table] [应急管理 > ITFP_EP_RULE_CONFIG_DETAIL]
+4、 | 表名 | ITFP_EP_RULE_CONFIG_DETAIL | 表的描述 | 应急预案规则条件明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0042] [table] [应急管理 > ITFP_EP_EMERGENCY_EVENT]
+5、 | 表名 | ITFP_EP_EMERGENCY_EVENT | 表的描述 | 应急处置事件 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0043] [table] [应急管理 > ITFP_EP_EMERGENCY_EVENT_POINT]
+6、 | 表名 | ITFP_EP_EMERGENCY_EVENT_POINT | 表的描述 | 应急处置事件报警点位 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0044] [table] [应急管理 > ITFP_EP_EMERGENCY_EVENT_DETAIL]
+7、 | 表名 | ITFP_EP_EMERGENCY_EVENT_DETAIL | 表的描述 | 应急处置事件措施明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0045] [table] [应急管理 > ITFP_EP_MATERIAL_RECORD]
+8、 | 表名 | ITFP_EP_MATERIAL_RECORD | 表的描述 | 原燃料库存历史记录 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0046] [table] [应急管理 > ITFP_EMER_DRILL_PLAN]
+9、 | 表名 | ITFP_EMER_DRILL_PLAN | 表的描述 | 应急演练计划 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0047] [table] [应急管理 > ITFP_EMER_DRILL_MEMBER]
+10、 | 表名 | ITFP_EMER_DRILL_MEMBER | 表的描述 | 应急演练人员 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0048] [table] [电子地图 > ITFP_MAP_CAMERA]
+1、 | 表名 | ITFP_MAP_CAMERA | 表的描述 | 摄像头名称 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0049] [table] [电子地图 > ITFP_MAP_CAMERA_GROUP]
+2、 | 表名 | ITFP_MAP_CAMERA_GROUP | 表的描述 | 摄像头分组 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0050] [table] [电子地图 > ITFP_MAP_LAYER_ATTR_COLUMN]
+3、 | 表名 | ITFP_MAP_LAYER_ATTR_COLUMN | 表的描述 | 图层要素属性配置 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0051] [table] [电子地图 > ITFP_MAP_LAYER_ATTR_TYPE]
+4、 | 表名 | ITFP_MAP_LAYER_ATTR_TYPE | 表的描述 | 图层要素分类 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0052] [table] [电子地图 > ITFP_MAP_LAYER]
+5、 | 表名 | ITFP_MAP_LAYER | 表的描述 | 电子地图图层信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0053] [table] [电子地图 > ITFP_MAP_POINT_COLLECTION]
+6、 | 表名 | ITFP_MAP_POINT_COLLECTION | 表的描述 | 图层点位信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0054] [table] [防汛简报 > ITFP_BR_PAPER]
+1、 | 表名 | ITFP_BR_PAPER | 表的描述 | 防汛简报主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0055] [table] [防汛简报 > ITFP_BR_AREA_STATE]
+2、 | 表名 | ITFP_BR_AREA_STATE | 表的描述 | 防汛简报区域情况 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0056] [table] [防汛简报 > ITFP_BR_WATER_FORECAST]
+3、 | 表名 | ITFP_BR_WATER_FORECAST | 表的描述 | 防汛简报水位预测 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0057] [table] [防汛简报 > ITFP_BR_WATER_RECORD]
+4、 | 表名 | ITFP_BR_WATER_RECORD | 表的描述 | 防汛简报水雨情 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0058] [table] [防汛简报 > ITFP_BR_WEATHER_DETAIL]
+5、 | 表名 | ITFP_BR_WEATHER_DETAIL | 表的描述 | 防汛简报当天详细天气预报 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[水情应急预案各板块可视化-详细设计规格数据库说明文档:B0059] [table] [防汛简报 > ITFP_BR_WEATHER]
+6、 | 表名 | ITFP_BR_WEATHER | 表的描述 | 防汛简报七日天气预报 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+

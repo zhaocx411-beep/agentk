@@ -1,0 +1,148 @@
+{
+  "protocol_version": "industrial-seac-qa-readjudication-v1.0",
+  "evidence_model": "multi_evidence_any_hit",
+  "max_occurrences": 12,
+  "review_source": "LLM_CONTENT_PREREVIEW",
+  "formal_gold_standard": false,
+  "projects": {
+    "P02": {
+      "record_count": 36,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 10,
+        "CANDIDATE_MULTI_EVIDENCE": 7,
+        "CANDIDATE_REWRITE": 15,
+        "EXCLUDED": 4
+      },
+      "usable_candidate_count": 32,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 6
+    },
+    "P03": {
+      "record_count": 36,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 10,
+        "CANDIDATE_REWRITE": 23,
+        "EXCLUDED": 3
+      },
+      "usable_candidate_count": 33,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 5
+    },
+    "P04": {
+      "record_count": 36,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 12,
+        "CANDIDATE_MULTI_EVIDENCE": 1,
+        "CANDIDATE_REWRITE": 15,
+        "EXCLUDED": 8
+      },
+      "usable_candidate_count": 28,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 5
+    },
+    "P05": {
+      "record_count": 36,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 14,
+        "CANDIDATE_REWRITE": 11,
+        "EXCLUDED": 11
+      },
+      "usable_candidate_count": 25,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 2
+    },
+    "P06": {
+      "record_count": 33,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 8,
+        "CANDIDATE_REWRITE": 14,
+        "EXCLUDED": 11
+      },
+      "usable_candidate_count": 22,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [
+        "P06-QA017",
+        "P06-QA018"
+      ],
+      "multi_evidence_records": 2
+    },
+    "P07": {
+      "record_count": 26,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 6,
+        "CANDIDATE_REWRITE": 7,
+        "EXCLUDED": 13
+      },
+      "usable_candidate_count": 13,
+      "minimum_qa_count": 15,
+      "meets_minimum": false,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 3
+    },
+    "P08": {
+      "record_count": 19,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 2,
+        "CANDIDATE_REWRITE": 12,
+        "EXCLUDED": 5
+      },
+      "usable_candidate_count": 14,
+      "minimum_qa_count": 15,
+      "meets_minimum": false,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 3
+    },
+    "P09": {
+      "record_count": 16,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 2,
+        "CANDIDATE_REWRITE": 8,
+        "EXCLUDED": 6
+      },
+      "usable_candidate_count": 10,
+      "minimum_qa_count": 15,
+      "meets_minimum": false,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 1
+    },
+    "P10": {
+      "record_count": 24,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 5,
+        "CANDIDATE_MULTI_EVIDENCE": 4,
+        "CANDIDATE_REWRITE": 9,
+        "EXCLUDED": 6
+      },
+      "usable_candidate_count": 18,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "rewrite_verification_failures": [],
+      "excluded_not_distinctive": [],
+      "multi_evidence_records": 4
+    }
+  },
+  "totals": {
+    "APPROVED_SINGLE_ROUND": 69,
+    "CANDIDATE_MULTI_EVIDENCE": 12,
+    "CANDIDATE_REWRITE": 114,
+    "EXCLUDED": 67,
+    "usable": 195
+  }
+}

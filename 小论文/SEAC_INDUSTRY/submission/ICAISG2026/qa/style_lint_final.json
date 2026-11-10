@@ -1,0 +1,145 @@
+{
+  "input": "/Users/zhaochenxu06/Desktop/bupt/\u5c0f\u8bba\u6587/SEAC_INDUSTRY/submission/ICAISG2026/package/ICAISG2026_SEAC_blind_submission.docx",
+  "fonts_by_char_count": {
+    "Times New Roman": 23900
+  },
+  "direct_run_formatting_runs": 197,
+  "direct_paragraph_formatting_paragraphs": 123,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 90,
+      "text": "Split",
+      "style": "Normal"
+    },
+    {
+      "para_index": 91,
+      "text": "Projects",
+      "style": "Normal"
+    },
+    {
+      "para_index": 92,
+      "text": "Documents",
+      "style": "Normal"
+    },
+    {
+      "para_index": 93,
+      "text": "Units",
+      "style": "Normal"
+    },
+    {
+      "para_index": 94,
+      "text": "Regex tokens",
+      "style": "Normal"
+    },
+    {
+      "para_index": 95,
+      "text": "Table rows",
+      "style": "Normal"
+    },
+    {
+      "para_index": 120,
+      "text": "Method",
+      "style": "Normal"
+    },
+    {
+      "para_index": 121,
+      "text": "Unit MRR",
+      "style": "Normal"
+    },
+    {
+      "para_index": 122,
+      "text": "Hit@5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 123,
+      "text": "Span MRR",
+      "style": "Normal"
+    },
+    {
+      "para_index": 124,
+      "text": "Boundary F1",
+      "style": "Normal"
+    },
+    {
+      "para_index": 165,
+      "text": "Variant",
+      "style": "Normal"
+    },
+    {
+      "para_index": 166,
+      "text": "Unit MRR",
+      "style": "Normal"
+    },
+    {
+      "para_index": 167,
+      "text": "Hit@5",
+      "style": "Normal"
+    },
+    {
+      "para_index": 168,
+      "text": "Change from full",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Provenance-Preserving Structure-Aware Chunking for Auditable Enterprise Retrieva",
+        "style": "paper title"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Abstract-",
+        "style": "Abstract"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Enterprise retrieval-augmented generation requires evidence that is both relevan",
+        "style": "Abstract"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Keywords-",
+        "style": "Keywords"
+      },
+      {
+        "para_index": 4,
+        "run_text": "retrieval-augmented generation, document chunking, provenance, auditability, sof",
+        "style": "Keywords"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 15,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 16,
+        "text": "Fig. 1. SEAC preserves stable source identifiers through boundary scoring, parent construction, and child-triggered retr",
+        "style": "Normal"
+      },
+      {
+        "para_index": 19,
+        "text": "t(r_j) = header(h) || row(r_j)",
+        "style": "Normal"
+      },
+      {
+        "para_index": 23,
+        "text": "rho(u) = sum(v in V) count(v,u) / max(1, tokens(u))",
+        "style": "Normal"
+      },
+      {
+        "para_index": 25,
+        "text": "b_i = 0.45 d_i + 0.30 s_i + 0.25 k_i - p_i",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

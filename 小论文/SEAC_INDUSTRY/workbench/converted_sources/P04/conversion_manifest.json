@@ -1,0 +1,122 @@
+{
+  "protocol_version": "industrial-seac-source-conversion-v1.0",
+  "project_id": "P04",
+  "source_dir": "天津钢管设备管理系统",
+  "soffice": "/Users/zhaochenxu06/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+  "converted_count": 7,
+  "failed_count": 0,
+  "records": [
+    {
+      "source_relative": "天津钢管设备管理系统-详细设计规格书.docx",
+      "source_sha256": "85840ed7f3087460ad2f2372881a88c9597211c54bc6d86ca1a5ca115102b368",
+      "source_bytes": 34492181,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-详细设计规格书.docx",
+      "status": "converted",
+      "output_sha256": "9d6f639b49eaf70c075e6de55779177247634837d7b357df4e6537c7279b5ccc",
+      "output_bytes": 29156651,
+      "content_stats": {
+        "paragraphs": 1308,
+        "tables": 260,
+        "characters": 104357
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求规格说明书.docx",
+      "source_sha256": "6345f2121b35e8df673b53caef75f76f97dd275ba2d324f684f3a5c1c4e70f5c",
+      "source_bytes": 17476078,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求规格说明书.docx",
+      "status": "converted",
+      "output_sha256": "73d96ee6f793e4291210525ed74166aaaadc4d9684a775c49ffd59a9dea83f43",
+      "output_bytes": 15187078,
+      "content_stats": {
+        "paragraphs": 1096,
+        "tables": 90,
+        "characters": 34135
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx",
+      "source_sha256": "ecc5fae7b4a85bcf97053e40deb960954df680ddb81b6dc21c08b238ea525eb3",
+      "source_bytes": 45568,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx",
+      "status": "converted",
+      "output_sha256": "6cf37fb7dfa927085dfd8748b2a8efea993c2040c977bf01930845e2fddffe0e",
+      "output_bytes": 31675,
+      "content_stats": {
+        "paragraphs": 3,
+        "tables": 1,
+        "characters": 5260
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求调研会议纪要20251114(下午) .docx",
+      "source_sha256": "6c0861c36ccb427e4f32b290cc735292ab00515e45a9d097402e34a5490d997a",
+      "source_bytes": 47616,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求调研会议纪要20251114(下午) .docx",
+      "status": "converted",
+      "output_sha256": "f5a0e75db41f1fabadf70667b2d0a323abb700b6ec9d5d99962c46aebb27e99a",
+      "output_bytes": 31803,
+      "content_stats": {
+        "paragraphs": 3,
+        "tables": 1,
+        "characters": 7007
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求调研会议纪要20251117 .docx",
+      "source_sha256": "9ca5bbdd2d8e5fa09d7f3f3c60517f036f302066f6b49f2799dee7ec5a4dce19",
+      "source_bytes": 59904,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求调研会议纪要20251117 .docx",
+      "status": "converted",
+      "output_sha256": "2c07be556641248b95cc9e963bf688a0aae0ab1138df20d90b19788212de5fa3",
+      "output_bytes": 34079,
+      "content_stats": {
+        "paragraphs": 3,
+        "tables": 1,
+        "characters": 15249
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求调研会议纪要20251118.docx",
+      "source_sha256": "f1fd24cb75514c17016abca2479df2e8a39e767ec7ec780fd4f05c652e58c39f",
+      "source_bytes": 46592,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求调研会议纪要20251118.docx",
+      "status": "converted",
+      "output_sha256": "8718d88d7eb8c86d1e6a540c207f6206839e835cd982bb79f1cb2c32ee09d37c",
+      "output_bytes": 31404,
+      "content_stats": {
+        "paragraphs": 3,
+        "tables": 1,
+        "characters": 4571
+      }
+    },
+    {
+      "source_relative": "天津钢管设备管理系统-需求调研会议纪要20251120.docx",
+      "source_sha256": "67aafafb689df4428634431485c2cad2a0ae5bd3f515356469324fd496299e5d",
+      "source_bytes": 51712,
+      "source_container": "ole",
+      "conversion_reason": "legacy_doc_mislabeled_docx",
+      "output_relative": "天津钢管设备管理系统-需求调研会议纪要20251120.docx",
+      "status": "converted",
+      "output_sha256": "0ff9f40c5b5f041b27b27ba8be0f4bb2f9ad2db0864e56c5b6e64394177ed80f",
+      "output_bytes": 33436,
+      "content_stats": {
+        "paragraphs": 3,
+        "tables": 1,
+        "characters": 10668
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P07",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "5dfb4585602dca430077be3563393eb8bf5a8d39903ec11ba6d9b540184af1a0",
+  "boundary_pool_count": 2488,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 249,
+    "inside_table": 932,
+    "noise_candidate": 310,
+    "same_section_continuity": 810,
+    "table_transition": 187
+  },
+  "sample_strata": {
+    "heading_transition": 56,
+    "inside_table": 94,
+    "noise_candidate": 32,
+    "same_section_continuity": 77,
+    "table_transition": 41
+  },
+  "sample_documents": {
+    "人资系统调研会议纪要2025.5.10.docx": 12,
+    "人资系统调研会议纪要2025.5.docx": 12,
+    "财务人资供应链及基础设施建设-方案建议书.docx": 72,
+    "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx": 62,
+    "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx": 24,
+    "财务人资供应链及基础设施建设-详细设计规格书.docx": 94,
+    "项目人资模块会议纪要2025.5.12.docx": 12,
+    "项目人资模块会议纪要2025.5.13.docx": 12
+  },
+  "qa_draft_count": 26,
+  "qa_types": {
+    "API": 1,
+    "API parameter": 3,
+    "Constraint": 2,
+    "Database": 5,
+    "Feature": 7,
+    "Numeric constraint": 4,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 26,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "59129de258b62e09777abf0d2bd918d2171241be207e9bad191e940273fbd77b",
+    "boundary_blind_annotator_a.json": "129ff93980c8b186ef7f993e4481963a75e2e0b8e88484b4dbc296e1c18eaa8a",
+    "boundary_blind_annotator_b.json": "b90b56cd082ca75d97c0523a94f18520df3745493c5a0b83ae689433603a1f90",
+    "qa_draft.json": "c68fb24f0aa53658771311a87c9be8afc6d5ac305602d929c4398a3f12f29b7b"
+  }
+}

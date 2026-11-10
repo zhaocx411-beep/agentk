@@ -1,0 +1,107 @@
+{
+  "fixed": {
+    "chunk_count": 938,
+    "mean_chunk_tokens": 510.4488272921109,
+    "min_chunk_tokens": 148,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 25,
+      "tn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "retrieval": {
+      "mrr": 0.7241254456327986,
+      "hit_rate@1": 0.5625,
+      "hit_rate@3": 0.90625,
+      "hit_rate@5": 0.9375
+    }
+  },
+  "recursive": {
+    "chunk_count": 881,
+    "mean_chunk_tokens": 475.83541430192963,
+    "min_chunk_tokens": 22,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 25,
+      "tn": 35,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "retrieval": {
+      "mrr": 0.7367745535714286,
+      "hit_rate@1": 0.65625,
+      "hit_rate@3": 0.78125,
+      "hit_rate@5": 0.8125
+    }
+  },
+  "structure": {
+    "chunk_count": 2160,
+    "mean_chunk_tokens": 194.08194444444445,
+    "min_chunk_tokens": 2,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 25,
+      "fp": 8,
+      "fn": 0,
+      "tn": 31,
+      "precision": 0.7575757575757576,
+      "recall": 1.0,
+      "f1": 0.8620689655172413
+    },
+    "retrieval": {
+      "mrr": 0.6326731414221906,
+      "hit_rate@1": 0.53125,
+      "hit_rate@3": 0.6875,
+      "hit_rate@5": 0.78125
+    }
+  },
+  "semantic": {
+    "chunk_count": 3288,
+    "mean_chunk_tokens": 127.49908759124088,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 17,
+      "fp": 12,
+      "fn": 8,
+      "tn": 27,
+      "precision": 0.5862068965517241,
+      "recall": 0.68,
+      "f1": 0.6296296296296295
+    },
+    "retrieval": {
+      "mrr": 0.5082382910119355,
+      "hit_rate@1": 0.375,
+      "hit_rate@3": 0.59375,
+      "hit_rate@5": 0.625
+    }
+  },
+  "proposed": {
+    "chunk_count": 1724,
+    "mean_chunk_tokens": 243.16531322505801,
+    "min_chunk_tokens": 2,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 23,
+      "fp": 7,
+      "fn": 2,
+      "tn": 32,
+      "precision": 0.7666666666666667,
+      "recall": 0.92,
+      "f1": 0.8363636363636363
+    },
+    "retrieval": {
+      "mrr": 0.5274189716893545,
+      "hit_rate@1": 0.375,
+      "hit_rate@3": 0.65625,
+      "hit_rate@5": 0.78125
+    }
+  }
+}

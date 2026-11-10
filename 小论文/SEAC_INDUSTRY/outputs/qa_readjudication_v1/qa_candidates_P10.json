@@ -1,0 +1,1276 @@
+[
+  {
+    "question": "1.1 本技术要求的使用范围仅限于山东寿光巨能特钢有限公司能碳管理平台设计、供货、安装、调试技术要求。中规定了什么约束？",
+    "reference_answer": "1.1 本技术要求的使用范围仅限于山东寿光巨能特钢有限公司能碳管理平台设计、供货、安装、调试技术要求",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "一、总则 > 1.1 本技术要求的使用范围仅限于山东寿光巨能特钢有限公司能碳管理平台设计、供货、安装、调试技术要求。",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0008",
+    "gold_evidence_span": "1.1 本技术要求的使用范围仅限于山东寿光巨能特钢有限公司能碳管理平台设计、供货、安装、调试技术要求",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0008",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA001",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0008"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0008"
+    ],
+    "gold_evidence_spans": [
+      "1.1 本技术要求的使用范围仅限于山东寿光巨能特钢有限公司能碳管理平台设计、供货、安装、调试技术要求"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0008"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0008"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA001",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "问题直接复述带编号的条款标题、答案与问题同文，属自答题且依赖条款编号，题目不成立。"
+  },
+  {
+    "question": "实时性可靠性和稳定性中规定了什么约束？",
+    "reference_answer": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "非功能需求 > 实时性可靠性和稳定性",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+    "gold_evidence_span": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA002",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_spans": [
+      "设备和终端必须反应快速，充分满足系统对实时性的需求"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx",
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA002",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "三处原文完全一致，题干只锚定实时性可靠性和稳定性这一主题、未指名具体文档或编号小节，且各处该主题小节仅此一段，答案唯一，证据集取三处等价位置。"
+  },
+  {
+    "question": "在“十四五”规划纲要推动高质量发展的战略背景下，打造智慧钢铁企业必须建立什么架构？",
+    "reference_answer": "必须建立全新的“智慧架构”既要与“十四五”的发展趋势、目标、特性相吻合，围绕创新驱动、智能转型、强化基础、绿色发展等关键环节，推进信息化、智能化、智慧化的建设目标",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目的必要性与可行性分析 > 必要性分析",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0065",
+    "gold_evidence_span": "“十四五”规划纲要提出“推动高质量发展”为主题的战略背景下，智慧钢铁企业的打造必须建立全新的“智慧架构”既要与“十四五”的发展趋势、目标、特性相吻合，围绕创新驱动、智能转型、强化基础、绿色发展等关键环节，推进信息化、智能化、智慧化的建设目标",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0065",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA003",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+    ],
+    "gold_evidence_spans": [
+      "“十四五”规划纲要提出“推动高质量发展”为主题的战略背景下，智慧钢铁企业的打造必须建立全新的“智慧架构”既要与“十四五”的发展趋势、目标、特性相吻合，围绕创新驱动、智能转型、强化基础、绿色发展等关键环节，推进信息化、智能化、智慧化的建设目标"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+      ],
+      "block_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+      ],
+      "documents": [
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA003",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "按上轮建议把题干改为“十四五”背景下智慧钢铁企业须建立的架构，答案由片段直接支持，与该节其他现状描述区分。",
+    "proposed_rewrite": {
+      "question": "在“十四五”规划纲要推动高质量发展的战略背景下，打造智慧钢铁企业必须建立什么架构？",
+      "answer": "必须建立全新的“智慧架构”既要与“十四五”的发展趋势、目标、特性相吻合，围绕创新驱动、智能转型、强化基础、绿色发展等关键环节，推进信息化、智能化、智慧化的建设目标",
+      "span": "“十四五”规划纲要提出“推动高质量发展”为主题的战略背景下，智慧钢铁企业的打造必须建立全新的“智慧架构”既要与“十四五”的发展趋势、目标、特性相吻合，围绕创新驱动、智能转型、强化基础、绿色发展等关键环节，推进信息化、智能化、智慧化的建设目标",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "3.2.3.9 预留标准的API接口，所有接口开放，不得设置密码等阻碍，保证数据能随时提取应用。中规定了什么约束？",
+    "reference_answer": "3.2.3.9 预留标准的API接口，所有接口开放，不得设置密码等阻碍，保证数据能随时提取应用",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.3 能碳管理平台系统要求 > 3.2.3.9 预留标准的API接口，所有接口开放，不得设置密码等阻碍，保证数据能随时提取应用。",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0086",
+    "gold_evidence_span": "3.2.3.9 预留标准的API接口，所有接口开放，不得设置密码等阻碍，保证数据能随时提取应用",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0086",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA004",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0086"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0086"
+    ],
+    "gold_evidence_spans": [
+      "3.2.3.9 预留标准的API接口，所有接口开放，不得设置密码等阻碍，保证数据能随时提取应用"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0086"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0086"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA004",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "问题复述带编号的条款标题、答案与问题同文，属自答题且依赖条款编号，题目不成立。"
+  },
+  {
+    "question": "扩展性和维护性中规定了什么约束？",
+    "reference_answer": "为了适应未来的业务拓展和项目的变化要求，必须充分考虑以简单实用的方法、最低的投资，实现软件系统的扩展和维护",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "非功能需求 > 扩展性和维护性",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+    "gold_evidence_span": "为了适应未来的业务拓展和项目的变化要求，必须充分考虑以简单实用的方法、最低的投资，实现软件系统的扩展和维护",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA005",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0125",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0123"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0125",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0123"
+    ],
+    "gold_evidence_spans": [
+      "为了适应未来的业务拓展和项目的变化要求，必须充分考虑以简单实用的方法、最低的投资，实现软件系统的扩展和维护"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0125",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0123"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0125",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0532",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0123"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx",
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA005",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "三处原文完全一致，题干锚定扩展性和维护性这一主题、未指名具体文档或编号小节，且各处该主题小节仅此一段，答案唯一，证据集取三处等价位置。"
+  },
+  {
+    "question": "设计原则中规定了什么约束？",
+    "reference_answer": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目总体设计 > 设计原则",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0119",
+    "gold_evidence_span": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0119",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA006",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_spans": [
+      "设备和终端必须反应快速，充分满足系统对实时性的需求"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx",
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA006",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "“设计原则”节有19条并列原则，题干无法定位唯一答案，多证据模型不适用；且与QA002同证据同答案，保留题干更贴切的QA002。"
+  },
+  {
+    "question": "1.2 本技术要求提出的是最低的技术要求，并未对一切技术细节做出规定，未充分引述的有关标准和规范条文，双方共同协商解决。支持或提供什么能力？",
+    "reference_answer": "1.4 乙方没有以书面形式对本技术要求的所有条文提出异议，那么甲方可以认为乙方提供的产品已完全满足本技术要求的要求",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "一、总则 > 1.2 本技术要求提出的是最低的技术要求，并未对一切技术细节做出规定，未充分引述的有关标准和规范条文，双方共同协商解决。",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0011",
+    "gold_evidence_span": "1.4 乙方没有以书面形式对本技术要求的所有条文提出异议，那么甲方可以认为乙方提供的产品已完全满足本技术要求的要求",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0011",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA007",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0011"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0011"
+    ],
+    "gold_evidence_spans": [
+      "1.4 乙方没有以书面形式对本技术要求的所有条文提出异议，那么甲方可以认为乙方提供的产品已完全满足本技术要求的要求"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0011"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0011"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA007",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干指向1.2条，证据单元与答案却是1.4条乙方书面异议的规定，参考答案与证据不符。"
+  },
+  {
+    "question": "能源综合报表要实现哪些报表功能？",
+    "reference_answer": "能源综合报表要实现自定义或者定制能源中心及各级能源管理部门的常规报表和综合报表，并支持报表导出、打印功能，包括报表模版维护、能源报表配置、能源报表查询等功能",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "功能性需求 > 系统设计 > 业务架构图",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0108",
+    "gold_evidence_span": "能源综合报表要实现自定义或者定制能源中心及各级能源管理部门的常规报表和综合报表，并支持报表导出、打印功能，包括报表模版维护、能源报表配置、能源报表查询等功能",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0108",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA008",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0108"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0108"
+    ],
+    "gold_evidence_spans": [
+      "能源综合报表要实现自定义或者定制能源中心及各级能源管理部门的常规报表和综合报表，并支持报表导出、打印功能，包括报表模版维护、能源报表配置、能源报表查询等功能"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0108"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0108"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA008",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干限定到能源综合报表后与业务架构图中其余4类并列功能区分，并去掉条目序号“5、”。",
+    "proposed_rewrite": {
+      "question": "能源综合报表要实现哪些报表功能？",
+      "answer": "能源综合报表要实现自定义或者定制能源中心及各级能源管理部门的常规报表和综合报表，并支持报表导出、打印功能，包括报表模版维护、能源报表配置、能源报表查询等功能",
+      "span": "能源综合报表要实现自定义或者定制能源中心及各级能源管理部门的常规报表和综合报表，并支持报表导出、打印功能，包括报表模版维护、能源报表配置、能源报表查询等功能",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "巨能特钢现有的能源计量仪表配备情况为能源管理系统建设提供了什么？",
+    "reference_answer": "巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目的必要性与可行性分析 > 可行性分析",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0076",
+    "gold_evidence_span": "巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0076",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA009",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0076"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0076"
+    ],
+    "gold_evidence_spans": [
+      "巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0076"
+      ],
+      "block_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0076"
+      ],
+      "documents": [
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA009",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干限定到计量仪表齐全这一可行性条件并去掉条目序号；答案保留原文写法（含“艺表”笔误）以确保可由证据原文直接支持。",
+    "proposed_rewrite": {
+      "question": "巨能特钢现有的能源计量仪表配备情况为能源管理系统建设提供了什么？",
+      "answer": "巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑",
+      "span": "巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "在网络接入方面甲方需要承担哪些工作？",
+    "reference_answer": "利用公司现有网络，保证现有网络具备接入条件，无网络的由甲方负责光缆提供及敷设工作",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "二、双方供货、施工范围分工 > 2.1甲方供货及施工范围",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0015",
+    "gold_evidence_span": "利用公司现有网络，保证现有网络具备接入条件，无网络的由甲方负责光缆提供及敷设工作",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0015",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA010",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0015"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0015"
+    ],
+    "gold_evidence_spans": [
+      "利用公司现有网络，保证现有网络具备接入条件，无网络的由甲方负责光缆提供及敷设工作"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0015"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0015"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA010",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "按上轮建议去掉“2.1”编号指代并把题干改为甲方在网络接入方面承担的工作，与同段电源、DCS、PLC等其他责任条目区分。",
+    "proposed_rewrite": {
+      "question": "在网络接入方面甲方需要承担哪些工作？",
+      "answer": "利用公司现有网络，保证现有网络具备接入条件，无网络的由甲方负责光缆提供及敷设工作",
+      "span": "利用公司现有网络，保证现有网络具备接入条件，无网络的由甲方负责光缆提供及敷设工作",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "平台整体架构在性能与连接能力方面具备哪些特点？",
+    "reference_answer": "平台整体架构具有性能动态可扩性强，毫秒级实时连接，具备海量连接数和高并发吞吐能力",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "功能性需求 > 系统设计 > 应用架构图",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0110",
+    "gold_evidence_span": "平台整体架构具有性能动态可扩性强，毫秒级实时连接，具备海量连接数和高并发吞吐能力",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0110",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA011",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0110"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0110"
+    ],
+    "gold_evidence_spans": [
+      "平台整体架构具有性能动态可扩性强，毫秒级实时连接，具备海量连接数和高并发吞吐能力"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0110"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0110"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA011",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "去掉“如上图所示”的图示指代并把题干锚定到平台整体架构的性能特性，片段自足且答案唯一。",
+    "proposed_rewrite": {
+      "question": "平台整体架构在性能与连接能力方面具备哪些特点？",
+      "answer": "平台整体架构具有性能动态可扩性强，毫秒级实时连接，具备海量连接数和高并发吞吐能力",
+      "span": "平台整体架构具有性能动态可扩性强，毫秒级实时连接，具备海量连接数和高并发吞吐能力",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "钢铁行业企业信息化在企业内部资源优化集成方面包括哪些集成？",
+    "reference_answer": "企业内部资源的优化集成，包括硬件与软件的集成、信息体现于管理体系的基础、软件之间的集成、软件与业务流程之间的集成等",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目的必要性与可行性分析 > 必要性分析",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0065",
+    "gold_evidence_span": "钢铁行业对企业信息化的内涵与意义一方面体现在实施步骤上对整体规划、基础管理、分层应用等各环节的集成；另一方面体现在企业内部资源的优化集成，包括硬件与软件的集成、信息体现于管理体系的基础、软件之间的集成、软件与业务流程之间的集成等",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0065",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA012",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+    ],
+    "gold_evidence_spans": [
+      "钢铁行业对企业信息化的内涵与意义一方面体现在实施步骤上对整体规划、基础管理、分层应用等各环节的集成；另一方面体现在企业内部资源的优化集成，包括硬件与软件的集成、信息体现于管理体系的基础、软件之间的集成、软件与业务流程之间的集成等"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+      ],
+      "block_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0065"
+      ],
+      "documents": [
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA012",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "重取自足的完整语句替代“另一方面……”片段，题干锚定企业内部资源优化集成，与同单元的QA003（智慧架构）指向不同事实，不再构成近重复。",
+    "proposed_rewrite": {
+      "question": "钢铁行业企业信息化在企业内部资源优化集成方面包括哪些集成？",
+      "answer": "企业内部资源的优化集成，包括硬件与软件的集成、信息体现于管理体系的基础、软件之间的集成、软件与业务流程之间的集成等",
+      "span": "钢铁行业对企业信息化的内涵与意义一方面体现在实施步骤上对整体规划、基础管理、分层应用等各环节的集成；另一方面体现在企业内部资源的优化集成，包括硬件与软件的集成、信息体现于管理体系的基础、软件之间的集成、软件与业务流程之间的集成等",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "3.2能碳管理平台的建设描述了什么实现或处理过程？",
+    "reference_answer": "能碳管理平台利用甲方提供的服务器资源进行软件开发实现能碳管理平台的采集、分析、实现各种报表功能和对能源介质的管控作用",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "三、设备组成及技术要求 > 3.2能碳管理平台的建设",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0031",
+    "gold_evidence_span": "能碳管理平台利用甲方提供的服务器资源进行软件开发实现能碳管理平台的采集、分析、实现各种报表功能和对能源介质的管控作用",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0031",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA013",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0031"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0031"
+    ],
+    "gold_evidence_spans": [
+      "能碳管理平台利用甲方提供的服务器资源进行软件开发实现能碳管理平台的采集、分析、实现各种报表功能和对能源介质的管控作用"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0031"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0031"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA013",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "能碳管理平台利用甲方服务器资源实现采集、分析与报表管控由片段直接支持，证据在语料内唯一，题型与章节正确。"
+  },
+  {
+    "question": "计量仪表现状描述了什么实现或处理过程？",
+    "reference_answer": "二级仪表分散在整个厂区，分别汇聚在就近的仪表箱中，目前仪表数据以人工抄录方式为主进行抄录统计，日常维护较为费时费力",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "概述 > 项目现状 > 计量仪表现状",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0063",
+    "gold_evidence_span": "二级仪表分散在整个厂区，分别汇聚在就近的仪表箱中，目前仪表数据以人工抄录方式为主进行抄录统计，日常维护较为费时费力",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0063",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA014",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0063"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0063"
+    ],
+    "gold_evidence_spans": [
+      "二级仪表分散在整个厂区，分别汇聚在就近的仪表箱中，目前仪表数据以人工抄录方式为主进行抄录统计，日常维护较为费时费力"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0063"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0063"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA014",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "二级仪表分散布置、以人工抄录为主的现状由片段直接支持且节内唯一，来源文档与章节正确。"
+  },
+  {
+    "question": "项目实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "4、数据采集：采集现场16块一级仪表、268台二级仪表、560台三级仪表数据以及2 座高炉、1 座烧结、2 座转炉、4 个精炼、3 个连铸、轧钢厂大棒线和小棒线两条轧线以及 1 条钢管产线重点工艺数据至工业互联网平台",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目的目标与范围 > 项目实施范围",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0100",
+    "gold_evidence_span": "4、数据采集：采集现场16块一级仪表、268台二级仪表、560台三级仪表数据以及2 座高炉、1 座烧结、2 座转炉、4 个精炼、3 个连铸、轧钢厂大棒线和小棒线两条轧线以及 1 条钢管产线重点工艺数据至工业互联网平台",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0100",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA015",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0100"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0100"
+    ],
+    "gold_evidence_spans": [
+      "4、数据采集：采集现场16块一级仪表、268台二级仪表、560台三级仪表数据以及2 座高炉、1 座烧结、2 座转炉、4 个精炼、3 个连铸、轧钢厂大棒线和小棒线两条轧线以及 1 条钢管产线重点工艺数据至工业互联网平台"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0100"
+      ],
+      "block_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0100"
+      ],
+      "documents": [
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA015",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Hard",
+    "prereview_notes": "该条是实施范围清单中唯一含数量的条目，三级仪表与各产线设备数量由片段直接支持，需归纳多组数字故难度较高。"
+  },
+  {
+    "question": "六、供货周期中描述了什么数量、时长或比例要求？",
+    "reference_answer": "能碳管理平台工期: 合同签订后4个月内上线试运行，5个月内验收",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "六、供货周期",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0138",
+    "gold_evidence_span": "能碳管理平台工期: 合同签订后4个月内上线试运行，5个月内验收",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0138",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA016",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0138"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0138"
+    ],
+    "gold_evidence_spans": [
+      "能碳管理平台工期: 合同签订后4个月内上线试运行，5个月内验收"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0138"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0138"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA016",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "合同签订后4个月上线试运行、5个月验收由片段直接支持且节内唯一，题型、来源文档与章节正确。"
+  },
+  {
+    "question": "供电系统现状中描述了什么数量、时长或比例要求？",
+    "reference_answer": "巨能特钢共有4个变电所，包含3个110kV变电所和1个35kV变电所，每个变电所有一个电力后台，1个由四方建设，3个由南瑞建设，且各变电所之间网络均已连通，目前集中汇聚在35kV变电所",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "概述 > 项目现状 > 供电系统现状",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+    "gold_evidence_span": "巨能特钢共有4个变电所，包含3个110kV变电所和1个35kV变电所，每个变电所有一个电力后台，1个由四方建设，3个由南瑞建设，且各变电所之间网络均已连通，目前集中汇聚在35kV变电所",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA017",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0198"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0198"
+    ],
+    "gold_evidence_spans": [
+      "巨能特钢共有4个变电所，包含3个110kV变电所和1个35kV变电所，每个变电所有一个电力后台，1个由四方建设，3个由南瑞建设，且各变电所之间网络均已连通，目前集中汇聚在35kV变电所"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0198"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0065",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0198"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA017",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "两处原文完全一致，题干锚定供电系统现状且两份文档该节均只有这一段内容，答案唯一，证据集取两处等价位置。"
+  },
+  {
+    "question": "网络架构图中描述了什么数量、时长或比例要求？",
+    "reference_answer": "工业以太网采用环形加星形的结构，在高炉、烧结、炼钢以及轧钢轧钢等7个主要的站点如等放在主环网中， 其他的站点根据情况采用星形连接接入环网中，具体见工业网络架构图",
+    "source_document": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "source_section": "项目建设方案 > 系统架构 > 网络架构图",
+    "gold_evidence_id": "巨能特钢能源管理系统项目方案建议书202503040:B0190",
+    "gold_evidence_span": "工业以太网采用环形加星形的结构，在高炉、烧结、炼钢以及轧钢轧钢等7个主要的站点如等放在主环网中， 其他的站点根据情况采用星形连接接入环网中，具体见工业网络架构图",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢能源管理系统项目方案建议书202503040:B0190",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA018",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0190"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢能源管理系统项目方案建议书202503040:B0190"
+    ],
+    "gold_evidence_spans": [
+      "工业以太网采用环形加星形的结构，在高炉、烧结、炼钢以及轧钢轧钢等7个主要的站点如等放在主环网中， 其他的站点根据情况采用星形连接接入环网中，具体见工业网络架构图"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0190"
+      ],
+      "block_ids": [
+        "巨能特钢能源管理系统项目方案建议书202503040:B0190"
+      ],
+      "documents": [
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA018",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Hard",
+    "prereview_notes": "环形加星形结构与7个主环网站点由片段直接支持且节内唯一，需理解工业环网拓扑才能作答故难度较高。"
+  },
+  {
+    "question": "质保期内发生系统异常时，乙方最迟应在多长时间内到达甲方现场处理？",
+    "reference_answer": "必要情况下24小时内到达甲方现场进行处理",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "十、质量保证期",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0177",
+    "gold_evidence_span": "质保期内发生系统异常现象，乙方人员应在接到通知后的远程进行处理，必要情况下24小时内到达甲方现场进行处理",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0177",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA019",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0177"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0177"
+    ],
+    "gold_evidence_spans": [
+      "质保期内发生系统异常现象，乙方人员应在接到通知后的远程进行处理，必要情况下24小时内到达甲方现场进行处理"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0177"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0177"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA019",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "去掉“十、”章节编号指代并限定为异常响应到场时限，与同段质保期1年、维保3年等数值区分。",
+    "proposed_rewrite": {
+      "question": "质保期内发生系统异常时，乙方最迟应在多长时间内到达甲方现场处理？",
+      "answer": "必要情况下24小时内到达甲方现场进行处理",
+      "span": "质保期内发生系统异常现象，乙方人员应在接到通知后的远程进行处理，必要情况下24小时内到达甲方现场进行处理",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "2.2.1负责巨能特钢能碳管理平台服务器至现场仪表之间线路设计、信号采集设备的供货、安装、调试及图纸、技术文件提供。支持或提供什么能力？",
+    "reference_answer": "2.2.1负责巨能特钢能碳管理平台服务器至现场仪表之间线路设计、信号采集设备的供货、安装、调试及图纸、技术文件提供",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "二、双方供货、施工范围分工 > 2.2乙方供货及施工范围 > 2.2.1负责巨能特钢能碳管理平台服务器至现场仪表之间线路设计、信号采集设备的供货、安装、调试及图纸、技术文件提供。",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0017",
+    "gold_evidence_span": "2.2.1负责巨能特钢能碳管理平台服务器至现场仪表之间线路设计、信号采集设备的供货、安装、调试及图纸、技术文件提供",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0017",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA020",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0017"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0017"
+    ],
+    "gold_evidence_spans": [
+      "2.2.1负责巨能特钢能碳管理平台服务器至现场仪表之间线路设计、信号采集设备的供货、安装、调试及图纸、技术文件提供"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0017"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0017"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA020",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "问题复述带编号的条款标题、答案与问题同文，属自答题且依赖条款编号，题目不成立。"
+  },
+  {
+    "question": "甲方需为乙方现场办公提供哪些条件？",
+    "reference_answer": "甲方需为乙方提供现场办公场所，为乙方现场办公提供有利条件（包括网络、饮用水等）",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "二、双方供货、施工范围分工 > 2.3 现场条件",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0025",
+    "gold_evidence_span": "甲方需为乙方提供现场办公场所，为乙方现场办公提供有利条件（包括网络、饮用水等）",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0025",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA021",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0025"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0025"
+    ],
+    "gold_evidence_spans": [
+      "甲方需为乙方提供现场办公场所，为乙方现场办公提供有利条件（包括网络、饮用水等）"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0025"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0025"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA021",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "题干去掉“2.3”编号并限定为现场办公条件，答案由现有片段直接支持，与同段施工用水用电、仓库等条目区分。",
+    "proposed_rewrite": {
+      "question": "甲方需为乙方现场办公提供哪些条件？",
+      "answer": "甲方需为乙方提供现场办公场所，为乙方现场办公提供有利条件（包括网络、饮用水等）",
+      "span": "甲方需为乙方提供现场办公场所，为乙方现场办公提供有利条件（包括网络、饮用水等）",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "能碳管理平台的报表如何实现无代码扩展？",
+    "reference_answer": "报表无代码扩展，即计量数据通过拖拉拽到表格，实现简单无需代码编程，计量数据可随意建立表格进行分析",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0042",
+    "gold_evidence_span": "报表无代码扩展，即计量数据通过拖拉拽到表格，实现简单无需代码编程，计量数据可随意建立表格进行分析",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0042",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA022",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0042"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0042"
+    ],
+    "gold_evidence_spans": [
+      "报表无代码扩展，即计量数据通过拖拉拽到表格，实现简单无需代码编程，计量数据可随意建立表格进行分析"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0042"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0042"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA022",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干去掉“3.2.2”编号并锚定报表无代码扩展，与该节其余9条并列功能要求区分，证据唯一。",
+    "proposed_rewrite": {
+      "question": "能碳管理平台的报表如何实现无代码扩展？",
+      "answer": "报表无代码扩展，即计量数据通过拖拉拽到表格，实现简单无需代码编程，计量数据可随意建立表格进行分析",
+      "span": "报表无代码扩展，即计量数据通过拖拉拽到表格，实现简单无需代码编程，计量数据可随意建立表格进行分析",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "4.2 设计原则中规定了什么约束？",
+    "reference_answer": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "source_document": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "source_section": "四、采用标准及设计原则 > 4.2 设计原则",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-技术协议:B0121",
+    "gold_evidence_span": "设备和终端必须反应快速，充分满足系统对实时性的需求",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-技术协议:B0121",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA023",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-技术协议:B0121",
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+    ],
+    "gold_evidence_spans": [
+      "设备和终端必须反应快速，充分满足系统对实时性的需求"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-技术协议:B0121",
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0528",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0119"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-技术协议.docx",
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA023",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干指名“4.2 设计原则”且该节19条并列原则无法定位唯一答案，与QA002、QA006同句同答案重复，保留QA002。"
+  },
+  {
+    "question": "水系统现状中描述了什么数量、时长或比例要求？",
+    "reference_answer": "巨能特钢共有水泵房、除盐水站、软水站、污水处理等共计7个站所，各站所均有PLC控制系统",
+    "source_document": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "source_section": "概述 > 项目现状 > 水系统现状",
+    "gold_evidence_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+    "gold_evidence_span": "巨能特钢共有水泵房、除盐水站、软水站、污水处理等共计7个站所，各站所均有PLC控制系统",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA024",
+    "project_id": "P10",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0200"
+    ],
+    "gold_evidence_ids": [
+      "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+      "巨能特钢能源管理系统项目方案建议书202503040:B0200"
+    ],
+    "gold_evidence_spans": [
+      "巨能特钢共有水泵房、除盐水站、软水站、污水处理等共计7个站所，各站所均有PLC控制系统"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0200"
+      ],
+      "block_ids": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word:B0067",
+        "巨能特钢能源管理系统项目方案建议书202503040:B0200"
+      ],
+      "documents": [
+        "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+        "巨能特钢能源管理系统项目方案建议书202503040.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P10-QA024",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "两处原文完全一致，题干锚定水系统现状且两份文档该节均只有这一段内容，答案唯一，证据集取两处等价位置。"
+  }
+]

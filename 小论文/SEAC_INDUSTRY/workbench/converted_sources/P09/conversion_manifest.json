@@ -1,0 +1,26 @@
+{
+  "protocol_version": "industrial-seac-source-conversion-v1.0",
+  "project_id": "P09",
+  "source_dir": "烟台华新-环保管理",
+  "soffice": "/Users/zhaochenxu06/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice",
+  "converted_count": 1,
+  "failed_count": 0,
+  "records": [
+    {
+      "source_relative": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+      "source_sha256": "f559a3b34c868ea7f0ede5d526a90edc55f8786c83efadf90418a509b21aaf10",
+      "source_bytes": 5551997,
+      "source_container": "zip",
+      "conversion_reason": "docx_parse_error:KeyError",
+      "output_relative": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+      "status": "converted",
+      "output_sha256": "06be5ad5fedbcdfaab22a0a860932844e4a3bb8696af8f8395071d4d34c2f1be",
+      "output_bytes": 5253906,
+      "content_stats": {
+        "paragraphs": 149,
+        "tables": 104,
+        "characters": 59395
+      }
+    }
+  ]
+}

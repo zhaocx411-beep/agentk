@@ -1,0 +1,26 @@
+{"id": "P07-QA001", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL"], "note": "“1.请求信息”在该文档是重复15次的编号小节，题干未指明具体接口，且“1）请求方式：GET”多处逐字重复，证据无法唯一对齐；同节还含 http://172.28.99.75 内网地址。"}
+{"id": "P07-QA002", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "“3.返回信息”有9处同名小节，题干未指明接口；id|String|是 行在部门、岗位等多个返回表重复，无法精确到唯一行。"}
+{"id": "P07-QA003", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "同为无接口限定的“3.返回信息”小节，no|String|是 行在部门编号、人员工号等多个返回表重复，证据不唯一。"}
+{"id": "P07-QA004", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干未指明接口，name|String|是 行在人员姓名、部门名称、岗位名称等多个返回表重复，无法唯一对齐。"}
+{"id": "P07-QA005", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行“表的描述”直接给出答案，表名与小节唯一（原文“用例”为笔误，答案照录原文）。"}
+{"id": "P07-QA006", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“本表用例记录出入境信息”，HR_ENTRY_EXIT小节唯一，答案唯一。"}
+{"id": "P07-QA007", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“本表用例记录人员需求申请流程信息”，表名与小节唯一。"}
+{"id": "P07-QA008", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "表定义行直接给出“本表用例记录印尼十三薪信息”，证据唯一；答案涉及薪酬项目，建议隐私复核。"}
+{"id": "P07-QA009", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "表定义行直接给出“本表用例记录驻外补贴信息”，证据唯一；答案涉及境外补贴制度，建议隐私复核。"}
+{"id": "P07-QA010", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "销售出库小节仅一段正文，span是其中唯一的约束句（必须通过流程配置），答案唯一且未见他处重复。"}
+{"id": "P07-QA011", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": [], "note": "总账小节含18块内容，B0198“凭证类别约束规则和分摊规则”等同样规定约束，题干未限定“汇兑损益”，答案不唯一。"}
+{"id": "P07-QA012", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY", "PROPRIETARY_BUSINESS_DATA"], "note": "该段与方案建议书B0053（QA014证据）相似度约98%，来源文档无法唯一确定；答案是信息化现状陈述而非“提供什么能力”，题型亦不符。"}
+{"id": "P07-QA013", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该段在方案建议书B0126逐字重复，证据无法唯一对齐；题干还以“2.2”编号指代小节，不符合自然问法要求。"}
+{"id": "P07-QA014", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY", "PROPRIETARY_BUSINESS_DATA"], "note": "该段与详细设计规格书B0044（QA012证据）相似度约98%，来源文档无法唯一确定；答案为现状描述而非处理过程。"}
+{"id": "P07-QA015", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "该句与方案建议书B0102（QA024证据）相似度约99%，证据无法唯一对齐；且内容是项目目标而非“项目背景”中的数量要求，章节归属亦不当。"}
+{"id": "P07-QA016", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "经济性分析节内B0086（5天降至1天）、B0087（库存占用降20%、周转率升15%）同样是数量比例要求，题干未限定，答案不唯一；答案含加班费金额等经营数据。"}
+{"id": "P07-QA017", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该性能指标段在方案建议书B0127逐字重复，来源文档无法唯一确定，证据无法唯一对齐。"}
+{"id": "P07-QA018", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "必要性分析节含19块并列现状与需求描述，题干未限定模块，多个段落同样可作答；答案以“然而”承接上文，脱离上下文不完整。"}
+{"id": "P07-QA019", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段在详细设计规格书B0047逐字重复，证据无法唯一对齐；且答案描述的是现状问题，与Feature题型不符。"}
+{"id": "P07-QA020", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "可行性分析节B0076、B0078同样回答“提供什么能力”，题干未限定；答案实为集团既有建设经验而非系统能力，需改写问题或答案。"}
+{"id": "P07-QA021", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "经济性分析三段均描述改进过程，题干未限定“成本核算”，答案不唯一；答案含核算时长等经营指标。"}
+{"id": "P07-QA022", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "项目目标及效果节含四项技术目标与十余条效益条目，题干未限定“财务供应链管理”，答案不唯一。"}
+{"id": "P07-QA023", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["SECURITY_ARCHITECTURE"], "note": "与QA022同节同问法，四项目标并列且题干未限定“基础设施和安全架构”，答案不唯一；答案含网络安全防御体系与冗余架构描述。"}
+{"id": "P07-QA024", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该句与详细设计规格书B0055（QA015证据）相似度约99%，来源文档无法唯一确定；同节B0099、B0103亦有100%提升表述，答案不唯一。"}
+{"id": "P07-QA025", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "项目总体设计原则节并列安全可靠、易于扩展、实用易用、遵循技术规范四条原则，题干未限定哪一条，答案不唯一。"}
+{"id": "P07-QA026", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["SECURITY_ARCHITECTURE", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该段在方案建议书B0136与B0289逐字重复，证据无法唯一对齐；内容含组网与SD-WAN加密通道等架构细节，建议隐私复核。"}

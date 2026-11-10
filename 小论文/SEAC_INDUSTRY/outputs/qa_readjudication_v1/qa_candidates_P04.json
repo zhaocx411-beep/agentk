@@ -1,0 +1,2183 @@
+[
+  {
+    "question": "2025年11月10日下午召开的天津钢管设备管理系统项目需求调研会议的地点在哪里？",
+    "reference_answer": "装备部党员活动室",
+    "source_document": "天津钢管设备管理系统-需求调研会议纪要20251110（下午）.docx",
+    "source_section": "",
+    "gold_evidence_id": "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002",
+    "gold_evidence_span": "时间 | 2025年11月10日下午 | 记录人： | 耿德生 | 地点 | 装备部党员活动室 | 装备部党员活动室",
+    "question_type": "Meeting fact",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002#R002",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA001",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002#R002"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002"
+    ],
+    "gold_evidence_spans": [
+      "时间 | 2025年11月10日下午 | 记录人： | 耿德生 | 地点 | 装备部党员活动室 | 装备部党员活动室"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002#R002"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-需求调研会议纪要20251110（下午）.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA001",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "12份纪要的时间行同构且记录人、地点大量重复，题干“本次”无法指代任一会议；改以该纪要独有的会议时间提问地点，答案由同一证据行直接支持。",
+    "proposed_rewrite": {
+      "question": "2025年11月10日下午召开的天津钢管设备管理系统项目需求调研会议的地点在哪里？",
+      "answer": "装备部党员活动室",
+      "span": "时间 | 2025年11月10日下午 | 记录人： | 耿德生 | 地点 | 装备部党员活动室 | 装备部党员活动室",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "天津钢管设备管理系统对外接口统一使用什么请求方式？",
+    "reference_answer": "HTTP，POST方法",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.1获取设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA002",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA002",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "补全原答案漏掉的POST方法；题干原指名编号小节2.1.2.1，泛化为覆盖接口文档全部8处等价声明的问法，8个位置即为证据集（该文档全部接口均为HTTP POST，答案无冲突）。",
+    "proposed_rewrite": {
+      "question": "天津钢管设备管理系统对外接口统一使用什么请求方式？",
+      "answer": "HTTP，POST方法",
+      "span": "1）请求方式：HTTP，POST方法",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "2.1.2.2获取计量设备列表接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.2获取计量设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA003",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA003",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集（8处相同的请求方式声明）同答案，构成近重复；保留已泛化题干的QA002，本条拒绝。"
+  },
+  {
+    "question": "2.2.2.1产线新增/修改/删除接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.2运行管理 > 2.2.2接口定义 > 2.2.2.1产线新增/修改/删除接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA004",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA004",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.2.2.2停机记录新增接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.2运行管理 > 2.2.2接口定义 > 2.2.2.2停机记录新增接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA005",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA005",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.2.2.3状态监测异常隐患新增接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.2运行管理 > 2.2.2接口定义 > 2.2.2.3状态监测异常隐患新增接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA006",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA006",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.3.2.1备件出库确认接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.3检修管理 > 2.3.2接口定义 > 2.3.2.1备件出库确认接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA007",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP， POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA007",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.4.2.1接收合同信息接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.4 合同管理 > 2.4.2接口定义 > 2.4.2.1接收合同信息接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA008",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP， POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA008",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.4.2.2更新付款结果接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.4 合同管理 > 2.4.2接口定义 > 2.4.2.2更新付款结果接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0282",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0282",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA009",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP， POST方法"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 8,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA009",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "与P04-QA002同证据集同答案，构成近重复；保留QA002，本条拒绝。"
+  },
+  {
+    "question": "2.1.2.1获取设备列表接口中参数 code 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为Int，必填",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.1获取设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+    "gold_evidence_span": "code | Int | | 是 | 返回状态码，2000是成功，其余是失败",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R002",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA010",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R002"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+    ],
+    "gold_evidence_spans": [
+      "code | Int | | 是 | 返回状态码，2000是成功，其余是失败"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 5,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R002"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA010",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "code行取值范围为空，答案“类型为Int，必填”与该唯一行一致，其他接口的同名行属不同标题路径可区分。"
+  },
+  {
+    "question": "2.1.2.1获取设备列表接口中参数 message 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大100个字节，必填",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.1获取设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+    "gold_evidence_span": "message | String | 最大100个字节 | 是 | 返回提示说明",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R003",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA011",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R003"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+    ],
+    "gold_evidence_spans": [
+      "message | String | 最大100个字节 | 是 | 返回提示说明"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 5,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R003"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA011",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "message行三项字段与答案逐项对应，行内可唯一定位。"
+  },
+  {
+    "question": "2.1.2.2获取计量设备列表接口中参数 code 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为Int，必填",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.2获取计量设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+    "gold_evidence_span": "code | Int | | 是 | 返回状态码，2000是成功，其余是失败",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R002",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA012",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R002",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R002"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+    ],
+    "gold_evidence_spans": [
+      "code | Int | | 是 | 返回状态码，2000是成功，其余是失败"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 5,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R002",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R002"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA012",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "证据行属2.1.2.2获取计量设备列表接口，与题干接口一致，答案由该行归纳且唯一。"
+  },
+  {
+    "question": "2.1.2.2获取计量设备列表接口中参数 message 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大100个字节，必填",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1基础管理 > 2.1.2接口定义 > 2.1.2.2获取计量设备列表接口",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+    "gold_evidence_span": "message | String | 最大100个字节 | 是 | 返回提示说明",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R003",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA013",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R003",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R003"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+    ],
+    "gold_evidence_spans": [
+      "message | String | 最大100个字节 | 是 | 返回提示说明"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 5,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141#R003",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170#R003"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0031",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0069",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0112",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0141",
+        "天津钢管设备管理系统-详细设计规格书-接口文档:B0170"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA013",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "证据行与题干接口一致，三项字段与答案对应，无冲突答案。"
+  },
+  {
+    "question": "MA_AREA 表用于记录什么信息？",
+    "reference_answer": "表用于记录区域位置信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_AREA",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003",
+    "gold_evidence_span": "1、 | 表名 | MA_AREA | 表的描述 | 表用于记录区域位置信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA014",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003"
+    ],
+    "gold_evidence_spans": [
+      "1、 | 表名 | MA_AREA | 表的描述 | 表用于记录区域位置信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA014",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表名与表描述在同一行内对应，答案唯一且题型、来源正确。"
+  },
+  {
+    "question": "MA_AREA_CHANGE 表用于记录什么信息？",
+    "reference_answer": "表用于记录区域位置变更信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_AREA_CHANGE",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004",
+    "gold_evidence_span": "2、 | 表名 | MA_AREA_CHANGE | 表的描述 | 表用于记录区域位置变更信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA015",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004"
+    ],
+    "gold_evidence_spans": [
+      "2、 | 表名 | MA_AREA_CHANGE | 表的描述 | 表用于记录区域位置变更信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA015",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "证据行同时给出表名与表描述，答案唯一。"
+  },
+  {
+    "question": "MA_EQ 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_EQ",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005",
+    "gold_evidence_span": "3、 | 表名 | MA_EQ | 表的描述 | 表用于记录设备信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA016",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005"
+    ],
+    "gold_evidence_spans": [
+      "3、 | 表名 | MA_EQ | 表的描述 | 表用于记录设备信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA016",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "证据行同时给出表名与表描述，答案唯一。"
+  },
+  {
+    "question": "MA_EQ_CHANGE 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备变更信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_EQ_CHANGE",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006",
+    "gold_evidence_span": "4、 | 表名 | MA_EQ_CHANGE | 表的描述 | 表用于记录设备变更信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA017",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006"
+    ],
+    "gold_evidence_spans": [
+      "4、 | 表名 | MA_EQ_CHANGE | 表的描述 | 表用于记录设备变更信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA017",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "证据行同时给出表名与表描述，答案唯一。"
+  },
+  {
+    "question": "MA_FILE_TREE 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备文件体系信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_FILE_TREE",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007",
+    "gold_evidence_span": "5、 | 表名 | MA_FILE_TREE | 表的描述 | 表用于记录设备文件体系信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA018",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007"
+    ],
+    "gold_evidence_spans": [
+      "5、 | 表名 | MA_FILE_TREE | 表的描述 | 表用于记录设备文件体系信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA018",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "证据行同时给出表名与表描述，答案唯一。"
+  },
+  {
+    "question": "MA_FILE_UPLOAD 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备文件上传信息",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "source_section": "基础管理 > MA_FILE_UPLOAD",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008",
+    "gold_evidence_span": "6、 | 表名 | MA_FILE_UPLOAD | 表的描述 | 表用于记录设备文件上传信息 | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA019",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008#R001"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008"
+    ],
+    "gold_evidence_spans": [
+      "6、 | 表名 | MA_FILE_UPLOAD | 表的描述 | 表用于记录设备文件上传信息 | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008#R001"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA019",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "证据行同时给出表名与表描述，答案唯一。"
+  },
+  {
+    "question": "该项目技术协议提出的要求属于什么性质的要求，必须满足哪些层面的相关标准？",
+    "reference_answer": "该协议是最低限度要求，必须满足国家、省市、集团及企业的相关标准",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "总则",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010",
+    "gold_evidence_span": "该协议是最低限度要求，必须满足国家、省市、集团及企业的相关标准",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA020",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+    ],
+    "gold_evidence_spans": [
+      "该协议是最低限度要求，必须满足国家、省市、集团及企业的相关标准"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA020",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干由“总则中规定了什么约束”收敛到标准符合性这一具体事实，避免总则中对投标企业的要求成为同样合理的答案；证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "该项目技术协议提出的要求属于什么性质的要求，必须满足哪些层面的相关标准？",
+      "answer": "该协议是最低限度要求，必须满足国家、省市、集团及企业的相关标准",
+      "span": "该协议是最低限度要求，必须满足国家、省市、集团及企业的相关标准",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "在什么情况下乙方会派出系统工程师到用户现场为用户解决问题？",
+    "reference_answer": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "source_section": "技术支持与服务",
+    "gold_evidence_id": "天津钢管设备管理系统-需求规格说明书:B1181",
+    "gold_evidence_span": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求规格说明书:B1181",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA021",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "gold_evidence_spans": [
+      "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+        "天津钢管设备管理系统-需求规格说明书:B1181",
+        "天管设备二期技术要求-4.25:B0447"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+        "天津钢管设备管理系统-需求规格说明书:B1181",
+        "天管设备二期技术要求-4.25:B0447"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+        "天津钢管设备管理系统-需求规格说明书.docx",
+        "天管设备二期技术要求-4.25.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA021",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干原以文档小节名指代来源，泛化为该服务条款本身的问法；技术协议、需求规格说明书、二期技术要求三处原文一致，按多证据模型并列为证据集。",
+    "proposed_rewrite": {
+      "question": "在什么情况下乙方会派出系统工程师到用户现场为用户解决问题？",
+      "answer": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+      "span": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "油品化验工单中规定了什么约束？",
+    "reference_answer": "系统依据标准值自动判断检测是否合格，不合格的油品由生产单位进行过滤或换油（报废）处理，处理后的油品选择是否需要再次送检，需检测中心再次复检的，复检之后登记复检结果，不需要的，默认检测计划为合格",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "系统功能设计 > 油品化验管理 > 油品化验工单",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+    "gold_evidence_span": "系统依据标准值自动判断检测是否合格，不合格的油品由生产单位进行过滤或换油（报废）处理，处理后的油品选择是否需要再次送检，需检测中心再次复检的，复检之后登记复检结果，不需要的，默认检测计划为合格",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA022",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+      "天管设备二期技术要求-4.25:B0263"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+      "天管设备二期技术要求-4.25:B0263"
+    ],
+    "gold_evidence_spans": [
+      "系统依据标准值自动判断检测是否合格，不合格的油品由生产单位进行过滤或换油（报废）处理，处理后的油品选择是否需要再次送检，需检测中心再次复检的，复检之后登记复检结果，不需要的，默认检测计划为合格"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+        "天管设备二期技术要求-4.25:B0263"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+        "天管设备二期技术要求-4.25:B0263"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+        "天管设备二期技术要求-4.25.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA022",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "两份文档的“油品化验工单”小节原文完全一致、答案唯一，该小节仅此一段实质内容，题干未指名某份文档或编号小节，取两个等价位置为证据集。"
+  },
+  {
+    "question": "系统在接口开发方面必须具备什么数据传递接口，并要满足什么需求？",
+    "reference_answer": "系统必须要具备RESTfulAPI数据传递接口并能够满足后续接口功能扩展需求",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "系统开发要求 > 接口开发",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391",
+    "gold_evidence_span": "系统必须要具备RESTfulAPI数据传递接口并能够满足后续接口功能扩展需求",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA023",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+    ],
+    "gold_evidence_spans": [
+      "系统必须要具备RESTfulAPI数据传递接口并能够满足后续接口功能扩展需求"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA023",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干收敛到RESTful API这一具体要求，避免接口开发节中的协议选型、第三方配合等约束成为同样合理的答案；证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "系统在接口开发方面必须具备什么数据传递接口，并要满足什么需求？",
+      "answer": "系统必须要具备RESTfulAPI数据传递接口并能够满足后续接口功能扩展需求",
+      "span": "系统必须要具备RESTfulAPI数据传递接口并能够满足后续接口功能扩展需求",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "质保与售后服务中规定了什么约束？",
+    "reference_answer": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "质保与售后服务",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+    "gold_evidence_span": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA024",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "gold_evidence_spans": [
+      "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户解决问题"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+        "天津钢管设备管理系统-需求规格说明书:B1181",
+        "天管设备二期技术要求-4.25:B0447"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+        "天津钢管设备管理系统-需求规格说明书:B1181",
+        "天管设备二期技术要求-4.25:B0447"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+        "天津钢管设备管理系统-需求规格说明书.docx",
+        "天管设备二期技术要求-4.25.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA024",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "与P04-QA021同证据集同答案，构成近重复；保留已泛化题干的QA021，本条拒绝。"
+  },
+  {
+    "question": "乙方的工作人员在甲方厂区内必须遵守甲方哪些方面的相关规定？",
+    "reference_answer": "乙方的工作人员在甲方厂区内必须遵守甲方涉及安全、质量、文明施工等方面的相关规定",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "甲乙双方的责任和义务 > 乙方的责任与义务",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523",
+    "gold_evidence_span": "3）乙方的工作人员在甲方厂区内必须遵守甲方涉及安全、质量、文明施工等方面的相关规定",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA025",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+    ],
+    "gold_evidence_spans": [
+      "3）乙方的工作人员在甲方厂区内必须遵守甲方涉及安全、质量、文明施工等方面的相关规定"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA025",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干收敛到厂区作业规定这一条义务，避免乙方7条义务互为同样合理的答案，并删去答案中的条目编号“3）”。",
+    "proposed_rewrite": {
+      "question": "乙方的工作人员在甲方厂区内必须遵守甲方哪些方面的相关规定？",
+      "answer": "乙方的工作人员在甲方厂区内必须遵守甲方涉及安全、质量、文明施工等方面的相关规定",
+      "span": "3）乙方的工作人员在甲方厂区内必须遵守甲方涉及安全、质量、文明施工等方面的相关规定",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "设计约束中的外部限制是什么，数据接口依赖外部第三方系统提供什么？",
+    "reference_answer": "外部限制：数据接口需要金恒适配现场第三方系统，依赖于现场外部第三方系统按时提供了正确的接口文档",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "source_section": "概述 > 设计约束",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书:B0020",
+    "gold_evidence_span": "外部限制：数据接口需要金恒适配现场第三方系统，依赖于现场外部第三方系统按时提供了正确的接口文档",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书:B0020",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA026",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0020"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0020"
+    ],
+    "gold_evidence_spans": [
+      "外部限制：数据接口需要金恒适配现场第三方系统，依赖于现场外部第三方系统按时提供了正确的接口文档"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0020"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0020"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA026",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "原题干问“支持或提供什么能力”与外部依赖限制的答案语义不符，改为针对外部限制的问法；该节浏览器限制另属一句，证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "设计约束中的外部限制是什么，数据接口依赖外部第三方系统提供什么？",
+      "answer": "外部限制：数据接口需要金恒适配现场第三方系统，依赖于现场外部第三方系统按时提供了正确的接口文档",
+      "span": "外部限制：数据接口需要金恒适配现场第三方系统，依赖于现场外部第三方系统按时提供了正确的接口文档",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "项目要如何利用平台优势，为哪些决策提供数据支持？",
+    "reference_answer": "利用平台优势，对业务层层分解、工作全线追踪，融合多维数字，为设备选型、备件采购、费用控制、维护策略等决策提供数据支持，提高管理效率",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "source_section": "概述 > 项目目标和主要任务",
+    "gold_evidence_id": "天津钢管设备管理系统-需求规格说明书:B0045",
+    "gold_evidence_span": "利用平台优势，对业务层层分解、工作全线追踪，融合多维数字，为设备选型、备件采购、费用控制、维护策略等决策提供数据支持，提高管理效率",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求规格说明书:B0045",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA027",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+      "天津钢管设备管理系统-需求规格说明书:B0045",
+      "天管设备二期技术要求-4.25:B0130"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+      "天津钢管设备管理系统-需求规格说明书:B0045",
+      "天管设备二期技术要求-4.25:B0130"
+    ],
+    "gold_evidence_spans": [
+      "利用平台优势，对业务层层分解、工作全线追踪，融合多维数字，为设备选型、备件采购、费用控制、维护策略等决策提供数据支持，提高管理效率"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+        "天津钢管设备管理系统-需求规格说明书:B0045",
+        "天管设备二期技术要求-4.25:B0130"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+        "天津钢管设备管理系统-需求规格说明书:B0045",
+        "天管设备二期技术要求-4.25:B0130"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+        "天津钢管设备管理系统-需求规格说明书.docx",
+        "天管设备二期技术要求-4.25.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA027",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "模板问法改为指向该结论句的具体问法；技术协议、需求规格说明书、二期技术要求三处原文一致，按多证据模型并列为证据集。",
+    "proposed_rewrite": {
+      "question": "项目要如何利用平台优势，为哪些决策提供数据支持？",
+      "answer": "利用平台优势，对业务层层分解、工作全线追踪，融合多维数字，为设备选型、备件采购、费用控制、维护策略等决策提供数据支持，提高管理效率",
+      "span": "利用平台优势，对业务层层分解、工作全线追踪，融合多维数字，为设备选型、备件采购、费用控制、维护策略等决策提供数据支持，提高管理效率",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "点检管理支持进行哪类分析来优化点检标准、提高设备点检水平？",
+    "reference_answer": "同时支持进行点位趋势分析，逐步优化点检标准，使设备点检计划更切合实际，逐步提高设备点检水平",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "source_section": "系统设计 > 点检管理 > 功能描述",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书:B0321",
+    "gold_evidence_span": "同时支持进行点位趋势分析，逐步优化点检标准，使设备点检计划更切合实际，逐步提高设备点检水平",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书:B0321",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA028",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0321"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0321"
+    ],
+    "gold_evidence_spans": [
+      "同时支持进行点位趋势分析，逐步优化点检标准，使设备点检计划更切合实际，逐步提高设备点检水平"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0321"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0321"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA028",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "“功能描述”在各模块重复出现，按要求补上父级模块“点检管理”后题干自足，证据与答案不变。",
+    "proposed_rewrite": {
+      "question": "点检管理支持进行哪类分析来优化点检标准、提高设备点检水平？",
+      "answer": "同时支持进行点位趋势分析，逐步优化点检标准，使设备点检计划更切合实际，逐步提高设备点检水平",
+      "span": "同时支持进行点位趋势分析，逐步优化点检标准，使设备点检计划更切合实际，逐步提高设备点检水平",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "应用架构中的平台层基于什么平台，提供哪些服务？",
+    "reference_answer": "平台层基于JH4J微服务平台，提供流程、权限、公共配置等服务",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "source_section": "功能性需求 > 系统设计 > 应用架构图",
+    "gold_evidence_id": "天津钢管设备管理系统-需求规格说明书:B0080",
+    "gold_evidence_span": "平台层基于JH4J微服务平台，提供流程、权限、公共配置等服务",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求规格说明书:B0080",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA029",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0080"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0080"
+    ],
+    "gold_evidence_spans": [
+      "平台层基于JH4J微服务平台，提供流程、权限、公共配置等服务"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0080"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0080"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-需求规格说明书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA029",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干收敛到平台层职责，避免同段基础支撑层、应用服务层、用户层的描述成为同样合理的答案；证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "应用架构中的平台层基于什么平台，提供哪些服务？",
+      "answer": "平台层基于JH4J微服务平台，提供流程、权限、公共配置等服务",
+      "span": "平台层基于JH4J微服务平台，提供流程、权限、公共配置等服务",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "设备管理业务需要与哪些系统实现协同？",
+    "reference_answer": "实现设备管理业务与产销质财系统、智能运维系统、集团供应链系统、集团财务共享系统的协同",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "source_section": "系统详细架构 > 应用组件和关系",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书:B0026",
+    "gold_evidence_span": "实现设备管理业务与产销质财系统、智能运维系统、集团供应链系统、集团财务共享系统的协同",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书:B0026",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA030",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+      "天津钢管设备管理系统-详细设计规格书:B0026",
+      "天津钢管设备管理系统-需求规格说明书:B0078"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+      "天津钢管设备管理系统-详细设计规格书:B0026",
+      "天津钢管设备管理系统-需求规格说明书:B0078"
+    ],
+    "gold_evidence_spans": [
+      "实现设备管理业务与产销质财系统、智能运维系统、集团供应链系统、集团财务共享系统的协同"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+        "天津钢管设备管理系统-详细设计规格书:B0026",
+        "天津钢管设备管理系统-需求规格说明书:B0078"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+        "天津钢管设备管理系统-详细设计规格书:B0026",
+        "天津钢管设备管理系统-需求规格说明书:B0078"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+        "天津钢管设备管理系统-详细设计规格书.docx",
+        "天津钢管设备管理系统-需求规格说明书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA030",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干收敛到系统协同范围，去掉答案末尾“系统之间的数据交互如下图所示”的悬空指代，并把证据收敛为最小充分片段。",
+    "proposed_rewrite": {
+      "question": "设备管理业务需要与哪些系统实现协同？",
+      "answer": "实现设备管理业务与产销质财系统、智能运维系统、集团供应链系统、集团财务共享系统的协同",
+      "span": "实现设备管理业务与产销质财系统、智能运维系统、集团供应链系统、集团财务共享系统的协同",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "业务联动要实现哪些业务的联动，并通过检修管理实现什么？",
+    "reference_answer": "业务联动：实现点检、检修、故障、备件的业务联动，自动归集点检异常、人工提报、故障整改等待检修项目，通过检修管理实现备件上下线、异常闭环管理和履历追溯",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "source_section": "概述 > 项目现状",
+    "gold_evidence_id": "天津钢管设备管理系统-需求规格说明书:B0032",
+    "gold_evidence_span": "业务联动：实现点检、检修、故障、备件的业务联动，自动归集点检异常、人工提报、故障整改等待检修项目，通过检修管理实现备件上下线、异常闭环管理和履历追溯",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求规格说明书:B0032",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA031",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0032"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0032"
+    ],
+    "gold_evidence_spans": [
+      "业务联动：实现点检、检修、故障、备件的业务联动，自动归集点检异常、人工提报、故障整改等待检修项目，通过检修管理实现备件上下线、异常闭环管理和履历追溯"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0032"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0032"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-需求规格说明书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA031",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干收敛到项目现状中的“业务联动”一条，避免该节其余十余条现状与提升策略成为同样合理的答案；证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "业务联动要实现哪些业务的联动，并通过检修管理实现什么？",
+      "answer": "业务联动：实现点检、检修、故障、备件的业务联动，自动归集点检异常、人工提报、故障整改等待检修项目，通过检修管理实现备件上下线、异常闭环管理和履历追溯",
+      "span": "业务联动：实现点检、检修、故障、备件的业务联动，自动归集点检异常、人工提报、故障整改等待检修项目，通过检修管理实现备件上下线、异常闭环管理和履历追溯",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "基础管理模块对企业设备以及设备档案、维修技术标准分别进行怎样的管理，达到什么效果？",
+    "reference_answer": "基础管理模块对企业的设备进行结构化的管理。对于设备档案、维修技术标准也同步进行结构化、标准化，方便查阅和汇总分析，规范设备运维执行过程，提高作业效率",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "source_section": "系统设计 > 基础管理 > 功能描述",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书:B0035",
+    "gold_evidence_span": "基础管理模块对企业的设备进行结构化的管理。对于设备档案、维修技术标准也同步进行结构化、标准化，方便查阅和汇总分析，规范设备运维执行过程，提高作业效率",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书:B0035",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA032",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0035"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0035"
+    ],
+    "gold_evidence_spans": [
+      "基础管理模块对企业的设备进行结构化的管理。对于设备档案、维修技术标准也同步进行结构化、标准化，方便查阅和汇总分析，规范设备运维执行过程，提高作业效率"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0035"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0035"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA032",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "“功能描述”为重复小节名，按要求补上父级模块“基础管理”，并按原文把过短的答案与证据补全为该段完整表述。",
+    "proposed_rewrite": {
+      "question": "基础管理模块对企业设备以及设备档案、维修技术标准分别进行怎样的管理，达到什么效果？",
+      "answer": "基础管理模块对企业的设备进行结构化的管理。对于设备档案、维修技术标准也同步进行结构化、标准化，方便查阅和汇总分析，规范设备运维执行过程，提高作业效率",
+      "span": "基础管理模块对企业的设备进行结构化的管理。对于设备档案、维修技术标准也同步进行结构化、标准化，方便查阅和汇总分析，规范设备运维执行过程，提高作业效率",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "基础管理模块在台账数量10W量级以下时，基础资料数据的读写时间要求是多少？",
+    "reference_answer": "在台账数量10W量级以下，现基础资料的数据的读写不超过3秒（服务器资源充足情形）",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "source_section": "系统设计 > 基础管理 > 非功能性描述",
+    "gold_evidence_id": "天津钢管设备管理系统-详细设计规格书:B0038",
+    "gold_evidence_span": "在台账数量10W量级以下，现基础资料的数据的读写不超过3秒（服务器资源充足情形）",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-详细设计规格书:B0038",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA033",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0038"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0038"
+    ],
+    "gold_evidence_spans": [
+      "在台账数量10W量级以下，现基础资料的数据的读写不超过3秒（服务器资源充足情形）"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0038"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-详细设计规格书:B0038"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA033",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "“非功能性描述”在各模块重复（点检管理另有10W量级、3秒的同类指标），按要求补上父级模块“基础管理”并收敛到基础资料读写性能，答案不变。",
+    "proposed_rewrite": {
+      "question": "基础管理模块在台账数量10W量级以下时，基础资料数据的读写时间要求是多少？",
+      "answer": "在台账数量10W量级以下，现基础资料的数据的读写不超过3秒（服务器资源充足情形）",
+      "span": "在台账数量10W量级以下，现基础资料的数据的读写不超过3秒（服务器资源充足情形）",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "故障（延误）报告中描述了什么数量、时长或比例要求？",
+    "reference_answer": "对于判定完成后的产线停机（停机时间≥30分钟），进行故障（延误）报告填报及审批",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "source_section": "功能性需求 > 业务功能描述 > 运行管理 > 故障（延误）报告",
+    "gold_evidence_id": "天津钢管设备管理系统-需求规格说明书:B0227",
+    "gold_evidence_span": "对于判定完成后的产线停机（停机时间≥30分钟），进行故障（延误）报告填报及审批",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "天津钢管设备管理系统-需求规格说明书:B0227",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA034",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0227"
+    ],
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0227"
+    ],
+    "gold_evidence_spans": [
+      "对于判定完成后的产线停机（停机时间≥30分钟），进行故障（延误）报告填报及审批"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0227"
+      ],
+      "block_ids": [
+        "天津钢管设备管理系统-需求规格说明书:B0227"
+      ],
+      "documents": [
+        "天津钢管设备管理系统-需求规格说明书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA034",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "该节唯一的时长阈值即“停机时间≥30分钟”，答案由证据句直接支持，章节与题型正确。"
+  },
+  {
+    "question": "实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "本项目实施周期：合同签订后12个月内，完成整体交付使用",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "项目实施要求 > 实施范围",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037",
+    "gold_evidence_span": "本项目实施周期：合同签订后12个月内，完成整体交付使用",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA035",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037"
+    ],
+    "gold_evidence_spans": [
+      "本项目实施周期：合同签订后12个月内，完成整体交付使用"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0037"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA035",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "实施范围节内只有该条给出时长要求（合同签订后12个月），答案由证据句直接支持且唯一。"
+  },
+  {
+    "question": "为确保系统建成后保持一定的先进性，对参与投标的企业提出了哪些要求？",
+    "reference_answer": "为确保该系统建成后保持一定的先进性，要求参与投标的企业提供技术先进的可行成熟方案，且已有经成功的业绩案例，并在实施过程中要保证安全可靠、节能降耗、方便系统扩展等原则，确保项目成功",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "source_section": "总则",
+    "gold_evidence_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011",
+    "gold_evidence_span": "为确保该系统建成后保持一定的先进性，要求参与投标的企业提供技术先进的可行成熟方案，且已有经成功的业绩案例，并在实施过程中要保证安全可靠、节能降耗、方便系统扩展等原则，确保项目成功",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA036",
+    "project_id": "P04",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+    ],
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+    ],
+    "gold_evidence_spans": [
+      "为确保该系统建成后保持一定的先进性，要求参与投标的企业提供技术先进的可行成熟方案，且已有经成功的业绩案例，并在实施过程中要保证安全可靠、节能降耗、方便系统扩展等原则，确保项目成功"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+      ],
+      "block_ids": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+      ],
+      "documents": [
+        "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P04-QA036",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "原题干问“支持或提供什么能力”与对投标企业的要求语义不符，改为针对投标方案要求的问法；证据唯一、答案不变。",
+    "proposed_rewrite": {
+      "question": "为确保系统建成后保持一定的先进性，对参与投标的企业提出了哪些要求？",
+      "answer": "为确保该系统建成后保持一定的先进性，要求参与投标的企业提供技术先进的可行成熟方案，且已有经成功的业绩案例，并在实施过程中要保证安全可靠、节能降耗、方便系统扩展等原则，确保项目成功",
+      "span": "为确保该系统建成后保持一定的先进性，要求参与投标的企业提供技术先进的可行成熟方案，且已有经成功的业绩案例，并在实施过程中要保证安全可靠、节能降耗、方便系统扩展等原则，确保项目成功",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "setting": {
+    "encoder": "BAAI/bge-m3",
+    "fair_context_for_all_methods": true,
+    "v6_parent_weight": 0.35,
+    "v6_child_weight": 0.65,
+    "v6_child_target_tokens": 112,
+    "v6_child_max_tokens": 176
+  },
+  "macro_average": {
+    "fixed": {"boundary_f1": 0.0, "mrr": 0.4773, "hit_rate@1": 0.3351, "hit_rate@3": 0.5538, "hit_rate@5": 0.6406},
+    "recursive": {"boundary_f1": 0.04, "mrr": 0.5658, "hit_rate@1": 0.4635, "hit_rate@3": 0.6111, "hit_rate@5": 0.6684},
+    "structure": {"boundary_f1": 0.8962, "mrr": 0.5569, "hit_rate@1": 0.4288, "hit_rate@3": 0.6111, "hit_rate@5": 0.6979},
+    "semantic": {"boundary_f1": 0.5224, "mrr": 0.5702, "hit_rate@1": 0.4288, "hit_rate@3": 0.6788, "hit_rate@5": 0.7222},
+    "proposed_v5": {"boundary_f1": 0.899, "mrr": 0.6251, "hit_rate@1": 0.474, "hit_rate@3": 0.7535, "hit_rate@5": 0.8142},
+    "proposed_v6": {"boundary_f1": 0.899, "mrr": 0.6682, "hit_rate@1": 0.5347, "hit_rate@3": 0.7708, "hit_rate@5": 0.8576}
+  }
+}

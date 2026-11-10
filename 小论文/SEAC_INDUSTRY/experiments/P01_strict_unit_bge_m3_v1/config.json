@@ -1,0 +1,37 @@
+{
+  "corpus": "workbench/P01/corpus.json",
+  "corpus_sha256": "9eb9394bbfdd035d0d360883b9491c41fde94c7d7188dd3992075145a5b03cd0",
+  "qa": "workbench/P01/qa_review_set_keep_unit_aligned.json",
+  "qa_sha256": "4d0eff782c6c77440062da899dcfba9e48b31ce0b952bbf5a377bef8571d248f",
+  "breakpoints": "workbench/P01/candidate_breakpoints_adjudicated.json",
+  "breakpoints_sha256": "472310eb809896c599e7122045736937c021cd2c66dcdb5229013249fad628e6",
+  "methods": [
+    "proposed_v6"
+  ],
+  "max_tokens": 512,
+  "overlap": 64,
+  "semantic_percentile": 0.8,
+  "proposed_soft_target": 320,
+  "proposed_dense_target": 224,
+  "proposed_min_chunk": 48,
+  "v6_child_target": 112,
+  "v6_child_max": 176,
+  "fair_context": true,
+  "hierarchy_parent_weight": 0.35,
+  "evidence_mode": "unit",
+  "allow_unreviewed_qa": false,
+  "allow_provisional_breakpoints": false,
+  "semantic_encoder": "bge-m3",
+  "model_batch_size": 8,
+  "device": "cpu",
+  "formal_run": false,
+  "run_status": "COMPLETE",
+  "paper_status": "VALIDATION_ONLY_PRIVACY_PENDING",
+  "validation_only_reason": "The 27 P01 QA records were content-audited and unit-aligned but lacked the privacy_review_status gate introduced after this run started.",
+  "python_version": "3.12.13",
+  "package_versions": {
+    "sentence-transformers": "5.6.0",
+    "langchain-text-splitters": "1.1.2",
+    "llama-index-core": "0.14.23"
+  }
+}

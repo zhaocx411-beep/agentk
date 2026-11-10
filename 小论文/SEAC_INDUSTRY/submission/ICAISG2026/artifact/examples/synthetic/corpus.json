@@ -1,0 +1,42 @@
+[
+  {
+    "file_name": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "blocks": [
+      {
+        "block_id": "SYN-B001",
+        "block_type": "heading",
+        "heading_path": "Inventory service",
+        "text": "Inventory service"
+      },
+      {
+        "block_id": "SYN-B002",
+        "block_type": "paragraph",
+        "heading_path": "Inventory service > Lookup",
+        "text": "The lookup operation must return one record for an existing item identifier."
+      },
+      {
+        "block_id": "SYN-B003",
+        "block_type": "table",
+        "heading_path": "Inventory service > Lookup > Request fields",
+        "rows": [
+          ["Field", "Type", "Required"],
+          ["item_id", "string", "yes"],
+          ["include_history", "boolean", "no"]
+        ]
+      },
+      {
+        "block_id": "SYN-B004",
+        "block_type": "heading",
+        "heading_path": "Inventory service > Status",
+        "text": "Status rules"
+      },
+      {
+        "block_id": "SYN-B005",
+        "block_type": "paragraph",
+        "heading_path": "Inventory service > Status",
+        "text": "A newly created item has a default status of disabled until it is approved."
+      }
+    ]
+  }
+]

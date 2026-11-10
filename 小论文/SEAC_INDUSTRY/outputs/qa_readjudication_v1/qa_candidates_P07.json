@@ -1,0 +1,1335 @@
+[
+  {
+    "question": "获取组织信息接口使用什么请求方式？",
+    "reference_answer": "GET",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "1.请求信息",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0019",
+    "gold_evidence_span": "1 | 001 | 获取组织信息 | 获取当前组织管理信息 | GET | 实时 | 财务模块 | 组织模块",
+    "question_type": "API",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0019",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA001",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R002"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015"
+    ],
+    "gold_evidence_spans": [
+      "1 | 001 | 获取组织信息 | 获取当前组织管理信息 | GET | 实时 | 财务模块 | 组织模块"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R002"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA001",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "“1.请求信息”是重复15次的编号小节，题干补上接口名；“1）请求方式：GET”在三个接口逐字重复，改用接口清单中唯一定位该接口的行（接口方式列为GET）作证据。",
+    "proposed_rewrite": {
+      "question": "获取组织信息接口使用什么请求方式？",
+      "answer": "GET",
+      "span": "1 | 001 | 获取组织信息 | 获取当前组织管理信息 | GET | 实时 | 财务模块 | 组织模块",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "获取组织信息接口返回信息中参数 id 的类型、是否必填及含义是什么？",
+    "reference_answer": "类型为String，必填，含义为部门id",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "3.返回信息",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027",
+    "gold_evidence_span": "id | String | | 是 | 部门id",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R002",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA002",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R002"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027"
+    ],
+    "gold_evidence_spans": [
+      "id | String | | 是 | 部门id"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R002"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA002",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "“3.返回信息”是9处同名小节，题干补上接口名后返回表行可唯一对齐；取值范围列为空，改问参数含义以与其他返回表的同名行区分。",
+    "proposed_rewrite": {
+      "question": "获取组织信息接口返回信息中参数 id 的类型、是否必填及含义是什么？",
+      "answer": "类型为String，必填，含义为部门id",
+      "span": "id | String | | 是 | 部门id",
+      "answer_grounding": "PARAPHRASE_GROUNDED",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "获取组织信息接口返回信息中参数 no 的类型、是否必填及含义是什么？",
+    "reference_answer": "类型为String，必填，含义为部门编号",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "3.返回信息",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027",
+    "gold_evidence_span": "no | String | | 是 | 部门编号",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R003",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA003",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R003"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027"
+    ],
+    "gold_evidence_spans": [
+      "no | String | | 是 | 部门编号"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R003"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA003",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "题干补上接口名后该行唯一；取值范围列为空故改问含义，避免与人员工号等同名行混淆。",
+    "proposed_rewrite": {
+      "question": "获取组织信息接口返回信息中参数 no 的类型、是否必填及含义是什么？",
+      "answer": "类型为String，必填，含义为部门编号",
+      "span": "no | String | | 是 | 部门编号",
+      "answer_grounding": "PARAPHRASE_GROUNDED",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "获取人员信息接口返回信息中参数 name 的类型、是否必填及含义是什么？",
+    "reference_answer": "类型为String，必填，含义为人员姓名",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "3.返回信息",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051",
+    "gold_evidence_span": "name | String | | 是 | 人员姓名",
+    "question_type": "API parameter",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R003",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA004",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R003"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051"
+    ],
+    "gold_evidence_spans": [
+      "name | String | | 是 | 人员姓名"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R003"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA004",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "题干补上接口名后该行唯一；取值范围列为空故改问含义，可与部门名称、岗位名称等同名行区分。",
+    "proposed_rewrite": {
+      "question": "获取人员信息接口返回信息中参数 name 的类型、是否必填及含义是什么？",
+      "answer": "类型为String，必填，含义为人员姓名",
+      "span": "name | String | | 是 | 人员姓名",
+      "answer_grounding": "PARAPHRASE_GROUNDED",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "HR_PASSPORT_VISA 表用于记录什么信息？",
+    "reference_answer": "本表用例记录人员护照、签证信息",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > HR_PASSPORT_VISA",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004",
+    "gold_evidence_span": "1、 | 表名 | HR_PASSPORT_VISA | 表的描述 | 本表用例记录人员护照、签证信息 | | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA005",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R001"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004"
+    ],
+    "gold_evidence_spans": [
+      "1、 | 表名 | HR_PASSPORT_VISA | 表的描述 | 本表用例记录人员护照、签证信息 | | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R001"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA005",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表定义行“表的描述”直接给出答案，表名与小节唯一（原文“用例”为笔误，答案照录原文）。"
+  },
+  {
+    "question": "HR_ENTRY_EXIT 表用于记录什么信息？",
+    "reference_answer": "本表用例记录出入境信息",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > HR_ENTRY_EXIT",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005",
+    "gold_evidence_span": "2、 | 表名 | HR_ENTRY_EXIT | 表的描述 | 本表用例记录出入境信息 | | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA006",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005#R001"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005"
+    ],
+    "gold_evidence_spans": [
+      "2、 | 表名 | HR_ENTRY_EXIT | 表的描述 | 本表用例记录出入境信息 | | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005#R001"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA006",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表定义行直接给出“本表用例记录出入境信息”，HR_ENTRY_EXIT小节唯一，答案唯一。"
+  },
+  {
+    "question": "HR_EMPLOYEE_APPLICATION 表用于记录什么信息？",
+    "reference_answer": "本表用例记录人员需求申请流程信息",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > HR_EMPLOYEE_APPLICATION",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006",
+    "gold_evidence_span": "3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA007",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R001"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006"
+    ],
+    "gold_evidence_spans": [
+      "3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R001"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA007",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表定义行直接给出“本表用例记录人员需求申请流程信息”，表名与小节唯一。"
+  },
+  {
+    "question": "SALARY_INDONESIA 表用于记录什么信息？",
+    "reference_answer": "本表用例记录印尼十三薪信息",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > SALARY_INDONESIA",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007",
+    "gold_evidence_span": "4、 | 表名 | SALARY_INDONESIA | 表的描述 | 本表用例记录印尼十三薪信息 | | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA008",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007#R001"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007"
+    ],
+    "gold_evidence_spans": [
+      "4、 | 表名 | SALARY_INDONESIA | 表的描述 | 本表用例记录印尼十三薪信息 | | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007#R001"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA008",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表定义行直接给出“本表用例记录印尼十三薪信息”，证据唯一；答案涉及薪酬项目，建议隐私复核。"
+  },
+  {
+    "question": "SALARY_SUBSIDY 表用于记录什么信息？",
+    "reference_answer": "本表用例记录驻外补贴信息",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > SALARY_SUBSIDY",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008",
+    "gold_evidence_span": "5、 | 表名 | SALARY_SUBSIDY | 表的描述 | 本表用例记录驻外补贴信息 | | | |",
+    "question_type": "Database",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008#R001",
+    "evidence_alignment_status": "UNIQUE_EXACT_ROW",
+    "qa_id": "QA009",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008#R001"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008"
+    ],
+    "gold_evidence_spans": [
+      "5、 | 表名 | SALARY_SUBSIDY | 表的描述 | 本表用例记录驻外补贴信息 | | | |"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008#R001"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA009",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "表定义行直接给出“本表用例记录驻外补贴信息”，证据唯一；答案涉及境外补贴制度，建议隐私复核。"
+  },
+  {
+    "question": "销售出库中规定了什么约束？",
+    "reference_answer": "销售出库单可以进行手工自制（未启用销售管理），也可以参照销售订单、销售发票、发货单生成，前提是必须通过流程配置",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目建设方案 > 系统功能设计 > 财务供应链功能 > 销售管理 > 销售出库",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0173",
+    "gold_evidence_span": "销售出库单可以进行手工自制（未启用销售管理），也可以参照销售订单、销售发票、发货单生成，前提是必须通过流程配置",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0173",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA010",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0173"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0173"
+    ],
+    "gold_evidence_spans": [
+      "销售出库单可以进行手工自制（未启用销售管理），也可以参照销售订单、销售发票、发货单生成，前提是必须通过流程配置"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0173"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0173"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA010",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "销售出库小节仅一段正文，span是其中唯一的约束句（必须通过流程配置），答案唯一且未见他处重复。"
+  },
+  {
+    "question": "总账中规定了什么约束？",
+    "reference_answer": "通常情况下，进行过外币业务的会计处理，在会计期间（月份、季度或年度）终了时必须计算汇兑损益，并进行相应的账务处理",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 总账",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0206",
+    "gold_evidence_span": "通常情况下，进行过外币业务的会计处理，在会计期间（月份、季度或年度）终了时必须计算汇兑损益，并进行相应的账务处理",
+    "question_type": "Constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0206",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA011",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0206"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0206"
+    ],
+    "gold_evidence_spans": [
+      "通常情况下，进行过外币业务的会计处理，在会计期间（月份、季度或年度）终了时必须计算汇兑损益，并进行相应的账务处理"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0206"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0206"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA011",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "总账节含现金流量表、汇兑损益、自定义转账及凭证类别约束等多条并列内容，“规定了什么约束”存在多个同样合理的答案。"
+  },
+  {
+    "question": "项目背景支持或提供什么能力？",
+    "reference_answer": "蔚蓝集团的信息化目前依托南钢本部提供的OA、（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "概述 > 项目背景",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0044",
+    "gold_evidence_span": "蔚蓝集团的信息化目前依托南钢本部提供的OA、（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0044",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA012",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0044"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0044"
+    ],
+    "gold_evidence_spans": [
+      "蔚蓝集团的信息化目前依托南钢本部提供的OA、（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格书:B0044"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格书:B0044"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA012",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "答案是信息化现状陈述而非系统能力，题型不符；且与QA014为同一事实的近重复。"
+  },
+  {
+    "question": "蔚蓝人资系统使用什么平台进行建设开发？该平台支持哪些能力？",
+    "reference_answer": "蔚蓝人资系统建设使用金恒自主研发的低代码平台进行建设开发，平台支持通过前台配置+个性化开发的方式，实现系统快速搭建，也能最大程度满足用户个性化需求，通过前台配置即可完成数据建模、页面设计、审批流程搭建",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "系统详细架构 > 2.2应用组件及关系",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0070",
+    "gold_evidence_span": "蔚蓝人资系统建设使用金恒自主研发的低代码平台进行建设开发，平台支持通过前台配置+个性化开发的方式，实现系统快速搭建，也能最大程度满足用户个性化需求，通过前台配置即可完成数据建模、页面设计、审批流程搭建",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0070",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA013",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0126",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0070"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0126",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0070"
+    ],
+    "gold_evidence_spans": [
+      "蔚蓝人资系统建设使用金恒自主研发的低代码平台进行建设开发，平台支持通过前台配置+个性化开发的方式，实现系统快速搭建，也能最大程度满足用户个性化需求，通过前台配置即可完成数据建模、页面设计、审批流程搭建"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0126",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0070"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0126",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0070"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx",
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA013",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "题干原以“2.2”编号指代小节，按多证据模型泛化为事实本身；方案建议书B0126与详细设计规格书B0070原文一致，可同为证据。",
+    "proposed_rewrite": {
+      "question": "蔚蓝人资系统使用什么平台进行建设开发？该平台支持哪些能力？",
+      "answer": "蔚蓝人资系统建设使用金恒自主研发的低代码平台进行建设开发，平台支持通过前台配置+个性化开发的方式，实现系统快速搭建，也能最大程度满足用户个性化需求，通过前台配置即可完成数据建模、页面设计、审批流程搭建",
+      "span": "蔚蓝人资系统建设使用金恒自主研发的低代码平台进行建设开发，平台支持通过前台配置+个性化开发的方式，实现系统快速搭建，也能最大程度满足用户个性化需求，通过前台配置即可完成数据建模、页面设计、审批流程搭建",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "项目背景描述了什么实现或处理过程？",
+    "reference_answer": "蔚蓝集团的信息化目前依托南钢本部提供的OA、DHR（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "概述 > 项目背景",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0053",
+    "gold_evidence_span": "蔚蓝集团的信息化目前依托南钢本部提供的OA、DHR（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0053",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA014",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0053"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0053"
+    ],
+    "gold_evidence_spans": [
+      "蔚蓝集团的信息化目前依托南钢本部提供的OA、DHR（仅管理中国员工）、主数据管理、财务共享及NC65系统，并通过低代码平台搭建办公应用，以及搭建微信流程审批，初步满足现场管理需求"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0053"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0053"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA014",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "答案为现状描述而非实现或处理过程，题型不符；与QA012同一事实重复，两条均不保留。"
+  },
+  {
+    "question": "项目背景中描述了什么数量、时长或比例要求？",
+    "reference_answer": "(1)使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "概述 > 项目背景",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0055",
+    "gold_evidence_span": "(1)使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0055",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA015",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+    ],
+    "gold_evidence_spans": [
+      "(1)使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA015",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "答案内容是项目目标而非项目背景中的数量要求，章节归属不当；且与QA024同一事实重复。"
+  },
+  {
+    "question": "经济性分析中描述了什么数量、时长或比例要求？",
+    "reference_answer": "还可通过信息化系统有效分析员工加班时数和加班费支出，优化加班制度，降低人工成本，加班费占工资占比比例从50%降低到40%，人均降低1小时加班费，年节约加班费384万元（10*20*1600*12）",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的必要性与可行性分析 > 经济性分析",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0085",
+    "gold_evidence_span": "还可通过信息化系统有效分析员工加班时数和加班费支出，优化加班制度，降低人工成本，加班费占工资占比比例从50%降低到40%，人均降低1小时加班费，年节约加班费384万元（10*20*1600*12）",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0085",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA016",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0085"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0085"
+    ],
+    "gold_evidence_spans": [
+      "还可通过信息化系统有效分析员工加班时数和加班费支出，优化加班制度，降低人工成本，加班费占工资占比比例从50%降低到40%，人均降低1小时加班费，年节约加班费384万元（10*20*1600*12）"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0085"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0085"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA016",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "经济性分析节B0085、B0086、B0087并列多项数量与比例要求，题干未限定，答案不唯一。"
+  },
+  {
+    "question": "系统在并发用户数和接口、画面响应时间方面有哪些性能要求？",
+    "reference_answer": "在大量用户同时对系统进行访问或操作时，系统仍能快速响应、稳定运行，支持不少于1000人在线并发，80%数据接口和画面响应时间基本控制在3秒以内，20%数据量较大的数据接口和画面响应时间不超过20s",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "系统详细架构 > 2.2应用组件及关系",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0071",
+    "gold_evidence_span": "在大量用户同时对系统进行访问或操作时，系统仍能快速响应、稳定运行，支持不少于1000人在线并发，80%数据接口和画面响应时间基本控制在3秒以内，20%数据量较大的数据接口和画面响应时间不超过20s",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0071",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA017",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0127",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0071"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0127",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0071"
+    ],
+    "gold_evidence_spans": [
+      "在大量用户同时对系统进行访问或操作时，系统仍能快速响应、稳定运行，支持不少于1000人在线并发，80%数据接口和画面响应时间基本控制在3秒以内，20%数据量较大的数据接口和画面响应时间不超过20s"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0127",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0071"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0127",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0071"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx",
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA017",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "去掉题干中的“2.2”编号指代，改为事实本身的自然问法；两处等价位置原文一致，性能指标句在该节内唯一。",
+    "proposed_rewrite": {
+      "question": "系统在并发用户数和接口、画面响应时间方面有哪些性能要求？",
+      "answer": "在大量用户同时对系统进行访问或操作时，系统仍能快速响应、稳定运行，支持不少于1000人在线并发，80%数据接口和画面响应时间基本控制在3秒以内，20%数据量较大的数据接口和画面响应时间不超过20s",
+      "span": "在大量用户同时对系统进行访问或操作时，系统仍能快速响应、稳定运行，支持不少于1000人在线并发，80%数据接口和画面响应时间基本控制在3秒以内，20%数据量较大的数据接口和画面响应时间不超过20s",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  },
+  {
+    "question": "必要性分析描述了什么实现或处理过程？",
+    "reference_answer": "然而，对于采购、销售、库存、财务及人资的各项业务均未实现系统一体化，业务无法高效流转，财务难以精准地追溯业务，无法通过系统进行成本核算，影响经营决策，需要建设业财人资一体化的系统",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的必要性与可行性分析 > 必要性分析",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0057",
+    "gold_evidence_span": "然而，对于采购、销售、库存、财务及人资的各项业务均未实现系统一体化，业务无法高效流转，财务难以精准地追溯业务，无法通过系统进行成本核算，影响经营决策，需要建设业财人资一体化的系统",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0057",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA018",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0057"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0057"
+    ],
+    "gold_evidence_spans": [
+      "然而，对于采购、销售、库存、财务及人资的各项业务均未实现系统一体化，业务无法高效流转，财务难以精准地追溯业务，无法通过系统进行成本核算，影响经营决策，需要建设业财人资一体化的系统"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0057"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0057"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA018",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "答案以“然而”承接上文，脱离上下文不完整；必要性分析节19块并列现状与需求描述同样可作答。"
+  },
+  {
+    "question": "必要性分析支持或提供什么能力？",
+    "reference_answer": "人力资源管理需要掌握的人力资源的信息非常丰富，如：员工的专业技能、能力素质、职位变化和教育经历等等，这些信息多而分散，因为欠缺成熟的系统支持，导致人力资源业务人员难以全面掌握及时更新",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的必要性与可行性分析 > 必要性分析",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0066",
+    "gold_evidence_span": "人力资源管理需要掌握的人力资源的信息非常丰富，如：员工的专业技能、能力素质、职位变化和教育经历等等，这些信息多而分散，因为欠缺成熟的系统支持，导致人力资源业务人员难以全面掌握及时更新",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0066",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA019",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0066",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0047"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0066",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0047"
+    ],
+    "gold_evidence_spans": [
+      "人力资源管理需要掌握的人力资源的信息非常丰富，如：员工的专业技能、能力素质、职位变化和教育经历等等，这些信息多而分散，因为欠缺成熟的系统支持，导致人力资源业务人员难以全面掌握及时更新"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0066",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0047"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0066",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0047"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx",
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA019",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "跨文档重复本轮不再是拒绝理由，但答案描述的是人力资源现状问题而非系统能力，题型不符，且必要性分析节多段同样可答。"
+  },
+  {
+    "question": "可行性分析支持或提供什么能力？",
+    "reference_answer": "在人力资源集团管控和信息化系统建设上有成功经验，蔚蓝人资模块建设时可参考主业、新产业信息化建设过程中管理理念和建设经验，同时蔚蓝集团在对子公司管理上已经形成一套统一的管理思路，具备相应管理规则",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的必要性与可行性分析 > 可行性分析",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0077",
+    "gold_evidence_span": "在人力资源集团管控和信息化系统建设上有成功经验，蔚蓝人资模块建设时可参考主业、新产业信息化建设过程中管理理念和建设经验，同时蔚蓝集团在对子公司管理上已经形成一套统一的管理思路，具备相应管理规则",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0077",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA020",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0077"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0077"
+    ],
+    "gold_evidence_spans": [
+      "在人力资源集团管控和信息化系统建设上有成功经验，蔚蓝人资模块建设时可参考主业、新产业信息化建设过程中管理理念和建设经验，同时蔚蓝集团在对子公司管理上已经形成一套统一的管理思路，具备相应管理规则"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0077"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0077"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA020",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "可行性分析节B0076、B0078同样回答“提供什么能力”，答案不唯一；且答案是集团既有建设经验而非系统能力。"
+  },
+  {
+    "question": "经济性分析描述了什么实现或处理过程？",
+    "reference_answer": "核算效率提升：成本核算从每月月底报材料消耗情况和产成品情况，由成本会计在Excel表中手工计算的情况转变为通过系统自动归集产品成本，进行成本核算和财务管理，提升经营决策能力，核算时间由5天提升到1天，显著提高核算效率",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的必要性与可行性分析 > 经济性分析",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0086",
+    "gold_evidence_span": "核算效率提升：成本核算从每月月底报材料消耗情况和产成品情况，由成本会计在Excel表中手工计算的情况转变为通过系统自动归集产品成本，进行成本核算和财务管理，提升经营决策能力，核算时间由5天提升到1天，显著提高核算效率",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0086",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA021",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0086"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0086"
+    ],
+    "gold_evidence_spans": [
+      "核算效率提升：成本核算从每月月底报材料消耗情况和产成品情况，由成本会计在Excel表中手工计算的情况转变为通过系统自动归集产品成本，进行成本核算和财务管理，提升经营决策能力，核算时间由5天提升到1天，显著提高核算效率"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0086"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0086"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA021",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "经济性分析三段均描述改进过程，题干未限定“成本核算”，存在多个同样合理的答案。"
+  },
+  {
+    "question": "项目目标及效果描述了什么实现或处理过程？",
+    "reference_answer": "一、财务供应链管理：涵盖采购、供应、销售、财务业务，促进业务的规范化、流程化、线上化，提高流程效率",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的目标与范围 > 项目目标及效果",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0091",
+    "gold_evidence_span": "一、财务供应链管理：涵盖采购、供应、销售、财务业务，促进业务的规范化、流程化、线上化，提高流程效率",
+    "question_type": "Process",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0091",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA022",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0091"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0091"
+    ],
+    "gold_evidence_spans": [
+      "一、财务供应链管理：涵盖采购、供应、销售、财务业务，促进业务的规范化、流程化、线上化，提高流程效率"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0091"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0091"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA022",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "项目目标及效果节四项目标并列且下含十余条效益条目，题干未限定，答案不唯一。"
+  },
+  {
+    "question": "项目目标及效果支持或提供什么能力？",
+    "reference_answer": "四、基础设施和安全架构：规划并建设一体化的IT主干网络和冗余的服务器架构，建立多维度的网络安全防御体系，为信息系统和数据传输提供稳定、可靠的基础支撑和安全通道",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的目标与范围 > 项目目标及效果",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0094",
+    "gold_evidence_span": "四、基础设施和安全架构：规划并建设一体化的IT主干网络和冗余的服务器架构，建立多维度的网络安全防御体系，为信息系统和数据传输提供稳定、可靠的基础支撑和安全通道",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0094",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA023",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0094"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0094"
+    ],
+    "gold_evidence_spans": [
+      "四、基础设施和安全架构：规划并建设一体化的IT主干网络和冗余的服务器架构，建立多维度的网络安全防御体系，为信息系统和数据传输提供稳定、可靠的基础支撑和安全通道"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0094"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0094"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA023",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "与QA022同节同问法，四项目标并列导致答案不唯一，两条均不保留。"
+  },
+  {
+    "question": "项目目标及效果中描述了什么数量、时长或比例要求？",
+    "reference_answer": "使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目的目标与范围 > 项目目标及效果",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0102",
+    "gold_evidence_span": "使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%",
+    "question_type": "Numeric constraint",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0102",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA024",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0102",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0102",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+    ],
+    "gold_evidence_spans": [
+      "使人资业务由线下人工管理转为线上管理，实现人员入转调离流程化、信息化，形成全生命周期的人事资料，实现电子考勤，考勤核算效率提升100%"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 2,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0102",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0102",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0055"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx",
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA024",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "跨文档重复可由多证据解决，但同节B0099、B0103亦为“效率提升100%”表述，答案仍不唯一。"
+  },
+  {
+    "question": "项目总体设计原则支持或提供什么能力？",
+    "reference_answer": "易于扩展性原则：系统架构设计具备良好的扩展性，支持未来的业务扩展",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目总体设计原则",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0116",
+    "gold_evidence_span": "易于扩展性原则：系统架构设计具备良好的扩展性，支持未来的业务扩展",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0116",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA025",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0116"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0116"
+    ],
+    "gold_evidence_spans": [
+      "易于扩展性原则：系统架构设计具备良好的扩展性，支持未来的业务扩展"
+    ],
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0116"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0116"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ],
+      "cross_document": false,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA025",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "candidate_state": "EXCLUDED",
+    "suggested_difficulty": "Easy",
+    "prereview_notes": "项目总体设计原则节并列安全可靠、易于扩展、实用易用、遵循技术规范四条原则，题干未限定哪一条，答案不唯一。"
+  },
+  {
+    "question": "本项目在网络和安全架构上规划建设了什么，为哪些用途提供支撑？",
+    "reference_answer": "本项目规划一体化的网络和安全架构，建设IT主干网络，为各类数据提供传输通道，支撑办公室查看现场HMI画面",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "系统详细架构 > 2.3系统组网方案",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0078",
+    "gold_evidence_span": "本项目规划一体化的网络和安全架构，建设IT主干网络，为各类数据提供传输通道，支撑办公室查看现场HMI画面",
+    "question_type": "Feature",
+    "draft_origin": "rule_generated_for_human_review",
+    "privacy_flags": [],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0078",
+    "evidence_alignment_status": "BLOCK_IS_UNIT",
+    "qa_id": "QA026",
+    "project_id": "P07",
+    "review_notes": "",
+    "privacy_review_status": "PENDING",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0136",
+      "财务人资供应链及基础设施建设-方案建议书:B0289",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0078"
+    ],
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0136",
+      "财务人资供应链及基础设施建设-方案建议书:B0289",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0078"
+    ],
+    "gold_evidence_spans": [
+      "本项目规划一体化的网络和安全架构，建设IT主干网络，为各类数据提供传输通道，支撑办公室查看现场HMI画面"
+    ],
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0136",
+        "财务人资供应链及基础设施建设-方案建议书:B0289",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0078"
+      ],
+      "block_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0136",
+        "财务人资供应链及基础设施建设-方案建议书:B0289",
+        "财务人资供应链及基础设施建设-详细设计规格书:B0078"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx",
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ],
+      "cross_document": true,
+      "declared_unit_included": true
+    },
+    "qa_key": "P07-QA026",
+    "approval_status": "PENDING",
+    "review_source": "LLM_CONTENT_PREREVIEW",
+    "human_approved": false,
+    "suggested_difficulty": "Medium",
+    "prereview_notes": "去掉题干中的“2.3”编号指代，改为事实本身的自然问法；三处等价位置原文一致，答案取该段首句，与后文SD-WAN通道内容可区分。",
+    "proposed_rewrite": {
+      "question": "本项目在网络和安全架构上规划建设了什么，为哪些用途提供支撑？",
+      "answer": "本项目规划一体化的网络和安全架构，建设IT主干网络，为各类数据提供传输通道，支撑办公室查看现场HMI画面",
+      "span": "本项目规划一体化的网络和安全架构，建设IT主干网络，为各类数据提供传输通道，支撑办公室查看现场HMI画面",
+      "answer_grounding": "LITERAL",
+      "ungrounded_segments": [],
+      "verification_failures": []
+    },
+    "candidate_state": "CANDIDATE_REWRITE"
+  }
+]

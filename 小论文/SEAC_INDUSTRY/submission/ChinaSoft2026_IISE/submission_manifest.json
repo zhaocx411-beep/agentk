@@ -1,0 +1,47 @@
+{
+  "conference": "CCF ChinaSoft 2026",
+  "track": "智能化工业软件工程：大模型驱动的开发、保障与治理",
+  "deadline": "2026-09-01",
+  "generated_on": "2026-08-26",
+  "submission_status": "awaiting_author_metadata",
+  "recommended_upload": "补齐作者信息后生成的署名 PDF；仅在系统明确要求匿名时使用匿名备份",
+  "files": [
+    {
+      "path": "SEAC_ChinaSoft2026_IISE_匿名备份.docx",
+      "purpose": "anonymous editable backup",
+      "bytes": 109336,
+      "sha256": "ffbb6213e1a010b6ac4bb4b89e899a163779fb67b5d6e0948fc7db924a9436f6",
+      "validated": true
+    },
+    {
+      "path": "SEAC_ChinaSoft2026_IISE_匿名备份.pdf",
+      "purpose": "anonymous upload backup",
+      "pages": 18,
+      "bytes": 1362951,
+      "sha256": "f407363646ec485953159f8940f595144876032bca4543fa6bac33b3058f410c",
+      "validated": true
+    },
+    {
+      "path": "SEAC_ChinaSoft2026_IISE_署名待填.docx",
+      "purpose": "signed editable draft awaiting real author metadata",
+      "bytes": 109847,
+      "sha256": "315cb8c0f1bcccfc02998c0418f728431d1f49492e5afbf298ec81b963fb8432",
+      "layout_validated": true,
+      "metadata_complete": false
+    },
+    {
+      "path": "SEAC_ChinaSoft2026_IISE_署名待填.pdf",
+      "purpose": "signed layout preview; do not upload with placeholders",
+      "pages": 18,
+      "bytes": 1395468,
+      "sha256": "90c52314c50a0fb3ce107dd648167d685755134a12481328e342011c50d30ba3",
+      "layout_validated": true,
+      "metadata_complete": false
+    }
+  ],
+  "official_links": {
+    "cfp": "https://easychair.org/cfp/2026-IISE",
+    "submission": "https://easychair.org/conferences/?conf=chinasoft2026iise",
+    "cjc_guide": "http://cjc.ict.ac.cn/wltg/zgjz.htm"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "total_candidates": 4783,
+  "second_matched_candidates": 4783,
+  "missing_or_unmatched_second": 0,
+  "disagreements": 131,
+  "final_label_counts": {
+    "NOISE": 325,
+    "BREAK": 1065,
+    "NO_BREAK": 3393
+  },
+  "adjudicated_disagreement_counts": {
+    "NOISE": 20,
+    "BREAK": 104,
+    "NO_BREAK": 7
+  },
+  "changed_from_first": 17,
+  "changed_from_second": 114,
+  "metrics": {
+    "first_vs_second": {
+      "n": 4783,
+      "agree": 4652,
+      "agreement": 0.9726113318001255,
+      "kappa": 0.9366319641094517,
+      "confusion": {
+        "NOISE->NOISE": 305,
+        "NOISE->BREAK": 3,
+        "BREAK->BREAK": 961,
+        "NO_BREAK->NO_BREAK": 3386,
+        "BREAK->NO_BREAK": 104,
+        "BREAK->NOISE": 16,
+        "NO_BREAK->NOISE": 7,
+        "NO_BREAK->BREAK": 1
+      }
+    },
+    "first_vs_final": {
+      "n": 4783,
+      "agree": 4766,
+      "agreement": 0.9964457453481079,
+      "kappa": 0.9919572750700751,
+      "confusion": {
+        "NOISE->NOISE": 308,
+        "BREAK->BREAK": 1065,
+        "NO_BREAK->NO_BREAK": 3393,
+        "BREAK->NOISE": 16,
+        "NO_BREAK->NOISE": 1
+      }
+    },
+    "second_vs_final": {
+      "n": 4783,
+      "agree": 4669,
+      "agreement": 0.9761655864520176,
+      "kappa": 0.9449296721183325,
+      "confusion": {
+        "NOISE->NOISE": 322,
+        "BREAK->NOISE": 3,
+        "BREAK->BREAK": 961,
+        "NO_BREAK->NO_BREAK": 3386,
+        "NO_BREAK->BREAK": 104,
+        "NOISE->NO_BREAK": 6,
+        "BREAK->NO_BREAK": 1
+      }
+    }
+  },
+  "rules": [
+    "概述后进入可独立检索的子功能/画面/接口/数据实体：BREAK。",
+    "数据库设计工作簿开头目录/表清单：NOISE；实际表定义从正文表开始评价。",
+    "业务流程里的签字/会签/安全告知书字段：NO_BREAK，不视作文档签章页噪声。",
+    "封面、目录、目录项相邻：NOISE。",
+    "标题与其直接正文、会议纪要标题与会议基本信息表：NO_BREAK。"
+  ]
+}

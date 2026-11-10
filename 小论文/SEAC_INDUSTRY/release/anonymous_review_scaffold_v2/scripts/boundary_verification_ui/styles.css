@@ -1,0 +1,475 @@
+/* Visual design goals: keep the two units the only thing competing for attention,
+   and make every control reachable without the mouse. */
+
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --hairline: #e3e3e6;
+  --accent: #0071e3;
+  --break: #ff9f0a;
+  --nobreak: #30d158;
+  --noise: #8e8e93;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 18px;
+  padding: 1px 5px;
+  border: 1px solid var(--hairline);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: #fbfbfd;
+  color: var(--ink-soft);
+  font: 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: center;
+}
+
+/* ---------- top bar ---------- */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 24px;
+  background: rgba(245, 245, 247, 0.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.bar-left,
+.bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.candidate-id {
+  font: 600 14px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.02em;
+}
+
+.chip {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #eaeaef;
+  color: var(--ink-soft);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.chip.subtle {
+  background: transparent;
+  border: 1px solid var(--hairline);
+}
+
+.progress {
+  width: 160px;
+  height: 5px;
+  border-radius: 999px;
+  background: #e3e3e6;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.28s ease;
+}
+
+.counter {
+  min-width: 92px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ---------- layout ---------- */
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+.question {
+  margin: 4px 0 20px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-align: center;
+}
+
+.question strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.units {
+  display: grid;
+  gap: 0;
+}
+
+.unit {
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.unit-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.unit-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+
+.unit-type {
+  font: 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--ink-soft);
+}
+
+.section-path {
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.section-path.empty {
+  display: none;
+}
+
+.section-path .same {
+  color: var(--accent);
+}
+
+.evidence {
+  font-size: 15px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* The seam is the thing being judged, so it gets a visual identity of its own. */
+
+.seam {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+}
+
+.seam-line {
+  flex: 1;
+  height: 1px;
+  background: repeating-linear-gradient(90deg, var(--hairline) 0 6px, transparent 6px 12px);
+}
+
+.seam-label {
+  color: var(--ink-soft);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+/* ---------- evidence tables ---------- */
+
+.cells {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cell {
+  min-width: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--hairline);
+  border-radius: 9px;
+  background: #fbfbfd;
+}
+
+.cell-header {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.cell-value {
+  display: block;
+  font-size: 14px;
+}
+
+.cell-value.empty::after {
+  content: "空";
+  color: #c7c7cc;
+}
+
+.collapsed-note {
+  margin-top: 8px;
+  color: #c7c7cc;
+  font-size: 11px;
+}
+
+/* ---------- controls ---------- */
+
+.controls {
+  margin-top: 22px;
+}
+
+.labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px 16px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.label:hover {
+  transform: translateY(-1px);
+}
+
+.label span {
+  font: 600 15px/1.3 inherit;
+}
+
+.label em {
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.label kbd {
+  margin-bottom: 4px;
+}
+
+.label.break.active {
+  border-color: var(--break);
+  box-shadow: 0 0 0 3px rgba(255, 159, 10, 0.18);
+}
+
+.label.nobreak.active {
+  border-color: var(--nobreak);
+  box-shadow: 0 0 0 3px rgba(48, 209, 88, 0.18);
+}
+
+.label.noise.active {
+  border-color: var(--noise);
+  box-shadow: 0 0 0 3px rgba(142, 142, 147, 0.18);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#notes {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+
+#notes:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+.ghost {
+  padding: 7px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.ghost:hover {
+  border-color: #d0d0d5;
+}
+
+.nav {
+  justify-content: flex-start;
+}
+
+.saved {
+  margin-left: auto;
+  color: var(--nobreak);
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.saved.show {
+  opacity: 1;
+}
+
+/* ---------- stats ---------- */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.stat {
+  padding: 4px 10px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat.done {
+  border-color: rgba(48, 209, 88, 0.4);
+  color: #1a7f37;
+}
+
+/* ---------- help ---------- */
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(6px);
+}
+
+.sheet {
+  max-width: 620px;
+  max-height: 84vh;
+  overflow-y: auto;
+  padding: 28px 32px;
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.sheet h2 {
+  margin: 20px 0 10px;
+  font-size: 15px;
+}
+
+.sheet h2:first-child {
+  margin-top: 0;
+}
+
+.sheet dt {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.sheet dd {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.sheet ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.sheet li {
+  margin-bottom: 6px;
+}
+
+.sheet code {
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: #f2f2f7;
+  font: 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.foot {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.done-banner {
+  padding: 40px 24px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: center;
+}

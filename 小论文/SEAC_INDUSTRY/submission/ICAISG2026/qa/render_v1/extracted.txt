@@ -1,0 +1,240 @@
+    Provenance-Preserving Structure-Aware Chunking
+      for Auditable Enterprise Retrieval-Augmented
+                       Generation
+     Abstract-Enterprise retrieval-augmented generation requires         retrieval children whose matches resolve back to a coherent
+evidence that is both relevant and attributable to its source, yet       parent. Table rows retain their headers and original row identity.
+conventional chunkers can separate a requirement from its                Every returned parent carries its ordered source-unit lineage.
+constraints, a table row from its header, or an interface field from         This paper makes three contributions. First, it defines a
+its section context. We present SEAC, a deterministic structure-
+aware chunker that constructs provenance-carrying document
+                                                                         provenance-preserving chunk representation and a transparent
+units, protects structural groups, combines semantic, structural,        boundary rule for heterogeneous engineering documents.
+and key-information-density signals, and indexes table rows as           Second, it provides a frozen industrial evaluation with human
+precise children of coherent parent chunks. A frozen study covers        approval and privacy-release gates, axis-specific withholding
+66,981 units from ten enterprise software projects and compares          rules, and project-clustered inference. Third, it reports both
+15 methods using BGE-M3 embeddings. On six retrieval-eligible            quality and cost, including negative ablation findings. The
+locked projects and 125 human-approved questions, SEAC                   evaluation measures evidence retrieval and boundary
+obtains 0.7937 unit MRR and 0.9520 Hit@5; the strongest non-             agreement; it does not claim that chunking alone prevents
+SEAC baseline obtains 0.7290 MRR. The prespecified comparison
+                                                                         hallucination, prompt injection, or privacy leakage.
+with LlamaIndex yields a project-paired difference of 0.1003 with
+exact p = 0.0625, so the evidence does not establish a statistically                            II. RELATED WORK
+significant confirmatory advantage. Boundary F1 is 0.5673 on six
+independently eligible projects. Removing table-row children                 RAG and dense passage retrieval connect a query to external
+reduces MRR to 0.6853, whereas removing parent fusion increases          text before generation [1], [2]. Retrieval granularity is
+it to 0.8289. SEAC therefore improves observed evidence retrieval        consequential: smaller units improve localization but can lose
+and auditability at higher indexing cost, but does not by itself         context, while larger units retain context but dilute the matching
+establish safer generated answers.                                       signal [4]. Recent work explores long-context embeddings,
+    Keywords-retrieval-augmented generation, document chunking,          recursive hierarchies, learned chunk mixtures, and systematic
+provenance, auditability, software engineering, trustworthy artificial   RAG design [5]-[8]. Document segmentation itself materially
+intelligence                                                             affects retrieval quality [6], yet most evaluations use public
+                                                                         prose or synthetic transformations rather than confidential
+                       I. INTRODUCTION
+                                                                         software artifacts with tables and repeated specifications.
+    Retrieval-augmented generation (RAG) grounds a language                  Document conversion systems can recover headings,
+model in external evidence [1]. In enterprise software                   reading order, and tables [9], but extraction does not determine
+engineering, that evidence is distributed across requirements,           which elements should share a retrieval unit. Software
+interface specifications, database dictionaries, detailed designs,       traceability research links requirements to downstream artifacts
+technical agreements, issue records, and meeting minutes. The            [10], [11]; it motivates stable source identity and evidence
+relevant fact is often not an isolated sentence. A requirement           equivalence when the same approved passage occurs in several
+carries force through an obligation term and its section; an             documents. Long-context studies further show that merely
+interface parameter depends on its endpoint; and a database              placing evidence in a large context does not guarantee effective
+value is meaningful under a column header and constraint. A flat         use [12]. SEAC focuses on the missing interface between
+character window can retrieve plausible words while losing               structured document conversion and provenance-aware
+exactly the context needed to audit an answer.                           enterprise retrieval.
+    This creates a transparency problem before generation
+begins. If retrieval returns a passage whose source units are                                           III. SEAC
+unknown, or a table whose correct row cannot be distinguished,
+a downstream system cannot provide a defensible citation.
+Conversely, returning an entire document increases irrelevant
+context and can hide the supporting span. Chunking should
+therefore balance coherent returned context, fine-grained
+matching, and stable provenance.
+    We propose SEAC, a deterministic structure- and key-                 Fig. 1. SEAC preserves stable source identifiers through boundary scoring,
+information-aware adaptive chunker for auditable enterprise              parent construction, and child-triggered retrieval.
+RAG. SEAC parses ordered units with stable source identifiers,
+prevents cuts through protected groups, uses adjacent semantic
+distance together with explicit document signals, and creates
+    A. Provenance-Carrying Units                                            P04-P10 are collectively locked. No locked result may change
+    Let a parsed document be an ordered sequence of units (D =              parameters, question wording, baseline selection, or exclusion
+(u_1, ..., u_n)). Each unit stores text, a stable unit identifier, its      rules.
+source block, document type, block type, heading path, and an                           TABLE I. AGGREGATED INDUSTRIAL CORPUS
+optional protected-group identifier. Paragraphs and headings are         Projects              Documents                Units               Regex tokens
+units. For a table with header (h), each row (r_j) is rendered as           2                     15                    21,371                    418,541
+                     t(r_j) = header(h) || row(r_j)                         1                      7                    5,193                     103,562
+    so a row remains interpretable outside the table. A parent              7                     67                    40,417                1,155,797
+chunk stores the ordered unit and block identifiers from which it          10                     89                    66,981                1,677,900
+was assembled. Retrieval correctness can then be resolved by
+identifier rather than by approximate string matching.                          All methods use BGE-M3 [3], a 512-token maximum, and
+    B. Transparent Boundary Scoring                                         unit-level evidence. We compare fixed windows, a local
+                                                                            recursive splitter, structure-only and semantic splitters, official
+    For adjacent units, semantic distance is (d_i = 1 -                     LangChain and LlamaIndex splitters, non-hierarchical SEAC,
+cos(e_i,e_i+1)), where (e_i) is a normalized dense embedding.               full SEAC, and seven single-component ablations. The formal
+A structural score (s_i) combines a new-heading indicator,                  matrix contains 15 methods.
+heading-path change, and protected-group transition. A frozen
+engineering lexicon counts obligation, constraint, interface,                   B. Human and Privacy Gates
+field, table, process, and limit terms. Its normalized density is               Boundary references are labelled BREAK, NO_BREAK, or
+         rho(u) = sum(v in V) count(v,u) / max(1, tokens(u))                NOISE. P01 has 4,783 independently double-labelled and
+    and the adjacent density-change score is (k_i = min(1,10|               adjudicated boundaries. For P02-P10, 300 stratified candidates
+rho(u_i)-rho(u_i+1)|)). Continuity penalty (p_i) discourages cuts           per project were pre-labelled by Claude Opus 5 Thinking
+within a heading path and forbids practical separation inside a             through Cursor under a frozen rule set and without method
+protected group. The frozen score is                                        outputs. A human then labelled a blinded random sample of 100
+               b_i = 0.45 d_i + 0.30 s_i + 0.25 k_i - p_i                   per project plus every case the model flagged. Human labels
+                                                                            override pre-labels. A project requires Cohen's kappa of at least
+    For document (D), the threshold is (theta_D = Q_0.8(b) +
+                                                                            0.70 [13]. P08 reached 0.650 and was withheld only from
+0.08r_t - 0.05r_h), where (r_t) and (r_h) are the fractions of table
+                                                                            boundary evaluation; retrieval remains eligible. Across
+rows and headings. Parent construction is a deterministic left-to-
+                                                                            promoted references, 77.5% of 7,183 candidates are human
+right pass with a 512-token hard maximum, a 320-token
+                                                                            verified, 5.4% rule determined, and 17.1% retain the model pre-
+ordinary target, a 224-token target in dense regions, and a 48-
+                                                                            label.
+token minimum. Candidate cuts are suppressed when they split
+                                                                                Question drafts undergo mechanical evidence checks,
+a protected group or detach a heading from its first content unit.
+                                                                            advisory model pre-review, and human approval. Evidence is a
+    C. Hierarchical Retrieval                                               set of stable unit identifiers because approved spans can
+    Each parent is the context returned downstream. Non-                    legitimately repeat across documents. Questions with
+heading, non-noise units also produce retrieval children with a             ambiguous rows or non-distinctive spans are rejected. Privacy
+112-token target and 176-token maximum. Table rows normally                 status is assigned only by an authorized human; records are
+become individual children and retain row provenance.                       admitted only when marked no-risk, anonymized, or explicitly
+Retrieval text is prefixed with document type and heading path.             cleared. P10 retained 11 approved questions, below the frozen
+For parent score (S_p) and child scores (S_c), full SEAC ranks              minimum of 15, and is withheld only from retrieval evaluation.
+                                                                            Consequently, the locked analyses contain 125 questions from
+              S(p,q) = 0.35 S_p(q) + 0.65 max S_c(q)
+                                                                            six retrieval-eligible projects and 1,368 candidates from six
+    A precise row can therefore activate its parent while the               boundary-eligible projects.
+returned text preserves nearby constraints. Excluding encoder
+cost, construction is linear in the number of units; index size                 C. Metrics and Inference
+grows with parents plus children.                                               Unit MRR and Hit at (k) require a returned parent's
+                                                                            provenance to contain an approved evidence unit. Span metrics
+               IV. INDUSTRIAL EVALUATION
+                                                                            additionally check the minimal supporting text. Boundary
+    A. Corpus and Frozen Protocol                                           metrics compare adjacent parent decisions after excluding
+    The corpus contains Chinese-language DOCX and XLSX                      NOISE. We form 95% intervals with 10,000 hierarchical
+artifacts from ten anonymized enterprise projects. It includes              bootstrap samples, resampling projects and then items [14]. The
+requirements, API specifications, database designs, detailed                single confirmatory test compares SEAC with LlamaIndex
+designs, technical agreements, meeting minutes, proposals, and              SentenceSplitter on unit MRR. It exchanges all matched
+research reports. Six unsupported PDF or PPTX files are                     observations within a project together and enumerates all 64
+disclosed as substantive skips. Table I summarizes the fixed                assignments across six projects. Secondary retrieval and
+split. P01-P02 are development projects, P03 is validation, and             boundary families use Holm correction [15].
+                          V. RESULTS                                  set chunking and indexing take 112.11 s and 351.12 s. Mean
+                                                                      query latency is 20.93 ms versus 15.18 ms for structure-only, a
+    A. Retrieval and Boundary Quality
+                                                                      5.74 ms increase. This is an explicit auditability-quality-cost
+    Table II reports locked-test results. SEAC reaches 0.7937         tradeoff rather than a free improvement.
+unit MRR and 0.9520 Hit@5. The strongest non-SEAC retrieval
+baseline is structure-only at 0.7290 MRR, an observed absolute                   VI. DISCUSSION AND LIMITATIONS
+difference of 0.0647. SEAC also yields 0.8561 span MRR.                   The results support a bounded claim: preserving tables and
+Against the prespecified LlamaIndex comparator, the project-          explicit source lineage can improve observed evidence retrieval
+paired MRR difference is 0.1003 with bootstrap interval               in heterogeneous enterprise documents. Unit-level and span-
+[0.0042, 0.2008] and exact two-sided p = 0.0625. SEAC is              level metrics answer different audit questions. A span match
+higher on five of six retrieval projects, but the confirmatory null   shows that relevant text appeared; a unit match shows that it
+is not rejected at 0.05.                                              came from an approved source location. This distinction matters
+                   TABLE II. LOCKED-TEST RESULTS                      when requirements are copied across proposals and
+   Unit MRR                     Hit@5                      Span MRR   specifications or when several table rows share the same
+     0.5158                     0.7200                      0.1350    vocabulary.
+     0.6086                     0.8080                      0.7072        SEAC is also a transparent component, not an end-to-end
+     0.7290                     0.8880                      0.8211    safety guarantee. The study does not measure generated-answer
+     0.6999                     0.8640                      0.8121
+                                                                      faithfulness, adversarial prompts, access-control enforcement,
+     0.6460                     0.8480                      0.7329
+                                                                      or privacy leakage. Confidential inputs remain protected by
+     0.6934                     0.8880                      0.7586
+                                                                      external authorization and release gates. The raw corpus cannot
+                                                                      be public; an anonymous artifact can include code, frozen
+     0.6796                     0.8800                      0.7770
+                                                                      configurations, schemas, synthetic examples, hashes, and
+     0.7937                     0.9520                      0.8561
+                                                                      aggregate analysis. Controlled access to additional artifacts
+                                                                      depends on data-owner approval.
+    SEAC boundary precision is 0.4321, recall is 0.8255, and F1           Validity is limited by ten projects from one industrial setting,
+is 0.5673 with interval [0.4708, 0.6488]. Structure-only is the       six eligible project clusters per evaluation axis, Chinese
+strongest non-SEAC boundary baseline at 0.5032. The paired F1         documents, one embedding model, and unsupported image-
+difference is 0.0640 with interval [0.0313, 0.0956], but the          heavy files. The mixed boundary reference includes model pre-
+Holm-adjusted p value is 0.4375. The high recall and moderate         labels, although its source is recorded per row and low-
+precision indicate that SEAC favors coherent separation at the        agreement P08 is excluded. Post-hoc clarification of three
+cost of additional boundaries.                                        noise categories is disclosed, and agreement is retained before
+    B. Ablations and Cost                                             and after the clarification. Finally, higher MRR without
+                                                                      confirmatory significance and the negative fusion ablation both
+    Table III prevents a one-sided component story. Removing
+                                                                      argue for evaluation on additional independent projects rather
+table-row children produces the largest observed degradation,
+                                                                      than a general superiority claim.
+reducing MRR by 0.1084 and Hit@5 from 0.9520 to 0.8640.
+However, the Holm-adjusted secondary p value for this                                       VII. CONCLUSION
+comparison is 1.0000. Removing semantic distance changes
+                                                                          SEAC combines provenance-carrying units, protected
+MRR by less than four decimal places, and removing parent
+                                                                      structure, transparent boundary signals, and row-level children
+fusion increases MRR to 0.8289. Heading context also increases
+                                                                      for auditable enterprise RAG. In the locked study it obtains
+MRR when removed, although Hit@5 falls to 0.9280. Thus,
+                                                                      0.7937 unit MRR and 0.9520 Hit@5, with an observed but non-
+row-level evidence is useful in this benchmark, while the fixed
+                                                                      significant confirmatory advantage over LlamaIndex. Table-row
+parent-fusion and heading-prefix choices are not supported as
+                                                                      children are the clearest useful component, while parent fusion
+universally beneficial.
+                                                                      and heading context require redesign. Future work should
+              TABLE III. SINGLE-COMPONENT ABLATIONS                   evaluate end-to-end answer faithfulness, adversarial
+              Unit MRR                           Hit@5                robustness, multilingual public corpora, and learned cost-aware
+                0.7937                            0.9520              fusion under independently locked projects.
+                0.7937                            0.9520
+                0.7959                            0.9520                                    ACKNOWLEDGMENT
+                0.7979                            0.9520                  Funding and identity-bearing acknowledgments are
+                0.7959                            0.9520              withheld for double-blind review. Anthropic Claude Opus 5
+                0.8129                            0.9280              Thinking was used as a recorded boundary pre-labeling
+                0.6853                            0.8640              instrument as described in Section IV-B. OpenAI Codex assisted
+                0.8289                            0.9520              code drafting, test generation, manuscript structuring, and
+                                                                      language editing. Human reviewers overrode experimental pre-
+   SEAC creates 8,746 parents and 48,912 retrieval vectors,           labels, verified the analyses and text, and retain responsibility
+5.50 times the vector count of structure-only. Aggregate locked-      for all research and publication decisions.
+                                REFERENCES
+[1] [1] P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H.
+     Kuttler, M. Lewis, W. Yih, T. Rocktaschel, S. Riedel, and D. Kiela,
+     "Retrieval-augmented generation for knowledge-intensive NLP tasks," in
+     Advances in Neural Information Processing Systems, vol. 33, 2020.
+[2] [2] V. Karpukhin, B. Oguz, S. Min, P. Lewis, L. Wu, S. Edunov, D. Chen,
+     and W. Yih, "Dense passage retrieval for open-domain question
+     answering," in Proc. EMNLP, 2020, pp. 6769-6781.
+[3] [3] J. Chen, S. Xiao, P. Zhang, K. Luo, D. Lian, and Z. Liu, "M3-
+     Embedding: Multi-linguality, multi-functionality, multi-granularity text
+     embeddings through self-knowledge distillation," in Findings of ACL,
+     2024, pp. 2318-2335.
+[4] [4] T. Chen, H. Wang, S. Chen, W. Yu, K. Ma, X. Zhao, H. Zhang, and D.
+     Yu, "Dense X retrieval: What retrieval granularity should we use?" in
+     Proc. EMNLP, 2024, pp. 15159-15177.
+[5] [5] X. Wang et al., "Searching for best practices in retrieval-augmented
+     generation," in Proc. EMNLP, 2024, pp. 17716-17736.
+[6] [6] Z. Wang et al., "Document segmentation matters for retrieval-
+     augmented generation," in Findings of ACL, 2025, pp. 8063-8075.
+[7] [7] J. Zhao et al., "MoC: Mixtures of text chunking learners for retrieval-
+     augmented generation system," in Proc. ACL, 2025, pp. 5172-5189.
+[8] [8] P. Sarthi, S. Abdullah, A. Tuli, S. Khanna, A. Goldie, and C. D.
+     Manning, "RAPTOR: Recursive abstractive processing for tree-organized
+     retrieval," in Proc. ICLR, 2024.
+[9] [9] C. Auer et al., "Docling technical report," arXiv:2408.09869, 2024.
+[10] [10] J. L. C. Guo, J. Steghofer, A. Vogelsang, and J. Cleland-Huang,
+     "Natural language processing for requirements traceability,"
+     arXiv:2405.10845, 2024.
+[11] [11] S. J. Ali, V. Naganathan, and D. Bork, "Establishing traceability
+     between natural language requirements and software artifacts by
+     combining RAG and LLMs," in Conceptual Modeling, 2024, pp. 295-314.
+[12] [12] N. F. Liu, K. Lin, J. Hewitt, A. Paranjape, M. Bevilacqua, F. Petroni,
+     and P. Liang, "Lost in the middle: How language models use long
+     contexts," Trans. Assoc. Comput. Linguistics, vol. 12, pp. 157-173, 2024.
+[13] [13] J. Cohen, "A coefficient of agreement for nominal scales," Educ.
+     Psychol. Meas., vol. 20, no. 1, pp. 37-46, 1960.
+[14] [14] B. Efron, "Bootstrap methods: Another look at the jackknife," Ann.
+     Stat., vol. 7, no. 1, pp. 1-26, 1979.
+[15] [15] S. Holm, "A simple sequentially rejective multiple test procedure,"
+     Scand. J. Stat., vol. 6, no. 2, pp. 65-70, 1979.
+[16] [16] LangChain, "RecursiveCharacterTextSplitter, langchain-text-splitters
+     1.1.2," 2026. [Online]. Available: https://pypi.org/project/langchain-text-
+     splitters/1.1.2/
+[17] [17] LlamaIndex, "SentenceSplitter, llama-index-core 0.14.23," 2026.
+     [Online]. Available: https://pypi.org/project/llama-index-core/0.14.23/
+

@@ -1,0 +1,7 @@
+{
+  "artifact_version": "industrial-seac-anonymous-review-scaffold-v1.0",
+  "synthetic_examples_only": true,
+  "human_review_complete": false,
+  "formal_locked_test_results_included": false,
+  "submission_ready": false
+}

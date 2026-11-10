@@ -1,0 +1,44 @@
+{
+  "fixed": {
+    "chunk_count": 938,
+    "mean_chunk_tokens": 510.4488272921109,
+    "min_chunk_tokens": 148,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 25,
+      "tn": 39,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "retrieval": {
+      "mrr": 0.7241254456327986,
+      "hit_rate@1": 0.5625,
+      "hit_rate@3": 0.90625,
+      "hit_rate@5": 0.9375
+    }
+  },
+  "recursive": {
+    "chunk_count": 881,
+    "mean_chunk_tokens": 475.83541430192963,
+    "min_chunk_tokens": 22,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 25,
+      "tn": 35,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "retrieval": {
+      "mrr": 0.7367745535714286,
+      "hit_rate@1": 0.65625,
+      "hit_rate@3": 0.78125,
+      "hit_rate@5": 0.8125
+    }
+  }
+}

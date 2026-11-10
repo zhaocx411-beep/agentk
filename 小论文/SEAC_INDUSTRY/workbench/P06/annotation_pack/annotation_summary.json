@@ -1,0 +1,54 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P06",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "f34056b7caf58ab14c7cfa9327ca9293fb1daeb1e2ef791a02617866c8b6d4ec",
+  "boundary_pool_count": 10110,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 389,
+    "inside_table": 4499,
+    "noise_candidate": 1118,
+    "same_section_continuity": 3109,
+    "table_transition": 995
+  },
+  "sample_strata": {
+    "heading_transition": 55,
+    "inside_table": 97,
+    "noise_candidate": 34,
+    "same_section_continuity": 75,
+    "table_transition": 39
+  },
+  "sample_documents": {
+    "综合服务一体化管理平台-详细设计规格书 V0.4.docx": 86,
+    "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx": 86,
+    "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx": 20,
+    "综合服务一体化管理平台-需求调研会议纪要-20250414.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250415.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250417.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250418.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250419.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250420.docx": 9,
+    "综合服务一体化管理平台-需求调研会议纪要-20250421.docx": 9,
+    "综合服务一体化管理平台会议纪要总和-20250414.docx": 36
+  },
+  "qa_draft_count": 33,
+  "qa_types": {
+    "API": 8,
+    "API parameter": 4,
+    "Database": 7,
+    "Feature": 3,
+    "Meeting fact": 7,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 33,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "ff10f331d9312d3a95eb0c37b29f41c51cdb22102ff6e82231859921aa4c65b4",
+    "boundary_blind_annotator_a.json": "9ab25283e754b393d6af994ab0efb52e1c5322f4983dfbdcce163d75598fa70c",
+    "boundary_blind_annotator_b.json": "72209d827d6b69cb89dcb18df7335e58ed93575ee61fd3890c6628ad138eee29",
+    "qa_draft.json": "aba2e775e4cdb0d3cf6ad55569b62c7024428ba846fbc3ea950e84786463b293"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "protocol_version": "industrial-seac-qa-import-v1.0",
+  "workbook": "outputs/qa_approval_v1/SEAC_QA_approval.xlsx",
+  "workbook_sha256": "23529b30910baf8eff406047900df7261646fb8a9e05496d76ce8a6efe222f13",
+  "written": false,
+  "projects": {
+    "P02": {
+      "candidate_count": 32,
+      "counts": {
+        "APPROVED": 31,
+        "REJECTED": 1
+      },
+      "approved_count": 31,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [
+        {
+          "qa_key": "P02-QA005",
+          "reason": "内容：题干以文件名日期“0708”指代会议，违反 §6.1「不依赖文件名」；同一证据行的时间与地点已由 QA001 以会议室定位覆盖。隐私：客户主体名与纪要人名，受控实验内可用。",
+          "section_scanning": false
+        }
+      ],
+      "section_scanning_rejections": 0,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 6,
+      "written": false,
+      "target": "workbench/P02/qa_approved.json"
+    },
+    "P03": {
+      "candidate_count": 33,
+      "counts": {
+        "APPROVED": 28,
+        "REJECTED": 1,
+        "RULE_EXCLUDED": 4
+      },
+      "approved_count": 28,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [
+        {
+          "qa_key": "P03-QA004",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P03-QA005",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P03-QA006",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P03-QA007",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        }
+      ],
+      "rejected": [
+        {
+          "qa_key": "P03-QA034",
+          "reason": "内容：与 QA031 是同一事实（5 个雨量计）的近重复，且本题证据单元正是 QA031 三处等价位置之一；题干多问的“具体位置在哪个章节说明”只是文档内章节交叉引用，不构成新的领域事实。按 §6.6 不同时保留近重复，保留 QA031。",
+          "section_scanning": false
+        }
+      ],
+      "section_scanning_rejections": 0,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 5,
+      "written": false,
+      "target": "workbench/P03/qa_approved.json"
+    },
+    "P04": {
+      "candidate_count": 28,
+      "counts": {
+        "APPROVED": 22,
+        "REJECTED": 4,
+        "RULE_EXCLUDED": 2
+      },
+      "approved_count": 22,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [
+        {
+          "qa_key": "P04-QA010",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P04-QA011",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        }
+      ],
+      "rejected": [
+        {
+          "qa_key": "P04-QA012",
+          "reason": "内容：与 QA010 的 gold_evidence_span 与参考答案逐字相同，等价证据集也完全相同，两题在检索上无法区分，属 §6.6 近重复；保留 QA010。",
+          "section_scanning": false
+        },
+        {
+          "qa_key": "P04-QA013",
+          "reason": "内容：与 QA011 的 gold_evidence_span 与参考答案逐字相同，等价证据集也完全相同，检索上无法区分，属 §6.6 近重复；保留 QA011。",
+          "section_scanning": false
+        },
+        {
+          "qa_key": "P04-QA034",
+          "reason": "内容：题干为「〈章节名〉中描述了什么数量、时长或比例要求」式的章节扫描型模板问法，答案范围由文档小节而非题干界定，不构成自然、明确的信息需求（§6.1）；本包同型 13 题统一按此处理。证据与答案本身无误，建议改写为「产线停机达到多长时间需填报故障（延误）报告」后重新入池。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P04-QA035",
+          "reason": "内容：同上，「实施范围」纯为文档小节名，题干未指明任何领域主体，脱离该文档即无法理解（§6.1）；建议改写为「本项目要求在合同签订后多久完成整体交付」后重新入池。",
+          "section_scanning": true
+        }
+      ],
+      "section_scanning_rejections": 2,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 5,
+      "written": false,
+      "target": "workbench/P04/qa_approved.json"
+    },
+    "P05": {
+      "candidate_count": 25,
+      "counts": {
+        "APPROVED": 17,
+        "REJECTED": 4,
+        "RULE_EXCLUDED": 4
+      },
+      "approved_count": 17,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [
+        {
+          "qa_key": "P05-QA010",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P05-QA012",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P05-QA013",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.1",
+          "workbook_decision": "APPROVED"
+        },
+        {
+          "qa_key": "P05-QA014",
+          "rule": "RULE_6_1",
+          "reason": "question_begins_with_section_number",
+          "prefix": "2.1.2.2",
+          "workbook_decision": "APPROVED"
+        }
+      ],
+      "rejected": [
+        {
+          "qa_key": "P05-QA028",
+          "reason": "内容：“应用组件及关系”纯为文档小节标题，题干「〈章节名〉支持或提供什么能力」属章节扫描型模板问法，脱离该文档即无法理解，不构成自然、明确的信息需求（§6.1）；本包同型统一按此处理。建议改写为直接询问组件分层与各层职责后重新入池。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P05-QA030",
+          "reason": "内容：题干为「〈章节名〉中描述了什么数量、时长或比例要求」式的章节扫描型模板问法，答案范围由文档小节而非题干界定（§6.1）；本包同型 13 题统一处理，建议改写为「设备位置树要求支持不少于几个层级」后重新入池。隐私：答案含客户主体名（津西）。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P05-QA031",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「本项目实施工期预算为多少个月」后重新入池。隐私：答案含客户主体名与合同工期（§7 CUSTOMER_OR_VENDOR_IDENTITY、PROPRIETARY_BUSINESS_DATA）。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P05-QA033",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「质保期内软件故障的响应解决时限是多久」后重新入池。隐私：答案含供应商主体名（金恒）与服务承诺条款。",
+          "section_scanning": true
+        }
+      ],
+      "section_scanning_rejections": 4,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 2,
+      "written": false,
+      "target": "workbench/P05/qa_approved.json"
+    },
+    "P06": {
+      "candidate_count": 22,
+      "counts": {
+        "APPROVED": 22
+      },
+      "approved_count": 22,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [],
+      "section_scanning_rejections": 0,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 2,
+      "written": false,
+      "target": "workbench/P06/qa_approved.json"
+    },
+    "P07": {
+      "candidate_count": 23,
+      "counts": {
+        "APPROVED": 23
+      },
+      "approved_count": 23,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [],
+      "section_scanning_rejections": 0,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 3,
+      "written": false,
+      "target": "workbench/P07/qa_approved.json"
+    },
+    "P08": {
+      "candidate_count": 24,
+      "counts": {
+        "APPROVED": 22,
+        "REJECTED": 2
+      },
+      "approved_count": 22,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [
+        {
+          "qa_key": "P08-QA012",
+          "reason": "内容：题干为「〈章节名〉中描述了什么数量、时长或比例要求」式的章节扫描型模板问法，答案范围由文档小节而非题干界定（§6.1）；本包同型 13 题统一处理，建议改写为「本项目共设立多少个数据采集站」后重新入池。隐私：片段含客户主体名（烟台华新）。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P08-QA014",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「系统实施工期预算多少个月、各里程碑分别在合同签订后第几个月」后重新入池。隐私：答案含合同工期与验收里程碑（§7 PROPRIETARY_BUSINESS_DATA）。",
+          "section_scanning": true
+        }
+      ],
+      "section_scanning_rejections": 2,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 4,
+      "written": false,
+      "target": "workbench/P08/qa_approved.json"
+    },
+    "P09": {
+      "candidate_count": 20,
+      "counts": {
+        "APPROVED": 19,
+        "REJECTED": 1
+      },
+      "approved_count": 19,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [
+        {
+          "qa_key": "P09-QA011",
+          "reason": "内容：题干为「〈章节名〉中描述了什么数量、时长或比例要求」式的章节扫描型模板问法，问的是文档元信息类别而非某个具体事实，答案范围由小节界定（§6.1）；本包同型 13 题统一处理。建议改写为「本项目需完成轧钢厂、冷精厂各多少套烟气在线监测设备的采集」后重新入池。",
+          "section_scanning": true
+        }
+      ],
+      "section_scanning_rejections": 1,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": true,
+      "multi_evidence_records": 2,
+      "written": false,
+      "target": "workbench/P09/qa_approved.json"
+    },
+    "P10": {
+      "candidate_count": 18,
+      "counts": {
+        "APPROVED": 11,
+        "REJECTED": 7
+      },
+      "approved_count": 11,
+      "pending": [],
+      "problems": [],
+      "rule_excluded": [],
+      "rejected": [
+        {
+          "qa_key": "P10-QA013",
+          "reason": "内容：题干为「〈章节名〉描述了什么实现或处理过程」式的章节扫描型模板问法，问的是文档内容类别而非具体事实，且直接把编号小节“3.2”写进题干，违反 §6.1「不依赖块编号」。建议改写为「能碳管理平台利用谁提供的服务器资源、实现哪些功能」后重新入池。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA014",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；且答案实为现状描述而非“实现或处理过程”，题干与答案语义不符（§6.2）。建议改写为「二级仪表目前如何汇聚、数据以什么方式统计」后重新入池。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA015",
+          "reason": "内容：题干为「〈章节名〉中描述了什么数量、时长或比例要求」式的章节扫描型模板问法，答案范围由文档小节而非题干界定（§6.1）；本包同型 13 题统一处理。建议拆成「现场三级仪表各有多少块」等具体问法后重新入池。隐私：答案披露客户产线与设备构成（§7 PROPRIETARY_BUSINESS_DATA）。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA016",
+          "reason": "内容：同上章节扫描型模板问法，且题干直接带入章节序号“六、”（§6.1）。建议改写为「能碳管理平台合同签订后多久上线试运行、多久验收」后重新入池。隐私：答案含合同工期承诺（§7 PROPRIETARY_BUSINESS_DATA）。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA017",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「共有几个变电所、分别由哪些厂商建设电力后台」后重新入池。隐私：答案披露客户变电所构成与电力后台供应商（§7 SECURITY_ARCHITECTURE、CUSTOMER_OR_VENDOR_IDENTITY），敏感度高于本包平均水平，对外发布须整体删除。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA018",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「工业以太网采用什么拓扑结构、主环网包含几个站点」后重新入池。隐私：答案披露工业网络拓扑与主环网站点数（§7 SECURITY_ARCHITECTURE），对外发布须整体删除。",
+          "section_scanning": true
+        },
+        {
+          "qa_key": "P10-QA024",
+          "reason": "内容：同上章节扫描型模板问法（§6.1）；建议改写为「水系统共有几个站所、是否都有 PLC 控制系统」后重新入池。隐私：答案披露客户水系统站所构成（§7 PROPRIETARY_BUSINESS_DATA）。",
+          "section_scanning": true
+        }
+      ],
+      "section_scanning_rejections": 7,
+      "complete": true,
+      "minimum_qa_count": 15,
+      "meets_minimum": false,
+      "multi_evidence_records": 2,
+      "written": false,
+      "target": "workbench/P10/qa_approved.json"
+    }
+  },
+  "totals": {
+    "APPROVED": 195,
+    "REJECTED": 20,
+    "RULE_EXCLUDED": 10,
+    "projects_complete": 9
+  }
+}

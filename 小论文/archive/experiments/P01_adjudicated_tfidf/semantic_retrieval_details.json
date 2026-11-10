@@ -1,0 +1,398 @@
+[
+  {
+    "qa_id": "QA001",
+    "rank": 26,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0010",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0012",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0018",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020"
+    ]
+  },
+  {
+    "qa_id": "QA002",
+    "rank": 11,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0035",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0037",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0039",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0044",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0046"
+    ]
+  },
+  {
+    "qa_id": "QA003",
+    "rank": 27,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0051",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0064",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0068",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0057",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0066"
+    ]
+  },
+  {
+    "qa_id": "QA004",
+    "rank": 17,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0010",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0013",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0018",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020"
+    ]
+  },
+  {
+    "qa_id": "QA005",
+    "rank": 17,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0010",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0013",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0018",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020"
+    ]
+  },
+  {
+    "qa_id": "QA006",
+    "rank": 14,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0010",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0018",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0025"
+    ]
+  },
+  {
+    "qa_id": "QA007",
+    "rank": 11,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0010",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0018",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0025"
+    ]
+  },
+  {
+    "qa_id": "QA008",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0028",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0035",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0037",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0039",
+      "semantic:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0044"
+    ]
+  },
+  {
+    "qa_id": "QA009",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0126",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0129",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0130",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0128",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0844"
+    ]
+  },
+  {
+    "qa_id": "QA010",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0133",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0136",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0126",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0844",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0129"
+    ]
+  },
+  {
+    "qa_id": "QA011",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0142",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0141",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0146",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0138",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0148"
+    ]
+  },
+  {
+    "qa_id": "QA012",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0146",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0148",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0147",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0142",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0006"
+    ]
+  },
+  {
+    "qa_id": "QA013",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0149",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0154",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0153",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0150",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0152"
+    ]
+  },
+  {
+    "qa_id": "QA014",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0158",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0155",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0157",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0159",
+      "semantic:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0156"
+    ]
+  },
+  {
+    "qa_id": "QA015",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0050",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0051",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0200",
+      "semantic:镔鑫安全二期调研报告.docx:C0084",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0023"
+    ]
+  },
+  {
+    "qa_id": "QA016",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0047",
+      "semantic:镔鑫安全二期调研报告.docx:C0013",
+      "semantic:镔鑫安全二期调研报告.docx:C0048",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0023",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0021"
+    ]
+  },
+  {
+    "qa_id": "QA017",
+    "rank": 13,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0366",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0372",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0373",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0369",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0367"
+    ]
+  },
+  {
+    "qa_id": "QA018",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0946",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0947",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0161",
+      "semantic:镔鑫安全二期调研报告.docx:C0166",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0023"
+    ]
+  },
+  {
+    "qa_id": "QA019",
+    "rank": 14,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0366",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0372",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0373",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0369",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0367"
+    ]
+  },
+  {
+    "qa_id": "QA020",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0111",
+      "semantic:镔鑫安全二期调研报告.docx:C0075",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0023",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0036",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0027"
+    ]
+  },
+  {
+    "qa_id": "QA021",
+    "rank": 36,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0097",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0099",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0101",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0062",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0185"
+    ]
+  },
+  {
+    "qa_id": "QA022",
+    "rank": 55,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0445",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0593",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0129",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0861",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0614"
+    ]
+  },
+  {
+    "qa_id": "QA023",
+    "rank": 8,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0054",
+      "semantic:镔鑫安全二期调研报告.docx:C0014",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0030",
+      "semantic:镔鑫安全二期调研报告.docx:C0052",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0033"
+    ]
+  },
+  {
+    "qa_id": "QA024",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0048",
+      "semantic:镔鑫安全二期调研报告.docx:C0013",
+      "semantic:镔鑫安全二期调研报告.docx:C0049",
+      "semantic:镔鑫安全二期调研报告.docx:C0047",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0062"
+    ]
+  },
+  {
+    "qa_id": "QA025",
+    "rank": 6,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0821",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0416",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0419",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0417",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0409"
+    ]
+  },
+  {
+    "qa_id": "QA026",
+    "rank": 8,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0195",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0184",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0196",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0204",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0198"
+    ]
+  },
+  {
+    "qa_id": "QA027",
+    "rank": 11,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0030",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0021",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0030",
+      "semantic:镔鑫安全二期调研报告.docx:C0161",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0156"
+    ]
+  },
+  {
+    "qa_id": "QA028",
+    "rank": 3,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0025",
+      "semantic:镔鑫安全二期调研报告.docx:C0011",
+      "semantic:镔鑫安全二期调研报告.docx:C0026",
+      "semantic:镔鑫安全二期调研报告.docx:C0027",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0114"
+    ]
+  },
+  {
+    "qa_id": "QA029",
+    "rank": 17,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0737",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0185",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0647",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0343",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0865"
+    ]
+  },
+  {
+    "qa_id": "QA030",
+    "rank": 1,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0007",
+      "semantic:镔鑫安全二期调研报告.docx:C0157",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0154",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0836",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0131"
+    ]
+  },
+  {
+    "qa_id": "QA031",
+    "rank": 10,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期调研报告.docx:C0030",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0021",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0030",
+      "semantic:镔鑫安全二期调研报告.docx:C0161",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0156"
+    ]
+  },
+  {
+    "qa_id": "QA032",
+    "rank": 13,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0021",
+      "semantic:镔鑫安全二期调研报告.docx:C0045",
+      "semantic:镔鑫安全二期调研报告.docx:C0030",
+      "semantic:镔鑫安全二期调研报告.docx:C0042",
+      "semantic:镔鑫安全二期调研报告.docx:C0034"
+    ]
+  },
+  {
+    "qa_id": "QA033",
+    "rank": 794,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0185",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0737",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0647",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0343",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0836"
+    ]
+  },
+  {
+    "qa_id": "QA034",
+    "rank": 4,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0033",
+      "semantic:镔鑫安全二期调研报告.docx:C0052",
+      "semantic:镔鑫安全二期调研报告.docx:C0014",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0034",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0030"
+    ]
+  },
+  {
+    "qa_id": "QA035",
+    "rank": 4,
+    "top_chunk_ids": [
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0033",
+      "semantic:镔鑫安全二期调研报告.docx:C0052",
+      "semantic:镔鑫安全二期调研报告.docx:C0014",
+      "semantic:镔鑫安全二期技术协议V1.0.docx:C0034",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0030"
+    ]
+  },
+  {
+    "qa_id": "QA036",
+    "rank": 12,
+    "top_chunk_ids": [
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0270",
+      "semantic:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0620",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0271",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0267",
+      "semantic:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0265"
+    ]
+  }
+]

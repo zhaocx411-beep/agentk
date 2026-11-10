@@ -1,0 +1,625 @@
+[
+  {
+    "qa_id": "QA001",
+    "project_id": "P05",
+    "question": "2026年01月29日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心一楼",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求规格书确认会纪要20260129.doc",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求规格书确认会纪要20260129:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求规格书确认会纪要20260129:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求规格书确认会纪要20260129:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求规格书确认会纪要20260129:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2026年01月29日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心一楼 | 环能管控中心一楼",
+    "gold_evidence_spans": [
+      "时间 | 2026年01月29日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心一楼 | 环能管控中心一楼"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求规格书确认会纪要20260129.doc"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名（§7 PERSON_NAME_OR_CONTACT），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA002",
+    "project_id": "P05",
+    "question": "2025年12月23日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心三楼会议室",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251223.docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求讨论会议纪要20251223:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251223:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求讨论会议纪要20251223:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251223:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025年12月23日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室",
+    "gold_evidence_spans": [
+      "时间 | 2025年12月23日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求讨论会议纪要20251223.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA003",
+    "project_id": "P05",
+    "question": "2025年12月24日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心三楼会议室/机动部办公室",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251224.doc",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求讨论会议纪要20251224:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251224:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求讨论会议纪要20251224:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251224:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025年12月24日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室/机动部办公室 | 环能管控中心三楼会议室/机动部办公室",
+    "gold_evidence_spans": [
+      "时间 | 2025年12月24日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室/机动部办公室 | 环能管控中心三楼会议室/机动部办公室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求讨论会议纪要20251224.doc"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA004",
+    "project_id": "P05",
+    "question": "2025年12月25日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心三楼会议室/机动部办公室",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251225.doc",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求讨论会议纪要20251225:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251225:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求讨论会议纪要20251225:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251225:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025年12月25日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室/机动部办公室 | 环能管控中心三楼会议室/机动部办公室",
+    "gold_evidence_spans": [
+      "时间 | 2025年12月25日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室/机动部办公室 | 环能管控中心三楼会议室/机动部办公室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求讨论会议纪要20251225.doc"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名，受控实验内可用。与 QA003 地点相同但分属不同日期的纪要，证据单元不同。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA005",
+    "project_id": "P05",
+    "question": "2025年12月26日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心三楼会议室",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251226.doc",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求讨论会议纪要20251226:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251226:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求讨论会议纪要20251226:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251226:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025年12月26日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室",
+    "gold_evidence_spans": [
+      "时间 | 2025年12月26日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求讨论会议纪要20251226.doc"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA006",
+    "project_id": "P05",
+    "question": "2025年12月29日召开的需求调研会议地点在哪里？",
+    "reference_answer": "环能管控中心三楼会议室",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251229.doc",
+    "source_section": "",
+    "gold_evidence_unit_id": "津西设备管理系统项目-需求讨论会议纪要20251229:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251229:B0002#R002"
+    ],
+    "gold_evidence_id": "津西设备管理系统项目-需求讨论会议纪要20251229:B0002",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251229:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025年12月29日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室",
+    "gold_evidence_spans": [
+      "时间 | 2025年12月29日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西设备管理系统项目-需求讨论会议纪要20251229.doc"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据行含客户内部场所与纪要人名，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA007",
+    "project_id": "P05",
+    "question": "机旁库储位信息查询接口使用什么请求方式？",
+    "reference_answer": "HTTP，GET方法",
+    "question_type": "API",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0016",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0016"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0016",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0016"
+    ],
+    "gold_evidence_span": "1）请求方式：HTTP，GET方法",
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，GET方法"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA008",
+    "project_id": "P05",
+    "question": "备件入库接口和备件出库接口使用什么请求方式？",
+    "reference_answer": "HTTP，POST方法",
+    "question_type": "API",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.2备件入库接口",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0054",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0054",
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0111"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0054",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0054",
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0111"
+    ],
+    "gold_evidence_span": "1）请求方式：HTTP，POST方法",
+    "gold_evidence_spans": [
+      "1）请求方式：HTTP，POST方法"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "题干同时覆盖入库与出库两个接口，与两处等价证据完全对齐。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA011",
+    "project_id": "P05",
+    "question": "机旁库储位信息查询接口的请求参数 size 的参数类型和是否必填是什么？",
+    "reference_answer": "类型为Long，必填",
+    "question_type": "API parameter",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "source_section": "1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0019#R003",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0019#R003"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0019",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0019"
+    ],
+    "gold_evidence_span": "size | Long | | 是 | 每页数据大小",
+    "gold_evidence_spans": [
+      "size | Long | | 是 | 每页数据大小"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "题干限定“请求参数”后与返回参数表的同名行区分开。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QA015",
+    "project_id": "P05",
+    "question": "MA_AREA 表用于记录什么信息？",
+    "reference_answer": "表用于记录区域位置信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "基础管理 > MA_AREA",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0003#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0003#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0003",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0003"
+    ],
+    "gold_evidence_span": "1、 | 表名 | MA_AREA | 表的描述 | 表用于记录区域位置信息 | | |",
+    "gold_evidence_spans": [
+      "1、 | 表名 | MA_AREA | 表的描述 | 表用于记录区域位置信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA016",
+    "project_id": "P05",
+    "question": "MA_EQ 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "基础管理 > MA_EQ",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0004#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0004#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0004",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0004"
+    ],
+    "gold_evidence_span": "2、 | 表名 | MA_EQ | 表的描述 | 表用于记录设备信息 | | |",
+    "gold_evidence_spans": [
+      "2、 | 表名 | MA_EQ | 表的描述 | 表用于记录设备信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA017",
+    "project_id": "P05",
+    "question": "MA_EQ_CHANGE 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备变更信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "基础管理 > MA_EQ_CHANGE",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0005#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0005#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0005",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0005"
+    ],
+    "gold_evidence_span": "3、 | 表名 | MA_EQ_CHANGE | 表的描述 | 表用于记录设备变更信息 | | |",
+    "gold_evidence_spans": [
+      "3、 | 表名 | MA_EQ_CHANGE | 表的描述 | 表用于记录设备变更信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA018",
+    "project_id": "P05",
+    "question": "MA_FILE_TREE 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备文件体系信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "基础管理 > MA_FILE_TREE",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0006#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0006#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0006",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0006"
+    ],
+    "gold_evidence_span": "4、 | 表名 | MA_FILE_TREE | 表的描述 | 表用于记录设备文件体系信息 | | |",
+    "gold_evidence_spans": [
+      "4、 | 表名 | MA_FILE_TREE | 表的描述 | 表用于记录设备文件体系信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA019",
+    "project_id": "P05",
+    "question": "MA_FILE_UPLOAD 表用于记录什么信息？",
+    "reference_answer": "表用于记录设备文件上传信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "基础管理 > MA_FILE_UPLOAD",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0007#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0007#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0007",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0007"
+    ],
+    "gold_evidence_span": "5、 | 表名 | MA_FILE_UPLOAD | 表的描述 | 表用于记录设备文件上传信息 | | |",
+    "gold_evidence_spans": [
+      "5、 | 表名 | MA_FILE_UPLOAD | 表的描述 | 表用于记录设备文件上传信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA020",
+    "project_id": "P05",
+    "question": "MF_STANDARD 表用于记录什么信息？",
+    "reference_answer": "表用于记录点检基准信息",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "source_section": "点检管理 > MF_STANDARD",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0008#R001",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0008#R001"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0008",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0008"
+    ],
+    "gold_evidence_span": "1、 | 表名 | MF_STANDARD | 表的描述 | 表用于记录点检基准信息 | | |",
+    "gold_evidence_spans": [
+      "1、 | 表名 | MF_STANDARD | 表的描述 | 表用于记录点检基准信息 | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA022",
+    "project_id": "P05",
+    "question": "分厂检修计划下的待检修项目在公司审批方面有什么要求？公司检修计划审批通过后相关状态如何更新？",
+    "reference_answer": "分厂检修计划下待检修项目至少需有一条需公司进行审批，公司检修计划审批后更新分厂检修计划状态及分厂检修计划下所有待检修项目状态为“已审批”",
+    "question_type": "Constraint",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格.docx",
+    "source_section": "设备管理系统设计 > 检修管理 > 分厂检修计划 > 相关影响",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统项目-详细设计规格:B0498",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格:B0498"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统项目-详细设计规格:B0498",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格:B0498"
+    ],
+    "gold_evidence_span": "分厂检修计划下待检修项目至少需有一条需公司进行审批，公司检修计划审批后更新分厂检修计划状态及分厂检修计划下所有待检修项目状态为“已审批”",
+    "gold_evidence_spans": [
+      "分厂检修计划下待检修项目至少需有一条需公司进行审批，公司检修计划审批后更新分厂检修计划状态及分厂检修计划下所有待检修项目状态为“已审批”"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "津西钢铁设备管理系统项目-详细设计规格.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA026",
+    "project_id": "P05",
+    "question": "平台应用在展现形式方面提供什么能力？",
+    "reference_answer": "平台应用支持多种展现形式，满足不同用户、不同场景需求，提高平台灵活性和适应性",
+    "question_type": "Feature",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格.docx",
+    "source_section": "系统详细架构 > 系统应用上下文",
+    "gold_evidence_unit_id": "津西钢铁设备管理系统技术协议(8) - 副本(1):B0135",
+    "gold_evidence_unit_ids": [
+      "津西钢铁设备管理系统技术协议(8) - 副本(1):B0135",
+      "津西钢铁设备管理系统项目-详细设计规格:B0139",
+      "津西钢铁设备管理系统项目-需求规格书:B0079",
+      "津西钢铁设备管理系统项目建议书-V1.1:B0115"
+    ],
+    "gold_evidence_id": "津西钢铁设备管理系统技术协议(8) - 副本(1):B0135",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统技术协议(8) - 副本(1):B0135",
+      "津西钢铁设备管理系统项目-详细设计规格:B0139",
+      "津西钢铁设备管理系统项目-需求规格书:B0079",
+      "津西钢铁设备管理系统项目建议书-V1.1:B0115"
+    ],
+    "gold_evidence_span": "平台应用支持多种展现形式，满足不同用户、不同场景需求，提高平台灵活性和适应性",
+    "gold_evidence_spans": [
+      "平台应用支持多种展现形式，满足不同用户、不同场景需求，提高平台灵活性和适应性"
+    ],
+    "evidence_occurrence_count": 4,
+    "evidence_documents": [
+      "津西钢铁设备管理系统技术协议(8) - 副本(1).docx",
+      "津西钢铁设备管理系统项目-详细设计规格.docx",
+      "津西钢铁设备管理系统项目-需求规格书.doc",
+      "津西钢铁设备管理系统项目建议书-V1.1.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "四处等价位置原文一致；题干收窄到“展现形式”后与同段集成能力表述可区分。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  }
+]

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEAC 边界验证</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-left">
+        <span class="candidate-id" id="candidate-id">—</span>
+        <span class="chip" id="project">—</span>
+        <span class="chip" id="stratum">—</span>
+        <span class="chip subtle" id="row-group">—</span>
+      </div>
+      <div class="bar-right">
+        <div class="progress">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="counter" id="counter">—</span>
+        <button class="ghost" id="help-toggle" title="快捷键">?</button>
+      </div>
+    </header>
+
+    <main>
+      <p class="question">长度允许时，右侧单元是否应<strong>另起一个新的、能被独立检索的父块</strong>？</p>
+
+      <section class="units">
+        <article class="unit">
+          <div class="unit-head">
+            <span class="unit-tag">左侧 · 上文</span>
+            <span class="unit-type" id="left-type"></span>
+          </div>
+          <div class="section-path" id="left-section"></div>
+          <div class="evidence" id="left-evidence"></div>
+        </article>
+
+        <div class="seam" id="seam" aria-hidden="true">
+          <span class="seam-line"></span>
+          <span class="seam-label">边界</span>
+          <span class="seam-line"></span>
+        </div>
+
+        <article class="unit">
+          <div class="unit-head">
+            <span class="unit-tag">右侧 · 待判</span>
+            <span class="unit-type" id="right-type"></span>
+          </div>
+          <div class="section-path" id="right-section"></div>
+          <div class="evidence" id="right-evidence"></div>
+        </article>
+      </section>
+
+      <section class="controls">
+        <div class="labels">
+          <button class="label break" data-label="BREAK"><kbd>1</kbd><span>BREAK</span><em>右侧另起新块</em></button>
+          <button class="label nobreak" data-label="NO_BREAK"><kbd>2</kbd><span>NO_BREAK</span><em>延续同一主题</em></button>
+          <button class="label noise" data-label="NOISE"><kbd>3</kbd><span>NOISE</span><em>页眉页脚/残片</em></button>
+        </div>
+        <div class="row">
+          <label class="flag">
+            <input type="checkbox" id="flag" />
+            <span>标为歧义 <kbd>d</kbd></span>
+          </label>
+          <input type="text" id="notes" placeholder="备注（标为歧义时必填，说明歧义来源）" />
+        </div>
+        <div class="row nav">
+          <button class="ghost" id="prev"><kbd>←</kbd> 上一条</button>
+          <button class="ghost" id="next">下一条 <kbd>→</kbd></button>
+          <button class="ghost" id="jump-undecided">跳到下一条未判 <kbd>u</kbd></button>
+          <span class="saved" id="saved"></span>
+        </div>
+      </section>
+
+      <section class="stats" id="stats"></section>
+    </main>
+
+    <div class="overlay" id="help" hidden>
+      <div class="sheet">
+        <h2>判定口径</h2>
+        <dl>
+          <dt>表内相邻行</dt>
+          <dd>同一张表的表头与数据行、相邻数据行，一律 <code>NO_BREAK</code>。行级检索由子块处理，不用父块边界拆表。</dd>
+          <dt>标题</dt>
+          <dd>标题本身不等于断点。「上一主题 → 新标题」判 <code>BREAK</code>；「新标题 → 它的首段」判 <code>NO_BREAK</code>。</dd>
+          <dt>长度</dt>
+          <dd>不得因为文本接近或超过 512 token 就判 <code>BREAK</code>。长度由切块器处理，你评的是语义边界。</dd>
+          <dt>短文本</dt>
+          <dd>内容短不等于噪声。接口方法名、字段名、约束值仍是有效证据。</dd>
+          <dt>歧义</dt>
+          <dd>拿不准时填最佳判断，勾「标为歧义」并写明来源，不要留空。这些行仍计入一致率。</dd>
+        </dl>
+        <h2>快捷键</h2>
+        <ul>
+          <li><kbd>1</kbd> BREAK · <kbd>2</kbd> NO_BREAK · <kbd>3</kbd> NOISE（打标后自动跳下一条未判）</li>
+          <li><kbd>d</kbd> 切换歧义标记 · <kbd>u</kbd> 跳到下一条未判 · <kbd>←</kbd> <kbd>→</kbd> 前后翻</li>
+          <li><kbd>n</kbd> 聚焦备注框 · <kbd>Esc</kbd> 离开备注框 · <kbd>?</kbd> 开关本页</li>
+        </ul>
+        <p class="foot">每次打标即写回工作簿，可随时关掉浏览器和服务，下次从第一条未判处继续。</p>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

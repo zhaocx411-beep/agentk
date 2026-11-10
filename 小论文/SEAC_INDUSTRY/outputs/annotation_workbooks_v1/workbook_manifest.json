@@ -1,0 +1,56 @@
+{
+  "protocol_version": "industrial-seac-review-workbooks-v1.1",
+  "created_date": "2026-08-04",
+  "issued_status": "PENDING_HUMAN_REVIEW",
+  "status": "CLOSED",
+  "status_note": "Every sha256 below is the hash as issued on created_date and is kept as the provenance record; it is not the current hash of a workbook that was later filled. See current_state on each file.",
+  "public_release_allowed": false,
+  "boundary_projects": [
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "boundary_candidates_per_project_per_annotator": 300,
+  "qa_candidates_total": 289,
+  "files": {
+    "SEAC_boundary_annotator_A.xlsx": {
+      "sha256": "1ee9540e3df194d7fd8e95ac0f083fc5a5d0493591e0cca1b1150aa65936dd4b",
+      "role": "BOUNDARY_ANNOTATOR_A",
+      "formal_labels_present": false,
+      "current_state": "SUPERSEDED_UNUSED",
+      "current_sha256_matches_issued": true,
+      "superseded_by": "outputs/prelabel_verification_v1/SEAC_boundary_prelabel_verification.xlsx",
+      "note": "P02-P10 boundary annotation moved to the pre-label plus human verification path in annotation protocol section 4bis. This workbook was never filled; its hash still matches the issued hash. Retained as a record of what was produced on created_date, not as an input. P01 boundaries did use the two-annotator path, but from a separate pack."
+    },
+    "SEAC_boundary_annotator_B.xlsx": {
+      "sha256": "986e67de71ac1e7db2657220df50015720ab82231c5126a9e93bd10debf9ca89",
+      "role": "BOUNDARY_ANNOTATOR_B",
+      "formal_labels_present": false,
+      "current_state": "SUPERSEDED_UNUSED",
+      "current_sha256_matches_issued": true,
+      "superseded_by": "outputs/prelabel_verification_v1/SEAC_boundary_prelabel_verification.xlsx",
+      "note": "Same status as annotator A: never filled, hash unchanged, retained as a record only."
+    },
+    "SEAC_QA_privacy_review.xlsx": {
+      "sha256": "1a480e3cfc3ea6c54ea11c195b9f9d500ea3ed015d5094b32862826c4374992d",
+      "role": "QA_AND_PRIVACY_REVIEW",
+      "formal_qa_present": false,
+      "current_state": "COMPLETED_P01",
+      "current_sha256_matches_issued": false,
+      "note": "The P01 sheet was filled in the privacy release round: 23 NO_RISK, 1 CLEARED, 3 REJECTED, leaving 24 questions. The hash of the filled workbook is recorded in workbench/annotation_review_import_summary.json, which is the authority for what was imported. P02-P10 sheets were superseded by the candidate-set path in outputs/qa_approval_v1/."
+    }
+  },
+  "verification": {
+    "formula_error_scan": "PASS",
+    "xlsx_archive_integrity": "PASS",
+    "all_sheet_previews_rendered": true,
+    "all_sheet_previews_visually_reviewed": true,
+    "verification_scope": "Applies to the workbooks as issued on created_date."
+  }
+}

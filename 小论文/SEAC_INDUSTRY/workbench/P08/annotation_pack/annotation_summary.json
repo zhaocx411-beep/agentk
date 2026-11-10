@@ -1,0 +1,45 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P08",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "419a173be9f0acd055031382f78f4ef864a91226155e2ae59189a7a23b096e21",
+  "boundary_pool_count": 4364,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 338,
+    "inside_table": 3163,
+    "noise_candidate": 10,
+    "same_section_continuity": 465,
+    "table_transition": 388
+  },
+  "sample_strata": {
+    "heading_transition": 59,
+    "inside_table": 112,
+    "noise_candidate": 10,
+    "same_section_continuity": 80,
+    "table_transition": 39
+  },
+  "sample_documents": {
+    "模块7-能源管理-技术协议-1207.docx": 63,
+    "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_业务代码设计.docx": 56,
+    "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx": 63,
+    "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx": 56,
+    "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx": 62
+  },
+  "qa_draft_count": 19,
+  "qa_types": {
+    "Constraint": 4,
+    "Feature": 6,
+    "Numeric constraint": 5,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 19,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "fad83d9beffbad96e950cd305bd8013b05efbecafff2cceef4b9df55d61b874a",
+    "boundary_blind_annotator_a.json": "84703e9c55ce37af967222585e595d93cfd98d11a598b60965133fa046b69b89",
+    "boundary_blind_annotator_b.json": "f4e6e01dc903e2f22080596f205116970decc89f781eedfd5c58aa8aa14b4d1f",
+    "qa_draft.json": "b1ae967d79f7b35058e085d88d116dd89b67559796c18c630b92635060499868"
+  }
+}

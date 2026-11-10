@@ -1,0 +1,189 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P05",
+  "split": "locked_test",
+  "source_dir": "津西钢铁设备管理系统项目",
+  "processed": [
+    {
+      "file": "津西钢铁设备管理系统技术协议(8) - 副本(1).docx",
+      "suffix": ".docx",
+      "sha256": "1e30a74091bce4dcd15203e8120bfa4b1c54db3da3347c2eff60290402d13b89",
+      "bytes": 8632142,
+      "document_type": "Technical Agreement",
+      "source_mode": "original"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+      "suffix": ".docx",
+      "sha256": "608a67ce1f22227202d973a4ddbd42c62b4329fccef02460f88faad97367bcf8",
+      "bytes": 76509,
+      "document_type": "API",
+      "source_mode": "original"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+      "suffix": ".xlsx",
+      "sha256": "24e4540c02ec23a3906eecf613fc800c4ca5c56608d41ffcdea229341f47c597",
+      "bytes": 140440,
+      "document_type": "DB",
+      "source_mode": "original"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-详细设计规格.docx",
+      "suffix": ".docx",
+      "sha256": "990fec2133af1c5ce38b09ce415365334eb33d4ac4cc827fbabacd9d34368fad",
+      "bytes": 18232457,
+      "document_type": "Detailed Design",
+      "source_mode": "original"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求规格书.doc",
+      "suffix": ".doc",
+      "sha256": "7be12459a151a8b532543a03cc940260165113bc9a3009f3303d86b571dbaad8",
+      "bytes": 18081721,
+      "document_type": "SRS",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求规格书.docx",
+      "converted_sha256": "517a3eee2eb9b095fb406292a2dcd116dd3263e651e4b0b7c1a0bc7db8ba18b3",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求规格书确认会纪要20260129.doc",
+      "suffix": ".doc",
+      "sha256": "3ddc24d43591aa47b0195f6fa59fc467135513c4f5e3eef6977a9c4b41f257ef",
+      "bytes": 44604,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求规格书确认会纪要20260129.docx",
+      "converted_sha256": "530db8da28b3ef6ef2b76052b9c892dbaadbc4758350806cca43d0903a6ff1ca",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251223.docx",
+      "suffix": ".docx",
+      "sha256": "e97e82b9dde1c3b9fd9ad13aadb6f8f7bc6ab9af955b258120ad37a6db392778",
+      "bytes": 84480,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251223.docx",
+      "converted_sha256": "4eb32113eeec44df15f0d1090a4ed3a4f88965ff131f77ea46b2fcfa4078a280",
+      "conversion_reason": "legacy_doc_mislabeled_docx"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251224.doc",
+      "suffix": ".doc",
+      "sha256": "7a8e41785fdfe2e513bf69dbf4b414dfa85751c7762f87dbfc4822707c2bd4f9",
+      "bytes": 86016,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251224.docx",
+      "converted_sha256": "d58d2ed09455040e1f3182b882e77a8cd1a2a7eb53e6ce4f556491450ebdc46d",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251225.doc",
+      "suffix": ".doc",
+      "sha256": "5d0444dc36ced7d85a106afb10da3616e14c211e3e7039a5e6e770d4934a7303",
+      "bytes": 84480,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251225.docx",
+      "converted_sha256": "52d5be75ed5798216690f87ceaba2e71f920021bf273b66f49c6120d3388f8db",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251226.doc",
+      "suffix": ".doc",
+      "sha256": "3e5b366e7178fee496694df29c12a94c7fafa46af967943297849a3e9822530d",
+      "bytes": 87040,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251226.docx",
+      "converted_sha256": "6a2b8af78c8d898adecc0f54f536c3cb22cb02ea4f23ebfedf44b708535d803d",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251229.doc",
+      "suffix": ".doc",
+      "sha256": "339c514411951286a0c51079532d631e742e85491b86bdc1d475635e953152d1",
+      "bytes": 85504,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20251229.docx",
+      "converted_sha256": "6608919bf79eda9ed5628de5c9e4d58c08298a2e61cd4effc140dc69a63820af",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260105.doc",
+      "suffix": ".doc",
+      "sha256": "a9d7da0f693c42a03039055313ed120ec378f0a36a75273309b68db8e84fd5d3",
+      "bytes": 113664,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260105.docx",
+      "converted_sha256": "66c1467a4a6f99518e4aea35eb269617358501ef387daf5f3e2295d30792ffa8",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260106.doc",
+      "suffix": ".doc",
+      "sha256": "c8ca38d03f22daae90eb911c38e02bd90a6b33181bff02644fa52d4a82ca9c71",
+      "bytes": 85504,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260106.docx",
+      "converted_sha256": "c75ead341d06dd002875af8b0afd3606bab03caac46969fd922b98f7483157b7",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260107.doc",
+      "suffix": ".doc",
+      "sha256": "3455e864689e9833481d8b3ef2fac6863f2fbf0d9a0677f219566867e8f53dfd",
+      "bytes": 86528,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260107.docx",
+      "converted_sha256": "36c6483f177beb3fec84e54fc6e3e1d45a75b3cd60569b446732b1e8d89ea397",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260115.doc",
+      "suffix": ".doc",
+      "sha256": "9262dd3182ed7e501126cf6a2c537d89576cf51bd512c4cacf6b1f7fadf0b9d6",
+      "bytes": 47164,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260115.docx",
+      "converted_sha256": "2f083c77bf03ab22b5a6d0ecef4cbc8e484f833d79e56b92bb94a39309b7ab7c",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260119.doc",
+      "suffix": ".doc",
+      "sha256": "d5a2e67df8057cae11dcb9e1e3edd54d6c4f64162a9e5bbf734b981ccd857c35",
+      "bytes": 44092,
+      "document_type": "Meeting",
+      "source_mode": "converted_copy",
+      "converted_file": "P05/津西钢铁设备管理系统项目-需求调研会议纪要/津西设备管理系统项目-需求讨论会议纪要20260119.docx",
+      "converted_sha256": "cfb90bcf9bea3d18522f6fcdec838d90a3e4bd95d799a271fbe4236eb3519f4f",
+      "conversion_reason": "legacy_doc"
+    },
+    {
+      "file": "津西钢铁设备管理系统项目建议书-V1.1.docx",
+      "suffix": ".docx",
+      "sha256": "7ca2aa8c1bf0a7bf9e1817e4f8814dfa2c8cfa3d826cc11a06b70f50999e946c",
+      "bytes": 5163952,
+      "document_type": "Other",
+      "source_mode": "original"
+    }
+  ],
+  "skipped": [
+    {
+      "file": ".DS_Store",
+      "reason": "temporary_or_system_file"
+    }
+  ],
+  "document_count": 17,
+  "block_count": 3886,
+  "approx_token_count": 228920
+}

@@ -1,0 +1,44 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P09",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "1ef0be24c3725c2bcb4542c8927ac7fe1cf3e19a3fab0f9a8d423b85a4c75b94",
+  "boundary_pool_count": 5320,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 485,
+    "inside_table": 3718,
+    "noise_candidate": 8,
+    "same_section_continuity": 456,
+    "table_transition": 653
+  },
+  "sample_strata": {
+    "heading_transition": 63,
+    "inside_table": 112,
+    "noise_candidate": 8,
+    "same_section_continuity": 77,
+    "table_transition": 40
+  },
+  "sample_documents": {
+    "模块8-环保管理-技术协议-1218.docx": 74,
+    "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx": 77,
+    "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx": 74,
+    "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx": 75
+  },
+  "qa_draft_count": 16,
+  "qa_types": {
+    "Constraint": 3,
+    "Feature": 5,
+    "Numeric constraint": 4,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 16,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "4b0cd649229cb5621f3850005a26eb261912fe80829b84f49b23b7c2954c072e",
+    "boundary_blind_annotator_a.json": "9cefd802f51a1c68e01b4992c49e13b4e68f4dff6613f7c223f7858e229accf7",
+    "boundary_blind_annotator_b.json": "67e27a548584a42be70ad05157cb0728438497305099da0901bb94b60f2d119f",
+    "qa_draft.json": "d6e3f46fd5a872808e7ac10c3d93162a63ea6c7d41535fd6d054135e502dcf2a"
+  }
+}

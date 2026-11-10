@@ -1,0 +1,16 @@
+{
+  "proposed_v5": {
+    "boundary_f1": 0.9090909090909091,
+    "mrr": 0.6914290419725202,
+    "hit_rate@1": 0.53125,
+    "hit_rate@3": 0.8125,
+    "hit_rate@5": 0.90625
+  },
+  "proposed_v6_parent_weight_0.35": {
+    "boundary_f1": 0.9090909090909091,
+    "mrr": 0.7588141025641026,
+    "hit_rate@1": 0.625,
+    "hit_rate@3": 0.875,
+    "hit_rate@5": 0.9375
+  }
+}

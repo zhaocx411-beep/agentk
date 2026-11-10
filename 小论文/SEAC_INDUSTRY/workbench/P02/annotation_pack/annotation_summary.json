@@ -1,0 +1,52 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P02",
+  "split": "development",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "722986289ad08a7d4258d22365d5da16c5c7b95f31bc29ac7edea85ae26b582b",
+  "boundary_pool_count": 10789,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 726,
+    "inside_table": 5948,
+    "noise_candidate": 1008,
+    "same_section_continuity": 1804,
+    "table_transition": 1303
+  },
+  "sample_strata": {
+    "heading_transition": 64,
+    "inside_table": 91,
+    "noise_candidate": 32,
+    "same_section_continuity": 76,
+    "table_transition": 37
+  },
+  "sample_documents": {
+    "晋钢安全预警平台-详细设计规格 V1.1--1020.docx": 93,
+    "晋钢安全预警平台-详细设计规格接口文档V1.0.docx": 76,
+    "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx": 34,
+    "晋钢安全预警平台-需求调研会议纪要0708.docx": 9,
+    "晋钢安全预警平台-需求调研会议纪要0717.docx": 9,
+    "晋钢安全预警平台-需求调研会议纪要0722 .docx": 9,
+    "晋钢安全预警平台-需求调研会议纪要0903.docx": 9,
+    "调研报告 （晋钢安全）.docx": 61
+  },
+  "qa_draft_count": 36,
+  "qa_types": {
+    "API": 8,
+    "API parameter": 4,
+    "Constraint": 3,
+    "Database": 6,
+    "Feature": 5,
+    "Meeting fact": 6,
+    "Numeric constraint": 2,
+    "Process": 2
+  },
+  "qa_unit_aligned_count": 36,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "77c0e1e2992a50d2fc3df5fa87ab1cca2f7c89ae0996b343e7d8a4cd0c0877ca",
+    "boundary_blind_annotator_a.json": "e6ef832b2c97dd7da4a16fecd06d3e69db8a4401cfa39c3851bce3479d5ff657",
+    "boundary_blind_annotator_b.json": "8e1f71ed43ff60f5c766823600f14009626d9baba29a61334f9ee3220a299aed",
+    "qa_draft.json": "994d1249e837ea07ed2814353cbff0067430d1970931128259059587b1499e8e"
+  }
+}

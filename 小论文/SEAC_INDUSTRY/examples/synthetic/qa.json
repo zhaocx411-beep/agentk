@@ -1,0 +1,28 @@
+[
+  {
+    "qa_id": "SYN-Q001",
+    "project_id": "SYNTHETIC",
+    "question": "Which required field identifies an inventory item?",
+    "reference_answer": "item_id",
+    "question_type": "table_field",
+    "source_document": "synthetic_inventory_requirements.md",
+    "gold_evidence_id": "SYN-B003",
+    "gold_evidence_unit_id": "SYN-B003#R002",
+    "gold_evidence_span": "item_id | string | yes",
+    "audit_status": "KEEP",
+    "privacy_review_status": "NO_RISK"
+  },
+  {
+    "qa_id": "SYN-Q002",
+    "project_id": "SYNTHETIC",
+    "question": "What is the default status of a newly created item?",
+    "reference_answer": "disabled",
+    "question_type": "constraint",
+    "source_document": "synthetic_inventory_requirements.md",
+    "gold_evidence_id": "SYN-B005",
+    "gold_evidence_unit_id": "SYN-B005",
+    "gold_evidence_span": "default status of disabled",
+    "audit_status": "KEEP",
+    "privacy_review_status": "NO_RISK"
+  }
+]

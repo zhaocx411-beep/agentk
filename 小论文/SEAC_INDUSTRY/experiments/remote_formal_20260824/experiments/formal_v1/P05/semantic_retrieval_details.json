@@ -1,0 +1,346 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求规格书确认会纪要20260129.doc",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求规格书确认会纪要20260129:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20260105.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求规格书确认会纪要20260129.doc:C0002"
+    ],
+    "query_latency_ms": 11.613365262746811
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251223.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251223:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251223.docx:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251229.doc:C0002"
+    ],
+    "query_latency_ms": 10.856465436518192
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251224.doc",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251224:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251223.docx:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251229.doc:C0002"
+    ],
+    "query_latency_ms": 11.005601845681667
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251225.doc",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251225:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251223.docx:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251229.doc:C0002"
+    ],
+    "query_latency_ms": 10.437600314617157
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251226.doc",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251226:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251223.docx:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20260105.doc:C0002"
+    ],
+    "query_latency_ms": 10.426911525428295
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "Meeting fact",
+    "source_document": "津西设备管理系统项目-需求讨论会议纪要20251229.doc",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西设备管理系统项目-需求讨论会议纪要20251229:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251226.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251225.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251224.doc:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251223.docx:C0002",
+      "semantic:津西设备管理系统项目-需求讨论会议纪要20251229.doc:C0002"
+    ],
+    "query_latency_ms": 10.421119630336761
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "API",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0016"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0008",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0010",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0013",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0009",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0015"
+    ],
+    "query_latency_ms": 17.059775069355965
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0054",
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0111"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0035",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0039",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0021",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0041",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0025"
+    ],
+    "query_latency_ms": 18.14461126923561
+  },
+  {
+    "qa_id": "QA011",
+    "question_type": "API parameter",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-接口文档:B0019#R003"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0008",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0013",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0012",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0016",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-接口文档.docx:C0010"
+    ],
+    "query_latency_ms": 19.239512272179127
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0003#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0059",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0063",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0061",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0065",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0064"
+    ],
+    "query_latency_ms": 10.613457299768925
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0004#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0080",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0066",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0073",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0094",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0091"
+    ],
+    "query_latency_ms": 10.65081637352705
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 6,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0005#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0094",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0091",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0092",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0088",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0084"
+    ],
+    "query_latency_ms": 11.358099989593029
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0006#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0096",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0095",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0099",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0098",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0097"
+    ],
+    "query_latency_ms": 10.445312596857548
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0007#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0099",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0098",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0097",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0095",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0096"
+    ],
+    "query_latency_ms": 17.63814501464367
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Database",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格-数据库表设计:B0008#R001"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0107",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0100",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0104",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0101",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx:C0103"
+    ],
+    "query_latency_ms": 10.998610407114029
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Constraint",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统项目-详细设计规格:B0498"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目-详细设计规格.docx:C0191",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格.docx:C0199",
+      "semantic:津西钢铁设备管理系统项目-需求规格书.doc:C0124",
+      "semantic:津西钢铁设备管理系统项目-需求规格书.doc:C0118",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格.docx:C0206"
+    ],
+    "query_latency_ms": 17.806273885071278
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Feature",
+    "source_document": "津西钢铁设备管理系统项目-详细设计规格.docx",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "津西钢铁设备管理系统技术协议(8) - 副本(1):B0135",
+      "津西钢铁设备管理系统项目-详细设计规格:B0139",
+      "津西钢铁设备管理系统项目-需求规格书:B0079",
+      "津西钢铁设备管理系统项目建议书-V1.1:B0115"
+    ],
+    "top_chunk_ids": [
+      "semantic:津西钢铁设备管理系统项目建议书-V1.1.docx:C0089",
+      "semantic:津西钢铁设备管理系统技术协议(8) - 副本(1).docx:C0118",
+      "semantic:津西钢铁设备管理系统技术协议(8) - 副本(1).docx:C0122",
+      "semantic:津西钢铁设备管理系统技术协议(8) - 副本(1).docx:C0039",
+      "semantic:津西钢铁设备管理系统项目-详细设计规格.docx:C0014"
+    ],
+    "query_latency_ms": 10.049277916550636
+  }
+]

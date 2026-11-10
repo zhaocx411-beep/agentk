@@ -1,0 +1,630 @@
+[
+  {
+    "id": "P03-QA001",
+    "qa_id": "QA001",
+    "project_id": "P03",
+    "question": "本次需求调研会议的时间是什么？",
+    "reference_answer": "2025.4.3",
+    "question_type": "Meeting fact",
+    "source_document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+    "gold_evidence_span": "时间 | 2025.4.3 | 记录人： | 吴浩 | 地点 | 智慧中心B座制造部 | 智慧中心B座制造部",
+    "declared_unit_id": "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干以“本次”指代会议属未说明的上下文（文档主题实为“需求讨论会”），需改写为自足表述，证据行可用。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002",
+        "document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P03-QA002",
+    "qa_id": "QA002",
+    "project_id": "P03",
+    "question": "本次需求调研会议的地点在哪里？",
+    "reference_answer": "智慧中心B座制造部",
+    "question_type": "Meeting fact",
+    "source_document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+    "gold_evidence_span": "时间 | 2025.4.3 | 记录人： | 吴浩 | 地点 | 智慧中心B座制造部 | 智慧中心B座制造部",
+    "declared_unit_id": "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "地点由证据行直接支持，但题干“本次”指代不明，需改写为明确指向该需求讨论会的问法。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002",
+        "document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P03-QA003",
+    "qa_id": "QA003",
+    "project_id": "P03",
+    "question": "2.1.2.1获取各点位的水位数据接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "gold_evidence_span": "1）请求方式：HTTP POST",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0018",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“请求方式：HTTP POST”，答案只写“HTTP”未给出请求方法，需补全为“HTTP POST”。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 3,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0018",
+        "document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+        "heading_path": "1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.1获取各点位的水位数据接口"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0059",
+        "document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+        "heading_path": "1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0088",
+        "document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+        "heading_path": "1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.3获取各点位的雨量数据"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA008",
+    "qa_id": "QA008",
+    "project_id": "P03",
+    "question": "2.1.2.1获取各点位的水位数据接口中参数 organizationId 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大100个字节，必填",
+    "question_type": "API parameter",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "gold_evidence_span": "organizationId | String | 最大100个字节 | 是 | 组织ID",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R002",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干写2.1.2.1获取各点位的水位数据接口，但organizationId行属于2.1.2.2获取各点位的水位预测值，且2.1.2.1请求参数表只有pointCode，需把题干接口改为2.1.2.2。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R002",
+        "document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+        "heading_path": "1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA009",
+    "qa_id": "QA009",
+    "project_id": "P03",
+    "question": "2.1.2.1获取各点位的水位数据接口中参数 startTime 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大40个字节，必填",
+    "question_type": "API parameter",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "gold_evidence_span": "startTime | String | 最大40个字节 | 是 | 开始时间",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R003",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "startTime行同样属于2.1.2.2获取各点位的水位预测值，题干接口错标为2.1.2.1，需更正后方可使用。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R003",
+        "document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+        "heading_path": "1. 概述 1 > 接口设计 > 2.1感知预警 > 2.1.2接口定义 > 2.1.2.2获取各点位的水位预测值"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA016",
+    "qa_id": "QA016",
+    "project_id": "P03",
+    "question": "8.1. 培训中规定了什么约束？",
+    "reference_answer": "被培训的系统管理员在培训前必须具有以下技能：熟练掌握操作系统的 安装及维护技术",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "被培训的系统管理员在培训前必须具有以下技能：熟练掌握操作系统的 安装及维护技术",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0252",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该段列出四项管理员技能要求，答案只截取第一项且span在列表中间断开，需改写题干或补全证据。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0252",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "8. 培训与知识转移 > 8.1. 培训"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA017",
+    "qa_id": "QA017",
+    "project_id": "P03",
+    "question": "画面设计中规定了什么约束？",
+    "reference_answer": "3、系统进入页面之后，默认选中第一个，并展示第一个点位的历史水位、趋势图、预测水位数据图、重点区域标高数据",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "gold_evidence_span": "3、系统进入页面之后，默认选中第一个，并展示第一个点位的历史水位、趋势图、预测水位数据图、重点区域标高数据",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格:B0791",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干仅写“画面设计”，该文档中同名章节众多，且答案保留编号“3、”，需限定到移动端感知数据画面设计。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格:B0791",
+        "document": "水情应急预案各板块可视化-详细设计规格.docx",
+        "heading_path": "智慧防汛子系统设计 > 移动端 > 感知数据 > 画面设计"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA018",
+    "qa_id": "QA018",
+    "project_id": "P03",
+    "question": "7 技术支持与服务中规定了什么约束？",
+    "reference_answer": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或 网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户 解决问题",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "gold_evidence_span": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或 网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工程师到用户现场为用户 解决问题",
+    "declared_unit_id": "水情应急预案各板块可视化-需求规格书:B1181",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该服务条款语句在技术协议第10节以完全相同措辞出现（见QA019），跨文档重复导致来源与最小证据无法唯一对齐，且与QA019构成近重复题。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0267",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "10. 售后服务与质保"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B1181",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "7 技术支持与服务"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA019",
+    "qa_id": "QA019",
+    "project_id": "P03",
+    "question": "10. 售后服务与质保中规定了什么约束？",
+    "reference_answer": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行， 通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工 程师到用户现场为用户解决问题",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行， 通过电话或网络远程无法解决、必须到现场进行解决的情况，乙方将派出系统工 程师到用户现场为用户解决问题",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0267",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA018答案完全相同、证据在需求规格书中重复出现，两题互为近重复且证据不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0267",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "10. 售后服务与质保"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B1181",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "7 技术支持与服务"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA020",
+    "qa_id": "QA020",
+    "project_id": "P03",
+    "question": "2.1.1政策要求支持或提供什么能力？",
+    "reference_answer": "数字防汛系统作为防汛工作的重要辅助设施，对防汛工作提供技术支撑",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "gold_evidence_span": "数字防汛系统作为防汛工作的重要辅助设施，对防汛工作提供技术支撑",
+    "declared_unit_id": "水情应急预案各板块可视化-方案建议书:B0074",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干“政策要求支持或提供什么能力”与答案（数字防汛系统提供技术支撑）语义不匹配，需改写为指向该结论句的具体问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-方案建议书:B0074",
+        "document": "水情应急预案各板块可视化-方案建议书.docx",
+        "heading_path": "项目的必要性与可行性分析 > 必要性分析 > 2.1.1政策要求"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA021",
+    "qa_id": "QA021",
+    "project_id": "P03",
+    "question": "子系统功能描述支持或提供什么能力？",
+    "reference_answer": "感知预警接入现场感知设备实时数据以及外部水文气象的预测数据，为应急管理功能提供事件触发的数据依据",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "gold_evidence_span": "感知预警接入现场感知设备实时数据以及外部水文气象的预测数据，为应急管理功能提供事件触发的数据依据",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格:B0083",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该段并列描述感知预警、防汛资源、防汛周报三项作用，模板问法下多句同样可作答，需改写收敛到感知预警。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格:B0083",
+        "document": "水情应急预案各板块可视化-详细设计规格.docx",
+        "heading_path": "智慧防汛子系统设计 > 子系统功能描述"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA022",
+    "qa_id": "QA022",
+    "project_id": "P03",
+    "question": "3.4.2 感知预警支持或提供什么能力？",
+    "reference_answer": "系统通过在线监测设备对水位、雨量数据进行监测，及时获取实时数据，并对接外部气 象、水文的接口数据，设置相应阈值，对异常数据进行预警，让防汛应急指挥部能够掌握最 新的防汛信息，为决策提供数据支持",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "gold_evidence_span": "系统通过在线监测设备对水位、雨量数据进行监测，及时获取实时数据，并对接外部气 象、水文的接口数据，设置相应阈值，对异常数据进行预警，让防汛应急指挥部能够掌握最 新的防汛信息，为决策提供数据支持",
+    "declared_unit_id": "水情应急预案各板块可视化-需求规格书:B0100",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "同一表述在详细设计规格B0786中重复出现，跨文档证据重复且题干依赖章节号定位，无法唯一对齐。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格:B0786",
+        "document": "水情应急预案各板块可视化-详细设计规格.docx",
+        "heading_path": "智慧防汛子系统设计 > 移动端 > 感知数据"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B0100",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "3功能性需求 > 3.4 业务功能描述 > 3.4.2 感知预警"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA023",
+    "qa_id": "QA023",
+    "project_id": "P03",
+    "question": "统一规划、设计支持或提供什么能力？",
+    "reference_answer": "结合南钢信息化现状以及防汛管理和未来发展要求进行统一规划、统一设计，建设防汛信息管理系统，支持后期该业务相关功能扩展",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "gold_evidence_span": "结合南钢信息化现状以及防汛管理和未来发展要求进行统一规划、统一设计，建设防汛信息管理系统，支持后期该业务相关功能扩展",
+    "declared_unit_id": "水情应急预案各板块可视化-方案建议书:B0101",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干直接套用章节标题“统一规划、设计”，问法不自然，需改写为该设计原则的具体内容问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-方案建议书:B0101",
+        "document": "水情应急预案各板块可视化-方案建议书.docx",
+        "heading_path": "项目总体设计原则 > 统一规划、设计"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA024",
+    "qa_id": "QA024",
+    "project_id": "P03",
+    "question": "1.2. 项目效果支持或提供什么能力？",
+    "reference_answer": "(1)通过新增汛情感知设备，整合防汛各项数据资源，通过可视化展示，提升 南钢码头水位、厂区内涝等重点区域汛情的感知能力与效率，为决策提供依据， 整体汛情感知效率较往期提升50%",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)通过新增汛情感知设备，整合防汛各项数据资源，通过可视化展示，提升 南钢码头水位、厂区内涝等重点区域汛情的感知能力与效率，为决策提供依据， 整体汛情感知效率较往期提升50%",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0010",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA032指向同一段落且答案完全相同，属近重复；且Feature题型与“效率提升50%”这一效果指标不符，应保留数量型那一条。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0010",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "1. 项目目标与效果 > 1.2. 项目效果"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA025",
+    "qa_id": "QA025",
+    "project_id": "P03",
+    "question": "画面设计支持或提供什么能力？",
+    "reference_answer": "功能操作区：具备新增、修改、删除、查看K线图、历史趋势和水位预测功能",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "gold_evidence_span": "功能操作区：具备新增、修改、删除、查看K线图、历史趋势和水位预测功能",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格:B0097",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干仅写“画面设计”，该文档多处同名章节，需限定到感知预警水位检测的画面设计。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格:B0097",
+        "document": "水情应急预案各板块可视化-详细设计规格.docx",
+        "heading_path": "智慧防汛子系统设计 > 感知预警 > 水位检测 > 画面设计"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA026",
+    "qa_id": "QA026",
+    "project_id": "P03",
+    "question": "技术可行性描述了什么实现或处理过程？",
+    "reference_answer": "现有的软件应用技术能力，能够快速有效的对该领域的内容进行分析整合，建立一套成熟的防汛信息管理系统",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "gold_evidence_span": "现有的软件应用技术能力，能够快速有效的对该领域的内容进行分析整合，建立一套成熟的防汛信息管理系统",
+    "declared_unit_id": "水情应急预案各板块可视化-方案建议书:B0082",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该段多句均描述技术可行性，模板问法下存在同样合理的其他答案，需改写为指向结论句的具体问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-方案建议书:B0082",
+        "document": "水情应急预案各板块可视化-方案建议书.docx",
+        "heading_path": "项目的必要性与可行性分析 > 可行性分析 > 技术可行性"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA027",
+    "qa_id": "QA027",
+    "project_id": "P03",
+    "question": "1.3 项目目标和主要任务描述了什么实现或处理过程？",
+    "reference_answer": "(2)实现防汛应急的线上全流程管理，通过感知预警自动触发人工确认，根据预案的 结构化信息下发应急措施，做到线上跟踪与闭环管理",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "gold_evidence_span": "(2)实现防汛应急的线上全流程管理，通过感知预警自动触发人工确认，根据预案的 结构化信息下发应急措施，做到线上跟踪与闭环管理",
+    "declared_unit_id": "水情应急预案各板块可视化-需求规格书:B0016",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "答案保留条目编号“(2)”且该节含多条目标任务，模板问法无法唯一确定答案，需改写题干。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B0016",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "1 概述 > 1.3 项目目标和主要任务"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA028",
+    "qa_id": "QA028",
+    "project_id": "P03",
+    "question": "1.1. 项目目标描述了什么实现或处理过程？",
+    "reference_answer": "(1)完善汛情感知体系，厂区重点区域新增雨量与积水深度监测设备，对接外 部气象数据、长江水位预测数据，同时整合现有长江水位、明渠水位、排口状态、 原燃料库存等现有数据，实现汛情全面感知",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)完善汛情感知体系，厂区重点区域新增雨量与积水深度监测设备，对接外 部气象数据、长江水位预测数据，同时整合现有长江水位、明渠水位、排口状态、 原燃料库存等现有数据，实现汛情全面感知",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0007",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "答案为项目目标的第(1)条，同节其他条目同样满足“描述了什么实现过程”，需改写题干指向汛情感知体系。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0007",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "1. 项目目标与效果 > 1.1. 项目目标"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA029",
+    "qa_id": "QA029",
+    "project_id": "P03",
+    "question": "项目实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "针对厂区内易涝的重点区域、道路，新增安装约5个点位智能摄像机识别内涝积水深度，确保厂区内所有易涝点实现积水深度监测",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "gold_evidence_span": "针对厂区内易涝的重点区域、道路，新增安装约5个点位智能摄像机识别内涝积水深度，确保厂区内所有易涝点实现积水深度监测",
+    "declared_unit_id": "水情应急预案各板块可视化-方案建议书:B0096",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该节还有“5个雨量计”“共10套设备”等数量表述，模板问法下存在多个同样合理答案，需改写为针对摄像机点位数的问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-方案建议书:B0096",
+        "document": "水情应急预案各板块可视化-方案建议书.docx",
+        "heading_path": "项目的目标与范围 > 项目实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA030",
+    "qa_id": "QA030",
+    "project_id": "P03",
+    "question": "功能描述中描述了什么数量、时长或比例要求？",
+    "reference_answer": "防汛相关人员可在移动端查看防汛相关的感知数据，包含码头及明渠水位、长江水位的不通阈值对应的应急预案，码头水位历史趋势，港池码头未来24小时的预测水位",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "gold_evidence_span": "防汛相关人员可在移动端查看防汛相关的感知数据，包含码头及明渠水位、长江水位的不通阈值对应的应急预案，码头水位历史趋势，港池码头未来24小时的预测水位",
+    "declared_unit_id": "水情应急预案各板块可视化-详细设计规格:B0087",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "题干“功能描述中”无法定位章节，且同一语句在需求规格书B1020中重复出现，来源与证据均不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-详细设计规格:B0087",
+        "document": "水情应急预案各板块可视化-详细设计规格.docx",
+        "heading_path": "智慧防汛子系统设计 > 感知预警 > 功能描述"
+      },
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B1020",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "2 门鹰 门 门禁设备门湾管理，门尚部位用旗，不可删达! 图参s 2au 0第0 > 3.4.9 可视化看板 > 3.4.10移动端 > 3.4.10.1 数据监测"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA031",
+    "qa_id": "QA031",
+    "project_id": "P03",
+    "question": "3.2 硬件实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具体位置如下",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "gold_evidence_span": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具体位置如下",
+    "declared_unit_id": "水情应急预案各板块可视化-需求规格书:B0059",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该节含雨量计5个、摄像机5个、合计10套等多项数量，模板问法无法唯一定位，需改写为针对雨量计数量的问题。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-需求规格书:B0059",
+        "document": "水情应急预案各板块可视化-需求规格书.docx",
+        "heading_path": "3功能性需求 > 3.2 硬件实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA032",
+    "qa_id": "QA032",
+    "project_id": "P03",
+    "question": "1.2. 项目效果中描述了什么数量、时长或比例要求？",
+    "reference_answer": "(1)通过新增汛情感知设备，整合防汛各项数据资源，通过可视化展示，提升 南钢码头水位、厂区内涝等重点区域汛情的感知能力与效率，为决策提供依据， 整体汛情感知效率较往期提升50%",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)通过新增汛情感知设备，整合防汛各项数据资源，通过可视化展示，提升 南钢码头水位、厂区内涝等重点区域汛情的感知能力与效率，为决策提供依据， 整体汛情感知效率较往期提升50%",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0010",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "50%的效率提升事实可用，但span取了整条要点而非最小片段，且题干模板化，需改写并收敛证据。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0010",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "1. 项目目标与效果 > 1.2. 项目效果"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA033",
+    "qa_id": "QA033",
+    "project_id": "P03",
+    "question": "2.2. 硬件实施范围描述了什么实现或处理过程？",
+    "reference_answer": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具 体位置详见章节“4.3.1一体化自动雨量站”",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具 体位置详见章节“4.3.1一体化自动雨量站”",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0021",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA034证据单元和答案完全相同，属近重复题，且Process题型与“5个雨量计”这一数量事实不符。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0021",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "2. 项目范围 > 2.2. 硬件实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA034",
+    "qa_id": "QA034",
+    "project_id": "P03",
+    "question": "2.2. 硬件实施范围中描述了什么数量、时长或比例要求？",
+    "reference_answer": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具 体位置详见章节“4.3.1一体化自动雨量站”",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)在厂区内安装并调试5个雨量计设备，实现雨量数据的实时感知，具 体位置详见章节“4.3.1一体化自动雨量站”",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0021",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该节含多条硬件条目，题干模板化且span为整条要点，需改写为“安装并调试多少个雨量计设备”并收敛证据。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0021",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "2. 项目范围 > 2.2. 硬件实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA035",
+    "qa_id": "QA035",
+    "project_id": "P03",
+    "question": "2.2. 硬件实施范围支持或提供什么能力？",
+    "reference_answer": "(3)智能摄像机及雨量计共10套设备，经现场调研网络、电源均具备就近 接入条件",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(3)智能摄像机及雨量计共10套设备，经现场调研网络、电源均具备就近 接入条件",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0023",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干问“支持或提供什么能力”而答案是设备数量与接入条件，语义不匹配，需改写题干。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0023",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "2. 项目范围 > 2.2. 硬件实施范围"
+      }
+    ]
+  },
+  {
+    "id": "P03-QA036",
+    "qa_id": "QA036",
+    "project_id": "P03",
+    "question": "4.1.1.1.水位监测中描述了什么数量、时长或比例要求？",
+    "reference_answer": "(1)对接loT平台，获取原料码头、港池码头、石头河(四号岗桥)及3 个明渠水位数据(该部分水位监测设备利旧，数据已接入loT平台),设置水位 阈值进行异常预警",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "gold_evidence_span": "(1)对接loT平台，获取原料码头、港池码头、石头河(四号岗桥)及3 个明渠水位数据(该部分水位监测设备利旧，数据已接入loT平台),设置水位 阈值进行异常预警",
+    "declared_unit_id": "水情应急预案各板块可视化-技术协议:B0058",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "“3个明渠”的数量事实需在含OCR噪声（loT）的长条目中判断，span为整条要点而非最小片段，题干亦模板化，需改写并收敛。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "水情应急预案各板块可视化-技术协议:B0058",
+        "document": "水情应急预案各板块可视化-技术协议.docx",
+        "heading_path": "4. 系统功能设计 > 4.1. 主要功能概述 > 4.1.1.感知预警 > 4.1.1.1.水位监测"
+      }
+    ]
+  }
+]

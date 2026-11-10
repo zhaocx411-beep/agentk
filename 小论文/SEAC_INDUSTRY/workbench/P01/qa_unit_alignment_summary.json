@@ -1,0 +1,11 @@
+{
+  "protocol_version": "industrial-seac-qa-unit-alignment-v1.0",
+  "qa_count": 27,
+  "status_counts": {
+    "BLOCK_IS_UNIT": 18,
+    "UNIQUE_EXACT_ROW": 9
+  },
+  "table_qa_count": 9,
+  "table_qa_aligned_count": 9,
+  "missing_block_qa_ids": []
+}

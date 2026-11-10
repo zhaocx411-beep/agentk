@@ -1,0 +1,56 @@
+[
+  {
+    "candidate_id": "SYN-C001",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "heading_to_content",
+    "left_unit_id": "SYN-B001",
+    "right_unit_id": "SYN-B002",
+    "human_label": "NO_BREAK"
+  },
+  {
+    "candidate_id": "SYN-C002",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "table_transition",
+    "left_unit_id": "SYN-B002",
+    "right_unit_id": "SYN-B003#R001",
+    "human_label": "BREAK"
+  },
+  {
+    "candidate_id": "SYN-C003",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "within_table",
+    "left_unit_id": "SYN-B003#R001",
+    "right_unit_id": "SYN-B003#R002",
+    "human_label": "NO_BREAK"
+  },
+  {
+    "candidate_id": "SYN-C004",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "within_table",
+    "left_unit_id": "SYN-B003#R002",
+    "right_unit_id": "SYN-B003#R003",
+    "human_label": "NO_BREAK"
+  },
+  {
+    "candidate_id": "SYN-C005",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "table_to_heading",
+    "left_unit_id": "SYN-B003#R003",
+    "right_unit_id": "SYN-B004",
+    "human_label": "BREAK"
+  },
+  {
+    "candidate_id": "SYN-C006",
+    "source_document": "synthetic_inventory_requirements.md",
+    "document_type": "requirements_specification",
+    "boundary_stratum": "heading_to_content",
+    "left_unit_id": "SYN-B004",
+    "right_unit_id": "SYN-B005",
+    "human_label": "NO_BREAK"
+  }
+]

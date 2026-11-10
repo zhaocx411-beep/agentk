@@ -1,0 +1,1016 @@
+[
+  {
+    "id": "P06-QA001",
+    "qa_id": "QA001",
+    "project_id": "P06",
+    "question": "0415需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-15",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250415.docx",
+    "gold_evidence_span": "时间 | 2025-4-15 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250415:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "同一时间行在“会议纪要总和-20250414”B0006逐字重复，证据无法唯一对齐；题干“0415”还只存在于文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0006#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250415:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250415.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA002",
+    "qa_id": "QA002",
+    "project_id": "P06",
+    "question": "本次需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-16",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx",
+    "gold_evidence_span": "时间 | 2025-4-16 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250416 上午:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "题干“本次”未说明是哪场会议，且该时间行在会议纪要总和B0010逐字重复，题目不成立且证据不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0010#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250416 上午:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA003",
+    "qa_id": "QA003",
+    "project_id": "P06",
+    "question": "0417需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-17",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250417.docx",
+    "gold_evidence_span": "时间 | 2025-4-17 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250417:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该时间行在会议纪要总和B0014逐字重复，证据无法唯一对齐；题干“0417”来自文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0014#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250417:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250417.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA004",
+    "qa_id": "QA004",
+    "project_id": "P06",
+    "question": "0418需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-18",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250418.docx",
+    "gold_evidence_span": "时间 | 2025-4-18 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250418:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该时间行在会议纪要总和B0018逐字重复，证据无法唯一对齐；题干“0418”来自文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0018#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250418:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250418.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA005",
+    "qa_id": "QA005",
+    "project_id": "P06",
+    "question": "0419需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-19",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250419.docx",
+    "gold_evidence_span": "时间 | 2025-4-19 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250419:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该时间行在会议纪要总和B0022逐字重复，证据无法唯一对齐；题干“0419”来自文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0022#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250419:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250419.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA006",
+    "qa_id": "QA006",
+    "project_id": "P06",
+    "question": "0420需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-20",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250420.docx",
+    "gold_evidence_span": "时间 | 2025-4-20 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250420:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该时间行在会议纪要总和B0026逐字重复，证据无法唯一对齐；题干“0420”来自文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0026#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250420:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250420.docx",
+        "heading_path": ""
+      }
+    ]
+  },
+  {
+    "id": "P06-QA007",
+    "qa_id": "QA007",
+    "project_id": "P06",
+    "question": "卫生积分增加接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP丢失POST，且本文档8条同模板题答案全部相同、无区分度，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA008",
+    "qa_id": "QA008",
+    "project_id": "P06",
+    "question": "酒店预订单接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖决定性的POST方法，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA009",
+    "qa_id": "QA009",
+    "project_id": "P06",
+    "question": "进出体育馆记录接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， GET方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0116",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， GET方法”，答案只写HTTP，未覆盖GET，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 18,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0116",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 业财一体化模块 > 接口定义 > 进出体育馆记录接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1132",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店获取房型列表接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1174",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店获取房间列表接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1226",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 获取房型价格信息列表接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1260",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 获取时租房计费规则列表接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1385",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店经营数据接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1752",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 根据时段查询酒店订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1852",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 获取酒店在住客人信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B1957",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 食堂区域信息获取接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B2009",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 食堂信息获取接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B2039",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 档口信息获取接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B2069",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 菜品信息获取接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA010",
+    "qa_id": "QA010",
+    "project_id": "P06",
+    "question": "组织架构信息接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA011",
+    "qa_id": "QA011",
+    "project_id": "P06",
+    "question": "人员信息接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP需补全；该接口小节示例中含 http://10.10.10.1 内网地址，建议隐私复核。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA012",
+    "qa_id": "QA012",
+    "project_id": "P06",
+    "question": "审批过程查询接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA013",
+    "qa_id": "QA013",
+    "project_id": "P06",
+    "question": "接待车辆申请接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA014",
+    "qa_id": "QA014",
+    "project_id": "P06",
+    "question": "接待车辆申请审批结果接口使用什么请求方式？",
+    "reference_answer": "HTTP",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "1）请求方式：HTTP， POST方法",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "原文为“HTTP， POST方法”，答案只写HTTP；与QA013问法答案高度近重复，需补全答案并精简同模板题。",
+    "equivalence_status": "TOO_MANY_OCCURRENCES",
+    "occurrence_count": 50,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0372",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0413",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待会议室预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0442",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0483",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待桌餐预定申请审批结果接口"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0512",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA016",
+    "qa_id": "QA016",
+    "project_id": "P06",
+    "question": "卫生积分增加接口中参数 +personNo 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，必填",
+    "question_type": "API parameter",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "gold_evidence_span": "+personNo | String | | 是 | 人员工号",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R003",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "题干中的“+personNo”是表格层级符号而非真实参数名，问法不自然，应改写为“personList数组内的personNo”；证据行本身唯一可用。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R003",
+        "document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+        "heading_path": "1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA025",
+    "qa_id": "QA025",
+    "project_id": "P06",
+    "question": "画面设计支持或提供什么能力？",
+    "reference_answer": "功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0127",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "该文档有80处同名“画面设计”小节，题干未限定“房间类型管理”，且该段文字在B0488逐字重复，证据无法唯一对齐。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0127",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 房间类型管理 > 画面设计"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0488",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 卫生检查表 > 画面设计"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA026",
+    "qa_id": "QA026",
+    "project_id": "P06",
+    "question": "项目背景描述了什么实现或处理过程？",
+    "reference_answer": "当前后勤服务涵盖餐饮超市、员工宿舍、体育场馆、物业巡检、商铺租赁及分离公司接待等多元化场景，但各业务模块的信息化水平参差不齐，流程分散化、数据孤岛化、业财等问题日益凸显",
+    "question_type": "Process",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "当前后勤服务涵盖餐饮超市、员工宿舍、体育场馆、物业巡检、商铺租赁及分离公司接待等多元化场景，但各业务模块的信息化水平参差不齐，流程分散化、数据孤岛化、业财等问题日益凸显",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0102",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "答案是后勤业务现状痛点陈述，与“实现或处理过程”题型不符；同段末句“亟需通过建设综合服务一体化管理平台…”同样可作答，需改写问题与答案。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0102",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "概述 > 项目背景"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA027",
+    "qa_id": "QA027",
+    "project_id": "P06",
+    "question": "子系统功能描述描述了什么实现或处理过程？",
+    "reference_answer": "宿舍管理涵盖员工从入住到退宿的全流程，包括维修、能耗计费、卫生检查、库房等",
+    "question_type": "Process",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "宿舍管理涵盖员工从入住到退宿的全流程，包括维修、能耗计费、卫生检查、库房等",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0116",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该段并列描述酒店、接待、体育馆、宿舍等8个模块，题干未限定“宿舍管理”，8条分句均可作答，需在问题中指明模块。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0116",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 子系统功能描述"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA028",
+    "qa_id": "QA028",
+    "project_id": "P06",
+    "question": "画面设计描述了什么实现或处理过程？",
+    "reference_answer": "功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据",
+    "question_type": "Process",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0127",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "与QA025同一父块、同一span，仅题型不同，属近重复；且“画面设计”同名小节达80处、该段文字在B0488重复，证据不唯一。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0127",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 房间类型管理 > 画面设计"
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0488",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 卫生检查表 > 画面设计"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA029",
+    "qa_id": "QA029",
+    "project_id": "P06",
+    "question": "逻辑处理描述了什么实现或处理过程？",
+    "reference_answer": "调用晋刚E家-查询审批流程节点详情接口，根据E家审批单号查询审批流程节点详情",
+    "question_type": "Process",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "调用晋刚E家-查询审批流程节点详情接口，根据E家审批单号查询审批流程节点详情",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0218",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该文档有80处同名“逻辑处理”小节，题干未限定“入住申请管理”，无法定位证据；答案含外部系统“晋刚E家”接口名，建议隐私复核。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0218",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 入住申请管理 > 逻辑处理"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA030",
+    "qa_id": "QA030",
+    "project_id": "P06",
+    "question": "逻辑处理支持或提供什么能力？",
+    "reference_answer": "押金支付成功满一年微信支付不支持退款，需调用晋钢E家-退押金审批接口，抛送退款申请",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "押金支付成功满一年微信支付不支持退款，需调用晋钢E家-退押金审批接口，抛送退款申请",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0251",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "同为80处同名“逻辑处理”小节，题干未限定“退宿申请管理”；证据句本身唯一，收窄题干后可用。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0251",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 退宿申请管理 > 逻辑处理"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA031",
+    "qa_id": "QA031",
+    "project_id": "P06",
+    "question": "功能描述支持或提供什么能力？",
+    "reference_answer": "维护体育馆场馆基础信息，内部员工自动开通体育馆会员，外部人员体育馆与游泳馆开通会员均需购买，并具备课程管理、赛事活动预约、器材租赁功能",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "gold_evidence_span": "维护体育馆场馆基础信息，内部员工自动开通体育馆会员，外部人员体育馆与游泳馆开通会员均需购买，并具备课程管理、赛事活动预约、器材租赁功能",
+    "declared_unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0943",
+    "earlier_verdict": "NEEDS_REWRITE",
+    "earlier_notes": "该文档有10处同名“功能描述”小节，题干未限定“体育馆管理模块”，无法唯一定位证据。",
+    "equivalence_status": "UNIQUE",
+    "occurrence_count": 1,
+    "cross_document": false,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台-详细设计规格书 V0.4:B0943",
+        "document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+        "heading_path": "晋钢综合服务一体化子系统设计 > 体育馆管理模块 > 功能描述"
+      }
+    ]
+  },
+  {
+    "id": "P06-QA033",
+    "qa_id": "QA033",
+    "project_id": "P06",
+    "question": "0414需求调研会议的时间是什么？",
+    "reference_answer": "2025-4-14",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+    "gold_evidence_span": "时间 | 2025-4-14 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团",
+    "declared_unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0002#R002",
+    "earlier_verdict": "REJECTED",
+    "earlier_notes": "金标准指向总和文档，但同一时间行在“需求调研会议纪要-20250414”B0002逐字重复，证据无法唯一对齐；题干“0414”亦来自文件名且答案即该日期。",
+    "equivalence_status": "EQUIVALENT_SET",
+    "occurrence_count": 2,
+    "cross_document": true,
+    "equivalent_locations": [
+      {
+        "unit_id": "综合服务一体化管理平台会议纪要总和-20250414:B0002#R002",
+        "document": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+        "heading_path": ""
+      },
+      {
+        "unit_id": "综合服务一体化管理平台-需求调研会议纪要-20250414:B0002#R002",
+        "document": "综合服务一体化管理平台-需求调研会议纪要-20250414.docx",
+        "heading_path": ""
+      }
+    ]
+  }
+]

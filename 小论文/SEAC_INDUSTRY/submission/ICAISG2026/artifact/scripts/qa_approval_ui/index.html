@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEAC 检索 QA 终审</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-left">
+        <span class="candidate-id" id="qa-key">—</span>
+        <span class="chip" id="project">—</span>
+        <span class="chip subtle" id="state">—</span>
+        <span class="chip subtle" id="question-type">—</span>
+      </div>
+      <div class="bar-right">
+        <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="counter" id="counter">—</span>
+        <button class="ghost" id="help-toggle" title="判定口径与快捷键">?</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="alerts" id="alerts"></section>
+
+      <article class="card">
+        <div class="card-head">题干</div>
+        <div class="question-text" id="question"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          参考答案
+          <span class="badges" id="answer-badges"></span>
+        </div>
+        <div class="answer-text" id="answer"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          金标准证据跨度
+          <span class="badges" id="span-badges"></span>
+        </div>
+        <div class="span-text" id="span"></div>
+      </article>
+
+      <section class="locations" id="locations"></section>
+
+      <article class="card notes-card" id="prereview-card" hidden>
+        <div class="card-head">预审留痕</div>
+        <div class="meta-text" id="prereview"></div>
+      </article>
+
+      <section class="controls">
+        <div class="group">
+          <div class="group-head">内容结论</div>
+          <div class="options two">
+            <button class="option approve" data-field="approval" data-value="APPROVED">
+              <kbd>a</kbd><span>APPROVED</span><em>题干自足、答案由证据支持</em>
+            </button>
+            <button class="option reject" data-field="approval" data-value="REJECTED">
+              <kbd>r</kbd><span>REJECTED</span><em>需外部推断或证据不可用</em>
+            </button>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-head">隐私结论</div>
+          <div class="options four">
+            <button class="option clear" data-field="privacy" data-value="NO_RISK">
+              <kbd>1</kbd><span>NO_RISK</span><em>不含可识别信息</em>
+            </button>
+            <button class="option clear" data-field="privacy" data-value="ANONYMIZED">
+              <kbd>2</kbd><span>ANONYMIZED</span><em>已替换，备注写规则</em>
+            </button>
+            <button class="option clear" data-field="privacy" data-value="CLEARED">
+              <kbd>3</kbd><span>CLEARED</span><em>经授权放行原文</em>
+            </button>
+            <button class="option reject" data-field="privacy" data-value="REJECTED">
+              <kbd>4</kbd><span>REJECTED</span><em>不得进入基准</em>
+            </button>
+          </div>
+        </div>
+
+        <div class="group" id="difficulty-group">
+          <div class="group-head">
+            难度
+            <span class="hint" id="difficulty-hint"></span>
+          </div>
+          <div class="options three">
+            <button class="option" data-field="difficulty" data-value="Easy"><kbd>e</kbd><span>Easy</span></button>
+            <button class="option" data-field="difficulty" data-value="Medium"><kbd>m</kbd><span>Medium</span></button>
+            <button class="option" data-field="difficulty" data-value="Hard"><kbd>h</kbd><span>Hard</span></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="text" id="notes" placeholder="备注（拒绝、ANONYMIZED、表头存疑时必填）" />
+          <button class="primary" id="save">保存并跳到下一条未判 <kbd>⏎</kbd></button>
+        </div>
+        <div class="row nav">
+          <button class="ghost" id="prev"><kbd>←</kbd> 上一条</button>
+          <button class="ghost" id="next">下一条 <kbd>→</kbd></button>
+          <button class="ghost" id="jump-undecided">下一条未判 <kbd>u</kbd></button>
+          <span class="message" id="message"></span>
+        </div>
+      </section>
+
+      <section class="stats" id="stats"></section>
+    </main>
+
+    <div class="overlay" id="help" hidden>
+      <div class="sheet">
+        <h2>判定口径</h2>
+        <dl>
+          <dt>内容放行的三个条件</dt>
+          <dd>题干不看证据也能读懂；答案的每个实质片段都能在证据跨度里回溯；证据在语料中足够独特。三条缺一即 <code>REJECTED</code>。</dd>
+          <dt>多处证据</dt>
+          <dd>同一段原文在语料多处出现时，检索命中任一处都算正确。放行前请确认列出的每一处，答案都成立；只要有一处不成立就拒绝。</dd>
+          <dt>答案与证据的关系</dt>
+          <dd><code>子串</code> 表示答案是证据的原文片段，机械可验。<code>需人工判断</code> 表示答案是改述，你要自己确认没有引入证据里没有的信息。</dd>
+          <dt>表头存疑</dt>
+          <dd>标记为「表头存疑」的题，答案落在哪一列由重复或占位的表头决定，字符匹配查不出错。请核对高亮单元格所在列的语义，并把结论写进备注。</dd>
+          <dt>不得凑数</dt>
+          <dd>每个项目有最低题数，但不达标也不能放行不合格的题。题数不足由后续补写解决，不由放宽标准解决。</dd>
+          <dt>隐私</dt>
+          <dd>隐私结论须由获授权查看企业材料的人给出。判 <code>ANONYMIZED</code> 必须在备注里写明替换规则；判 <code>REJECTED</code> 必须写明理由。</dd>
+        </dl>
+        <h2>快捷键</h2>
+        <ul>
+          <li><kbd>a</kbd> APPROVED · <kbd>r</kbd> REJECTED</li>
+          <li><kbd>1</kbd> NO_RISK · <kbd>2</kbd> ANONYMIZED · <kbd>3</kbd> CLEARED · <kbd>4</kbd> 隐私 REJECTED</li>
+          <li><kbd>e</kbd> Easy · <kbd>m</kbd> Medium · <kbd>h</kbd> Hard · <kbd>s</kbd> 采纳预审建议难度</li>
+          <li><kbd>⏎</kbd> 保存并跳下一条未判 · <kbd>u</kbd> 跳到下一条未判 · <kbd>←</kbd> <kbd>→</kbd> 前后翻</li>
+          <li><kbd>n</kbd> 聚焦备注框 · <kbd>Esc</kbd> 离开备注框 · <kbd>?</kbd> 开关本页</li>
+        </ul>
+        <p class="foot">保存即写回工作簿，可随时关掉浏览器和服务，下次从第一条未判处继续。校验规则与导入脚本一致，能保存的行导入时不会被退回。</p>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

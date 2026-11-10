@@ -1,0 +1,85 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P07",
+  "split": "locked_test",
+  "source_dir": "财务人资供应链及基础设施建设",
+  "processed": [
+    {
+      "file": "财务人资供应链及基础设施建设-方案建议书.docx",
+      "suffix": ".docx",
+      "sha256": "73e15f5163a48b35cac1c4a14a65181a585cc415b1147f97ff0486e5962b5b0f",
+      "bytes": 4780768,
+      "document_type": "Proposal"
+    },
+    {
+      "file": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+      "suffix": ".docx",
+      "sha256": "fdd06ddfff005fe99258c3a55598c0c4bc1325dc25bf69422bf5b5a7593c6a24",
+      "bytes": 53099,
+      "document_type": "API"
+    },
+    {
+      "file": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+      "suffix": ".xlsx",
+      "sha256": "e90bd6848be78e104daec5bc048674077275d287ad8d1201d9020ba02a0599a7",
+      "bytes": 197718,
+      "document_type": "DB"
+    },
+    {
+      "file": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+      "suffix": ".docx",
+      "sha256": "b0564871cc58d1c2f64a8de93830b7a1b3c97104afefb6969e2b771b8186778b",
+      "bytes": 10414441,
+      "document_type": "Detailed Design"
+    },
+    {
+      "file": "需求调研会议纪要/人资系统调研会议纪要2025.5.10.docx",
+      "suffix": ".docx",
+      "sha256": "81e4d034f213992bb29f55f1e2b5250a3a481451c36b715186b22e9ac5d711ba",
+      "bytes": 263378,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/人资系统调研会议纪要2025.5.docx",
+      "suffix": ".docx",
+      "sha256": "b55d84914739533a6ec5a0eb9f8ec367ad56a160057096ebc6412375ac9a1796",
+      "bytes": 30954,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/项目人资模块会议纪要2025.5.12.docx",
+      "suffix": ".docx",
+      "sha256": "073c62ce06d93ea18469f6f0e5de58a76955b710fd593891ca69a53daeeccf0b",
+      "bytes": 26683,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/项目人资模块会议纪要2025.5.13.docx",
+      "suffix": ".docx",
+      "sha256": "c96199befeaa64f311e3b730e8344f4821499347142e77856faa89b9cdf71a5a",
+      "bytes": 26722,
+      "document_type": "Meeting"
+    }
+  ],
+  "skipped": [
+    {
+      "file": ".DS_Store",
+      "reason": "temporary_or_system_file"
+    },
+    {
+      "file": "财务人资供应链及基础设施建设-技术协议v1.1.pdf",
+      "reason": "unsupported_pdf"
+    },
+    {
+      "file": "财务人资供应链及基础设施建设-需求规格书（双方签字).pdf",
+      "reason": "unsupported_pdf"
+    },
+    {
+      "file": "需求调研会议纪要/.DS_Store",
+      "reason": "temporary_or_system_file"
+    }
+  ],
+  "document_count": 8,
+  "block_count": 1564,
+  "approx_token_count": 59925
+}

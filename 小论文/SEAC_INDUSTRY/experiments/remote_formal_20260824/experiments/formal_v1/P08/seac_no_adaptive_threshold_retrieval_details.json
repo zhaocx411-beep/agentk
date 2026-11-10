@@ -1,0 +1,447 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0159"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0085",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0086",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0083",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0069",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0081"
+    ],
+    "query_latency_ms": 22.61368464678526
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0257"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0147",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0146",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0148",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0143",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0149"
+    ],
+    "query_latency_ms": 20.96408884972334
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0266"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0149",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0141",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0144",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0157",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0143"
+    ],
+    "query_latency_ms": 20.928393118083477
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0294"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0157",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0144",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0153",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0156",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0154"
+    ],
+    "query_latency_ms": 21.390220150351524
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0069",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0081",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0070",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0071",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0083"
+    ],
+    "query_latency_ms": 21.294474601745605
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0130",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0278"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0073",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0231",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0015",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0085",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0414"
+    ],
+    "query_latency_ms": 20.60458343476057
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0119",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0103",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0517",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0120",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0502"
+    ],
+    "query_latency_ms": 21.408348344266415
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0549",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0518",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0119",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0092",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0414"
+    ],
+    "query_latency_ms": 21.51130884885788
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0288"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0156",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0144",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0061",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0103",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0502"
+    ],
+    "query_latency_ms": 21.134203299880028
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0078",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0075"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0059",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0055",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0058",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0053",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0056"
+    ],
+    "query_latency_ms": 21.00493758916855
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0081",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0078"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0079",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0056",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0076",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0077",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0076"
+    ],
+    "query_latency_ms": 20.767640322446823
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0081",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0069",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0083",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0070",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0053"
+    ],
+    "query_latency_ms": 20.28862852603197
+  },
+  {
+    "qa_id": "QS001",
+    "question_type": "API",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031#R008"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0032",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0033",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0030",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0031",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0018"
+    ],
+    "query_latency_ms": 20.642392337322235
+  },
+  {
+    "qa_id": "QS002",
+    "question_type": "API",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0188#R010"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0094",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0138",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0092",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0093",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0119"
+    ],
+    "query_latency_ms": 24.903698824346066
+  },
+  {
+    "qa_id": "QS003",
+    "question_type": "API parameter",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0070#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0077#R003"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0024",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0025",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0030",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0021",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0031"
+    ],
+    "query_latency_ms": 22.10316900163889
+  },
+  {
+    "qa_id": "QS004",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053#R007"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0040",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0111",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0044",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0045",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0041"
+    ],
+    "query_latency_ms": 20.656119100749493
+  },
+  {
+    "qa_id": "QS005",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063#R008"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0054",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0056",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0055",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0057",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0060"
+    ],
+    "query_latency_ms": 20.73096763342619
+  },
+  {
+    "qa_id": "QS006",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0204"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0103",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0502",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0550",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0098",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0522"
+    ],
+    "query_latency_ms": 21.50697261095047
+  },
+  {
+    "qa_id": "QS007",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0224#R002"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0135",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0137",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0119",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0136",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0121"
+    ],
+    "query_latency_ms": 14.847121201455593
+  },
+  {
+    "qa_id": "QS008",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 6,
+    "span_rank": 6,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0222#R021"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0098",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0132",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0131",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0133",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0100"
+    ],
+    "query_latency_ms": 21.257610991597176
+  },
+  {
+    "qa_id": "QS009",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0106"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0066",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0064",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0065",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0138",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0143"
+    ],
+    "query_latency_ms": 20.382773131132126
+  },
+  {
+    "qa_id": "QS010",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0264#R002"
+    ],
+    "top_chunk_ids": [
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0148",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0395",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0087",
+      "seac_no_adaptive_threshold:模块7-能源管理-技术协议-1207.docx:P0061",
+      "seac_no_adaptive_threshold:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0396"
+    ],
+    "query_latency_ms": 20.38339711725712
+  }
+]

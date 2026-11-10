@@ -1,0 +1,61 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P05",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "630bc9486407549b37c8128820c4902aeccc9ef98500dbf8a6124bd6592aa1a6",
+  "boundary_pool_count": 8149,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 698,
+    "inside_table": 4280,
+    "noise_candidate": 22,
+    "same_section_continuity": 2326,
+    "table_transition": 823
+  },
+  "sample_strata": {
+    "heading_transition": 55,
+    "inside_table": 108,
+    "noise_candidate": 22,
+    "same_section_continuity": 76,
+    "table_transition": 39
+  },
+  "sample_documents": {
+    "津西设备管理系统项目-需求规格书确认会纪要20260129.doc": 10,
+    "津西设备管理系统项目-需求讨论会议纪要20251223.docx": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20251224.doc": 12,
+    "津西设备管理系统项目-需求讨论会议纪要20251225.doc": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20251226.doc": 12,
+    "津西设备管理系统项目-需求讨论会议纪要20251229.doc": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20260105.doc": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20260106.doc": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20260107.doc": 11,
+    "津西设备管理系统项目-需求讨论会议纪要20260115.doc": 10,
+    "津西设备管理系统项目-需求讨论会议纪要20260119.doc": 10,
+    "津西钢铁设备管理系统技术协议(8) - 副本(1).docx": 32,
+    "津西钢铁设备管理系统项目-详细设计规格-接口文档.docx": 42,
+    "津西钢铁设备管理系统项目-详细设计规格-数据库表设计.xlsx": 9,
+    "津西钢铁设备管理系统项目-详细设计规格.docx": 32,
+    "津西钢铁设备管理系统项目-需求规格书.doc": 32,
+    "津西钢铁设备管理系统项目建议书-V1.1.docx": 33
+  },
+  "qa_draft_count": 36,
+  "qa_types": {
+    "API": 3,
+    "API parameter": 5,
+    "Constraint": 5,
+    "Database": 6,
+    "Feature": 4,
+    "Meeting fact": 6,
+    "Numeric constraint": 5,
+    "Process": 2
+  },
+  "qa_unit_aligned_count": 36,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "0fff9549f560a7749cba3cde60ba588ba8575173cb10c81ddb9db71f7b6c8e57",
+    "boundary_blind_annotator_a.json": "39ecb3dab1efbfd09e9674627e87283a6cae88c917ace6b706ad69bcf8046490",
+    "boundary_blind_annotator_b.json": "736629c36f7d1e97f7ed913e0e9cdd8509f4d5165389c964a8a41b7e9590cc56",
+    "qa_draft.json": "fd41255cea8bf1d0aa89548266c21041a2449fd4f9ad646dac17043139c5ca77"
+  }
+}

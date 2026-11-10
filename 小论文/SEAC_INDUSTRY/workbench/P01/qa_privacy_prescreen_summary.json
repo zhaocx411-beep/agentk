@@ -1,0 +1,9 @@
+{
+  "protocol_version": "industrial-seac-privacy-prescreen-v1.0",
+  "record_count": 27,
+  "privacy_status": "HUMAN_REVIEW_PENDING",
+  "automatic_flag_counts": {
+    "CUSTOMER_OR_VENDOR_IDENTITY": 27
+  },
+  "warning": "Automatic flags are a pre-screen only and never constitute privacy clearance."
+}

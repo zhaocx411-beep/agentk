@@ -1,0 +1,375 @@
+[P05-BP0226] stratum=noise_candidate doc_type=Technical Agreement
+  L(heading) sec=2025年12月
+    2025年12月
+  R(paragraph) sec=<same>
+    目 录
+[P05-BP0227] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=项目设计方案 > 平台建设及部署方案 > 平台建设
+    表头: 开发框架 | Spring CLOUD Alibaba、Spring MVC、Mybatis-plus、Vue 数据行: 连接池 | Druid
+  R(table_row) sec=<same>
+    表头: 开发框架 | Spring CLOUD Alibaba、Spring MVC、Mybatis-plus、Vue 数据行: 线上监控 | Spring admin
+[P05-BP0228] stratum=heading_transition doc_type=SRS
+  L(heading) sec=需求变更说明
+    需求变更说明
+  R(heading) sec=需求变更说明 > 需求变更流程
+    需求变更流程
+[P05-BP0229] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=设备管理系统设计 > 点检管理 > 班次配置 > 相关影响
+    1、当前班次的倒班点检任务，只有当前正在上班的班次人员可进行点检，倒班班次的配置将影响点检任务的执行，需要提前配置完成；
+  R(heading) sec=设备管理系统设计 > 点检管理 > 排班列表
+    排班列表
+[P05-BP0230] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=4 设备管理系统设计 5 > 4.4 缺陷管理 51 > 4.4.3 内部交互流程 52
+    4.4.3 内部交互流程 52
+  R(heading) sec=4 设备管理系统设计 5 > 4.4 缺陷管理 51 > 4.4.4 缺陷清单 53
+    4.4.4 缺陷清单 53
+[P05-BP0231] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 功能清单
+    表头: 模块名称 | 二级菜单 数据行: 检修管理 | 检修技术标准
+  R(table_row) sec=<same>
+    表头: 模块名称 | 二级菜单 数据行: 检修管理 | 检修作业标准
+[P05-BP0232] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=项目设计方案 > 系统功能设计 > 设备润滑管理 > 任务统计
+    任务统计
+  R(paragraph) sec=<same>
+    系统支持对润滑计划完成率、完成情况、延期/逾期润滑、各类润滑油品的消耗量等的统计分析，为管理人员提供相应的考核数据，定期自动生成实绩统计分析。
+[P05-BP0233] stratum=noise_candidate doc_type=SRS
+  L(table_row) sec=(none)
+    表头: 变更日期 | 版本号 | 标志 | 变更概要 | 编写人 | 审核人 数据行: 2026.1.29 | V1.1 | 修改 | 调整规格书内容 | 刘鹏翼 | 津西机动部
+  R(paragraph) sec=<same>
+    目录
+[P05-BP0234] stratum=heading_transition doc_type=Other
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 备件管理
+    通过对机旁备件出入库记录的分析，提供日常备件库存、消耗相关统计查询功能，以及备件、设备相关的管理建议。
+  R(heading) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 备件管理 > 物料需求计划管理
+    物料需求计划管理
+[P05-BP0235] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 功能清单
+    表头: 模块名称 | 二级菜单 数据行: 备材管理 | 备件包
+  R(table_row) sec=<same>
+    表头: 模块名称 | 二级菜单 数据行: 备材管理 | 备件/材料采购计划申报
+[P05-BP0236] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=(none)
+    目 录
+  R(heading) sec=1 概述 1
+    1 概述 1
+[P05-BP0237] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 待 办 事 项 | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供时间：2025年12月26日） 协同各分厂了解业务的人员，共同交流点检、检修、润滑、备材、故障等业务细项。（计划沟通时间：2025年12月26日） 金恒： 提供权限管控要求。（对接人：刘鹏翼，计划提供时间：2025年12月28日） | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供时间：2025年12月26日） 协同各分厂了解业务的人员，共同交流点检、检修、润滑、备材、故障等业务细项。（计划沟通时间：2025年12月26日） 金恒： 提供权限管控要求。（对接人：刘鹏翼，计划提供时间：2025年12月28日） | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研…
+  R(paragraph) sec=<same>
+    河北津西钢铁集团股份有限公司：
+[P05-BP0238] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=5. 项目实施方案 48 > 5.3. 项目人员 50 > 5.3.1. 项目团队成员角色定义与职责 50
+    5.3.1. 项目团队成员角色定义与职责 50
+  R(heading) sec=5. 项目实施方案 48 > 5.3. 项目人员 50 > 5.3.2. 项目团队成员清单 51
+    5.3.2. 项目团队成员清单 51
+[P05-BP0239] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=设备管理系统设计 > 缺陷管理 > 缺陷清单 > 画面设计
+    待检修项目详情页面
+  R(paragraph) sec=<same>
+    1、画面入口：设备智维->缺陷管理->缺陷清单
+[P05-BP0240] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    河北津西钢铁集团股份有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P05-BP0241] stratum=same_section_continuity doc_type=Other
+  L(heading) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 专项管理 > 油箱油品管理
+    油箱油品管理
+  R(paragraph) sec=<same>
+    针对油箱、油品基础信息进行档案管理，支持维护、查询、下载等功能，提供油品检测履历跟踪。
+[P05-BP0242] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 20 | 事故报告A3模板 | 赵伟森 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 21 | 备件采购申报流程 | 李虹达 | 是 |
+[P05-BP0243] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义
+    2.1.2接口定义
+  R(heading) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口
+    2.1.2.1机旁库储位信息查询接口
+[P05-BP0244] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    河北津西钢铁集团股份有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P05-BP0245] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 决 议 事 项 | 计量器具管理： 下午同王文彬、张胜国针对计量器具的业务执行以及建设需求进行了沟通交流； 当前计量器具主要分为A/B/C三类，检测方式主要有系统报检、第三方检测以及内部检测，系统报检后，会有专门的平台反馈检测结果和检测报告，第三方检测会直接提供检测报告，内检记录检测结果，检测不合格的计量器具，会由分厂更换后报废处置； 系统需要提供计量器具台账管理功能，根据提供的寿命时间进行报废预警，同时根据计量器具的检测周期，自动提醒检测任务，系统需要提供检测结果的登记、附件上传和临时检测计划功能。 系统需要结合维修记录和检测结果，提供计量器具的历史检测结果统计、设备维修完成率统计等信息，根据数采平台采集的数据，展示计量器具的监测数据，支持监测数据历史趋势查看； 系统需要提供知识库功能， 可以上传、下载、查看法律法规信息等附件，…
+  R(table_row) sec=<same>
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 待 决 事 项 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无
+[P05-BP0246] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 1 数据行: 待 办 事 项 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。 | 计划4月20日提交一版完整的设备基础资料信息； 计划每周一组织召开资料收集推进会议。
+  R(paragraph) sec=<same>
+    河北津西钢铁集团股份有限公司：
+[P05-BP0247] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 点检管理 > 点检标准
+    表头: 变更区功能 | 说明 数据行: 修改 | 修改点检标准信息。
+  R(table_row) sec=<same>
+    表头: 变更区功能 | 说明 数据行: 删除 | 删除点检标准信息。
+[P05-BP0248] stratum=heading_transition doc_type=Other
+  L(paragraph) sec=项目总体设计原则 > 安全可靠性原则
+    将从系统结构、技术措施、设备性能、系统管理、技术支持等方面着手，确保系统运行的可靠性和稳定性，达到最大的平均无故障时间。
+  R(heading) sec=项目总体设计原则 > 先进性和实用性原则
+    先进性和实用性原则
+[P05-BP0249] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 12 | 设备基础资料清单 | 刘志强 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 13 | 组织架构及人员信息 | 郑艾强 | 是 | 已提供部分信息，待和分厂确认
+[P05-BP0250] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.3备件出库接口
+    "sidePlace": "111",
+  R(paragraph) sec=<same>
+    "supplier": "供应商名称",
+[P05-BP0251] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 19 | 计量器具台账 | 王文斌 | 否 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 20 | 事故报告A3模板 | 赵伟森 | 是 |
+[P05-BP0252] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    河北津西钢铁集团股份有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P05-BP0253] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 21 | 备件采购申报流程 | 李虹达 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 22 | 分厂检修计划上报内容 | 蒋磊 | 是 |
+[P05-BP0254] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 2
+[P05-BP0255] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    河北津西钢铁集团股份有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P05-BP0256] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 11 | 缺陷清单 | 刘志强 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 12 | 设备基础资料清单 | 刘志强 | 是 |
+[P05-BP0257] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 19 | 计量器具台账 | 王文斌 | 否 | 12.30提供
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 20 | 事故报告A3模板 | 赵伟森 | 是 |
+[P05-BP0258] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    附件：
+  R(table_row) sec=<same>
+    待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单
+[P05-BP0259] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 17 | 检修作业标准 | 刘志强 | 否 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 18 | 特种设备台账 | 刘欢 | 是 |
+[P05-BP0260] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3
+[P05-BP0261] stratum=same_section_continuity doc_type=Other
+  L(heading) sec=项目实施计划 > 风险预估及管控措施 > 需求变更管理 > 审核工作产品与客户需求的一致性
+    审核工作产品与客户需求的一致性
+  R(paragraph) sec=<same>
+    项目经理需定期或根据需要组织相关人员评审项目计划、活动及工作产品是否与需求及需求变更相符。并根据《需求追踪矩阵》界定需求变化所引起的工作产品和有关计划的变更范围。该评审在需求变更到来时可以实施；
+[P05-BP0262] stratum=same_section_continuity doc_type=Other
+  L(paragraph) sec=技术支持服务方案
+    对于用户急需的服务请求，以及由于严重故障导致软件系统不能正常运行，通过电话或网络远程无法解决、必须到现场进行解决的情况，采方公司将派出系统工程师到用户现场为用户解决问题。
+  R(paragraph) sec=<same>
+    (3) 远程支持服务
+[P05-BP0263] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    附件：
+  R(table_row) sec=<same>
+    待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单
+[P05-BP0264] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.3备件出库接口
+    返回信息
+  R(paragraph) sec=<same>
+    1）返回信息参数：
+[P05-BP0265] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3
+  R(table_row) sec=<same>
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 时间 | 2025年12月26日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心三楼会议室 | 环能管控中心三楼会议室
+[P05-BP0266] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口
+    3）请求信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P05-BP0267] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 7 | 故障统计报表 | 张健 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 8 | 产线清单 | 张健 | 是 |
+[P05-BP0268] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口
+    返回信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P05-BP0269] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=设备管理系统设计 > 专项管理 > 特种设备检测计划 > 逻辑处理
+    逻辑处理
+  R(paragraph) sec=<same>
+    业务实体：
+[P05-BP0270] stratum=heading_transition doc_type=Other
+  L(heading) sec=项目建设方案 > 系统功能设计 > 主要功能概述
+    主要功能概述
+  R(heading) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 设备基础管理
+    设备基础管理
+[P05-BP0271] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 待 办 事 项 | 组织全厂对当前剩余的检修、备件、润滑、故障业务进行统一的需求调研；（计划完成时间：2026年1月13日） 各分厂根据沟通后的结果，调整基础资料6码信息并重新提交；（计划完成时间：2026年1月9日） | 组织全厂对当前剩余的检修、备件、润滑、故障业务进行统一的需求调研；（计划完成时间：2026年1月13日） 各分厂根据沟通后的结果，调整基础资料6码信息并重新提交；（计划完成时间：2026年1月9日） | 组织全厂对当前剩余的检修、备件、润滑、故障业务进行统一的需求调研；（计划完成时间：2026年1月13日） 各分厂根据沟通后的结果，调整基础资料6码信息并重新提交；（计划完成时间：2026年1月9日） | 组织全厂对当前剩余的检修、备件、润滑、故障业务进行统一的需求调研；（计划完成时间：2026年1月13日） 各…
+  R(paragraph) sec=<same>
+    河北津西钢铁集团股份有限公司：
+[P05-BP0272] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.2备件入库接口
+    }
+  R(paragraph) sec=<same>
+    返回信息
+[P05-BP0273] stratum=inside_table doc_type=DB
+  L(table_row) sec=备件管理 > MH_MATL_TODO
+    表头: 14、 | 表名 | MH_MATL_TODO | 表的描述 | 本表用于记录待处理物料信息 | | | 数据行: | MATERIAL_NAME | VARCHAR | | 100 | | N | 物料名称
+  R(table_row) sec=<same>
+    表头: 14、 | 表名 | MH_MATL_TODO | 表的描述 | 本表用于记录待处理物料信息 | | | 数据行: | MODEL | VARCHAR | | 100 | | N | 型号规格
+[P05-BP0274] stratum=inside_table doc_type=DB
+  L(table_row) sec=检修管理 > MB_SOP_EQ
+    表头: 7、 | 表名 | MB_SOP_EQ | 表的描述 | 表用于记录检修作业标准对应设备信息 | | | 数据行: | SOP_ID | VARCHAR2 | | 40 | | N | 检修作业标准ID
+  R(table_row) sec=<same>
+    表头: 7、 | 表名 | MB_SOP_EQ | 表的描述 | 表用于记录检修作业标准对应设备信息 | | | 数据行: | EQ_ID | VARCHAR2 | | 40 | | N | 设备ID
+[P05-BP0275] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 检修管理 > 待检修项目池
+    2、审批中：转检修并发起审批后；
+  R(paragraph) sec=<same>
+    3、已审批：检修计划审批通过后，以公司审批结束为准；
+[P05-BP0276] stratum=inside_table doc_type=DB
+  L(table_row) sec=备件管理 > MH_SIDE_STOCK_RV
+    表头: 15、 | 表名 | MH_SIDE_STOCK_RV | 表的描述 | 本表用于记录已处理物料信息 | | | 数据行: | ORDER_NO | VARCHAR | | 32 | | N | 单号
+  R(table_row) sec=<same>
+    表头: 15、 | 表名 | MH_SIDE_STOCK_RV | 表的描述 | 本表用于记录已处理物料信息 | | | 数据行: | MATERIAL_NO | VARCHAR | | 32 | | N | 料号
+[P05-BP0277] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 2
+  R(table_row) sec=<same>
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 2 数据行: 时间 | 2026年01月15日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心一楼 | 环能管控中心一楼
+[P05-BP0278] stratum=heading_transition doc_type=Other
+  L(paragraph) sec=项目建设方案 > 系统架构 > 部署架构图
+    采用虚拟化部署，部署于公司内网，针对核心服务如网关、系统管理等服务，进行多副本部署，同时并抽离有状态组件，进行独立部署，业务库采用高可用模式，充分保证数据的完整性、安全性、稳定性。
+  R(heading) sec=项目建设方案 > 系统功能设计
+    系统功能设计
+[P05-BP0279] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 7 | 故障统计报表 | 张健 | 是 |
+  R(table_row) sec=<same>
+    表头: 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 数据行: 8 | 产线清单 | 张健 | 否 |
+[P05-BP0280] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 点检管理 > 排班列表
+    查询排班信息。
+  R(paragraph) sec=<same>
+    【使用岗位】
+[P05-BP0281] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 状态监测管理 > 报警列表
+    【作业时机】
+  R(paragraph) sec=<same>
+    查询设备报警信息时。
+[P05-BP0282] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    河北津西钢铁集团股份有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P05-BP0283] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 待 决 事 项 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。 | 进一步与机动部、分厂沟通检修计划上报审批事项以及后续备材管理、故障管理等相关业务现状及流程处置。
+  R(table_row) sec=<same>
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 3 数据行: 待 办 事 项 | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供时间：2025年12月27日） 金恒： 提供权限管控要求。（对接人：刘鹏翼，计划提供时间：2025年12月28日） | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供时间：2025年12月27日） 金恒： 提供权限管控要求。（对接人：刘鹏翼，计划提供时间：2025年12月28日） | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供时间：2025年12月27日） 金恒： 提供权限管控要求。（对接人：刘鹏翼，计划提供时间：2025年12月28日） | 津西： 根据提供资料清单内容，提供现有数据信息。（详见附件，根据调研情况持续完善，计划提供…
+[P05-BP0284] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 1 数据行: 时间 | 2026年01月19日 | 记录人： | 刘鹏翼 | 地点 | 环能管控中心一楼 | 环能管控中心一楼
+  R(table_row) sec=<same>
+    表头: 主题 | 需求调研 | 需求调研 | 需求调研 | 需求调研 | 页数 | 1 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P05-BP0285] stratum=heading_transition doc_type=Other
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 费用管理 > 费用分析
+    按公司、生产厂统计每月检修备件消耗费用情况。该功能可根据实际需要，与ERP财务系统拉通，获取财务信息进行费用对比。通过历史数据的挖掘与分析，提升现场维修成本预算管理的精细化水平及数据决策的效率。
+  R(heading) sec=项目建设方案 > 系统功能设计 > 主要功能概述 > 专项管理
+    专项管理
+[P05-BP0286] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    附件：
+[P05-BP0287] stratum=heading_transition doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 基础管理 > 基础资料维护
+    1、报废、停用、启用的审批单独走对应的流程，只针对单一的类型进行，如只能所有报废的操作一同发起审批；
+  R(heading) sec=功能性需求 > 业务功能描述 > 基础管理 > 设备位置树
+    设备位置树
+[P05-BP0288] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.1机旁库储位信息查询接口
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: message | String | 最大100个字节 | 是 | 返回提示说明
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: data | object | | 是 | 返回的业务数据
+[P05-BP0289] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    附件：
+  R(table_row) sec=<same>
+    待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单 | 待提供资料清单
+[P05-BP0290] stratum=heading_transition doc_type=SRS
+  L(heading) sec=功能性需求 > 业务功能描述 > 检修管理
+    检修管理
+  R(heading) sec=功能性需求 > 业务功能描述 > 检修管理 > 检修技术标准
+    检修技术标准
+[P05-BP0291] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    附件：
+[P05-BP0292] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 点检管理 > 班次配置
+    业务逻辑
+  R(paragraph) sec=<same>
+    通过责任单位关联对应组织架构下属的倒班班组，形成关联关系，如A、B、C班组关联责任单位为一车间，则一车间所属的周期为倒班的点检标准按照实际上班的班组派发对应任务。
+[P05-BP0293] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=项目实施方案 > 项目实施计划
+    实施各阶段主要工作汇总如下：
+  R(paragraph) sec=<same>
+    1）项目启动：项目组筹备、项目启动会召开
+[P05-BP0294] stratum=noise_candidate doc_type=API
+  L(heading) sec=1. 概述 1 > 接口设计 > 2.1备材管理 > 2.1.2接口定义 > 2.1.2.2备件入库接口
+    2.1.2.2备件入库接口
+  R(paragraph) sec=<same>
+    请求信息
+[P05-BP0295] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    附件：
+[P05-BP0296] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=设备管理系统设计 > 备材管理 > 机旁库调拨管理
+    机旁库调拨管理
+  R(heading) sec=设备管理系统设计 > 备材管理 > 机旁库调拨管理 > 画面设计
+    画面设计
+[P05-BP0297] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=项目实施方案 > 项目人员
+    项目人员
+  R(heading) sec=项目实施方案 > 项目人员 > 项目团队成员角色定义与职责
+    项目团队成员角色定义与职责
+[P05-BP0298] stratum=inside_table doc_type=Other
+  L(table_row) sec=项目实施计划 > 风险预估及管控措施 > 需求变更管理
+    表头: 项目名称 | | | 数据行: | 签字及盖章 | |
+  R(table_row) sec=<same>
+    表头: 项目名称 | | | 数据行: 江苏金恒信息科技股份有限公司 | 确认意见 | |
+[P05-BP0299] stratum=noise_candidate doc_type=Detailed Design
+  L(table_row) sec=(none)
+    表头: 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 数据行: 2026/03/10 | V1.0 | 新增 | 编写详细设计 | 羊苗、吴怀宇 | 刘鹏翼
+  R(paragraph) sec=<same>
+    目 录
+[P05-BP0300] stratum=table_transition doc_type=Other
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 涉及接口
+    本次项目建设，主要涉及与ERP的接口，实现人员、组织、备件、供应商等基础数据同步，备件申购、领用业务流程与ERP集成。本次项目建设主要接口梳理如下，具体接口以详细需求调研后需求规格书接口内容为准。
+  R(table_row) sec=<same>
+    序号 | 接口内容 | 发起方 | 接收方

@@ -1,0 +1,76 @@
+{
+  "protocol_version": "industrial-seac-formal-analysis-v1.1",
+  "analysis_scope": "locked_test",
+  "primary_method": "proposed_v6",
+  "encoder": "BGE-M3",
+  "bootstrap_samples": 10000,
+  "random_seed": 20260804,
+  "corpus": {
+    "project_count": 10,
+    "document_count": 89,
+    "unit_count": 66981,
+    "regex_token_count": 1677900,
+    "table_row_count": 39834
+  },
+  "retrieval": {
+    "eligible_project_count": 6,
+    "question_count": 125,
+    "methods": {
+      "fixed": {"unit_mrr": 0.5158, "hit_at_5": 0.7200, "span_mrr": 0.1350},
+      "recursive": {"unit_mrr": 0.6086, "hit_at_5": 0.8080, "span_mrr": 0.7072},
+      "structure": {"unit_mrr": 0.7290, "hit_at_5": 0.8880, "span_mrr": 0.8211},
+      "semantic": {"unit_mrr": 0.6999, "hit_at_5": 0.8640, "span_mrr": 0.8121},
+      "langchain_recursive": {"unit_mrr": 0.6460, "hit_at_5": 0.8480, "span_mrr": 0.7329},
+      "llamaindex_sentence": {"unit_mrr": 0.6934, "hit_at_5": 0.8880, "span_mrr": 0.7586},
+      "proposed_parents": {"unit_mrr": 0.6796, "hit_at_5": 0.8800, "span_mrr": 0.7770},
+      "proposed_v6": {
+        "unit_mrr": 0.7937,
+        "unit_mrr_ci95": [0.7060, 0.8772],
+        "hit_at_5": 0.9520,
+        "span_mrr": 0.8561
+      }
+    },
+    "confirmatory_comparison": {
+      "comparator": "llamaindex_sentence",
+      "metric": "unit_mrr",
+      "project_paired_mean_difference": 0.1003,
+      "bootstrap_ci95": [0.0042, 0.2008],
+      "exact_two_sided_p": 0.0625,
+      "randomization_unit": "project",
+      "randomization_permutations": 64,
+      "significant_at_0_05": false
+    },
+    "selected_ablations": {
+      "no_table_row_children": {"unit_mrr": 0.6853, "hit_at_5": 0.8640, "change_from_full": -0.1084},
+      "no_parent_fusion": {"unit_mrr": 0.8289, "hit_at_5": 0.9520, "change_from_full": 0.0352},
+      "no_heading_context": {"unit_mrr": 0.8129, "hit_at_5": 0.9280, "change_from_full": 0.0192}
+    }
+  },
+  "boundary": {
+    "eligible_project_count": 6,
+    "candidate_count": 1368,
+    "proposed_v6": {"precision": 0.4321, "recall": 0.8255, "f1": 0.5673, "f1_ci95": [0.4708, 0.6488]},
+    "structure": {"f1": 0.5032},
+    "paired_f1_difference": 0.0640,
+    "paired_f1_ci95": [0.0313, 0.0956],
+    "holm_adjusted_p": 0.4375
+  },
+  "efficiency": {
+    "proposed_v6_parent_count": 8746,
+    "proposed_v6_retrieval_vector_count": 48912,
+    "vectors_relative_to_structure": 5.50,
+    "chunking_seconds": 112.11,
+    "index_seconds": 351.12,
+    "query_latency_ms_mean": 20.93,
+    "structure_query_latency_ms_mean": 15.18,
+    "query_latency_increase_ms": 5.74
+  },
+  "withholding": {
+    "P08_boundary": "withheld because Cohen's kappa was 0.650, below the frozen 0.70 threshold",
+    "P10_retrieval": "withheld because 11 approved questions were below the frozen minimum of 15"
+  },
+  "internal_source_sha256": {
+    "formal_analysis_json": "2d055dd0b6c1e5104970cf48d95980eb5bb2e9c32740b3db4b7edaf15900ac93",
+    "formal_readiness_json": "e26d9a3f2c4d5ae969910dc60ceafd8841c0cbbdfd910e3411caf28de5f25974"
+  }
+}

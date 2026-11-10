@@ -1,0 +1,106 @@
+{
+  "protocol_version": "industrial-seac-qa-readjudication-v1.0",
+  "projects": {
+    "P02": {
+      "reopened_count": 26,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 20,
+        "REJECTED": 6
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 8,
+        "UNIQUE": 18
+      }
+    },
+    "P03": {
+      "reopened_count": 26,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 20,
+        "REJECTED": 6
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 5,
+        "UNIQUE": 21
+      }
+    },
+    "P04": {
+      "reopened_count": 24,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 19,
+        "REJECTED": 5
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 12,
+        "UNIQUE": 12
+      }
+    },
+    "P05": {
+      "reopened_count": 22,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 15,
+        "REJECTED": 7
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 7,
+        "UNIQUE": 15
+      }
+    },
+    "P06": {
+      "reopened_count": 23,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 14,
+        "REJECTED": 9
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 9,
+        "TOO_MANY_OCCURRENCES": 8,
+        "UNIQUE": 6
+      }
+    },
+    "P07": {
+      "reopened_count": 20,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 8,
+        "REJECTED": 12
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 6,
+        "UNIQUE": 14
+      }
+    },
+    "P08": {
+      "reopened_count": 17,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 10,
+        "REJECTED": 7
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 5,
+        "UNIQUE": 12
+      }
+    },
+    "P09": {
+      "reopened_count": 14,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 9,
+        "REJECTED": 5
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 4,
+        "UNIQUE": 10
+      }
+    },
+    "P10": {
+      "reopened_count": 19,
+      "earlier_verdicts": {
+        "NEEDS_REWRITE": 9,
+        "REJECTED": 10
+      },
+      "equivalence_status": {
+        "EQUIVALENT_SET": 6,
+        "UNIQUE": 13
+      }
+    }
+  },
+  "record_total": 191
+}

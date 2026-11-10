@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/seac/qa.schema.json",
+  "title": "SEAC approved retrieval questions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "qa_id",
+      "project_id",
+      "question",
+      "reference_answer",
+      "source_document",
+      "gold_evidence_unit_id",
+      "gold_evidence_span",
+      "audit_status",
+      "privacy_review_status"
+    ],
+    "additionalProperties": true,
+    "properties": {
+      "qa_id": {"type": "string", "minLength": 1},
+      "project_id": {"type": "string", "minLength": 1},
+      "question": {"type": "string", "minLength": 1},
+      "reference_answer": {"type": "string", "minLength": 1},
+      "question_type": {"type": "string"},
+      "source_document": {"type": "string", "minLength": 1},
+      "gold_evidence_id": {"type": "string"},
+      "gold_evidence_unit_id": {"type": "string", "minLength": 1},
+      "gold_evidence_span": {"type": "string", "minLength": 1},
+      "audit_status": {"enum": ["KEEP", "APPROVED", "VERIFIED"]},
+      "privacy_review_status": {"enum": ["NO_RISK", "ANONYMIZED", "CLEARED"]}
+    }
+  }
+}

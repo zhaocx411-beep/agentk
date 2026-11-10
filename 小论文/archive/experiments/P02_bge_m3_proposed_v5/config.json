@@ -1,0 +1,21 @@
+{
+  "corpus": "workbench/P02/corpus.json",
+  "qa": "workbench/P02/qa_review_set.json",
+  "breakpoints": "workbench/P02/candidate_breakpoints.json",
+  "methods": [
+    "fixed",
+    "recursive",
+    "structure",
+    "semantic",
+    "proposed"
+  ],
+  "max_tokens": 512,
+  "overlap": 64,
+  "semantic_percentile": 0.8,
+  "proposed_soft_target": 320,
+  "proposed_dense_target": 224,
+  "proposed_min_chunk": 48,
+  "semantic_encoder": "bge-m3",
+  "model_batch_size": 8,
+  "device": "cpu"
+}

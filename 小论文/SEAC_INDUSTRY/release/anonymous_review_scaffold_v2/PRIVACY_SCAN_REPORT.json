@@ -1,0 +1,14 @@
+{
+  "protocol_version": "industrial-seac-release-scan-v1.0",
+  "scanned_file_count": 102,
+  "finding_count": 0,
+  "clean": true,
+  "findings": [],
+  "excluded_categories": [
+    "raw enterprise documents",
+    "document-derived annotation workbooks",
+    "real QA and boundary labels",
+    "experiment outputs",
+    "financial datasets and scripts"
+  ]
+}

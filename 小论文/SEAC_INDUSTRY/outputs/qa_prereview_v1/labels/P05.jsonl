@@ -1,0 +1,36 @@
+{"id": "P05-QA001", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“0129”只存在于文件名，且答案2026年01月29日正是题干所指日期，属自问自答，需改写为文内可自足的问法；时间行本身可用。"}
+{"id": "P05-QA002", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“1223”来自文件名，答案即该日期，属自问自答；且本批6条会议时间题为同模板近重复，需改写并精简。"}
+{"id": "P05-QA003", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“1224”来自文件名，答案即该日期，属自问自答，需改写题干后证据行方可使用。"}
+{"id": "P05-QA004", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“1225”来自文件名，答案即该日期，属自问自答，需改写题干后证据行方可使用。"}
+{"id": "P05-QA005", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“1226”来自文件名，答案即该日期，属自问自答，需改写题干后证据行方可使用。"}
+{"id": "P05-QA006", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“1229”来自文件名，答案即该日期，属自问自答，需改写题干后证据行方可使用。"}
+{"id": "P05-QA007", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“请求方式：HTTP，GET方法”，答案只写HTTP丢失了GET，且与其他接口答案完全相同、无区分度，应把答案补全为“HTTP，GET方法”。"}
+{"id": "P05-QA008", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP，POST方法”，答案只写HTTP，未覆盖决定性的POST方法，需补全答案。"}
+{"id": "P05-QA009", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP，POST方法”，答案只写HTTP；与QA008问法答案均相同，属近重复且无区分度，需补全答案并合并同模板题。"}
+{"id": "P05-QA010", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "结合表头对齐后userNo行在该接口请求参数表内唯一，类型、取值范围、必填三项均由该行直接支持，属合理归纳。"}
+{"id": "P05-QA011", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "size在2.1.2.1接口的请求参数表(B0019)与返回参数表data内层(B0027)各出现一次，题干未区分请求/返回参数，证据无法唯一对齐，需在问题中限定。"}
+{"id": "P05-QA012", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "code行在该接口小节内仅出现于返回参数表，行唯一；原文取值范围为空，答案只报类型与必填属正确归纳。"}
+{"id": "P05-QA013", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "message行在该接口小节内唯一，类型、取值范围（最大100个字节）、必填均由该行直接支持。"}
+{"id": "P05-QA014", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "relaOrderNo行在备件入库接口请求表内唯一；出库接口同名行属另一小节，题干已限定接口，可唯一对齐。"}
+{"id": "P05-QA015", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "“表的描述”字段直接给出答案，表名与小节唯一；目录页仅记为“区域表”，不构成同样合理的冲突答案。"}
+{"id": "P05-QA016", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行的“表的描述”字段直接给出“表用于记录设备信息”，表名唯一，答案可由证据直接支持。"}
+{"id": "P05-QA017", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“表用于记录设备变更信息”，MA_EQ_CHANGE小节唯一，答案唯一。"}
+{"id": "P05-QA018", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“表用于记录设备文件体系信息”，表名与小节唯一。"}
+{"id": "P05-QA019", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“表用于记录设备文件上传信息”，表名与小节唯一。"}
+{"id": "P05-QA020", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“表用于记录点检基准信息”，MF_STANDARD在点检管理下唯一。"}
+{"id": "P05-QA021", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "部署方案节内B0453（变更管理、回滚）、B0454同为部署约束，本段还含“必须先在测试环境通过测试验证”，题干过宽导致答案不唯一，应限定到环境套数要求。"}
+{"id": "P05-QA022", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该文档有64处同名“相关影响”小节，题干未限定“分厂检修计划”；同节B0497、B0499也是约束条款，证据无法唯一对齐。"}
+{"id": "P05-QA023", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "检修工单完工小节含B0431–B0434状态规则与B0437备件上下线约束，题干“规定了什么约束”对应多条同样合理的答案，需收窄问题。"}
+{"id": "P05-QA024", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY", "PROPRIETARY_BUSINESS_DATA"], "note": "同段还有“对津西钢铁文档严格对第三方保密”“不提供透露给第三方”等并列约束，题干过宽，应限定到源代码与技术平台的商业秘密条款；答案含甲乙双方主体与合同保密条款。"}
+{"id": "P05-QA025", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该句在项目建议书B0386逐字重复，证据无法唯一对齐；且同节6条并列规则均可回答“规定了什么约束”。"}
+{"id": "P05-QA026", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段在技术协议B0135、需求规格书B0079、项目建议书B0115逐字重复，同一文字对应四处证据，无法唯一对齐。"}
+{"id": "P05-QA027", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案文字在技术协议B0086与项目建议书B0073几乎逐字重复（仅“地/的”之差），来源文档无法唯一确定；且同节B0030–B0033同样回答“提供什么能力”。"}
+{"id": "P05-QA028", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "应用组件及关系小节仅此一段正文，span即该段全文且未见他处重复，答案唯一。"}
+{"id": "P05-QA029", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该句在详细设计规格B0128近乎逐字重复（仅“其”字之差）且同为“概述>项目背景”，来源文档无法唯一确定；答案以“因此”承接上文，脱离上下文亦不完整。"}
+{"id": "P05-QA030", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "“支持不少于8个层级”是该节唯一数量要求，项目建议书对应段落无此数字，证据可唯一对齐。"}
+{"id": "P05-QA031", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY", "PROPRIETARY_BUSINESS_DATA"], "note": "项目实施计划节19块中仅此段给出工期数量（12个月），可唯一对齐；答案含甲方名称与合同工期，建议隐私复核。"}
+{"id": "P05-QA032", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "验收标准节并列功能实现率100%、可靠性≥99.5%、数据流转准确率100%、报表自动生成率100%与画面响应时间，题干未限定“画面操作”，答案不唯一。"}
+{"id": "P05-QA033", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY", "PROPRIETARY_BUSINESS_DATA"], "note": "质保服务方式节内仅此段含时长要求（24小时内响应），其余段落无数量表述，答案唯一；含乙方名称与服务承诺条款。"}
+{"id": "P05-QA034", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "“7×24小时热线服务支持”在项目建议书B0441逐字重复，且同节48小时到场、5×8小时值班同为时长要求，证据与答案均不唯一。"}
+{"id": "P05-QA035", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段在项目建议书B0073逐字重复、在需求规格书B0029近乎逐字重复（即QA027证据），来源文档无法唯一确定。"}
+{"id": "P05-QA036", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "与QA035同一父块、答案取自同段前句，属近重复题；该句又在需求规格书B0029与项目建议书B0073重复，且内容是建设目标而非“实现或处理过程”，题型不符。"}

@@ -1,0 +1,444 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "综合服务一体化管理平台-需求调研会议纪要-20250415.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台会议纪要总和-20250414:B0006#R002",
+      "综合服务一体化管理平台-需求调研会议纪要-20250415:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx:C0001",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250420.docx:C0001",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0137",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250415.docx:C0001"
+    ],
+    "query_latency_ms": 17.60646142065525
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0021"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0002",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0095",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0093",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0060",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0015"
+    ],
+    "query_latency_ms": 10.407112538814545
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0059"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0003",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0004",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0097",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0095",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0005"
+    ],
+    "query_latency_ms": 9.370190091431141
+  },
+  {
+    "qa_id": "QA009",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0117"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0007",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0008",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0155",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0156",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0130"
+    ],
+    "query_latency_ms": 11.684119701385498
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0157"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0024",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0022",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0025",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0023",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0030"
+    ],
+    "query_latency_ms": 9.365708567202091
+  },
+  {
+    "qa_id": "QA011",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0204"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0026",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0029",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0028",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0158",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0161"
+    ],
+    "query_latency_ms": 10.429976508021355
+  },
+  {
+    "qa_id": "QA012",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0259"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0030",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0029",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0038",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0034",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0042"
+    ],
+    "query_latency_ms": 9.342108853161335
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0305"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0034",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0033",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0031",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0032",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0046"
+    ],
+    "query_latency_ms": 10.266391560435295
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "API",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0344"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0034",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0031",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0047",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0038",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0033"
+    ],
+    "query_latency_ms": 9.71131306141615
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "API parameter",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R002"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0002",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0028",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0029",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0094",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0093"
+    ],
+    "query_latency_ms": 16.73473883420229
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "API parameter",
+    "source_document": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R003"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0002",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0029",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0028",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0094",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0059"
+    ],
+    "query_latency_ms": 16.909124329686165
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0013#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0011",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0013",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0012",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0015"
+    ],
+    "query_latency_ms": 16.827172599732876
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 7,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0014#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0016",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0015",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0014",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0017"
+    ],
+    "query_latency_ms": 9.777169674634933
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0015#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0016",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0017",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0014",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0015"
+    ],
+    "query_latency_ms": 16.709890216588974
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0016#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0020",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0019",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0015",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0016"
+    ],
+    "query_latency_ms": 17.212696373462677
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0017#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0020",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0018",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0019",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0021",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0015"
+    ],
+    "query_latency_ms": 16.621856950223446
+  },
+  {
+    "qa_id": "QA024",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0018#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0023",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0022",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0024",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0021",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0025"
+    ],
+    "query_latency_ms": 17.058871686458588
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格书 V0.4:B0127",
+      "综合服务一体化管理平台-详细设计规格书 V0.4:B0488"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格书 V0.4.docx:C0007",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格书 V0.4.docx:C0065",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格书 V0.4.docx:C0006",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0056",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250417.docx:C0013"
+    ],
+    "query_latency_ms": 16.573376022279263
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Process",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "rank": 45,
+    "span_rank": 45,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格书 V0.4:B0218"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0060",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0013",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0014",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0065",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0012"
+    ],
+    "query_latency_ms": 16.967574134469032
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格书 V0.4:B0251"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0063",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250417.docx:C0020",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格书 V0.4.docx:C0025",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx:C0067",
+      "llamaindex_sentence:综合服务一体化管理平台-需求调研会议纪要-20250417.docx:C0004"
+    ],
+    "query_latency_ms": 16.68950542807579
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Feature",
+    "source_document": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+    "rank": 45,
+    "span_rank": 45,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格书 V0.4:B0943"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0087",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0091",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0095",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0099",
+      "llamaindex_sentence:综合服务一体化管理平台会议纪要总和-20250414.docx:C0103"
+    ],
+    "query_latency_ms": 16.469311900436878
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Database",
+    "source_document": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0019#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0024",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0025",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0023",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0022",
+      "llamaindex_sentence:综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx:C0174"
+    ],
+    "query_latency_ms": 16.644129529595375
+  }
+]

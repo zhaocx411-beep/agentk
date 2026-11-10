@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="450" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 1-2 论文章节组织结构与技术路线图</text>
+
+  <!-- Ch 1 -->
+  <rect x="130" y="48" width="640" height="52" rx="8" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.6"/>
+  <text x="450" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b5c8f">第 1 章 绪论</text>
+  <text x="450" y="89" text-anchor="middle" font-size="10.5" fill="#333">研究背景与意义 · 国内外研究现状 · 双重静态-动态矛盾凝练 · 研究内容与创新点</text>
+
+  <line x1="450" y1="100" x2="450" y2="116" stroke="#2b5c8f" stroke-width="1.8"/>
+  <polygon points="450,120 445,113 455,113" fill="#2b5c8f"/>
+
+  <!-- Ch 2 -->
+  <rect x="130" y="121" width="640" height="52" rx="8" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.6"/>
+  <text x="450" y="143" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b5c8f">第 2 章 相关理论与技术基础</text>
+  <text x="450" y="162" text-anchor="middle" font-size="10.5" fill="#333">RAG 与稠密向量检索 (BGE-M3/Chroma) · 文本切片建模 · 多智能体协作 · 评价指标与聚类统计推断</text>
+
+  <line x1="450" y1="173" x2="450" y2="189" stroke="#d95f02" stroke-width="1.8"/>
+  <polygon points="450,193 445,186 455,186" fill="#d95f02"/>
+
+  <!-- Ch 3 & Ch 4 Core Box -->
+  <rect x="60" y="194" width="780" height="122" rx="10" fill="#fffaf4" stroke="#d95f02" stroke-width="1.8" stroke-dasharray="6,4"/>
+  <text x="450" y="213" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#d95f02">核心算法创新层（文档级动态切片 + 查询/角色级动态粒度路由）</text>
+
+  <!-- Ch 3 -->
+  <rect x="80" y="224" width="345" height="78" rx="7" fill="#ffffff" stroke="#2b5c8f" stroke-width="1.6"/>
+  <text x="252.5" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b5c8f">第 3 章 结构与关键信息感知的自适应语义切片</text>
+  <text x="252.5" y="264" text-anchor="middle" font-size="10" fill="#333">• 携带出处单元 + 表头绑定 + 透明边界打分</text>
+  <text x="252.5" y="280" text-anchor="middle" font-size="10" fill="#333">• 文档动态阈值 θ_D + 父子双层索引 (SEAC)</text>
+  <text x="252.5" y="295" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">10 项目 66,981 单元受控实验与单组件消融</text>
+
+  <!-- Arrow Ch3 -> Ch4 -->
+  <line x1="425" y1="263" x2="467" y2="263" stroke="#d95f02" stroke-width="2"/>
+  <polygon points="473,263 464,258 464,268" fill="#d95f02"/>
+  <text x="449" y="254" text-anchor="middle" font-size="9" font-weight="bold" fill="#d95f02">消融驱动</text>
+
+  <!-- Ch 4 -->
+  <rect x="475" y="224" width="345" height="78" rx="7" fill="#ffffff" stroke="#d95f02" stroke-width="1.6"/>
+  <text x="647.5" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#d95f02">第 4 章 面向智能体角色的动态检索粒度选择</text>
+  <text x="647.5" y="264" text-anchor="middle" font-size="10" fill="#333">• 5 类智能体角色与 3 类异构信息需求建模</text>
+  <text x="647.5" y="280" text-anchor="middle" font-size="10" fill="#333">• 单索引角色动态路由 Φ(role) → (α, 返回模式)</text>
+  <text x="647.5" y="295" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#d95f02">跨集精度双冠 (MRR=0.8416) 与 Token 成本分析</text>
+
+  <line x1="450" y1="316" x2="450" y2="332" stroke="#1b9e77" stroke-width="1.8"/>
+  <polygon points="450,336 445,329 455,329" fill="#1b9e77"/>
+
+  <!-- Ch 5 -->
+  <rect x="130" y="337" width="640" height="52" rx="8" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.6"/>
+  <text x="450" y="359" text-anchor="middle" font-size="13" font-weight="bold" fill="#137557">第 5 章 多智能体详细设计文档生成系统中的应用</text>
+  <text x="450" y="378" text-anchor="middle" font-size="10.5" fill="#333">三层架构设计 · 父子会话层级编排 · rag_query 角色可追溯检索服务 · 离线案例对比与文档产出展示</text>
+
+  <line x1="450" y1="389" x2="450" y2="405" stroke="#2c3e50" stroke-width="1.8"/>
+  <polygon points="450,409 445,402 455,402" fill="#2c3e50"/>
+
+  <!-- Ch 6 -->
+  <rect x="130" y="410" width="640" height="46" rx="8" fill="#f8f9fa" stroke="#2c3e50" stroke-width="1.6"/>
+  <text x="450" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">第 6 章 总结与展望</text>
+  <text x="450" y="447" text-anchor="middle" font-size="10.5" fill="#333">三项研究内容核心结论汇总 · 外部效度与统计局限性剖析 · 学习型路由与在线闭环展望</text>
+</svg>

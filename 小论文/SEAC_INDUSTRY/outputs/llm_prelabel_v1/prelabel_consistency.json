@@ -1,0 +1,108 @@
+{
+  "protocol_version": "industrial-seac-llm-prelabel-consistency-v1.0",
+  "candidate_total": 2700,
+  "rule_findings": {
+    "parent_child_heading_marked_break": {
+      "count": 2,
+      "examples": [
+        "P07-BP0142",
+        "P07-BP0174"
+      ]
+    }
+  },
+  "rule_finding_total": 2,
+  "unflagged_rule_findings": {},
+  "unflagged_rule_finding_total": 0,
+  "labels_by_stratum": {
+    "heading_transition": {
+      "BREAK": 239,
+      "NOISE": 143,
+      "NO_BREAK": 153
+    },
+    "inside_table": {
+      "NOISE": 5,
+      "NO_BREAK": 874
+    },
+    "noise_candidate": {
+      "NOISE": 201
+    },
+    "same_section_continuity": {
+      "BREAK": 60,
+      "NOISE": 49,
+      "NO_BREAK": 625
+    },
+    "table_transition": {
+      "BREAK": 156,
+      "NOISE": 27,
+      "NO_BREAK": 168
+    }
+  },
+  "labels_by_project": {
+    "P02": {
+      "BREAK": 71,
+      "NOISE": 51,
+      "NO_BREAK": 178
+    },
+    "P03": {
+      "BREAK": 45,
+      "NOISE": 63,
+      "NO_BREAK": 192
+    },
+    "P04": {
+      "BREAK": 44,
+      "NOISE": 59,
+      "NO_BREAK": 197
+    },
+    "P05": {
+      "BREAK": 56,
+      "NOISE": 36,
+      "NO_BREAK": 208
+    },
+    "P06": {
+      "BREAK": 67,
+      "NOISE": 45,
+      "NO_BREAK": 188
+    },
+    "P07": {
+      "BREAK": 54,
+      "NOISE": 77,
+      "NO_BREAK": 169
+    },
+    "P08": {
+      "BREAK": 32,
+      "NOISE": 43,
+      "NO_BREAK": 225
+    },
+    "P09": {
+      "BREAK": 47,
+      "NOISE": 28,
+      "NO_BREAK": 225
+    },
+    "P10": {
+      "BREAK": 39,
+      "NOISE": 23,
+      "NO_BREAK": 238
+    }
+  },
+  "needs_human_review_by_project": {
+    "P02": 22,
+    "P03": 17,
+    "P04": 12,
+    "P05": 16,
+    "P06": 12,
+    "P07": 15,
+    "P08": 70,
+    "P09": 46,
+    "P10": 26
+  },
+  "distribution_outliers": [
+    {
+      "project_id": "P08",
+      "stratum": "heading_transition",
+      "label": "BREAK",
+      "project_rate": 0.102,
+      "pooled_rate": 0.447,
+      "project_count": 59
+    }
+  ]
+}

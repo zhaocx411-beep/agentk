@@ -1,0 +1,375 @@
+[P08-BP0001] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 生产节能管理 > DB定义 > ems_cost_price_data_def（价格项信息表）
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 成本项目编码 | cost_project_code | varchar(50) | 50 | Y | N | 成本项目编码
+  R(table_row) sec=<same>
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 管理单元id | manage_id | bigint | 19 | Y | N | 管理单元id
+[P08-BP0002] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 时间序列编码（SVNO）
+    表头: 中文名称 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 中文描述 | 中文描述 | 中文描述 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 数据行: 各项定义 | B | B | 6 | 6 | C | C | C | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 …
+  R(heading) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 计量数据项编码（MEINO）
+    计量数据项编码（MEINO）
+[P08-BP0003] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=详细设计 > 能耗优化分析 > 功能设计 > 【EAEO005】轧钢厂峰谷时段电耗分析作业
+    【EAEO005】轧钢厂峰谷时段电耗分析作业
+  R(heading) sec=详细设计 > 能耗优化分析 > 功能设计 > 【EAEO005】轧钢厂峰谷时段电耗分析作业 > 画面交互（原型）
+    画面交互（原型）
+[P08-BP0004] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=(none)
+    第一卷 能源管理模块
+  R(paragraph) sec=<same>
+    系统接口设计
+[P08-BP0005] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=详细设计 > 能耗优化分析 > 系统流程图 > 系统流程说明
+    系统流程说明
+  R(heading) sec=详细设计 > 能耗优化分析 > 系统流程图 > 系统流程说明 > 重点工序能耗分析流程
+    重点工序能耗分析流程
+[P08-BP0006] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=系统目标 > 项目效果
+    通过生产节能管理系统的建立，实现经济运行制度的监控和评估，提高节能管理水平；精准的能耗数据是计算企业碳排放量的关键输入，为企业应对“双碳”目标、参与碳交易提供坚实的数据支撑；
+  R(paragraph) sec=<same>
+    本项目的建设，将不仅仅是一个数字化系统的上线，而是一次能源管理模式的深刻变革。它使能源从一项不可控的“费用支出”，转变为可测量、可分析、可优化的“战略资产”，为企业的高质量发展和绿色转型注入强大动力。
+[P08-BP0007] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 基础管理 > DB定义 > ems_material_category（物料分类信息）
+    序号 | 字段中文名 | 字段英文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 字段中文名 | 字段英文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | 主键 | id | pk | | bigint | | Y | |
+[P08-BP0008] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司
+  R(paragraph) sec=<same>
+    修订记录
+[P08-BP0009] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=数据采集设计 > 采集站点规划
+    表头: 序号 | 所属分厂 | 采集站名称 数据行: 8 | 轧钢厂 | 热处理车间数采站1
+  R(table_row) sec=<same>
+    表头: 序号 | 所属分厂 | 采集站名称 数据行: 9 | 轧钢厂 | 热处理车间数采站2
+[P08-BP0010] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=(none)
+    目 录
+  R(heading) sec=1. 系统目标 5
+    1. 系统目标 5
+[P08-BP0011] stratum=same_section_continuity doc_type=API
+  L(heading) sec=通讯接口 > 能源管理 > 详细定义 > PM_SI_01（获取产品规格级产量实绩数据接口）
+    PM_SI_01（获取产品规格级产量实绩数据接口）
+  R(paragraph) sec=<same>
+    (1) 触发条件：
+[P08-BP0012] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 能耗优化分析
+    能耗优化分析
+  R(heading) sec=系统功能设计 > 能耗优化分析 > 重点工序能耗分析
+    重点工序能耗分析
+[P08-BP0013] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3. 业务代码设计 7
+    3. 业务代码设计 7
+  R(heading) sec=3. 业务代码设计 7 > 3.1 生产管理（示例） 7
+    3.1 生产管理（示例） 7
+[P08-BP0014] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 原料数据项编码（MAINO）
+    中文名称 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 中文描述 | 中文描述 | 中文描述 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码
+  R(table_row) sec=<same>
+    表头: 中文名称 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 中文描述 | 中文描述 | 中文描述 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 数据行: 英文名称 | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mater_Item_No | Mat…
+[P08-BP0015] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 时间序列编码（SVNO）
+    表头: 中文名称 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 中文描述 | 中文描述 | 中文描述 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 数据行: 英文名称 | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | Seq_Version_No | …
+  R(table_row) sec=<same>
+    表头: 中文名称 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 中文描述 | 中文描述 | 中文描述 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 | 时间序列编码 数据行: 代码定义 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 | 能源时间维度 |…
+[P08-BP0016] stratum=table_transition doc_type=Technical Agreement
+  L(paragraph) sec=硬件清单
+    1、新增能源计量仪表清单（仪表类型仅为建议，实际应用需以现场踏勘后的反馈结果为准）:
+  R(table_row) sec=<same>
+    序号 | 仪表名称 | 品牌 | 规格参数 | 单位 | 数量
+[P08-BP0017] stratum=table_transition doc_type=API
+  L(paragraph) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_01（获取产量计划数据接口）
+    (3)响应报文
+  R(table_row) sec=<same>
+    序号 | 中文字段 | 英文字段 | 类型 | 描述 | 描述 | 备注
+[P08-BP0018] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 能耗精准核算 > DB定义 > ems_carbon_data_item（碳排放数据项）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | item_code | 数据项编码 | | | bigint | | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | item_dimension | 数据项维度 | | | int | | Y | |
+[P08-BP0019] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > EA_CO_A_01（获取能源成本结算数据接口）
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 触发频次 | 每日 |
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 通信协议 | http/消息队列 |
+[P08-BP0020] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=1. 系统目标 5
+    1. 系统目标 5
+  R(heading) sec=2. 设计概述 6
+    2. 设计概述 6
+[P08-BP0021] stratum=heading_transition doc_type=DB
+  L(heading) sec=数据库设计 > 能耗精准核算 > DB定义
+    DB定义
+  R(heading) sec=数据库设计 > 能耗精准核算 > DB定义 > ems_formula_factor（公式因子）
+    ems_formula_factor（公式因子）
+[P08-BP0022] stratum=same_section_continuity doc_type=API
+  L(heading) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_02（获取日/月/年产量实绩数据接口）
+    PM_EA_02（获取日/月/年产量实绩数据接口）
+  R(paragraph) sec=<same>
+    (1) 触发条件：
+[P08-BP0023] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 产量数据项编码（PINO）
+    表头: 中文名称 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 中文描述 | 中文描述 | 中文描述 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 数据行: 代码构成 | 1 | 2 | 2 | 3 | 3 | 4 | 5 | 5 | 6 | 7 | 8 | 9 | 9 | 10 | 11 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 18 | 19 | 20
+  R(table_row) sec=<same>
+    表头: 中文名称 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 中文描述 | 中文描述 | 中文描述 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 | 产量数据项编码 数据行: 代码构成 | A | A | A | A | A | A | A | A | B | B | B | B | B | B | B | B | | | | | | | | | |
+[P08-BP0024] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 能耗精准核算 > DB定义 > ems_collection_point（采集点基本信息）
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 数据类型 | data_type | varchar(50) | 50 | Y | N | 数据类型
+  R(table_row) sec=<same>
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 数据精度 | data_scale | tinyint | 2 | Y | N | 数据精度
+[P08-BP0025] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 能耗精准核算 > 数据字典
+    表头: （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 数据行: | 上级类型 | parent_type | 1 热值 2折标 3 测点 |
+  R(table_row) sec=<same>
+    表头: （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 | （一）能耗精准核算 数据行: | 点位类型 | point_type | 1采集点 2计算点 3分时点 |
+[P08-BP0026] stratum=heading_transition doc_type=DB
+  L(heading) sec=3. 数据库设计 11 > 3.1 基础管理 11
+    3.1 基础管理 11
+  R(heading) sec=3. 数据库设计 11 > 3.1 基础管理 11 > 3.1.1 ER图 11
+    3.1.1 ER图 11
+[P08-BP0027] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 生产节能管理 > 功能设计 > 能源综合看板 > 轧钢厂能源看板
+    表头: 序号 | 数据项 | 日数据 | 月累计 | 年累计 数据行: 58 | 冷精光伏并网量kwh | * | * | *
+  R(table_row) sec=<same>
+    表头: 序号 | 数据项 | 日数据 | 月累计 | 年累计 数据行: 59 | 冷精光伏本地消纳量kwh | * | * | *
+[P08-BP0028] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=数据采集设计 > 采集范围
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 98 | 批次固熔炉1#进气表 | 原有 | 天然气 | 轧钢厂 |
+  R(table_row) sec=<same>
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 99 | 批次固熔炉2#进气表 | 原有 | 天然气 | 轧钢厂 |
+[P08-BP0029] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 数据采集设计 > 数据采集范围
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 11 | 钢渣除尘电度表 | 原有 | 电 | 炼钢厂
+  R(table_row) sec=<same>
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 12 | 1#电炉电度表 | 原有 | 电 | 炼钢厂
+[P08-BP0030] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > EA_EP_A_01（获取环保设施能源介质消耗成本）
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 触发频次 | 实时（秒级触发） |
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 通信协议 | http/消息队列 |
+[P08-BP0031] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=项目目标与效果 > 项目目标
+    依托数据支撑平台，以能源利用效率最大化为目标，打造智慧能源管理平台，以全流程物料跟踪为基础，基于“三流一态” 全维度数据融合技术，实现能耗的精细化核算及优化分析，为公司经营决策提供有力支撑，最终助力企业实现节能降碳的目标，项目建设的具体目标如下：
+  R(paragraph) sec=<same>
+    建立能源的综合监控系统，实现能源的实时监控及预警
+[P08-BP0032] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统架构 > 技术架构图
+    前端服务组件：前端服务组件主要包括项目前端页面部分，本项目主要采用Vue.Js技术架构实现前端画面。Vue.Js是一款用于构建用户界面的JavaScript框架。它基于标准HTML、CSS和JavaScript构建，并提供了一套声明式的、组件化的编程模型，帮助开发者高效地开发用户界面。
+  R(paragraph) sec=<same>
+    路由服务网关：Spring Cloud Gateway是Spring官方基于Spring5.0、SpringBoot2.0和Project Reactor等技术开发的网关，旨在为微服务框架提供一种简单而有效的统一的API路由管理方式，统一访问接口。
+[P08-BP0033] stratum=table_transition doc_type=Detailed Design
+  L(heading) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 原料数据项编码（MAINO）
+    原料数据项编码（MAINO）
+  R(table_row) sec=<same>
+    中文名称 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 中文描述 | 中文描述 | 中文描述 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码 | 原料数据项编码
+[P08-BP0034] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统架构 > 技术架构图
+    文件存储组件：FastDFS是一个开源的轻量级分布式文件系统，它对文件进行管理，功能包括：文件存储、文件同步、文件访问（文件上传、文件下载）等，解决了大容量存储和负载均衡的问题。
+  R(paragraph) sec=<same>
+    任务调度组件：XXL-JOB 是一个轻量级分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。现已开放源代码并接入多家公司线上产品线，开箱即用。
+[P08-BP0035] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 能耗精准核算 > DB定义 > ems_role_field_config（采集异常规则字段配置）
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 规则类型名称 | rule_label | varchar(20) | 20 | Y | N | 规则类型名称
+  R(table_row) sec=<same>
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 规则编码 | rule_code | varchar(20) | 20 | Y | N | 规则编码
+[P08-BP0036] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统功能设计 > 生产节能管理 > 能源计划管理
+    基于上一年度/月度炼钢厂、轧钢厂各工序单位产品介质能耗指标（基准值、目标值）和上一年度/月度各工序实际完成的单位产品介质单耗，结合节能技术改进要求，制订下一年度/月度各工序单位产品介质能耗指标、年度/月度工序能耗指标和综合能耗指标。
+  R(paragraph) sec=<same>
+    根据公司下达的年度/月度工序产量计划及年度/月度工序能耗指标，编制炼钢厂、轧钢厂各个能源介质总量消耗计划（年、月），并据此生成炼钢厂、轧钢厂外购能源计划（年、月），以实现全年能源管理预算，生产外购能源费用预算；同时，工序能耗指标也为各分厂、管理部门提供节能降耗指导，最终实现能源使用效率和成本控制目标。
+[P08-BP0037] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_03（获取溶剂、电极等原料消耗数据接口）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 1. | 处理结果 | result | String | |
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 2. | 状态码 | code | String | |
+[P08-BP0038] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司
+  R(paragraph) sec=<same>
+    修订记录
+[P08-BP0039] stratum=heading_transition doc_type=API
+  L(heading) sec=通讯接口 > 能源管理
+    能源管理
+  R(heading) sec=通讯接口 > 能源管理 > 接口清单
+    接口清单
+[P08-BP0040] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=6. 数据采集设计 16 > 6.1. 采集范围 16
+    6.1. 采集范围 16
+  R(heading) sec=6. 数据采集设计 16 > 6.2. 采集站点规划 19
+    6.2. 采集站点规划 19
+[P08-BP0041] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > PM_SI_01（获取产品规格级产量实绩数据接口）
+    序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 1. | 处理结果 | result | String | |
+[P08-BP0042] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_01（获取产量计划数据接口）
+    序号 | 项目 | 项目说明 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 业务触发时机 | 业务人员制定能源计划 |
+[P08-BP0043] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统架构 > 技术架构图
+    容器组件：Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows操作系统的机器上，也可以实现虚拟化。
+  R(paragraph) sec=<same>
+    容器编排组件：Kubernetes 是一个全新的基于容器技术的分布式架构解决方案，是 Google 开源的一个容器集群管理系统，Kubernetes 简称 K8S。
+[P08-BP0044] stratum=table_transition doc_type=DB
+  L(table_row) sec=数据库设计 > 基础管理 > DB定义 > ems_energy_medium_item（能源介质）
+    表头: 序号 | 字段中文名 | 字段英文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | 删除标记 | del_flag | | | tinyint | | Y | |
+  R(heading) sec=数据库设计 > 基础管理 > DB定义 > ems_energn_medium_category（能源介质分类）
+    ems_energn_medium_category（能源介质分类）
+[P08-BP0045] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 能源综合监视 > 实时监视画面设计 > 轧钢厂监视画面设计 > 能介集中监视画面设计 > 电力系统监视画面设计 > 热处理高低压电力系统监视
+    监视画面原型
+  R(heading) sec=详细设计 > 能源综合监视 > 实时监视画面设计 > 轧钢厂监视画面设计 > 能介集中监视画面设计 > 电力系统监视画面设计 > 冷精高低压电力系统监视
+    冷精高低压电力系统监视
+[P08-BP0046] stratum=table_transition doc_type=API
+  L(table_row) sec=(none)
+    表头: 编制： | 宁晓凯、罗享 | 编制日期： | 2026.01.28 数据行: 批准： | 崔庆胜 | 批准日期： | 2026.02.02
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司
+[P08-BP0047] stratum=heading_transition doc_type=API
+  L(heading) sec=4. 通讯接口 9
+    4. 通讯接口 9
+  R(heading) sec=4. 通讯接口 9 > 4.1 能源管理 9
+    4.1 能源管理 9
+[P08-BP0048] stratum=heading_transition doc_type=DB
+  L(heading) sec=2. 设计概述 7 > 2.1 命名规范 7 > 2.1.3 数据字典代码命名规范 9
+    2.1.3 数据字典代码命名规范 9
+  R(heading) sec=3. 数据库设计 11
+    3. 数据库设计 11
+[P08-BP0049] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 能耗优化分析 > 功能设计 > 【EAEO001】重点工序能耗分析作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 5 | 【趋势】按钮 | 起止时间 工序 | 根据起止时间、工序查询从当年1月至起止日期下的能耗趋势柱状图 | 能耗趋势柱状图
+  R(heading) sec=详细设计 > 能耗优化分析 > 功能设计 > 【EAEO002】炼钢厂产品品规能耗分析作业
+    【EAEO002】炼钢厂产品品规能耗分析作业
+[P08-BP0050] stratum=same_section_continuity doc_type=DB
+  L(paragraph) sec=(none)
+    烟台华新不锈钢有限公司别
+  R(paragraph) sec=<same>
+    烟台华新数智化改造项目一期
+[P08-BP0051] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 能源综合监视 > 实时趋势查询设计 > 功能设计
+    系统对所采集的有关能源数据按时间顺序存储归档。对归档能源数据，可按信号内容、起止时间、时间粒度（分钟/小时/天/月）、数值类型（Min/Max/Avg/Sum）进行曲线查看。借助二次开发的趋势曲线查询界面，对于短时归档数据，提供过程曲线显示，趋势曲线亦能作为追溯原因的依据。
+  R(paragraph) sec=<same>
+    实时曲线：实时曲线显示某一条（或几条）能源数据实时曲线，曲线更新间隔和采集时间保持一致，为调度提供参考信息。
+[P08-BP0052] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=详细设计 > 生产节能管理 > 功能设计 > 【EAES007】轧钢厂能源成本管理作业 > 处理逻辑（IPO）
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 1 | 【查询】 | 关注的查询条件：核算类型、能源介质、核算年月、状态 | 核算类型可选项：（正式）核算、预核算； 介质可选项：电、天然气、自来水、平塘水、氧气、氮气、氩气； 状态可选项：未分摊、分摊中、已分摊。 | 根据查询条件，列表满足条件的成本核算记录
+  R(table_row) sec=<same>
+    表头: （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 | （1）列表页 数据行: 2 | 【新增核算】 | | 打开新增能源核算窗口 | 打开新增能源核算窗口
+[P08-BP0053] stratum=table_transition doc_type=API
+  L(paragraph) sec=通讯接口 > 能源管理 > 详细定义 > EA_EP_A_01（获取环保设施能源介质消耗成本）
+    (1) 触发条件：
+  R(table_row) sec=<same>
+    序号 | 项目 | 项目说明 | 备注
+[P08-BP0054] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 能耗精准核算 > DB定义 > ems_carbon_data_item（碳排放数据项）
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | unit_of_measure | 计量单位 | | | varchar(10) | 10 | Y | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段英文名 | 字段中文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | carbon_remark | 备注 | | | varchar(200) | 200 | N | |
+[P08-BP0055] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=培训与知识转移 > 知识转移
+    系统开发与测试：《项目测试方案》、《项目测试用例》、《用户测试用例UAT》、《项目测试报告》。
+  R(paragraph) sec=<same>
+    系统试运行：《项目培训计划》、培训资料、《培训签到表》、《培训效果评价表》、《用户操作手册》、《项目运维手册》、《系统试运行方案》、《系统试运行申请报告》、《用户试运行情况跟踪表》。
+[P08-BP0056] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 业务数据项编码（BINO）
+    表头: 中文名称 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 中文描述 | 中文描述 | 中文描述 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 数据行: 代码定义 | 每新增一个业务数据项，生成唯一的业务数据项编码 | 每新增一个业务数据项，生成唯一的业务数据项编码 | 每新增一个业务数据项，生成唯一的业务数据项编码 | 每新增一个业务数据项，生成唯一的业务数据项编码 | 每新增一个业务数据项，生成唯一的业务数据项编码 | 每新增一个业务数据项，生成唯一的业…
+  R(table_row) sec=<same>
+    表头: 中文名称 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 中文描述 | 中文描述 | 中文描述 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 | 业务数据项编码 数据行: 代码构成 | 1 | 2 | 2 | 3 | 3 | 4 | 5 | 5 | 6 | 7 | 8 | 9 | 9 | 10 | 11 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 18 | 19 | 20
+[P08-BP0057] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=5. 详细设计 23 > 5.3 能耗优化分析 236 > 5.3.1 系统流程图 236
+    5.3.1 系统流程图 236
+  R(heading) sec=5. 详细设计 23 > 5.3 能耗优化分析 236 > 5.3.2 功能设计 243
+    5.3.2 功能设计 243
+[P08-BP0058] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=业务代码设计 > 生产管理（示例） > 业务代码定义 > 能源数据项编码（EINO）
+    表头: 中文名称 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 中文描述 | 中文描述 | 中文描述 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 数据行: 各项定义 | A | A | 5 | 5 | C | C | C | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ | A:JCNY_ |…
+  R(table_row) sec=<same>
+    表头: 中文名称 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 中文描述 | 中文描述 | 中文描述 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 | 能源数据项编码 数据行: 各项定义 | B | B | 6 | 6 | C | C | C | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，000001 | 流水码，举例，…
+[P08-BP0059] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > EA_EP_A_01（获取环保设施能源介质消耗成本）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 2. | 状态码 | code | String | |
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: 3. | 提示信息 | message | String | |
+[P08-BP0060] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=系统功能设计 > 能源综合监视 > 工序工艺监视
+    工序工艺监视
+  R(paragraph) sec=<same>
+    实现对炼钢及轧钢厂工序重点设备的运行状态、运行参数等实时生产状态进行监视，同时对这些设备运行过程中消耗的电、水、压缩空气和氮气等各种能源动力介质瞬时流量、累计流量、温度、热值、压力等参数进行监视，使得操作人员可以实时掌握生产过程与状态，并提供参数异常报警的功能，提高对生产异常情况的处理能力。
+[P08-BP0061] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=数据采集设计 > 采集范围
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 99 | 批次固熔炉2#进气表 | 原有 | 天然气 | 轧钢厂 |
+  R(table_row) sec=<same>
+    表头: 序号 | 仪表名称 | 仪表状态 | 介质名称 | 所属分厂 数据行: 100 | SCR 1#进气表 | 原有 | 天然气 | 轧钢厂 |
+[P08-BP0062] stratum=table_transition doc_type=DB
+  L(table_row) sec=数据库设计 > 生产节能管理 > DB定义 > ems_cost_price_data_def_version（价格数据项版本信息）
+    表头: 序号 | 中文名称 | 英文名称 | 数据类型 | 长度 | 是否必填 | 是键 | 注释 数据行: | 删除标记 | del_flag | tinyint | | Y | N | 删除标记
+  R(heading) sec=数据库设计 > 生产节能管理 > DB定义 > ems_cost_price_data_item（成本数据项信息）
+    ems_cost_price_data_item（成本数据项信息）
+[P08-BP0063] stratum=inside_table doc_type=DB
+  L(table_row) sec=数据库设计 > 基础管理 > DB定义 > ems_process（工序）
+    表头: 序号 | 字段中文名 | 字段英文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | 备注 | proc_remark | | | varchar(200) | | N | |
+  R(table_row) sec=<same>
+    表头: 序号 | 字段中文名 | 字段英文名 | 主/外键 | 是否索引 | 类型 | 长度 | 是否必填 | 缺省 | 备注 数据行: | 排序 | sort_num | | | decimal(38,2) | | N | |
+[P08-BP0064] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_03（获取溶剂、电极等原料消耗数据接口）
+    序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 数据行: | 原料编码 | materialCode | String | |
+[P08-BP0065] stratum=heading_transition doc_type=API
+  L(heading) sec=4. 通讯接口 9 > 4.1 能源管理 9 > 4.1.2 详细定义 9
+    4.1.2 详细定义 9
+  R(heading) sec=接口命名
+    接口命名
+[P08-BP0066] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=详细设计 > 能耗精准核算 > 功能设计 > 【EAEA002】轧钢厂工序能耗核算作业 > 模型计算逻辑
+    酸洗总能耗计算：根据能源介质折标系数，将消耗量折算成折标值，输出酸洗线各级工序的各自总能耗；
+  R(paragraph) sec=<same>
+    冷精总能耗计算：根据能源介质折标系数，将消耗量折算成折标值，输出冷精线各级工序的各自总能耗；
+[P08-BP0067] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > PM_EA_01（获取产量计划数据接口）
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 描述 | 备注 数据行: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 备注 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 中文字段 | 英文字段 | 类型 | 描述 | 描述 | 备注 数据行: | 工序编码 | processCode | String | | |
+[P08-BP0068] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=10. 培训与知识转移 32 > 8.2. 知识转移 33
+    8.2. 知识转移 33
+  R(heading) sec=11. 验收标准与指标考核 34
+    11. 验收标准与指标考核 34
+[P08-BP0069] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=(none)
+    第一卷 能源管理模块
+  R(paragraph) sec=<same>
+    系统接口设计
+[P08-BP0070] stratum=inside_table doc_type=API
+  L(table_row) sec=通讯接口 > 能源管理 > 详细定义 > EA_CO_A_01（获取能源成本结算数据接口）
+    序号 | 项目 | 项目说明 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 项目 | 项目说明 | 备注 数据行: | 业务触发时机 | 能源成本结算时 |
+[P08-BP0071] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=(none)
+    目 录
+  R(heading) sec=1. 系统目标 5
+    1. 系统目标 5
+[P08-BP0072] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统功能设计 > 能源综合监视 > 能介集中监视
+    电力系统的监控画面设计，将依照现场实际的电力供应线路走向，绘制出各级变电站的一次性接线图。此外，该画面还将实时展示峰谷平、区域用电量、功率因素等数据，以实现对华新电耗状况的全方位控制和把握。
+  R(paragraph) sec=<same>
+    天然气实时监视
+[P08-BP0073] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=系统功能设计 > 能源综合监视 > 能介集中监视
+    水系统实时监视
+  R(paragraph) sec=<same>
+    水系统调度监视画面包括全厂水管网潮流图，集中监视累计流量、瞬时流量、压力等信息。从总供水管道到各用水点，直观显示相关仪表在管网上分布位置及实时读数状态等，可查询各仪表的趋势曲线及统计数据，可按照给定的规则进行信息提示或异常报警。
+[P08-BP0074] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=(none)
+    目 录
+  R(heading) sec=1. 系统目标 7
+    1. 系统目标 7
+[P08-BP0075] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=总体设计 > 功能层级
+    表头: 模块 | 一级菜单 | 二级菜单 | 作业画面名称 数据行: 能耗优化分析 | 炼钢厂能耗优化分析 | 产品品规能耗分析 | 炼钢厂产品品规能耗分析作业
+  R(table_row) sec=<same>
+    表头: 模块 | 一级菜单 | 二级菜单 | 作业画面名称 数据行: 能耗优化分析 | 炼钢厂能耗优化分析 | 峰谷时段能耗分析 | 炼钢厂峰平谷时段电耗分析作业

@@ -1,0 +1,75 @@
+{"id":"P08-BP0226","label":"BREAK","flag":"CLEAR","note":"管理单元表最后一行结束，右侧进入成本中心表的表名行"}
+{"id":"P08-BP0227","label":"NO_BREAK","flag":"CLEAR","note":"“1、功能验收（技术指标）”引导句直接引出其技术指标表头"}
+{"id":"P08-BP0228","label":"BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"水系统监视画面设计闭合，右侧“监视数据清单”另起可独立检索的数据清单；左侧为裸标签、原型正文疑丢失"}
+{"id":"P08-BP0229","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0230","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0231","label":"NO_BREAK","flag":"CLEAR","note":"技术架构组件清单中日志收集与文件存储组件的并列延续"}
+{"id":"P08-BP0232","label":"NO_BREAK","flag":"CLEAR","note":"同一环保设施成本请求字段表的相邻字段行"}
+{"id":"P08-BP0233","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左侧“3.1.2 业务代码定义 7”尾带页码属目录条目，与正文标题相邻难以区分"}
+{"id":"P08-BP0234","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0235","label":"NO_BREAK","flag":"CLEAR","note":"同一接口属性表内通信协议与电文格式的相邻行"}
+{"id":"P08-BP0236","label":"NO_BREAK","flag":"CLEAR","note":"同一时间序列定义表的相邻字段行"}
+{"id":"P08-BP0237","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"封面标题“业务代码设计”与其文档信息表同属封面标识区；封面元素之间的边界待复核"}
+{"id":"P08-BP0238","label":"NO_BREAK","flag":"CLEAR","note":"同一时间序列编码表内代码构成行与各项定义行相邻"}
+{"id":"P08-BP0239","label":"NO_BREAK","flag":"CLEAR","note":"同一请求字段表内开始时间与结束时间字段行相邻"}
+{"id":"P08-BP0240","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"项目名与说明书名同为封面标识行；封面元素之间的边界待复核"}
+{"id":"P08-BP0241","label":"NO_BREAK","flag":"CLEAR","note":"同一能源数据项编码表的相邻各项定义行"}
+{"id":"P08-BP0242","label":"NO_BREAK","flag":"CLEAR","note":"同一公式因子表内因子名称字段行与因子名称值行相邻"}
+{"id":"P08-BP0243","label":"BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"请求报文说明闭合，右侧响应报文应独立检索；左侧仅剩裸标签、请求报文正文疑在转换中丢失"}
+{"id":"P08-BP0244","label":"NO_BREAK","flag":"CLEAR","note":"同一主档表的表头与其首个字段行"}
+{"id":"P08-BP0245","label":"NO_BREAK","flag":"CLEAR","note":"同一封面文档信息表内审核行与批准行相邻"}
+{"id":"P08-BP0246","label":"NO_BREAK","flag":"CLEAR","note":"父标题“验收标准与指标考核”锚定其首个子标题验收依据"}
+{"id":"P08-BP0247","label":"NO_BREAK","flag":"CLEAR","note":"同一AB跨电气室系统监视表的相邻仪表行"}
+{"id":"P08-BP0248","label":"NO_BREAK","flag":"CLEAR","note":"项目组人员配置中项目总监与项目经理职责的并列延续"}
+{"id":"P08-BP0249","label":"NO_BREAK","flag":"CLEAR","note":"同一数据采集范围表的相邻仪表行"}
+{"id":"P08-BP0250","label":"NO_BREAK","flag":"CLEAR","note":"同一原料数据项编码表内代码构成行与各项定义行相邻"}
+{"id":"P08-BP0251","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"“第一卷 能源管理模块”与“数据库设计”同为封面标识行；封面元素之间的边界待复核"}
+{"id":"P08-BP0252","label":"NO_BREAK","flag":"CLEAR","note":"父标题“业务代码设计”锚定其首个子标题生产管理（示例）"}
+{"id":"P08-BP0253","label":"BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"封面文档信息表结束，右侧公司名另起封面标识行；涉及封面元素边界"}
+{"id":"P08-BP0254","label":"NO_BREAK","flag":"CLEAR","note":"同一采集站点规划表的相邻站点行"}
+{"id":"P08-BP0255","label":"NO_BREAK","flag":"CLEAR","note":"同一产品能耗表的主键行与数据项主键行相邻"}
+{"id":"P08-BP0256","label":"NO_BREAK","flag":"CLEAR","note":"表头与同一接口属性表的首个数据行"}
+{"id":"P08-BP0257","label":"NOISE","flag":"CLEAR","note":"左侧“目 录”与右侧带页码的条目均为目录导航"}
+{"id":"P08-BP0258","label":"NO_BREAK","flag":"CLEAR","note":"同一电炉工序岗位监视数据清单表的相邻数据项行"}
+{"id":"P08-BP0259","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0260","label":"NO_BREAK","flag":"CLEAR","note":"采集站规划原则清单中相邻两项要求条目的并列延续"}
+{"id":"P08-BP0261","label":"NO_BREAK","flag":"CLEAR","note":"同一采集范围表的相邻仪表行"}
+{"id":"P08-BP0262","label":"NO_BREAK","flag":"CLEAR","note":"父标题“生产管理（示例）”锚定其首个子标题业务代码清单"}
+{"id":"P08-BP0263","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"公司名与项目名同为封面标识行；封面元素之间的边界待复核"}
+{"id":"P08-BP0264","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0265","label":"NO_BREAK","flag":"CLEAR","note":"接口标题与其首个内容单元“(1) 触发条件：”"}
+{"id":"P08-BP0266","label":"NO_BREAK","flag":"CLEAR","note":"实时趋势查询功能概述与其首项“实时曲线”说明"}
+{"id":"P08-BP0267","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0268","label":"NO_BREAK","flag":"CLEAR","note":"同一处理逻辑列表页表的相邻功能行"}
+{"id":"P08-BP0269","label":"NO_BREAK","flag":"CLEAR","note":"同一时间序列编码表的表头行与其英文名称行"}
+{"id":"P08-BP0270","label":"NO_BREAK","flag":"CLEAR","note":"同一成本结算返回字段表内介质与消耗量字段行相邻"}
+{"id":"P08-BP0271","label":"NO_BREAK","flag":"CLEAR","note":"父标题“详细定义”锚定其首个接口子标题PM_EA_01"}
+{"id":"P08-BP0272","label":"NO_BREAK","flag":"CLEAR","note":"父标题“能耗精准核算”锚定其首个子标题ER图"}
+{"id":"P08-BP0273","label":"NO_BREAK","flag":"CLEAR","note":"同一画面交互原型内列表页与详情页的相邻区域说明"}
+{"id":"P08-BP0274","label":"NO_BREAK","flag":"CLEAR","note":"同一产量实绩返回字段表内产品名与产品编码字段行相邻"}
+{"id":"P08-BP0275","label":"NOISE","flag":"CLEAR","note":"右侧“目 录”为目录导航标识，不能形成内容证据"}
+{"id":"P08-BP0276","label":"NO_BREAK","flag":"CLEAR","note":"同一处理逻辑表内由列表页功能行进入详情页分区行"}
+{"id":"P08-BP0277","label":"NO_BREAK","flag":"CLEAR","note":"同一采集范围表的相邻仪表行"}
+{"id":"P08-BP0278","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0279","label":"NO_BREAK","flag":"CLEAR","note":"同一时间序列编码表的相邻各项定义行"}
+{"id":"P08-BP0280","label":"NO_BREAK","flag":"CLEAR","note":"“明细档”分区行直接引出其字段表头，同属该接口响应报文"}
+{"id":"P08-BP0281","label":"NO_BREAK","flag":"CLEAR","note":"“看板画面设计”与其引出的“设计图：”构成同一说明的从属延续"}
+{"id":"P08-BP0282","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"公司名与项目名同为封面标识行；封面元素之间的边界待复核"}
+{"id":"P08-BP0283","label":"NO_BREAK","flag":"CLEAR","note":"“3、电表采集”标签与其紧随的采集方案说明"}
+{"id":"P08-BP0284","label":"NO_BREAK","flag":"CLEAR","note":"同一轧钢厂能源看板数据项表的相邻数据行"}
+{"id":"P08-BP0285","label":"NO_BREAK","flag":"CLEAR","note":"二级看板内容概述与其首个展示指标条目"}
+{"id":"P08-BP0286","label":"NO_BREAK","flag":"CLEAR","note":"同一采集接口说明表的相邻仪表行"}
+{"id":"P08-BP0287","label":"NO_BREAK","flag":"CLEAR","note":"产品能耗核算流程图与同一流程的活动说明相邻从属"}
+{"id":"P08-BP0288","label":"NO_BREAK","flag":"CLEAR","note":"接口标题与其首个内容单元“(1) 触发条件：”"}
+{"id":"P08-BP0289","label":"NO_BREAK","flag":"CLEAR","note":"“(1) 触发条件：”直接引出其接口属性表头"}
+{"id":"P08-BP0290","label":"NO_BREAK","flag":"CLEAR","note":"接口标题与其首个内容单元“(1) 触发条件：”"}
+{"id":"P08-BP0291","label":"NO_BREAK","flag":"CLEAR","note":"同一硬件清单表的相邻仪表行"}
+{"id":"P08-BP0292","label":"NO_BREAK","flag":"CLEAR","note":"同一管理单元表的相邻字段行"}
+{"id":"P08-BP0293","label":"NOISE","flag":"CLEAR","note":"右侧“目 录”为目录导航标识，不能形成内容证据"}
+{"id":"P08-BP0294","label":"NO_BREAK","flag":"NEEDS_HUMAN_REVIEW","note":"“需求设计说明书”与“第一卷 能源管理模块”同为封面标识行；封面元素之间的边界待复核"}
+{"id":"P08-BP0295","label":"NO_BREAK","flag":"CLEAR","note":"标题“DB定义”锚定其首个表名子标题"}
+{"id":"P08-BP0296","label":"NO_BREAK","flag":"CLEAR","note":"水气采集方案说明与其“具体采集架构图如下图所示：”引出句的延续"}
+{"id":"P08-BP0297","label":"NO_BREAK","flag":"CLEAR","note":"同一工序计划配置信息表的相邻字段行"}
+{"id":"P08-BP0298","label":"NOISE","flag":"NEEDS_HUMAN_REVIEW","note":"左右标题尾部均带页码，判为目录导航条目"}
+{"id":"P08-BP0299","label":"NO_BREAK","flag":"CLEAR","note":"标题“现有组织架构”与其首个组织构成说明段"}
+{"id":"P08-BP0300","label":"NO_BREAK","flag":"CLEAR","note":"同一处理逻辑表内详情页分区行与其表头行相邻"}

@@ -1,0 +1,174 @@
+{
+  "protocol_version": "industrial-seac-qa-prereview-v1.0",
+  "review_source": "LLM_CONTENT_PREREVIEW",
+  "model_id": "claude-opus-5-thinking (Cursor agent)",
+  "privacy_decisions_included": false,
+  "formal_gold_standard": false,
+  "projects": {
+    "P02": {
+      "record_count": 36,
+      "verdicts": {
+        "APPROVED": 10,
+        "NEEDS_REWRITE": 20,
+        "REJECTED": 6
+      },
+      "difficulty": {
+        "Easy": 21,
+        "Medium": 15
+      },
+      "privacy_flagged_records": 11,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": true
+    },
+    "P03": {
+      "record_count": 36,
+      "verdicts": {
+        "APPROVED": 10,
+        "NEEDS_REWRITE": 20,
+        "REJECTED": 6
+      },
+      "difficulty": {
+        "Easy": 10,
+        "Hard": 3,
+        "Medium": 23
+      },
+      "privacy_flagged_records": 8,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": true
+    },
+    "P04": {
+      "record_count": 36,
+      "verdicts": {
+        "APPROVED": 12,
+        "NEEDS_REWRITE": 19,
+        "REJECTED": 5
+      },
+      "difficulty": {
+        "Easy": 15,
+        "Hard": 2,
+        "Medium": 19
+      },
+      "privacy_flagged_records": 7,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": true
+    },
+    "P05": {
+      "record_count": 36,
+      "verdicts": {
+        "APPROVED": 14,
+        "NEEDS_REWRITE": 15,
+        "REJECTED": 7
+      },
+      "difficulty": {
+        "Easy": 16,
+        "Hard": 1,
+        "Medium": 19
+      },
+      "privacy_flagged_records": 13,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": true
+    },
+    "P06": {
+      "record_count": 33,
+      "verdicts": {
+        "APPROVED": 10,
+        "NEEDS_REWRITE": 14,
+        "REJECTED": 9
+      },
+      "difficulty": {
+        "Easy": 22,
+        "Medium": 11
+      },
+      "privacy_flagged_records": 10,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": true
+    },
+    "P07": {
+      "record_count": 26,
+      "verdicts": {
+        "APPROVED": 6,
+        "NEEDS_REWRITE": 8,
+        "REJECTED": 12
+      },
+      "difficulty": {
+        "Easy": 7,
+        "Hard": 1,
+        "Medium": 18
+      },
+      "privacy_flagged_records": 12,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": false
+    },
+    "P08": {
+      "record_count": 19,
+      "verdicts": {
+        "APPROVED": 2,
+        "NEEDS_REWRITE": 10,
+        "REJECTED": 7
+      },
+      "difficulty": {
+        "Easy": 10,
+        "Hard": 1,
+        "Medium": 8
+      },
+      "privacy_flagged_records": 10,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": false
+    },
+    "P09": {
+      "record_count": 16,
+      "verdicts": {
+        "APPROVED": 2,
+        "NEEDS_REWRITE": 9,
+        "REJECTED": 5
+      },
+      "difficulty": {
+        "Easy": 5,
+        "Hard": 1,
+        "Medium": 10
+      },
+      "privacy_flagged_records": 8,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": false
+    },
+    "P10": {
+      "record_count": 24,
+      "verdicts": {
+        "APPROVED": 5,
+        "NEEDS_REWRITE": 9,
+        "REJECTED": 10
+      },
+      "difficulty": {
+        "Easy": 10,
+        "Hard": 2,
+        "Medium": 12
+      },
+      "privacy_flagged_records": 14,
+      "minimum_qa_count": 15,
+      "meets_minimum_with_approved_only": false,
+      "meets_minimum_after_rewrite": false
+    }
+  },
+  "totals": {
+    "records": 262,
+    "verdicts": {
+      "APPROVED": 71,
+      "NEEDS_REWRITE": 124,
+      "REJECTED": 67
+    },
+    "difficulty": {
+      "Easy": 116,
+      "Hard": 11,
+      "Medium": 135
+    },
+    "flagged_privacy": 93
+  }
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "question": "会议召开日期是什么？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Meeting fact",
+    "question": "会议地点在哪里？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Constraint",
+    "question": "绑定4合1设备的危险作业开工后，气体检测数据自动记录频率是多少？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 10,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 9,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "Constraint",
+    "question": "危险作业自动完工默认从开工确认完成后多少小时触发？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 7,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 6,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Feature",
+    "question": "演练签到如何实现？",
+    "best_baseline_rank": 2,
+    "proposed_v1_rank": 8,
+    "proposed_latest_rank": 4,
+    "latest_vs_v1_gain": 4,
+    "latest_vs_best_baseline_gain": -2
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "Feature",
+    "question": "移动端适配飞书后要求提供什么登录能力？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 16,
+    "proposed_latest_rank": 2,
+    "latest_vs_v1_gain": 14,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "API",
+    "question": "合同四方会签接口使用什么请求方式？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 11,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 10,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API",
+    "question": "合同四方会签接口的请求路径是什么？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 22,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 21,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA009",
+    "question_type": "API constraint",
+    "question": "查询合同四方会签时，合同编号和合同名称是否可以同时缺失？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 3,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 2,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "API parameter",
+    "question": "四方会签人员信息接口中的signIds参数是否必填，最大长度是多少？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA011",
+    "question_type": "API parameter",
+    "question": "正式工信息同步接口的开始时间和结束时间是否必填？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 67,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 66,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA012",
+    "question_type": "API response",
+    "question": "正式工信息同步接口中哪个返回状态码表示成功？",
+    "best_baseline_rank": 6,
+    "proposed_v1_rank": 65,
+    "proposed_latest_rank": 3,
+    "latest_vs_v1_gain": 62,
+    "latest_vs_best_baseline_gain": 3
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "Numeric constraint",
+    "question": "企业监测预警模块计划接入多少台现场视频监控？",
+    "best_baseline_rank": 5,
+    "proposed_v1_rank": 27,
+    "proposed_latest_rank": 33,
+    "latest_vs_v1_gain": -6,
+    "latest_vs_best_baseline_gain": -28
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Numeric constraint",
+    "question": "企业监测预警模块要求视频至少存储多少天？",
+    "best_baseline_rank": 4,
+    "proposed_v1_rank": 9,
+    "proposed_latest_rank": 18,
+    "latest_vs_v1_gain": -9,
+    "latest_vs_best_baseline_gain": -14
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "List",
+    "question": "作业步骤固化清单覆盖哪八类危险作业？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 3,
+    "latest_vs_v1_gain": -2,
+    "latest_vs_best_baseline_gain": -2
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Constraint",
+    "question": "新增危险作业固化步骤时，状态默认值是什么？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 6,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 5,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Constraint",
+    "question": "危险作业固化步骤在什么状态下才允许修改或删除？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Numeric constraint",
+    "question": "危险作业许可证一键填报展示最近多少条作业？",
+    "best_baseline_rank": 3,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 2
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Constraint",
+    "question": "一键填报危险作业许可证时，哪些时间字段不会被带出？",
+    "best_baseline_rank": 2,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 2,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Business rule",
+    "question": "危险作业常用小组中的人员需要满足什么条件？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "List",
+    "question": "三级培训题库支持哪些题型？",
+    "best_baseline_rank": 2,
+    "proposed_v1_rank": 5,
+    "proposed_latest_rank": 3,
+    "latest_vs_v1_gain": 2,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Process",
+    "question": "三级培训教育包含哪三级？",
+    "best_baseline_rank": 4,
+    "proposed_v1_rank": 8,
+    "proposed_latest_rank": 5,
+    "latest_vs_v1_gain": 3,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Numeric constraint",
+    "question": "三级培训上午或下午的培训时长如何计算？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 4,
+    "proposed_latest_rank": 3,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": -2
+  },
+  {
+    "qa_id": "QA024",
+    "question_type": "Feature",
+    "question": "危险作业远程监管的监控信号从哪里对接？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 2,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Process constraint",
+    "question": "危险作业安全交底资料应在什么阶段上传？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 3,
+    "proposed_latest_rank": 2,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Process",
+    "question": "熔融金属点检如何执行？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 2,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": -1
+  },
+  {
+    "qa_id": "QA027",
+    "question_type": "Database",
+    "question": "EHS_REL_CONTRACT_INFO表用于记录什么信息？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA028",
+    "question_type": "Database",
+    "question": "EHS_REL_CONTRACT_INFO表的主键字段是什么，类型和长度是多少？",
+    "best_baseline_rank": 2,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": 1
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Database",
+    "question": "点巡检计划表的表名是什么？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 3,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 2,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Responsibility",
+    "question": "项目服务器资源由哪一方提供？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 0,
+    "latest_vs_best_baseline_gain": 0
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Standard",
+    "question": "清洁运输模块依据什么标准优化？",
+    "best_baseline_rank": 2,
+    "proposed_v1_rank": 2,
+    "proposed_latest_rank": 1,
+    "latest_vs_v1_gain": 1,
+    "latest_vs_best_baseline_gain": 1
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Standard",
+    "question": "重点场所区域视频通过什么协议与地方应急管理部门平台对接？",
+    "best_baseline_rank": 1,
+    "proposed_v1_rank": 1,
+    "proposed_latest_rank": 3,
+    "latest_vs_v1_gain": -2,
+    "latest_vs_best_baseline_gain": -2
+  }
+]

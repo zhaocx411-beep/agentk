@@ -1,0 +1,36 @@
+{"id": "P04-QA001", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "语料含12份需求调研会议纪要且每份都有同构的时间行，题干“本次”无法指代任一会议，证据无法唯一对齐。"}
+{"id": "P04-QA002", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“请求方式：HTTP，POST方法”，答案只写“HTTP”漏掉POST，需补全为“HTTP POST”。"}
+{"id": "P04-QA003", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，与原文“HTTP，POST方法”不完整对应，需补全。"}
+{"id": "P04-QA004", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA005", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA006", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA007", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA008", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA009", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案“HTTP”未给出POST方法，需补全为“HTTP POST”后方可使用。"}
+{"id": "P04-QA010", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "code行取值范围为空，答案“类型为Int，必填”与该唯一行一致，其他接口的同名行属不同标题路径可区分。"}
+{"id": "P04-QA011", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "message行三项字段与答案逐项对应，行内可唯一定位。"}
+{"id": "P04-QA012", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "证据行属2.1.2.2获取计量设备列表接口，与题干接口一致，答案由该行归纳且唯一。"}
+{"id": "P04-QA013", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "证据行与题干接口一致，三项字段与答案对应，无冲突答案。"}
+{"id": "P04-QA014", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表名与表描述在同一行内对应，答案唯一且题型、来源正确。"}
+{"id": "P04-QA015", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P04-QA016", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P04-QA017", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P04-QA018", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P04-QA019", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P04-QA020", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "总则节的B0010与B0011都含强制性要求，题干“规定了什么约束”存在同样合理的其他答案，需改写为针对标准符合性的具体问题。"}
+{"id": "P04-QA021", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "同一服务条款语句在技术协议“质保与售后服务”和二期技术要求中以相同措辞出现（与QA024互为近重复），跨文档证据重复无法唯一对齐。"}
+{"id": "P04-QA022", "content_verdict": "REJECTED", "difficulty": "Hard", "suggested_privacy_flags": [], "note": "该油品化验判定语句在天管设备二期技术要求B0263中完全重复，跨文档证据不唯一，且题干“油品化验工单”在两份文档中同名。"}
+{"id": "P04-QA023", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "接口开发节还含协议选型与第三方配合等约束，模板问法下存在多个同样合理答案，需改写为针对RESTful API的具体要求。"}
+{"id": "P04-QA024", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "与QA021答案完全相同且该语句在三份文档中重复出现，属近重复题且证据无法唯一对齐。"}
+{"id": "P04-QA025", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "乙方责任与义务共7条且多条为强制性约束，答案只取第3条并保留编号，需改写题干指向厂区作业规定。"}
+{"id": "P04-QA026", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "题干问“支持或提供什么能力”而答案是外部依赖限制，语义不匹配，需改写为针对设计约束中外部限制的问题。"}
+{"id": "P04-QA027", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该项目目标语句在技术协议与二期技术要求中同样出现，跨文档证据重复；且题干为模板问法无法唯一定位来源。"}
+{"id": "P04-QA028", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干仅写“功能描述”，该文档各模块均有同名章节，需限定到点检管理后才自足。"}
+{"id": "P04-QA029", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该段描述四层架构，模板问法下基础支撑层、应用服务层等描述同样可作答，需改写为针对平台层职责的问题。"}
+{"id": "P04-QA030", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案末尾保留“如下图所示”的悬空指代，且同段建设模块描述同样满足该问法，需改写并收敛证据。"}
+{"id": "P04-QA031", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "项目现状节列出十余条现状与提升策略，答案只取“业务联动”一条，模板问法无法唯一确定，需改写题干。"}
+{"id": "P04-QA032", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干仅写“功能描述”且答案过短（仅一句总述），需限定到基础管理模块并明确所问内容。"}
+{"id": "P04-QA033", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该非功能性描述节还含“文件大小限制小于等于1G”等数量要求，且同名章节在各模块重复，需限定到基础管理性能指标。"}
+{"id": "P04-QA034", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该节唯一的时长阈值即“停机时间≥30分钟”，答案由证据句直接支持，章节与题型正确。"}
+{"id": "P04-QA035", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "实施范围节内只有该条给出时长要求（合同签订后12个月），答案由证据句直接支持且唯一。"}
+{"id": "P04-QA036", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干问“支持或提供什么能力”而答案是对投标企业的要求，语义不匹配，需改写为针对总则中投标方案要求的问题。"}

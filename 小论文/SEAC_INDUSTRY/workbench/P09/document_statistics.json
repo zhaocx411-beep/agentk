@@ -1,0 +1,58 @@
+[
+  {
+    "project_id": "P09",
+    "document_type": "Technical Agreement",
+    "file_name": "模块8-环保管理-技术协议-1218.docx",
+    "file_path": "烟台华新-环保管理/模块8-环保管理-技术协议-1218.docx",
+    "paragraphs": 336,
+    "tables": 6,
+    "table_rows": 31,
+    "headings": 185,
+    "characters": 16792,
+    "tokens_approx": 15591,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P09",
+    "document_type": "DB",
+    "file_name": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "file_path": "烟台华新-环保管理/烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "paragraphs": 149,
+    "tables": 104,
+    "table_rows": 1629,
+    "headings": 122,
+    "characters": 75114,
+    "tokens_approx": 25612,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P09",
+    "document_type": "API",
+    "file_name": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "file_path": "烟台华新-环保管理/烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "paragraphs": 103,
+    "tables": 48,
+    "table_rows": 392,
+    "headings": 43,
+    "characters": 12405,
+    "tokens_approx": 7136,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P09",
+    "document_type": "Detailed Design",
+    "file_name": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "file_path": "烟台华新-环保管理/烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "paragraphs": 689,
+    "tables": 171,
+    "table_rows": 1995,
+    "headings": 375,
+    "characters": 111503,
+    "tokens_approx": 85371,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  }
+]

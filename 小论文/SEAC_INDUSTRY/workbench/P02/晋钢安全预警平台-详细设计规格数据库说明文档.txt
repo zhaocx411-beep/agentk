@@ -1,0 +1,531 @@
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0001] [worksheet] [封面]
+ |  |  |  | 江苏金恒信息科技股份有限公司 |  |  | 密级：内部 |  |  |  |  ||  |  |  |  | 数据库说明文档 |  |  | 版本：V1.0 |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0002] [table] [基础信息与台账相关 > EHS_SAFETY_ORGANIZATION]
+1、 | 表名 | EHS_SAFETY_ORGANIZATION | 表的描述 | 安全机构与职责表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0003] [table] [基础信息与台账相关 > EHS_SAFETY_CULTURE]
+2、 | 表名 | EHS_SAFETY_CULTURE | 表的描述 | 安全文化建设表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0004] [table] [基础信息与台账相关 > EHS_PROJECT_BASIC]
+3、 | 表名 | EHS_PROJECT_BASIC | 表的描述 | 项目基本信息表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0005] [table] [基础信息与台账相关 > EHS_HAZARDOUS_CHEMICAL]
+4、 | 表名 | EHS_HAZARDOUS_CHEMICAL | 表的描述 | 危化品台账主表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0006] [table] [基础信息与台账相关 > EHS_STANDARD_SELF_EVALUATION]
+5、 | 表名 | EHS_STANDARD_SELF_EVALUATION | 表的描述 | 安标自评报告表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0007] [table] [基础信息与台账相关 > EHS_SYSTEM_INTERNAL_AUDIT]
+6、 | 表名 | EHS_SYSTEM_INTERNAL_AUDIT | 表的描述 | 体系内审报告表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0008] [table] [基础信息与台账相关 > EHS_NONCONFORMITY]
+7、 | 表名 | EHS_NONCONFORMITY | 表的描述 | 不符合项管理表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0009] [table] [基础信息与台账相关 > EHS_SAFETY_PERFORMANCE]
+8、 | 表名 | EHS_SAFETY_PERFORMANCE | 表的描述 | 安全绩效考核表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0010] [table] [基础信息与台账相关 > EHS_CHANGE_RECORD]
+9、 | 表名 | EHS_CHANGE_RECORD | 表的描述 | 变更记录表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0011] [table] [基础信息与台账相关 > EHS_CHANGE_EQUIPMENT_DETAIL]
+10、 | 表名 | EHS_CHANGE_EQUIPMENT_DETAIL | 表的描述 | 设备设施变更明细表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0012] [table] [基础信息与台账相关 > EHS_FIRE_EQUIPMENT]
+11、 | 表名 | EHS_FIRE_EQUIPMENT | 表的描述 | 消防设备设施表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0013] [table] [基础信息与台账相关 > EHS_FIRE_KEY_LOCATION]
+12、 | 表名 | EHS_FIRE_KEY_LOCATION | 表的描述 | 消防重点部位表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0014] [table] [基础信息与台账相关 > EHS_FIRE_ORGANIZATION_MARK]
+13、 | 表名 | EHS_FIRE_ORGANIZATION_MARK | 表的描述 | 消防组织机构标记表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0015] [table] [基础信息与台账相关 > EHS_OCCUPATIONAL_HEALTH_COMPANY]
+14、 | 表名 | EHS_OCCUPATIONAL_HEALTH_COMPANY | 表的描述 | 公司级职业健康档案表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0016] [table] [基础信息与台账相关 > EHS_OCCUPATIONAL_HEALTH_PERSONAL]
+15、 | 表名 | EHS_OCCUPATIONAL_HEALTH_PERSONAL | 表的描述 | 个人职业健康档案表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0017] [table] [基础信息与台账相关 > EHS_OCCUPATIONAL_HAZARD_FACTOR]
+16、 | 表名 | EHS_OCCUPATIONAL_HAZARD_FACTOR | 表的描述 | 职业病危害因素清单表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0018] [table] [安全投入 > EHS_SAFETY_BUDGET_TYPE]
+1、 | 表名 | EHS_SAFETY_BUDGET_TYPE | 表的描述 | 预算类型配置表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0019] [table] [安全投入 > EHS_SAFETY_INVESTMENT_PLAN_COMPANY]
+2、 | 表名 | EHS_SAFETY_INVESTMENT_PLAN_COMPANY | 表的描述 | 公司级投入计划表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0020] [table] [安全投入 > EHS_SAFETY_INVESTMENT_PLAN_FACTORY]
+3、 | 表名 | EHS_SAFETY_INVESTMENT_PLAN_FACTORY | 表的描述 | 分厂级投入计划表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0021] [table] [安全投入 > EHS_SAFETY_INVESTMENT_PLAN_DETAIL]
+4、 | 表名 | EHS_SAFETY_INVESTMENT_PLAN_DETAIL | 表的描述 | 分厂级投入计划明细表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0022] [table] [安全投入 > EHS_SAFETY_EXPENSE_DETAIL_INFO]
+5、 | 表名 | EHS_SAFETY_EXPENSE_DETAIL_INFO | 表的描述 | 安全生产使用明细表 |  |  |  |  |  |  |  |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  |  |  |  |  |  |  |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0023] [table] [安全培训 > EHS_TRAIN_COURSEWARE_MANAGE]
+1、 | 表名 | EHS_TRAIN_COURSEWARE_MANAGE | 表的描述 | 培训课件管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0024] [table] [安全培训 > EHS_EXM_QUESTION_BANK_MANAGEMENT]
+2、 | 表名 | EHS_EXM_QUESTION_BANK_MANAGEMENT | 表的描述 | 题库管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0025] [table] [安全培训 > EHS_EXM_QUESTION_MANAGEMENT]
+3、 | 表名 | EHS_EXM_QUESTION_MANAGEMENT | 表的描述 | 题目管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0026] [table] [安全培训 > EHS_EXM_TSET_PAPER]
+4、 | 表名 | EHS_EXM_TSET_PAPER | 表的描述 | 试卷管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0027] [table] [安全培训 > EHS_EXM_TSET_PAPER_QUESTION]
+5、 | 表名 | EHS_EXM_TSET_PAPER_QUESTION | 表的描述 | 试卷题目关联表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0028] [table] [安全培训 > EHS_TRAIN_YEAR_PROGRAM]
+6、 | 表名 | EHS_TRAIN_YEAR_PROGRAM | 表的描述 | 年度安全培训计划表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0029] [table] [安全培训 > EHS_TRAIN_PROGRAM]
+7、 | 表名 | EHS_TRAIN_PROGRAM | 表的描述 | 月度安全培训计划表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0030] [table] [安全培训 > EHS_TRAIN_PROGRAM_STAFF]
+8、 | 表名 | EHS_TRAIN_PROGRAM_STAFF | 表的描述 | 月度安全培训计划人员表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0031] [table] [安全培训 > EHS_TRAIN_EXECUTE]
+9、 | 表名 | EHS_TRAIN_EXECUTE | 表的描述 | 培训实施表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0032] [table] [安全培训 > EHS_TRAIN_EXECUTE_COURSEWARE_REL]
+10、 | 表名 | EHS_TRAIN_EXECUTE_COURSEWARE_REL | 表的描述 | 培训课件实施关联表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0033] [table] [安全培训 > EHS_TRAIN_EXECUTE_RECORD]
+11、 | 表名 | EHS_TRAIN_EXECUTE_RECORD | 表的描述 | 培训实施记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0034] [table] [安全培训 > EHS_TRAIN_EXECUTE_RECORD_PROGRESS]
+12、 | 表名 | EHS_TRAIN_EXECUTE_RECORD_PROGRESS | 表的描述 | 培训记录进度表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0035] [table] [安全培训 > EHS_TRAIN_SATISFACTION]
+13、 | 表名 | EHS_TRAIN_SATISFACTION | 表的描述 | 培训满意度调查表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0036] [table] [安全培训 > EHS_TRAIN_EFFETIVE]
+14、 | 表名 | EHS_TRAIN_EFFETIVE | 表的描述 | 培训有效性评估表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0037] [table] [安全培训 > EHS_TRAIN_SUMMARY]
+15、 | 表名 | EHS_TRAIN_SUMMARY | 表的描述 | 培训小结表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0038] [table] [安全培训 > EHS_EXM_EXAMINATION_MANAGEMENT]
+16、 | 表名 | EHS_EXM_EXAMINATION_MANAGEMENT | 表的描述 | 考务管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0039] [table] [安全培训 > EHS_EXM_TEST_PAPER_STAFF]
+16、 | 表名 | EHS_EXM_TEST_PAPER_STAFF | 表的描述 | 员工考试表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0040] [table] [安全培训 > EHS_EXM_TEST_PAPER_RECORD]
+17、 | 表名 | EHS_EXM_TEST_PAPER_RECORD | 表的描述 | 考试记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0041] [table] [安全培训 > EHS_EXM_TEST_PAPER_STAFF_DAILY]
+18、 | 表名 | EHS_EXM_TEST_PAPER_STAFF_DAILY | 表的描述 | 每日一练表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0042] [table] [安全培训 > EHS_EXM_TEST_PAPER_RECORD_DAILY]
+19、 | 表名 | EHS_EXM_TEST_PAPER_RECORD_DAILY | 表的描述 | 每日一练记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0043] [table] [安全培训 > EHS_EXM_TEST_WRONG_PAPER]
+20、 | 表名 | EHS_EXM_TEST_WRONG_PAPER | 表的描述 | 每日一练错题集 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0044] [table] [安全培训 > EHS_THREE_SAFETY_STAFF]
+21、 | 表名 | EHS_THREE_SAFETY_STAFF | 表的描述 | 三级安全教育人员档案 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0045] [table] [安全培训 > EHS_THREE_SAFETY_FILE_RECORD]
+22、 | 表名 | EHS_THREE_SAFETY_FILE_RECORD | 表的描述 | 三级教育档案文件记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0046] [table] [安全培训 > EHS_THREE_SAFETY_STAFF_CHANGE_RECORD]
+23、 | 表名 | EHS_THREE_SAFETY_STAFF_CHANGE_RECORD | 表的描述 | 三级安全教育人员组织变动记录 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0047] [table] [应急管理 > EHS_EMER_PLAN_MANAGE]
+1、 | 表名 | EHS_EMER_PLAN_MANAGE | 表的描述 | 应急预案基础信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0048] [table] [应急管理 > EHS_EMER_PLAN_MATERIAL]
+2、 | 表名 | EHS_EMER_PLAN_MATERIAL | 表的描述 | 应急预案物资表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0049] [table] [应急管理 > EHS_EMER_PLAN_REVISE_RECORD]
+2、 | 表名 | EHS_EMER_PLAN_REVISE_RECORD | 表的描述 | 应急预案修订记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0050] [table] [应急管理 > EHS_EMER_MATERIAL_MANAGE]
+3、 | 表名 | EHS_EMER_MATERIAL_MANAGE | 表的描述 | 应急物资基础信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0051] [table] [应急管理 > EHS_EMER_MATERIAL_CHECK]
+4、 | 表名 | EHS_EMER_MATERIAL_CHECK | 表的描述 | 应急物资检验表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0052] [table] [应急管理 > EHS_EMER_DUTY_INFO]
+4、 | 表名 | EHS_EMER_DUTY_INFO | 表的描述 | 应急值守信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0053] [table] [应急管理 > EHS_EMER_DUTY_RECORD]
+4、 | 表名 | EHS_EMER_DUTY_RECORD | 表的描述 | 应急值班记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0054] [table] [应急管理 > EHS_EMER_DRILL_PLAN]
+5、 | 表名 | EHS_EMER_DRILL_PLAN | 表的描述 | 应急演练计划表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0055] [table] [应急管理 > EHS_EMER_DRILL_MATERIAL]
+6、 | 表名 | EHS_EMER_DRILL_MATERIAL | 表的描述 | 应急演练物资关系表(可不需要 直接使用预案维护的物资) |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0056] [table] [应急管理 > EHS_EMER_DRILL_EVALUATE]
+7、 | 表名 | EHS_EMER_DRILL_EVALUATE | 表的描述 | 应急演练评估表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0057] [table] [应急管理 > EHS_EMER_DRILL_QUESTION_RECT]
+8、 | 表名 | EHS_EMER_DRILL_QUESTION_RECT | 表的描述 | 应急演练问题整改表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0058] [table] [设备设施 > EHS_FACILITY_MANAGE]
+1、 | 表名 | EHS_FACILITY_MANAGE | 表的描述 | 安全设施基础信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0059] [table] [设备设施 > EHS_FACILITY_CHECK_MANAGE]
+2、 | 表名 | EHS_FACILITY_CHECK_MANAGE | 表的描述 | 安全设施检修记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0060] [table] [设备设施 > EHS_SPECIAL_MANAGE]
+1、 | 表名 | EHS_SPECIAL_MANAGE | 表的描述 | 特种设备基础信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0061] [table] [设备设施 > EHS_SPECIAL_CHECK_MANAGE]
+2、 | 表名 | EHS_SPECIAL_CHECK_MANAGE | 表的描述 | 特种设备检修记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0062] [table] [设备设施 > EHS_SPECIAL_FILE_MANAGE]
+3、 | 表名 | EHS_SPECIAL_FILE_MANAGE | 表的描述 | 特种设备文件表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0063] [table] [违章管理 > EHS_VIOLATE_MANAGE]
+1、 | 表名 | EHS_VIOLATE_MANAGE | 表的描述 | 违章条款标准基础信息表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0064] [table] [违章管理 > EHS_VIOLATE_HAND_BILL]
+2、 | 表名 | EHS_VIOLATE_HAND_BILL | 表的描述 | 安全违章行为处理单表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0065] [table] [违章管理 > EHS_VIOLATE_HAND_BILL_JOINT]
+3、 | 表名 | EHS_VIOLATE_HAND_BILL_JOINT | 表的描述 | 安全违章行为处理单连带责任人表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0066] [table] [违章管理 > EHS_VIOLATE_HAND_BILL_DAN_PERMIT]
+3、 | 表名 | EHS_VIOLATE_HAND_BILL_DAN_PERMIT | 表的描述 | 处理单关联危险作业表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0067] [table] [违章管理 > EHS_VIOLATE_HAND_BILL_RECON]
+4、 | 表名 | EHS_VIOLATE_HAND_BILL_RECON | 表的描述 | 安全违章行为处理单复议表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0068] [table] [违章管理 > EHS_VIOLATE_HAND_BILL_COUNT]
+5、 | 表名 | EHS_VIOLATE_HAND_BILL_COUNT | 表的描述 | 违章人员累计计分记录表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0069] [table] [违章管理 > EHS_VIOLATE_HAND_BILL_OVER]
+6、 | 表名 | EHS_VIOLATE_HAND_BILL_OVER | 表的描述 | 违章超分记录表 |  |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 |  | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0070] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_DOC]
+1、 | 表名 | EHS_RESPONSIBILITY_DOC | 表的描述 | 责任制文件管理表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0071] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_LIST]
+2、 | 表名 | EHS_RESPONSIBILITY_LIST | 表的描述 | 安全责任清单表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0072] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_CONFIG]
+3、 | 表名 | EHS_RESPONSIBILITY_CONFIG | 表的描述 | 履职清单配置表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0073] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_TASK]
+4、 | 表名 | EHS_RESPONSIBILITY_TASK | 表的描述 | 安全责任履职任务表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0074] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_TASK_DETIAL]
+4、 | 表名 | EHS_RESPONSIBILITY_TASK_DETIAL | 表的描述 | 安全责任履职任务明细表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0075] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_TASK_CHANGE]
+4、 | 表名 | EHS_RESPONSIBILITY_TASK_CHANGE | 表的描述 | 安全责任履职任务人员变更记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0076] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_SCORE]
+5、 | 表名 | EHS_RESPONSIBILITY_SCORE | 表的描述 | 履职成绩表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0077] [table] [安全责任履职管理 > EHS_RESPONSIBILITY_APPROVAL]
+6、 | 表名 | EHS_RESPONSIBILITY_APPROVAL | 表的描述 | 审批记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0078] [table] [劳保用品管理 > EHS_LABOR_MATERIAL]
+1、 | 表名 | EHS_LABOR_MATERIAL | 表的描述 | 劳保用品物料编码表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0079] [table] [劳保用品管理 > EHS_LABOR_ISSUE_STANDARD]
+3、 | 表名 | EHS_LABOR_ISSUE_STANDARD | 表的描述 | 劳保用品发放标准表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0080] [table] [劳保用品管理 > EHS_LABOR_ISSUE_STANDARD_DETAIL]
+3、 | 表名 | EHS_LABOR_ISSUE_STANDARD_DETAIL | 表的描述 | 发放标准明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0081] [table] [劳保用品管理 > EHS_LABOR_PERSONAL_STANDARD]
+4、 | 表名 | EHS_LABOR_PERSONAL_STANDARD | 表的描述 | 员工个人领用标准表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0082] [table] [劳保用品管理 > EHS_LABOR_PERSONAL_STANDARD_DETAIL]
+5、 | 表名 | EHS_LABOR_PERSONAL_STANDARD_DETAIL | 表的描述 | 员工个人领用标准明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0083] [table] [劳保用品管理 > EHS_LABOR_MONTHLY_LIST]
+6、 | 表名 | EHS_LABOR_MONTHLY_LIST | 表的描述 | 月度劳保领用清单表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0084] [table] [劳保用品管理 > EHS_LABOR_MONTHLY_LIST_DETAIL]
+7、 | 表名 | EHS_LABOR_MONTHLY_LIST_DETAIL | 表的描述 | 月度领用清单明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0085] [table] [劳保用品管理 > EHS_LABOR_DEPT_STOCK]
+8、 | 表名 | EHS_LABOR_DEPT_STOCK | 表的描述 | 分厂劳保库存表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0086] [table] [劳保用品管理 > EHS_LABOR_SPECIAL_APPLY]
+9、 | 表名 | EHS_LABOR_SPECIAL_APPLY | 表的描述 | 分厂特殊领用申请表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0087] [table] [劳保用品管理 > EHS_LABOR_SPECIAL_APPLY_DETAIL]
+10、 | 表名 | EHS_LABOR_SPECIAL_APPLY_DETAIL | 表的描述 | 特殊领用申请明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0088] [table] [劳保用品管理 > EHS_LABOR_ISSUE_RECORD]
+11、 | 表名 | EHS_LABOR_ISSUE_RECORD | 表的描述 | 员工领用记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0089] [table] [劳保用品管理 > EHS_LABOR_ISSUE_RECORD_DETAIL]
+12、 | 表名 | EHS_LABOR_ISSUE_RECORD_DETAIL | 表的描述 | 员工领用记录明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0090] [table] [劳保用品管理 > EHS_LABOR_FORECAST]
+13、 | 表名 | EHS_LABOR_FORECAST | 表的描述 | 预估劳保需求数量表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0091] [table] [劳保用品管理 > EHS_LABOR_MATERIAL_STOCK]
+2、 | 表名 | EHS_LABOR_MATERIAL_STOCK | 表的描述 | 劳保用品库存表（也可以合并到劳保用品物料编码表） |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0092] [table] [会议任务 > EHS_MEETING_TASK]
+1、 | 表名 | EHS_MEETING_TASK | 表的描述 | 会议任务主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0093] [table] [会议任务 > EHS_MEETING_TASK_DEPT]
+2、 | 表名 | EHS_MEETING_TASK_DEPT | 表的描述 | 会议任务责任部门表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0094] [table] [会议任务 > EHS_MEETING_PROCESS]
+3、 | 表名 | EHS_MEETING_PROCESS | 表的描述 | 会议流程表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0095] [table] [会议任务 > EHS_MEETING_ATTENDEE]
+4、 | 表名 | EHS_MEETING_ATTENDEE | 表的描述 | 会议参与人员表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0096] [table] [会议任务 > EHS_MEETING_RECORD]
+5、 | 表名 | EHS_MEETING_RECORD | 表的描述 | 会议记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0097] [table] [会议任务 > EHS_MEETING_RESOLUTION]
+6、 | 表名 | EHS_MEETING_RESOLUTION | 表的描述 | 会议决议事项表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0098] [table] [安全资质管理-文件 > EHS_COMPANY_QUALIFICATION]
+1、 | 表名 | EHS_COMPANY_QUALIFICATION | 表的描述 | 公司资质管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0099] [table] [安全资质管理-文件 > EHS_COMPANY_LEADER]
+2、 | 表名 | EHS_COMPANY_LEADER | 表的描述 | 企业主要负责人管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0100] [table] [安全资质管理-文件 > EHS_CERTIFIED_SAFETY_ENGINEER]
+3、 | 表名 | EHS_CERTIFIED_SAFETY_ENGINEER | 表的描述 | 注册安全工程师管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0101] [table] [安全资质管理-文件 > EHS_SAFETY_MANAGER]
+4、 | 表名 | EHS_SAFETY_MANAGER | 表的描述 | 专职安全管理人员管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0102] [table] [安全资质管理-文件 > EHS_SPECIAL_EQUIPMENT_OPERATOR]
+5、 | 表名 | EHS_SPECIAL_EQUIPMENT_OPERATOR | 表的描述 | 特种设备操作人员资质管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0103] [table] [安全资质管理-文件 > EHS_SPECIAL_WORKER]
+6、 | 表名 | EHS_SPECIAL_WORKER | 表的描述 | 特种作业人员资质管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0104] [table] [安全资质管理-文件 > EHS_INTERNAL_CERTIFICATION]
+7、 | 表名 | EHS_INTERNAL_CERTIFICATION | 表的描述 | 内部认定人员资质管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0105] [table] [安全资质管理-文件 > EHS_DOCUMENT_SYSTEM]
+8、 | 表名 | EHS_DOCUMENT_SYSTEM | 表的描述 | 制度清单管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0106] [table] [安全资质管理-文件 > EHS_DOCUMENT_FILE]
+8、 | 表名 | EHS_DOCUMENT_FILE | 表的描述 | 文件清单管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0107] [table] [事件事故管理 > EHS_ACCIDENT_REASON_ANALYSIS]
+1、 | 表名 | EHS_ACCIDENT_REASON_ANALYSIS | 表的描述 | 事故原因分析表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0108] [table] [事件事故管理 > EHS_ACCIDENT_INCIDENT]
+2、 | 表名 | EHS_ACCIDENT_INCIDENT | 表的描述 | 事故事件主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0109] [table] [事件事故管理 > EHS_ACCIDENT_REASON_REL]
+3、 | 表名 | EHS_ACCIDENT_REASON_REL | 表的描述 | 事故事件原因关联表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0110] [table] [事件事故管理 > EHS_ACCIDENT_IMPROVEMENT]
+4、 | 表名 | EHS_ACCIDENT_IMPROVEMENT | 表的描述 | 事故事件改进措施表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0111] [table] [事件事故管理 > EHS_ACCIDENT_RECTIFICATION]
+5、 | 表名 | EHS_ACCIDENT_RECTIFICATION | 表的描述 | 事故事件整改记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0112] [table] [事件事故管理 > EHS_ACCIDENT_CASE_LIBRARY]
+6、 | 表名 | EHS_ACCIDENT_CASE_LIBRARY | 表的描述 | 事故案例库表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0113] [table] [法律法规 > EHS_LAWS_REGULATIONS]
+1、 | 表名 | EHS_LAWS_REGULATIONS | 表的描述 | 法律法规主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0114] [table] [法律法规 > EHS_LAWS_CLAUSE]
+2、 | 表名 | EHS_LAWS_CLAUSE | 表的描述 | 法律法规条款表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0115] [table] [法律法规 > EHS_COMPLIANCE_TASK]
+3、 | 表名 | EHS_COMPLIANCE_TASK | 表的描述 | 合规性评价任务表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0116] [table] [法律法规 > EHS_COMPLIANCE_TASK_CLAUSE]
+3、 | 表名 | EHS_COMPLIANCE_TASK_CLAUSE | 表的描述 | 合规性评价任务条款表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0117] [table] [法律法规 > EHS_COMPLIANCE_EVALUATION]
+3、 | 表名 | EHS_COMPLIANCE_EVALUATION | 表的描述 | 合规性评价记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0118] [table] [法律法规 > EHS_COMPLIANCE_NONCONFORMITY]
+4、 | 表名 | EHS_COMPLIANCE_NONCONFORMITY | 表的描述 | 不符合项管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0119] [table] [安全生产目标 > EHS_SAFETY_TARGET_LIB]
+1、 | 表名 | EHS_SAFETY_TARGET_LIB | 表的描述 | 安全生产目标指标库表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0120] [table] [安全生产目标 > EHS_SAFETY_TARGET_MAIN]
+2、 | 表名 | EHS_SAFETY_TARGET_MAIN | 表的描述 | 安全生产目标制定主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0121] [table] [安全生产目标 > EHS_SAFETY_TARGET_DETAIL]
+3、 | 表名 | EHS_SAFETY_TARGET_DETAIL | 表的描述 | 安全生产目标制定明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0122] [table] [安全生产目标 > EHS_SAFETY_TARGET_FILL]
+4、 | 表名 | EHS_SAFETY_TARGET_FILL | 表的描述 | 安全生产目标填报任务表 |  |  |  ||  | ID | NVARCHAR2 | 主键 | 40 |  | N | 主键ID
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0123] [table] [安全生产目标 > EHS_SAFETY_TARGET_FILL_DETAIL]
+4、 | 表名 | EHS_SAFETY_TARGET_FILL_DETAIL | 表的描述 | 安全生产目标填报任务明细表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0124] [table] [风险分级管控与隐患排查 > EHS_RISK_AREA_DIVISION]
+1、 | 表名 | EHS_RISK_AREA_DIVISION | 表的描述 | 风险区域信息表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0125] [table] [风险分级管控与隐患排查 > EHS_RISK_AREA_DIVISION_DETAIL]
+2、 | 表名 | EHS_RISK_AREA_DIVISION_DETAIL | 表的描述 | 风险区域划分明细表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0126] [table] [风险分级管控与隐患排查 > EHS_RISK_POINT_LEVEL_INFO]
+3、 | 表名 | EHS_RISK_POINT_LEVEL_INFO | 表的描述 | 作业活动/设备设施清单 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0127] [table] [风险分级管控与隐患排查 > EHS_RISK_POINT_LEVEL_DETAIL]
+4、 | 表名 | EHS_RISK_POINT_LEVEL_DETAIL | 表的描述 | 风险分级管控详情 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0128] [table] [风险分级管控与隐患排查 > EHS_RISK_POINT_LEVEL_DETAIL_HIS]
+4、 | 表名 | EHS_RISK_POINT_LEVEL_DETAIL_HIS | 表的描述 | 风险分级管控清单历史表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0129] [table] [风险分级管控与隐患排查 > EHS_RISK_POINT_CHECK_TASK]
+5、 | 表名 | EHS_RISK_POINT_CHECK_TASK | 表的描述 | 风险分级管控检查表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0130] [table] [风险分级管控与隐患排查 > EHS_RISK_POINT_CHECK_RES]
+5、 | 表名 | EHS_RISK_POINT_CHECK_RES | 表的描述 | 风险分级管控检查结果表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0131] [table] [风险分级管控与隐患排查 > EHS_SAFETY_CHECK_TABLE]
+6、 | 表名 | EHS_SAFETY_CHECK_TABLE | 表的描述 | 安全检查表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0132] [table] [风险分级管控与隐患排查 > EHS_SAFETY_CHECK_TABLE_DETAIL]
+7、 | 表名 | EHS_SAFETY_CHECK_TABLE_DETAIL | 表的描述 | 安全检查表明细 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0133] [table] [风险分级管控与隐患排查 > EHS_POSSESSION_PRINCIPAL]
+8、 | 表名 | EHS_POSSESSION_PRINCIPAL | 表的描述 | 属地负责人(地区责任)信息 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0134] [table] [风险分级管控与隐患排查 > EHS_SAFETY_YEAR_CHECK_PLAN]
+9、 | 表名 | EHS_SAFETY_YEAR_CHECK_PLAN | 表的描述 | 年度安全检查计划 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0135] [table] [风险分级管控与隐患排查 > EHS_SAFETY_MONTH_CHECK_PLAN]
+10、 | 表名 | EHS_SAFETY_MONTH_CHECK_PLAN | 表的描述 | 说明：月度检查计划 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0136] [table] [风险分级管控与隐患排查 > EHS_SAFETY_CHECK_PLAN_DETAIL]
+11、 | 表名 | EHS_SAFETY_CHECK_PLAN_DETAIL | 表的描述 | 检查计划明细 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0137] [table] [风险分级管控与隐患排查 > EHS_SAFETY_CHECK_RECORD]
+12、 | 表名 | EHS_SAFETY_CHECK_RECORD | 表的描述 | 安全检查记录表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0138] [table] [风险分级管控与隐患排查 > EHS_HT_RANDOM_SNAPSHOT]
+13、 | 表名 | EHS_HT_RANDOM_SNAPSHOT | 表的描述 | 随手拍隐患列表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0139] [table] [风险分级管控与隐患排查 > EHS_HT_GOVERNMENT_MANAGE]
+14、 | 表名 | EHS_HT_GOVERNMENT_MANAGE | 表的描述 | 政府督办隐患管理表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0140] [table] [风险分级管控与隐患排查 > EHS_HT_GOVERNMENT_MANAGE_DETAIL]
+15、 | 表名 | EHS_HT_GOVERNMENT_MANAGE_DETAIL | 表的描述 | 政府督办隐患管理明细 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0141] [table] [风险分级管控与隐患排查 > EHS_HT_RISK_CORRECT]
+16、 | 表名 | EHS_HT_RISK_CORRECT | 表的描述 | 隐患清单信息 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0142] [table] [重大危险源管理 > EHS_DATAL_DANGER_INFO]
+1、 | 表名 | EHS_DATAL_DANGER_INFO | 表的描述 | 重大危险源台账 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0143] [table] [重大危险源管理 > EHS_SAFETY_RESPONSE_INFO]
+2、 | 表名 | EHS_SAFETY_RESPONSE_INFO | 表的描述 | 安全包保责任清单 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0144] [table] [重大危险源管理 > EHS_SAFETY_RESPONSE_DETAIL]
+3、 | 表名 | EHS_SAFETY_RESPONSE_DETAIL | 表的描述 | 安全包保责任清单明细 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0145] [table] [重大危险源管理 > EHS_VIDEO_INFO]
+4、 | 表名 | EHS_VIDEO_INFO | 表的描述 | 视频监控信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0146] [table] [危险作业 > EHS_DAN_SECURITY_MEASURES]
+1、 | 表名 | EHS_DAN_SECURITY_MEASURES | 表的描述 | 安全措施配置表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0147] [table] [危险作业 > EHS_DAN_LIMIT_SPACE_MANAGE]
+2、 | 表名 | EHS_DAN_LIMIT_SPACE_MANAGE | 表的描述 | 有限空间安全管理台账 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0148] [table] [危险作业 > EHS_DAN_OPERATION_TASK]
+3、 | 表名 | EHS_DAN_OPERATION_TASK | 表的描述 | 危险作业项目表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0149] [table] [危险作业 > EHS_DAN_PERMIT]
+4、 | 表名 | EHS_DAN_PERMIT | 表的描述 | 危险作业许可证 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0150] [table] [危险作业 > EHS_DAN_DAY_OPERATION_APPLY]
+5、 | 表名 | EHS_DAN_DAY_OPERATION_APPLY | 表的描述 | 开工确认申请表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0151] [table] [危险作业 > EHS_DAN_CHECK_UP]
+6、 | 表名 | EHS_DAN_CHECK_UP | 表的描述 | 危险作业现场检查表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0152] [table] [危险作业 > EHS_DAN_GAS_TEST_RULE]
+7、 | 表名 | EHS_DAN_GAS_TEST_RULE | 表的描述 | 气体检测分析规则表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0153] [table] [危险作业 > EHS_DAN_GAS_TEST_DETAIL]
+8、 | 表名 | EHS_DAN_GAS_TEST_DETAIL | 表的描述 | 气体监测分析明细表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0154] [table] [危险作业 > EHS_DAN_DAY_OPERATION_SECURITY]
+9、 | 表名 | EHS_DAN_DAY_OPERATION_SECURITY | 表的描述 | 开工确认安全措施明细表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0155] [table] [危险作业 > EHS_DAN_PERMIT_SECURITY]
+10、 | 表名 | EHS_DAN_PERMIT_SECURITY | 表的描述 | 许可证安全措施明细表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0156] [table] [危险作业 > EHS_DAN_PERMIT_ACCEPT_APPROVAL]
+11、 | 表名 | EHS_DAN_PERMIT_ACCEPT_APPROVAL | 表的描述 | 危险作业许可证验收审批表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0157] [table] [危险作业 > EHS_MAINTENANCE_RED_LINE]
+12、 | 表名 | EHS_MAINTENANCE_RED_LINE | 表的描述 | 检维修安全红线配置 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0158] [table] [危险作业 > EHS_MAINTENANCE_TICKET]
+13、 | 表名 | EHS_MAINTENANCE_TICKET | 表的描述 | 检维修作业确认票 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0159] [table] [危险作业 > EHS_MAINTENANCE_MEASURE_CONFIRM]
+14、 | 表名 | EHS_MAINTENANCE_MEASURE_CONFIRM | 表的描述 | 检维修安全措施确认表 |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0160] [table] [协力单位管理 > EHS_COOP_UNIT_INFO]
+1、 | 表名 | EHS_COOP_UNIT_INFO | 表的描述 | 协力单位信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0161] [table] [协力单位管理 > EHS_COOP_CONTRACT_INFO]
+2、 | 表名 | EHS_COOP_CONTRACT_INFO | 表的描述 | 协力单位合同项目信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0162] [table] [协力单位管理 > EHS_COOP_CONTRACT_PERSON]
+3、 | 表名 | EHS_COOP_CONTRACT_PERSON | 表的描述 | 协力单位人员信息绑定表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0163] [table] [协力单位管理 > EHS_COOP_SAFETY_CHECK]
+4、 | 表名 | EHS_COOP_SAFETY_CHECK | 表的描述 | 协力单位安全检查 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0164] [table] [协力单位管理 > EHS_COOP_SAFETY_CHECK_DETAIL]
+5、 | 表名 | EHS_COOP_SAFETY_CHECK_DETAIL | 表的描述 | 协力单位安全检查子表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0165] [table] [协力单位管理 > EHS_COOP_UNIT_VIO_RECORD]
+6、 | 表名 | EHS_COOP_UNIT_VIO_RECORD | 表的描述 | 协力单位违章记录 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0166] [table] [班组管理 > EHS_TEAM_BASE_INFO]
+1、 | 表名 | EHS_TEAM_BASE_INFO | 表的描述 | 班组基础信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0167] [table] [班组管理 > EHS_TEAM_UNSAFE_BIND]
+2、 | 表名 | EHS_TEAM_UNSAFE_BIND | 表的描述 | 班组不安全行为绑定表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0168] [table] [班组管理 > EHS_TEAM_RISK_BIND]
+3、 | 表名 | EHS_TEAM_RISK_BIND | 表的描述 | 班组风险清单绑定表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0169] [table] [班组管理 > EHS_TEAM_PERSON_BIND]
+4、 | 表名 | EHS_TEAM_PERSON_BIND | 表的描述 | 班组人员绑定表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0170] [table] [班组管理 > EHS_TEAM_ACTIVITY_INFO]
+5、 | 表名 | EHS_TEAM_ACTIVITY_INFO | 表的描述 | 班组活动信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0171] [table] [班组管理 > EHS_TEAM_WORK_CONTENT]
+6、 | 表名 | EHS_TEAM_WORK_CONTENT | 表的描述 | 工作内容清单表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0172] [table] [班组管理 > EHS_TEAM_WORK_METHOD]
+7、 | 表名 | EHS_TEAM_WORK_METHOD | 表的描述 | 工作方法要点表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0173] [table] [班组管理 > EHS_TEAM_EMP_SCORE]
+8、 | 表名 | EHS_TEAM_EMP_SCORE | 表的描述 | 班组成员月度评分表 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0174] [table] [xx子系统或xxx模块2 > 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求]
+1、 | 表名 | 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求 | 表的描述 | 说明：对表作用进行描述。举例：本表用例记录xxx信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0175] [table] [xx子系统或xxx模块2 > 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求]
+2、 | 表名 | 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求 | 表的描述 | 说明：对表作用进行描述。举例：本表用例记录xxx信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0176] [table] [xx子系统或xxx模块2 > 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求]
+2、 | 表名 | 说明：表的名称，需要考虑数据库对表名命名规范及长度的限制和要求 | 表的描述 | 说明：对表作用进行描述。举例：本表用例记录xxx信息 |  |  |  |  ||  | 字段名 | 字段类型 | 属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[晋钢安全预警平台-详细设计规格数据库说明文档:B0177] [worksheet] [ER关系]
+表间的ER关系描述 | 说明：针对表的关系采用ER关系图或者表格的方式进行描述，根据项目情况可分多个sheet页展示； |  |  |  |  |  | 
+

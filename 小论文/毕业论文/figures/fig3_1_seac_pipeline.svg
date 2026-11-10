@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="320" viewBox="0 0 980 320" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="490" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 3-1 SEAC 结构与关键信息感知的自适应语义切片与层次化检索总体框架</text>
+
+  <!-- Stage 1 -->
+  <rect x="25" y="60" width="205" height="215" rx="10" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.8"/>
+  <rect x="25" y="60" width="205" height="36" rx="10" fill="#2b5c8f"/>
+  <text x="127.5" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">1. 携带出处的单元表示</text>
+  <text x="127.5" y="116" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1a1a1a">异构工程文档解析 (DOCX/XLSX)</text>
+  <rect x="42" y="128" width="171" height="36" rx="5" fill="#ffffff" stroke="#bdd0e4"/>
+  <text x="127.5" y="144" text-anchor="middle" font-size="10.5" fill="#333">有序单元序列 D = (u₁, ..., uₙ)</text>
+  <text x="127.5" y="158" text-anchor="middle" font-size="9.5" fill="#666">稳定标识 id · 标题路径 path · 保护组</text>
+  <rect x="42" y="174" width="171" height="42" rx="5" fill="#ffffff" stroke="#bdd0e4"/>
+  <text x="127.5" y="191" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#2b5c8f">表格行表头显式绑定 (式 3-3)</text>
+  <text x="127.5" y="207" text-anchor="middle" font-size="10" fill="#444">t(rⱼ) = header(h) || row(rⱼ)</text>
+  <text x="127.5" y="242" text-anchor="middle" font-size="10" fill="#555">保留文档级→块级→行级</text>
+  <text x="127.5" y="257" text-anchor="middle" font-size="10" fill="#555">全链路确定性出处谱系</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="230" y1="167" x2="258" y2="167" stroke="#2b5c8f" stroke-width="2"/>
+  <polygon points="264,167 255,162 255,172" fill="#2b5c8f"/>
+
+  <!-- Stage 2 -->
+  <rect x="266" y="60" width="215" height="215" rx="10" fill="#fdf8f3" stroke="#d95f02" stroke-width="1.8"/>
+  <rect x="266" y="60" width="215" height="36" rx="10" fill="#d95f02"/>
+  <text x="373.5" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2. 多信号透明边界打分</text>
+  <rect x="282" y="108" width="183" height="78" rx="5" fill="#ffffff" stroke="#f0c8a8"/>
+  <text x="373.5" y="125" text-anchor="middle" font-size="10.5" fill="#333">• 邻接句向量余弦距离 dᵢ (0.45)</text>
+  <text x="373.5" y="142" text-anchor="middle" font-size="10.5" fill="#333">• 标题与保护组结构转移 sᵢ (0.30)</text>
+  <text x="373.5" y="159" text-anchor="middle" font-size="10.5" fill="#333">• 工程关键信息密度变化 kᵢ (0.25)</text>
+  <text x="373.5" y="176" text-anchor="middle" font-size="10.5" fill="#b33c00">• 同节/同表连续性惩罚 -pᵢ</text>
+  <rect x="282" y="196" width="183" height="64" rx="5" fill="#fff5eb" stroke="#d95f02"/>
+  <text x="373.5" y="214" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#d95f02">文档级动态阈值 θ_D (式 3-12)</text>
+  <text x="373.5" y="232" text-anchor="middle" font-size="10" fill="#222">θ_D = Q₀.₈(b) + 0.08 r_t - 0.05 r_h</text>
+  <text x="373.5" y="249" text-anchor="middle" font-size="9.5" fill="#666">按表格行比例与标题比例自适应调节</text>
+
+  <!-- Arrow 2->3 -->
+  <line x1="481" y1="167" x2="509" y2="167" stroke="#d95f02" stroke-width="2"/>
+  <polygon points="515,167 506,162 506,172" fill="#d95f02"/>
+
+  <!-- Stage 3 -->
+  <rect x="517" y="60" width="210" height="215" rx="10" fill="#f6f5fb" stroke="#7570b3" stroke-width="1.8"/>
+  <rect x="517" y="60" width="210" height="36" rx="10" fill="#7570b3"/>
+  <text x="622" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">3. 受保护自适应父块组装</text>
+  <rect x="533" y="108" width="178" height="72" rx="5" fill="#ffffff" stroke="#cbc8e8"/>
+  <text x="622" y="126" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4a448a">密度自适应四档容量控制</text>
+  <text x="622" y="143" text-anchor="middle" font-size="10" fill="#333">常规目标 320 / 高密收缩 224 tok</text>
+  <text x="622" y="159" text-anchor="middle" font-size="10" fill="#333">硬上限 512 / 最小下限 48 tok</text>
+  <text x="622" y="174" text-anchor="middle" font-size="9.5" fill="#666">禁止切碎受保护表格与悬空标题</text>
+  <rect x="533" y="190" width="178" height="70" rx="5" fill="#ffffff" stroke="#cbc8e8"/>
+  <text x="622" y="208" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4a448a">派生细粒度检索子块</text>
+  <text x="622" y="225" text-anchor="middle" font-size="10" fill="#333">表格行独立成子块 (112/176 tok)</text>
+  <text x="622" y="242" text-anchor="middle" font-size="9.5" fill="#666">注入「文档类型+标题路径+主题」</text>
+
+  <!-- Arrow 3->4 -->
+  <line x1="727" y1="167" x2="755" y2="167" stroke="#7570b3" stroke-width="2"/>
+  <polygon points="761,167 752,162 752,172" fill="#7570b3"/>
+
+  <!-- Stage 4 -->
+  <rect x="763" y="60" width="192" height="215" rx="10" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.8"/>
+  <rect x="763" y="60" width="192" height="36" rx="10" fill="#1b9e77"/>
+  <text x="859" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">4. 层次融合与可审计检索</text>
+  <rect x="777" y="108" width="164" height="72" rx="5" fill="#ffffff" stroke="#a6decb"/>
+  <text x="859" y="126" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#137557">父子融合打分 (式 3-14)</text>
+  <text x="859" y="144" text-anchor="middle" font-size="10" fill="#222">S(p,q) = α S_p + (1-α) max S_c</text>
+  <text x="859" y="162" text-anchor="middle" font-size="9.5" fill="#666">精准行子块触发连贯父块上下文</text>
+  <rect x="777" y="190" width="164" height="70" rx="5" fill="#ffffff" stroke="#a6decb"/>
+  <text x="859" y="208" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#137557">可审计证据包输出</text>
+  <text x="859" y="225" text-anchor="middle" font-size="10" fill="#333">返回父块文本 + 触发子块</text>
+  <text x="859" y="242" text-anchor="middle" font-size="9.5" fill="#666">+ 源单元谱系列表 (Unit IDs)</text>
+</svg>

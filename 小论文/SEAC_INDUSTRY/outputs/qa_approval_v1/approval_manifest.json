@@ -1,0 +1,115 @@
+{
+  "protocol_version": "industrial-seac-qa-approval-v1.0",
+  "evidence_model": "multi_evidence_any_hit",
+  "approval_decisions_included": false,
+  "privacy_decisions_included": false,
+  "projects": {
+    "P02": {
+      "candidate_count": 32,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 10,
+        "CANDIDATE_MULTI_EVIDENCE": 7,
+        "CANDIDATE_REWRITE": 15
+      },
+      "multi_evidence_records": 6,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P03": {
+      "candidate_count": 33,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 10,
+        "CANDIDATE_REWRITE": 23
+      },
+      "multi_evidence_records": 8,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P04": {
+      "candidate_count": 28,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 12,
+        "CANDIDATE_MULTI_EVIDENCE": 1,
+        "CANDIDATE_REWRITE": 15
+      },
+      "multi_evidence_records": 9,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P05": {
+      "candidate_count": 25,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 14,
+        "CANDIDATE_REWRITE": 11
+      },
+      "multi_evidence_records": 5,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P06": {
+      "candidate_count": 22,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 8,
+        "CANDIDATE_REWRITE": 14
+      },
+      "multi_evidence_records": 2,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P07": {
+      "candidate_count": 23,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 6,
+        "CANDIDATE_REWRITE": 7,
+        "CANDIDATE_SUPPLEMENT": 10
+      },
+      "multi_evidence_records": 3,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P08": {
+      "candidate_count": 24,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 2,
+        "CANDIDATE_REWRITE": 12,
+        "CANDIDATE_SUPPLEMENT": 10
+      },
+      "multi_evidence_records": 4,
+      "needs_role_check": 1,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P09": {
+      "candidate_count": 20,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 2,
+        "CANDIDATE_REWRITE": 8,
+        "CANDIDATE_SUPPLEMENT": 10
+      },
+      "multi_evidence_records": 2,
+      "needs_role_check": 2,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    },
+    "P10": {
+      "candidate_count": 18,
+      "states": {
+        "APPROVED_SINGLE_ROUND": 5,
+        "CANDIDATE_MULTI_EVIDENCE": 4,
+        "CANDIDATE_REWRITE": 9
+      },
+      "multi_evidence_records": 4,
+      "needs_role_check": 0,
+      "minimum_qa_count": 15,
+      "meets_minimum": true
+    }
+  },
+  "workbook_sha256": "deb8f4999a29bcdb759439ae2ef49f77c94343c5b9686ed172c8d2808f349743",
+  "candidate_total": 225
+}

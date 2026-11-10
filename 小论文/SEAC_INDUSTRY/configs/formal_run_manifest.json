@@ -1,0 +1,118 @@
+{
+  "protocol_version": "industrial-seac-formal-run-v1.1",
+  "methods": [
+    "fixed",
+    "recursive",
+    "structure",
+    "semantic",
+    "langchain_recursive",
+    "llamaindex_sentence",
+    "proposed",
+    "proposed_v6",
+    "seac_no_semantic",
+    "seac_no_density",
+    "seac_no_continuity",
+    "seac_no_adaptive_threshold",
+    "seac_no_heading_context",
+    "seac_no_table_children",
+    "seac_no_fusion"
+  ],
+  "encoder": "bge-m3",
+  "evidence_mode": "unit",
+  "projects": [
+    {
+      "project_id": "P01",
+      "split": "development",
+      "corpus": "workbench/P01/corpus.json",
+      "breakpoints": "workbench/P01/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P01/qa_approved.json",
+      "expected_boundary_count": 4783,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P02",
+      "split": "development",
+      "corpus": "workbench/P02/corpus.json",
+      "breakpoints": "workbench/P02/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P02/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P03",
+      "split": "validation",
+      "corpus": "workbench/P03/corpus.json",
+      "breakpoints": "workbench/P03/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P03/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P04",
+      "split": "locked_test",
+      "corpus": "workbench/P04/corpus.json",
+      "breakpoints": "workbench/P04/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P04/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P05",
+      "split": "locked_test",
+      "corpus": "workbench/P05/corpus.json",
+      "breakpoints": "workbench/P05/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P05/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P06",
+      "split": "locked_test",
+      "corpus": "workbench/P06/corpus.json",
+      "breakpoints": "workbench/P06/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P06/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P07",
+      "split": "locked_test",
+      "corpus": "workbench/P07/corpus.json",
+      "breakpoints": "workbench/P07/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P07/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P08",
+      "split": "locked_test",
+      "corpus": "workbench/P08/corpus.json",
+      "breakpoints": "workbench/P08/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P08/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15,
+      "boundary_withheld": true,
+      "boundary_withheld_reason": "human-LLM kappa 0.650 is below the 0.70 threshold; the residual disagreement is cover-page furniture, which §4.1 does not settle. Boundary metrics omit P08; its retrieval and QA metrics are unaffected."
+    },
+    {
+      "project_id": "P09",
+      "split": "locked_test",
+      "corpus": "workbench/P09/corpus.json",
+      "breakpoints": "workbench/P09/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P09/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15
+    },
+    {
+      "project_id": "P10",
+      "split": "locked_test",
+      "corpus": "workbench/P10/corpus.json",
+      "breakpoints": "workbench/P10/candidate_breakpoints_adjudicated.json",
+      "qa": "workbench/P10/qa_approved.json",
+      "expected_boundary_count": 300,
+      "minimum_qa_count": 15,
+      "qa_withheld": true,
+      "qa_withheld_reason": "11 of 18 candidates survived human approval, below the 15-question minimum. The seven rejections are one generator defect: the question named a document section instead of asking the fact, which §6.1 forbids. The 11 approved questions are individually valid and kept on disk, but retrieval metrics omit P10; its boundary metrics are unaffected."
+    }
+  ]
+}

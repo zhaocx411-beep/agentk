@@ -1,0 +1,46 @@
+{
+  "proposed": {
+    "chunk_count": 2547,
+    "mean_chunk_tokens": 234.61248527679624,
+    "min_chunk_tokens": 2,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 20,
+      "fp": 4,
+      "fn": 0,
+      "tn": 26,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091
+    },
+    "retrieval": {
+      "mrr": 0.18209170672520078,
+      "hit_rate@1": 0.08333333333333333,
+      "hit_rate@3": 0.16666666666666666,
+      "hit_rate@5": 0.3055555555555556
+    }
+  },
+  "proposed_v6": {
+    "chunk_count": 58312,
+    "mean_chunk_tokens": 89.76912127863905,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "parent_chunk_count": 2547,
+    "retrieval_chunk_count": 55765,
+    "boundary": {
+      "tp": 20,
+      "fp": 4,
+      "fn": 0,
+      "tn": 26,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091
+    },
+    "retrieval": {
+      "mrr": 0.40893221994800394,
+      "hit_rate@1": 0.25,
+      "hit_rate@3": 0.5555555555555556,
+      "hit_rate@5": 0.6111111111111112
+    }
+  }
+}

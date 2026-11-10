@@ -1,0 +1,33 @@
+{"id": "P06-QA001", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "同一时间行在“会议纪要总和-20250414”B0006逐字重复，证据无法唯一对齐；题干“0415”还只存在于文件名且答案即该日期。"}
+{"id": "P06-QA002", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "题干“本次”未说明是哪场会议，且该时间行在会议纪要总和B0010逐字重复，题目不成立且证据不唯一。"}
+{"id": "P06-QA003", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该时间行在会议纪要总和B0014逐字重复，证据无法唯一对齐；题干“0417”来自文件名且答案即该日期。"}
+{"id": "P06-QA004", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该时间行在会议纪要总和B0018逐字重复，证据无法唯一对齐；题干“0418”来自文件名且答案即该日期。"}
+{"id": "P06-QA005", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该时间行在会议纪要总和B0022逐字重复，证据无法唯一对齐；题干“0419”来自文件名且答案即该日期。"}
+{"id": "P06-QA006", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该时间行在会议纪要总和B0026逐字重复，证据无法唯一对齐；题干“0420”来自文件名且答案即该日期。"}
+{"id": "P06-QA007", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP丢失POST，且本文档8条同模板题答案全部相同、无区分度，需补全答案。"}
+{"id": "P06-QA008", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖决定性的POST方法，需补全答案。"}
+{"id": "P06-QA009", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， GET方法”，答案只写HTTP，未覆盖GET，需补全答案。"}
+{"id": "P06-QA010", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。"}
+{"id": "P06-QA011", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL"], "note": "原文为“HTTP， POST方法”，答案只写HTTP需补全；该接口小节示例中含 http://10.10.10.1 内网地址，建议隐私复核。"}
+{"id": "P06-QA012", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。"}
+{"id": "P06-QA013", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP，未覆盖POST，需补全答案。"}
+{"id": "P06-QA014", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“HTTP， POST方法”，答案只写HTTP；与QA013问法答案高度近重复，需补全答案并精简同模板题。"}
+{"id": "P06-QA015", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "personList行在卫生积分增加接口请求表内唯一，原文取值范围为空，答案只报类型与必填属正确归纳。"}
+{"id": "P06-QA016", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干中的“+personNo”是表格层级符号而非真实参数名，问法不自然，应改写为“personList数组内的personNo”；证据行本身唯一可用。"}
+{"id": "P06-QA017", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "code行在该接口返回参数表内唯一（他处同名行属其他接口小节，题干已限定接口），答案由该行直接支持。"}
+{"id": "P06-QA018", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "message行在该接口返回表内唯一，类型、取值范围（最大100个字符）、必填三项均由该行直接给出。"}
+{"id": "P06-QA019", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行“表的描述”直接给出“组织架构信息表”，表名唯一；目录页有同名描述，但明细表定义行是最小充分证据。"}
+{"id": "P06-QA020", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“员工信息表”，ISM_PERSON_INFO小节唯一，与ISM_PERSON_INFO_RECORD可区分。"}
+{"id": "P06-QA021", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“员工信息变动表”，表名与小节唯一。"}
+{"id": "P06-QA022", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“员工家属信息表”，表名与小节唯一，答案唯一。"}
+{"id": "P06-QA023", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“员工家属关联关系表”，表名与小节唯一。"}
+{"id": "P06-QA024", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“微信支付订单”，表名与小节唯一，与退款表可区分。"}
+{"id": "P06-QA025", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该文档有80处同名“画面设计”小节，题干未限定“房间类型管理”，且该段文字在B0488逐字重复，证据无法唯一对齐。"}
+{"id": "P06-QA026", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案是后勤业务现状痛点陈述，与“实现或处理过程”题型不符；同段末句“亟需通过建设综合服务一体化管理平台…”同样可作答，需改写问题与答案。"}
+{"id": "P06-QA027", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段并列描述酒店、接待、体育馆、宿舍等8个模块，题干未限定“宿舍管理”，8条分句均可作答，需在问题中指明模块。"}
+{"id": "P06-QA028", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "与QA025同一父块、同一span，仅题型不同，属近重复；且“画面设计”同名小节达80处、该段文字在B0488重复，证据不唯一。"}
+{"id": "P06-QA029", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "该文档有80处同名“逻辑处理”小节，题干未限定“入住申请管理”，无法定位证据；答案含外部系统“晋刚E家”接口名，建议隐私复核。"}
+{"id": "P06-QA030", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "同为80处同名“逻辑处理”小节，题干未限定“退宿申请管理”；证据句本身唯一，收窄题干后可用。"}
+{"id": "P06-QA031", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该文档有10处同名“功能描述”小节，题干未限定“体育馆管理模块”，无法唯一定位证据。"}
+{"id": "P06-QA032", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表定义行直接给出“微信支付退款”，表名与小节唯一，答案唯一。"}
+{"id": "P06-QA033", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "金标准指向总和文档，但同一时间行在“需求调研会议纪要-20250414”B0002逐字重复，证据无法唯一对齐；题干“0414”亦来自文件名且答案即该日期。"}

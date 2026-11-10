@@ -1,0 +1,227 @@
+[P02-QA001] earlier=NEEDS_REWRITE type=Meeting fact
+  Q: 0708需求调研会议的时间是什么？
+  A: 2025.7.8
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室
+  earlier_reason: 题干用文件名日期“0708”指代会议且答案正是该日期，属自问自答，需改写为文档内可自足的问法，证据行本身可用。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-需求调研会议纪要0708.docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0708:B0002#R002
+[P02-QA002] earlier=REJECTED type=Meeting fact
+  Q: 0717需求调研会议的时间是什么？
+  A: 2025.7.8
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  earlier_reason: 题干“0717”只存在于文件名，纪要内记录时间为2025.7.8，且该时间行与0708纪要除地点外完全相同，答案与题面矛盾且证据无法唯一对齐。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-需求调研会议纪要0717.docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0717:B0002#R002
+[P02-QA003] earlier=NEEDS_REWRITE type=Meeting fact
+  Q: 0722需求调研会议的时间是什么？
+  A: 2025.7.22
+  span: 时间 | 2025.7.22 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  earlier_reason: 答案2025.7.22即题干“0722”所指日期，属自问自答，需改写题干后才可用。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-需求调研会议纪要0722 .docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0722 :B0002#R002
+[P02-QA004] earlier=NEEDS_REWRITE type=Meeting fact
+  Q: 0903需求调研会议的时间是什么？
+  A: 2025.9.3
+  span: 时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  earlier_reason: 答案2025.9.3即题干“0903”所指日期，属自问自答，需改写题干后才可用。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-需求调研会议纪要0903.docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0903:B0002#R002
+[P02-QA006] earlier=REJECTED type=Meeting fact
+  Q: 0717需求调研会议的地点在哪里？
+  A: 管控中心二楼会议室F
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  earlier_reason: 题干“0717”仅来自文件名（文内时间为2025.7.8），且“管控中心二楼会议室F”在0722、0903两份纪要中同样出现，证据无法唯一对齐。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-需求调研会议纪要0717.docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0717:B0002#R002
+[P02-QA007] earlier=NEEDS_REWRITE type=API
+  Q: 创建E家审批接口使用什么请求方式？
+  A: POST
+  span: 1）请求方式：POST方法
+  earlier_reason: 答案POST由证据段直接支持，但“1）请求方式：POST方法”在该文档同一标题路径下重复出现5次，需把证据扩展到含接口名的单元才能唯一定位。
+  equivalence: EQUIVALENT_SET occurrences=5 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0018
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0050
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0145
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0210
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0229
+[P02-QA009] earlier=REJECTED type=API
+  Q: 相关流程处理日志查询接口使用什么请求方式？
+  A: POST
+  span: 1）请求方式：POST方法
+  earlier_reason: 章节被错标为“创建E家审批接口”（实际属于相关流程处理日志查询接口），且证据文本“1）请求方式：POST方法”在同一标题路径下出现5次，最小证据无法唯一对齐。
+  equivalence: EQUIVALENT_SET occurrences=5 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0018
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0050
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0145
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0210
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0229
+[P02-QA010] earlier=NEEDS_REWRITE type=API
+  Q: 相关流程处理日志查询接口的请求路径是什么？
+  A: https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  span: https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  earlier_reason: URL证据唯一可用，但章节字段错标为“创建E家审批接口”，需更正为“相关流程处理日志查询接口”。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0052
+[P02-QA011] earlier=REJECTED type=API
+  Q: 晋钢E家消息通知接口使用什么请求方式？
+  A: POST
+  span: 1）请求方式：POST方法
+  earlier_reason: 章节被错标为“创建E家审批接口”（实际属于晋钢E家消息通知接口），且证据文本在同一标题路径下重复5次，无法唯一对齐。
+  equivalence: EQUIVALENT_SET occurrences=5 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0018
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0050
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0145
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0210
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0229
+[P02-QA012] earlier=NEEDS_REWRITE type=API
+  Q: 晋钢E家消息通知接口的请求路径是什么？
+  A: https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}
+  span: https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}
+  earlier_reason: URL证据唯一可用，但章节字段需更正为“晋钢E家消息通知接口”。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0147
+[P02-QA013] earlier=NEEDS_REWRITE type=API
+  Q: 晋钢IOT点位数据获取接口使用什么请求方式？
+  A: GET
+  span: 1）请求方式：GET方法
+  earlier_reason: “1）请求方式：GET方法”在文档中唯一，可支持答案GET，但章节字段需由“创建E家审批接口”更正为“晋钢IOT点位数据获取接口”。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0183
+[P02-QA014] earlier=NEEDS_REWRITE type=API
+  Q: 晋钢IOT点位数据获取接口的请求路径是什么？
+  A: http://172.17.12.130:518/api/webapidic
+  span: http://172.17.12.130:518/api/webapidic
+  earlier_reason: 请求路径由证据段直接支持，但章节字段需更正为“晋钢IOT点位数据获取接口”，且证据暴露内网IP与端口。
+  equivalence: EQUIVALENT_SET occurrences=2 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0185
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0190
+[P02-QA017] earlier=NEEDS_REWRITE type=API parameter
+  Q: 创建E家审批接口中参数 errorCode 的类型、取值范围和必填要求是什么？
+  A: 类型为Int，取值范围为200是成功，其余是失败，必填
+  span: errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败
+  earlier_reason: 答案可由该行归纳，但同一参数行在日志查询接口返回表中完全重复且标题路径相同，需限定接口或扩展证据才能唯一对齐。
+  equivalence: EQUIVALENT_SET occurrences=2 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R002
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R002
+[P02-QA018] earlier=NEEDS_REWRITE type=API parameter
+  Q: 创建E家审批接口中参数 success 的类型、取值范围和必填要求是什么？
+  A: 类型为String，取值范围为最大100个字节，必填
+  span: success | String | 最大100个字节 | 是 | 返回提示说明
+  earlier_reason: 该success参数行在文档中重复出现3次且标题路径相同，检索无法区分，需扩展证据或改写题干。
+  equivalence: EQUIVALENT_SET occurrences=3 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R003
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R003
+    - 晋钢安全预警平台-详细设计规格接口文档V1.0.docx :: 1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口 :: 晋钢安全预警平台-详细设计规格接口文档V1.0:B0172#R003
+[P02-QA025] earlier=REJECTED type=Constraint
+  Q: 逻辑处理中规定了什么约束？
+  A: 默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息
+  span: 默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息
+  earlier_reason: 题干“逻辑处理中”未指明模块，文档内同名章节众多，且完全相同的语句在B0766、B0768重复出现，证据不唯一。
+  equivalence: EQUIVALENT_SET occurrences=3 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 作业管理模块 > 危险作业图表统计 > 逻辑处理 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0764
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 作业管理模块 > 危险作业图表统计 > 逻辑处理 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0766
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 作业管理模块 > 危险作业图表统计 > 逻辑处理 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0768
+[P02-QA026] earlier=NEEDS_REWRITE type=Constraint
+  Q: 5.1.3.2.隐患排查治理管理员端中规定了什么约束？
+  A: 增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有
+  span: 增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有
+  earlier_reason: 答案保留了原文“增加：”前缀且该小节含多条要求，需改写为针对检查内容定制管理的具体问题。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: 5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.3.隐患排查治理 > 5.1.3.2.隐患排查治理管理员端 :: 调研报告 （晋钢安全）:B0068
+[P02-QA027] earlier=REJECTED type=Constraint
+  Q: 功能描述中规定了什么约束？
+  A: 法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位
+  span: 法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位
+  earlier_reason: 题干“功能描述中”无法定位章节，且同一语句还出现在0722会议纪要的表格行中，来源文档与证据均不唯一。
+  equivalence: EQUIVALENT_SET occurrences=2 cross_document=True
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 法律法规 > 功能描述 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B2197
+    - 晋钢安全预警平台-需求调研会议纪要0722 .docx :: (no heading) :: 晋钢安全预警平台-需求调研会议纪要0722 :B0002#R006
+[P02-QA028] earlier=NEEDS_REWRITE type=Feature
+  Q: Research Report支持或提供什么能力？
+  A: 业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验
+  span: 业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验
+  earlier_reason: 题干用英文文档类型“Research Report”指代来源且问法模板化，该段多句同样可作答，需改写为具体事实问题。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: (no heading) :: 调研报告 （晋钢安全）:B0010
+[P02-QA029] earlier=NEEDS_REWRITE type=Feature
+  Q: 项目背景支持或提供什么能力？
+  A: 通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升
+  span: 通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升
+  earlier_reason: “项目背景支持或提供什么能力”属模板问法，与QA033指向同一节但答案不同，需改写为指向唯一事实的问题。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 概述 > 项目背景 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0249
+[P02-QA030] earlier=NEEDS_REWRITE type=Feature
+  Q: 5.1.双重预防体系支持或提供什么能力？
+  A: 系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能
+  span: 系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能
+  earlier_reason: 题干为章节号加模板问法，该节多处能力描述同样可作答，需收敛到PC端与移动端具体功能。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: 5.1.双重预防体系 :: 调研报告 （晋钢安全）:B0017
+[P02-QA031] earlier=NEEDS_REWRITE type=Feature
+  Q: 画面设计支持或提供什么能力？
+  A: 功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作
+  span: 功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作
+  earlier_reason: 题干仅写“画面设计”，文档中同名章节大量存在，需限定到设备设施类型子功能后才自足。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 安全风险监测预警模块 > 设备设施类型子功能 > 画面设计 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0279
+[P02-QA032] earlier=NEEDS_REWRITE type=Feature
+  Q: 5.1.2.1.安全风险分析单元管理支持或提供什么能力？
+  A: 2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控
+  span: 2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控
+  earlier_reason: 答案保留列表编号“2）”，且同段“可与电子地图服务联动”等句同样满足该问法，需改写收敛。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: 5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控 > 5.1.2.1.安全风险分析单元管理 :: 调研报告 （晋钢安全）:B0036
+[P02-QA033] earlier=NEEDS_REWRITE type=Process
+  Q: 项目背景描述了什么实现或处理过程？
+  A: 通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产
+  span: 通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产
+  earlier_reason: 与QA029同为“项目背景”节的模板式问法且答案不同，属近重复，需改写并明确各自指向的事实。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 概述 > 项目背景 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B0248
+[P02-QA034] earlier=NEEDS_REWRITE type=Process
+  Q: Research Report描述了什么实现或处理过程？
+  A: 其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生
+  span: 其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生
+  earlier_reason: 题干用“Research Report”指代来源且问法模板化，需改写为针对监测预警闭环必要性的具体问题。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: (no heading) :: 调研报告 （晋钢安全）:B0008
+[P02-QA035] earlier=NEEDS_REWRITE type=Numeric constraint
+  Q: 功能描述中描述了什么数量、时长或比例要求？
+  A: 由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库
+  span: 由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库
+  earlier_reason: 72小时的时限事实明确，但题干“功能描述中”无法定位章节，需限定到事故事件管理模块。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 晋钢安全预警平台-详细设计规格 V1.1--1020.docx :: 系统设计 > 事故事件管理 > 功能描述 :: 晋钢安全预警平台-详细设计规格 V1.1--1020:B3377
+[P02-QA036] earlier=NEEDS_REWRITE type=Numeric constraint
+  Q: 5.1.2.风险分级管控中描述了什么数量、时长或比例要求？
+  A: 由风险信息管理和安全风险一张图 2 个功能点组成
+  span: 由风险信息管理和安全风险一张图 2 个功能点组成
+  earlier_reason: 题干为模板式问法，可改写为“风险分级管控由哪几个功能点组成”，证据句唯一可用。
+  equivalence: UNIQUE occurrences=1 cross_document=False
+  locations:
+    - 调研报告 （晋钢安全）.docx :: 5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控 :: 调研报告 （晋钢安全）:B0032

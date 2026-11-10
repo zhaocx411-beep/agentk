@@ -1,0 +1,46 @@
+{
+  "proposed": {
+    "chunk_count": 1754,
+    "mean_chunk_tokens": 239.00627137970355,
+    "min_chunk_tokens": 2,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 25,
+      "fp": 5,
+      "fn": 0,
+      "tn": 34,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091
+    },
+    "retrieval": {
+      "mrr": 0.6217656664938704,
+      "hit_rate@1": 0.5,
+      "hit_rate@3": 0.75,
+      "hit_rate@5": 0.8125
+    }
+  },
+  "proposed_v6": {
+    "chunk_count": 11664,
+    "mean_chunk_tokens": 73.09370713305898,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "parent_chunk_count": 1754,
+    "retrieval_chunk_count": 9910,
+    "boundary": {
+      "tp": 25,
+      "fp": 5,
+      "fn": 0,
+      "tn": 34,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091
+    },
+    "retrieval": {
+      "mrr": 0.7210754664769135,
+      "hit_rate@1": 0.59375,
+      "hit_rate@3": 0.78125,
+      "hit_rate@5": 0.9375
+    }
+  }
+}

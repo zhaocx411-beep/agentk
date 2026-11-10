@@ -1,0 +1,2 @@
+﻿method,chunk_count,mean_chunk_tokens,max_chunk_tokens,boundary_f1,mrr,hit_rate@1,hit_rate@3,hit_rate@5
+proposed,1979,211.83274381000504,512,0.8771929824561403,0.582657298116615,0.4375,0.65625,0.75

@@ -1,0 +1,12 @@
+{
+  "protocol_version": "industrial-seac-qa-finalization-v1.0",
+  "input_count": 27,
+  "approval_status_counts": {
+    "APPROVED": 24,
+    "REJECTED": 3
+  },
+  "approved_count": 24,
+  "issue_count": 0,
+  "issues": [],
+  "formal_ready": true
+}

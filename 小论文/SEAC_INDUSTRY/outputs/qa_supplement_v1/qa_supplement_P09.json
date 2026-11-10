@@ -1,0 +1,479 @@
+[
+  {
+    "question": "系统定义规范中，“五即化管理平台”的系统代码是什么，它属于哪一类系统？",
+    "header_reliability": "DUPLICATE_HEADER_LABELS",
+    "header_labels": [
+      "系统归属",
+      "系统名称",
+      "系统代码",
+      "系统归属",
+      "备注"
+    ],
+    "needs_role_check": true,
+    "reference_answer": "分别为YD、烟台华新不锈钢现有系统",
+    "question_type": "API",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "source_section": "设计概述 > 系统定义规范",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045#R026",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045#R026"
+    ],
+    "gold_evidence_span": "烟台华新不锈钢现有系统 | 五即化管理平台 | YD | 资讯部 | 环保管理",
+    "gold_evidence_spans": [
+      "烟台华新不锈钢现有系统 | 五即化管理平台 | YD | 资讯部 | 环保管理"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0045#R026"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS001",
+    "qa_key": "P09-QS001"
+  },
+  {
+    "question": "环保管理系统向人资系统抛送环保绩效考评结果数据的接口采用什么通讯方式，由甲方还是乙方提供？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "发起方",
+      "接收方",
+      "接口协议（可选）",
+      "实现方式（可选）",
+      "接口业务说明",
+      "备注"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为HTTP/HTTPS、乙供",
+    "question_type": "API",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "source_section": "系统功能设计 > 涉及接口",
+    "gold_evidence_id": "模块8-环保管理-技术协议-1218:B0254",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0254"
+    ],
+    "gold_evidence_unit_id": "模块8-环保管理-技术协议-1218:B0254#R004",
+    "gold_evidence_unit_ids": [
+      "模块8-环保管理-技术协议-1218:B0254#R004"
+    ],
+    "gold_evidence_span": "3 | 环保管理系统 | 人资系统 | HTTP/HTTPS | 环保管理系统向人资系统抛送环保绩效考评结果数据 | 环保绩效考评数据 | 乙供",
+    "gold_evidence_spans": [
+      "3 | 环保管理系统 | 人资系统 | HTTP/HTTPS | 环保管理系统向人资系统抛送环保绩效考评结果数据 | 环保绩效考评数据 | 乙供"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "模块8-环保管理-技术协议-1218:B0254#R004"
+      ],
+      "documents": [
+        "模块8-环保管理-技术协议-1218.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS002",
+    "qa_key": "P09-QS002"
+  },
+  {
+    "question": "SP_EP_B_01（获取危固废运输车辆信息）接口中，“出厂门禁审批通过时间”字段的英文字段名、类型和格式要求分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "中文字段",
+      "英文字段",
+      "类型",
+      "描述",
+      "备注"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为accessApprovalTime、String、格式yyyy-MM-dd HH:mm:ss",
+    "question_type": "API parameter",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "source_section": "通讯接口 > 危固废管理 > 详细定义 > SP_EP_B_01（获取危固废运输车辆信息）",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0071",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0078"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066#R007",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066#R007",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0071#R003",
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0078#R003"
+    ],
+    "gold_evidence_span": "出厂门禁审批通过时间 | accessApprovalTime | String | 格式yyyy-MM-dd HH:mm:ss",
+    "gold_evidence_spans": [
+      "出厂门禁审批通过时间 | accessApprovalTime | String | 格式yyyy-MM-dd HH:mm:ss"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "EQUIVALENT_SET",
+      "occurrence_count": 3,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0066#R007",
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0071#R003",
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0078#R003"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS003",
+    "qa_key": "P09-QS003"
+  },
+  {
+    "question": "接口命名规范中，接口代码的接口标识符由几位字符组成，A、B、C 三个取值分别表示什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "组成部分",
+      "规范说明",
+      "示例"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "必选项，一位英文大写字符，A-金恒内部系统间，B-金恒与异质系统间，C-异质系统之间",
+    "question_type": "Constraint",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+    "source_section": "设计概述 > 接口命名规范",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042#R004",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042#R004"
+    ],
+    "gold_evidence_span": "接口标识符 | 必选项，一位英文大写字符，A-金恒内部系统间，B-金恒与异质系统间，C-异质系统之间 | PM_MW_A_01、PM_MW_A_02",
+    "gold_evidence_spans": [
+      "接口标识符 | 必选项，一位英文大写字符，A-金恒内部系统间，B-金恒与异质系统间，C-异质系统之间 | PM_MW_A_01、PM_MW_A_02"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计:B0042#R004"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS004",
+    "qa_key": "P09-QS004"
+  },
+  {
+    "question": "危固废管理数据字典中，数据字典代码 hs_measure_unit 的枚举定义包含哪些取值？",
+    "header_reliability": "DUPLICATE_HEADER_LABELS",
+    "header_labels": [
+      "（一）危固废管理",
+      "（一）危固废管理",
+      "（一）危固废管理",
+      "（一）危固废管理",
+      "（一）危固废管理"
+    ],
+    "needs_role_check": true,
+    "reference_answer": "1-t；2-kg；3-m³；4-L；5-m²",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "source_section": "数据库设计 > 危固废管理 > 数据字典",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047#R011",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047#R011"
+    ],
+    "gold_evidence_span": "hs_measure_unit | 危固废计量单位 | 1-t；2-kg；3-m³；4-L；5-m²",
+    "gold_evidence_spans": [
+      "hs_measure_unit | 危固废计量单位 | 1-t；2-kg；3-m³；4-L；5-m²"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0047#R011"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS005",
+    "qa_key": "P09-QS005"
+  },
+  {
+    "question": "ep_hazardous_waste_information（危废基础信息）表中 precautions 字段的中文名、类型、长度以及是否允许为空分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "字段英文名",
+      "字段中文名",
+      "主/外键",
+      "是否索引",
+      "类型",
+      "长度",
+      "空否",
+      "缺省",
+      "备注"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为注意事项、varchar(80)、80，不可空",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+    "source_section": "数据库设计 > 危固废管理 > DB定义 > ep_hazardous_waste_information（危废基础信息）",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050#R013",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050#R013"
+    ],
+    "gold_evidence_span": "precautions | 注意事项 |  |  | varchar(80) | 80 | N",
+    "gold_evidence_spans": [
+      "precautions | 注意事项 |  |  | varchar(80) | 80 | N"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计:B0050#R013"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS006",
+    "qa_key": "P09-QS006"
+  },
+  {
+    "question": "项目验收标准中，系统运行稳定性的验收方式和指标要求分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "技术指标名称",
+      "现有值",
+      "检测点",
+      "检测点目标值",
+      "模型"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为系统试运行2个月、MTBF≥720小时",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "source_section": "项目验收 > 验收标准",
+    "gold_evidence_id": "模块8-环保管理-技术协议-1218:B0326",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0326"
+    ],
+    "gold_evidence_unit_id": "模块8-环保管理-技术协议-1218:B0326#R002",
+    "gold_evidence_unit_ids": [
+      "模块8-环保管理-技术协议-1218:B0326#R002"
+    ],
+    "gold_evidence_span": "1 | 系统运行稳定性 | / | 系统试运行2个月 | MTBF≥720小时 | /",
+    "gold_evidence_spans": [
+      "1 | 系统运行稳定性 | / | 系统试运行2个月 | MTBF≥720小时 | /"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "模块8-环保管理-技术协议-1218:B0326#R002"
+      ],
+      "documents": [
+        "模块8-环保管理-技术协议-1218.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS007",
+    "qa_key": "P09-QS007"
+  },
+  {
+    "question": "项目验收标准中，系统通用性能指标对画面切换时间、一般查询界面、复杂业务查询和一般报表查询的响应时间要求分别是多少？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "技术指标名称",
+      "现有值",
+      "检测点",
+      "检测点目标值",
+      "模型"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "画面切换时间：≤2s；一般查询界面：≤2s；复杂业务查询：≤5s；一般报表查询：≤3s",
+    "question_type": "Numeric constraint",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "source_section": "项目验收 > 验收标准",
+    "gold_evidence_id": "模块8-环保管理-技术协议-1218:B0326",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0326"
+    ],
+    "gold_evidence_unit_id": "模块8-环保管理-技术协议-1218:B0326#R004",
+    "gold_evidence_unit_ids": [
+      "模块8-环保管理-技术协议-1218:B0326#R004"
+    ],
+    "gold_evidence_span": "3 | 系统通用性能指标 | / | 系统试运行2个月 | 画面切换时间：≤2s；一般查询界面：≤2s；复杂业务查询：≤5s；一般报表查询：≤3s； | /",
+    "gold_evidence_spans": [
+      "3 | 系统通用性能指标 | / | 系统试运行2个月 | 画面切换时间：≤2s；一般查询界面：≤2s；复杂业务查询：≤5s；一般报表查询：≤3s； | /"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "模块8-环保管理-技术协议-1218:B0326#R004"
+      ],
+      "documents": [
+        "模块8-环保管理-技术协议-1218.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS008",
+    "qa_key": "P09-QS008"
+  },
+  {
+    "question": "项目技术架构中的路由服务网关采用什么组件，它是基于哪些技术开发的？",
+    "header_reliability": "NOT_TABLE",
+    "header_labels": [],
+    "needs_role_check": false,
+    "reference_answer": "路由服务网关：SpringCloudGateway是Spring官方基于Spring5.0、SpringBoot2.0和ProjectReactor等技术开发的网关",
+    "question_type": "Feature",
+    "source_document": "模块8-环保管理-技术协议-1218.docx",
+    "source_section": "系统架构 > 技术架构图",
+    "gold_evidence_id": "模块8-环保管理-技术协议-1218:B0131",
+    "gold_evidence_ids": [
+      "模块8-环保管理-技术协议-1218:B0131"
+    ],
+    "gold_evidence_unit_id": "模块8-环保管理-技术协议-1218:B0131",
+    "gold_evidence_unit_ids": [
+      "模块8-环保管理-技术协议-1218:B0131"
+    ],
+    "gold_evidence_span": "路由服务网关：SpringCloudGateway是Spring官方基于Spring5.0、SpringBoot2.0和ProjectReactor等技术开发的网关，旨在为微服务框架提供一种简单而有效的统一的API路由管理方式，统一访问接口。",
+    "gold_evidence_spans": [
+      "路由服务网关：SpringCloudGateway是Spring官方基于Spring5.0、SpringBoot2.0和ProjectReactor等技术开发的网关，旨在为微服务框架提供一种简单而有效的统一的API路由管理方式，统一访问接口。"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "模块8-环保管理-技术协议-1218:B0131"
+      ],
+      "documents": [
+        "模块8-环保管理-技术协议-1218.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS009",
+    "qa_key": "P09-QS009"
+  },
+  {
+    "question": "环境监测预警处置业务流程中，由环保能源部经理/环保科工程师负责的“预警规则配置”环节，是针对哪些数据来配置预警规则的？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "活动编号",
+      "活动名称",
+      "岗位角色",
+      "活动说明"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "在线监测的废气、废水排口数据",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 环境监测管理 > 系统流程图 > 系统流程说明 > 环境监测预警处置业务流程",
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277"
+    ],
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277#R003",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277#R003"
+    ],
+    "gold_evidence_span": "EPEM-A-03-E-02 | 预警规则配置 | 环保能源部经理/环保科工程师 | 对在线监测的废气、废水排口数据预警规则进行配置",
+    "gold_evidence_spans": [
+      "EPEM-A-03-E-02 | 预警规则配置 | 环保能源部经理/环保科工程师 | 对在线监测的废气、废水排口数据预警规则进行配置"
+    ],
+    "project_id": "P09",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计:B0277#R003"
+      ],
+      "documents": [
+        "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS010",
+    "qa_key": "P09-QS010"
+  }
+]

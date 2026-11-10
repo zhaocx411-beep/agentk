@@ -1,0 +1,87 @@
+{
+  "protocol_version": "industrial-seac-qa-prereview-v1.0",
+  "projects": {
+    "P02": {
+      "qa_source": "workbench/P02/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "994d1249e837ea07ed2814353cbff0067430d1970931128259059587b1499e8e",
+      "record_count": 36,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 4,
+      "duplicate_question_records": 0
+    },
+    "P03": {
+      "qa_source": "workbench/P03/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "779d4c2c3b605e75a89fde42388c6e04a65c40c062a7dcfa683aa8ec9b96ab18",
+      "record_count": 36,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 5,
+      "duplicate_question_records": 0
+    },
+    "P04": {
+      "qa_source": "workbench/P04/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "da96e9db8cb5488c095c3c960a7018856237be1369ee6b0efb2499115d0b46be",
+      "record_count": 36,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 4,
+      "duplicate_question_records": 0
+    },
+    "P05": {
+      "qa_source": "workbench/P05/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "fd41255cea8bf1d0aa89548266c21041a2449fd4f9ad646dac17043139c5ca77",
+      "record_count": 36,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 5,
+      "duplicate_question_records": 0
+    },
+    "P06": {
+      "qa_source": "workbench/P06/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "aba2e775e4cdb0d3cf6ad55569b62c7024428ba846fbc3ea950e84786463b293",
+      "record_count": 33,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 4,
+      "duplicate_question_records": 0
+    },
+    "P07": {
+      "qa_source": "workbench/P07/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "c68fb24f0aa53658771311a87c9be8afc6d5ac305602d929c4398a3f12f29b7b",
+      "record_count": 26,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 3,
+      "duplicate_question_records": 0
+    },
+    "P08": {
+      "qa_source": "workbench/P08/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "b1ae967d79f7b35058e085d88d116dd89b67559796c18c630b92635060499868",
+      "record_count": 19,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 0,
+      "duplicate_question_records": 0
+    },
+    "P09": {
+      "qa_source": "workbench/P09/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "d6e3f46fd5a872808e7ac10c3d93162a63ea6c7d41535fd6d054135e502dcf2a",
+      "record_count": 16,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 0,
+      "duplicate_question_records": 0
+    },
+    "P10": {
+      "qa_source": "workbench/P10/annotation_pack/qa_draft.json",
+      "qa_source_sha256": "4f6a50cf56ca1b35d4256b5f2c8d8220df70babb078970b6ea3e477c2b87edfd",
+      "record_count": 24,
+      "unresolved_units": 0,
+      "span_not_in_unit": 0,
+      "answer_not_in_span": 0,
+      "duplicate_question_records": 0
+    }
+  },
+  "record_total": 262
+}

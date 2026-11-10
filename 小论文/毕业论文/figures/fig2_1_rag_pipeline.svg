@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="340" viewBox="0 0 980 340" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="490" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 2-1 检索增强生成 (RAG) 三阶段基本流程与双塔稠密向量检索原理图</text>
+
+  <!-- Stage 1: Offline Indexing -->
+  <rect x="20" y="52" width="305" height="265" rx="10" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.6"/>
+  <rect x="20" y="52" width="305" height="34" rx="10" fill="#2b5c8f"/>
+  <text x="172.5" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">阶段一：离线切片与向量索引 (Indexing)</text>
+
+  <rect x="40" y="100" width="265" height="44" rx="6" fill="#ffffff" stroke="#bdd0e4"/>
+  <text x="172.5" y="119" text-anchor="middle" font-size="11" font-weight="bold" fill="#222">外部工程文档集合 D = {D₁, ..., D_N}</text>
+  <text x="172.5" y="136" text-anchor="middle" font-size="9.5" fill="#555">需求规格书 · 详细设计 · 接口文档 · 数据库字典</text>
+
+  <line x1="172.5" y1="144" x2="172.5" y2="162" stroke="#2b5c8f" stroke-width="1.6"/>
+  <polygon points="172.5,166 168,159 177,159" fill="#2b5c8f"/>
+
+  <rect x="40" y="167" width="265" height="50" rx="6" fill="#fff5eb" stroke="#d95f02" stroke-width="1.4"/>
+  <text x="172.5" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#d95f02">文本切片算子 Ψ(D) → 块集合 C = {c₁, ..., c_M}</text>
+  <text x="172.5" y="205" text-anchor="middle" font-size="9.5" fill="#b33c00">决定检索粒度上限的核心瓶颈 (本文第3、4章研究重点)</text>
+
+  <line x1="172.5" y1="217" x2="172.5" y2="235" stroke="#2b5c8f" stroke-width="1.6"/>
+  <polygon points="172.5,239 168,232 177,232" fill="#2b5c8f"/>
+
+  <rect x="40" y="240" width="265" height="60" rx="6" fill="#ffffff" stroke="#bdd0e4"/>
+  <text x="172.5" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b5c8f">文档稠密编码器 E_P (BAAI/bge-m3)</text>
+  <text x="172.5" y="277" text-anchor="middle" font-size="10" fill="#333">e_c = E_P(c) ∈ R^d (L₂ 归一化) → 存入 Chroma HNSW</text>
+  <text x="172.5" y="292" text-anchor="middle" font-size="9.5" fill="#666">绑定元数据：文档名 · 标题路径 · 源单元 ID</text>
+
+  <!-- Arrow Stage 1 -> Stage 2 -->
+  <line x1="325" y1="268" x2="355" y2="268" stroke="#2b5c8f" stroke-width="2"/>
+  <polygon points="361,268 352,263 352,273" fill="#2b5c8f"/>
+
+  <!-- Stage 2: Online Retrieval -->
+  <rect x="363" y="52" width="295" height="265" rx="10" fill="#fdfaf6" stroke="#d95f02" stroke-width="1.6"/>
+  <rect x="363" y="52" width="295" height="34" rx="10" fill="#d95f02"/>
+  <text x="510.5" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">阶段二：在线相关性检索 (Retrieval)</text>
+
+  <rect x="383" y="100" width="255" height="44" rx="6" fill="#ffffff" stroke="#f0c8a8"/>
+  <text x="510.5" y="119" text-anchor="middle" font-size="11" font-weight="bold" fill="#222">智能体 / 用户查询请求 q</text>
+  <text x="510.5" y="136" text-anchor="middle" font-size="9.5" fill="#555">携带调用方角色先验 role(a) 与查询文本</text>
+
+  <line x1="510.5" y1="144" x2="510.5" y2="162" stroke="#d95f02" stroke-width="1.6"/>
+  <polygon points="510.5,166 506,159 515,159" fill="#d95f02"/>
+
+  <rect x="383" y="167" width="255" height="50" rx="6" fill="#ffffff" stroke="#f0c8a8"/>
+  <text x="510.5" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#d95f02">查询编码器 E_Q 与余弦相似度计算</text>
+  <text x="510.5" y="205" text-anchor="middle" font-size="10" fill="#333">e_q = E_Q(q),  S(c, q) = cos(e_q, e_c) = ê_q^T ê_c</text>
+
+  <line x1="510.5" y1="217" x2="510.5" y2="235" stroke="#d95f02" stroke-width="1.6"/>
+  <polygon points="510.5,239 506,232 515,232" fill="#d95f02"/>
+
+  <rect x="383" y="240" width="255" height="60" rx="6" fill="#ffffff" stroke="#f0c8a8"/>
+  <text x="510.5" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#222">Top-K 证据选择与概率分布 p_η(c | q)</text>
+  <text x="510.5" y="277" text-anchor="middle" font-size="10" fill="#333">Z_K(q) = Top-K_{c ∈ C} S(c, q)</text>
+  <text x="510.5" y="292" text-anchor="middle" font-size="9.5" fill="#666">按角色组装返回上下文与源单元出处标识</text>
+
+  <!-- Arrow Stage 2 -> Stage 3 -->
+  <line x1="658" y1="185" x2="688" y2="185" stroke="#1b9e77" stroke-width="2"/>
+  <polygon points="694,185 685,180 685,190" fill="#1b9e77"/>
+
+  <!-- Stage 3: Augmented Generation -->
+  <rect x="696" y="52" width="264" height="265" rx="10" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.6"/>
+  <rect x="696" y="52" width="264" height="34" rx="10" fill="#1b9e77"/>
+  <text x="828" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">阶段三：增强生成 (Generation)</text>
+
+  <rect x="714" y="102" width="228" height="58" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="828" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#137557">上下文提示词组装 Prompt(q, Z_K)</text>
+  <text x="828" y="140" text-anchor="middle" font-size="10" fill="#333">系统角色指令 + 检索证据块 [c_(1)...c_(K)]</text>
+  <text x="828" y="153" text-anchor="middle" font-size="9.5" fill="#666">+ 当前子任务目标</text>
+
+  <line x1="828" y1="160" x2="828" y2="180" stroke="#1b9e77" stroke-width="1.6"/>
+  <polygon points="828,184 823.5,177 832.5,177" fill="#1b9e77"/>
+
+  <rect x="714" y="185" width="228" height="55" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="828" y="205" text-anchor="middle" font-size="11" font-weight="bold" fill="#137557">大语言模型条件自回归生成 p_θ</text>
+  <text x="828" y="224" text-anchor="middle" font-size="10" fill="#333">p(y | q) = Π p_θ(y_t | q, Z_K(q), y_{&lt;t})</text>
+
+  <line x1="828" y1="240" x2="828" y2="256" stroke="#1b9e77" stroke-width="1.6"/>
+  <polygon points="828,260 823.5,253 832.5,253" fill="#1b9e77"/>
+
+  <rect x="714" y="261" width="228" height="42" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="828" y="279" text-anchor="middle" font-size="11" font-weight="bold" fill="#222">可溯源工程响应与设计文档段落</text>
+  <text x="828" y="295" text-anchor="middle" font-size="9.5" fill="#137557">抑制事实幻觉 · 附带确定性出处谱系</text>
+</svg>

@@ -1,0 +1,61 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P04",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "96fa299b17e4871c15ac2d22ff712835b105c53d13012111e587b0e5a1883285",
+  "boundary_pool_count": 8515,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 654,
+    "inside_table": 4352,
+    "noise_candidate": 42,
+    "same_section_continuity": 2611,
+    "table_transition": 856
+  },
+  "sample_strata": {
+    "heading_transition": 56,
+    "inside_table": 104,
+    "noise_candidate": 30,
+    "same_section_continuity": 73,
+    "table_transition": 37
+  },
+  "sample_documents": {
+    "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx": 32,
+    "天津钢管设备管理系统-详细设计规格书-接口文档.docx": 54,
+    "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx": 9,
+    "天津钢管设备管理系统-详细设计规格书.docx": 32,
+    "天津钢管设备管理系统-需求规格说明书.docx": 35,
+    "天津钢管设备管理系统-需求调研会议纪要20251110（下午）.docx": 10,
+    "天津钢管设备管理系统-需求调研会议纪要20251111(下午).docx": 10,
+    "天津钢管设备管理系统-需求调研会议纪要20251111（上午）.docx": 9,
+    "天津钢管设备管理系统-需求调研会议纪要20251112(上午) .docx": 9,
+    "天津钢管设备管理系统-需求调研会议纪要20251113(上午) .docx": 10,
+    "天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx": 10,
+    "天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx": 9,
+    "天津钢管设备管理系统-需求调研会议纪要20251114(下午) .docx": 10,
+    "天津钢管设备管理系统-需求调研会议纪要20251117 .docx": 9,
+    "天津钢管设备管理系统-需求调研会议纪要20251118.docx": 9,
+    "天津钢管设备管理系统-需求调研会议纪要20251120.docx": 10,
+    "天管设备二期技术要求-4.25.docx": 33
+  },
+  "qa_draft_count": 36,
+  "qa_types": {
+    "API": 8,
+    "API parameter": 4,
+    "Constraint": 6,
+    "Database": 6,
+    "Feature": 5,
+    "Meeting fact": 1,
+    "Numeric constraint": 3,
+    "Process": 3
+  },
+  "qa_unit_aligned_count": 36,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "aa2b948a83e26dc3c6d0a70b83f2c12881114fe1db85d94e26892889c82ef3fa",
+    "boundary_blind_annotator_a.json": "95c70c48c931690d41ab0ec32fba8f5698368b83aa8472e7e4fc6b2fd98fe9d1",
+    "boundary_blind_annotator_b.json": "fc874804f4b2bf0f265d89901d02f5a712f87d48bf298bcd6128e8c4f31de5ea",
+    "qa_draft.json": "da96e9db8cb5488c095c3c960a7018856237be1369ee6b0efb2499115d0b46be"
+  }
+}

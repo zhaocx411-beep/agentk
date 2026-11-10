@@ -1,0 +1,5 @@
+• SEAC chunks heterogeneous enterprise software-engineering documents.
+• Ten industrial projects provide 66,981 provenance-traceable units.
+• Locked-test unit MRR: SEAC 0.7937; best non-SEAC 0.7290.
+• SEAC uses 5.50× the retrieval vectors of the best baseline.
+• Project-clustered bootstrap and paired tests quantify uncertainty.

@@ -1,0 +1,22 @@
+{
+  "authors_zh": [
+    "[作者姓名待确认]"
+  ],
+  "authors_en": [
+    "[AUTHOR NAME TO CONFIRM]"
+  ],
+  "affiliations_zh": [
+    "1）（[单位/学院中文全称待确认]，[城市与邮编待确认]）"
+  ],
+  "affiliations_en": [
+    "1) ([Department and Institution to Confirm], [City and Postal Code to Confirm], China)"
+  ],
+  "corresponding_author_zh": "[通讯作者姓名待确认]",
+  "email": "[长期有效邮箱待确认]",
+  "phone": "[手机号码待确认]",
+  "address": "[联系地址与邮编待确认]",
+  "funding": "[基金项目及编号待确认；没有请填“无”]",
+  "author_bios": [
+    "[作者姓名待确认]，性别、出生年份、学位、职称、主要研究方向与长期有效 E-mail 待确认。"
+  ]
+}

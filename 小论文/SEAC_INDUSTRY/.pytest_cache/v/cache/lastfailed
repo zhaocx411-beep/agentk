@@ -1,0 +1,22 @@
+{
+  "tests/test_result_injection.py::ResultInjectionTests::test_mapping_covers_all_130_manuscript_placeholders": true,
+  "tests/test_result_injection.py::ResultInjectionTests::test_mapping_covers_all_143_manuscript_placeholders": true,
+  "release/anonymous_review_scaffold_v2/tests/test_adjudication.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_annotation_pack.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_calibration_workbooks.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_chunking.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_formal_analysis.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_formal_readiness.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_jss_preparation.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_manuscript_lint.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_privacy_review.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_qa_alignment.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_qa_finalization.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_result_injection.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_review_progress.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_runner_gates.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_source_conversion.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_submission_docx.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_synthetic_artifacts.py": true,
+  "release/anonymous_review_scaffold_v2/tests/test_workbook_import.py": true
+}

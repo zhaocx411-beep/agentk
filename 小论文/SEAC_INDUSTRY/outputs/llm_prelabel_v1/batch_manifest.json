@@ -1,0 +1,118 @@
+{
+  "protocol_version": "industrial-seac-llm-prelabel-v1.0",
+  "batch_size": 75,
+  "label_source": "LLM_PRELABEL",
+  "human_verification_required": true,
+  "public_release_allowed": false,
+  "projects": {
+    "P02": {
+      "source": "workbench/P02/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "77c0e1e2992a50d2fc3df5fa87ab1cca2f7c89ae0996b343e7d8a4cd0c0877ca",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P02_b01",
+        "P02_b02",
+        "P02_b03",
+        "P02_b04"
+      ]
+    },
+    "P03": {
+      "source": "workbench/P03/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "ac602fb44aad6e553a0b29c376714d9b0ebdb215b6425eae121dfc9ac4dfaa0c",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P03_b01",
+        "P03_b02",
+        "P03_b03",
+        "P03_b04"
+      ]
+    },
+    "P04": {
+      "source": "workbench/P04/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "aa2b948a83e26dc3c6d0a70b83f2c12881114fe1db85d94e26892889c82ef3fa",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P04_b01",
+        "P04_b02",
+        "P04_b03",
+        "P04_b04"
+      ]
+    },
+    "P05": {
+      "source": "workbench/P05/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "0fff9549f560a7749cba3cde60ba588ba8575173cb10c81ddb9db71f7b6c8e57",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P05_b01",
+        "P05_b02",
+        "P05_b03",
+        "P05_b04"
+      ]
+    },
+    "P06": {
+      "source": "workbench/P06/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "ff10f331d9312d3a95eb0c37b29f41c51cdb22102ff6e82231859921aa4c65b4",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P06_b01",
+        "P06_b02",
+        "P06_b03",
+        "P06_b04"
+      ]
+    },
+    "P07": {
+      "source": "workbench/P07/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "59129de258b62e09777abf0d2bd918d2171241be207e9bad191e940273fbd77b",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P07_b01",
+        "P07_b02",
+        "P07_b03",
+        "P07_b04"
+      ]
+    },
+    "P08": {
+      "source": "workbench/P08/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "fad83d9beffbad96e950cd305bd8013b05efbecafff2cceef4b9df55d61b874a",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P08_b01",
+        "P08_b02",
+        "P08_b03",
+        "P08_b04"
+      ]
+    },
+    "P09": {
+      "source": "workbench/P09/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "4b0cd649229cb5621f3850005a26eb261912fe80829b84f49b23b7c2954c072e",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P09_b01",
+        "P09_b02",
+        "P09_b03",
+        "P09_b04"
+      ]
+    },
+    "P10": {
+      "source": "workbench/P10/annotation_pack/boundary_blind_master.json",
+      "source_sha256": "588712014736f92cc80dd91dae65d05f8598e2d210556a682cc5eafbb4afd6c2",
+      "candidate_count": 300,
+      "batch_count": 4,
+      "batch_names": [
+        "P10_b01",
+        "P10_b02",
+        "P10_b03",
+        "P10_b04"
+      ]
+    }
+  },
+  "candidate_total": 2700
+}

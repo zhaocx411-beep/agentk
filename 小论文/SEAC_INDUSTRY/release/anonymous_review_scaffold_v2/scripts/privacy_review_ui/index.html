@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEAC 隐私放行复核</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="bar-left">
+        <span class="candidate-id" id="qa-id">—</span>
+        <span class="chip" id="project">—</span>
+        <span class="chip subtle" id="question-type">—</span>
+        <span class="chip flags" id="flags">—</span>
+      </div>
+      <div class="bar-right">
+        <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="counter" id="counter">—</span>
+        <button class="ghost" id="help-toggle" title="判定口径与快捷键">?</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- The verdict for this workbook turns on one question: does the flagged
+           name appear in publishable content, or only in provenance metadata? -->
+      <section class="verdict" id="verdict"></section>
+
+      <section class="alerts" id="alerts"></section>
+
+      <article class="card">
+        <div class="card-head">题干 <span class="where" id="where-question"></span></div>
+        <div class="question-text" id="question"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">参考答案 <span class="where" id="where-answer"></span></div>
+        <div class="answer-text" id="answer"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          金标准证据跨度 <span class="where" id="where-span"></span>
+          <span class="badges" id="span-badges"></span>
+        </div>
+        <div class="span-text" id="span"></div>
+      </article>
+
+      <article class="card" id="unit-card">
+        <div class="card-head">证据所在单元原文 <span class="unit-id" id="unit-id"></span></div>
+        <div class="unit-text" id="unit-text"></div>
+      </article>
+
+      <article class="card meta">
+        <div class="card-head">来源（仅留痕，不随基准发布）</div>
+        <dl class="meta-list">
+          <dt>文档</dt>
+          <dd id="source-document"></dd>
+          <dt>章节</dt>
+          <dd id="source-section"></dd>
+        </dl>
+      </article>
+
+      <article class="card notes-card" id="content-note-card" hidden>
+        <div class="card-head">内容审核留痕（已完成，不在本轮改动）</div>
+        <div class="meta-text" id="content-note"></div>
+      </article>
+
+      <section class="controls">
+        <div class="group">
+          <div class="group-head">隐私结论</div>
+          <div class="options four">
+            <button class="option clear" data-value="NO_RISK">
+              <kbd>1</kbd><span>NO_RISK</span><em>确实不含可识别信息</em>
+            </button>
+            <button class="option clear" data-value="ANONYMIZED">
+              <kbd>2</kbd><span>ANONYMIZED</span><em>已替换，备注写规则</em>
+            </button>
+            <button class="option clear" data-value="CLEARED">
+              <kbd>3</kbd><span>CLEARED</span><em>经授权放行原文</em>
+            </button>
+            <button class="option reject" data-value="REJECTED">
+              <kbd>4</kbd><span>REJECTED</span><em>连带拒绝内容</em>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="text" id="notes" placeholder="备注（ANONYMIZED 写替换规则、REJECTED 写理由，均必填）" />
+          <button class="primary" id="save">保存并跳到下一条未判 <kbd>⏎</kbd></button>
+        </div>
+        <div class="row nav">
+          <button class="ghost" id="prev"><kbd>←</kbd> 上一条</button>
+          <button class="ghost" id="next">下一条 <kbd>→</kbd></button>
+          <button class="ghost" id="jump-undecided">下一条未判 <kbd>u</kbd></button>
+          <span class="message" id="message"></span>
+        </div>
+      </section>
+
+      <section class="stats" id="stats"></section>
+    </main>
+
+    <div class="overlay" id="help" hidden>
+      <div class="sheet">
+        <h2>这一轮在判什么</h2>
+        <dl>
+          <dt>标记为什么全是 CUSTOMER_OR_VENDOR_IDENTITY</dt>
+          <dd>预筛把题干、答案、证据跨度、文档名、章节路径<strong>合在一起</strong>扫描，命中即打标。所以标记本身不说明客户名出现在哪里——这恰恰是你要判的。本视图把每处出现都标黄，并在每张卡片标题上注明该字段是否命中。</dd>
+          <dt>内容命中 vs 仅元数据命中</dt>
+          <dd>只有<strong>题干、参考答案、证据跨度</strong>属于会随基准发布的内容。文档名与章节路径只留在工作台文件里。若客户名只出现在文档名，放行不会把它带进基准。</dd>
+          <dt>四个结论怎么选</dt>
+          <dd><code>NO_RISK</code>：复核后确认不含可识别信息（例如标记只由文档名触发，而机构政策认为文件名不构成披露）。<code>CLEARED</code>：确有标记，但经授权可用于当前受控实验——这是本批最常见的结论。<code>ANONYMIZED</code>：你已把内容里的名字替换成稳定占位符，必须在备注写明替换规则。<code>REJECTED</code>：无法安全脱敏。</dd>
+          <dt>判 REJECTED 的连带后果</dt>
+          <dd>导入门禁不接受「隐私拒绝而内容仍批准」，所以选 <code>REJECTED</code> 时本工具会同时把 <code>approval_status</code> 改为 <code>REJECTED</code>，该题不进入基准。P01 共 27 题、下限 15 题，最多可拒 12 题。</dd>
+          <dt>不要就地改证据跨度</dt>
+          <dd>下游门禁要校验 <code>gold_evidence_span</code> 逐字出现在语料单元里。若为脱敏而改写跨度，<code>finalize_qa_review.py</code> 会以「片段不在单元内」拒绝该题。要脱敏就改参考答案并判 <code>ANONYMIZED</code>，或直接判 <code>CLEARED</code>／<code>REJECTED</code>。</dd>
+          <dt>高亮不等于查全</dt>
+          <dd>自动推导的标识来自语料文件名的公共前缀，只覆盖"作为甲方写进文件名"的那一个
+          主体。正文里出现的第三方企业、关联公司、个人姓名推导不出来，本视图不会标黄。
+          所以「无命中」只说明没撞上已配置的标识，不说明这一行干净——必须完整读过题干、
+          答案与证据跨度再下结论。发现新主体时用 <code>--identifier</code> 补充后重开，
+          同批其余行也会跟着标出。</dd>
+          <dt>授权边界</dt>
+          <dd>这一轮不是标注，是替机构对客户主体信息的可用性表态，须由获授权查看企业材料的人给出。内容审核早已完成，本轮不改内容判定。</dd>
+        </dl>
+        <h2>快捷键</h2>
+        <ul>
+          <li><kbd>1</kbd> NO_RISK · <kbd>2</kbd> ANONYMIZED · <kbd>3</kbd> CLEARED · <kbd>4</kbd> REJECTED</li>
+          <li><kbd>⏎</kbd> 保存并跳下一条未判 · <kbd>u</kbd> 跳到下一条未判 · <kbd>←</kbd> <kbd>→</kbd> 前后翻</li>
+          <li><kbd>n</kbd> 聚焦备注框 · <kbd>Esc</kbd> 离开备注框 · <kbd>?</kbd> 开关本页</li>
+        </ul>
+        <p class="foot">保存即原子写回同一个工作簿，只动 <code>privacy_review_status</code>、<code>privacy_review_notes</code>，以及判 <code>REJECTED</code> 时的 <code>approval_status</code>。可随时中断续填。校验规则与 <code>import_review_workbooks.py</code> 同源，能保存的行导入时不会被退回。</p>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

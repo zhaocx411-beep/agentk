@@ -1,0 +1,8 @@
+# Tested publication environment (Python 3.12)
+sentence-transformers==5.6.0
+numpy==2.3.5
+scipy==1.18.0
+python-docx==1.2.0
+openpyxl==3.1.5
+langchain-text-splitters==1.1.2
+llama-index-core==0.14.23

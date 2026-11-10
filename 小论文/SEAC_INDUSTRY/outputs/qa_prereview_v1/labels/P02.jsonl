@@ -1,0 +1,36 @@
+{"id": "P02-QA001", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干用文件名日期“0708”指代会议且答案正是该日期，属自问自答，需改写为文档内可自足的问法，证据行本身可用。"}
+{"id": "P02-QA002", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“0717”只存在于文件名，纪要内记录时间为2025.7.8，且该时间行与0708纪要除地点外完全相同，答案与题面矛盾且证据无法唯一对齐。"}
+{"id": "P02-QA003", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "答案2025.7.22即题干“0722”所指日期，属自问自答，需改写题干后才可用。"}
+{"id": "P02-QA004", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "答案2025.9.3即题干“0903”所指日期，属自问自答，需改写题干后才可用。"}
+{"id": "P02-QA005", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "地点由证据行直接给出，“智慧中心B座205会议室”仅出现在该纪要中，答案唯一且与题面日期一致。"}
+{"id": "P02-QA006", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干“0717”仅来自文件名（文内时间为2025.7.8），且“管控中心二楼会议室F”在0722、0903两份纪要中同样出现，证据无法唯一对齐。"}
+{"id": "P02-QA007", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "答案POST由证据段直接支持，但“1）请求方式：POST方法”在该文档同一标题路径下重复出现5次，需把证据扩展到含接口名的单元才能唯一定位。"}
+{"id": "P02-QA008", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL"], "note": "请求路径由证据段直接给出，该URL在语料中唯一，章节与题型均正确。"}
+{"id": "P02-QA009", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "章节被错标为“创建E家审批接口”（实际属于相关流程处理日志查询接口），且证据文本“1）请求方式：POST方法”在同一标题路径下出现5次，最小证据无法唯一对齐。"}
+{"id": "P02-QA010", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL"], "note": "URL证据唯一可用，但章节字段错标为“创建E家审批接口”，需更正为“相关流程处理日志查询接口”。"}
+{"id": "P02-QA011", "content_verdict": "REJECTED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "章节被错标为“创建E家审批接口”（实际属于晋钢E家消息通知接口），且证据文本在同一标题路径下重复5次，无法唯一对齐。"}
+{"id": "P02-QA012", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL"], "note": "URL证据唯一可用，但章节字段需更正为“晋钢E家消息通知接口”。"}
+{"id": "P02-QA013", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "“1）请求方式：GET方法”在文档中唯一，可支持答案GET，但章节字段需由“创建E家审批接口”更正为“晋钢IOT点位数据获取接口”。"}
+{"id": "P02-QA014", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL", "SECURITY_ARCHITECTURE"], "note": "请求路径由证据段直接支持，但章节字段需更正为“晋钢IOT点位数据获取接口”，且证据暴露内网IP与端口。"}
+{"id": "P02-QA015", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "类型、取值范围与必填三项均落在唯一参数行内，把“是”归纳为“必填”属合理改写，无冲突答案。"}
+{"id": "P02-QA016", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "creator行在该请求参数表中唯一，三个字段值与答案逐项对应。"}
+{"id": "P02-QA017", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案可由该行归纳，但同一参数行在日志查询接口返回表中完全重复且标题路径相同，需限定接口或扩展证据才能唯一对齐。"}
+{"id": "P02-QA018", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该success参数行在文档中重复出现3次且标题路径相同，检索无法区分，需扩展证据或改写题干。"}
+{"id": "P02-QA019", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表名与表描述在同一行内一一对应，答案“安全机构与职责表”唯一且题型、来源正确。"}
+{"id": "P02-QA020", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P02-QA021", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P02-QA022", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P02-QA023", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P02-QA024", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P02-QA025", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干“逻辑处理中”未指明模块，文档内同名章节众多，且完全相同的语句在B0766、B0768重复出现，证据不唯一。"}
+{"id": "P02-QA026", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案保留了原文“增加：”前缀且该小节含多条要求，需改写为针对检查内容定制管理的具体问题。"}
+{"id": "P02-QA027", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干“功能描述中”无法定位章节，且同一语句还出现在0722会议纪要的表格行中，来源文档与证据均不唯一。"}
+{"id": "P02-QA028", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干用英文文档类型“Research Report”指代来源且问法模板化，该段多句同样可作答，需改写为具体事实问题。"}
+{"id": "P02-QA029", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "“项目背景支持或提供什么能力”属模板问法，与QA033指向同一节但答案不同，需改写为指向唯一事实的问题。"}
+{"id": "P02-QA030", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干为章节号加模板问法，该节多处能力描述同样可作答，需收敛到PC端与移动端具体功能。"}
+{"id": "P02-QA031", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干仅写“画面设计”，文档中同名章节大量存在，需限定到设备设施类型子功能后才自足。"}
+{"id": "P02-QA032", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案保留列表编号“2）”，且同段“可与电子地图服务联动”等句同样满足该问法，需改写收敛。"}
+{"id": "P02-QA033", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "与QA029同为“项目背景”节的模板式问法且答案不同，属近重复，需改写并明确各自指向的事实。"}
+{"id": "P02-QA034", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干用“Research Report”指代来源且问法模板化，需改写为针对监测预警闭环必要性的具体问题。"}
+{"id": "P02-QA035", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "72小时的时限事实明确，但题干“功能描述中”无法定位章节，需限定到事故事件管理模块。"}
+{"id": "P02-QA036", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "题干为模板式问法，可改写为“风险分级管控由哪几个功能点组成”，证据句唯一可用。"}

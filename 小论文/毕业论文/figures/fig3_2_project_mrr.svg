@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="470" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 3-2 锁定测试集各企业工程项目 (P04–P09) 上的检索精度对比 (Unit MRR)</text>
+
+  <!-- Grid lines -->
+  <line x1="75" y1="340" x2="910" y2="340" stroke="#333" stroke-width="1.2"/>
+  <line x1="75" y1="60" x2="75" y2="340" stroke="#333" stroke-width="1.2"/>
+  <line x1="75" y1="284" x2="910" y2="284" stroke="#e0e0e0" stroke-dasharray="3,3"/>
+  <line x1="75" y1="228" x2="910" y2="228" stroke="#e0e0e0" stroke-dasharray="3,3"/>
+  <line x1="75" y1="172" x2="910" y2="172" stroke="#e0e0e0" stroke-dasharray="3,3"/>
+  <line x1="75" y1="116" x2="910" y2="116" stroke="#e0e0e0" stroke-dasharray="3,3"/>
+  <line x1="75" y1="60" x2="910" y2="60" stroke="#e0e0e0" stroke-dasharray="3,3"/>
+
+  <text x="65" y="344" text-anchor="end" font-size="11" fill="#444">0.0</text>
+  <text x="65" y="288" text-anchor="end" font-size="11" fill="#444">0.2</text>
+  <text x="65" y="232" text-anchor="end" font-size="11" fill="#444">0.4</text>
+  <text x="65" y="176" text-anchor="end" font-size="11" fill="#444">0.6</text>
+  <text x="65" y="120" text-anchor="end" font-size="11" fill="#444">0.8</text>
+  <text x="65" y="64" text-anchor="end" font-size="11" fill="#444">1.0</text>
+  <text x="24" y="200" text-anchor="middle" font-size="12" fill="#222" transform="rotate(-90 24 200)">单元级平均倒数排名 (Unit MRR)</text>
+
+  <!-- P04 (n=22): Fixed 0.4590, LlamaIndex 0.5033, Structure 0.5379, Full SEAC 0.6914 -->
+  <g transform="translate(95,0)">
+    <rect x="0" y="211.5" width="24" height="128.5" fill="#999999" rx="1.5"/>
+    <text x="12" y="207" text-anchor="middle" font-size="9" fill="#333">0.46</text>
+    <rect x="26" y="199.1" width="24" height="140.9" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="195" text-anchor="middle" font-size="9" fill="#333">0.50</text>
+    <rect x="52" y="189.4" width="24" height="150.6" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="185" text-anchor="middle" font-size="9" fill="#333">0.54</text>
+    <rect x="78" y="146.4" width="24" height="193.6" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="142" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.69</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P04 (n=22)</text>
+  </g>
+
+  <!-- P05 (n=17): Fixed 0.3810, LlamaIndex 0.6275, Structure 0.6559, Full SEAC 0.8627 -->
+  <g transform="translate(232,0)">
+    <rect x="0" y="233.3" width="24" height="106.7" fill="#999999" rx="1.5"/>
+    <text x="12" y="229" text-anchor="middle" font-size="9" fill="#333">0.38</text>
+    <rect x="26" y="164.3" width="24" height="175.7" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="160" text-anchor="middle" font-size="9" fill="#333">0.63</text>
+    <rect x="52" y="156.3" width="24" height="183.7" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="152" text-anchor="middle" font-size="9" fill="#333">0.66</text>
+    <rect x="78" y="98.4" width="24" height="241.6" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="94" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.86</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P05 (n=17)</text>
+  </g>
+
+  <!-- P06 (n=22): Fixed 0.6991, LlamaIndex 0.7206, Structure 0.7884, Full SEAC 0.6805 -->
+  <g transform="translate(369,0)">
+    <rect x="0" y="144.3" width="24" height="195.7" fill="#999999" rx="1.5"/>
+    <text x="12" y="140" text-anchor="middle" font-size="9" fill="#333">0.70</text>
+    <rect x="26" y="138.2" width="24" height="201.8" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="134" text-anchor="middle" font-size="9" fill="#333">0.72</text>
+    <rect x="52" y="119.2" width="24" height="220.8" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="115" text-anchor="middle" font-size="9" fill="#333">0.79</text>
+    <rect x="78" y="149.5" width="24" height="190.5" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="145" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.68</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P06 (n=22)</text>
+  </g>
+
+  <!-- P07 (n=23): Fixed 0.5490, LlamaIndex 0.7360, Structure 0.7884, Full SEAC 0.8080 -->
+  <g transform="translate(506,0)">
+    <rect x="0" y="186.3" width="24" height="153.7" fill="#999999" rx="1.5"/>
+    <text x="12" y="182" text-anchor="middle" font-size="9" fill="#333">0.55</text>
+    <rect x="26" y="133.9" width="24" height="206.1" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="130" text-anchor="middle" font-size="9" fill="#333">0.74</text>
+    <rect x="52" y="119.2" width="24" height="220.8" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="115" text-anchor="middle" font-size="9" fill="#333">0.79</text>
+    <rect x="78" y="113.8" width="24" height="226.2" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="109" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.81</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P07 (n=23)</text>
+  </g>
+
+  <!-- P08 (n=22): Fixed 0.4588, LlamaIndex 0.7224, Structure 0.6970, Full SEAC 0.8386 -->
+  <g transform="translate(643,0)">
+    <rect x="0" y="211.5" width="24" height="128.5" fill="#999999" rx="1.5"/>
+    <text x="12" y="207" text-anchor="middle" font-size="9" fill="#333">0.46</text>
+    <rect x="26" y="137.7" width="24" height="202.3" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="133" text-anchor="middle" font-size="9" fill="#333">0.72</text>
+    <rect x="52" y="144.8" width="24" height="195.2" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="140" text-anchor="middle" font-size="9" fill="#333">0.70</text>
+    <rect x="78" y="105.2" width="24" height="234.8" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="101" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.84</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P08 (n=22)</text>
+  </g>
+
+  <!-- P09 (n=19): Fixed 0.5153, LlamaIndex 0.8557, Structure 0.9123, Full SEAC 0.9123 -->
+  <g transform="translate(780,0)">
+    <rect x="0" y="195.7" width="24" height="144.3" fill="#999999" rx="1.5"/>
+    <text x="12" y="191" text-anchor="middle" font-size="9" fill="#333">0.52</text>
+    <rect x="26" y="100.4" width="24" height="239.6" fill="#66c2a5" rx="1.5"/>
+    <text x="38" y="96" text-anchor="middle" font-size="9" fill="#333">0.86</text>
+    <rect x="52" y="84.6" width="24" height="255.4" fill="#fc8d62" rx="1.5"/>
+    <text x="64" y="80" text-anchor="middle" font-size="9" fill="#333">0.91</text>
+    <rect x="78" y="84.6" width="24" height="255.4" fill="#2b5c8f" rx="1.5"/>
+    <text x="90" y="80" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">0.91</text>
+    <text x="51" y="362" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">P09 (n=19)</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(150, 385)">
+    <rect x="0" y="0" width="14" height="12" fill="#999999" rx="2"/>
+    <text x="20" y="10" font-size="11.5" fill="#222">固定窗口 (Fixed-512)</text>
+    <rect x="175" y="0" width="14" height="12" fill="#66c2a5" rx="2"/>
+    <text x="195" y="10" font-size="11.5" fill="#222">LlamaIndex 句子切分 (确认性基线)</text>
+    <rect x="405" y="0" width="14" height="12" fill="#fc8d62" rx="2"/>
+    <text x="425" y="10" font-size="11.5" fill="#222">纯结构切分 (Structure-only)</text>
+    <rect x="605" y="0" width="14" height="12" fill="#2b5c8f" rx="2"/>
+    <text x="625" y="10" font-size="11.5" font-weight="bold" fill="#2b5c8f">Full SEAC (本文完整方法)</text>
+  </g>
+</svg>

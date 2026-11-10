@@ -1,0 +1,456 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "天津钢管设备管理系统-需求调研会议纪要20251110（下午）.docx",
+    "rank": 7,
+    "span_rank": 7,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求调研会议纪要20251110（下午）:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(上午) .docx:C0001",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx:C0001",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251118.docx:C0001",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0001",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251111（上午）.docx:C0001"
+    ],
+    "query_latency_ms": 18.85050442069769
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "API",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-接口文档.docx",
+    "rank": 99,
+    "span_rank": 99,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0019",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0057",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0099",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0128",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0157",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0190",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0219",
+      "天津钢管设备管理系统-详细设计规格书-接口文档:B0282"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0002",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-接口文档.docx:C0001",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0020",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(上午) .docx:C0013",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0004"
+    ],
+    "query_latency_ms": 17.330316826701164
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 5,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0003#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0007",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0008",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0009",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0010",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0006"
+    ],
+    "query_latency_ms": 9.809877723455429
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0004#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0009",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0008",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0010",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0007",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0019"
+    ],
+    "query_latency_ms": 17.355245538055897
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 14,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0005#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0013",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0016",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0012",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0015",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0011"
+    ],
+    "query_latency_ms": 11.003502644598484
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 5,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0006#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0021",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0018",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0017",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0019",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0016"
+    ],
+    "query_latency_ms": 10.801037773489952
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0007#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0022",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0023",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0025",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0024",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0007"
+    ],
+    "query_latency_ms": 10.670636780560017
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Database",
+    "source_document": "天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书-数据库说明文档:B0008#R001"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0025",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0024",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0023",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0026",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0022"
+    ],
+    "query_latency_ms": 17.302796244621277
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0010"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0002",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0050",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0038",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0048",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0035"
+    ],
+    "query_latency_ms": 17.311468720436096
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "Constraint",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0438",
+      "天津钢管设备管理系统-需求规格说明书:B1181",
+      "天管设备二期技术要求-4.25:B0447"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0038",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0047",
+      "langchain_recursive:天津钢管设备管理系统-需求规格说明书.docx:C0097",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0035",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0039"
+    ],
+    "query_latency_ms": 16.72077737748623
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0171",
+      "天管设备二期技术要求-4.25:B0263"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0183",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0146",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0018",
+      "langchain_recursive:天津钢管设备管理系统-需求规格说明书.docx:C0052",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0179"
+    ],
+    "query_latency_ms": 10.083767585456371
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0391"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0036",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0029",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0030",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0035",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0037"
+    ],
+    "query_latency_ms": 17.75550376623869
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Constraint",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0523"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0048",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0050",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0047",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0038",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0002"
+    ],
+    "query_latency_ms": 17.65279844403267
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 9,
+    "span_rank": 9,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0020"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0015",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0036",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0036",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0237",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0247"
+    ],
+    "query_latency_ms": 16.795401461422443
+  },
+  {
+    "qa_id": "QA027",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 9,
+    "span_rank": 9,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0033",
+      "天津钢管设备管理系统-需求规格说明书:B0045",
+      "天管设备二期技术要求-4.25:B0130"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0032",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0039",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0031",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0028",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0038"
+    ],
+    "query_latency_ms": 17.08453893661499
+  },
+  {
+    "qa_id": "QA028",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 34,
+    "span_rank": 34,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0321"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0011",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0011",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0013",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0012",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0012"
+    ],
+    "query_latency_ms": 16.945194453001022
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Feature",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0080"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-需求规格说明书.docx:C0015",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0028",
+      "langchain_recursive:天津钢管设备管理系统-需求规格说明书.docx:C0016",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0034",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0006"
+    ],
+    "query_latency_ms": 10.147977620363235
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 63,
+    "span_rank": 63,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0041",
+      "天津钢管设备管理系统-详细设计规格书:B0026",
+      "天津钢管设备管理系统-需求规格说明书:B0078"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0009",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0011",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0013",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0015",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251114(上午)  .docx:C0017"
+    ],
+    "query_latency_ms": 9.617828764021397
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-需求规格说明书.docx",
+    "rank": 31,
+    "span_rank": 31,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-需求规格说明书:B0032"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0015",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0014",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0089",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0015",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251112(上午) .docx:C0010"
+    ],
+    "query_latency_ms": 17.35879760235548
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Process",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0035"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0010",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0008",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0008",
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0006",
+      "langchain_recursive:天管设备二期技术要求-4.25.docx:C0006"
+    ],
+    "query_latency_ms": 17.08285976201296
+  },
+  {
+    "qa_id": "QA033",
+    "question_type": "Numeric constraint",
+    "source_document": "天津钢管设备管理系统-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "天津钢管设备管理系统-详细设计规格书:B0038"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0010",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0192",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0211",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书-数据库说明文档.xlsx:C0050",
+      "langchain_recursive:天津钢管设备管理系统-详细设计规格书.docx:C0168"
+    ],
+    "query_latency_ms": 17.146634869277477
+  },
+  {
+    "qa_id": "QA036",
+    "question_type": "Feature",
+    "source_document": "2025.9.24天管设备管理系统技术协议 - 最终版(2).docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "2025.9.24天管设备管理系统技术协议 - 最终版(2):B0011"
+    ],
+    "top_chunk_ids": [
+      "langchain_recursive:2025.9.24天管设备管理系统技术协议 - 最终版(2).docx:C0002",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251120.docx:C0008",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx:C0012",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx:C0017",
+      "langchain_recursive:天津钢管设备管理系统-需求调研会议纪要20251113(下午)  .docx:C0022"
+    ],
+    "query_latency_ms": 16.838504932820797
+  }
+]

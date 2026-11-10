@@ -1,0 +1,36 @@
+{
+  "protocol_version": "industrial-seac-qa-supplement-v1.0",
+  "projects": {
+    "P07": {
+      "accepted": 10,
+      "rejected": 0,
+      "rejections": [],
+      "needs_role_check": [],
+      "existing_usable": 13
+    },
+    "P08": {
+      "accepted": 10,
+      "rejected": 0,
+      "rejections": [],
+      "needs_role_check": [
+        "P08-QS003"
+      ],
+      "existing_usable": 14
+    },
+    "P09": {
+      "accepted": 10,
+      "rejected": 0,
+      "rejections": [],
+      "needs_role_check": [
+        "P09-QS001",
+        "P09-QS005"
+      ],
+      "existing_usable": 10
+    }
+  },
+  "totals": {
+    "accepted": 30,
+    "needs_role_check": 3,
+    "rejected": 0
+  }
+}

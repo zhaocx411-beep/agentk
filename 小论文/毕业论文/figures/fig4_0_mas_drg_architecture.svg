@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="380" viewBox="0 0 980 380" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="490" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 4-0 面向智能体角色的单索引动态检索粒度选择架构 (MAS-DRG)</text>
+
+  <!-- Left column: Multi-Agent Roles -->
+  <rect x="20" y="52" width="235" height="305" rx="10" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.6"/>
+  <rect x="20" y="52" width="235" height="34" rx="10" fill="#2b5c8f"/>
+  <text x="137.5" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">多智能体系统异构角色层</text>
+
+  <!-- Role 1 -->
+  <rect x="34" y="100" width="207" height="72" rx="6" fill="#ffffff" stroke="#2b5c8f" stroke-width="1.2"/>
+  <text x="137.5" y="119" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#2b5c8f">执行层：精确事实核查智能体</text>
+  <text x="137.5" y="136" text-anchor="middle" font-size="10" fill="#333">database / constraint / trace_agent</text>
+  <text x="137.5" y="152" text-anchor="middle" font-size="9.5" fill="#666">需求：精确事实型 T_atomic (表行/条款)</text>
+
+  <!-- Role 2 -->
+  <rect x="34" y="186" width="207" height="72" rx="6" fill="#ffffff" stroke="#d95f02" stroke-width="1.2"/>
+  <text x="137.5" y="205" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#d95f02">模块层：接口设计智能体</text>
+  <text x="137.5" y="222" text-anchor="middle" font-size="10" fill="#333">interface_agent (API / API Param)</text>
+  <text x="137.5" y="238" text-anchor="middle" font-size="9.5" fill="#666">需求：层次上下文型 T_hier (端点+参数行)</text>
+
+  <!-- Role 3 -->
+  <rect x="34" y="272" width="207" height="72" rx="6" fill="#ffffff" stroke="#7570b3" stroke-width="1.2"/>
+  <text x="137.5" y="291" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7570b3">协调/章节层：概述与流程智能体</text>
+  <text x="137.5" y="308" text-anchor="middle" font-size="10" fill="#333">overview / detailed_design_agent</text>
+  <text x="137.5" y="324" text-anchor="middle" font-size="9.5" fill="#666">需求：宏观概述型 T_macro (架构/流程)</text>
+
+  <!-- Arrows Left -> Middle -->
+  <line x1="255" y1="136" x2="295" y2="136" stroke="#2b5c8f" stroke-width="1.8"/>
+  <polygon points="301,136 292,131 292,141" fill="#2b5c8f"/>
+  <line x1="255" y1="222" x2="295" y2="222" stroke="#d95f02" stroke-width="1.8"/>
+  <polygon points="301,222 292,217 292,227" fill="#d95f02"/>
+  <line x1="255" y1="308" x2="295" y2="308" stroke="#7570b3" stroke-width="1.8"/>
+  <polygon points="301,308 292,303 292,313" fill="#7570b3"/>
+
+  <!-- Middle column: Role-Aware Dynamic Granularity Router -->
+  <rect x="303" y="52" width="340" height="305" rx="10" fill="#fdfaf6" stroke="#d95f02" stroke-width="1.6"/>
+  <rect x="303" y="52" width="340" height="34" rx="10" fill="#d95f02"/>
+  <text x="473" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">角色感知动态粒度路由器 Φ(role) → (α, mode)</text>
+
+  <rect x="319" y="100" width="308" height="72" rx="6" fill="#ffffff" stroke="#bdd0e4"/>
+  <text x="473" y="119" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b5c8f">路由分支 1：纯子块精确打分 + 紧凑子块返回</text>
+  <text x="473" y="138" text-anchor="middle" font-size="10.5" fill="#222">融合权重 α = 0.0  (S = max S_c，消除整表父块稀释)</text>
+  <text x="473" y="156" text-anchor="middle" font-size="10" fill="#1b9e77">返回模式：Child-Only (均值 48.3 tok，节省 77.8% 开销)</text>
+
+  <rect x="319" y="186" width="308" height="72" rx="6" fill="#ffffff" stroke="#f0c8a8"/>
+  <text x="473" y="205" text-anchor="middle" font-size="11" font-weight="bold" fill="#d95f02">路由分支 2：父子协同融合打分 + 父子混合返回</text>
+  <text x="473" y="224" text-anchor="middle" font-size="10.5" fill="#222">融合权重 α = 0.35 (S = 0.35 S_p + 0.65 max S_c)</text>
+  <text x="473" y="242" text-anchor="middle" font-size="10" fill="#d95f02">返回模式：Hybrid (完整父块语境 + 高亮触发参数行)</text>
+
+  <rect x="319" y="272" width="308" height="72" rx="6" fill="#ffffff" stroke="#cbc8e8"/>
+  <text x="473" y="291" text-anchor="middle" font-size="11" font-weight="bold" fill="#7570b3">路由分支 3：细粒度定位 / 父块融合 + 完整父块返回</text>
+  <text x="473" y="310" text-anchor="middle" font-size="10.5" fill="#222">融合权重 α ∈ {0.0, 0.35} (定位核心句段或章节主题)</text>
+  <text x="473" y="328" text-anchor="middle" font-size="10" fill="#7570b3">返回模式：Parent-Only (均值 229.0 tok，保证段落连贯)</text>
+
+  <!-- Arrows Middle -> Right -->
+  <line x1="643" y1="205" x2="685" y2="205" stroke="#1b9e77" stroke-width="2"/>
+  <polygon points="691,205 682,200 682,210" fill="#1b9e77"/>
+
+  <!-- Right column: Single SEAC Hierarchical Index -->
+  <rect x="693" y="52" width="265" height="305" rx="10" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.6"/>
+  <rect x="693" y="52" width="265" height="34" rx="10" fill="#1b9e77"/>
+  <text x="825.5" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">SEAC 单一层次化向量索引库</text>
+
+  <rect x="711" y="102" width="229" height="92" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="825.5" y="122" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#137557">父块层 P (Parents, 8,746 块)</text>
+  <text x="825.5" y="141" text-anchor="middle" font-size="10" fill="#333">• 受保护表格组与章节完整段落</text>
+  <text x="825.5" y="158" text-anchor="middle" font-size="10" fill="#333">• 常规目标 320 / 高密 224 tokens</text>
+  <text x="825.5" y="175" text-anchor="middle" font-size="9.5" fill="#666">提供章节级消歧分数 S_p 与完整语境</text>
+
+  <line x1="825.5" y1="194" x2="825.5" y2="220" stroke="#1b9e77" stroke-width="1.6" stroke-dasharray="3,3"/>
+  <text x="875" y="211" font-size="9.5" fill="#137557">parent_chunk_id</text>
+
+  <rect x="711" y="220" width="229" height="92" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="825.5" y="240" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#137557">子块层 C (Children, 40,166 块)</text>
+  <text x="825.5" y="259" text-anchor="middle" font-size="10" fill="#333">• 绑定表头的独立表格行与原子句段</text>
+  <text x="825.5" y="276" text-anchor="middle" font-size="10" fill="#333">• 目标 112 / 上限 176 tokens</text>
+  <text x="825.5" y="293" text-anchor="middle" font-size="9.5" fill="#666">提供精确事实定位分数 S_c 与紧凑证据</text>
+
+  <text x="825.5" y="336" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#137557">单次离线索引 · 零跨库存储冗余</text>
+</svg>

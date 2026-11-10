@@ -1,0 +1,58 @@
+[
+  {
+    "project_id": "P10",
+    "document_type": "Technical Agreement",
+    "file_name": "巨能特钢智慧管控一体化平台-技术协议.docx",
+    "file_path": "巨能特钢智慧管控一体化平台/巨能特钢智慧管控一体化平台-技术协议.docx",
+    "paragraphs": 179,
+    "tables": 3,
+    "table_rows": 34,
+    "headings": 79,
+    "characters": 10250,
+    "tokens_approx": 9257,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P10",
+    "document_type": "SRS",
+    "file_name": "巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "file_path": "巨能特钢智慧管控一体化平台/巨能特钢智慧管控一体化平台-需求规格书-word.docx",
+    "paragraphs": 511,
+    "tables": 50,
+    "table_rows": 307,
+    "headings": 147,
+    "characters": 28905,
+    "tokens_approx": 26451,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P10",
+    "document_type": "Meeting",
+    "file_name": "巨能特钢智慧管控一体化平台-需求调研会议纪要.docx",
+    "file_path": "巨能特钢智慧管控一体化平台/巨能特钢智慧管控一体化平台-需求调研会议纪要.docx",
+    "paragraphs": 2,
+    "tables": 1,
+    "table_rows": 8,
+    "headings": 0,
+    "characters": 780,
+    "tokens_approx": 736,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P10",
+    "document_type": "Proposal",
+    "file_name": "巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "file_path": "巨能特钢智慧管控一体化平台/巨能特钢能源管理系统项目方案建议书202503040.docx",
+    "paragraphs": 308,
+    "tables": 8,
+    "table_rows": 59,
+    "headings": 100,
+    "characters": 18614,
+    "tokens_approx": 16459,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  }
+]

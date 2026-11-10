@@ -1,0 +1,807 @@
+[
+  {
+    "qa_id": "QA001",
+    "project_id": "P08",
+    "question": "能源综合看板默认展示哪一层级的重点关心指标情况？",
+    "reference_answer": "综合看板默认展示公司级（炼钢厂、轧钢厂）重点关心的指标情况",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "系统功能设计 > 生产节能管理 > 能源综合看板",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0159",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0159"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0159",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0159"
+    ],
+    "gold_evidence_span": "点击智慧能源，进入烟台华新丽华不锈钢能源综合看板（能源综合战情室），综合看板默认展示公司级（炼钢厂、轧钢厂）重点关心的指标情况",
+    "gold_evidence_spans": [
+      "点击智慧能源，进入烟台华新丽华不锈钢能源综合看板（能源综合战情室），综合看板默认展示公司级（炼钢厂、轧钢厂）重点关心的指标情况"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据片段含客户主体名（烟台华新丽华不锈钢）与其厂别构成，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA002",
+    "project_id": "P08",
+    "question": "普通用户培训阶段对甲乙双方的重视与配合有什么要求？",
+    "reference_answer": "该阶段的工作效果将直接影响整个系统日后的运行与推广，因此该阶段应该得到双方的充分重视与配合尤其是客户方必须给予培训工作准备与开展的重要支持，而金恒也将在此阶段根据客户方的实际情况给予培训方式、培训效果保证的建议与配合",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "培训与知识转移 > 培训",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0257",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0257"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0257",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0257"
+    ],
+    "gold_evidence_span": "该阶段的工作效果将直接影响整个系统日后的运行与推广，因此该阶段应该得到双方的充分重视与配合尤其是客户方必须给予培训工作准备与开展的重要支持，而金恒也将在此阶段根据客户方的实际情况给予培训方式、培训效果保证的建议与配合",
+    "gold_evidence_spans": [
+      "该阶段的工作效果将直接影响整个系统日后的运行与推广，因此该阶段应该得到双方的充分重视与配合尤其是客户方必须给予培训工作准备与开展的重要支持，而金恒也将在此阶段根据客户方的实际情况给予培训方式、培训效果保证的建议与配合"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：答案含供应商主体名（金恒），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA003",
+    "project_id": "P08",
+    "question": "项目完成后系统交付文档以什么形式向甲方移交？",
+    "reference_answer": "项目完成后乙方对系统交付文档以电子版的pdf文件形式进行移交",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "培训与知识转移 > 知识转移",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0266",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0266"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0266",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0266"
+    ],
+    "gold_evidence_span": "项目完成后乙方对系统交付文档以电子版的pdf文件形式进行移交",
+    "gold_evidence_spans": [
+      "项目完成后乙方对系统交付文档以电子版的pdf文件形式进行移交"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA004",
+    "project_id": "P08",
+    "question": "经营指标验证最多进行多少轮，若仍无法通过如何处理？",
+    "reference_answer": "验证周期最多不超过3轮，如3轮验证周期后指标仍无法通过，则双方共同分析原因并出具分析与改进报告，经甲方认可后视同通过指标验证",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "验收标准与指标考核 > 验收方式",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0294",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0294"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0294",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0294"
+    ],
+    "gold_evidence_span": "验证周期最多不超过3轮，如3轮验证周期后指标仍无法通过，则双方共同分析原因并出具分析与改进报告，经甲方认可后视同通过指标验证",
+    "gold_evidence_spans": [
+      "验证周期最多不超过3轮，如3轮验证周期后指标仍无法通过，则双方共同分析原因并出具分析与改进报告，经甲方认可后视同通过指标验证"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA005",
+    "project_id": "P08",
+    "question": "能源介质集中监视基于哪些数据实现什么监视功能？",
+    "reference_answer": "能源介质集中监视主要基于全厂管网模型、能源仪表监测数据实现全厂电力系统及管网流向监视功能，通过可视化界面实时展示关键能源数据的实时监视及报警信息，支持用户根据不同介质、不同级别计量仪表监视能源介质的发生、输配、消耗",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 能源综合监视",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103"
+    ],
+    "gold_evidence_span": "能源介质集中监视主要基于全厂管网模型、能源仪表监测数据实现全厂电力系统及管网流向监视功能，通过可视化界面实时展示关键能源数据的实时监视及报警信息，支持用户根据不同介质、不同级别计量仪表监视能源介质的发生、输配、消耗",
+    "gold_evidence_spans": [
+      "能源介质集中监视主要基于全厂管网模型、能源仪表监测数据实现全厂电力系统及管网流向监视功能，通过可视化界面实时展示关键能源数据的实时监视及报警信息，支持用户根据不同介质、不同级别计量仪表监视能源介质的发生、输配、消耗"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA006",
+    "project_id": "P08",
+    "question": "对于短时归档的能源数据，趋势曲线查询界面提供什么显示能力？",
+    "reference_answer": "借助二次开发的趋势曲线查询界面，对于短时归档数据，提供过程曲线显示，趋势曲线亦能作为追溯原因的依据",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 能源综合监视 > 实时趋势查询设计 > 功能设计",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0130",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0130",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0278"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0130",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0130",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0278"
+    ],
+    "gold_evidence_span": "借助二次开发的趋势曲线查询界面，对于短时归档数据，提供过程曲线显示，趋势曲线亦能作为追溯原因的依据",
+    "gold_evidence_spans": [
+      "借助二次开发的趋势曲线查询界面，对于短时归档数据，提供过程曲线显示，趋势曲线亦能作为追溯原因的依据"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "两处等价位置原文一致。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA007",
+    "project_id": "P08",
+    "question": "本次项目数据采集涉及的能源计量仪表需具备哪些通讯接口和协议？",
+    "reference_answer": "涉及本次项目数据采集的能源计量仪表具备485通讯接口和标准Modbus RTU/TCP或DL/T 645协议",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 数据采集设计 > 数据采集方式",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611"
+    ],
+    "gold_evidence_span": "涉及本次项目数据采集的能源计量仪表具备485通讯接口和标准Modbus RTU/TCP或DL/T 645协议",
+    "gold_evidence_spans": [
+      "涉及本次项目数据采集的能源计量仪表具备485通讯接口和标准Modbus RTU/TCP或DL/T 645协议"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA008",
+    "project_id": "P08",
+    "question": "炼钢厂、轧钢厂光伏发电系统的数据接口由谁提供、采用哪些转发协议？",
+    "reference_answer": "由光伏系统建设厂商，提供 Modbus、IEC104 等标准工业转发协议的数据接口",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 数据采集设计 > 采集接口说明",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628"
+    ],
+    "gold_evidence_span": "由光伏系统建设厂商，提供 Modbus、IEC104 等标准工业转发协议的数据接口",
+    "gold_evidence_spans": [
+      "由光伏系统建设厂商，提供 Modbus、IEC104 等标准工业转发协议的数据接口"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA015",
+    "project_id": "P08",
+    "question": "项目范围内的能源计量仪表设备到货后多长时间内必须完成安装？",
+    "reference_answer": "项目范围内能源计量仪表设备到货后3个月内完成安装",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "验收标准与指标考核 > 验收标准",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0288",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0288"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0288",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0288"
+    ],
+    "gold_evidence_span": "项目范围内能源计量仪表设备到货后3个月内完成安装，因甲方原因导致不具备安装条件导致仪表无法安装、施工及数据采集不影响项目总体验收，具体处置方式由双方协商确定",
+    "gold_evidence_spans": [
+      "项目范围内能源计量仪表设备到货后3个月内完成安装，因甲方原因导致不具备安装条件导致仪表无法安装、施工及数据采集不影响项目总体验收，具体处置方式由双方协商确定"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：答案为技术协议中的安装工期承诺条款（§7 PROPRIETARY_BUSINESS_DATA），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA017",
+    "project_id": "P08",
+    "question": "项目要实现的“全景可视、主动预警”透明化管理具体包括哪些内容？",
+    "reference_answer": "实现“全景可视、主动预警”的透明化管理：能源系统全局一目了然，管理人员可以实时查看全厂电力、水、天然气、蒸汽、氧氮氩压空等所有能源介质的动态流向、管网压力、关键设备运行状态，实现能源系统的“一张图”及透明化管理，通过对能源全生命周期的实时监控，降低能源损耗，提高能源利用效率，从而创造更多的经济效益",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "项目目标与效果 > 项目效果",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0078",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0078",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0075"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0078",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0078",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0075"
+    ],
+    "gold_evidence_span": "实现“全景可视、主动预警”的透明化管理：能源系统全局一目了然，管理人员可以实时查看全厂电力、水、天然气、蒸汽、氧氮氩压空等所有能源介质的动态流向、管网压力、关键设备运行状态，实现能源系统的“一张图”及透明化管理，通过对能源全生命周期的实时监控，降低能源损耗，提高能源利用效率，从而创造更多的经济效益",
+    "gold_evidence_spans": [
+      "实现“全景可视、主动预警”的透明化管理：能源系统全局一目了然，管理人员可以实时查看全厂电力、水、天然气、蒸汽、氧氮氩压空等所有能源介质的动态流向、管网压力、关键设备运行状态，实现能源系统的“一张图”及透明化管理，通过对能源全生命周期的实时监控，降低能源损耗，提高能源利用效率，从而创造更多的经济效益"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "两处等价位置原文一致。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA018",
+    "project_id": "P08",
+    "question": "精准的能耗数据对企业应对“双碳”目标和参与碳交易有什么作用？",
+    "reference_answer": "精准的能耗数据是计算企业碳排放量的关键输入，为企业应对“双碳”目标、参与碳交易提供坚实的数据支撑",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "项目目标与效果 > 项目效果",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0081",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0081",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0078"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0081",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0081",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0078"
+    ],
+    "gold_evidence_span": "精准的能耗数据是计算企业碳排放量的关键输入，为企业应对“双碳”目标、参与碳交易提供坚实的数据支撑",
+    "gold_evidence_spans": [
+      "精准的能耗数据是计算企业碳排放量的关键输入，为企业应对“双碳”目标、参与碳交易提供坚实的数据支撑"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "两处等价位置原文一致。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA019",
+    "project_id": "P08",
+    "question": "本次项目的能源综合监视画面按什么方式进行编排？",
+    "reference_answer": "本次项目能源综合监视按照炼钢厂、轧钢厂分别以能源介质集中监视及工序岗位呈现进行画面的编排",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "source_section": "详细设计 > 能源综合监视",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102"
+    ],
+    "gold_evidence_span": "通过监视能源运行状态，感知全局性异常，并可及时查询实时历史趋势及报警异常信息等，本次项目能源综合监视按照炼钢厂、轧钢厂分别以能源介质集中监视及工序岗位呈现进行画面的编排",
+    "gold_evidence_spans": [
+      "通过监视能源运行状态，感知全局性异常，并可及时查询实时历史趋势及报警异常信息等，本次项目能源综合监视按照炼钢厂、轧钢厂分别以能源介质集中监视及工序岗位呈现进行画面的编排"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QS001",
+    "project_id": "P08",
+    "question": "能源管理接口清单中，接口代码 EA_CO_A_01 对应的接口名称是什么，发送方和接收方分别是哪个系统？",
+    "reference_answer": "分别为获取能源成本结算数据接口、能源、成本管理",
+    "question_type": "API",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "source_section": "通讯接口 > 能源管理 > 接口清单",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031#R008",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031#R008"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031"
+    ],
+    "gold_evidence_span": "EA_CO_A_01 | 获取能源成本结算数据接口 | 能源 | 成本管理",
+    "gold_evidence_spans": [
+      "EA_CO_A_01 | 获取能源成本结算数据接口 | 能源 | 成本管理"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS002",
+    "project_id": "P08",
+    "question": "能源管理系统与北京广元之间的能源计量仪表数据政府平台接口采用什么通讯方式，传输的数据内容是什么？",
+    "reference_answer": "分别为HTTP/HTTPS、能源计量仪表采集数据",
+    "question_type": "API",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "系统功能设计 > 涉及接口",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0188#R010",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0188#R010"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0188",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0188"
+    ],
+    "gold_evidence_span": "10 | 能源管理系统 | 北京广元 | HTTP/HTTPS | 能源计量仪表数据政府平台接口 | 能源计量仪表采集数据 | 乙供",
+    "gold_evidence_spans": [
+      "10 | 能源管理系统 | 北京广元 | HTTP/HTTPS | 能源计量仪表数据政府平台接口 | 能源计量仪表采集数据 | 乙供"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：题干与证据含第三方平台服务商名称（北京广元，§7 CUSTOMER_OR_VENDOR_IDENTITY），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS003",
+    "project_id": "P08",
+    "question": "PM_EA_03（获取溶剂、电极等原料消耗数据接口）的请求报文中，“起始时间（时间区间）”字段的英文字段名、类型和格式要求分别是什么？",
+    "reference_answer": "分别为startTime、String、格式yyyy-MM-dd HH:mm:ss",
+    "question_type": "API parameter",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "source_section": "通讯接口 > 能源管理 > 详细定义 > PM_EA_03（获取溶剂、电极等原料消耗数据接口）",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051#R003",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0070#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0077#R003"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0070",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0077"
+    ],
+    "gold_evidence_span": "起始时间（时间区间） | startTime | String | 格式yyyy-MM-dd HH:mm:ss",
+    "gold_evidence_spans": [
+      "起始时间（时间区间） | startTime | String | 格式yyyy-MM-dd HH:mm:ss"
+    ],
+    "evidence_occurrence_count": 3,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "needs_role_check 列语义已核对：该表首行为占位列名「主档」，无法据表头判定列义，但按列序 中文名→英文名→类型→格式，且单元格内容自证其角色（startTime 为英文字段名、String 为类型、末列原文即写“格式yyyy-MM-dd HH:mm:ss”），答案未给任何列指派表头未声明的语义。三处等价行（PM_EA_03、EA_EP_A_01、EA_CO_A_01）取值完全一致。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS004",
+    "project_id": "P08",
+    "question": "ems_energy_medium_item（能源介质）表中“标准单位”字段的字段英文名、类型，以及“是否必填”列的取值分别是什么？",
+    "reference_answer": "分别为medium_unit、varchar(40)、N",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "source_section": "数据库设计 > 基础管理 > DB定义 > ems_energy_medium_item（能源介质）",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053#R007",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053#R007"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053"
+    ],
+    "gold_evidence_span": "标准单位 | medium_unit |  |  | varchar(40) |  | N",
+    "gold_evidence_spans": [
+      "标准单位 | medium_unit |  |  | varchar(40) |  | N"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS005",
+    "project_id": "P08",
+    "question": "ems_time_seq_definition（时间序列定义）表中“步长”字段的字段英文名、类型，以及“是否必填”列的取值分别是什么？",
+    "reference_answer": "分别为step_len、tinyint、Y",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "source_section": "数据库设计 > 基础管理 > DB定义 > ems_time_seq_definition（时间序列定义）",
+    "gold_evidence_unit_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063#R008",
+    "gold_evidence_unit_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063#R008"
+    ],
+    "gold_evidence_id": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063"
+    ],
+    "gold_evidence_span": "步长 | step_len |  |  | tinyint |  | Y",
+    "gold_evidence_spans": [
+      "步长 | step_len |  |  | tinyint |  | Y"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS006",
+    "project_id": "P08",
+    "question": "本项目新增采集的412块能源计量仪表中，有多少块已就近接入现场PLC，多少块需要新增采集设备进行独立采集？",
+    "reference_answer": "其中282块计量仪表已就近接入现场PLC，130块需新增采集设备进行独立采集",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "数据采集设计 > 采集范围",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0204",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0204"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0204",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0204"
+    ],
+    "gold_evidence_span": "其中282块计量仪表已就近接入现场PLC，130块需新增采集设备进行独立采集。",
+    "gold_evidence_spans": [
+      "其中282块计量仪表已就近接入现场PLC，130块需新增采集设备进行独立采集。"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QS007",
+    "project_id": "P08",
+    "question": "硬件清单中采集网关的数据处理能力要求是多少？",
+    "reference_answer": "数据处理能力≥1000点",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "硬件清单",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0224#R002",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0224#R002"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0224",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0224"
+    ],
+    "gold_evidence_span": "采集网关 | 旋思科技 | 2路百兆自适应网络，独立隔离采集2个网段数据,串口4路（RS232/485)；数据处理能力≥1000点；支持OPC DA、OPC UA、Modbus、DL/T645、西门子各系列等PLC以太网通信协议；具备双向通讯能力；支持Modbus Tcp和MQTT等数据转发",
+    "gold_evidence_spans": [
+      "采集网关 | 旋思科技 | 2路百兆自适应网络，独立隔离采集2个网段数据,串口4路（RS232/485)；数据处理能力≥1000点；支持OPC DA、OPC UA、Modbus、DL/T645、西门子各系列等PLC以太网通信协议；具备双向通讯能力；支持Modbus Tcp和MQTT等数据转发"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据为采购硬件清单行，含供应商品牌（旋思科技）与设备规格（§7 CUSTOMER_OR_VENDOR_IDENTITY、PROPRIETARY_BUSINESS_DATA），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QS008",
+    "project_id": "P08",
+    "question": "新增能源计量仪表清单中，“氧气总产出”表的管径、管道材质和流量范围要求分别是什么？",
+    "reference_answer": "管径：DN200；管道材质：304不锈钢；流量范围：（0-14000）m3/h",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "硬件清单",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0222#R021",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0222#R021"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0222",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0222"
+    ],
+    "gold_evidence_span": "氧气总产出 | 川仪 | 1.名称：涡街流量计 2.测量介质:氧气 3.规格：管径：DN200；管道材质：304不锈钢；压力范围：0-25kpa；流量范围：（0-14000）m3/h；计量精度：2.0级以上；防护等级：IP65以上；通讯方式：485通讯；电源：24V/220V；自带温压补偿；安装方式：法兰 ，含配对法兰垫片紧固件及安装辅材。需提供计量院检定报告。",
+    "gold_evidence_spans": [
+      "氧气总产出 | 川仪 | 1.名称：涡街流量计 2.测量介质:氧气 3.规格：管径：DN200；管道材质：304不锈钢；压力范围：0-25kpa；流量范围：（0-14000）m3/h；计量精度：2.0级以上；防护等级：IP65以上；通讯方式：485通讯；电源：24V/220V；自带温压补偿；安装方式：法兰 ，含配对法兰垫片紧固件及安装辅材。需提供计量院检定报告。"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：证据为采购硬件清单行，含供应商品牌（川仪）与现场工艺参数（§7 CUSTOMER_OR_VENDOR_IDENTITY、PROPRIETARY_BUSINESS_DATA），受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  },
+  {
+    "qa_id": "QS009",
+    "project_id": "P08",
+    "question": "项目技术架构中的容器编排组件采用什么技术，它的简称是什么？",
+    "reference_answer": "容器编排组件：Kubernetes是一个全新的基于容器技术的分布式架构解决方案，是Google开源的一个容器集群管理系统，Kubernetes简称K8S",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "系统架构 > 技术架构图",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0106",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0106"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0106",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0106"
+    ],
+    "gold_evidence_span": "容器编排组件：Kubernetes是一个全新的基于容器技术的分布式架构解决方案，是Google开源的一个容器集群管理系统，Kubernetes简称K8S。",
+    "gold_evidence_spans": [
+      "容器编排组件：Kubernetes是一个全新的基于容器技术的分布式架构解决方案，是Google开源的一个容器集群管理系统，Kubernetes简称K8S。"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QS010",
+    "project_id": "P08",
+    "question": "培训计划中，面向炼钢厂能源管理人员的系统操作培训安排在哪个阶段、培训时长多少、采用什么方式在哪里开展？",
+    "reference_answer": "分别为上线、4小时、演示、项目现场",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "source_section": "培训与知识转移 > 培训",
+    "gold_evidence_unit_id": "模块7-能源管理-技术协议-1207:B0264#R002",
+    "gold_evidence_unit_ids": [
+      "模块7-能源管理-技术协议-1207:B0264#R002"
+    ],
+    "gold_evidence_id": "模块7-能源管理-技术协议-1207:B0264",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0264"
+    ],
+    "gold_evidence_span": "1 | 上线 | 系统操作培训 | 4小时 | 炼钢厂能源管理人员 | 演示，项目现场",
+    "gold_evidence_spans": [
+      "1 | 上线 | 系统操作培训 | 4小时 | 炼钢厂能源管理人员 | 演示，项目现场"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "模块7-能源管理-技术协议-1207.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "证据行的培训对象为岗位群体，不含个人身份信息。",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED"
+  }
+]

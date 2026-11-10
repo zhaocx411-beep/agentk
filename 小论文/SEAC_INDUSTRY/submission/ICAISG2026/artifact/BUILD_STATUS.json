@@ -1,0 +1,9 @@
+{
+  "artifact_version": "icaisg2026-seac-anonymous-review-v1.0",
+  "synthetic_examples_only": true,
+  "human_review_complete": true,
+  "formal_locked_test_complete": true,
+  "privacy_safe_aggregate_results_included": true,
+  "raw_enterprise_data_included": false,
+  "anonymous_review_ready": true
+}

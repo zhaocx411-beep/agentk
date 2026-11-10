@@ -1,0 +1,375 @@
+[P06-BP0151] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 移动端 > 宿舍业务 > 违章缴费 > 画面设计
+    功能操作区：具备两个功能，记录查询、缴费，可以对下面列表区域的信息进行相应操作；
+  R(paragraph) sec=<same>
+    搜索区：无
+[P06-BP0152] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 退宿退还押金申请接口
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: applyReason | String | | 是 | 申请事由
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: oldAreaId | String | | 是 | 原宿舍区域id
+[P06-BP0153] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 金蝶供应商接口
+    "supplierId": "12312313",
+  R(paragraph) sec=<same>
+    "supplierName": "江苏金恒",
+[P06-BP0154] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 时间 | 2025-4-21 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0155] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 时间 | 2025-4-16 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0156] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 2 数据行: 时间 | 2025-4-20 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 2 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0157] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 档口信息获取接口
+    1）返回信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P06-BP0158] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 违规违纪考核管理 > 画面设计
+    搜索区：支持模糊查询功能，可以对当前列表中的被考核人、违规类型、状态进行模糊查询。
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 违规违纪考核管理 > 数据库表
+    数据库表
+[P06-BP0159] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 时间 | 2025-4-15 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0160] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 时间 | 2025-4-19 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0161] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店经营数据接口
+    "rtrealSell": 0,
+  R(paragraph) sec=<same>
+    "roomTypeName": "商务双床房（标间）",
+[P06-BP0162] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.3 宿舍管理模块 5 > 3.3.20 库房管理 73
+    3.3.20 库房管理 73
+  R(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.3 宿舍管理模块 5 > 3.3.21 宿舍数据看板 78
+    3.3.21 宿舍数据看板 78
+[P06-BP0163] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 时间 | 2025-4-14 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+[P06-BP0164] stratum=table_transition doc_type=DB
+  L(table_row) sec=酒店管理 > ISM_HOTEL_HOUR_RULE
+    表头: 3、 | 表名 | ISM_HOTEL_HOUR_RULE | 表的描述 | 酒店时租房计费规则 | | | | | 数据行: | COMPANY_ID | VARCHAR2 | | 100 | | Y | 授权公司 | |
+  R(table_row) sec=酒店管理 > ISM_HOTEL_GOODS
+    4、 | 表名 | ISM_HOTEL_GOODS | 表的描述 | 酒店库房物品 | | | | |
+[P06-BP0165] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 讨 论 事 项 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 决 议 事 项 | 供应商管理 管理餐饮和超市的供应商信息，包括供应商信息维护、供应商供应货品信息维护、供应商评分、供应商供货统计、供应商资质对比等功能页面。 采购管理 货品价格管理、采购计划管理、采购订单管理等功能。 在货品价格中可记录货品的历史价格信息，生成货品价格分析图，方便用户对比货品历史价格。 系统根据采购计划明细和采购订单明细可分别生成采购计划报表、采购订单报表、货品采购报表，方便用户从时间段层面查看食堂和超市的采购情况。 领料管理 记录食堂各个档口的领料明细，包括领用货品明细、领料档口、领料仓库、领料时间等信息，形成领料单。领料单完成领用后，系统自动添加出库明细。 库存管理 包括仓库管理、入库、出库、货品调拨、库存盘点功能页面，可…
+[P06-BP0166] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=晋钢综合服务一体化子系统设计 > 巡检管理模块 > 巡检计划管理 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 检查人 | 选择框 | | 是 | 可多选人员
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 状态 | 下拉框 | 1 - 启用 2 - 停用 | | 默认启用
+[P06-BP0167] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 决 议 事 项 | 招待管理 招待流程 为了方便招待客人，增加一条招待申请业务流程。 员工在移动端提交招申请，填写招待原因等基本内容。 选择是否需要车接送。选择是，填写人数、车型，接送时间。抛送晋钢E家审批。审批通过后，在综合管理平台招待管理中车辆接送流程消息提示。相应管理人员进行核实，安排车辆。编辑备注信息点击确定，信息推送晋钢E家申请人，形成车辆接送台账。该子流程结束。 自动到下一项，选择是否需要会议。选择是，填写人数、会议预定开始和结束时间等信息。抛送晋钢E家审批。审批通过后，在综合管理平台会议室预定信息提示。相应管理人员安排会议室，编辑会议室名称，点击确定，信息推送晋钢E家申请人，形成会议室预定台账。该子流程结束。 自动到下一项，选择是…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 待 决 事 项 | | | | | |
+[P06-BP0168] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 决 议 事 项 | 一、业财一体数据推送 1.供应商台账 与餐饮与超市管理子系统打通，同步各业态供应商基本信息、账户信息，同时可维护与ERP、金蝶中的映射关系。 2.消费设备台账 与餐饮与超市管理子系统打通，同步所有消费设备信息。 3.消费记录台账 与餐饮与超市管理子系统打通，同步所有消费记录信息。 4.经营主体台账 管理晋钢各业态经营主体、账户信息等。 5.餐饮与超市结算账单台账 与餐饮与超市管理子系统打通，同步相关结算付款信息，用于后续付款对接。 6.体育馆结算信息台账 与餐饮与超市管理子系统打通，生成体育场相关结算付款信息，用于后续付款对接。 7.供应商订单信息台账 与餐饮与超市管理子系统打通，同步各业态供应商所有订单信息。 8.付款管理…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 待 决 事 项 | | | | | |
+[P06-BP0169] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 总务处：赵处、王处 | 总务处：赵处、王处 | 总务处：赵处、王处 | 胡剑秋、袁世箫、黄宇超 | 胡剑秋、袁世箫、黄宇超 | 胡剑秋、袁世箫、黄宇超
+[P06-BP0170] stratum=inside_table doc_type=DB
+  L(table_row) sec=目录 > 描述
+    表头: | 序号 | 表名 | 描述 数据行: | 4 | ISM_GYM_AREA_RESERVE_DETAIL | 体育馆场地预约详情明细
+  R(table_row) sec=<same>
+    表头: | 序号 | 表名 | 描述 数据行: | 5 | ISM_GYM_MEMBER_CONFIG | 体育馆会费价格设置
+[P06-BP0171] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=晋钢综合服务一体化子系统设计 > 巡检管理模块 > NFC标签绑定管理
+    NFC标签绑定管理
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 巡检管理模块 > NFC标签绑定管理 > 画面设计
+    画面设计
+[P06-BP0172] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 取餐柜Token获取接口
+    }
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 取餐柜存入接口
+    取餐柜存入接口
+[P06-BP0173] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    晋钢综合服务一体化需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 2
+[P06-BP0174] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 门禁权限管理 > 逻辑处理
+    调用智慧园区-人员授权接口，抛送人员门禁授权信息。
+  R(paragraph) sec=<same>
+    停用/启用
+[P06-BP0175] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 决 议 事 项 | 员工基本数据 对接晋钢E家同步人员信息接口，生成系统账户。 对接晋钢的利旧取餐柜实现取餐配送。 员工自助点餐流程 1.员工使用晋钢E家进入餐饮点餐页面。外部人员使用微信小程序进入点餐页面。 2.选择堂食或者打包方式后，选择档口进行选餐。 3.确定后进入支付页面，员工优先使用晋钢补贴账户，外部人员使用微信支付。 4.生成订单的取餐码，后厨打印小票后，档口显示屏和订单详情显示（A01制作中）。 5.制作完成后扫描取餐码，通过晋钢E家推送制作完成信息，并在档口电视屏上显示（A01请取餐） 6.顾客取餐用餐后在订单详情中去评价。 预定餐配送流程 1.员工通过晋钢E家进入预定餐页面。 2.选择餐厅-->选择-->选择档口-->选择套餐…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 待 决 事 项 | | | | | |
+[P06-BP0176] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 商品抵扣券生成接口
+    请求信息
+  R(paragraph) sec=<same>
+    1）请求方式：HTTP， POST方法
+[P06-BP0177] stratum=inside_table doc_type=DB
+  L(table_row) sec=巡检 > ISM_INSPECT_POINT
+    表头: 3、 | 表名 | ISM_INSPECT_POINT | 表的描述 | 巡检点配置 | | | | 数据行: | LATITUDE | NUMBER | | 0 | | | 纬度 |
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | ISM_INSPECT_POINT | 表的描述 | 巡检点配置 | | | | 数据行: | REMARK | VARCHAR2 | | 255 | | Y | 描述 |
+[P06-BP0178] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 巡检管理模块 > 巡检任务 > 画面设计
+    功能操作区：具备两个功能，任务生成、记录查询，可以对下面列表区域的信息进行相应操作；
+  R(paragraph) sec=<same>
+    搜索区：支持模糊查询功能，可以对当前列表中的任务生成时间进行查询。
+[P06-BP0179] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=晋钢综合服务一体化子系统设计 > 租赁管理模块 > 商户管理
+    商户管理
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 租赁管理模块 > 商户管理 > 画面设计
+    画面设计
+[P06-BP0180] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 宿舍员工家属门禁申请接口
+    }
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 宿舍员工家属门禁申请审批结果接口
+    宿舍员工家属门禁申请审批结果接口
+[P06-BP0181] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 待 决 事 项 | | | | | |
+  R(paragraph) sec=<same>
+    山西晋城钢铁控股集团有限公司：
+[P06-BP0182] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=晋钢综合服务一体化子系统设计 > 移动端 > 巡检业务 > 巡检任务 > 逻辑处理
+    输入参数 | 类型 | 取值范围 | 必输 | 备注
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 巡检任务ID | 输入框 | 字符串：最大长度40个字符 | 是 | 选择时自动带出
+[P06-BP0183] stratum=inside_table doc_type=DB
+  L(table_row) sec=宿舍管理 > ISM_DORM_CHECKIN_APPLY
+    表头: 5、 | 表名 | ISM_DORM_CHECKIN_APPLY | 表的描述 | 宿舍入住/调宿申请 | | | | 数据行: | PAYMENT_ID | VARCHAR2 | | 40 | | | 微信支付订单ID |
+  R(table_row) sec=<same>
+    表头: 5、 | 表名 | ISM_DORM_CHECKIN_APPLY | 表的描述 | 宿舍入住/调宿申请 | | | | 数据行: | KEY_TRANSFER_TIME | VARCHAR2 | | 20 | yyyy-MM-dd HH:mm:ss | Y | 钥匙移交时间 |
+[P06-BP0184] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    山西晋城钢铁控股集团有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P06-BP0185] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 微信商户订单号查询订单接口
+    请求信息
+  R(paragraph) sec=<same>
+    1）请求方式：HTTP， GET方法
+[P06-BP0186] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=晋钢综合服务一体化子系统设计 > 接待管理模块
+    接待管理模块
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 接待管理模块 > 功能描述
+    功能描述
+[P06-BP0187] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=系统详细架构 > 应用组件及关系
+    本平台及移动端主要对接晋钢E家员工信息、审批流等相关数据；对接ERP、金蝶财务抛账等相关数据；对接能源管理云平台水电能耗等相关数据；对接智慧园区管理系统人员、门禁、地图等相关数据；对接酒店管理系统房型、预订单、经营台账等相关数据；对接餐饮与超市管理系统餐券、预订、供应商订单等相关数据；对接微信支付系统进行线上支付与退款。
+  R(heading) sec=晋钢综合服务一体化子系统设计
+    晋钢综合服务一体化子系统设计
+[P06-BP0188] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    晋钢综合服务一体化需求讨论会议纪要
+[P06-BP0189] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 总务处： 赵处、王处、 信息处：郭慧芳 财务处： | 总务处： 赵处、王处、 信息处：郭慧芳 财务处： | 总务处： 赵处、王处、 信息处：郭慧芳 财务处： | 胡剑秋 、袁世箫 | 胡剑秋 、袁世箫 | 胡剑秋 、袁世箫
+[P06-BP0190] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 决 议 事 项 | 一、桌餐预定 1.员工通过晋钢E家进入桌餐预定页面。 2.非员工通过小程序进入桌餐预定页面。 2.顾客选择餐厅-->选择档口-->选择菜品/团餐-->选择就餐时间-->选择就餐人数-->填写姓名电话信息后提交。 3.进入支付页面，支付后生成订单。 4.管理员在系统后台查看相应桌餐预定信息与顾客电话再次确定无误后，管理员根据各餐厅的包间和餐桌配备情况，自主选择是否需要填写桌号和包间名称，点击推送按钮。各档口上位机餐饮软件产生消息提醒，订单详情显示预定成功（桌号**/**包间），晋钢e家进行预定成功消息推送。 5.顾客用餐完毕可以在订单详情进行评价。 二、GPS定位（配餐车、垃圾清运车）管理。 1.配餐车 通过晋钢一期配置的gi…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 待 决 事 项 | | | | | |
+[P06-BP0191] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 讨 论 事 项 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。 | 1、餐饮系统点餐流程。 2、餐饮系统预定餐配送流程。 3、餐饮系统供应链管理功能。
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 决 议 事 项 | 员工基本数据 对接晋钢E家同步人员信息接口，生成系统账户。 对接晋钢的利旧取餐柜实现取餐配送。 员工自助点餐流程 1.员工使用晋钢E家进入餐饮点餐页面。外部人员使用微信小程序进入点餐页面。 2.选择堂食或者打包方式后，选择档口进行选餐。 3.确定后进入支付页面，员工优先使用晋钢补贴账户，外部人员使用微信支付。 4.生成订单的取餐码，后厨打印小票后，档口显示屏和订单详情显示（A01制作中）。 5.制作完成后扫描取餐码，通过晋钢E家推送制作完成信息，并在档口电视屏上显示（A01请取餐） 6.顾客取餐用餐后在订单详情中去评价。 预定餐配送流程 1.员工通过晋钢E家进入预定餐页面。 2.选择餐厅-->选择-->选择档口-->选择套餐…
+[P06-BP0192] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    山西晋城钢铁控股集团有限公司：
+  R(paragraph) sec=<same>
+    江苏金恒信息科技股份有限公司：
+[P06-BP0193] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店经营数据接口
+    "companyResvRommCount": 0,
+  R(paragraph) sec=<same>
+    "douyinResvCount": 0,
+[P06-BP0194] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=晋钢综合服务一体化子系统设计 > 租赁管理模块
+    租赁管理模块
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 租赁管理模块 > 功能描述
+    功能描述
+[P06-BP0195] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    晋钢综合服务一体化需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 6
+[P06-BP0196] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 对账单抛送接口
+    "generationType": "2",
+  R(paragraph) sec=<same>
+    "supplierId": "111"
+[P06-BP0197] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    晋钢综合服务一体化需求讨论会议纪要
+[P06-BP0198] stratum=same_section_continuity doc_type=Meeting
+  L(paragraph) sec=(none)
+    江苏金恒信息科技股份有限公司：
+  R(paragraph) sec=<same>
+    晋钢综合服务一体化需求讨论会议纪要
+[P06-BP0199] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+    返回信息
+  R(paragraph) sec=<same>
+    1）返回信息参数：
+[P06-BP0200] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 待 决 事 项 | | | | | |
+  R(paragraph) sec=<same>
+    山西晋城钢铁控股集团有限公司：
+[P06-BP0201] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=晋钢综合服务一体化子系统设计 > 移动端 > 接待业务 > 餐券领取 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 联系方式 | 输入框 | 字符串：最大长度50个字符 | 否 | 外部人员必填
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 身份证 | 输入框 | 字符串：最大长度20个字符 | 否 | 外部人员必填
+[P06-BP0202] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义
+    接口定义
+  R(heading) sec=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+    卫生积分增加接口
+[P06-BP0203] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 7 数据行: 讨 论 事 项 | 宿舍管理房间管理 宿舍入住申请流程 退宿流程 维修流程 卫生检查 违纪考核 门禁管理 库房管理 入住数据分析统计 调宿申请 费用管理 能耗管理 | 宿舍管理房间管理 宿舍入住申请流程 退宿流程 维修流程 卫生检查 违纪考核 门禁管理 库房管理 入住数据分析统计 调宿申请 费用管理 能耗管理 | 宿舍管理房间管理 宿舍入住申请流程 退宿流程 维修流程 卫生检查 违纪考核 门禁管理 库房管理 入住数据分析统计 调宿申请 费用管理 能耗管理 | 宿舍管理房间管理 宿舍入住申请流程 退宿流程 维修流程 卫生检查 违纪考核 门禁管理 库房管理 入住数据分析统计 调宿申请 费用管理 能耗管理 | 宿舍管理房间管理 宿舍入住申请流程 退宿…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 7 数据行: 决 议 事 项 | 一、房间管理 1.宿舍房间管理包括区域精细管理(级别、厂处)、楼栋管理、楼层管理、房间管理、房间类型（单人/双人）管理。 2.房间主要信息包括房间编号、房间类型（单人/双人）、房间状态（已住、空置、1/2）、房内资产明细（同步移动端展示）等。在房间管理页面选择对应楼栋可以看到整栋楼所有房间状态。共15栋（园区4栋，生活区10栋，来村1栋） 入住管理 1.对接晋钢E家同步人员信息接口，生成系统账户。 2.员工通过晋钢E家进入宿舍管理页面。 3.员工选择住宿申请-->填写个人基本资料及选项（吸烟/不吸烟）（打呼、不打呼）等-->提交。 4.在综合平台宿舍业务界面生成住宿申请流程，福利事务管理员根据员工的家庭住址以及员工的职级来判…
+[P06-BP0204] stratum=table_transition doc_type=DB
+  L(table_row) sec=宿舍管理 > ISM_DORM_AREA
+    表头: 1、 | 表名 | ISM_DORM_AREA | 表的描述 | 宿舍区域 | | | | 数据行: | COMPANY_ID | VARCHAR2 | | 100 | | Y | 授权公司 |
+  R(table_row) sec=宿舍管理 > ISM_DORM_ROOM_TYPE
+    2、 | 表名 | ISM_DORM_ROOM_TYPE | 表的描述 | 宿舍房间类型 | | | |
+[P06-BP0205] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 待 决 事 项 | | | | | |
+  R(paragraph) sec=<same>
+    山西晋城钢铁控股集团有限公司：
+[P06-BP0206] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 时间 | 2025-4-21 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+[P06-BP0207] stratum=table_transition doc_type=DB
+  L(table_row) sec=积分管理 > ISM_POINT_OUTPUT_CONFIG
+    表头: 5、 | 表名 | ISM_POINT_OUTPUT_CONFIG | 表的描述 | 商品兑换记录表(小牛券) | | | 数据行: | COMPANY_ID | VARCHAR2 | | 100 | | Y | 授权公司
+  R(table_row) sec=积分管理 > ISM_POINT_USER_POINTS
+    6、 | 表名 | ISM_POINT_USER_POINTS | 表的描述 | 用户积分表 | | |
+[P06-BP0208] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8 数据行: 参 加 人 员 | 总务处：赵处、王处、张伟男 | 总务处：赵处、王处、张伟男 | 总务处：赵处、王处、张伟男 | 胡剑秋 | 胡剑秋 | 胡剑秋
+[P06-BP0209] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 内部接口设计 > 酒店管理模块
+    酒店管理模块
+  R(heading) sec=1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口清单
+    接口清单
+[P06-BP0210] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    晋钢综合服务一体化需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 7
+[P06-BP0211] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 租赁管理模块 > 租赁合同管理 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P06-BP0212] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5 数据行: 时间 | 2025-4-14 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+[P06-BP0213] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 酒店经营数据接口
+    },
+  R(paragraph) sec=<same>
+    {
+[P06-BP0214] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.6 体育馆管理模块 121 > 3.6.6 会员申请管理 138
+    3.6.6 会员申请管理 138
+  R(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.6 体育馆管理模块 121 > 3.6.7 门禁权限管理 142
+    3.6.7 门禁权限管理 142
+[P06-BP0215] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 调宿申请管理 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 申请ID | 输入框 | ID | 是 | 未缴纳押金的宿舍申请，可作废
+  R(paragraph) sec=<same>
+    处理逻辑
+[P06-BP0216] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=(none)
+    山西晋城钢铁综合服务一体化管理平台项目
+  R(paragraph) sec=<same>
+    详细设计规格书
+[P06-BP0217] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待酒店预定申请审批结果接口
+    }
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 活动赛事预约申请接口
+    活动赛事预约申请接口
+[P06-BP0218] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 积分管理模块 > 积分商城管理 > 逻辑处理
+    调用小牛餐饮与超市管理系统-制券接口，根据商品信息生成一种品类抵扣券。
+  R(paragraph) sec=<same>
+    启/停用
+[P06-BP0219] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.3 宿舍管理模块 5 > 3.3.1 功能描述 5
+    3.3.1 功能描述 5
+  R(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.3 宿舍管理模块 5 > 3.3.2 房间类型管理 5
+    3.3.2 房间类型管理 5
+[P06-BP0220] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.8 巡检管理模块 195 > 3.8.6 巡检计划管理 209
+    3.8.6 巡检计划管理 209
+  R(heading) sec=3 晋钢综合服务一体化子系统设计 4 > 3.8 巡检管理模块 195 > 3.8.7 巡检任务 213
+    3.8.7 巡检任务 213
+[P06-BP0221] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 参 加 人 员 | 总务处：赵处、王处 | 总务处：赵处、王处 | 总务处：赵处、王处 | 胡剑秋、袁世箫、黄宇超 | 胡剑秋、袁世箫、黄宇超 | 胡剑秋、袁世箫、黄宇超
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3 数据行: 讨 论 事 项 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。 | 1、供应链业务。
+[P06-BP0222] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 调宿申请管理 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(paragraph) sec=<same>
+    长期未缴纳押金自动关闭
+[P06-BP0223] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=晋钢综合服务一体化子系统设计 > 接待管理模块 > 申请台账查询 > 画面设计
+    搜索区：支持模糊查询功能，可以对当前列表中的申请人、申请时间、状态进行模糊查询。
+  R(heading) sec=晋钢综合服务一体化子系统设计 > 接待管理模块 > 申请台账查询 > 数据库表
+    数据库表
+[P06-BP0224] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 外部接口设计
+    外部接口设计
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统
+    综合服务一体化子系统
+[P06-BP0225] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    晋钢综合服务一体化需求讨论会议纪要
+  R(table_row) sec=<same>
+    主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8

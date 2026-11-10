@@ -1,0 +1,318 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "projects": [
+    {
+      "project_id": "P01",
+      "source_dir": "镔鑫智慧安全二期",
+      "split": "development",
+      "document_count": 7,
+      "block_count": 4790,
+      "unit_count": 10574,
+      "approx_token_count": 194119,
+      "character_count": 338382,
+      "paragraph_count": 3951,
+      "table_count": 839,
+      "table_row_count": 6623,
+      "heading_count": 1512,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 1,
+        "Research Report": 1,
+        "SRS": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [],
+      "boundary_sample_count": 0,
+      "qa_draft_count": 0,
+      "annotation_status": "GOLD_READY",
+      "boundary_gold_count": 4783,
+      "boundary_gold_labels": {
+        "BREAK": 1065,
+        "NOISE": 325,
+        "NO_BREAK": 3393
+      },
+      "qa_keep_count": 27
+    },
+    {
+      "project_id": "P02",
+      "source_dir": "晋钢安全预警平台",
+      "split": "development",
+      "document_count": 8,
+      "block_count": 4849,
+      "unit_count": 10797,
+      "approx_token_count": 224422,
+      "character_count": 369334,
+      "paragraph_count": 3863,
+      "table_count": 986,
+      "table_row_count": 6934,
+      "heading_count": 1247,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 4,
+        "Research Report": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 36,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P03",
+      "source_dir": "水情应急预案各板块可视化",
+      "split": "validation",
+      "document_count": 7,
+      "block_count": 3075,
+      "unit_count": 5193,
+      "approx_token_count": 103562,
+      "character_count": 152957,
+      "paragraph_count": 2663,
+      "table_count": 412,
+      "table_row_count": 2530,
+      "heading_count": 670,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 1,
+        "Proposal": 1,
+        "SRS": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 36,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P04",
+      "source_dir": "天津钢管设备管理系统",
+      "split": "locked_test",
+      "document_count": 17,
+      "block_count": 4180,
+      "unit_count": 8532,
+      "approx_token_count": 301754,
+      "character_count": 399412,
+      "paragraph_count": 3706,
+      "table_count": 474,
+      "table_row_count": 4826,
+      "heading_count": 980,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 11,
+        "Other": 1,
+        "SRS": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 7,
+      "substantive_skips": [],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 36,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P05",
+      "source_dir": "津西钢铁设备管理系统项目",
+      "split": "locked_test",
+      "document_count": 17,
+      "block_count": 3886,
+      "unit_count": 8166,
+      "approx_token_count": 228920,
+      "character_count": 312032,
+      "paragraph_count": 3422,
+      "table_count": 464,
+      "table_row_count": 4744,
+      "heading_count": 993,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 11,
+        "Other": 1,
+        "SRS": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 12,
+      "substantive_skips": [],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 36,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P06",
+      "source_dir": "综合服务一体化管理平台",
+      "split": "locked_test",
+      "document_count": 12,
+      "block_count": 5623,
+      "unit_count": 10122,
+      "approx_token_count": 255278,
+      "character_count": 390369,
+      "paragraph_count": 4865,
+      "table_count": 758,
+      "table_row_count": 5257,
+      "heading_count": 673,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 9
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [
+        {
+          "file": "晋钢综合服务一体化管理平台-技术协议.pdf",
+          "reason": "unsupported_pdf"
+        },
+        {
+          "file": "综合服务一体化管理平台-需求规格书.pdf",
+          "reason": "unsupported_pdf"
+        }
+      ],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 33,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P07",
+      "source_dir": "财务人资供应链及基础设施建设",
+      "split": "locked_test",
+      "document_count": 8,
+      "block_count": 1564,
+      "unit_count": 2496,
+      "approx_token_count": 59925,
+      "character_count": 74499,
+      "paragraph_count": 1392,
+      "table_count": 172,
+      "table_row_count": 1104,
+      "heading_count": 323,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Meeting": 4,
+        "Proposal": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [
+        {
+          "file": "财务人资供应链及基础设施建设-技术协议v1.1.pdf",
+          "reason": "unsupported_pdf"
+        },
+        {
+          "file": "财务人资供应链及基础设施建设-需求规格书（双方签字).pdf",
+          "reason": "unsupported_pdf"
+        }
+      ],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 26,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P08",
+      "source_dir": "烟台华新-能源管理",
+      "split": "locked_test",
+      "document_count": 5,
+      "block_count": 1206,
+      "unit_count": 4369,
+      "approx_token_count": 123307,
+      "character_count": 184181,
+      "paragraph_count": 1008,
+      "table_count": 198,
+      "table_row_count": 3361,
+      "heading_count": 472,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 2,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [
+        {
+          "file": "第二组-能源管理-调研总结.pptx",
+          "reason": "unsupported_pptx"
+        }
+      ],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 19,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P09",
+      "source_dir": "烟台华新-环保管理",
+      "split": "locked_test",
+      "document_count": 4,
+      "block_count": 1606,
+      "unit_count": 5324,
+      "approx_token_count": 133710,
+      "character_count": 215814,
+      "paragraph_count": 1277,
+      "table_count": 329,
+      "table_row_count": 4047,
+      "heading_count": 725,
+      "document_types": {
+        "API": 1,
+        "DB": 1,
+        "Detailed Design": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 1,
+      "substantive_skips": [
+        {
+          "file": "第二组-环保管理-调研总结.pptx",
+          "reason": "unsupported_pptx"
+        }
+      ],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 16,
+      "annotation_status": "ANNOTATION_PENDING"
+    },
+    {
+      "project_id": "P10",
+      "source_dir": "巨能特钢智慧管控一体化平台",
+      "split": "locked_test",
+      "document_count": 4,
+      "block_count": 1062,
+      "unit_count": 1408,
+      "approx_token_count": 52903,
+      "character_count": 58549,
+      "paragraph_count": 1000,
+      "table_count": 62,
+      "table_row_count": 408,
+      "heading_count": 326,
+      "document_types": {
+        "Meeting": 1,
+        "Proposal": 1,
+        "SRS": 1,
+        "Technical Agreement": 1
+      },
+      "converted_source_count": 0,
+      "substantive_skips": [],
+      "boundary_sample_count": 300,
+      "qa_draft_count": 24,
+      "annotation_status": "ANNOTATION_PENDING"
+    }
+  ],
+  "totals": {
+    "document_count": 89,
+    "block_count": 31841,
+    "unit_count": 66981,
+    "approx_token_count": 1677900,
+    "character_count": 2495529,
+    "paragraph_count": 27147,
+    "table_count": 4694,
+    "table_row_count": 39834,
+    "heading_count": 7921,
+    "converted_source_count": 20,
+    "boundary_sample_count": 2700,
+    "qa_draft_count": 262
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P09",
+  "split": "locked_test",
+  "source_dir": "烟台华新-环保管理",
+  "processed": [
+    {
+      "file": "模块8-环保管理-技术协议-1218.docx",
+      "suffix": ".docx",
+      "sha256": "fb09ad6d748c774dc5c5a5e7ea8be27aa401ceb3d8e58975461c77df74df262c",
+      "bytes": 1663265,
+      "document_type": "Technical Agreement",
+      "source_mode": "original"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+      "suffix": ".docx",
+      "sha256": "f559a3b34c868ea7f0ede5d526a90edc55f8786c83efadf90418a509b21aaf10",
+      "bytes": 5551997,
+      "document_type": "DB",
+      "source_mode": "converted_copy",
+      "converted_file": "P09/烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-数据库设计.docx",
+      "converted_sha256": "06be5ad5fedbcdfaab22a0a860932844e4a3bb8696af8f8395071d4d34c2f1be",
+      "conversion_reason": "docx_parse_error:KeyError"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统接口设计.docx",
+      "suffix": ".docx",
+      "sha256": "481b7f8d215e651e57bc28d7b90d4bc8c63d48aa1a33c4980c06e3b7dd1157f5",
+      "bytes": 180171,
+      "document_type": "API",
+      "source_mode": "original"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-环保管理-详细设计规格-系统需求设计.docx",
+      "suffix": ".docx",
+      "sha256": "fe677b9711a40253cf1f5d06d18f6425e9e6bf7b633cf691e221d676b3f4842c",
+      "bytes": 28517470,
+      "document_type": "Detailed Design",
+      "source_mode": "original"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "第二组-环保管理-调研总结.pptx",
+      "reason": "unsupported_pptx"
+    }
+  ],
+  "document_count": 4,
+  "block_count": 1606,
+  "approx_token_count": 133710
+}

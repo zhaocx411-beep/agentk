@@ -1,0 +1,308 @@
+[P06-QA001] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250415.docx
+  Q: 0415需求调研会议的时间是什么？
+  A: 2025-4-15
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250415:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250415:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-15 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3
+数据行: 时间 | 2025-4-15 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA002] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx
+  Q: 本次需求调研会议的时间是什么？
+  A: 2025-4-16
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250416 上午:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250416 上午:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-16 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 3
+数据行: 时间 | 2025-4-16 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA003] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250417.docx
+  Q: 0417需求调研会议的时间是什么？
+  A: 2025-4-17
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250417:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250417:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-17 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 7
+数据行: 时间 | 2025-4-17 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA004] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250418.docx
+  Q: 0418需求调研会议的时间是什么？
+  A: 2025-4-18
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250418:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250418:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-18 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 6
+数据行: 时间 | 2025-4-18 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA005] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250419.docx
+  Q: 0419需求调研会议的时间是什么？
+  A: 2025-4-19
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250419:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250419:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-19 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 8
+数据行: 时间 | 2025-4-19 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA006] type=Meeting fact doc=综合服务一体化管理平台-需求调研会议纪要-20250420.docx
+  Q: 0420需求调研会议的时间是什么？
+  A: 2025-4-20
+  parent_block=综合服务一体化管理平台-需求调研会议纪要-20250420:B0002
+  unit=综合服务一体化管理平台-需求调研会议纪要-20250420:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-20 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 2
+数据行: 时间 | 2025-4-20 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none
+[P06-QA007] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 卫生积分增加接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0020 block_type=paragraph
+  heading=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA008] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 酒店预订单接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0058 block_type=paragraph
+  heading=1. 概述 1 > 内部接口设计 > 酒店管理模块 > 接口定义 > 酒店预订单接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA009] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 进出体育馆记录接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0116
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0116 block_type=paragraph
+  heading=1. 概述 1 > 内部接口设计 > 业财一体化模块 > 接口定义 > 进出体育馆记录接口
+  span: 1）请求方式：HTTP， GET方法
+  unit_text: 1）请求方式：HTTP， GET方法
+  checks_failed: none
+[P06-QA010] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 组织架构信息接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0156 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 组织架构信息接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA011] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 人员信息接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0203 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 人员信息接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA012] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 审批过程查询接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0258 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 审批过程查询接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA013] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 接待车辆申请接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0304 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA014] type=API doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 接待车辆申请审批结果接口使用什么请求方式？
+  A: HTTP
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0343 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 综合服务一体化子系统 > 接口定义 > 接待车辆申请审批结果接口
+  span: 1）请求方式：HTTP， POST方法
+  unit_text: 1）请求方式：HTTP， POST方法
+  checks_failed: none
+[P06-QA015] type=API parameter doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 卫生积分增加接口中参数 personList 的类型、取值范围和必填要求是什么？
+  A: 类型为Array，必填
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R002 block_type=table_row
+  heading=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+  span: personList | Array | | 是 | 增加积分人员数组
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: personList | Array |  | 是 | 增加积分人员数组
+  checks_failed: answer_in_span
+[P06-QA016] type=API parameter doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 卫生积分增加接口中参数 +personNo 的类型、取值范围和必填要求是什么？
+  A: 类型为String，必填
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0023#R003 block_type=table_row
+  heading=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+  span: +personNo | String | | 是 | 人员工号
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: +personNo | String |  | 是 | 人员工号
+  checks_failed: answer_in_span
+[P06-QA017] type=API parameter doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 卫生积分增加接口中参数 code 的类型、取值范围和必填要求是什么？
+  A: 类型为Int，必填
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0038
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0038#R002 block_type=table_row
+  heading=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+  span: code | Int | | 是 | 返回状态码，2000是成功，其余是失败
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: code | Int |  | 是 | 返回状态码，2000是成功，其余是失败
+  checks_failed: answer_in_span
+[P06-QA018] type=API parameter doc=综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx
+  Q: 卫生积分增加接口中参数 message 的类型、取值范围和必填要求是什么？
+  A: 类型为String，取值范围为最大100个字符，必填
+  parent_block=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0038
+  unit=综合服务一体化管理平台-详细设计规格接口文档 V0.4:B0038#R003 block_type=table_row
+  heading=1. 概述 1 > 内部接口设计 > 积分管理模块 > 接口定义 > 卫生积分增加接口
+  span: message | String | 最大100个字符 | 是 | 返回提示说明
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: message | String | 最大100个字符 | 是 | 返回提示说明
+  checks_failed: answer_in_span
+[P06-QA019] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_DEPARTMENT_INFO 表用于记录什么信息？
+  A: 组织架构信息表
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0013
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0013#R001 block_type=table_row
+  heading=通用 > ISM_DEPARTMENT_INFO
+  span: 1、 | 表名 | ISM_DEPARTMENT_INFO | 表的描述 | 组织架构信息表 | | |
+  unit_text: 1、 | 表名 | ISM_DEPARTMENT_INFO | 表的描述 | 组织架构信息表 |  |  | 
+  checks_failed: none
+[P06-QA020] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PERSON_INFO 表用于记录什么信息？
+  A: 员工信息表
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0014
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0014#R001 block_type=table_row
+  heading=通用 > ISM_PERSON_INFO
+  span: 2、 | 表名 | ISM_PERSON_INFO | 表的描述 | 员工信息表 | | |
+  unit_text: 2、 | 表名 | ISM_PERSON_INFO | 表的描述 | 员工信息表 |  |  | 
+  checks_failed: none
+[P06-QA021] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PERSON_INFO_RECORD 表用于记录什么信息？
+  A: 员工信息变动表
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0015
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0015#R001 block_type=table_row
+  heading=通用 > ISM_PERSON_INFO_RECORD
+  span: 3、 | 表名 | ISM_PERSON_INFO_RECORD | 表的描述 | 员工信息变动表 | | |
+  unit_text: 3、 | 表名 | ISM_PERSON_INFO_RECORD | 表的描述 | 员工信息变动表 |  |  | 
+  checks_failed: none
+[P06-QA022] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PERSON_FAMILY_INFO 表用于记录什么信息？
+  A: 员工家属信息表
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0016
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0016#R001 block_type=table_row
+  heading=通用 > ISM_PERSON_FAMILY_INFO
+  span: 4、 | 表名 | ISM_PERSON_FAMILY_INFO | 表的描述 | 员工家属信息表 | | |
+  unit_text: 4、 | 表名 | ISM_PERSON_FAMILY_INFO | 表的描述 | 员工家属信息表 |  |  | 
+  checks_failed: none
+[P06-QA023] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PERSON_FAMILY_RELATIONSHIP 表用于记录什么信息？
+  A: 员工家属关联关系表
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0017
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0017#R001 block_type=table_row
+  heading=通用 > ISM_PERSON_FAMILY_RELATIONSHIP
+  span: 5、 | 表名 | ISM_PERSON_FAMILY_RELATIONSHIP | 表的描述 | 员工家属关联关系表 | | |
+  unit_text: 5、 | 表名 | ISM_PERSON_FAMILY_RELATIONSHIP | 表的描述 | 员工家属关联关系表 |  |  | 
+  checks_failed: none
+[P06-QA024] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PAYMENT_WECHAT 表用于记录什么信息？
+  A: 微信支付订单
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0018
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0018#R001 block_type=table_row
+  heading=通用 > ISM_PAYMENT_WECHAT
+  span: 6、 | 表名 | ISM_PAYMENT_WECHAT | 表的描述 | 微信支付订单 | | |
+  unit_text: 6、 | 表名 | ISM_PAYMENT_WECHAT | 表的描述 | 微信支付订单 |  |  | 
+  checks_failed: none
+[P06-QA025] type=Feature doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 画面设计支持或提供什么能力？
+  A: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0127
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0127 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 房间类型管理 > 画面设计
+  span: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据
+  unit_text: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据；
+  checks_failed: none
+[P06-QA026] type=Process doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 项目背景描述了什么实现或处理过程？
+  A: 当前后勤服务涵盖餐饮超市、员工宿舍、体育场馆、物业巡检、商铺租赁及分离公司接待等多元化场景，但各业务模块的信息化水平参差不齐，流程分散化、数据孤岛化、业财等问题日益凸显
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0102
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0102 block_type=paragraph
+  heading=概述 > 项目背景
+  span: 当前后勤服务涵盖餐饮超市、员工宿舍、体育场馆、物业巡检、商铺租赁及分离公司接待等多元化场景，但各业务模块的信息化水平参差不齐，流程分散化、数据孤岛化、业财等问题日益凸显
+  unit_text: 随着晋钢集团业务规模持续扩大及管理精细化需求不断提升，总务处后勤管理业务面临多维度挑战。当前后勤服务涵盖餐饮超市、员工宿舍、体育场馆、物业巡检、商铺租赁及分离公司接待等多元化场景，但各业务模块的信息化水平参差不齐，流程分散化、数据孤岛化、业财等问题日益凸显。传统管理模式已难以满足高效协同、降本增效、风险可控的现代化管理需求，亟需通过建设‌综合服务一体化管理平台‌，打通全业务流程闭环，实现资源集约化、服务标准化、业财一体化的数字化转型目标。
+  checks_failed: none
+[P06-QA027] type=Process doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 子系统功能描述描述了什么实现或处理过程？
+  A: 宿舍管理涵盖员工从入住到退宿的全流程，包括维修、能耗计费、卫生检查、库房等
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0116
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0116 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 子系统功能描述
+  span: 宿舍管理涵盖员工从入住到退宿的全流程，包括维修、能耗计费、卫生检查、库房等
+  unit_text: 综合服务一体化平台包括酒店管理、接待管理、体育馆管理、宿舍管理、租赁管理、巡检管理、积分管理、业财一体台账模块。酒店管理主要维护酒店库房信息、停车场权限等，并接收接待管理模块的酒店预订信息并抛送酒店系统；接待管理主要维护接待申请信息包括接待车辆、酒店预订、桌餐预订、会议室预约、餐券发放；体育馆管理主要维护场馆信息、会员信息、场地预约、课程设置、器材租赁；宿舍管理涵盖员工从入住到退宿的全流程，包括维修、能耗计费、卫生检查、库房等；租赁管理维护公寓与商铺租赁合同、能耗计费、违章考核等信息；巡检管理包括巡检点管理、巡检计划、巡检记录、保修工单；积分管理设置积分规则并进行积分消费；业财一体台账对接食堂与超市消费系统并将账目信息抛至ERP、金蝶。
+  checks_failed: none
+[P06-QA028] type=Process doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 画面设计描述了什么实现或处理过程？
+  A: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0127
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0127 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 房间类型管理 > 画面设计
+  span: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据
+  unit_text: 功能操作区：具备三个功能，新增、修改、删除，可以对下面列表区域的信息进行相应操作，其中列表只展示启用状态的数据；
+  checks_failed: none
+[P06-QA029] type=Process doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 逻辑处理描述了什么实现或处理过程？
+  A: 调用晋刚E家-查询审批流程节点详情接口，根据E家审批单号查询审批流程节点详情
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0218
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0218 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 入住申请管理 > 逻辑处理
+  span: 调用晋刚E家-查询审批流程节点详情接口，根据E家审批单号查询审批流程节点详情
+  unit_text: 调用晋刚E家-查询审批流程节点详情接口，根据E家审批单号查询审批流程节点详情；
+  checks_failed: none
+[P06-QA030] type=Feature doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 逻辑处理支持或提供什么能力？
+  A: 押金支付成功满一年微信支付不支持退款，需调用晋钢E家-退押金审批接口，抛送退款申请
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0251
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0251 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 宿舍管理模块 > 退宿申请管理 > 逻辑处理
+  span: 押金支付成功满一年微信支付不支持退款，需调用晋钢E家-退押金审批接口，抛送退款申请
+  unit_text: 押金支付成功满一年微信支付不支持退款，需调用晋钢E家-退押金审批接口，抛送退款申请；
+  checks_failed: none
+[P06-QA031] type=Feature doc=综合服务一体化管理平台-详细设计规格书 V0.4.docx
+  Q: 功能描述支持或提供什么能力？
+  A: 维护体育馆场馆基础信息，内部员工自动开通体育馆会员，外部人员体育馆与游泳馆开通会员均需购买，并具备课程管理、赛事活动预约、器材租赁功能
+  parent_block=综合服务一体化管理平台-详细设计规格书 V0.4:B0943
+  unit=综合服务一体化管理平台-详细设计规格书 V0.4:B0943 block_type=paragraph
+  heading=晋钢综合服务一体化子系统设计 > 体育馆管理模块 > 功能描述
+  span: 维护体育馆场馆基础信息，内部员工自动开通体育馆会员，外部人员体育馆与游泳馆开通会员均需购买，并具备课程管理、赛事活动预约、器材租赁功能
+  unit_text: 维护体育馆场馆基础信息，内部员工自动开通体育馆会员，外部人员体育馆与游泳馆开通会员均需购买，并具备课程管理、赛事活动预约、器材租赁功能。
+  checks_failed: none
+[P06-QA032] type=Database doc=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx
+  Q: ISM_PAYMENT_REFUND_WECHAT 表用于记录什么信息？
+  A: 微信支付退款
+  parent_block=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0019
+  unit=综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4:B0019#R001 block_type=table_row
+  heading=通用 > ISM_PAYMENT_REFUND_WECHAT
+  span: 7、 | 表名 | ISM_PAYMENT_REFUND_WECHAT | 表的描述 | 微信支付退款 | | |
+  unit_text: 7、 | 表名 | ISM_PAYMENT_REFUND_WECHAT | 表的描述 | 微信支付退款 |  |  | 
+  checks_failed: none
+[P06-QA033] type=Meeting fact doc=综合服务一体化管理平台会议纪要总和-20250414.docx
+  Q: 0414需求调研会议的时间是什么？
+  A: 2025-4-14
+  parent_block=综合服务一体化管理平台会议纪要总和-20250414:B0002
+  unit=综合服务一体化管理平台会议纪要总和-20250414:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025-4-14 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  unit_text: 表头: 主题 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 晋钢综合服务一体化项目需求调研 | 页数 | 5
+数据行: 时间 | 2025-4-14 | 记录人： | 胡剑秋 | 地点 | 晋钢集团 | 晋钢集团
+  checks_failed: none

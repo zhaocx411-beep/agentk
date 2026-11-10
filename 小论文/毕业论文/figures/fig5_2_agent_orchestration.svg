@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <defs>
+    <marker id="arr52" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2b5c8f"/>
+    </marker>
+    <marker id="arr52_org" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d95f02"/>
+    </marker>
+    <marker id="arr52_grn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1b9e77"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 5-2 详细设计多智能体父子会话层级编排与可追溯 rag_query 动态粒度交互流程</text>
+
+  <!-- Left Side: Hierarchical Multi-Agent Tree -->
+  <rect x="30" y="52" width="510" height="445" rx="8" fill="#f8fafd" stroke="#2b5c8f" stroke-width="1.5"/>
+  <text x="285" y="76" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b3b5c">多智能体父子会话层级调度树（Session Tree）</text>
+
+  <!-- Root Coordinator -->
+  <rect x="145" y="92" width="280" height="68" rx="6" fill="#2b5c8f"/>
+  <text x="285" y="116" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#ffffff">顶层协调智能体（detailed_design_agent）</text>
+  <text x="285" y="135" text-anchor="middle" font-size="10.5" fill="#e6f0fa">主会话 S_root：解析任务 → 规划目录 → 调度分章生成</text>
+  <text x="285" y="151" text-anchor="middle" font-size="10" fill="#ffd966">调用 session_create / session_query 派生子会话</text>
+
+  <!-- Level 2: Chapter & Module Agents -->
+  <line x1="210" y1="160" x2="135" y2="200" stroke="#2b5c8f" stroke-width="1.6" marker-end="url(#arr52)"/>
+  <line x1="285" y1="160" x2="285" y2="200" stroke="#2b5c8f" stroke-width="1.6" marker-end="url(#arr52)"/>
+  <line x1="360" y1="160" x2="435" y2="200" stroke="#2b5c8f" stroke-width="1.6" marker-end="url(#arr52)"/>
+
+  <rect x="50" y="204" width="160" height="82" rx="6" fill="#ffffff" stroke="#2b5c8f" stroke-width="1.4"/>
+  <text x="130" y="225" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1b3b5c">章节概述智能体</text>
+  <text x="130" y="242" text-anchor="middle" font-size="10" fill="#444">overview_agent (S_sub1)</text>
+  <text x="130" y="259" text-anchor="middle" font-size="9.5" fill="#666">负责：第1–2章总体架构与综述</text>
+  <text x="130" y="276" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2b5c8f">路由：Parent-Only (~212 tok)</text>
+
+  <rect x="220" y="204" width="145" height="82" rx="6" fill="#ffffff" stroke="#d95f02" stroke-width="1.4"/>
+  <text x="292" y="225" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#8c3b00">接口设计智能体</text>
+  <text x="292" y="242" text-anchor="middle" font-size="10" fill="#444">interface_agent (S_sub2)</text>
+  <text x="292" y="259" text-anchor="middle" font-size="9.5" fill="#666">负责：对外与内部 API 契约表</text>
+  <text x="292" y="276" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#d95f02">路由：α=0.35 + Hybrid</text>
+
+  <rect x="375" y="204" width="150" height="82" rx="6" fill="#ffffff" stroke="#1b9e77" stroke-width="1.4"/>
+  <text x="450" y="225" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0f5c44">数据库与核查智能体</text>
+  <text x="450" y="242" text-anchor="middle" font-size="10" fill="#444">database / constraint (S_sub3)</text>
+  <text x="450" y="259" text-anchor="middle" font-size="9.5" fill="#666">负责：数据字典与非功能指标</text>
+  <text x="450" y="276" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1b9e77">路由：α=0.0 + Child-Only</text>
+
+  <!-- Workflow stages inside Sub-Sessions -->
+  <rect x="50" y="315" width="475" height="162" rx="6" fill="#ffffff" stroke="#888" stroke-dasharray="4,3"/>
+  <text x="287" y="336" text-anchor="middle" font-size="12" font-weight="bold" fill="#222">四阶段文档生成与编译闭环工作流</text>
+
+  <rect x="65" y="350" width="102" height="54" rx="4" fill="#eef4fa" stroke="#2b5c8f"/>
+  <text x="116" y="372" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1b3b5c">1. 工作区初始化</text>
+  <text x="116" y="390" text-anchor="middle" font-size="9.5" fill="#444">创建目录与大纲</text>
+
+  <rect x="180" y="350" width="102" height="54" rx="4" fill="#fff4eb" stroke="#d95f02"/>
+  <text x="231" y="372" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#8c3b00">2. 按角色精准检索</text>
+  <text x="231" y="390" text-anchor="middle" font-size="9.5" fill="#444">调用 rag_query</text>
+
+  <rect x="295" y="350" width="102" height="54" rx="4" fill="#eefaf5" stroke="#1b9e77"/>
+  <text x="346" y="372" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0f5c44">3. 分章源码撰写</text>
+  <text x="346" y="390" text-anchor="middle" font-size="9.5" fill="#444">生成 .typ 与图表</text>
+
+  <rect x="410" y="350" width="102" height="54" rx="4" fill="#f3f0fa" stroke="#7570b3"/>
+  <text x="461" y="372" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#4a448c">4. 编译与溯源核验</text>
+  <text x="461" y="390" text-anchor="middle" font-size="9.5" fill="#444">Typst 编译 PDF</text>
+
+  <text x="287" y="432" text-anchor="middle" font-size="10.5" fill="#333">子会话隔离收益：底层数千行表结构检索仅留在 S_sub3 内（单次 Top-1 仅 ~48.3 tokens），</text>
+  <text x="287" y="452" text-anchor="middle" font-size="10.5" fill="#333">向主会话 S_root 仅返回章节落盘路径与完成状态，彻底消除长上下文中间信息迷失。</text>
+
+  <!-- Right Side: SEAC + MAS-DRG rag_query Service -->
+  <rect x="570" y="52" width="360" height="445" rx="8" fill="#fffaf4" stroke="#d95f02" stroke-width="1.6"/>
+  <text x="750" y="76" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#8c3b00">rag_query 角色感知知识检索服务</text>
+
+  <rect x="592" y="94" width="316" height="72" rx="6" fill="#ffffff" stroke="#d95f02" stroke-width="1.3"/>
+  <text x="750" y="114" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#8c3b00">输入接口请求 Schema</text>
+  <text x="605" y="133" font-size="10" fill="#222">• query: "MA_EQ 表用于记录什么信息？"</text>
+  <text x="605" y="150" font-size="10" fill="#222">• agent_role: "database_agent" | top_k: 5</text>
+
+  <line x1="750" y1="166" x2="750" y2="192" stroke="#d95f02" stroke-width="1.6" marker-end="url(#arr52_org)"/>
+
+  <rect x="592" y="196" width="316" height="106" rx="6" fill="#ffffff" stroke="#2b5c8f" stroke-width="1.3"/>
+  <text x="750" y="216" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1b3b5c">MAS-DRG 角色路由与 SEAC 单索引打分</text>
+  <text x="605" y="236" font-size="10" fill="#222">1. 角色查表：database_agent → (α = 0.0, Child-Only)</text>
+  <text x="605" y="254" font-size="10" fill="#222">2. 向量检索：BGE-M3 计算 S_p(P_k, q) 与 S_c(c, q)</text>
+  <text x="605" y="272" font-size="10" fill="#222">3. 层次融合：S(P_k, q) = α·S_p + (1-α)·max S_c</text>
+  <text x="605" y="290" font-size="10" fill="#222">4. 按需组装：裁剪返回子块 / 父子混合 / 完整父块</text>
+
+  <line x1="750" y1="302" x2="750" y2="328" stroke="#1b9e77" stroke-width="1.6" marker-end="url(#arr52_grn)"/>
+
+  <rect x="592" y="332" width="316" height="145" rx="6" fill="#ffffff" stroke="#1b9e77" stroke-width="1.4"/>
+  <text x="750" y="352" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0f5c44">可追溯结构化输出 Payload</text>
+  <text x="605" y="372" font-size="10" fill="#222">• rank: 1 | score: 0.894 | mode: "child_only"</text>
+  <text x="605" y="390" font-size="10" fill="#222">• source_document: "数据库说明文档.xlsx"</text>
+  <text x="605" y="408" font-size="10" fill="#222">• section_path: "基础管理 &gt; MA_EQ"</text>
+  <text x="605" y="426" font-size="10" font-weight="bold" fill="#0f5c44">• source_unit_ids: ["...数据库说明文档:B0005#R001"]</text>
+  <text x="605" y="444" font-size="10" fill="#222">• content: "[Section] 基础管理 &gt; MA_EQ</text>
+  <text x="615" y="460" font-size="10" fill="#222">表名: MA_EQ | 表的描述: 表用于记录设备信息"</text>
+
+  <!-- Cross Arrows between Left and Right -->
+  <line x1="525" y1="245" x2="590" y2="135" stroke="#d95f02" stroke-width="1.6" marker-end="url(#arr52_org)"/>
+  <line x1="590" y1="400" x2="525" y2="375" stroke="#1b9e77" stroke-width="1.6" marker-end="url(#arr52_grn)"/>
+</svg>

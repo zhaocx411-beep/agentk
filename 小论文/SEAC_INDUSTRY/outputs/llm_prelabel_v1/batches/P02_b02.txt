@@ -1,0 +1,375 @@
+[P02-BP0076] stratum=inside_table doc_type=Research Report
+  L(table_row) sec=(none)
+    表头: 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 数据行: 金恒调研/交流人员 | 郝柏、袁世箫 | 郝柏、袁世箫 | 郝柏、袁世箫
+  R(table_row) sec=<same>
+    表头: 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 数据行: 客户方/第三方人员 | 信息处处长、安环处处长、安环处办事员 | 信息处处长、安环处处长、安环处办事员 | 信息处处长、安环处处长、安环处办事员
+[P02-BP0077] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    请求信息
+  R(paragraph) sec=<same>
+    1）请求方式：POST方法
+[P02-BP0078] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控
+    该系统是通过对生产过程危险和有害因素进行辨识，运用定性或定量的统计分析方法确定其风险程度，根据设定的评定标准划分为重大风险、较大风险、一般风险、低风险，在信息系统中风险地图上用红、橙、黄、蓝进行四色标绘，形成危险因素排查辨识清单、安全风险等级管控清单，安全生产责任承诺卡、作业场所危险因素应知卡、应急处置方法应急卡，实现企业风险分区可视化管控。
+  R(heading) sec=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控 > 5.1.2.1.安全风险分析单元管理
+    5.1.2.1.安全风险分析单元管理
+[P02-BP0079] stratum=same_section_continuity doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.11.安全生产目标
+    3)安全目标评价与考核
+  R(paragraph) sec=<same>
+    根据工作计划完成及时性、完成效果评分、目标达成情况等指标对安全目标的完成情况进行评价。系统设计有定期（时间可编辑）提醒评估和考核的功能。
+[P02-BP0080] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 协力单位管理 > 协力安全检查 > 数据库表
+    序号 | 数据库表名 | 数据库表描述 | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 数据库表名 | 数据库表描述 | 备注 数据行: 1 | EHS_COOP_SAFETY_CHECK | 协力安全检查表 | 表的详细定义见“晋钢安全信息化平台项目数据库说明书”
+[P02-BP0081] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.5.安全基础管理 > 5.27.5.1.企业基础信息
+    查询企业基础信息及安全生产行政许可信息。
+  R(heading) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.5.安全基础管理 > 5.27.5.2.设备设施基础信息
+    5.27.5.2.设备设施基础信息
+[P02-BP0082] stratum=inside_table doc_type=DB
+  L(table_row) sec=设备设施 > EHS_SPECIAL_FILE_MANAGE
+    表头: 3、 | 表名 | EHS_SPECIAL_FILE_MANAGE | 表的描述 | 特种设备文件表 | | | | 数据行: | SPECIAL_DEVICE_ID | NVARCHAR2 | 外键 | 40 | | Y | 特种设备ID |
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | EHS_SPECIAL_FILE_MANAGE | 表的描述 | 特种设备文件表 | | | | 数据行: | FILE_ID | NVARCHAR2 | | 40 | | Y | 文件ID |
+[P02-BP0083] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.3.安全培训 > 5.27.3.1.培训任务
+    企业员工在此功能中查看公司安排的线下培训任务，可以查看到参加培训任务的地点、时间、主题、讲师等信息。
+  R(heading) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.3.安全培训 > 5.27.3.2.学习任务
+    5.27.3.2.学习任务
+[P02-BP0084] stratum=table_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    1）返回信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P02-BP0085] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 法律法规 > 功能描述
+    识别完成后主管领导对结果进行确认；对于一般性条款可不做编辑，对于重要条款需要补充支撑材料；如果不符合则联动不符合项管理；
+  R(heading) sec=系统设计 > 法律法规 > 法律法规清单
+    法律法规清单
+[P02-BP0086] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "error":"人员不存在，
+  R(paragraph) sec=<same>
+    oid:66033b24d5de24944e4560b01不能为空"
+[P02-BP0087] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "opinion": null,
+  R(paragraph) sec=<same>
+    "status": null
+[P02-BP0088] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败
+[P02-BP0089] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 概述
+    本文档是晋钢安全信息化平台项目与外部系统对接方面的接口设计文档。
+  R(heading) sec=1. 概述 1 > 外部接口设计
+    外部接口设计
+[P02-BP0090] stratum=same_section_continuity doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.3.隐患排查治理 > 5.1.3.2.隐患排查治理管理员端
+    展示：点击每一具体检查项可查看包括检查类别、处罚依据、检查依据、检查频率等详细信息。
+  R(paragraph) sec=<same>
+    统计分析：包含企业自查统计和企业隐患统计两类，按时间进行统计，其中企业自查统计信息包括时间、自查次数、复查次数、每日自查趋势（每天自查数量）等；企业统计信息包括时间、隐患总数、上报隐患数量、每日隐患趋势、一般隐患数量、重大隐患数量、整改完成个数及比例、突出隐患（隐患名称、发生次数）等。
+[P02-BP0091] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "senderId": "5de50017e4b0b2767b870423",
+  R(paragraph) sec=<same>
+    "params": [{ "openId": "5de50017e4b0b2767b870423",
+[P02-BP0092] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 安全培训模块 > 考试试卷管理 > 逻辑处理
+    编辑试卷
+  R(paragraph) sec=<same>
+    输入
+[P02-BP0093] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 参 加 人 员 | 委雨亭、李斌、董奎 | 委雨亭、李斌、董奎 | 委雨亭、李斌、董奎 | 谷庆、郝柏、周飞、姚鑫堃 | 谷庆、郝柏、周飞、姚鑫堃 | 谷庆、郝柏、周飞、姚鑫堃
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 讨 论 事 项 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理 | 危险作业； 风险管控； 隐患排查； 绩效考核； 相关方管理
+[P02-BP0094] stratum=inside_table doc_type=DB
+  L(table_row) sec=劳保用品管理 > EHS_LABOR_ISSUE_STANDARD_DETAIL
+    表头: 3、 | 表名 | EHS_LABOR_ISSUE_STANDARD_DETAIL | 表的描述 | 发放标准明细表 | | | 数据行: | UPDATE_USER_NO | NVARCHAR2 | | 40 | | Y | 更新人
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | EHS_LABOR_ISSUE_STANDARD_DETAIL | 表的描述 | 发放标准明细表 | | | 数据行: | COMPANY_ID | NVARCHAR2 | | 100 | | Y | 公司别
+[P02-BP0095] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 消防管理 > 消防设备设施 > 逻辑处理
+    新增/编辑
+  R(paragraph) sec=<same>
+    输入
+[P02-BP0096] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 安全生产目标 > 目标指标填报 > 画面设计
+    2、用户点击左侧安全生产目标下目标指标填报，右边动态展示年份、级别、填报名称、目标部门、下发人、下发时间、截止日期等信息。
+  R(paragraph) sec=<same>
+    功能操作区：具备一个功能，填报，可以对下面列表区域的信息进行相应操作；
+[P02-BP0097] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1
+    1. 概述 1
+  R(heading) sec=1. 概述 1 > 2. 外部接口设计 1
+    2. 外部接口设计 1
+[P02-BP0098] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.5.安全基础管理
+    企业基础信息、安全生产行政许可、设备设施基础信息、相关方单位管理等查询。
+  R(heading) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.5.安全基础管理 > 5.27.5.1.企业基础信息
+    5.27.5.1.企业基础信息
+[P02-BP0099] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 安全培训模块 > 考务管理 > 逻辑处理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 考试形式 | 下拉框 | 字符串，仅线上、线下，数据字典维护。 | |
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 考试开始时间 | 时间选择框 | 字符串。 | 是 |
+[P02-BP0100] stratum=inside_table doc_type=API
+  L(table_row) sec=(none)
+    文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史
+  R(table_row) sec=<same>
+    表头: 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 数据行: 变更日期 | 新版本号 | 标志 | 变更概要 | 编写人 | 审核人
+[P02-BP0101] stratum=inside_table doc_type=DB
+  L(table_row) sec=安全培训 > EHS_TRAIN_EXECUTE
+    表头: 9、 | 表名 | EHS_TRAIN_EXECUTE | 表的描述 | 培训实施表 | | | | 数据行: | SIGN_FILE | NVARCHAR2 | | 100 | | N | 签到图片 |
+  R(table_row) sec=<same>
+    表头: 9、 | 表名 | EHS_TRAIN_EXECUTE | 表的描述 | 培训实施表 | | | | 数据行: | TRAIN_FILE | NVARCHAR2 | | 100 | | N | 培训资料 |
+[P02-BP0102] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    }
+  R(paragraph) sec=<same>
+    失败返回信息：
+[P02-BP0103] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 参 加 人 员 | 用户单位 | 用户单位 | 用户单位 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司 | 江苏金恒信息科技股份有限公司
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 参 加 人 员 | 委雨亭 | 委雨亭 | 委雨亭 | 郝柏 | 郝柏 | 郝柏
+[P02-BP0104] stratum=inside_table doc_type=DB
+  L(table_row) sec=安全资质管理-文件 > EHS_SAFETY_MANAGER
+    表头: 4、 | 表名 | EHS_SAFETY_MANAGER | 表的描述 | 专职安全管理人员管理表 | | | 数据行: | GENDER | NVARCHAR2 | | 10 | | Y | 性别
+  R(table_row) sec=<same>
+    表头: 4、 | 表名 | EHS_SAFETY_MANAGER | 表的描述 | 专职安全管理人员管理表 | | | 数据行: | POST | NVARCHAR2 | | 50 | | N | 岗位
+[P02-BP0105] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.1.安全风险管控 > 5.27.1.3.设备设施清单
+    手机端展示设备设施清单，清单内容由PC端导入或上传
+  R(heading) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.1.安全风险管控 > 5.27.1.4.工作危害分析（LECD）
+    5.27.1.4.工作危害分析（LECD）
+[P02-BP0106] stratum=inside_table doc_type=Research Report
+  L(table_row) sec=(none)
+    售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告
+  R(table_row) sec=<same>
+    表头: 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 数据行: 项目名称 | 晋钢安全大数据项目 | 晋钢安全大数据项目 | 晋钢安全大数据项目
+[P02-BP0107] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+[P02-BP0108] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=系统设计 > 安全风险监测预警模块 > 定期检验/校准记录子功能
+    定期检验/校准记录子功能
+  R(heading) sec=系统设计 > 安全风险监测预警模块 > 定期检验/校准记录子功能 > 画面设计
+    画面设计
+[P02-BP0109] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 移动端-危险作业管理 > 作业许可创建子功能 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(paragraph) sec=<same>
+    吊装作业许可证增加及编辑
+[P02-BP0110] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 安全投入模块 > 分厂安全投入计划 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P02-BP0111] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 系统设计 4 > 3.5 风险分级管控模块 97 > 3.5.1 功能描述 97
+    3.5.1 功能描述 97
+  R(heading) sec=3 系统设计 4 > 3.5 风险分级管控模块 97 > 3.5.2 风险区域划分 97
+    3.5.2 风险区域划分 97
+[P02-BP0112] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=系统设计 > 安全投入模块 > 功能描述
+    功能描述
+  R(paragraph) sec=<same>
+    可配置分厂安全费用细分类型，可根据业务管理，自行配置预算种类。预算类型分为安全投入类和安全管理类，在此基础上补充预算细分类型。
+[P02-BP0113] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    失败返回信息：
+  R(paragraph) sec=<same>
+    {"success":false,"dataId":"c6314bc9888b4134bc9e6b989dd37679","error":{"code":"4
+[P02-BP0114] stratum=same_section_continuity doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.8.事故事件管理
+    3) 事故调查分析。调查分析事故原因，进而确定事故类型、等级、事故损失及相关内容。
+  R(paragraph) sec=<same>
+    4) 事故整改验收。记录事故整改结果，具备事故报告查询功能。
+[P02-BP0115] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: -collectTime | String | | 否 | 采集时间戳，格式YYYYMMDDHHmmss
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: -isConnectDataSource | Bool | | 否 | 数据源连通性，true表示数据源连通正常，数据有效；false表示数据源连通异常，数据无效
+[P02-BP0116] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  R(paragraph) sec=<same>
+    3）请求信息参数：
+[P02-BP0117] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 安全机构与职责 > 安全机构与职责 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(paragraph) sec=<same>
+    删除
+[P02-BP0118] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "activityInstId": "66a8531cd37ec500018e4e38",
+  R(paragraph) sec=<same>
+    "activityCodeId": "a7eb1b6626934346ac2d57d266049a13",
+[P02-BP0119] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 移动端-危险作业管理 > 作业项目创建子功能 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(heading) sec=系统设计 > 移动端-危险作业管理 > 作业许可创建子功能
+    作业许可创建子功能
+[P02-BP0120] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 决 议 事 项 | 安全责任制、履职评价： （1）文件管理---需要补充文件上传功能，签批完成的责任制支持上传系统； 安全管理处、各分厂安全科制定录入各级安全责任清单； 根据各级安全责任清单梳理履职清单、执行周期（周、月、季度、年度）及分值，每月推送该周期内履职清单至责任人； 对于可与系统管理的履职项尽量与其他模块联动，无法联动需上传佐证材料； 根据履职执行情况，考核单位可对履职情况进行打分；计分规则为当前周期内履职项得分之和除以履职项总分乘以100算周期内的总得分； 打分完成之后提报审核批准： 当月最终履职成绩公示前需要完成审批（批量），公司评定结果由安全总监、主管副总审核批准；厂处评定结果由单位负责人（厂长）审批。 履职评价层级包括公司级、分厂级、车间级、工程师、…
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 待 决 事 项 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无
+[P02-BP0121] stratum=inside_table doc_type=DB
+  L(table_row) sec=设备设施 > EHS_SPECIAL_FILE_MANAGE
+    表头: 3、 | 表名 | EHS_SPECIAL_FILE_MANAGE | 表的描述 | 特种设备文件表 | | | | 数据行: | UPDATE_DATE_TIME | NVARCHAR2 | | 20 | | Y | 更新时间 |
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | EHS_SPECIAL_FILE_MANAGE | 表的描述 | 特种设备文件表 | | | | 数据行: | UPDATE_USER_NO | NVARCHAR2 | | 40 | | Y | 更新人 |
+[P02-BP0122] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计
+    晋钢是是晋钢
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统
+    晋钢安全信息化平台系统
+[P02-BP0123] stratum=inside_table doc_type=DB
+  L(table_row) sec=会议任务 > EHS_MEETING_TASK
+    表头: 1、 | 表名 | EHS_MEETING_TASK | 表的描述 | 会议任务主表 | | | 数据行: | UPDATE_DATE_TIME | NVARCHAR2 | | 20 | | Y | 更新时间
+  R(table_row) sec=<same>
+    表头: 1、 | 表名 | EHS_MEETING_TASK | 表的描述 | 会议任务主表 | | | 数据行: | UPDATE_USER_NO | NVARCHAR2 | | 40 | | Y | 更新人
+[P02-BP0124] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    1）请求方式：POST方法
+  R(paragraph) sec=<same>
+    2）请求路径：
+[P02-BP0125] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 安全风险监测预警模块 > 设备点检功能 > 逻辑处理
+    输入
+  R(paragraph) sec=<same>
+    连铸机设备信息、点检周期、点检人员、点检事项。
+[P02-BP0126] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=系统设计 > 安全培训模块 > 年度安全培训计划 > 画面设计
+    画面设计
+  R(paragraph) sec=<same>
+    年度安全培训计划列表页面
+[P02-BP0127] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 安全培训模块 > 培训实施 > 逻辑处理
+    处理逻辑
+  R(paragraph) sec=<same>
+    输出
+[P02-BP0128] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 作业管理模块 > 有限空间安全管理 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P02-BP0129] stratum=inside_table doc_type=API
+  L(table_row) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: success | String | 最大100个字节 | 是 | 返回提示说明
+[P02-BP0130] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 违章管理 > 安全违章行为处理单 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P02-BP0131] stratum=table_transition doc_type=DB
+  L(table_row) sec=班组管理 > EHS_TEAM_WORK_METHOD
+    表头: 7、 | 表名 | EHS_TEAM_WORK_METHOD | 表的描述 | 工作方法要点表 | | | | 数据行: | COMPANY_ID | NVARCHAR2 | | 100 | | Y | 公司别 |
+  R(table_row) sec=班组管理 > EHS_TEAM_EMP_SCORE
+    8、 | 表名 | EHS_TEAM_EMP_SCORE | 表的描述 | 班组成员月度评分表 | | | |
+[P02-BP0132] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 违章管理 > 违章条款标准管理 > 逻辑处理
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P02-BP0133] stratum=same_section_continuity doc_type=Research Report
+  L(heading) sec=5.1.双重预防体系 > 5.26.系统管理
+    5.26.系统管理
+  R(paragraph) sec=<same>
+    对系统用户进行管理，实现对系统用户的添加、修改、删除、查看、角色设置、用户权限设置等操作。通过添加等基本操作能够实现对用户的添加，对已有用户基本信息的修改，对离职或其他原因造成不需要使用该系统的用户进行删除，通过角色设置和权限设置能够为用户分配对应权限，实现访问控制，便于对系统用户的管理和维护。由用户管理、角色管理、权限管理、维护角色用户、数据权限管理、单位信息列表、系统设置等功能点组成。
+[P02-BP0134] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.1.安全风险管控 > 5.27.1.1.安全风险四色图
+    手机端展示安全风险四色图，图片由PC端上传，移动端只展示。
+  R(heading) sec=5.1.双重预防体系 > 5.27.移动端应用 > 5.27.1.安全风险管控 > 5.27.1.2.作业活动清单
+    5.27.1.2.作业活动清单
+[P02-BP0135] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    }
+  R(paragraph) sec=<same>
+    晋钢E家消息通知接口
+[P02-BP0136] stratum=inside_table doc_type=Research Report
+  L(table_row) sec=(none)
+    表头: 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 数据行: 调研日期 | 2025.5.10 | 调研地点 | 腾讯会议
+  R(table_row) sec=<same>
+    表头: 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 | 售前调研/交流报告 数据行: 金恒调研/交流人员 | 郝柏、袁世箫 | 郝柏、袁世箫 | 郝柏、袁世箫
+[P02-BP0137] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 参 加 人 员 | 委雨亭 | 委雨亭 | 委雨亭 | 周飞 | 周飞 | 周飞
+  R(table_row) sec=<same>
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 讨 论 事 项 | 1，需求规格说明书全盘确认； | 1，需求规格说明书全盘确认； | 1，需求规格说明书全盘确认； | 1，需求规格说明书全盘确认； | 1，需求规格说明书全盘确认； | 1，需求规格说明书全盘确认；
+[P02-BP0138] stratum=inside_table doc_type=DB
+  L(table_row) sec=风险分级管控与隐患排查 > EHS_SAFETY_CHECK_RECORD
+    表头: 12、 | 表名 | EHS_SAFETY_CHECK_RECORD | 表的描述 | 安全检查记录表 | | | 数据行: | CHECK_TYPE | NVARCHAR2 | | 20 | 枚举值： 1-日常性安全检查 2-综合性安全检查 3-专业性安全检查 4-重大活动及节假日前安全检查 5-主管巡视 6-重大危险源检查 7-事故类比安全检查 | Y | 检查类型
+  R(table_row) sec=<same>
+    表头: 12、 | 表名 | EHS_SAFETY_CHECK_RECORD | 表的描述 | 安全检查记录表 | | | 数据行: | START_CHECK_TIME | NVARCHAR2 | | 20 | | Y | 开始检查时间
+[P02-BP0139] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=系统设计 > 设备设施模块 > 特种设备台账 > 逻辑处理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(paragraph) sec=<same>
+    检修信息维护
+[P02-BP0140] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "name": "李四",
+  R(paragraph) sec=<same>
+    "files": [
+[P02-BP0141] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 待 决 事 项 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无 | 暂无
+  R(paragraph) sec=<same>
+    用户单位：
+[P02-BP0142] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=3 系统设计 4 > 3.11 会议管理 239 > 3.11.3 会议流程 243
+    3.11.3 会议流程 243
+  R(heading) sec=3 系统设计 4 > 3.12 安全资质管理 248
+    3.12 安全资质管理 248
+[P02-BP0143] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1 数据行: 待 决 事 项 | 需要信息处提供人资的培训、计划字段，安全培训的字段尽量保持一致；方便后面对接； 监测预警板块和政府的对接方式需要确定（是否走安全平台过一遍数据，由安全平台推到省平台） 大模块需要增加统计指标；可视化看板设计的时候考虑统计指标，公司级查看总的看板，分厂看自己分厂的数据； 可视化页面需要安全管理处提供指标，区分公司，分厂，分厂的可到的页面可以下钻； | 需要信息处提供人资的培训、计划字段，安全培训的字段尽量保持一致；方便后面对接； 监测预警板块和政府的对接方式需要确定（是否走安全平台过一遍数据，由安全平台推到省平台） 大模块需要增加统计指标；可视化看板设计的时候考虑统计指标，公司级查看总的看板，分厂看自己分厂的数据； 可视化页面需要安全管理处提供指标，…
+  R(paragraph) sec=<same>
+    用户单位：
+[P02-BP0144] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    "activityCodeId": "a7eb1b6626934346ac2d57d266049a1a",
+  R(paragraph) sec=<same>
+    "opinion": null,
+[P02-BP0145] stratum=table_transition doc_type=API
+  L(table_row) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口清单
+    表头: 序号 | 编号 | 接口名称 | 接口说明 | 接口方式 | 触发时刻 | 发起端 | 接收端 数据行: 6 | TM_TX_06 | 图讯报警数据上报接口 | IOT点位报警数据实时上报省平台 | JSON | 实时 | 晋钢安全信息化平台 | 图讯平台
+  R(heading) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义
+    接口定义
+[P02-BP0146] stratum=heading_transition doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.15.安全会议管理 > 5.15.3.周期会议预定
+    用于企业员工预定周期性会议室，包含了会议室、会议内容、会议时间等信息。
+  R(heading) sec=5.1.双重预防体系 > 5.15.安全会议管理 > 5.15.4.会议室日历
+    5.15.4.会议室日历
+[P02-BP0147] stratum=same_section_continuity doc_type=Research Report
+  L(paragraph) sec=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.3.隐患排查治理 > 5.1.3.1.企业隐患自查
+    检查计划：企业安全负责人对企业安全生产人员、工程技术人员和其他相关人员手动分配隐患排查计划，制定计划时，选择任务负责人、检查内容、检查时间等，计划制定成功后，相关任务负责人参照计划进行隐患排查。
+  R(paragraph) sec=<same>
+    增加：企业用户录入检查计划。
+[P02-BP0148] stratum=noise_candidate doc_type=API
+  L(paragraph) sec=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+    {"appId":"xxxxxxxxx","serviceId":"xxxxxxxxxx","dataId":"1563259577529","data":"BLnaeCX2aOtX79+6c8zX6zycGksa5YxUQyA2SUzyhCkRZoc5vUjvGmBuOEeWL/NrO2bJUHfAqFFO6DoGzPs 5eQ=="}
+  R(paragraph) sec=<same>
+    返回信息
+[P02-BP0149] stratum=inside_table doc_type=DB
+  L(table_row) sec=基础信息与台账相关 > EHS_OCCUPATIONAL_HAZARD_FACTOR
+    表头: 16、 | 表名 | EHS_OCCUPATIONAL_HAZARD_FACTOR | 表的描述 | 职业病危害因素清单表 | | | | | | | | | | | | 数据行: | ID | NVARCHAR2 | 主键 | 40 | | N | 主键ID | | | | | | | | |
+  R(table_row) sec=<same>
+    表头: 16、 | 表名 | EHS_OCCUPATIONAL_HAZARD_FACTOR | 表的描述 | 职业病危害因素清单表 | | | | | | | | | | | | 数据行: | YEAR | NUMBER | | 4 | | N | 年度 | | | | | | | | |
+[P02-BP0150] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=系统设计 > 劳保用品管理 > 劳保用品发放标准 > 画面设计
+    劳保用品发放标准列表页面
+  R(paragraph) sec=<same>
+    配置劳保用品发放标准页面

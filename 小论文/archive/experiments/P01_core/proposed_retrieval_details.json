@@ -1,0 +1,354 @@
+[
+  {
+    "qa_id": "QA001",
+    "rank": 9,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0160",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0059",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0066",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0134",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0163"
+    ]
+  },
+  {
+    "qa_id": "QA002",
+    "rank": 4,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0160",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0059",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0066",
+      "proposed:镔鑫智慧安全二期-需求调研会议纪要.docx:C0002",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0134"
+    ]
+  },
+  {
+    "qa_id": "QA003",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-需求调研会议纪要.docx:C0003",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0027",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0089",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0077",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0073"
+    ]
+  },
+  {
+    "qa_id": "QA004",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-需求调研会议纪要.docx:C0003",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0027",
+      "proposed:镔鑫安全二期调研报告.docx:C0066",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0044",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0094"
+    ]
+  },
+  {
+    "qa_id": "QA005",
+    "rank": 2,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0163",
+      "proposed:镔鑫智慧安全二期-需求调研会议纪要.docx:C0003",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0122",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0289",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0162"
+    ]
+  },
+  {
+    "qa_id": "QA006",
+    "rank": 2,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0077",
+      "proposed:镔鑫智慧安全二期-需求调研会议纪要.docx:C0003",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0014",
+      "proposed:镔鑫安全二期调研报告.docx:C0127",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA007",
+    "rank": 3,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0028",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0017",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0029",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0014"
+    ]
+  },
+  {
+    "qa_id": "QA008",
+    "rank": 13,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0028",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0050",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0014",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0032"
+    ]
+  },
+  {
+    "qa_id": "QA009",
+    "rank": 2,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0020",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0053",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0014",
+      "proposed:镔鑫安全二期调研报告.docx:C0082"
+    ]
+  },
+  {
+    "qa_id": "QA010",
+    "rank": 2,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0028",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0032",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0016",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0157",
+      "proposed:镔鑫安全二期调研报告.docx:C0082"
+    ]
+  },
+  {
+    "qa_id": "QA011",
+    "rank": 72,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0048",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0061",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0074",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0148",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0028"
+    ]
+  },
+  {
+    "qa_id": "QA012",
+    "rank": 289,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0048",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0061",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0074",
+      "proposed:镔鑫智慧安全二期-详细设计规格-接口文档.docx:C0148",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0028"
+    ]
+  },
+  {
+    "qa_id": "QA013",
+    "rank": 7,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0091",
+      "proposed:镔鑫安全二期调研报告.docx:C0024",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0187",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0212",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0501"
+    ]
+  },
+  {
+    "qa_id": "QA014",
+    "rank": 16,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0091",
+      "proposed:镔鑫安全二期调研报告.docx:C0024",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0187",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0086",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0007"
+    ]
+  },
+  {
+    "qa_id": "QA015",
+    "rank": 3,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期调研报告.docx:C0067",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0024",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0046",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0048",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0075"
+    ]
+  },
+  {
+    "qa_id": "QA016",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0049",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0048",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0050",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0079",
+      "proposed:镔鑫安全二期调研报告.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA017",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0049",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0048",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0050",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0079",
+      "proposed:镔鑫安全二期调研报告.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA018",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0073",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0072",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0078",
+      "proposed:镔鑫安全二期调研报告.docx:C0067",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0024"
+    ]
+  },
+  {
+    "qa_id": "QA019",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0073",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0072",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0078",
+      "proposed:镔鑫安全二期调研报告.docx:C0067",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0024"
+    ]
+  },
+  {
+    "qa_id": "QA020",
+    "rank": 6,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0074",
+      "proposed:镔鑫安全二期调研报告.docx:C0067",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0045",
+      "proposed:镔鑫安全二期调研报告.docx:C0066",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0044"
+    ]
+  },
+  {
+    "qa_id": "QA021",
+    "rank": 5,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期调研报告.docx:C0069",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0039",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0347",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0097",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0100"
+    ]
+  },
+  {
+    "qa_id": "QA022",
+    "rank": 15,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0097",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0019",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0100",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0099",
+      "proposed:镔鑫安全二期调研报告.docx:C0069"
+    ]
+  },
+  {
+    "qa_id": "QA023",
+    "rank": 4,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0097",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0039",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0103",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0102",
+      "proposed:镔鑫安全二期调研报告.docx:C0069"
+    ]
+  },
+  {
+    "qa_id": "QA024",
+    "rank": 3,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0026",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0085",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0075",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0188",
+      "proposed:镔鑫安全二期调研报告.docx:C0066"
+    ]
+  },
+  {
+    "qa_id": "QA025",
+    "rank": 3,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0089",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0027",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0077",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0090",
+      "proposed:镔鑫安全二期调研报告.docx:C0066"
+    ]
+  },
+  {
+    "qa_id": "QA026",
+    "rank": 5,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0496",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0132",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0087",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0204",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0210"
+    ]
+  },
+  {
+    "qa_id": "QA027",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0090",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0032",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0041",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0097",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0087"
+    ]
+  },
+  {
+    "qa_id": "QA028",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0090",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0032",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0041",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0097",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0087"
+    ]
+  },
+  {
+    "qa_id": "QA029",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0401",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0402",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0241",
+      "proposed:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:C0403",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0537"
+    ]
+  },
+  {
+    "qa_id": "QA030",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0019",
+      "proposed:镔鑫安全二期调研报告.docx:C0131",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0170",
+      "proposed:镔鑫安全二期调研报告.docx:C0133",
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0035"
+    ]
+  },
+  {
+    "qa_id": "QA031",
+    "rank": 1,
+    "top_chunk_ids": [
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0018",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0158",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0161",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0162",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0222"
+    ]
+  },
+  {
+    "qa_id": "QA032",
+    "rank": 3,
+    "top_chunk_ids": [
+      "proposed:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:C0181",
+      "proposed:镔鑫安全二期调研报告.docx:C0052",
+      "proposed:镔鑫安全二期技术协议V1.0.docx:C0118",
+      "proposed:镔鑫智慧安全二期-详细设计规格V1.2.docx:C0229",
+      "proposed:镔鑫安全二期调研报告.docx:C0051"
+    ]
+  }
+]

@@ -1,0 +1,569 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Meeting fact",
+    "source_document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-需求调研会议纪要.docx:C0001",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0034",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0164",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0032"
+    ],
+    "query_latency_ms": 10.009393095970154
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Meeting fact",
+    "source_document": "水情应急预案各板块可视化-需求调研会议纪要.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-需求调研会议纪要:B0002#R002"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-需求调研会议纪要.docx:C0001",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0033",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0024",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求调研会议纪要.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0164"
+    ],
+    "query_latency_ms": 9.660463780164719
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "API",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格接口文档:B0018",
+      "水情应急预案各板块可视化-详细设计规格接口文档:B0059",
+      "水情应急预案各板块可视化-详细设计规格接口文档:B0088"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0007",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0008"
+    ],
+    "query_latency_ms": 17.350664362311363
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API parameter",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R002"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0004",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0008",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0003"
+    ],
+    "query_latency_ms": 17.299097031354904
+  },
+  {
+    "qa_id": "QA009",
+    "question_type": "API parameter",
+    "source_document": "水情应急预案各板块可视化-详细设计规格接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格接口文档:B0063#R003"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0004",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格接口文档.docx:C0003"
+    ],
+    "query_latency_ms": 16.786023043096066
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0009#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0007",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0008",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0010"
+    ],
+    "query_latency_ms": 16.55773352831602
+  },
+  {
+    "qa_id": "QA011",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0010#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0008",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0009",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0077",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0075"
+    ],
+    "query_latency_ms": 17.06511154770851
+  },
+  {
+    "qa_id": "QA012",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0011#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0018",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0020"
+    ],
+    "query_latency_ms": 16.4009016007185
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 4,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0012#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0012",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0016",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0013",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0015"
+    ],
+    "query_latency_ms": 17.04167202115059
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0013#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0012",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0013",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0016",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0018"
+    ],
+    "query_latency_ms": 16.459781676530838
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Database",
+    "source_document": "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格数据库说明文档:B0014#R001"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0014",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0015",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0013",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0016",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0012"
+    ],
+    "query_latency_ms": 16.308470629155636
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0252"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0032",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0165",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0031",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0054",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0143"
+    ],
+    "query_latency_ms": 16.119925305247307
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格:B0791"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0070",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0066",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0013",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0069"
+    ],
+    "query_latency_ms": 16.66509546339512
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Constraint",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0267",
+      "水情应急预案各板块可视化-需求规格书:B1181"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0035",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0168",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0026",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0032",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0034"
+    ],
+    "query_latency_ms": 17.09112897515297
+  },
+  {
+    "qa_id": "QA020",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-方案建议书:B0074"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0003",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0004",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0001"
+    ],
+    "query_latency_ms": 16.363846138119698
+  },
+  {
+    "qa_id": "QA021",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格:B0083"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0004",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0006"
+    ],
+    "query_latency_ms": 16.430038027465343
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "rank": 11,
+    "span_rank": 11,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格:B0786",
+      "水情应急预案各板块可视化-需求规格书:B0100"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0005"
+    ],
+    "query_latency_ms": 17.040615901350975
+  },
+  {
+    "qa_id": "QA023",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-方案建议书:B0101"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0009",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0003",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0020"
+    ],
+    "query_latency_ms": 16.456037759780884
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格:B0097"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0047"
+    ],
+    "query_latency_ms": 16.634726896882057
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-方案建议书:B0082"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0002",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0010",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0019",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0001"
+    ],
+    "query_latency_ms": 16.8928075581789
+  },
+  {
+    "qa_id": "QA027",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-需求规格书:B0016"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0004",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0019",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0075",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0040",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0019"
+    ],
+    "query_latency_ms": 17.37444195896387
+  },
+  {
+    "qa_id": "QA028",
+    "question_type": "Process",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "rank": 6,
+    "span_rank": 6,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0007"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0012"
+    ],
+    "query_latency_ms": 16.279558651149273
+  },
+  {
+    "qa_id": "QA029",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-方案建议书.docx",
+    "rank": 23,
+    "span_rank": 23,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-方案建议书:B0096"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0022",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0024",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0036"
+    ],
+    "query_latency_ms": 16.192710027098656
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-详细设计规格.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-详细设计规格:B0087",
+      "水情应急预案各板块可视化-需求规格书:B1020"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格.docx:C0005",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023"
+    ],
+    "query_latency_ms": 16.273140907287598
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-需求规格书.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0021",
+      "水情应急预案各板块可视化-方案建议书:B0097",
+      "水情应急预案各板块可视化-需求规格书:B0059"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0012",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0033",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0024"
+    ],
+    "query_latency_ms": 16.720118932425976
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0010"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0001",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0005"
+    ],
+    "query_latency_ms": 16.62488654255867
+  },
+  {
+    "qa_id": "QA035",
+    "question_type": "Feature",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "rank": 11,
+    "span_rank": 11,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0023"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0033",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0024",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0022",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0023"
+    ],
+    "query_latency_ms": 16.66407100856304
+  },
+  {
+    "qa_id": "QA036",
+    "question_type": "Numeric constraint",
+    "source_document": "水情应急预案各板块可视化-技术协议.docx",
+    "rank": 6,
+    "span_rank": 6,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "水情应急预案各板块可视化-技术协议:B0058"
+    ],
+    "top_chunk_ids": [
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0011",
+      "llamaindex_sentence:水情应急预案各板块可视化-技术协议.docx:C0021",
+      "llamaindex_sentence:水情应急预案各板块可视化-方案建议书.docx:C0023",
+      "llamaindex_sentence:水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx:C0006",
+      "llamaindex_sentence:水情应急预案各板块可视化-需求规格书.docx:C0028"
+    ],
+    "query_latency_ms": 16.25235751271248
+  }
+]

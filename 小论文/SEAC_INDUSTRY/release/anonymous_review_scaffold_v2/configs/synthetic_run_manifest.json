@@ -1,0 +1,17 @@
+{
+  "protocol_version": "industrial-seac-synthetic-smoke-v1.0",
+  "methods": ["fixed", "structure", "proposed_v6"],
+  "encoder": "tfidf",
+  "evidence_mode": "unit",
+  "projects": [
+    {
+      "project_id": "SYNTHETIC",
+      "split": "synthetic",
+      "corpus": "examples/synthetic/corpus.json",
+      "breakpoints": "examples/synthetic/breakpoints.json",
+      "qa": "examples/synthetic/qa.json",
+      "expected_boundary_count": 6,
+      "minimum_qa_count": 2
+    }
+  ]
+}

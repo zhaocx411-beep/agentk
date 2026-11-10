@@ -1,0 +1,130 @@
+{
+  "fixed": {
+    "chunk_count": 419,
+    "mean_chunk_tokens": 505.5131264916468,
+    "min_chunk_tokens": 20,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 25,
+      "tn": 43,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "retrieval": {
+      "mrr": 0.6542200854700855,
+      "hit_rate@1": 0.5555555555555556,
+      "hit_rate@3": 0.7222222222222222,
+      "hit_rate@5": 0.7777777777777778
+    }
+  },
+  "recursive": {
+    "chunk_count": 406,
+    "mean_chunk_tokens": 457.0591133004926,
+    "min_chunk_tokens": 34,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 1,
+      "fp": 4,
+      "fn": 24,
+      "tn": 39,
+      "precision": 0.2,
+      "recall": 0.04,
+      "f1": 0.06666666666666667
+    },
+    "retrieval": {
+      "mrr": 0.6037061629078009,
+      "hit_rate@1": 0.4722222222222222,
+      "hit_rate@3": 0.7222222222222222,
+      "hit_rate@5": 0.7777777777777778
+    }
+  },
+  "structure": {
+    "chunk_count": 1191,
+    "mean_chunk_tokens": 155.82451721242654,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 25,
+      "fp": 8,
+      "fn": 0,
+      "tn": 35,
+      "precision": 0.7575757575757576,
+      "recall": 1.0,
+      "f1": 0.8620689655172413
+    },
+    "retrieval": {
+      "mrr": 0.6164702324424547,
+      "hit_rate@1": 0.4444444444444444,
+      "hit_rate@3": 0.75,
+      "hit_rate@5": 0.7777777777777778
+    }
+  },
+  "semantic": {
+    "chunk_count": 2015,
+    "mean_chunk_tokens": 92.10272952853597,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 13,
+      "fp": 12,
+      "fn": 12,
+      "tn": 31,
+      "precision": 0.52,
+      "recall": 0.52,
+      "f1": 0.52
+    },
+    "retrieval": {
+      "mrr": 0.4495792109177551,
+      "hit_rate@1": 0.3611111111111111,
+      "hit_rate@3": 0.5,
+      "hit_rate@5": 0.5277777777777778
+    }
+  },
+  "proposed": {
+    "chunk_count": 1081,
+    "mean_chunk_tokens": 171.71600370027753,
+    "min_chunk_tokens": 2,
+    "max_chunk_tokens": 512,
+    "boundary": {
+      "tp": 25,
+      "fp": 8,
+      "fn": 0,
+      "tn": 35,
+      "precision": 0.7575757575757576,
+      "recall": 1.0,
+      "f1": 0.8620689655172413
+    },
+    "retrieval": {
+      "mrr": 0.6480278980278982,
+      "hit_rate@1": 0.4444444444444444,
+      "hit_rate@3": 0.8333333333333334,
+      "hit_rate@5": 0.8888888888888888
+    }
+  },
+  "proposed_v6": {
+    "chunk_count": 6045,
+    "mean_chunk_tokens": 60.85210918114144,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "parent_chunk_count": 1081,
+    "retrieval_chunk_count": 4964,
+    "boundary": {
+      "tp": 25,
+      "fp": 8,
+      "fn": 0,
+      "tn": 35,
+      "precision": 0.7575757575757576,
+      "recall": 1.0,
+      "f1": 0.8620689655172413
+    },
+    "retrieval": {
+      "mrr": 0.7475694444444444,
+      "hit_rate@1": 0.6111111111111112,
+      "hit_rate@3": 0.8888888888888888,
+      "hit_rate@5": 0.9166666666666666
+    }
+  }
+}

@@ -1,0 +1,19 @@
+Subject: Full Paper Submission to ICAISG 2026 — Provenance-Preserving Structure-Aware Chunking for Auditable Enterprise RAG
+
+Dear ICAISG 2026 Secretariat,
+
+Please find attached our anonymous full-paper submission entitled “Provenance-Preserving Structure-Aware Chunking for Auditable Enterprise Retrieval-Augmented Generation” for consideration in Track 11, Explainable and Transparent Artificial Intelligence.
+
+The manuscript is written in English, follows the conference template, and is five pages including figures, tables, and references. The work is original, unpublished, approved by all authors, and is not under review elsewhere.
+
+Corresponding author: [FULL NAME]
+Affiliation: [AFFILIATION]
+Email: [EMAIL]
+Phone, if desired: [PHONE]
+
+Attachment: ICAISG2026_SEAC_blind_submission.pdf
+
+Sincerely,
+[FULL NAME]
+
+Important: Use this email route only if the paper has not been submitted through EasyChair. Do not submit by both routes.

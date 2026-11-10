@@ -1,0 +1,447 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0159"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0085",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0086",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0080",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0079",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0069"
+    ],
+    "query_latency_ms": 22.62028120458126
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0257"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0147",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0146",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0148",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0143",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0149"
+    ],
+    "query_latency_ms": 21.321295760571957
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0266"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0149",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0141",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0144",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0157",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0143"
+    ],
+    "query_latency_ms": 21.596801467239857
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0294"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0157",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0144",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0153",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0156",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0154"
+    ],
+    "query_latency_ms": 20.759612321853638
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0103"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0069",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0079",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0070",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0071",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0013"
+    ],
+    "query_latency_ms": 21.27748727798462
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0130",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0278"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0073",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0228",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0015",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0085",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0402"
+    ],
+    "query_latency_ms": 20.797964185476303
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0611"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0119",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0103",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0505",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0120",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0490"
+    ],
+    "query_latency_ms": 21.312367171049118
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "Feature",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0628"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0536",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0505",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0119",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0092",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0402"
+    ],
+    "query_latency_ms": 21.18214312940836
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0288"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0156",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0144",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0061",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0103",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0490"
+    ],
+    "query_latency_ms": 20.46967390924692
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0078",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0075"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0059",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0053",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0058",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0052",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0054"
+    ],
+    "query_latency_ms": 20.75820416212082
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0081",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0078"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0079",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0076",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0077",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0053",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0076"
+    ],
+    "query_latency_ms": 20.930669270455837
+  },
+  {
+    "qa_id": "QA019",
+    "question_type": "Process",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计:B0102"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0079",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0069",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0070",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0080",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0058"
+    ],
+    "query_latency_ms": 20.636586472392082
+  },
+  {
+    "qa_id": "QS001",
+    "question_type": "API",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0031#R008"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0032",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0033",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0030",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0031",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0018"
+    ],
+    "query_latency_ms": 20.659659057855606
+  },
+  {
+    "qa_id": "QS002",
+    "question_type": "API",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0188#R010"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0094",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0138",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0092",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0093",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0119"
+    ],
+    "query_latency_ms": 22.608792409300804
+  },
+  {
+    "qa_id": "QS003",
+    "question_type": "API parameter",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0051#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0070#R003",
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计:B0077#R003"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0024",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0025",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0030",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0021",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx:P0031"
+    ],
+    "query_latency_ms": 21.211358718574047
+  },
+  {
+    "qa_id": "QS004",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0053#R007"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0040",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0111",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0044",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0045",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0041"
+    ],
+    "query_latency_ms": 21.54681645333767
+  },
+  {
+    "qa_id": "QS005",
+    "question_type": "Database",
+    "source_document": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计:B0063#R008"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0054",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0056",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0055",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0057",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx:P0060"
+    ],
+    "query_latency_ms": 21.504449658095837
+  },
+  {
+    "qa_id": "QS006",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0204"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0103",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0490",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0537",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0098",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0509"
+    ],
+    "query_latency_ms": 20.875579677522182
+  },
+  {
+    "qa_id": "QS007",
+    "question_type": "Numeric constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0224#R002"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0135",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0137",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0119",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0136",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0121"
+    ],
+    "query_latency_ms": 14.720067381858826
+  },
+  {
+    "qa_id": "QS008",
+    "question_type": "Constraint",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 6,
+    "span_rank": 6,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0222#R021"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0098",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0132",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0131",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0133",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0100"
+    ],
+    "query_latency_ms": 20.87543625384569
+  },
+  {
+    "qa_id": "QS009",
+    "question_type": "Feature",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0106"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0066",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0064",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0065",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0138",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0143"
+    ],
+    "query_latency_ms": 21.75995521247387
+  },
+  {
+    "qa_id": "QS010",
+    "question_type": "Process",
+    "source_document": "模块7-能源管理-技术协议-1207.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "模块7-能源管理-技术协议-1207:B0264#R002"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0148",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0383",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0087",
+      "proposed_v6:模块7-能源管理-技术协议-1207.docx:P0061",
+      "proposed_v6:烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx:P0384"
+    ],
+    "query_latency_ms": 21.356510929763317
+  }
+]

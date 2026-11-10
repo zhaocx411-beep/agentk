@@ -1,0 +1,311 @@
+{
+  "protocol_version": "industrial-seac-llm-prelabel-v1.0",
+  "label_source": "LLM_PRELABEL",
+  "model_id": "claude-opus-5-thinking (Cursor agent)",
+  "human_verification_required": true,
+  "formal_gold_standard": false,
+  "projects": {
+    "P02": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 71,
+        "NOISE": 51,
+        "NO_BREAK": 178
+      },
+      "needs_human_review": 22,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 35,
+          "NOISE": 14,
+          "NO_BREAK": 15
+        },
+        "inside_table": {
+          "NOISE": 1,
+          "NO_BREAK": 90
+        },
+        "noise_candidate": {
+          "NOISE": 32
+        },
+        "same_section_continuity": {
+          "BREAK": 11,
+          "NOISE": 1,
+          "NO_BREAK": 64
+        },
+        "table_transition": {
+          "BREAK": 25,
+          "NOISE": 3,
+          "NO_BREAK": 9
+        }
+      },
+      "output_sha256": "96cdd0e0f54e66d97684ef2e829ba83b2f6c83301822314804e0eb8a83e57a43"
+    },
+    "P03": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 45,
+        "NOISE": 63,
+        "NO_BREAK": 192
+      },
+      "needs_human_review": 17,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 30,
+          "NOISE": 12,
+          "NO_BREAK": 16
+        },
+        "inside_table": {
+          "NO_BREAK": 79
+        },
+        "noise_candidate": {
+          "NOISE": 31
+        },
+        "same_section_continuity": {
+          "BREAK": 3,
+          "NOISE": 15,
+          "NO_BREAK": 71
+        },
+        "table_transition": {
+          "BREAK": 12,
+          "NOISE": 5,
+          "NO_BREAK": 26
+        }
+      },
+      "output_sha256": "57bbfee1d03faaba1a0930853f9b02bedb09b4386167c0ebdc8fd666fb23f137"
+    },
+    "P04": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 44,
+        "NOISE": 59,
+        "NO_BREAK": 197
+      },
+      "needs_human_review": 12,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 33,
+          "NOISE": 7,
+          "NO_BREAK": 16
+        },
+        "inside_table": {
+          "NO_BREAK": 104
+        },
+        "noise_candidate": {
+          "NOISE": 30
+        },
+        "same_section_continuity": {
+          "BREAK": 1,
+          "NOISE": 11,
+          "NO_BREAK": 61
+        },
+        "table_transition": {
+          "BREAK": 10,
+          "NOISE": 11,
+          "NO_BREAK": 16
+        }
+      },
+      "output_sha256": "9f891ed61e4f94afbeab95ef01d61e78b40b60d109f11502e1b978ebc2c30d62"
+    },
+    "P05": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 56,
+        "NOISE": 36,
+        "NO_BREAK": 208
+      },
+      "needs_human_review": 16,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 29,
+          "NOISE": 12,
+          "NO_BREAK": 14
+        },
+        "inside_table": {
+          "NO_BREAK": 108
+        },
+        "noise_candidate": {
+          "NOISE": 22
+        },
+        "same_section_continuity": {
+          "BREAK": 13,
+          "NOISE": 2,
+          "NO_BREAK": 61
+        },
+        "table_transition": {
+          "BREAK": 14,
+          "NO_BREAK": 25
+        }
+      },
+      "output_sha256": "716563ffaefa2b78d4cab5ebd5ac56bcc966a5cacd3874276434b61b94f73ed8"
+    },
+    "P06": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 67,
+        "NOISE": 45,
+        "NO_BREAK": 188
+      },
+      "needs_human_review": 12,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 29,
+          "NOISE": 8,
+          "NO_BREAK": 18
+        },
+        "inside_table": {
+          "NO_BREAK": 97
+        },
+        "noise_candidate": {
+          "NOISE": 34
+        },
+        "same_section_continuity": {
+          "BREAK": 13,
+          "NO_BREAK": 62
+        },
+        "table_transition": {
+          "BREAK": 25,
+          "NOISE": 3,
+          "NO_BREAK": 11
+        }
+      },
+      "output_sha256": "b918261b07baa4d8b122e3b022479b4026b918137e1616cb22605ed900bbdd95"
+    },
+    "P07": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 54,
+        "NOISE": 77,
+        "NO_BREAK": 169
+      },
+      "needs_human_review": 15,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 26,
+          "NOISE": 20,
+          "NO_BREAK": 10
+        },
+        "inside_table": {
+          "NOISE": 4,
+          "NO_BREAK": 90
+        },
+        "noise_candidate": {
+          "NOISE": 32
+        },
+        "same_section_continuity": {
+          "BREAK": 8,
+          "NOISE": 17,
+          "NO_BREAK": 52
+        },
+        "table_transition": {
+          "BREAK": 20,
+          "NOISE": 4,
+          "NO_BREAK": 17
+        }
+      },
+      "output_sha256": "a5be3b5f6100fbc8ab43fe1968c8bab6edfad4c2328a7f297cbb57b537b800bd"
+    },
+    "P08": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 32,
+        "NOISE": 43,
+        "NO_BREAK": 225
+      },
+      "needs_human_review": 70,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 6,
+          "NOISE": 33,
+          "NO_BREAK": 20
+        },
+        "inside_table": {
+          "NO_BREAK": 112
+        },
+        "noise_candidate": {
+          "NOISE": 10
+        },
+        "same_section_continuity": {
+          "BREAK": 10,
+          "NO_BREAK": 70
+        },
+        "table_transition": {
+          "BREAK": 16,
+          "NO_BREAK": 23
+        }
+      },
+      "output_sha256": "fb2082d8c5c3dd5ecbf583bc97082ae6221df434092a9e7eca2482b0035e5b47"
+    },
+    "P09": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 47,
+        "NOISE": 28,
+        "NO_BREAK": 225
+      },
+      "needs_human_review": 46,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 26,
+          "NOISE": 19,
+          "NO_BREAK": 18
+        },
+        "inside_table": {
+          "NO_BREAK": 112
+        },
+        "noise_candidate": {
+          "NOISE": 8
+        },
+        "same_section_continuity": {
+          "BREAK": 1,
+          "NOISE": 1,
+          "NO_BREAK": 75
+        },
+        "table_transition": {
+          "BREAK": 20,
+          "NO_BREAK": 20
+        }
+      },
+      "output_sha256": "c4f0f2b25ccdeea7267a4d420f4b4fe184b812ff9273d8fd6bb37c5f8d618725"
+    },
+    "P10": {
+      "candidate_count": 300,
+      "labels": {
+        "BREAK": 39,
+        "NOISE": 23,
+        "NO_BREAK": 238
+      },
+      "needs_human_review": 26,
+      "labels_by_stratum": {
+        "heading_transition": {
+          "BREAK": 25,
+          "NOISE": 18,
+          "NO_BREAK": 26
+        },
+        "inside_table": {
+          "NO_BREAK": 82
+        },
+        "noise_candidate": {
+          "NOISE": 2
+        },
+        "same_section_continuity": {
+          "NOISE": 2,
+          "NO_BREAK": 109
+        },
+        "table_transition": {
+          "BREAK": 14,
+          "NOISE": 1,
+          "NO_BREAK": 21
+        }
+      },
+      "output_sha256": "09eaeeaef15a3ca41229b13d062109d1e35714512590d1dcaf0c4bdbc0ae35cc"
+    }
+  },
+  "totals": {
+    "candidates": 2700,
+    "needs_human_review": 236,
+    "labels": {
+      "BREAK": 455,
+      "NOISE": 425,
+      "NO_BREAK": 1820
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P03",
+  "split": "validation",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "f01102826a73f0801834e0fa0786c7fbd5e443fa0865ff068a2882e6ab96e959",
+  "boundary_pool_count": 5186,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 477,
+    "inside_table": 2118,
+    "noise_candidate": 320,
+    "same_section_continuity": 1682,
+    "table_transition": 589
+  },
+  "sample_strata": {
+    "heading_transition": 58,
+    "inside_table": 79,
+    "noise_candidate": 31,
+    "same_section_continuity": 89,
+    "table_transition": 43
+  },
+  "sample_documents": {
+    "水情应急预案各板块可视化-技术协议.docx": 51,
+    "水情应急预案各板块可视化-方案建议书.docx": 51,
+    "水情应急预案各板块可视化-详细设计规格.docx": 61,
+    "水情应急预案各板块可视化-详细设计规格接口文档.docx": 57,
+    "水情应急预案各板块可视化-详细设计规格数据库说明文档.xlsx": 22,
+    "水情应急预案各板块可视化-需求规格书.docx": 49,
+    "水情应急预案各板块可视化-需求调研会议纪要.docx": 9
+  },
+  "qa_draft_count": 36,
+  "qa_types": {
+    "API": 2,
+    "API parameter": 5,
+    "Constraint": 4,
+    "Database": 6,
+    "Feature": 7,
+    "Meeting fact": 2,
+    "Numeric constraint": 6,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 36,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "ac602fb44aad6e553a0b29c376714d9b0ebdb215b6425eae121dfc9ac4dfaa0c",
+    "boundary_blind_annotator_a.json": "24b24e1d4de44f7b4316fa8e0788e2bf2857b5d03760b4954933fdeb7724cdfd",
+    "boundary_blind_annotator_b.json": "09eed63dfb9cec07a41b8a50a47fb7c3e7b8166e2283d89c06464bab373a8be5",
+    "qa_draft.json": "779d4c2c3b605e75a89fde42388c6e04a65c40c062a7dcfa683aa8ec9b96ab18"
+  }
+}

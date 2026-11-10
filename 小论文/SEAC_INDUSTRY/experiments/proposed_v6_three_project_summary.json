@@ -1,0 +1,19 @@
+{
+  "setting": {
+    "encoder": "BAAI/bge-m3",
+    "projects": ["P01", "P02", "P03"],
+    "fair_context_for_all_methods": true,
+    "v6_parent_weight": 0.35,
+    "v6_child_weight": 0.65,
+    "pdf_ignored": true,
+    "database_evidence_granularity": "individual_table"
+  },
+  "macro_average": {
+    "fixed": {"boundary_f1": 0.0, "mrr": 0.5132, "hit_rate@1": 0.3981, "hit_rate@3": 0.5833, "hit_rate@5": 0.6667},
+    "recursive": {"boundary_f1": 0.0222, "mrr": 0.5155, "hit_rate@1": 0.3981, "hit_rate@3": 0.5833, "hit_rate@5": 0.6389},
+    "structure": {"boundary_f1": 0.8419, "mrr": 0.6809, "hit_rate@1": 0.5648, "hit_rate@3": 0.7685, "hit_rate@5": 0.8241},
+    "semantic": {"boundary_f1": 0.4807, "mrr": 0.5864, "hit_rate@1": 0.4352, "hit_rate@3": 0.7037, "hit_rate@5": 0.787},
+    "proposed_v5": {"boundary_f1": 0.8655, "mrr": 0.6993, "hit_rate@1": 0.5741, "hit_rate@3": 0.8056, "hit_rate@5": 0.8426},
+    "proposed_v6": {"boundary_f1": 0.8655, "mrr": 0.7452, "hit_rate@1": 0.6204, "hit_rate@3": 0.8611, "hit_rate@5": 0.9167}
+  }
+}

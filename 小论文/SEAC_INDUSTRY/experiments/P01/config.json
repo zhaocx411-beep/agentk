@@ -1,0 +1,16 @@
+{
+  "corpus": "workbench/P01/corpus.json",
+  "qa": "workbench/P01/qa_review_set.json",
+  "breakpoints": "workbench/P01/candidate_breakpoints.json",
+  "methods": [
+    "fixed",
+    "recursive",
+    "structure",
+    "semantic",
+    "proposed"
+  ],
+  "max_tokens": 512,
+  "overlap": 64,
+  "semantic_percentile": 0.8,
+  "semantic_encoder": "character_bigram_tfidf_provisional"
+}

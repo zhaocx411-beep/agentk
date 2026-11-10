@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="400" viewBox="0 0 980 400" style="background:#ffffff;font-family:'PingFang SC','Heiti SC','Microsoft YaHei',sans-serif;">
+  <text x="490" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">图 1-1 本论文核心科学问题、三项研究内容与工程应用逻辑关系图</text>
+
+  <!-- Left: Problem Statement -->
+  <rect x="20" y="55" width="215" height="315" rx="10" fill="#fdf5f5" stroke="#c0392b" stroke-width="1.8"/>
+  <rect x="20" y="55" width="215" height="36" rx="10" fill="#c0392b"/>
+  <text x="127.5" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">核心矛盾与技术瓶颈</text>
+
+  <rect x="34" y="106" width="187" height="75" rx="6" fill="#ffffff" stroke="#e6b0aa"/>
+  <text x="127.5" y="125" text-anchor="middle" font-size="11" font-weight="bold" fill="#922b21">矛盾一：文档结构复杂性</text>
+  <text x="127.5" y="143" text-anchor="middle" font-size="10" fill="#333">工程文档表格占 59.5%、层级深</text>
+  <text x="127.5" y="159" text-anchor="middle" font-size="9.5" fill="#666">静态切分导致结构断裂、表头剥离</text>
+  <text x="127.5" y="173" text-anchor="middle" font-size="9.5" fill="#666">表格行串扰、出处谱系丢失</text>
+
+  <rect x="34" y="194" width="187" height="75" rx="6" fill="#ffffff" stroke="#e6b0aa"/>
+  <text x="127.5" y="213" text-anchor="middle" font-size="11" font-weight="bold" fill="#922b21">矛盾二：角色需求异构性</text>
+  <text x="127.5" y="231" text-anchor="middle" font-size="10" fill="#333">执行层需精确行 vs 协调层需段落</text>
+  <text x="127.5" y="247" text-anchor="middle" font-size="9.5" fill="#666">全局固定粒度或多重冗余索引</text>
+  <text x="127.5" y="261" text-anchor="middle" font-size="9.5" fill="#666">无法兼顾检索精度与 Token 成本</text>
+
+  <rect x="34" y="282" width="187" height="72" rx="6" fill="#ffffff" stroke="#e6b0aa"/>
+  <text x="127.5" y="301" text-anchor="middle" font-size="11" font-weight="bold" fill="#922b21">矛盾三：系统落地局限</text>
+  <text x="127.5" y="319" text-anchor="middle" font-size="10" fill="#333">全文读取超长截断、摘要丢失细节</text>
+  <text x="127.5" y="335" text-anchor="middle" font-size="9.5" fill="#666">生成结果缺乏可核查源文档出处</text>
+
+  <!-- Arrows Left -> Center -->
+  <line x1="235" y1="143" x2="275" y2="143" stroke="#2b5c8f" stroke-width="2"/>
+  <polygon points="281,143 272,138 272,148" fill="#2b5c8f"/>
+  <line x1="235" y1="231" x2="275" y2="231" stroke="#d95f02" stroke-width="2"/>
+  <polygon points="281,231 272,226 272,236" fill="#d95f02"/>
+  <line x1="235" y1="318" x2="275" y2="318" stroke="#1b9e77" stroke-width="2"/>
+  <polygon points="281,318 272,313 272,323" fill="#1b9e77"/>
+
+  <!-- Center: Three Research Contents -->
+  <rect x="283" y="55" width="420" height="315" rx="10" fill="#f8f9fa" stroke="#333" stroke-width="1.6"/>
+  <rect x="283" y="55" width="420" height="36" rx="10" fill="#2c3e50"/>
+  <text x="493" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">三项递进式核心研究内容（双层动态优化范式）</text>
+
+  <!-- RC 1 -->
+  <rect x="301" y="103" width="384" height="76" rx="7" fill="#f4f8fb" stroke="#2b5c8f" stroke-width="1.5"/>
+  <text x="493" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b5c8f">研究内容一（第 3 章 · 创新点一）：文档级动态自适应切片 (SEAC)</text>
+  <text x="493" y="141" text-anchor="middle" font-size="10.5" fill="#222">• 携带出处单元表示 + 表头绑定公式 + 四信号透明边界打分</text>
+  <text x="493" y="158" text-anchor="middle" font-size="10" fill="#444">• 文档动态阈值 θ_D + 受保护父块与表行子块双层索引 (MRR=0.7937)</text>
+
+  <!-- Down arrow RC1 -> RC2 -->
+  <line x1="493" y1="179" x2="493" y2="193" stroke="#d95f02" stroke-width="1.8"/>
+  <polygon points="493,197 488,190 498,190" fill="#d95f02"/>
+  <text x="585" y="191" font-size="9.5" font-weight="bold" fill="#d95f02">消融启示：固定融合权重次优</text>
+
+  <!-- RC 2 -->
+  <rect x="301" y="198" width="384" height="76" rx="7" fill="#fdf8f3" stroke="#d95f02" stroke-width="1.5"/>
+  <text x="493" y="217" text-anchor="middle" font-size="12" font-weight="bold" fill="#d95f02">研究内容二（第 4 章 · 创新点二）：角色级动态检索粒度选择 (MAS-DRG)</text>
+  <text x="493" y="236" text-anchor="middle" font-size="10.5" fill="#222">• 归纳 5 类智能体角色与 3 类信息需求 (精确事实 / 层次上下文 / 宏观概述)</text>
+  <text x="493" y="253" text-anchor="middle" font-size="10" fill="#444">• 单索引零冗余动态路由 (α, 返回模式)：MRR 提升至 0.8416，Token 省 35.8%</text>
+
+  <!-- Down arrow RC2 -> RC3 -->
+  <line x1="493" y1="274" x2="493" y2="288" stroke="#1b9e77" stroke-width="1.8"/>
+  <polygon points="493,292 488,285 498,285" fill="#1b9e77"/>
+
+  <!-- RC 3 -->
+  <rect x="301" y="293" width="384" height="65" rx="7" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.5"/>
+  <text x="493" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#137557">研究内容三（第 5 章 · 系统验证）：多智能体详细设计系统应用验证</text>
+  <text x="493" y="331" text-anchor="middle" font-size="10.5" fill="#222">• 三层多智能体系统架构设计 + rag_query 角色感知可追溯检索服务接口</text>
+  <text x="493" y="347" text-anchor="middle" font-size="10" fill="#444">• 真实智能体会话离线案例对比与详细设计文档编译产出验证</text>
+
+  <!-- Arrow Center -> Right -->
+  <line x1="703" y1="212" x2="743" y2="212" stroke="#1b9e77" stroke-width="2.2"/>
+  <polygon points="749,212 740,207 740,217" fill="#1b9e77"/>
+
+  <!-- Right: Target Outcome -->
+  <rect x="751" y="55" width="209" height="315" rx="10" fill="#f2faf7" stroke="#1b9e77" stroke-width="1.8"/>
+  <rect x="751" y="55" width="209" height="36" rx="10" fill="#1b9e77"/>
+  <text x="855.5" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">研究目标与工程闭环</text>
+
+  <rect x="766" y="110" width="179" height="72" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="855.5" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#137557">1. 高精度细粒度定位</text>
+  <text x="855.5" y="149" text-anchor="middle" font-size="10" fill="#333">Unit MRR 达 0.8416</text>
+  <text x="855.5" y="166" text-anchor="middle" font-size="10" fill="#333">Hit@5 最高达 0.9600</text>
+
+  <rect x="766" y="196" width="179" height="72" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="855.5" y="216" text-anchor="middle" font-size="11" font-weight="bold" fill="#137557">2. 显著降低上下文成本</text>
+  <text x="855.5" y="235" text-anchor="middle" font-size="10" fill="#333">单索引零额外存储开销</text>
+  <text x="855.5" y="252" text-anchor="middle" font-size="10" fill="#333">上下文 Token 节省 35.8%</text>
+
+  <rect x="766" y="282" width="179" height="72" rx="6" fill="#ffffff" stroke="#a6decb"/>
+  <text x="855.5" y="302" text-anchor="middle" font-size="11" font-weight="bold" fill="#137557">3. 全链路可追溯与可审计</text>
+  <text x="855.5" y="321" text-anchor="middle" font-size="10" fill="#333">精确到文档→章节→表格行</text>
+  <text x="855.5" y="338" text-anchor="middle" font-size="10" fill="#333">支撑复杂详细设计文档生成</text>
+</svg>

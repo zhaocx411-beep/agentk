@@ -1,0 +1,398 @@
+[
+  {
+    "qa_id": "QA001",
+    "rank": 357,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1064",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281"
+    ]
+  },
+  {
+    "qa_id": "QA002",
+    "rank": 319,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1064",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281"
+    ]
+  },
+  {
+    "qa_id": "QA003",
+    "rank": 345,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1064",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281"
+    ]
+  },
+  {
+    "qa_id": "QA004",
+    "rank": 306,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1064",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281"
+    ]
+  },
+  {
+    "qa_id": "QA005",
+    "rank": 350,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1151"
+    ]
+  },
+  {
+    "qa_id": "QA006",
+    "rank": 320,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0089",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1153",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2281",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C2283",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1151"
+    ]
+  },
+  {
+    "qa_id": "QA007",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0095"
+    ]
+  },
+  {
+    "qa_id": "QA008",
+    "rank": 2965,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0095"
+    ]
+  },
+  {
+    "qa_id": "QA009",
+    "rank": 4,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0029",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA010",
+    "rank": 3548,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0029",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA011",
+    "rank": 5,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0066",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA012",
+    "rank": 2777,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0066",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA013",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0080",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA014",
+    "rank": 3713,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0080",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0030",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0067"
+    ]
+  },
+  {
+    "qa_id": "QA015",
+    "rank": 2,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0032",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0014",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0747",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1075",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1715"
+    ]
+  },
+  {
+    "qa_id": "QA016",
+    "rank": 50,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1075",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1715",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0127",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0245",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0310"
+    ]
+  },
+  {
+    "qa_id": "QA017",
+    "rank": 3,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0112",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0026",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0019",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0075",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0042"
+    ]
+  },
+  {
+    "qa_id": "QA018",
+    "rank": 11,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0101",
+      "semantic:晋钢安全预警平台-详细设计规格接口文档V1.0.docx:C0112",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1075",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1715",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0127"
+    ]
+  },
+  {
+    "qa_id": "QA019",
+    "rank": 3,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1741",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0523",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0037",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0005",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0021"
+    ]
+  },
+  {
+    "qa_id": "QA020",
+    "rank": 89,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0740",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0523",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0515",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0215",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0519"
+    ]
+  },
+  {
+    "qa_id": "QA021",
+    "rank": 77,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0739",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1853",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0746",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0741",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0786"
+    ]
+  },
+  {
+    "qa_id": "QA022",
+    "rank": 370,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1867",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0471",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0454",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0433",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0459"
+    ]
+  },
+  {
+    "qa_id": "QA023",
+    "rank": 178,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1886",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0454",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0446",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0450",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0433"
+    ]
+  },
+  {
+    "qa_id": "QA024",
+    "rank": 421,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1907",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0796",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0791",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0500",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0506"
+    ]
+  },
+  {
+    "qa_id": "QA025",
+    "rank": 1132,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0040",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0068",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0081",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0094",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0106"
+    ]
+  },
+  {
+    "qa_id": "QA026",
+    "rank": 4333,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1340",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0009",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0012",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0013",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0521"
+    ]
+  },
+  {
+    "qa_id": "QA027",
+    "rank": 5578,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0010",
+      "semantic:调研报告 （晋钢安全）.docx:C0015",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0006",
+      "semantic:调研报告 （晋钢安全）.docx:C0016",
+      "semantic:调研报告 （晋钢安全）.docx:C0020"
+    ]
+  },
+  {
+    "qa_id": "QA028",
+    "rank": 41,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0379",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1795",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0009",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0622",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C1697"
+    ]
+  },
+  {
+    "qa_id": "QA029",
+    "rank": 2773,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0234",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0424",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0587",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0802",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1013"
+    ]
+  },
+  {
+    "qa_id": "QA030",
+    "rank": 748,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0737",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0339",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0695",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0336",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0340"
+    ]
+  },
+  {
+    "qa_id": "QA031",
+    "rank": 334,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0016",
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0021",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0006",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1848",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C1852"
+    ]
+  },
+  {
+    "qa_id": "QA032",
+    "rank": 496,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0021",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0016",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0006",
+      "semantic:调研报告 （晋钢安全）.docx:C0015",
+      "semantic:调研报告 （晋钢安全）.docx:C0032"
+    ]
+  },
+  {
+    "qa_id": "QA033",
+    "rank": 14,
+    "top_chunk_ids": [
+      "semantic:调研报告 （晋钢安全）.docx:C0010",
+      "semantic:调研报告 （晋钢安全）.docx:C0015",
+      "semantic:调研报告 （晋钢安全）.docx:C0016",
+      "semantic:调研报告 （晋钢安全）.docx:C0020",
+      "semantic:调研报告 （晋钢安全）.docx:C0032"
+    ]
+  },
+  {
+    "qa_id": "QA034",
+    "rank": 358,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0036",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0062",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0076",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0088",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0101"
+    ]
+  },
+  {
+    "qa_id": "QA035",
+    "rank": 803,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-需求规格书.pdf:C0021",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0016",
+      "semantic:晋钢安全预警平台-详细设计规格 V1.1--1020.docx:C0006",
+      "semantic:调研报告 （晋钢安全）.docx:C0015",
+      "semantic:调研报告 （晋钢安全）.docx:C0032"
+    ]
+  },
+  {
+    "qa_id": "QA036",
+    "rank": 1394,
+    "top_chunk_ids": [
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0737",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0339",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0695",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0336",
+      "semantic:晋钢安全预警平台-详细设计规格数据库说明文档.xlsx:C0340"
+    ]
+  }
+]

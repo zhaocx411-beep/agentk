@@ -1,0 +1,72 @@
+[
+  {
+    "project_id": "P08",
+    "document_type": "Technical Agreement",
+    "file_name": "模块7-能源管理-技术协议-1207.docx",
+    "file_path": "烟台华新-能源管理/模块7-能源管理-技术协议-1207.docx",
+    "paragraphs": 291,
+    "tables": 11,
+    "table_rows": 259,
+    "headings": 109,
+    "characters": 28013,
+    "tokens_approx": 24303,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P08",
+    "document_type": "Detailed Design",
+    "file_name": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_业务代码设计.docx",
+    "file_path": "烟台华新-能源管理/烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_业务代码设计.docx",
+    "paragraphs": 31,
+    "tables": 11,
+    "table_rows": 75,
+    "headings": 18,
+    "characters": 12054,
+    "tokens_approx": 7779,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P08",
+    "document_type": "API",
+    "file_name": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "file_path": "烟台华新-能源管理/烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+    "paragraphs": 55,
+    "tables": 24,
+    "table_rows": 178,
+    "headings": 21,
+    "characters": 4926,
+    "tokens_approx": 2638,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P08",
+    "document_type": "DB",
+    "file_name": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "file_path": "烟台华新-能源管理/烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+    "paragraphs": 101,
+    "tables": 51,
+    "table_rows": 841,
+    "headings": 88,
+    "characters": 33441,
+    "tokens_approx": 12119,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  },
+  {
+    "project_id": "P08",
+    "document_type": "Detailed Design",
+    "file_name": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "file_path": "烟台华新-能源管理/烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+    "paragraphs": 530,
+    "tables": 101,
+    "table_rows": 2008,
+    "headings": 236,
+    "characters": 105747,
+    "tokens_approx": 76468,
+    "token_definition": "Approx.: Chinese characters + Latin/number terms + punctuation",
+    "confidentiality": "待确认/待脱敏"
+  }
+]

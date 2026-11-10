@@ -1,0 +1,117 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P06",
+  "split": "locked_test",
+  "source_dir": "综合服务一体化管理平台",
+  "processed": [
+    {
+      "file": "综合服务一体化管理平台-详细设计规格书 V0.4.docx",
+      "suffix": ".docx",
+      "sha256": "239b3952eee3a12c18c472699087c6c2cc2408d107dcd5aabc5f1abdbe42e36f",
+      "bytes": 14781645,
+      "document_type": "Detailed Design"
+    },
+    {
+      "file": "综合服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+      "suffix": ".docx",
+      "sha256": "75b3486a4caf5abc3c2ad72e87a7a782b45dc14d3d6cd8dc61cad8c5de13f9a3",
+      "bytes": 572154,
+      "document_type": "API"
+    },
+    {
+      "file": "综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+      "suffix": ".xlsx",
+      "sha256": "ecbe4040ac7fdc793d740334c39b36b32c04ddf3633cbad14571506e96d85ad0",
+      "bytes": 137374,
+      "document_type": "DB"
+    },
+    {
+      "file": "综合服务一体化管理平台会议纪要总和-20250414.docx",
+      "suffix": ".docx",
+      "sha256": "bb03c3c42f5140a03e0f940a02c2d041bc5722e06610393ed34a48e952173922",
+      "bytes": 1061518,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250414.docx",
+      "suffix": ".docx",
+      "sha256": "1155e72c41120cd0260fc8f6b18bd7caab2a296d12861eac1b5987ebb8c4ed6f",
+      "bytes": 179138,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250415.docx",
+      "suffix": ".docx",
+      "sha256": "271ca8a3d14a6ee7a0f144288c8a345e02ccd80cb9563befe3ca877031a04061",
+      "bytes": 107088,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250416 上午.docx",
+      "suffix": ".docx",
+      "sha256": "7b7ebdb934dbe76da7481c0d9ae08960e3d1d0f2c5df1c78ff09acf389a4a864",
+      "bytes": 110328,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250417.docx",
+      "suffix": ".docx",
+      "sha256": "748a54457edd6f582863de0e8502cfb5bb498ba978e263aac8fbf6a6d2eeaf45",
+      "bytes": 298431,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250418.docx",
+      "suffix": ".docx",
+      "sha256": "a6f992433a0c0ab4c0fd86b59e25510ab08f35e6cb4e23c88a2346426a45b3bd",
+      "bytes": 215068,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250419.docx",
+      "suffix": ".docx",
+      "sha256": "700f048ea48b55fc0e52218d81b39cb6457c6f22f6a08415c78747add247c8d4",
+      "bytes": 334401,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250420.docx",
+      "suffix": ".docx",
+      "sha256": "78f7b0b4c6a5c42e172f4d67d56744e1acc9ce414ef12662b4aa8f331e4adb7c",
+      "bytes": 42343,
+      "document_type": "Meeting"
+    },
+    {
+      "file": "需求调研会议纪要/综合服务一体化管理平台-需求调研会议纪要-20250421.docx",
+      "suffix": ".docx",
+      "sha256": "44084d52c27786f36851c9664bc0f452c8d11a1aee94bf681cede9b241ce7912",
+      "bytes": 43256,
+      "document_type": "Meeting"
+    }
+  ],
+  "skipped": [
+    {
+      "file": ".~服务一体化管理平台-详细设计规格书 V0.4.docx",
+      "reason": "temporary_or_system_file"
+    },
+    {
+      "file": ".~服务一体化管理平台-详细设计规格接口文档 V0.4.docx",
+      "reason": "temporary_or_system_file"
+    },
+    {
+      "file": ".~综合服务一体化管理平台-详细设计规格数据库说明文档 V0.4.xlsx",
+      "reason": "temporary_or_system_file"
+    },
+    {
+      "file": "晋钢综合服务一体化管理平台-技术协议.pdf",
+      "reason": "unsupported_pdf"
+    },
+    {
+      "file": "综合服务一体化管理平台-需求规格书.pdf",
+      "reason": "unsupported_pdf"
+    }
+  ],
+  "document_count": 12,
+  "block_count": 5623,
+  "approx_token_count": 255278
+}

@@ -1,0 +1,461 @@
+[
+  {
+    "question": "人资子系统接口清单中，“获取岗位信息”接口的接口编号、发起端和接收端分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "序号",
+      "接口编号",
+      "接口名称",
+      "接口说明",
+      "接口方式",
+      "触发时刻",
+      "发起端",
+      "接收端"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为002、财务模块、组织模块",
+    "question_type": "API",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "1. 概述 1 > 2.外部接口设计 > 2.1人资子系统 > 2.1.1接口清单",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R003",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R003"
+    ],
+    "gold_evidence_span": "2 | 002 | 获取岗位信息 | 获取当前岗位管理信息 | GET | 实时 | 财务模块 | 组织模块",
+    "gold_evidence_spans": [
+      "2 | 002 | 获取岗位信息 | 获取当前岗位管理信息 | GET | 实时 | 财务模块 | 组织模块"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R003"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS001",
+    "qa_key": "P07-QS001"
+  },
+  {
+    "question": "获取人员信息接口返回信息中参数 phone 的类型、是否必填及含义是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "参数名称",
+      "参数类型",
+      "取值范围",
+      "必须",
+      "参数描述及备注"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "类型为String，必填，含义为手机号",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "source_section": "3.返回信息",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R004",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R004"
+    ],
+    "gold_evidence_span": "phone | String |  | 是 | 手机号",
+    "gold_evidence_spans": [
+      "phone | String |  | 是 | 手机号"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R004"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS002",
+    "qa_key": "P07-QS002"
+  },
+  {
+    "question": "蔚蓝人资子系统组织管理模块的公司主体管理功能中，新增及修改的输入参数“公司编码”的类型、取值范围、是否必填以及对应的数据库表分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "输入参数",
+      "类型",
+      "取值范围",
+      "必输",
+      "备注"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "类型为输入框，取值范围为字符串：最大长度100个字符，必填，对应hr_unit_manage表",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "source_section": "3蔚蓝人资子系统设计 > 3.3组织管理模块 > 3.3.3组织管理子功能 > 3.3.3.1 公司主体管理",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格书:B0108",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0108"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格书:B0108#R002",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0108#R002"
+    ],
+    "gold_evidence_span": "公司编码 | 输入框 | 字符串：最大长度100个字符 | 是 | 对应hr_unit_manage表",
+    "gold_evidence_spans": [
+      "公司编码 | 输入框 | 字符串：最大长度100个字符 | 是 | 对应hr_unit_manage表"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格书:B0108#R002"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格书.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS003",
+    "qa_key": "P07-QS003"
+  },
+  {
+    "question": "蔚蓝人资子系统的所有数据库表都建在哪个数据库表空间中？",
+    "header_reliability": "NOT_TABLE",
+    "header_labels": [],
+    "needs_role_check": false,
+    "reference_answer": "本子系统的所有表均在数据库jh4j_cloud_2_3_0_std表空间中",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "目录",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002#R001",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002#R001"
+    ],
+    "gold_evidence_span": "本子系统的所有表均在数据库jh4j_cloud_2_3_0_std表空间中。",
+    "gold_evidence_spans": [
+      "本子系统的所有表均在数据库jh4j_cloud_2_3_0_std表空间中。"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002#R001"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS004",
+    "qa_key": "P07-QS004"
+  },
+  {
+    "question": "HR_PASSPORT_VISA 表中 PASSPOR_BEGIN_DATE 字段的类型、是否为空及备注含义分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "1、",
+      "表名",
+      "HR_PASSPORT_VISA",
+      "表的描述",
+      "本表用例记录人员护照、签证信息",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "needs_role_check": false,
+    "reference_answer": "类型为VARCHAR2，可空，含义为护照生效时间",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > HR_PASSPORT_VISA",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R007",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R007"
+    ],
+    "gold_evidence_span": "PASSPOR_BEGIN_DATE | VARCHAR2 |  |  |  | Y | 护照生效时间",
+    "gold_evidence_spans": [
+      "PASSPOR_BEGIN_DATE | VARCHAR2 |  |  |  | Y | 护照生效时间"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R007"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS005",
+    "qa_key": "P07-QS005"
+  },
+  {
+    "question": "HR_EMPLOYEE_APPLICATION 表中用于记录需求人数的字段，其字段名和字段类型分别是什么？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "3、",
+      "表名",
+      "HR_EMPLOYEE_APPLICATION",
+      "表的描述",
+      "本表用例记录人员需求申请流程信息",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "needs_role_check": false,
+    "reference_answer": "分别为USER_NUMBER、VARCHAR2",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "source_section": "人资子系统 > HR_EMPLOYEE_APPLICATION",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R006",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R006"
+    ],
+    "gold_evidence_span": "USER_NUMBER | VARCHAR2 |  |  |  | Y | 需求人数",
+    "gold_evidence_spans": [
+      "USER_NUMBER | VARCHAR2 |  |  |  | Y | 需求人数"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R006"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS006",
+    "qa_key": "P07-QS006"
+  },
+  {
+    "question": "南京蔚蓝的人员入职时，录用流程由谁在获取工号后发起？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "会议主题",
+      "人资模块调研沟通"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "南京蔚蓝人员入职由人事员在南钢获取工号后发起录用流程",
+    "question_type": "Meeting fact",
+    "source_document": "项目人资模块会议纪要2025.5.12.docx",
+    "source_section": "",
+    "gold_evidence_id": "项目人资模块会议纪要2025.5.12:B0002",
+    "gold_evidence_ids": [
+      "项目人资模块会议纪要2025.5.12:B0002"
+    ],
+    "gold_evidence_unit_id": "项目人资模块会议纪要2025.5.12:B0002#R008",
+    "gold_evidence_unit_ids": [
+      "项目人资模块会议纪要2025.5.12:B0002#R008"
+    ],
+    "gold_evidence_span": "南京蔚蓝人员入职由人事员在南钢获取工号后发起录用流程",
+    "gold_evidence_spans": [
+      "南京蔚蓝人员入职由人事员在南钢获取工号后发起录用流程"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "项目人资模块会议纪要2025.5.12:B0002#R008"
+      ],
+      "documents": [
+        "项目人资模块会议纪要2025.5.12.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS007",
+    "qa_key": "P07-QS007"
+  },
+  {
+    "question": "项目验收标准中，报表查询响应时效的指标值是多少，验证时随机选择多少个报表进行验证？",
+    "header_reliability": "RELIABLE",
+    "header_labels": [
+      "指标项",
+      "指标要求",
+      "公式",
+      "验证方式"
+    ],
+    "needs_role_check": false,
+    "reference_answer": "小于等于5s，随机选择10个报表",
+    "question_type": "Numeric constraint",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "验收标准",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0462",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0462"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0462#R004",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0462#R004"
+    ],
+    "gold_evidence_span": "报表查询响应时效 | 小于等于5s | 常规报表，数据量在千笔以内，涉及的数据表在3张以内 | 随机选择10个报表验证报表查询响应时效是否满足指标要求",
+    "gold_evidence_spans": [
+      "报表查询响应时效 | 小于等于5s | 常规报表，数据量在千笔以内，涉及的数据表在3张以内 | 随机选择10个报表验证报表查询响应时效是否满足指标要求"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "PARAPHRASE_GROUNDED",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0462#R004"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS008",
+    "qa_key": "P07-QS008"
+  },
+  {
+    "question": "人力资源管理系统的服务器配置多少台、使用什么操作系统、运行什么平台和数据库，并通过什么软件实现主备数据同步？",
+    "header_reliability": "NOT_TABLE",
+    "header_labels": [],
+    "needs_role_check": false,
+    "reference_answer": "人力资源管理系统服务器主备2台，操作系统使用CentOS，运行JH4J平台及MySQL数据库，使用rsync软件实现2台服务器主备数据同步",
+    "question_type": "Feature",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目建设方案 > 系统功能设计 > 基础设施—网络及安全、服务器建设 > 服务器建设",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0300",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0300"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0300",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0300"
+    ],
+    "gold_evidence_span": "人力资源管理系统服务器主备2台，操作系统使用CentOS，运行JH4J平台及MySQL数据库，使用rsync软件实现2台服务器主备数据同步。",
+    "gold_evidence_spans": [
+      "人力资源管理系统服务器主备2台，操作系统使用CentOS，运行JH4J平台及MySQL数据库，使用rsync软件实现2台服务器主备数据同步。"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0300"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS009",
+    "qa_key": "P07-QS009"
+  },
+  {
+    "question": "项目实施计划安排从项目启动起用多长时间完成需求调研、详细设计、项目实施及项目测试，试运行及上线安排多长时间？",
+    "header_reliability": "NOT_TABLE",
+    "header_labels": [],
+    "needs_role_check": false,
+    "reference_answer": "项目启动开始，7个月完成需求调研、详细设计、项目实施（项目施工）及项目测试，试运行及上线2个月",
+    "question_type": "Process",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "source_section": "项目实施计划",
+    "gold_evidence_id": "财务人资供应链及基础设施建设-方案建议书:B0458",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0458"
+    ],
+    "gold_evidence_unit_id": "财务人资供应链及基础设施建设-方案建议书:B0458",
+    "gold_evidence_unit_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0458"
+    ],
+    "gold_evidence_span": "项目启动开始，7个月完成需求调研、详细设计、项目实施（项目施工）及项目测试，试运行及上线2个月。",
+    "gold_evidence_spans": [
+      "项目启动开始，7个月完成需求调研、详细设计、项目实施（项目施工）及项目测试，试运行及上线2个月。"
+    ],
+    "project_id": "P07",
+    "draft_origin": "llm_authored_supplement_for_human_review",
+    "answer_grounding": "LITERAL",
+    "evidence_equivalence": {
+      "status": "UNIQUE",
+      "occurrence_count": 1,
+      "unit_ids": [
+        "财务人资供应链及基础设施建设-方案建议书:B0458"
+      ],
+      "documents": [
+        "财务人资供应链及基础设施建设-方案建议书.docx"
+      ]
+    },
+    "candidate_state": "CANDIDATE_SUPPLEMENT",
+    "approval_status": "PENDING",
+    "privacy_review_status": "PENDING",
+    "human_approved": false,
+    "qa_id": "QS010",
+    "qa_key": "P07-QS010"
+  }
+]

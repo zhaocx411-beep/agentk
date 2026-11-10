@@ -1,0 +1,10 @@
+{
+  "formal_placeholder_count": 144,
+  "reference_count": 23,
+  "cited_reference_count": 23,
+  "errors": [],
+  "warnings": [
+    "144 unresolved formal-result placeholders"
+  ],
+  "clean": true
+}

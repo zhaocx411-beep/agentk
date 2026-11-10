@@ -1,0 +1,334 @@
+[P02-QA001] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0708.docx
+  Q: 0708需求调研会议的时间是什么？
+  A: 2025.7.8
+  parent_block=晋钢安全预警平台-需求调研会议纪要0708:B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0708:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室
+  checks_failed: none
+[P02-QA002] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0717.docx
+  Q: 0717需求调研会议的时间是什么？
+  A: 2025.7.8
+  parent_block=晋钢安全预警平台-需求调研会议纪要0717:B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0717:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  checks_failed: none
+[P02-QA003] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0722 .docx
+  Q: 0722需求调研会议的时间是什么？
+  A: 2025.7.22
+  parent_block=晋钢安全预警平台-需求调研会议纪要0722 :B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0722 :B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.7.22 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.7.22 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  checks_failed: none
+[P02-QA004] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0903.docx
+  Q: 0903需求调研会议的时间是什么？
+  A: 2025.9.3
+  parent_block=晋钢安全预警平台-需求调研会议纪要0903:B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0903:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  checks_failed: none
+[P02-QA005] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0708.docx
+  Q: 0708需求调研会议的地点在哪里？
+  A: 智慧中心B座205会议室
+  parent_block=晋钢安全预警平台-需求调研会议纪要0708:B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0708:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室
+  checks_failed: none
+[P02-QA006] type=Meeting fact doc=晋钢安全预警平台-需求调研会议纪要0717.docx
+  Q: 0717需求调研会议的地点在哪里？
+  A: 管控中心二楼会议室F
+  parent_block=晋钢安全预警平台-需求调研会议纪要0717:B0002
+  unit=晋钢安全预警平台-需求调研会议纪要0717:B0002#R002 block_type=table_row
+  heading=
+  span: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  unit_text: 表头: 主题 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 晋钢安全预警平台需求交流 | 页数 | 1
+数据行: 时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F
+  checks_failed: none
+[P02-QA007] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口使用什么请求方式？
+  A: POST
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0018
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0018 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: 1）请求方式：POST方法
+  unit_text: 1）请求方式：POST方法
+  checks_failed: none
+[P02-QA008] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口的请求路径是什么？
+  A: https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0020
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0020 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}
+  unit_text: https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}
+  checks_failed: none
+[P02-QA009] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 相关流程处理日志查询接口使用什么请求方式？
+  A: POST
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0050
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0050 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: 1）请求方式：POST方法
+  unit_text: 1）请求方式：POST方法
+  checks_failed: none
+[P02-QA010] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 相关流程处理日志查询接口的请求路径是什么？
+  A: https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0052
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0052 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  unit_text: https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}
+  checks_failed: none
+[P02-QA011] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 晋钢E家消息通知接口使用什么请求方式？
+  A: POST
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0145
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0145 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: 1）请求方式：POST方法
+  unit_text: 1）请求方式：POST方法
+  checks_failed: none
+[P02-QA012] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 晋钢E家消息通知接口的请求路径是什么？
+  A: https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0147
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0147 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}
+  unit_text: https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}
+  checks_failed: none
+[P02-QA013] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 晋钢IOT点位数据获取接口使用什么请求方式？
+  A: GET
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0183
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0183 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: 1）请求方式：GET方法
+  unit_text: 1）请求方式：GET方法
+  checks_failed: none
+[P02-QA014] type=API doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 晋钢IOT点位数据获取接口的请求路径是什么？
+  A: http://172.17.12.130:518/api/webapidic
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0185
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0185 block_type=paragraph
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: http://172.17.12.130:518/api/webapidic
+  unit_text: http://172.17.12.130:518/api/webapidic
+  checks_failed: none
+[P02-QA015] type=API parameter doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口中参数 formCodeId 的类型、取值范围和必填要求是什么？
+  A: 类型为String，取值范围为最大40个字节，必填
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0022
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R002 block_type=table_row
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: formCodeId | String | 最大40个字节 | 是 | 表单模板codeId
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: formCodeId | String | 最大40个字节 | 是 | 表单模板codeId
+  checks_failed: answer_in_span
+[P02-QA016] type=API parameter doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口中参数 creator 的类型、取值范围和必填要求是什么？
+  A: 类型为String，取值范围为最大100个字节，必填
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0022
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R003 block_type=table_row
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: creator | String | 最大100个字节 | 是 | 流程发起人openid
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: creator | String | 最大100个字节 | 是 | 流程发起人openid
+  checks_failed: answer_in_span
+[P02-QA017] type=API parameter doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口中参数 errorCode 的类型、取值范围和必填要求是什么？
+  A: 类型为Int，取值范围为200是成功，其余是失败，必填
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0033
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R002 block_type=table_row
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败
+  checks_failed: answer_in_span
+[P02-QA018] type=API parameter doc=晋钢安全预警平台-详细设计规格接口文档V1.0.docx
+  Q: 创建E家审批接口中参数 success 的类型、取值范围和必填要求是什么？
+  A: 类型为String，取值范围为最大100个字节，必填
+  parent_block=晋钢安全预警平台-详细设计规格接口文档V1.0:B0033
+  unit=晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R003 block_type=table_row
+  heading=1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口
+  span: success | String | 最大100个字节 | 是 | 返回提示说明
+  unit_text: 表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+数据行: success | String | 最大100个字节 | 是 | 返回提示说明
+  checks_failed: answer_in_span
+[P02-QA019] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_SAFETY_ORGANIZATION 表用于记录什么信息？
+  A: 安全机构与职责表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0002
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0002#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_SAFETY_ORGANIZATION
+  span: 1、 | 表名 | EHS_SAFETY_ORGANIZATION | 表的描述 | 安全机构与职责表 | | | | | | | | | | | |
+  unit_text: 1、 | 表名 | EHS_SAFETY_ORGANIZATION | 表的描述 | 安全机构与职责表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA020] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_SAFETY_CULTURE 表用于记录什么信息？
+  A: 安全文化建设表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0003
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0003#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_SAFETY_CULTURE
+  span: 2、 | 表名 | EHS_SAFETY_CULTURE | 表的描述 | 安全文化建设表 | | | | | | | | | | | |
+  unit_text: 2、 | 表名 | EHS_SAFETY_CULTURE | 表的描述 | 安全文化建设表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA021] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_PROJECT_BASIC 表用于记录什么信息？
+  A: 项目基本信息表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0004
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0004#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_PROJECT_BASIC
+  span: 3、 | 表名 | EHS_PROJECT_BASIC | 表的描述 | 项目基本信息表 | | | | | | | | | | | |
+  unit_text: 3、 | 表名 | EHS_PROJECT_BASIC | 表的描述 | 项目基本信息表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA022] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_HAZARDOUS_CHEMICAL 表用于记录什么信息？
+  A: 危化品台账主表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0005
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0005#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_HAZARDOUS_CHEMICAL
+  span: 4、 | 表名 | EHS_HAZARDOUS_CHEMICAL | 表的描述 | 危化品台账主表 | | | | | | | | | | | |
+  unit_text: 4、 | 表名 | EHS_HAZARDOUS_CHEMICAL | 表的描述 | 危化品台账主表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA023] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_STANDARD_SELF_EVALUATION 表用于记录什么信息？
+  A: 安标自评报告表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0006
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0006#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_STANDARD_SELF_EVALUATION
+  span: 5、 | 表名 | EHS_STANDARD_SELF_EVALUATION | 表的描述 | 安标自评报告表 | | | | | | | | | | | |
+  unit_text: 5、 | 表名 | EHS_STANDARD_SELF_EVALUATION | 表的描述 | 安标自评报告表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA024] type=Database doc=晋钢安全预警平台-详细设计规格数据库说明文档.xlsx
+  Q: EHS_SYSTEM_INTERNAL_AUDIT 表用于记录什么信息？
+  A: 体系内审报告表
+  parent_block=晋钢安全预警平台-详细设计规格数据库说明文档:B0007
+  unit=晋钢安全预警平台-详细设计规格数据库说明文档:B0007#R001 block_type=table_row
+  heading=基础信息与台账相关 > EHS_SYSTEM_INTERNAL_AUDIT
+  span: 6、 | 表名 | EHS_SYSTEM_INTERNAL_AUDIT | 表的描述 | 体系内审报告表 | | | | | | | | | | | |
+  unit_text: 6、 | 表名 | EHS_SYSTEM_INTERNAL_AUDIT | 表的描述 | 体系内审报告表 |  |  |  |  |  |  |  |  |  |  |  | 
+  checks_failed: none
+[P02-QA025] type=Constraint doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 逻辑处理中规定了什么约束？
+  A: 默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B0764
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B0764 block_type=paragraph
+  heading=系统设计 > 作业管理模块 > 危险作业图表统计 > 逻辑处理
+  span: 默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息
+  unit_text: 默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息；
+  checks_failed: none
+[P02-QA026] type=Constraint doc=调研报告 （晋钢安全）.docx
+  Q: 5.1.3.2.隐患排查治理管理员端中规定了什么约束？
+  A: 增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有
+  parent_block=调研报告 （晋钢安全）:B0068
+  unit=调研报告 （晋钢安全）:B0068 block_type=paragraph
+  heading=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.3.隐患排查治理 > 5.1.3.2.隐患排查治理管理员端
+  span: 增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有
+  unit_text: 增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有。
+  checks_failed: none
+[P02-QA027] type=Constraint doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 功能描述中规定了什么约束？
+  A: 法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B2197
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B2197 block_type=paragraph
+  heading=系统设计 > 法律法规 > 功能描述
+  span: 法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位
+  unit_text: 新法规在法律法规登记之后，安全管理处可点击“识别”按钮，选择主管单位下发法规识别任务。法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位。
+  checks_failed: none
+[P02-QA028] type=Feature doc=调研报告 （晋钢安全）.docx
+  Q: Research Report支持或提供什么能力？
+  A: 业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验
+  parent_block=调研报告 （晋钢安全）:B0010
+  unit=调研报告 （晋钢安全）:B0010 block_type=paragraph
+  heading=
+  span: 业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验
+  unit_text: 业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验。
+  checks_failed: none
+[P02-QA029] type=Feature doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 项目背景支持或提供什么能力？
+  A: 通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B0249
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B0249 block_type=paragraph
+  heading=概述 > 项目背景
+  span: 通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升
+  unit_text: 通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升。需要明确钢铁行业安全生产管理系统的建设目标、建设内容、与各厂级数据的对接方式、改造要求及进度安排等内容，要求各厂级单位提高认识、夯实责任，按照进度计划协同推进各项工作，形成上下联动、整体推进的工作局面，确保安全生产管理系统早建成早见效。
+  checks_failed: none
+[P02-QA030] type=Feature doc=调研报告 （晋钢安全）.docx
+  Q: 5.1.双重预防体系支持或提供什么能力？
+  A: 系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能
+  parent_block=调研报告 （晋钢安全）:B0017
+  unit=调研报告 （晋钢安全）:B0017 block_type=paragraph
+  heading=5.1.双重预防体系
+  span: 系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能
+  unit_text: 双重预防机制管理系统按照应急管理部《危险化学品企业双重预防 机制建设工作指南（试行）》的相关要求执行。系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能。
+  checks_failed: none
+[P02-QA031] type=Feature doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 画面设计支持或提供什么能力？
+  A: 功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B0279
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B0279 block_type=paragraph
+  heading=系统设计 > 安全风险监测预警模块 > 设备设施类型子功能 > 画面设计
+  span: 功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作
+  unit_text: 功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作；
+  checks_failed: none
+[P02-QA032] type=Feature doc=调研报告 （晋钢安全）.docx
+  Q: 5.1.2.1.安全风险分析单元管理支持或提供什么能力？
+  A: 2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控
+  parent_block=调研报告 （晋钢安全）:B0036
+  unit=调研报告 （晋钢安全）:B0036 block_type=paragraph
+  heading=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控 > 5.1.2.1.安全风险分析单元管理
+  span: 2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控
+  unit_text: 2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控。且风险分析单元可与电子地图服务联动，在电子地图上呈现不同的区域。在任意区域、对象目录下，点击新增子区域按钮，均可以新增子区域或风险分析单元。
+  checks_failed: none
+[P02-QA033] type=Process doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 项目背景描述了什么实现或处理过程？
+  A: 通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B0248
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B0248 block_type=paragraph
+  heading=概述 > 项目背景
+  span: 通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产
+  unit_text: 钢铁生产是一个复杂的系统工程，涉及多个环节和部门。传统的生产管理方式往往存在信息不对称、效率低下、资源浪费等问题。信息技术的飞速发展，智能化、数字化、网络化技术已逐渐应用于钢铁生产过程中。通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产。
+  checks_failed: none
+[P02-QA034] type=Process doc=调研报告 （晋钢安全）.docx
+  Q: Research Report描述了什么实现或处理过程？
+  A: 其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生
+  parent_block=调研报告 （晋钢安全）:B0008
+  unit=调研报告 （晋钢安全）:B0008 block_type=paragraph
+  heading=
+  span: 其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生
+  unit_text: 其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生。
+  checks_failed: none
+[P02-QA035] type=Numeric constraint doc=晋钢安全预警平台-详细设计规格 V1.1--1020.docx
+  Q: 功能描述中描述了什么数量、时长或比例要求？
+  A: 由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库
+  parent_block=晋钢安全预警平台-详细设计规格 V1.1--1020:B3377
+  unit=晋钢安全预警平台-详细设计规格 V1.1--1020:B3377 block_type=paragraph
+  heading=系统设计 > 事故事件管理 > 功能描述
+  span: 由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库
+  unit_text: 由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库；
+  checks_failed: none
+[P02-QA036] type=Numeric constraint doc=调研报告 （晋钢安全）.docx
+  Q: 5.1.2.风险分级管控中描述了什么数量、时长或比例要求？
+  A: 由风险信息管理和安全风险一张图 2 个功能点组成
+  parent_block=调研报告 （晋钢安全）:B0032
+  unit=调研报告 （晋钢安全）:B0032 block_type=paragraph
+  heading=5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控
+  span: 由风险信息管理和安全风险一张图 2 个功能点组成
+  unit_text: 涉及风险基础信息管理、风险分级智能评估、风险防控措施管理、风险预警发布等几方面内容。由风险信息管理和安全风险一张图 2 个功能点组成。风险信息管理包括企业风险清单、风险管控清单和危险因素排查辨识清单。
+  checks_failed: none

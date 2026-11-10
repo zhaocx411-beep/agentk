@@ -1,0 +1,24 @@
+{"id":"P10-QA001","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY","PROPRIETARY_BUSINESS_DATA"],"note":"问题直接复述带编号的条款标题且答案与问题同文，属自答题并依赖条款编号，题目不成立。"}
+{"id":"P10-QA002","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":[],"note":"证据不唯一：“设备和终端必须反应快速……”同句在技术协议B0121、需求规格书B0528、方案建议书B0119三处出现，不指明文件无法定位唯一证据。"}
+{"id":"P10-QA003","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"“必要性分析”节含11块现状与问题描述且本身不规定约束，题型与问题措辞不符，需改问“十四五”背景下智慧钢铁企业须建立什么架构。"}
+{"id":"P10-QA004","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":["SECURITY_ARCHITECTURE","PROPRIETARY_BUSINESS_DATA"],"note":"问题复述带编号的条款标题且答案与问题同文，属自答题并依赖条款编号，题目不成立。"}
+{"id":"P10-QA005","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":[],"note":"证据不唯一：该扩展性与维护性条款同句在技术协议B0125、需求规格书B0532、方案建议书B0123三处重复。"}
+{"id":"P10-QA006","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"证据不唯一：该句跨三份文档重复，且“设计原则”节含19块并列原则，问题无法定位唯一证据。"}
+{"id":"P10-QA007","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"问题指向1.2条款，但证据单元与答案是1.4条款关于乙方书面异议的规定，问答与证据不对应，参考答案错误。"}
+{"id":"P10-QA008","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"“业务架构图”节列有5类并列的能源精细化管理功能，答案只取第5项能源综合报表，问题需限定到报表功能才唯一。"}
+{"id":"P10-QA009","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY"],"note":"可行性分析节含硬件支持、系统应用、数据处理等多条并列条目，答案只取第（1）条，问题过于笼统且原文“计量艺表”为错字，需一并改写。"}
+{"id":"P10-QA010","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["SECURITY_ARCHITECTURE","PROPRIETARY_BUSINESS_DATA"],"note":"证据是甲方供货与施工责任而非系统能力，题型与问题措辞不符，且片段只截取网络与光缆部分，需改问甲方在网络接入方面承担哪些工作。"}
+{"id":"P10-QA011","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"片段以“如上图所示”开头依赖无法获取的架构图，需去掉图示指代并把问题限定到平台整体架构的性能特性。"}
+{"id":"P10-QA012","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"片段以“另一方面”开头脱离上文不能自足，且与QA003取自同一证据单元构成近重复，需重取完整语句并区分两条问题。"}
+{"id":"P10-QA013","content_verdict":"APPROVED","difficulty":"Easy","suggested_privacy_flags":[],"note":"能碳管理平台利用甲方服务器资源实现采集、分析与报表管控由片段直接支持，证据在语料内唯一，题型与章节正确。"}
+{"id":"P10-QA014","content_verdict":"APPROVED","difficulty":"Easy","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"二级仪表分散布置、以人工抄录为主的现状由片段直接支持且节内唯一，来源文档与章节正确。"}
+{"id":"P10-QA015","content_verdict":"APPROVED","difficulty":"Hard","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"该条是实施范围清单中唯一含数量的条目，三级仪表与各产线设备数量由片段直接支持，需归纳多组数字故难度较高。"}
+{"id":"P10-QA016","content_verdict":"APPROVED","difficulty":"Easy","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"合同签订后4个月上线试运行、5个月验收由片段直接支持且节内唯一，题型、来源文档与章节正确。"}
+{"id":"P10-QA017","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY","SECURITY_ARCHITECTURE","PROPRIETARY_BUSINESS_DATA"],"note":"证据不唯一：该变电所现状同句同时出现在需求规格书B0065与方案建议书B0198，问题无法定位唯一证据。"}
+{"id":"P10-QA018","content_verdict":"APPROVED","difficulty":"Hard","suggested_privacy_flags":["SECURITY_ARCHITECTURE"],"note":"环形加星形结构与7个主环网站点由片段直接支持且节内唯一，需理解工业环网拓扑才能作答故难度较高。"}
+{"id":"P10-QA019","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"同一段落还规定质保期1年、维保3年，与所选24小时到场时限同样是数量要求，问题需限定为异常响应到场时限。"}
+{"id":"P10-QA020","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY","SECURITY_ARCHITECTURE"],"note":"问题复述带编号的条款标题且答案与问题同文，属自答题并依赖条款编号，题目不成立。"}
+{"id":"P10-QA021","content_verdict":"NEEDS_REWRITE","difficulty":"Easy","suggested_privacy_flags":["PROPRIETARY_BUSINESS_DATA"],"note":"证据是甲方需提供的现场条件而非系统能力，题型与问题措辞不符，且片段只截取办公场所部分，需改问甲方应提供哪些现场条件。"}
+{"id":"P10-QA022","content_verdict":"NEEDS_REWRITE","difficulty":"Medium","suggested_privacy_flags":[],"note":"该节列有10条并列功能要求，答案只取第（7）条报表无代码扩展，问题需限定到报表建模功能才能唯一。"}
+{"id":"P10-QA023","content_verdict":"REJECTED","difficulty":"Medium","suggested_privacy_flags":[],"note":"证据不唯一：该句跨三份文档重复，“4.2 设计原则”节含19块并列原则，并与QA002、QA006构成同句重复题。"}
+{"id":"P10-QA024","content_verdict":"REJECTED","difficulty":"Easy","suggested_privacy_flags":["CUSTOMER_OR_VENDOR_IDENTITY","PROPRIETARY_BUSINESS_DATA"],"note":"证据不唯一：水系统现状同句同时出现在需求规格书B0067与方案建议书B0200，问题无法定位唯一证据。"}

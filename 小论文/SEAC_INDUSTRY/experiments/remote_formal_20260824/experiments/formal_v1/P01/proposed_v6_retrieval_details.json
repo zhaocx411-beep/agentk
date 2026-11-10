@@ -1,0 +1,482 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "API",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0018"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0013",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0015",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0016",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0014",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0017"
+    ],
+    "query_latency_ms": 40.308911353349686
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "API",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0059"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0018",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0019",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0023",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0020",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0021"
+    ],
+    "query_latency_ms": 39.35705218464136
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "API",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0125"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0030",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0035",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0031",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0036",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0033"
+    ],
+    "query_latency_ms": 39.139244705438614
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "API parameter",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0021#R002"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0014",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0015",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0016",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0022",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0019"
+    ],
+    "query_latency_ms": 43.1249151006341
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "API parameter",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0027#R002"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0014",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0015",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0022",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0019",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0021"
+    ],
+    "query_latency_ms": 40.989407338202
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "API parameter",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-接口文档:B0062#R002"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0019",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0022",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0021",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0020",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0023"
+    ],
+    "query_latency_ms": 40.870401076972485
+  },
+  {
+    "qa_id": "QA009",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0019#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0024",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0064",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0079",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0063",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0026"
+    ],
+    "query_latency_ms": 40.321615524590015
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 4,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0020#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0030",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0063",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0064",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0028",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0029"
+    ],
+    "query_latency_ms": 40.58639891445637
+  },
+  {
+    "qa_id": "QA011",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0021#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0031",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0033",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0032",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0035",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0034"
+    ],
+    "query_latency_ms": 40.48375878483057
+  },
+  {
+    "qa_id": "QA012",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0022#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0034",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0035",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0037",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0036",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0031"
+    ],
+    "query_latency_ms": 40.69854225963354
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0023#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0039",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0038",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0040",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0041",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0042"
+    ],
+    "query_latency_ms": 40.63255898654461
+  },
+  {
+    "qa_id": "QA014",
+    "question_type": "Database",
+    "source_document": "镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格-数据库设计:B0024#R001"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0042",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0043",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0039",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0046",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-数据库设计.xlsx:P0040"
+    ],
+    "query_latency_ms": 40.85263982415199
+  },
+  {
+    "qa_id": "QA015",
+    "question_type": "Constraint",
+    "source_document": "镔鑫安全二期技术协议V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫安全二期技术协议V1.0:B0196"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0126",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0125",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0169",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0172",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0124"
+    ],
+    "query_latency_ms": 39.16297387331724
+  },
+  {
+    "qa_id": "QA016",
+    "question_type": "Constraint",
+    "source_document": "镔鑫安全二期调研报告.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫安全二期调研报告:B0133"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0090",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0016",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0091",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0115",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0053"
+    ],
+    "query_latency_ms": 39.37660530209541
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Constraint",
+    "source_document": "镔鑫智慧安全二期-详细设计规格V1.2.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格V1.2:B0523"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0240",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0159",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0156",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0160",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0236"
+    ],
+    "query_latency_ms": 39.16321415454149
+  },
+  {
+    "qa_id": "QA018",
+    "question_type": "Constraint",
+    "source_document": "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B1129"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0327",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0315",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0332",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0148",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0265"
+    ],
+    "query_latency_ms": 38.90314884483814
+  },
+  {
+    "qa_id": "QA022",
+    "question_type": "Feature",
+    "source_document": "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx",
+    "rank": 21,
+    "span_rank": 21,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0862"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0198",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0280",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0118",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0283",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0286"
+    ],
+    "query_latency_ms": 39.44721445441246
+  },
+  {
+    "qa_id": "QA025",
+    "question_type": "Feature",
+    "source_document": "镔鑫智慧安全二期-详细设计规格V1.2.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格V1.2:B0834"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0322",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0284",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0284",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0065",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0285"
+    ],
+    "query_latency_ms": 38.8703653588891
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Process",
+    "source_document": "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0042"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0019",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0017",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0018",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0112",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0113"
+    ],
+    "query_latency_ms": 39.042893797159195
+  },
+  {
+    "qa_id": "QA030",
+    "question_type": "Numeric constraint",
+    "source_document": "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx",
+    "rank": 3,
+    "span_rank": 3,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期项目需求规格书V1.00_25.08.23:B0015"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0008",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0006",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0005",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0315",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格-接口文档.docx:P0062"
+    ],
+    "query_latency_ms": 40.645104832947254
+  },
+  {
+    "qa_id": "QA031",
+    "question_type": "Numeric constraint",
+    "source_document": "镔鑫安全二期技术协议V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫安全二期技术协议V1.0:B0095"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0075",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0319",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0320",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0083",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0257"
+    ],
+    "query_latency_ms": 40.6987676396966
+  },
+  {
+    "qa_id": "QA032",
+    "question_type": "Numeric constraint",
+    "source_document": "镔鑫安全二期调研报告.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫安全二期调研报告:B0126"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0086",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0087",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0250",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0013",
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0252"
+    ],
+    "query_latency_ms": 40.80193676054478
+  },
+  {
+    "qa_id": "QA033",
+    "question_type": "Numeric constraint",
+    "source_document": "镔鑫智慧安全二期-详细设计规格V1.2.docx",
+    "rank": 19,
+    "span_rank": 19,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫智慧安全二期-详细设计规格V1.2:B0507"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0252",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0464",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0198",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0283",
+      "proposed_v6:镔鑫安全二期调研报告.docx:P0268"
+    ],
+    "query_latency_ms": 40.742320008575916
+  },
+  {
+    "qa_id": "QA036",
+    "question_type": "Feature",
+    "source_document": "镔鑫安全二期技术协议V1.0.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "镔鑫安全二期技术协议V1.0:B0226"
+    ],
+    "top_chunk_ids": [
+      "proposed_v6:镔鑫安全二期技术协议V1.0.docx:P0141",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0425",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0132",
+      "proposed_v6:镔鑫智慧安全二期项目需求规格书V1.00_25.08.23.docx:P0133",
+      "proposed_v6:镔鑫智慧安全二期-详细设计规格V1.2.docx:P0096"
+    ],
+    "query_latency_ms": 39.07742165029049
+  }
+]

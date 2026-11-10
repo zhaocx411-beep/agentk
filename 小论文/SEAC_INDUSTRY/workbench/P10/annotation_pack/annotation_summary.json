@@ -1,0 +1,44 @@
+{
+  "protocol_version": "industrial-seac-annotation-v1.0",
+  "project_id": "P10",
+  "split": "locked_test",
+  "sampling_seed": 20260804,
+  "corpus_sha256": "211b09ba6ead7caff2e462cb33e7ec3aca43fd11b4bace4f4137cabc796a3410",
+  "boundary_pool_count": 1404,
+  "boundary_sample_count": 300,
+  "pool_strata": {
+    "heading_transition": 271,
+    "inside_table": 346,
+    "noise_candidate": 2,
+    "same_section_continuity": 665,
+    "table_transition": 120
+  },
+  "sample_strata": {
+    "heading_transition": 69,
+    "inside_table": 82,
+    "noise_candidate": 2,
+    "same_section_continuity": 111,
+    "table_transition": 36
+  },
+  "sample_documents": {
+    "巨能特钢智慧管控一体化平台-技术协议.docx": 90,
+    "巨能特钢智慧管控一体化平台-需求规格书-word.docx": 99,
+    "巨能特钢智慧管控一体化平台-需求调研会议纪要.docx": 9,
+    "巨能特钢能源管理系统项目方案建议书202503040.docx": 102
+  },
+  "qa_draft_count": 24,
+  "qa_types": {
+    "Constraint": 7,
+    "Feature": 7,
+    "Numeric constraint": 6,
+    "Process": 4
+  },
+  "qa_unit_aligned_count": 24,
+  "formal_status": "ANNOTATION_PENDING",
+  "files": {
+    "boundary_blind_master.json": "588712014736f92cc80dd91dae65d05f8598e2d210556a682cc5eafbb4afd6c2",
+    "boundary_blind_annotator_a.json": "714635ae7ebc8845bf8354a35573fcd3d53cea523d2707179fc543b3c122a1a9",
+    "boundary_blind_annotator_b.json": "69aa4d740524560bc814e943d7b7367af94a8eac9ec866f309509340f7303c60",
+    "qa_draft.json": "4f6a50cf56ca1b35d4256b5f2c8d8220df70babb078970b6ea3e477c2b87edfd"
+  }
+}

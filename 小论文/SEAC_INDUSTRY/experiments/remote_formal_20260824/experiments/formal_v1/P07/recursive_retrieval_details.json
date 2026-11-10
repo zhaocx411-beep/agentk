@@ -1,0 +1,466 @@
+[
+  {
+    "qa_id": "QA001",
+    "question_type": "API",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 4,
+    "span_rank": 4,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0044",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0001",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0007"
+    ],
+    "query_latency_ms": 9.149812161922455
+  },
+  {
+    "qa_id": "QA002",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0011",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0009"
+    ],
+    "query_latency_ms": 16.33461657911539
+  },
+  {
+    "qa_id": "QA003",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0027#R003"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0011",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0009"
+    ],
+    "query_latency_ms": 16.592619009315968
+  },
+  {
+    "qa_id": "QA004",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R003"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0033",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0030"
+    ],
+    "query_latency_ms": 17.128397710621357
+  },
+  {
+    "qa_id": "QA005",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 3,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0005",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0006"
+    ],
+    "query_latency_ms": 10.0506991147995
+  },
+  {
+    "qa_id": "QA006",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0005#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0005",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0006",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0007",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0003"
+    ],
+    "query_latency_ms": 9.243476204574108
+  },
+  {
+    "qa_id": "QA007",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0007",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0006",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0005"
+    ],
+    "query_latency_ms": 16.777276061475277
+  },
+  {
+    "qa_id": "QA008",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0007#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0008",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0009",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0002",
+      "recursive:人资系统调研会议纪要2025.5.docx:C0007",
+      "recursive:人资系统调研会议纪要2025.5.docx:C0012"
+    ],
+    "query_latency_ms": 9.219491854310036
+  },
+  {
+    "qa_id": "QA009",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0008#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0010",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0009",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0011",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0008",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0002"
+    ],
+    "query_latency_ms": 9.2207882553339
+  },
+  {
+    "qa_id": "QA010",
+    "question_type": "Constraint",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0173"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0026",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0015",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0016",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0014",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0025"
+    ],
+    "query_latency_ms": 9.016994386911392
+  },
+  {
+    "qa_id": "QA013",
+    "question_type": "Feature",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0126",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0070"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0005",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0009",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0056",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0058",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0068"
+    ],
+    "query_latency_ms": 16.010246239602566
+  },
+  {
+    "qa_id": "QA017",
+    "question_type": "Numeric constraint",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "rank": 5,
+    "span_rank": 5,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0127",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0071"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0080",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0046",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0076",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0074",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0009"
+    ],
+    "query_latency_ms": 16.021783463656902
+  },
+  {
+    "qa_id": "QA026",
+    "question_type": "Feature",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "rank": 9,
+    "span_rank": 9,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0136",
+      "财务人资供应链及基础设施建设-方案建议书:B0289",
+      "财务人资供应链及基础设施建设-详细设计规格书:B0078"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0030",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0045",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0009",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0046",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0010"
+    ],
+    "query_latency_ms": 16.69870037585497
+  },
+  {
+    "qa_id": "QS001",
+    "question_type": "API",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0015#R003"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0044",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0007",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0043"
+    ],
+    "query_latency_ms": 15.881414525210857
+  },
+  {
+    "qa_id": "QS002",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-接口文档.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-接口文档:B0051#R004"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-接口文档.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0026",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0030"
+    ],
+    "query_latency_ms": 16.222872771322727
+  },
+  {
+    "qa_id": "QS003",
+    "question_type": "API parameter",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格书:B0108#R002"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0008",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0015",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0009",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0035",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0030"
+    ],
+    "query_latency_ms": 16.2078645080328
+  },
+  {
+    "qa_id": "QS004",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 78,
+    "span_rank": 78,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0002#R001"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0056",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0062",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0061",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0055",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0054"
+    ],
+    "query_latency_ms": 16.890909522771835
+  },
+  {
+    "qa_id": "QS005",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0004#R007"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0002",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0005",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0052"
+    ],
+    "query_latency_ms": 16.077094711363316
+  },
+  {
+    "qa_id": "QS006",
+    "question_type": "Database",
+    "source_document": "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-详细设计规格-数据库说明文档:B0006#R006"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0007",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0006",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0008",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0004",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格-数据库说明文档.xlsx:C0003"
+    ],
+    "query_latency_ms": 15.969878062605858
+  },
+  {
+    "qa_id": "QS007",
+    "question_type": "Meeting fact",
+    "source_document": "项目人资模块会议纪要2025.5.12.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "项目人资模块会议纪要2025.5.12:B0002#R008"
+    ],
+    "top_chunk_ids": [
+      "recursive:项目人资模块会议纪要2025.5.12.docx:C0004",
+      "recursive:项目人资模块会议纪要2025.5.12.docx:C0003",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0021",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0034",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0019"
+    ],
+    "query_latency_ms": 16.188375651836395
+  },
+  {
+    "qa_id": "QS008",
+    "question_type": "Numeric constraint",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "rank": 2,
+    "span_rank": 2,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0462#R004"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0046",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0047",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0077",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0080",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0074"
+    ],
+    "query_latency_ms": 16.566233709454536
+  },
+  {
+    "qa_id": "QS009",
+    "question_type": "Feature",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "rank": 1,
+    "span_rank": 1,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0300"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0031",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0032",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0043",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0045",
+      "recursive:财务人资供应链及基础设施建设-详细设计规格书.docx:C0004"
+    ],
+    "query_latency_ms": 16.57530665397644
+  },
+  {
+    "qa_id": "QS010",
+    "question_type": "Process",
+    "source_document": "财务人资供应链及基础设施建设-方案建议书.docx",
+    "rank": 11,
+    "span_rank": 11,
+    "has_gold_span": true,
+    "evidence_level": "unit",
+    "gold_evidence_ids": [
+      "财务人资供应链及基础设施建设-方案建议书:B0458"
+    ],
+    "top_chunk_ids": [
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0047",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0081",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0002",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0082",
+      "recursive:财务人资供应链及基础设施建设-方案建议书.docx:C0008"
+    ],
+    "query_latency_ms": 16.79657306522131
+  }
+]

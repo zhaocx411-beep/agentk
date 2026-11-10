@@ -1,0 +1,375 @@
+[P07-BP0076] stratum=table_transition doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 签字： | 签字：
+  R(table_row) sec=<same>
+    附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表
+[P07-BP0077] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 会议记录 | 杨梓康
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 会议内容 | 会议内容
+[P07-BP0078] stratum=same_section_continuity doc_type=Detailed Design
+  L(heading) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.3 薪资方案
+    3.6.3.3 薪资方案
+  R(paragraph) sec=<same>
+    业务说明
+[P07-BP0079] stratum=heading_transition doc_type=Detailed Design
+  L(heading) sec=4附录 80 > 4.3数据库文档 80
+    4.3数据库文档 80
+  R(heading) sec=概述
+    概述
+[P07-BP0080] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=概述 > 标准符合性
+    本项目不涉及标准或规范的遵循。
+  R(heading) sec=概述 > 设计约束
+    设计约束
+[P07-BP0081] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.6 印尼十三薪计算
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P07-BP0082] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 数据行: 序号 | 问题描述 | 提出人 | 责任人 | 解决时间
+  R(table_row) sec=<same>
+    表头: 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 | 附件1：遗留问题列表 数据行: 1 | 考勤、印尼薪酬部分与菲比沟通确认 | 杨梓康 | 杨梓康 |
+[P07-BP0083] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.5 人事信息管理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 家庭状况 | 下拉框 | 家庭状况字典 | 是 |
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 政治面貌 | 下拉框 | 政治面貌字典 | |
+[P07-BP0084] stratum=table_transition doc_type=API
+  L(table_row) sec=1.请求信息
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+  R(heading) sec=2.请求信息样例
+    2.请求信息样例
+[P07-BP0085] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1.请求信息
+    2）请求路径：http://172.28.99.75/hrms/hrUserBase/getInfo
+  R(paragraph) sec=<same>
+    3）请求信息参数：无
+[P07-BP0086] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 总账
+    在每个会计期结束时，都需进行各种费用的分摊、税金的计提、成本的结转、损益的结转等，结转完毕后，才可执行月末结账。自定义转账可实现这些功能，其功能点分为：自定义转账分类定义、自定义转账定义、自定义转账方案档案定义、自定义转账方案定义、自定义转账执行等。
+  R(paragraph) sec=<same>
+    期末处理
+[P07-BP0087] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 产品成本
+    本报表主要是对归集的成本资料进行查询；在实际成本处理后，对完工成本、在产成本、废品成本、还原后成本进行查询统计，并与标准成本进行对比分析；对各期的生产费用、投入产出进行查询统计。
+  R(heading) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 财务报表
+    财务报表
+[P07-BP0088] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.12 社会福利档案
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P07-BP0089] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.2 工资标准
+    画面设计
+  R(paragraph) sec=<same>
+    图6.3.2.1
+[P07-BP0090] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.9 个税计算
+    输入参数 | 类型 | 取值范围 | 必输 | 备注
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 上传文件 | 文件 | | 是 | 上传本地文件
+[P07-BP0091] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目的目标与范围 > 项目目标及效果
+    通过系统的报表分析，进行制度优化，预计加班费占工资比例可以从50%降低至40%，减少印尼员工病假过多情况。
+  R(paragraph) sec=<same>
+    可帮助管理层通过数据分析更好地了解集团的人力成本及变化情况。
+[P07-BP0092] stratum=same_section_continuity doc_type=Detailed Design
+  L(paragraph) sec=系统详细架构 > 2.2应用组件及关系
+    基于用户的角色进行配置后端拦截实现数据隔离。系统管理员对数据根据数据数值属性或者业务属性，进行定制化配置之后达到想要的结果;配置数据保存在后端配置服务中，落地在数据模型上，设计与业务展示隔离。具有配置端和展现端。
+  R(paragraph) sec=<same>
+    配置的角度多样化，根据模型字段的类型可以限定数值范围，也可以用户所属组织变量范围配置。
+[P07-BP0093] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 产品成本
+    成本资料主要是统计归集生产消耗的材料和费用、完工、在产等数据；调整上期在产成本；非仓储物料业务处理等。
+  R(paragraph) sec=<same>
+    实际成本处理
+[P07-BP0094] stratum=table_transition doc_type=DB
+  L(table_row) sec=目录
+    1、人资子系统 | 本子系统的所有表均在数据库jh4j_cloud_2_3_0_std表空间中。 | |
+  R(table_row) sec=目录 > 描述
+    | 序号 | 表名 | 描述
+[P07-BP0095] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.7全员服务模块 > 3.7.2全员服务功能 > 3.7.2.5 流程中心
+    员工可以通过移动端在流程中心进行流程进度查询以及进行流程处理操作，做到集中流程管理。
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.8报表与分析模块
+    3.8报表与分析模块
+[P07-BP0096] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 时 间 | 2025年5月10日07:30 - 11:30
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 地 点 | 印尼金瑞
+[P07-BP0097] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.8报表与分析模块 > 3.8.2报表与分析功能 > 3.8.2.1报表分析
+    图8.2.1.2
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.8报表与分析模块 > 3.8.2报表与分析功能 > 3.8.2.2人力看板
+    3.8.2.2人力看板
+[P07-BP0098] stratum=inside_table doc_type=DB
+  L(table_row) sec=人资子系统 > HR_EMPLOYEE_APPLICATION
+    表头: 3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | | 数据行: | USER_EDUCATION | VARCHAR2 | | | | Y | 需求人员专业、学历及经历要求 |
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | | 数据行: | SOURCE_TYPE | VARCHAR2 | | | | Y | 人员来源 |
+[P07-BP0099] stratum=heading_transition doc_type=API
+  L(paragraph) sec=1. 概述 1 > 1.概述
+    本文档是蔚蓝高科技集团人资及基础设施建设项目的接口设计文档。
+  R(heading) sec=1. 概述 1 > 2.外部接口设计
+    2.外部接口设计
+[P07-BP0100] stratum=same_section_continuity doc_type=API
+  L(paragraph) sec=1.请求信息
+    1）请求方式：GET
+  R(paragraph) sec=<same>
+    2）请求路径：http://172.28.99.75/hrms/hrDepartment/getInfo
+[P07-BP0101] stratum=inside_table doc_type=DB
+  L(table_row) sec=人资子系统 > HR_EMPLOYEE_APPLICATION
+    表头: 3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | | 数据行: | REASON | VARCHAR2 | | | | Y | 需求理由 |
+  R(table_row) sec=<same>
+    表头: 3、 | 表名 | HR_EMPLOYEE_APPLICATION | 表的描述 | 本表用例记录人员需求申请流程信息 | | | | 数据行: | REMARK | VARCHAR2 | | | | Y | 备注 |
+[P07-BP0102] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.6薪酬管理模块 > 3.6.3薪酬管理子功能 > 3.6.3.14 奖金发放
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 奖金类型 | 挑选框 | 字符串：最大长度100个字符 | 是 | 关联薪资项目
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 其他 | 下拉框 | 状态字段 | |
+[P07-BP0103] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软硬件清单及集成工作量 > 软硬件清单
+    表头: 序号 | 设备名称 | 型号参数和要求 | 数量 | 单位 | 报价 | 小计 | 寿命(月) 数据行: | | 小计（所有设备含运输费用） | | | | 3120000 |
+  R(heading) sec=项目投资估算 > 软硬件清单及集成工作量 > 软硬件集成工作量
+    软硬件集成工作量
+[P07-BP0104] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 费用汇总
+    表头: 序号 | 业务范围 | 模块名称 | 功能描述 | 概算（万元） | 小计 | 小计 数据行: | 总计 | | | | | 950
+  R(heading) sec=项目投资估算 > 软件开发明细
+    软件开发明细
+[P07-BP0105] stratum=heading_transition doc_type=API
+  L(heading) sec=4.返回信息示例 > 2.1.2.1获取人员信息
+    2.1.2.1获取人员信息
+  R(heading) sec=1.请求信息
+    1.请求信息
+[P07-BP0106] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 会议内容 | 会议内容
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 会议事项： 与薛多、Febi确定印尼转正流程相关需求，印尼人员考勤规则、薪酬规则。 决议事项： 确认印尼人员试用期转正流程事项，试用期结束时进行提醒。 确认印尼考勤班次信息以及考勤方案信息。 确认印尼休假类型以及部分假期特殊休假规则（年休假单月不超过六天；若有休探亲假，则连休年假不超过四天；探亲假可放弃申请，给与额外补贴；探亲假根据不同职级有不同计算标准，探亲假额度以上一次单据结束时间开始累加）。 确认印尼薪资计算规则（确认各个薪资项目计算公式，根据Febi提供印尼工业园区标准薪资文档确认部分薪资项目标准，根据提供的加班点数计算规则计算加班费相关数据）。 劳务人员数量以及劳务成本统计维度到部门级进行统计。 确认印尼请假流程，根据提供请假单设计流程单据以及流程。 | 会议事项： 与薛多、Febi确定印尼转正流程相关需求，印尼人员考勤规则、薪酬规则。 决议事项： 确认印尼人员试用期…
+[P07-BP0107] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 人力资源管理功能 > 全员服务 > 个人资料
+    员工可查看自身人员信息档案以及其他员工基础信息，如所在部门、岗位、手机号等，可自助修改权限范围内的人员信息，如电话、住址、家庭等信息，修改完成后自动更新人员信息档案。
+  R(heading) sec=项目建设方案 > 系统功能设计 > 人力资源管理功能 > 全员服务 > 考勤情况
+    考勤情况
+[P07-BP0108] stratum=inside_table doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.5 人事信息管理
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 社保号 | 输入框 | 字符串：最大长度100个字符 | |
+  R(table_row) sec=<same>
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 邮箱 | 输入框 | 字符串：最大长度100个字符 | |
+[P07-BP0109] stratum=inside_table doc_type=DB
+  L(table_row) sec=人资子系统 > SALARY_SUBSIDY
+    表头: 5、 | 表名 | SALARY_SUBSIDY | 表的描述 | 本表用例记录驻外补贴信息 | | | | 数据行: | SUBSIDY_DAY | VARCHAR2 | | | | Y | 本月补贴天数 |
+  R(table_row) sec=<same>
+    表头: 5、 | 表名 | SALARY_SUBSIDY | 表的描述 | 本表用例记录驻外补贴信息 | | | | 数据行: | SUBSIDY_STANDARD | VARCHAR2 | | | | Y | 补贴标准 |
+[P07-BP0110] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 固定资产
+    期末处理
+  R(paragraph) sec=<same>
+    期末处理功能组解决的是每个会计期间末，财务登账前需要做的业务。共包括两个功能点：月末结账、折旧与摊销。折旧与摊销实现对所有资产的折旧额的计提、调整、凭证生成等工作，月末结账则是标识一个会计期间的结束，为了提高系统易用性，月末结账功能节点提供反结账和多组织结账的功能。
+[P07-BP0111] stratum=table_transition doc_type=DB
+  L(table_row) sec=封面
+    表头: | | | | 江苏金恒信息科技股份有限公司 | | | 密级：内部 | | | | 数据行: | | | | 2025.6.20 | V1.0 | 修订 | | | 杨梓康 | 吴晓雨、孙姗 |
+  R(table_row) sec=目录
+    1、人资子系统 | 本子系统的所有表均在数据库jh4j_cloud_2_3_0_std表空间中。 | |
+[P07-BP0112] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.7全员服务模块 > 3.7.2全员服务功能 > 3.7.2.3 请假
+    员工可通过移动端进行请假申请，各审批节点结束后自动触发考勤结果计算，更新考勤结果。
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.7全员服务模块 > 3.7.2全员服务功能 > 3.7.2.4 薪资查询
+    3.7.2.4 薪资查询
+[P07-BP0113] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    蔚蓝高科技集团人资及基础设施建设项目人资模块调研沟通会议纪要
+  R(table_row) sec=<same>
+    会议主题 | 人资模块调研沟通
+[P07-BP0114] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 参会人员 | 金恒：杨梓康、朱峰
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 会议记录 | 杨梓康
+[P07-BP0115] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 地 点 | 印尼金瑞
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 参会人员 | 蔚蓝：薛多、汪明强、郑桂稳、王义燕、李欣钰、菲比(印尼)
+[P07-BP0116] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=项目投资估算 > 软硬件清单及集成工作量
+    软硬件清单及集成工作量
+  R(heading) sec=项目投资估算 > 软硬件清单及集成工作量 > 软硬件清单
+    软硬件清单
+[P07-BP0117] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.12 考勤流程
+    处理逻辑
+  R(paragraph) sec=<same>
+    输出
+[P07-BP0118] stratum=inside_table doc_type=API
+  L(table_row) sec=3.返回信息
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: id | String | | 是 | 部门id
+  R(table_row) sec=<same>
+    表头: 参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注 数据行: no | String | | 是 | 部门编号
+[P07-BP0119] stratum=same_section_continuity doc_type=Proposal
+  L(heading) sec=项目建设方案 > 系统功能设计 > 人力资源管理功能 > 组织管理 > 岗位序列、职级、层级
+    岗位序列、职级、层级
+  R(paragraph) sec=<same>
+    职级是针对同类岗位按照任职者应具备的任职资格以及承担职责大小进行纵向分层，来衡量该岗位对人员的任职要求。序列是对职级的分类划分。
+[P07-BP0120] stratum=heading_transition doc_type=API
+  L(heading) sec=1. 概述 1
+    1. 概述 1
+  R(heading) sec=1. 概述 1 > 2. 内部接口设计 1
+    2. 内部接口设计 1
+[P07-BP0121] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.16 月度考勤汇总
+    无
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.17 加班台账
+    3.5.3.17 加班台账
+[P07-BP0122] stratum=same_section_continuity doc_type=API
+  L(heading) sec=2.请求信息样例
+    2.请求信息样例
+  R(paragraph) sec=<same>
+    无
+[P07-BP0123] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    会议主题 | 人资模块调研沟通
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 时 间 | 2025年5月13日13:30 - 17:00
+[P07-BP0124] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.7 劳动合同管理台账
+    输入
+  R(table_row) sec=<same>
+    输入参数 | 类型 | 取值范围 | 必输 | 备注
+[P07-BP0125] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.4 通用配置
+    输出
+  R(table_row) sec=<same>
+    序号 | 返回码 | 返回提示信息 | 说明
+[P07-BP0126] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软件开发明细
+    表头: 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 数据行: 7 | 组织管理 | 标准岗位管理 | | 3.5 | 人日 | 2000 | 7000 |
+  R(table_row) sec=<same>
+    表头: 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 | 蔚蓝人资系统 数据行: 8 | 组织管理 | 岗位管理 | | 3.5 | 人日 | 2000 | 7000 |
+[P07-BP0127] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 总账
+    在经营过程中，由于不同外币兑换发生的差价，以及汇率变动发生的折合为记账本位币的差额，所形成的收益或损失，产生了汇兑损益。通常情况下，进行过外币业务的会计处理，在会计期间（月份、季度或年度）终了时必须计算汇兑损益，并进行相应的账务处理。为方便各财务人员完成此项业务处理，特提供了自动计算并生成凭证的功能，具体操作步骤：需先定义汇兑损益结转规则，然后再定期执行汇兑损益规则并生成凭证。
+  R(paragraph) sec=<same>
+    自定义转账
+[P07-BP0128] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.8 用户管理
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块
+    3.5考勤管理模块
+[P07-BP0129] stratum=same_section_continuity doc_type=API
+  L(heading) sec=4.返回信息示例
+    4.返回信息示例
+  R(paragraph) sec=<same>
+    无
+[P07-BP0130] stratum=same_section_continuity doc_type=Proposal
+  L(heading) sec=项目建设方案 > 系统功能设计 > 人力资源管理功能 > 人事档案 > 人员信息管理
+    人员信息管理
+  R(paragraph) sec=<same>
+    建立人员的基本信息、岗位信息、学历信息、能力技能信息、经历信息、奖惩信息等信息库，支持字段之间逻辑校验。支持对人员信息的批量维护，包括批量导入和批量修改。可保存、查询职工的多媒体信息，如照片、附件等，实现人员信息的立体化管理。可以根据人员信息制作员工简历表。跟踪记录员工从入职到离职的全过程，包括职务变动、奖惩情况、学习教育、工作经历等情况。
+[P07-BP0131] stratum=table_transition doc_type=DB
+  L(table_row) sec=人资子系统 > HR_PASSPORT_VISA
+    表头: 1、 | 表名 | HR_PASSPORT_VISA | 表的描述 | 本表用例记录人员护照、签证信息 | | | | 数据行: | COMPANY_ID | VARCHAR2 | | | | Y | 公司别 |
+  R(table_row) sec=人资子系统 > HR_ENTRY_EXIT
+    2、 | 表名 | HR_ENTRY_EXIT | 表的描述 | 本表用例记录出入境信息 | | | |
+[P07-BP0132] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.8报表与分析模块 > 3.8.2报表与分析功能 > 3.8.2.2人力看板
+    图8.2.2.1
+  R(heading) sec=4附录
+    4附录
+[P07-BP0133] stratum=table_transition doc_type=Proposal
+  L(paragraph) sec=验收标准
+    项目以下各项性能指标完成预期，方可提出验收请求：
+  R(table_row) sec=<same>
+    指标项 | 指标要求 | 公式 | 验证方式
+[P07-BP0134] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.16 月度考勤汇总
+    处理逻辑
+  R(paragraph) sec=<same>
+    输出
+[P07-BP0135] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软硬件清单及集成工作量 > 软硬件集成工作量
+    表头: 类别 | 内容 | 说明 | 人日 | 备注 数据行: 数据库 | 数据库优化备份 | 数据库备份策略的规划、部署 | 1 | 国内远程支持
+  R(paragraph) sec=<same>
+    备注：人工单价及相关费用已合入上节8.3.1。
+[P07-BP0136] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统功能设计 > 财务供应链功能 > 财务管理 > 总账
+    自定义转账
+  R(paragraph) sec=<same>
+    在每个会计期结束时，都需进行各种费用的分摊、税金的计提、成本的结转、损益的结转等，结转完毕后，才可执行月末结账。自定义转账可实现这些功能，其功能点分为：自定义转账分类定义、自定义转账定义、自定义转账方案档案定义、自定义转账方案定义、自定义转账执行等。
+[P07-BP0137] stratum=table_transition doc_type=Proposal
+  L(paragraph) sec=(none)
+    书
+  R(table_row) sec=<same>
+    文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史
+[P07-BP0138] stratum=same_section_continuity doc_type=API
+  L(heading) sec=1. 概述 1 > 2.外部接口设计
+    2.外部接口设计
+  R(paragraph) sec=<same>
+    3
+[P07-BP0139] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    会议主题 | 人资模块调研沟通
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 时 间 | 2025年5月12日07:30 - 10:00
+[P07-BP0140] stratum=table_transition doc_type=API
+  L(paragraph) sec=3.返回信息
+    1）返回信息参数：
+  R(table_row) sec=<same>
+    参数名称 | 参数类型 | 取值范围 | 必须 | 参数描述及备注
+[P07-BP0141] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.4人事管理模块 > 3.4.3人事管理子功能 > 3.4.3.8 用户管理
+    处理逻辑
+  R(paragraph) sec=<same>
+    输出
+[P07-BP0142] stratum=heading_transition doc_type=API
+  L(heading) sec=4.返回信息示例
+    4.返回信息示例
+  R(heading) sec=4.返回信息示例 > 2.1.2.2获取岗位信息
+    2.1.2.2获取岗位信息
+[P07-BP0143] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.11 人员出入境信息台账
+    处理逻辑
+  R(paragraph) sec=<same>
+    输出
+[P07-BP0144] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.16 月度考勤汇总
+    表头: 序号 | 返回码 | 返回提示信息 | 说明 数据行: 2 | code：5000 | 失败原因 | Data:null;失败原因根据具体操作变化
+  R(paragraph) sec=<same>
+    2）自动计算
+[P07-BP0145] stratum=noise_candidate doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.3 考勤方案
+    1）新增及修改
+  R(paragraph) sec=<same>
+    输入
+[P07-BP0146] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    表头: 会议主题 | 人资模块调研沟通 数据行: 地 点 | 印尼金瑞
+  R(table_row) sec=<same>
+    表头: 会议主题 | 人资模块调研沟通 数据行: 参会人员 | 蔚蓝：薛多、Febi
+[P07-BP0147] stratum=table_transition doc_type=API
+  L(heading) sec=1. 概述 1 > 2.外部接口设计 > 2.1人资子系统 > 2.1.1接口清单
+    2.1.1接口清单
+  R(table_row) sec=<same>
+    序号 | 接口编号 | 接口名称 | 接口说明 | 接口方式 | 触发时刻 | 发起端 | 接收端
+[P07-BP0148] stratum=heading_transition doc_type=Detailed Design
+  L(paragraph) sec=3蔚蓝人资子系统设计
+    4
+  R(heading) sec=3蔚蓝人资子系统设计 > 3.1子系统功能描述
+    3.1子系统功能描述
+[P07-BP0149] stratum=table_transition doc_type=Detailed Design
+  L(table_row) sec=3蔚蓝人资子系统设计 > 3.5考勤管理模块 > 3.5.3考勤管理子功能 > 3.5.3.5 个人考勤档案
+    表头: 输入参数 | 类型 | 取值范围 | 必输 | 备注 数据行: 启用状态 | 下拉框 | 状态字典 | 是 |
+  R(paragraph) sec=<same>
+    处理逻辑
+[P07-BP0150] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    蔚蓝高科技集团人资及基础设施建设项目人资模块调研沟通会议纪要
+  R(table_row) sec=<same>
+    会议主题 | 人资模块调研沟通

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/seac/boundary.schema.json",
+  "title": "SEAC adjudicated boundaries",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "candidate_id",
+      "source_document",
+      "document_type",
+      "boundary_stratum",
+      "left_unit_id",
+      "right_unit_id",
+      "human_label"
+    ],
+    "additionalProperties": true,
+    "properties": {
+      "candidate_id": {"type": "string", "minLength": 1},
+      "source_document": {"type": "string", "minLength": 1},
+      "document_type": {"type": "string", "minLength": 1},
+      "boundary_stratum": {"type": "string", "minLength": 1},
+      "left_unit_id": {"type": "string", "minLength": 1},
+      "right_unit_id": {"type": "string", "minLength": 1},
+      "human_label": {"enum": ["BREAK", "NO_BREAK", "NOISE"]},
+      "adjudication_note": {"type": "string"}
+    }
+  }
+}

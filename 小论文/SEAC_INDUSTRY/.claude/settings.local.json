@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'文档数: {len\\(d\\)}'\\); [print\\(f'  {doc[\\\\\"file_name\\\\\"]}: type={doc[\\\\\"document_type\\\\\"]}, blocks={len\\(doc[\\\\\"blocks\\\\\"]\\)}'\\) for doc in d]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'问题数: {len\\(d\\)}'\\); from collections import Counter; c=Counter\\(q.get\\('question_type',''\\) for q in d\\); print\\(dict\\(c\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Total: {len\\(d\\)}'\\); print\\(json.dumps\\(d[:3], ensure_ascii=False, indent=2\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Total: {len\\(d\\)}'\\); print\\(json.dumps\\(d[:2], ensure_ascii=False, indent=2\\)\\)\")",
+      "Bash(python3 *)",
+      "Read(//Users/zhaochenxu06/Desktop/**)"
+    ]
+  }
+}

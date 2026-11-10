@@ -1,0 +1,375 @@
+[P10-BP0001] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.9碳管理平台
+    4、多维度数据与图表生成、输出：平台的碳排放管理功能模块能够自动生成碳排放量和碳排放强度的详细数据，并以直观的图表形式展示。这些图表涵盖企业、各工序等不同组织层级，以及年、月、周、日等多个时间维度，帮助企业从不同角度全面了解碳排放动态。
+  R(paragraph) sec=<same>
+    能碳管理平台详细功能以双方最终确认的需求设计文档为主。
+[P10-BP0002] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=九、竣工验收提供资料要求 > 9.5竣工图或按实际完成情况注明修改部分的施工图。
+    9.5竣工图或按实际完成情况注明修改部分的施工图。
+  R(heading) sec=九、竣工验收提供资料要求 > 9.6隐蔽工程质量检查及验收记录。
+    9.6隐蔽工程质量检查及验收记录。
+[P10-BP0003] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=四、采用标准及设计原则 > 4.1采用标准
+    能源管理体系要求 GB/T 23331-2020
+  R(paragraph) sec=<same>
+    企业能量平衡通则 GB/T 3484-2009
+[P10-BP0004] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 能源报表管理 > 3.3.9.3能源报表配置
+    表头: 涉及岗位 | 能源管理员 | 能源管理员 数据行: 设计 | 针对模板的样式及数据进行自定义设计 |
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 能源管理员 | 能源管理员 数据行: 预览 | 对设计好的模板的样式及数据进行预览 |
+[P10-BP0005] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=4 项目总体设计 5 > 4.1 设计原则 5
+    4.1 设计原则 5
+  R(heading) sec=4 项目总体设计 5 > 4.2 设计依据 6
+    4.2 设计依据 6
+[P10-BP0006] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=七、安全文明工作要求 > 7.8施工过程中必须保证施工现场物品摆放合理有序，不得占用安全通道,做到工完料尽场地清。
+    7.9施工使用的电气设备必须有漏电保护装置、良好接地，施工电缆（安全有序）架空搭设，开关插座集中在配电箱内(配电箱做好接地保护)，做好防雨措施，并做到一机一闸一保护。
+  R(heading) sec=七、安全文明工作要求 > 7.10施工作业前，检查好施工作业现场环境，孔洞、临边危险区域做好安全防护。
+    7.10施工作业前，检查好施工作业现场环境，孔洞、临边危险区域做好安全防护。
+[P10-BP0007] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目建设方案 > 数据采集 > 采集设计 > 涉及接口
+    表头: 数据源类型 | 描述 | 接口需求 数据行: DCS系统 | 现有一级系统DCS中现有OT数据信号点采集 | DCS系统需具备OPC DA/UA数据接口，并提供服务器应用程序名称、IP地址、信号点地址清单
+  R(table_row) sec=<same>
+    表头: 数据源类型 | 描述 | 接口需求 数据行: 电力通讯管理机 | 现有电力通信管理机中现有OT数据信号点采集 | 通讯管理机需开放IEC 104通讯协议接口，并提供IP地址、信号点地址清单
+[P10-BP0008] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目建设方案 > 资源清单
+    表头: 序号 | 服务器名称 | CPU | 内存 | 硬盘 | 数量 数据行: 5 | 数据库服务器2 | 8核 | 16 | 6.3T | 2
+  R(table_row) sec=<same>
+    表头: 序号 | 服务器名称 | CPU | 内存 | 硬盘 | 数量 数据行: 6 | 数采服务器 | 8核 | 16 | 300G | 1
+[P10-BP0009] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=验收标准
+    系统稳定运行率≥99.8%
+  R(paragraph) sec=<same>
+    稳定运行率的定义：Y＝T1/(T1+T2) × 100%，备注：测试时间＝T1＋T2；T1：有效运行时间，T2：故障处理时间。考核时间为验收前连续720小时。（具体时间甲乙方共同商定）
+[P10-BP0010] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=24小时电话热线服务 > 资料交付
+    表头: 项目阶段 | 技术文档 | 项目管理文档 | 项目管理文档 数据行: 启动会 | 《项目实施计划》 | 《开工会日程》 | 《周例会报告》
+  R(table_row) sec=<same>
+    表头: 项目阶段 | 技术文档 | 项目管理文档 | 项目管理文档 数据行: 需求调研 | 《需求分析报告》 《信号收集模版》 《需求分析报告评审意见》 | 《需求调研计划》 《信号收集计划》 | 《周例会报告》
+[P10-BP0011] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=九、竣工验收提供资料要求 > 9.9国家标准或规范要求的竣工资料。
+    9.9国家标准或规范要求的竣工资料。
+  R(heading) sec=九、竣工验收提供资料要求 > 9.10竣工资料乙方单位盖章，装订成册，正副各1本。
+    9.10竣工资料乙方单位盖章，装订成册，正副各1本。
+[P10-BP0012] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=七、安全文明工作要求 > 7.1乙方必须严格按照现行施工规范规定和甲方的要求组织施工。
+    7.1乙方必须严格按照现行施工规范规定和甲方的要求组织施工。
+  R(heading) sec=七、安全文明工作要求 > 7.2乙方必须为进入现场施工的工人购买意外伤害保险，并向甲方出具投保证明。
+    7.2乙方必须为进入现场施工的工人购买意外伤害保险，并向甲方出具投保证明。
+[P10-BP0013] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 数据采集 > 采集设计 > 采集规划
+    炼铁高炉、炼钢转炉、轧钢等工艺数据PLC均在各分厂主控室汇聚，利用网关采集各工艺PLC系统数据通过能源环网转发至数采平台。
+  R(heading) sec=项目建设方案 > 数据采集 > 采集设计 > 涉及接口
+    涉及接口
+[P10-BP0014] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.5 能源计量器具管理
+    3.2.2.5 能源计量器具管理
+  R(paragraph) sec=<same>
+    计量器具管理包括对能源计量器具的台账、配备、使用、检定、维修等方面的全面管理，以确保计量器具精度和可靠性。针对能源计量器具出现异常情况（如异常下线），系统及时通知相关人员进行处理，保障设备的有效利用。
+[P10-BP0015] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目的目标与范围 > 项目目标及效果
+    本次能源管理系统建设的目标如下：
+  R(paragraph) sec=<same>
+    实现数据统一管理
+[P10-BP0016] stratum=same_section_continuity doc_type=Proposal
+  L(heading) sec=项目建设方案 > 数据采集 > 采集设计 > 采集方式和分界面
+    采集方式和分界面
+  R(paragraph) sec=<same>
+    涉及本次项目数据采集的现场一级控制系统必须具备联网条件和标准的以太网接口，并且具备通用的通讯议协(如S7 TCP/IP、Modbus TCP/RTU、OPC DA/UA、IEC 104等)；能源计量仪表必须具备485通讯接口和标准Modbus RTU或DL/T 645协议。本次项目采用成熟的采集硬件和软件与现场一级控制系统、能源计量仪表进行标准协议通讯采集，并以一级控制系统的一级交换机以太网口、能源计量仪表485通讯接口为分界线。
+[P10-BP0017] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 硬件设备清单
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 15 | 铜芯电缆 | 国产 | BVR1*1.5 | 米 | 400
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 16 | 辅材 | 国产 | 包括水晶头、插排、端子、导轨、线槽、标签纸等 | 批 | 1
+[P10-BP0018] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目总体设计 > 工业互联网平台设计
+    采集配置
+  R(paragraph) sec=<same>
+    金恒FSI2-IoT工业互联网平台支持、MQTT、MODBUS、OPC UA三种采集协议，其中OPC UA同时支持订阅及主动采集两种模式，用户可在页面根据边缘硬件网关类型选择对应的采集协议，完成点位配置。平台同时支持MQTT、OPC UA点位批量配置，MODBUS点位配置批量导入导出功能，极大提高配置效率。
+[P10-BP0019] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目建设方案 > 数据采集 > 采集设计 > 涉及接口
+    表头: 数据源类型 | 描述 | 接口需求 数据行: 能源计量仪表 | 巨能特钢现有具备采集条件的水、电、汽、气表 | 仪表需具备单独的485通讯接口(支持标准协议规约，如Modbus RTU、DL/T 645)，并提设备参数、信号点地址清单
+  R(paragraph) sec=<same>
+    本项目目前涉及的第三方系统接口如下：
+[P10-BP0020] stratum=heading_transition doc_type=SRS
+  L(heading) sec=功能性需求 > 业务功能描述 > 能源报表管理
+    能源报表管理
+  R(heading) sec=功能性需求 > 业务功能描述 > 能源报表管理 > 3.3.9.1功能描述
+    3.3.9.1功能描述
+[P10-BP0021] stratum=table_transition doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.5氮气系统监视
+    三、功能说明
+  R(table_row) sec=<same>
+    涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员
+[P10-BP0022] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=七、安全文明工作要求 > 7.2乙方必须为进入现场施工的工人购买意外伤害保险，并向甲方出具投保证明。
+    7.4 乙方必须保证施工安全，建立安全管理保证体系，设安全监督员，负责施工现场的施工安全。乙方在施工过程中出现的安全事故，甲方协助上报，并按照责任划分进行处理。乙方在施工期间的所有工作票据至少提前一天办理，甲方前期协助乙方办理，票据不全不得进行施工作业，因缺少票据影响工程进度造成的损失及工期延误由乙方承担。
+  R(paragraph) sec=<same>
+    7.5 特种作业的人员必须持证上岗（焊工证、电工证等），特种作业证必须在有效期内且官网网站可查。因施工人员未持证或持假证，甲方现场监护人员将停止监护，乙方停止工作，由此造成的损失由乙方承担。
+[P10-BP0023] stratum=table_transition doc_type=Technical Agreement
+  L(heading) sec=附件：设备清单
+    附件：设备清单
+  R(table_row) sec=<same>
+    序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量
+[P10-BP0024] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=三、设备组成及技术要求 > 3.1采集数据需求
+    表头: 序号 | 名称 | 数据分布 | 备注 数据行: 3 | 4个泵房及1个水处理站数据 | 高炉泵房、转炉泵房、轧钢泵房、钢管泵房、污水处理站主控室内涉及到的数据 |
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 数据分布 | 备注 数据行: 4 | 制氧数据 | 2#制氧、3#制氧主控室内涉及到的数据 |
+[P10-BP0025] stratum=same_section_continuity doc_type=Technical Agreement
+  L(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.3 工序能耗分析
+    3.2.2.3 工序能耗分析
+  R(paragraph) sec=<same>
+    工序能耗分析主要对核心生产工序（包括烧结、高炉、炼钢、轧钢）进行水、电、风、气的消耗量对比，为异常耗能分析和节能减排提供数据支撑，帮助管理人员对各工序生产进行优化，降低能耗成本。
+[P10-BP0026] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=四、采用标准及设计原则 > 4.2 设计原则
+    系统的设计、开发遵循国家及企业能源管理体系要求及管理规范，符合国家对企业能耗指标及节能目标的要求。系统平台的设计、开发遵循中国电子行业关于信息化建设、信息安全管理、信息系统集成的标准与规范。系统所采用的软硬件均使用市售的标准产品，以获取更好的售后服务及保证产品、组件的稳定性。
+  R(paragraph) sec=<same>
+    2）可行性和适应性
+[P10-BP0027] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=24小时电话热线服务 > 用户培训
+    对应工作内容
+  R(paragraph) sec=<same>
+    • 阶段工作内容：
+[P10-BP0028] stratum=same_section_continuity doc_type=SRS
+  L(heading) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.8空压系统监视
+    3.3.2.8空压系统监视
+  R(paragraph) sec=<same>
+    一、需求描述
+[P10-BP0029] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=附件：设备清单
+    甲方（盖章）：山东寿光巨能特钢有限公司 | 乙方（盖章）：
+  R(table_row) sec=<same>
+    表头: 甲方（盖章）：山东寿光巨能特钢有限公司 | 乙方（盖章）： 数据行: 联系人：林勇 | 联系人：
+[P10-BP0030] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目的必要性与可行性分析 > 可行性分析
+    （1）巨能特钢能源计量艺表较为齐全，为能源管理系统的建设提供了基础支撑。
+  R(paragraph) sec=<same>
+    （2）巨能特钢对能源管理相关的信息化建设有清晰的认识，且需求较为迫切。
+[P10-BP0031] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 计量器具管理 > 3.3.8.5鉴定计划管理
+    表头: 涉及岗位 | 计量设备管理员 | 计量设备管理员 数据行: 查询 | 可通过点击管理单元锁定鉴定计划，可通过查询输入框模糊查询 |
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 计量设备管理员 | 计量设备管理员 数据行: 新增 | 可通过点击新增鉴定计划按钮创建鉴定计划 |
+[P10-BP0032] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=附件：设备清单
+    表头: 甲方（盖章）：山东寿光巨能特钢有限公司 | 乙方（盖章）： 数据行: 帐号:37001677908050003235 | 帐号:
+  R(table_row) sec=<same>
+    表头: 甲方（盖章）：山东寿光巨能特钢有限公司 | 乙方（盖章）： 数据行: 地址：山东省寿光市特钢路九号 | 地址：
+[P10-BP0033] stratum=table_transition doc_type=Proposal
+  L(table_row) sec=项目建设方案 > 资源清单
+    表头: 序号 | 服务器名称 | CPU | 内存 | 硬盘 | 数量 数据行: 7 | SCADA服务器 | 6核 | 12 | 200G | 1
+  R(heading) sec=项目实施计划
+    项目实施计划
+[P10-BP0034] stratum=table_transition doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.10水系统监视
+    表头: 涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员 数据行: 查询 | 用户可以查看水相关仪表的分布情况，以及实时查看当前的瞬时量、累积量，并且可以点击查看某个数据的历史趋势 |
+  R(heading) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.11固体燃料监视
+    3.3.2.11固体燃料监视
+[P10-BP0035] stratum=table_transition doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 系统接口
+    表头: 序号 | 接口名称 | 发起方 | 接收方 | 协议 | 内容及说明 数据行: 1 | 获取电力实时数据 | 能碳管理平台 | 安科瑞电力管理平台 | http | 获取电力相关的实时数据，包括时间、数值、测点信息等等，然后发送给物联网平台
+  R(heading) sec=非功能需求
+    非功能需求
+[P10-BP0036] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=附件：设备清单
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 7 | 工作站 | 戴尔 | 笔记本I5/16G/500GSSD | 台 | 1
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 8 | 串口转换器 | 有人物联网 | USR-N510： 485串口转网口输出，支持modbus协议、DL/T 645-1997/2007协议数据透传，支持TCP Client、TCP Server、UDP Client、UDP Server、Httpd client多种工作模式 | 个 | 30
+[P10-BP0037] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=附件：设备清单
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 10 | 光缆终端盒 | 国产优质 | 单模4口，满配，ST口 | 个 | 80
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 11 | 跳线 | 国产优质 | 单模双芯，ST-SC，2米 | 个 | 80
+[P10-BP0038] stratum=table_transition doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.2电力系统监视
+    三、功能说明
+  R(table_row) sec=<same>
+    涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员
+[P10-BP0039] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统架构 > 业务架构图
+    巨能特钢能源管理系统基于工业互联网平台构建智能管控体系，通过采集网关实时采集现场仪表及一级系统数据，对数据进行统一处理，以统一协议转发至工业互联网平台，为能源监视、统计、分析等提供数据支撑，最终通过通过B/S的方式提供用户界面，用户通过B/S方式访问能源管理系统。
+  R(heading) sec=项目建设方案 > 系统架构 > 技术架构图
+    技术架构图
+[P10-BP0040] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软件开发明细
+    表头: 模块 | 数量 | 单位 数据行: 能源监视 | 70 | 人日
+  R(table_row) sec=<same>
+    表头: 模块 | 数量 | 单位 数据行: 能源实绩 | 50 | 人日
+[P10-BP0041] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 硬件设备清单
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 4 | 虚拟化软件 | VMware | VMware vSphere 8.0 标准版，4CPU授权，含2年技术服务 VMware vCenter 8.0 标准版，含1年技术服务 含虚拟化平台整体安装调测交付服务，含光纤网线等安装辅材 | 套 | 1
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 5 | 网关机 | 旋思 | 2路百兆自适应网络，独立隔离采集2个网段数据,串口2路（RS232/485),支持APN； 数据处理能力≥500点； 支持OPC、Modbus、环保国标、AB PLC Logix 5000系列PLC以太网通信协议、西门子S7 200/300/400/1200/1500系列PLC以太网通信协议，S7-200串口通信协议等多种协议； 具备双向通讯能力； 远程编程、维护。 | 台 | 15
+[P10-BP0042] stratum=heading_transition doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 工序参数监视 > 3.3.3.1功能描述
+    设备运行状态包括：设备运行状态、设备运行参数等信息。
+  R(heading) sec=功能性需求 > 业务功能描述 > 工序参数监视 > 3.3.3.2烧结参数监视
+    3.3.3.2烧结参数监视
+[P10-BP0043] stratum=table_transition doc_type=Technical Agreement
+  L(paragraph) sec=附件：设备清单
+    本协议一式6份，甲方执4份，乙方执2份，经甲乙双方签字盖章后生效，作为合同附件与合同具有同等法律效力
+  R(table_row) sec=<same>
+    甲方（盖章）：山东寿光巨能特钢有限公司 | 乙方（盖章）：
+[P10-BP0044] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=七、安全文明工作要求 > 7.12交叉作业时严禁上下方工作人员在同一垂直基准面工作，且必须做好上下防护措施。
+    7.12交叉作业时严禁上下方工作人员在同一垂直基准面工作，且必须做好上下防护措施。
+  R(heading) sec=七、安全文明工作要求 > 7.13甲方车间、道路等区域禁止吸烟。
+    7.13甲方车间、道路等区域禁止吸烟。
+[P10-BP0045] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.4数据采集器
+    数据采集器应提供多个采集接口，可对电能表、水表、燃气表、热（冷）量表等不同功能的智能仪表进行数据采集，并将采集到的数据通过有线方式传输至能耗监测端设备。
+  R(paragraph) sec=<same>
+    数据采集器应提供RS485等多种数据采集接口，并支持MODBUS RTU、CJ/T188、DL/T645-1997、DL/T645-2007等标准通讯协议。
+[P10-BP0046] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=四、采用标准及设计原则 > 4.2 设计原则
+    3）前瞻性和实用性
+  R(paragraph) sec=<same>
+    项目的实施，既要充分考虑巨能特钢信息化的现状，也要考虑巨能特钢信息化系统今后的延伸。与此同时，信息化项目的实施过程应始终贯彻面向流程应用，注重实效的方针。
+[P10-BP0047] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 功能清单
+    表头: 子系统或模块名称 | 二级功能 | 三级功能 数据行: 能源精细化管理 | 工序能耗分析 | 炼铁能耗分析
+  R(table_row) sec=<same>
+    表头: 子系统或模块名称 | 二级功能 | 三级功能 数据行: 能源精细化管理 | 工序能耗分析 | 炼钢能耗分析
+[P10-BP0048] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.11固体燃料监视
+    表头: 涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员 数据行: 功能 | 说明 | 备注
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员 数据行: 查询 | 用户可以实时查看当前的瞬时量，并且可以点击查看某个数据的历史趋势 |
+[P10-BP0049] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目的目标与范围 > 项目目标及效果
+    能源调度可以通过系统迅速从全局的角度了解系统的运行状况, 故障的影响程度等,及时采取系统的措施,限制故障范围的进一步扩大,并有效恢复系统的正常运行。
+  R(paragraph) sec=<same>
+    通过能源管理系统的建设实施，对各种能源介质的发生量和消耗量数据，关键设备和重要耗能设备的运行状态、工艺参数等相关数据实时采集、显示和报警，满足开展能源计划和实绩管理的条件；最终实现对能源核心业务的集中统一管理；实现能源计录到分类、分级、分项统计报表；实现能源管理系统的用户角色分类，并满足用户的操作和管理要求。
+[P10-BP0050] stratum=table_transition doc_type=Proposal
+  L(heading) sec=2025年03月
+    2025年03月
+  R(table_row) sec=<same>
+    文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史 | 文档修订历史
+[P10-BP0051] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 费用汇总
+    序号 | 项次 | 投资概算（元） | 备注
+  R(table_row) sec=<same>
+    表头: 序号 | 项次 | 投资概算（元） | 备注 数据行: 1 | 硬件费用 | |
+[P10-BP0052] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.1能源管控
+    解决巨能特钢能源管理方面存在的问题，以能源实时监控、能源实绩管理、能源双碳管理、工序能耗分析等功能为核心，打造功能完善的能源管控智能应用，打通全厂能量流，帮助管理人员实时、准确、高效掌握及调度能源资源，助力实现全厂能源动态平衡。
+  R(paragraph) sec=<same>
+    通过建立有效的规则库，对不平衡进行自动分摊或分摊建议。 能源实绩管理模块包括实绩数据管理、实绩报表管理、异常数据管理等。
+[P10-BP0053] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.3 能碳管理平台系统要求 > 3.2.3.5 系统维护
+    用户和权限管理功能、系统维护和诊断功能。
+  R(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.3 能碳管理平台系统要求 > 3.2.3.6 数据库维护
+    3.2.3.6 数据库维护
+[P10-BP0054] stratum=inside_table doc_type=Proposal
+  L(table_row) sec=项目投资估算 > 软件开发明细
+    表头: 模块 | 数量 | 单位 数据行: 能源计量管理 | 40 | 人日
+  R(table_row) sec=<same>
+    表头: 模块 | 数量 | 单位 数据行: 能源基础管理 | 30 | 人日
+[P10-BP0055] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=5 项目建设方案 13 > 5.1 系统架构 13
+    5.1 系统架构 13
+  R(heading) sec=5 项目建设方案 13 > 5.1 系统架构 13 > 5.1.1 业务架构图 13
+    5.1.1 业务架构图 13
+[P10-BP0056] stratum=heading_transition doc_type=Proposal
+  L(paragraph) sec=项目的必要性与可行性分析 > 必要性分析
+    综上，能源管理系统的建设，将实现能源数据集中化、能源管理流程标准化规范化，从而减少能源系统运行管理成本，提高劳动生产率，提升对设备故障和异常处理的响应速度和能力，控制企业的用能成本，促进企业的可持续性发展。因此，建设能源管理系统是十分必要的。
+  R(heading) sec=项目的必要性与可行性分析 > 可行性分析
+    可行性分析
+[P10-BP0057] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=项目建设方案 > 数据采集 > 计量现状
+    计量现状
+  R(heading) sec=项目建设方案 > 数据采集 > 计量现状 > 一、二级能源仪表计量现状
+    一、二级能源仪表计量现状
+[P10-BP0058] stratum=same_section_continuity doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 系统架构 > 技术架构图
+    服务注册、服务发现： Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管理。
+  R(paragraph) sec=<same>
+    服务调用组件：Feign是Spring Cloud提供的声明式、模板化的HTTP客户端， 它使得调用远程服务就像调用本地服务一样简单，只需要创建一个接口并添加一个注解即可。
+[P10-BP0059] stratum=table_transition doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.4氧气系统监视
+    表头: 涉及岗位 | 能源调度员、能源管理员 | 能源调度员、能源管理员 数据行: 查询 | 用户可以查氧气仪表的分布情况，以及实时查看当前的瞬时量、累积量，并且可以点击查看某个数据的历史趋势 |
+  R(heading) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.5氮气系统监视
+    3.3.2.5氮气系统监视
+[P10-BP0060] stratum=same_section_continuity doc_type=Technical Agreement
+  L(paragraph) sec=(none)
+    设计、供货、安装、调试技术要求
+  R(paragraph) sec=<same>
+    山东寿光巨能特钢有限公司
+[P10-BP0061] stratum=inside_table doc_type=SRS
+  L(table_row) sec=需求变更说明 > 需求变更表
+    表头: 项目名称 | | | | 数据行: 变更描述 | 举例： 1.增加根据主叫号码限呼功能 | 举例： 1.增加根据主叫号码限呼功能 | 举例： 1.增加根据主叫号码限呼功能 | 举例： 1.增加根据主叫号码限呼功能
+  R(table_row) sec=<same>
+    表头: 项目名称 | | | | 数据行: 变更工作量 | 阶段 | 工作量（人.天） | 工作量（人.天） | 工作量（人.天）
+[P10-BP0062] stratum=table_transition doc_type=Proposal
+  L(paragraph) sec=项目建设方案 > 数据采集 > 采集设计 > 涉及接口
+    本项目目前涉及的第三方系统接口如下：
+  R(table_row) sec=<same>
+    序号 | 接口名称 | 接口描述 | 数量
+[P10-BP0063] stratum=table_transition doc_type=SRS
+  L(table_row) sec=(none)
+    表头: 变更日期 | 版本号 | 标志 | 变更概要 | 编写人 | 审核人 数据行: 2025.05.10 | V0.1 | 新建 | 新增文档内容 | 鲁祥宝 | 宁晓凯
+  R(heading) sec=1 概述 1
+    1 概述 1
+[P10-BP0064] stratum=heading_transition doc_type=Technical Agreement
+  L(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.3 能碳管理平台系统要求
+    3.2.3 能碳管理平台系统要求
+  R(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.3 能碳管理平台系统要求 > 3.2.3.1服务器
+    3.2.3.1服务器
+[P10-BP0065] stratum=heading_transition doc_type=Proposal
+  L(heading) sec=3 项目的目标与范围 4 > 3.2 项目实施范围 5
+    3.2 项目实施范围 5
+  R(heading) sec=4 项目总体设计 5
+    4 项目总体设计 5
+[P10-BP0066] stratum=inside_table doc_type=Meeting
+  L(table_row) sec=(none)
+    会议主题 | 巨能特钢能碳管理平台项目周会会议纪要
+  R(table_row) sec=<same>
+    表头: 会议主题 | 巨能特钢能碳管理平台项目周会会议纪要 数据行: 时 间 | 2025年5月27日
+[P10-BP0067] stratum=table_transition doc_type=Meeting
+  L(paragraph) sec=(none)
+    会议纪要
+  R(table_row) sec=<same>
+    会议主题 | 巨能特钢能碳管理平台项目周会会议纪要
+[P10-BP0068] stratum=inside_table doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 工序能耗分析 > 3.3.6.3炼铁能耗分析
+    涉及岗位 | 各工序能源管理员等 | 各工序能源管理员等
+  R(table_row) sec=<same>
+    表头: 涉及岗位 | 各工序能源管理员等 | 各工序能源管理员等 数据行: 功能 | 说明 | 备注
+[P10-BP0069] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.6 产耗实绩及异常报警
+    能源产耗实绩主要通过人工录入和数据采集的方式对生产过程中各工序产生、消耗的各能源介质数据进行归集，提供数据修正入口。同时，对消耗异常数据进行报警提示，便于管理人员及时发现异常，排查问题。
+  R(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.7 能源关键参数监视
+    3.2.2.7 能源关键参数监视
+[P10-BP0070] stratum=heading_transition doc_type=Technical Agreement
+  L(paragraph) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.7 能源关键参数监视
+    对全厂各工序重点设备（烧结机、高炉、转炉、连铸线、轧线等）关键运行参数进行监视，用户可实时掌握生产过程与状态，主要设备的运行状态。
+  R(heading) sec=三、设备组成及技术要求 > 3.2能碳管理平台的建设 > 3.2.2 能碳管理平台需实现的功能 > 3.2.2.8 能源报表
+    3.2.2.8 能源报表
+[P10-BP0071] stratum=heading_transition doc_type=SRS
+  L(heading) sec=3 功能性需求 5 > 3.2 系统设计 7
+    3.2 系统设计 7
+  R(heading) sec=3 功能性需求 5 > 3.2 系统设计 7 > 3.2.1 业务架构图 7
+    3.2.1 业务架构图 7
+[P10-BP0072] stratum=inside_table doc_type=Technical Agreement
+  L(table_row) sec=附件：设备清单
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 4 | 汇聚交换机 | 华三 | 24个千兆电口、4个千兆光口；冗余风扇和电源,2个单模千兆光模块，支持环网协议，工业级。 | 台 | 6
+  R(table_row) sec=<same>
+    表头: 序号 | 名称 | 品牌 | 规格参数 | 单位 | 数量 数据行: 5 | 接入交换机 | 华三 | 导轨式非网管，8路10/100M/1000M自适应RJ45、9-60VDC双电源，工业级。 | 个 | 13
+[P10-BP0073] stratum=table_transition doc_type=SRS
+  L(table_row) sec=功能性需求 > 业务功能描述 > 碳排核算管理 > 3.3.7.5工序碳排管理
+    表头: 涉及岗位 | 能源管理员岗 | 能源管理员岗 数据行: 查看明细 | 点击弹出工序下碳排放明细数据，查看数据明细、趋势，日志记录 |
+  R(heading) sec=功能性需求 > 业务功能描述 > 碳排核算管理 > 3.3.7.6碳排文件管理
+    3.3.7.6碳排文件管理
+[P10-BP0074] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.2电力系统监视
+    图3.3.2.2-2 35KV变电站系统监视画面
+  R(paragraph) sec=<same>
+    图3.3.2.2-3高炉高配室监视画面
+[P10-BP0075] stratum=same_section_continuity doc_type=SRS
+  L(paragraph) sec=功能性需求 > 业务功能描述 > 能源介质监视 > 3.3.2.2电力系统监视
+    图3.3.2.2-8 钢管线电力系统监视画面
+  R(paragraph) sec=<same>
+    图3.3.2.2-9 石灰窑电力系统监视画面

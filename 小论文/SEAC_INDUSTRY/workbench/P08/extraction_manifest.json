@@ -1,0 +1,52 @@
+{
+  "protocol_version": "industrial-seac-v1.0",
+  "project_id": "P08",
+  "split": "locked_test",
+  "source_dir": "烟台华新-能源管理",
+  "processed": [
+    {
+      "file": "模块7-能源管理-技术协议-1207.docx",
+      "suffix": ".docx",
+      "sha256": "4d19ac330b3f0fd09ceff46acfe0c3a7382eb2f4352de41e6917f79c373ca051",
+      "bytes": 1352872,
+      "document_type": "Technical Agreement"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_业务代码设计.docx",
+      "suffix": ".docx",
+      "sha256": "f1035b1ed22a6cd33a33f0071fedcd058097a95e819fed0052f6233cacd22d68",
+      "bytes": 98644,
+      "document_type": "Detailed Design"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-_系统接口设计.docx",
+      "suffix": ".docx",
+      "sha256": "9c6f52eeac92904e09e9476c8b8d43a7fa7d525a0e41bec851dd762ed43d1a2f",
+      "bytes": 121986,
+      "document_type": "API"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-数据库设计.docx",
+      "suffix": ".docx",
+      "sha256": "778db3ff284057c0a4c39129388f04c4e1fb9e588d93cf07f573f1047bfe1e2b",
+      "bytes": 4634400,
+      "document_type": "DB"
+    },
+    {
+      "file": "烟台华新不锈钢数字化项目一期-能源管理-详细设计规格-系统需求设计.docx",
+      "suffix": ".docx",
+      "sha256": "1eeb62f37d5a16074458171d16971451513c802fb6f129d95096242d8a07ddf7",
+      "bytes": 80575197,
+      "document_type": "Detailed Design"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "第二组-能源管理-调研总结.pptx",
+      "reason": "unsupported_pptx"
+    }
+  ],
+  "document_count": 5,
+  "block_count": 1206,
+  "approx_token_count": 123307
+}

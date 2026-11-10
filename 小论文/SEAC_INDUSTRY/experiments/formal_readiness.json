@@ -1,0 +1,258 @@
+{
+  "protocol_version": "industrial-seac-formal-run-v1.1",
+  "formal_ready": true,
+  "locked_test_release_ready": true,
+  "ready_project_count": 10,
+  "project_count": 10,
+  "projects": [
+    {
+      "project_id": "P01",
+      "split": "development",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 7,
+        "boundaries": 4783,
+        "qa": 24
+      },
+      "hashes": {
+        "corpus_sha256": "9eb9394bbfdd035d0d360883b9491c41fde94c7d7188dd3992075145a5b03cd0",
+        "breakpoints_sha256": "472310eb809896c599e7122045736937c021cd2c66dcdb5229013249fad628e6",
+        "qa_sha256": "f6a9c2135f587b36782d88e3e1044746702687cf69ca27ae13ab5d25bc52a647"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P01/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P01/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P01/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P02",
+      "split": "development",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 8,
+        "boundaries": 300,
+        "qa": 31
+      },
+      "hashes": {
+        "corpus_sha256": "722986289ad08a7d4258d22365d5da16c5c7b95f31bc29ac7edea85ae26b582b",
+        "breakpoints_sha256": "dd64ee43436158c16ee29e79e1ab833e1d0383b868488f3979453f76c3e1d88f",
+        "qa_sha256": "b7cab3f958a9aac036e2010785f19fdddee7e3c9f6390b09334a74125e755a23"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P02/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P02/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P02/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P03",
+      "split": "validation",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 7,
+        "boundaries": 300,
+        "qa": 28
+      },
+      "hashes": {
+        "corpus_sha256": "f01102826a73f0801834e0fa0786c7fbd5e443fa0865ff068a2882e6ab96e959",
+        "breakpoints_sha256": "4a6fd3e960c8c14591fcbe54e58cbadf89fd2b82e3d8972e2c1281a7f168d25e",
+        "qa_sha256": "e1a21024de21883878610ff01fe386055f397db20960ec118c6b9944f5104bbc"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P03/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P03/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P03/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P04",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 17,
+        "boundaries": 300,
+        "qa": 22
+      },
+      "hashes": {
+        "corpus_sha256": "96fa299b17e4871c15ac2d22ff712835b105c53d13012111e587b0e5a1883285",
+        "breakpoints_sha256": "390ea65d1750f1d31e03e03bad3bf52078d714b7288dc7fdfb4c330a008ead3f",
+        "qa_sha256": "df6e7a912fb65f819c5bcee1ca4217d9aa39ed734a856a155dee3f9ed27a6ce6"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P04/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P04/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P04/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P05",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 17,
+        "boundaries": 300,
+        "qa": 17
+      },
+      "hashes": {
+        "corpus_sha256": "630bc9486407549b37c8128820c4902aeccc9ef98500dbf8a6124bd6592aa1a6",
+        "breakpoints_sha256": "5abceead1814f4228bbb4a79a00b4044e711ff04bec03c5596a479bda21ce2ea",
+        "qa_sha256": "1f5410386b608cbc05d26c1ca8283133c812ed1c9fedaaab960c62fb0cad5334"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P05/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P05/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P05/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P06",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 12,
+        "boundaries": 300,
+        "qa": 22
+      },
+      "hashes": {
+        "corpus_sha256": "f34056b7caf58ab14c7cfa9327ca9293fb1daeb1e2ef791a02617866c8b6d4ec",
+        "breakpoints_sha256": "2870c668caf104ac052aa97a4bb158449c321aa0ea8b2acc79fe56cb4c6bf1ea",
+        "qa_sha256": "68fca6e601cddbec030ee054e98d7e46f5c092f40f8675648e60be545fb08a04"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P06/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P06/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P06/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P07",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 8,
+        "boundaries": 300,
+        "qa": 23
+      },
+      "hashes": {
+        "corpus_sha256": "5dfb4585602dca430077be3563393eb8bf5a8d39903ec11ba6d9b540184af1a0",
+        "breakpoints_sha256": "a33caf47ad2ccffdeab8a5958c32a501f746dd3dd7160ece3edc8ce1760863fa",
+        "qa_sha256": "aed08bccdd3cfa0481f7907fdeefc10f01e98e89c3a12a1d02525104d0a22155"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P07/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P07/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P07/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P08",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": true,
+      "boundary_withheld_reason": "human-LLM kappa 0.650 is below the 0.70 threshold; the residual disagreement is cover-page furniture, which §4.1 does not settle. Boundary metrics omit P08; its retrieval and QA metrics are unaffected.",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 5,
+        "boundaries": 0,
+        "qa": 22
+      },
+      "hashes": {
+        "corpus_sha256": "419a173be9f0acd055031382f78f4ef864a91226155e2ae59189a7a23b096e21",
+        "qa_sha256": "40648014867846dba71f122f1c0817cf23c8ce7345b7a2a37713cd5c4040b659"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P08/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P08/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P08/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P09",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": false,
+      "qa_withheld_reason": "",
+      "counts": {
+        "documents": 4,
+        "boundaries": 300,
+        "qa": 19
+      },
+      "hashes": {
+        "corpus_sha256": "1ef0be24c3725c2bcb4542c8927ac7fe1cf3e19a3fab0f9a8d423b85a4c75b94",
+        "breakpoints_sha256": "4cb86822ed27bd2403ecb0787c5dadc1093128896e51806d00de63ec4a95b6d0",
+        "qa_sha256": "42bfed2c1651e8535cab79b5632ad217d7c5b512f1e634949930fa500bf2ff25"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P09/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P09/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P09/qa_approved.json"
+      }
+    },
+    {
+      "project_id": "P10",
+      "split": "locked_test",
+      "formal_ready": true,
+      "boundary_withheld": false,
+      "boundary_withheld_reason": "",
+      "qa_withheld": true,
+      "qa_withheld_reason": "11 of 18 candidates survived human approval, below the 15-question minimum. The seven rejections are one generator defect: the question named a document section instead of asking the fact, which §6.1 forbids. The 11 approved questions are individually valid and kept on disk, but retrieval metrics omit P10; its boundary metrics are unaffected.",
+      "counts": {
+        "documents": 4,
+        "boundaries": 300,
+        "qa": 11
+      },
+      "hashes": {
+        "corpus_sha256": "211b09ba6ead7caff2e462cb33e7ec3aca43fd11b4bace4f4137cabc796a3410",
+        "breakpoints_sha256": "328d23c909fcfbdac4a77d072f945fc7df91bf90c797a490c9b6b711618f0417",
+        "qa_sha256": "faa1b66e1e84946d2c59948f7cb43e17a4ff6721898c15d16fbe2489d381127c"
+      },
+      "blockers": [],
+      "paths": {
+        "corpus": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P10/corpus.json",
+        "breakpoints": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P10/candidate_breakpoints_adjudicated.json",
+        "qa": "/Users/zhaochenxu06/Desktop/bupt/小论文/SEAC_INDUSTRY/workbench/P10/qa_approved.json"
+      }
+    }
+  ]
+}

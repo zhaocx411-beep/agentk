@@ -1,0 +1,1141 @@
+[
+  {
+    "qa_id": "QA001",
+    "project_id": "P02",
+    "question": "在智慧中心B座205会议室召开的晋钢安全预警平台需求交流会议的时间是什么？",
+    "reference_answer": "2025.7.8",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0708.docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "晋钢安全预警平台-需求调研会议纪要0708:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0708:B0002#R002"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-需求调研会议纪要0708:B0002",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0708:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室",
+    "gold_evidence_spans": [
+      "时间 | 2025.7.8 | 记录人： | 郝柏 | 地点 | 智慧中心B座205会议室 | 智慧中心B座205会议室"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-需求调研会议纪要0708.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：客户主体/项目名、内部会议场所与纪要人名（§7 CUSTOMER_OR_VENDOR_IDENTITY、PERSON_NAME_OR_CONTACT），受控实验内可用，对外发布需占位符替换。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA003",
+    "project_id": "P02",
+    "question": "2025.7.22召开的晋钢安全预警平台需求交流会议的地点在哪里？",
+    "reference_answer": "管控中心二楼会议室F",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0722 .docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "晋钢安全预警平台-需求调研会议纪要0722 :B0002#R002",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002#R002"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-需求调研会议纪要0722 :B0002",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025.7.22 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F",
+    "gold_evidence_spans": [
+      "时间 | 2025.7.22 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-需求调研会议纪要0722 .docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：客户主体/项目名、内部会议场所与纪要人名，受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA004",
+    "project_id": "P02",
+    "question": "2025.9.3召开的晋钢安全预警平台需求交流会议的记录人是谁？",
+    "reference_answer": "郝柏",
+    "question_type": "Meeting fact",
+    "source_document": "晋钢安全预警平台-需求调研会议纪要0903.docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "晋钢安全预警平台-需求调研会议纪要0903:B0002#R002",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0903:B0002#R002"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-需求调研会议纪要0903:B0002",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-需求调研会议纪要0903:B0002"
+    ],
+    "gold_evidence_span": "时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F",
+    "gold_evidence_spans": [
+      "时间 | 2025.9.3 | 记录人： | 郝柏 | 地点 | 管控中心二楼会议室F | 管控中心二楼会议室F"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-需求调研会议纪要0903.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：答案即员工姓名（§7 PERSON_NAME_OR_CONTACT），本工作簿不能改写答案列，故按受控实验放行；对外发布须替换为稳定占位符。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA007",
+    "project_id": "P02",
+    "question": "创建E家审批接口使用什么请求方式？",
+    "reference_answer": "POST",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0018",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0018",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0050",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0145",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0210",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0229"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0018",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0018",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0050",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0145",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0210",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0229"
+    ],
+    "gold_evidence_span": "1）请求方式：POST方法",
+    "gold_evidence_spans": [
+      "1）请求方式：POST方法"
+    ],
+    "evidence_occurrence_count": 5,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "证据区分度偏弱：请求方式行在文档内 5 处等价，均为 POST，答案一致，按 §6ter.1 未超出现次数上限予以放行。隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA008",
+    "project_id": "P02",
+    "question": "创建E家审批接口的请求路径是什么？",
+    "reference_answer": "https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0020",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0020"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0020",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0020"
+    ],
+    "gold_evidence_span": "https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}",
+    "gold_evidence_spans": [
+      "https://e.jggroup.cn/gateway/workflow/form/thirdpart/createInst?accessToken={accessToken}"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：企业网关域名与接口路径（§7 INTERNAL_NETWORK_OR_URL），accessToken 为占位符非真实凭据；受控实验内可用。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA010",
+    "project_id": "P02",
+    "question": "相关流程处理日志查询接口的请求路径是什么？",
+    "reference_answer": "https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0052",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0052"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0052",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0052"
+    ],
+    "gold_evidence_span": "https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}",
+    "gold_evidence_spans": [
+      "https://e.jggroup.cn/gateway/workflow/form/thirdpart/getFlowRecord?accessToken={accessToken}"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "语料标题路径被解析器错挂到相邻接口，证据单元本身（getFlowRecord 路径）唯一且与题干接口一致。隐私：企业网关域名与接口路径。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA012",
+    "project_id": "P02",
+    "question": "晋钢E家消息通知接口的请求路径是什么？",
+    "reference_answer": "https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0147",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0147"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0147",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0147"
+    ],
+    "gold_evidence_span": "https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}",
+    "gold_evidence_spans": [
+      "https://e.jggroup.cn/gateway/newtodo/open/generatetodo.json?accessToken={accessToken}"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "标题路径为解析器错挂，证据 URL（generatetodo.json）唯一且与题干接口一致。隐私：企业网关域名与接口路径。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA013",
+    "project_id": "P02",
+    "question": "晋钢IOT点位数据获取接口使用什么请求方式？",
+    "reference_answer": "GET",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0183",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0183"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0183",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0183"
+    ],
+    "gold_evidence_span": "1）请求方式：GET方法",
+    "gold_evidence_spans": [
+      "1）请求方式：GET方法"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "GET 请求方式行在文档内唯一，证据可区分。隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA014",
+    "project_id": "P02",
+    "question": "晋钢IOT点位数据获取接口的请求路径是什么？",
+    "reference_answer": "http://172.17.12.130:518/api/webapidic",
+    "question_type": "API",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0185",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0185",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0190"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0185",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0185",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0190"
+    ],
+    "gold_evidence_span": "http://172.17.12.130:518/api/webapidic",
+    "gold_evidence_spans": [
+      "http://172.17.12.130:518/api/webapidic"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：答案为内网 IP、端口与接口路径（§7 INTERNAL_NETWORK_OR_URL，兼涉 SECURITY_ARCHITECTURE），属 RFC1918 私网地址；受控实验内可用，对外发布须整体替换。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA015",
+    "project_id": "P02",
+    "question": "创建E家审批接口中参数 formCodeId 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大40个字节，必填",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R002",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R002"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022"
+    ],
+    "gold_evidence_span": "formCodeId | String | 最大40个字节 | 是 | 表单模板codeId",
+    "gold_evidence_spans": [
+      "formCodeId | String | 最大40个字节 | 是 | 表单模板codeId"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "「必须=是」→「必填」属 §6ter.2 已登记同义改写。隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA016",
+    "project_id": "P02",
+    "question": "创建E家审批接口中参数 creator 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大100个字节，必填",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R003",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022#R003"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0022"
+    ],
+    "gold_evidence_span": "creator | String | 最大100个字节 | 是 | 流程发起人openid",
+    "gold_evidence_spans": [
+      "creator | String | 最大100个字节 | 是 | 流程发起人openid"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA017",
+    "project_id": "P02",
+    "question": "创建E家审批接口中参数 errorCode 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为Int，取值范围为200是成功，其余是失败，必填",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R002",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R002",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R002"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063"
+    ],
+    "gold_evidence_span": "errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败",
+    "gold_evidence_spans": [
+      "errorCode | Int | 200是成功，其余是失败 | 是 | 返回状态码，200是成功，其余是失败"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "两处等价参数行原文与取值完全一致。隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA018",
+    "project_id": "P02",
+    "question": "创建E家审批接口中参数 success 的类型、取值范围和必填要求是什么？",
+    "reference_answer": "类型为String，取值范围为最大100个字节，必填",
+    "question_type": "API parameter",
+    "source_document": "晋钢安全预警平台-详细设计规格接口文档V1.0.docx",
+    "source_section": "1. 概述 1 > 外部接口设计 > 晋钢安全信息化平台系统 > 接口定义 > 创建E家审批接口",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R003",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033#R003",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063#R003",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0172#R003"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0033",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0063",
+      "晋钢安全预警平台-详细设计规格接口文档V1.0:B0172"
+    ],
+    "gold_evidence_span": "success | String | 最大100个字节 | 是 | 返回提示说明",
+    "gold_evidence_spans": [
+      "success | String | 最大100个字节 | 是 | 返回提示说明"
+    ],
+    "evidence_occurrence_count": 3,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格接口文档V1.0.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "三处等价参数行原文与取值完全一致。隐私：客户系统/接口名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_MULTI_EVIDENCE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA019",
+    "project_id": "P02",
+    "question": "EHS_SAFETY_ORGANIZATION 表用于记录什么信息？",
+    "reference_answer": "安全机构与职责表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_SAFETY_ORGANIZATION",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0002#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0002#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0002",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0002"
+    ],
+    "gold_evidence_span": "1、 | 表名 | EHS_SAFETY_ORGANIZATION | 表的描述 | 安全机构与职责表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "1、 | 表名 | EHS_SAFETY_ORGANIZATION | 表的描述 | 安全机构与职责表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA020",
+    "project_id": "P02",
+    "question": "EHS_SAFETY_CULTURE 表用于记录什么信息？",
+    "reference_answer": "安全文化建设表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_SAFETY_CULTURE",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0003#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0003#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0003",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0003"
+    ],
+    "gold_evidence_span": "2、 | 表名 | EHS_SAFETY_CULTURE | 表的描述 | 安全文化建设表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "2、 | 表名 | EHS_SAFETY_CULTURE | 表的描述 | 安全文化建设表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA021",
+    "project_id": "P02",
+    "question": "EHS_PROJECT_BASIC 表用于记录什么信息？",
+    "reference_answer": "项目基本信息表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_PROJECT_BASIC",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0004#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0004#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0004",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0004"
+    ],
+    "gold_evidence_span": "3、 | 表名 | EHS_PROJECT_BASIC | 表的描述 | 项目基本信息表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "3、 | 表名 | EHS_PROJECT_BASIC | 表的描述 | 项目基本信息表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA022",
+    "project_id": "P02",
+    "question": "EHS_HAZARDOUS_CHEMICAL 表用于记录什么信息？",
+    "reference_answer": "危化品台账主表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_HAZARDOUS_CHEMICAL",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0005#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0005#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0005",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0005"
+    ],
+    "gold_evidence_span": "4、 | 表名 | EHS_HAZARDOUS_CHEMICAL | 表的描述 | 危化品台账主表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "4、 | 表名 | EHS_HAZARDOUS_CHEMICAL | 表的描述 | 危化品台账主表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA023",
+    "project_id": "P02",
+    "question": "EHS_STANDARD_SELF_EVALUATION 表用于记录什么信息？",
+    "reference_answer": "安标自评报告表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_STANDARD_SELF_EVALUATION",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0006#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0006#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0006",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0006"
+    ],
+    "gold_evidence_span": "5、 | 表名 | EHS_STANDARD_SELF_EVALUATION | 表的描述 | 安标自评报告表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "5、 | 表名 | EHS_STANDARD_SELF_EVALUATION | 表的描述 | 安标自评报告表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA024",
+    "project_id": "P02",
+    "question": "EHS_SYSTEM_INTERNAL_AUDIT 表用于记录什么信息？",
+    "reference_answer": "体系内审报告表",
+    "question_type": "Database",
+    "source_document": "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx",
+    "source_section": "基础信息与台账相关 > EHS_SYSTEM_INTERNAL_AUDIT",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0007#R001",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0007#R001"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格数据库说明文档:B0007",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档:B0007"
+    ],
+    "gold_evidence_span": "6、 | 表名 | EHS_SYSTEM_INTERNAL_AUDIT | 表的描述 | 体系内审报告表 | | | | | | | | | | | |",
+    "gold_evidence_spans": [
+      "6、 | 表名 | EHS_SYSTEM_INTERNAL_AUDIT | 表的描述 | 体系内审报告表 | | | | | | | | | | | |"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格数据库说明文档.xlsx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "APPROVED_SINGLE_ROUND",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": ""
+  },
+  {
+    "qa_id": "QA025",
+    "project_id": "P02",
+    "question": "作业管理模块危险作业图表统计的逻辑处理中，统计图表默认的统计日期是什么，输入查询条件后如何统计？",
+    "reference_answer": "默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息",
+    "question_type": "Constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "系统设计 > 作业管理模块 > 危险作业图表统计 > 逻辑处理",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0764",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0764",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0766",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0768"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0764",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0764",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0766",
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0768"
+    ],
+    "gold_evidence_span": "默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息",
+    "gold_evidence_spans": [
+      "默认统计日期为近一个月数据，当输入查询条件时根据查询条件查询统计图表信息"
+    ],
+    "evidence_occurrence_count": 3,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "三处等价语句分属同一功能下的三个统计图，答案一致。隐私：客户项目名。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA026",
+    "project_id": "P02",
+    "question": "隐患排查治理管理员端的检查项管理中，企业可以如何定制本企业的检查内容，检查内容列表默认展示哪些信息？",
+    "reference_answer": "可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有",
+    "question_type": "Constraint",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.3.隐患排查治理 > 5.1.3.2.隐患排查治理管理员端",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0068",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0068"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0068",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0068"
+    ],
+    "gold_evidence_span": "增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有",
+    "gold_evidence_spans": [
+      "增加：可在系统提供的检查内容基础上对本企业检查内容进行定制管理，系统默认展示所有本企业检查内容列表，具体信息 包括序号、检查内容、检查要求、审核状态、是否本企业独有"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA027",
+    "project_id": "P02",
+    "question": "法律法规模块中，法规周期性评价的复评任务由系统在每年几月自动生成至哪个部门，法律法规的复评单位默认是哪个单位？",
+    "reference_answer": "法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位",
+    "question_type": "Constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "系统设计 > 法律法规 > 功能描述",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B2197",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B2197",
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002#R006"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B2197",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B2197",
+      "晋钢安全预警平台-需求调研会议纪要0722 :B0002"
+    ],
+    "gold_evidence_span": "法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位",
+    "gold_evidence_spans": [
+      "法规周期性评价，每年9月份系统自动生成复评任务至安全管理处，法律法规的复评单位默认为首次评价的单位"
+    ],
+    "evidence_occurrence_count": 2,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+      "晋钢安全预警平台-需求调研会议纪要0722 .docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "第二处等价位置为纪要决议大行，含同一语句、答案一致。隐私：客户内部部门名（安全管理处）。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA028",
+    "project_id": "P02",
+    "question": "安全标准化体系及监测预警系统建设在业务方面具备什么方案基础和实施经验？",
+    "reference_answer": "业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0010",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0010"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0010",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0010"
+    ],
+    "gold_evidence_span": "业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验",
+    "gold_evidence_spans": [
+      "业务方面：安全标准化体系及监测预警系统建设已经具备标准化解决方案，并在多个项目中推进实施，具备相对丰富的实施经验"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA029",
+    "project_id": "P02",
+    "question": "通过安全生产管理平台的建设，要对晋钢安全生产管理数据做哪些处理，为钢铁行业安全生产领域提供什么支撑？",
+    "reference_answer": "通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升",
+    "question_type": "Feature",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "概述 > 项目背景",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0249",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0249"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0249",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0249"
+    ],
+    "gold_evidence_span": "通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升",
+    "gold_evidence_spans": [
+      "通过安全生产管理平台的建设，对晋钢安全生产管理数据进行有效汇集、统计分析和在线监测，为钢铁行业安全生产领域监督管理和科学决策提供技术支撑，以数据驱动钢铁行业安全生产管理水平不断提升"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "隐私：题干与答案含客户主体名（晋钢）。",
+    "privacy_review_status": "CLEARED",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA030",
+    "project_id": "P02",
+    "question": "双重预防机制管理系统分别建设哪两个端，具备哪些功能？",
+    "reference_answer": "系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "5.1.双重预防体系",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0017",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0017"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0017",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0017"
+    ],
+    "gold_evidence_span": "系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能",
+    "gold_evidence_spans": [
+      "系统分别建设PC端与移 动端，具备动态监控风险管控措施落实、隐患排查任务推送、隐患排查 治理情况跟踪监督、机制运行效果评估、异常状态自动预警及考核奖惩等功能"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA031",
+    "project_id": "P02",
+    "question": "安全风险监测预警模块设备设施类型子功能的画面设计中，功能操作区具备哪五个功能？",
+    "reference_answer": "功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作",
+    "question_type": "Feature",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "系统设计 > 安全风险监测预警模块 > 设备设施类型子功能 > 画面设计",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0279",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0279"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0279",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0279"
+    ],
+    "gold_evidence_span": "功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作",
+    "gold_evidence_spans": [
+      "功能操作区：具备五个功能，添加、编辑、删除、新增子项、检查项配置，可以对下面列表设备设施类型的信息进行相应操作"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA032",
+    "project_id": "P02",
+    "question": "系统支持管理人员划分风险分析单元的目的是什么？",
+    "reference_answer": "系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控",
+    "question_type": "Feature",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控 > 5.1.2.1.安全风险分析单元管理",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0036",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0036"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0036",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0036"
+    ],
+    "gold_evidence_span": "2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控",
+    "gold_evidence_spans": [
+      "2）系统支持管理人员划分风险分析单元，目的是为了达到风险分区管控"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA033",
+    "project_id": "P02",
+    "question": "通过智能化钢铁生产过程的精细化管理可以取得哪些效果？",
+    "reference_answer": "通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产",
+    "question_type": "Process",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "概述 > 项目背景",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0248",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0248"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B0248",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B0248"
+    ],
+    "gold_evidence_span": "通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产",
+    "gold_evidence_spans": [
+      "通过智能化钢铁生产过程的精细化管理，可以提高生产效率，降低成本，减少资源消耗，实现绿色生产"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA034",
+    "project_id": "P02",
+    "question": "为什么有必要对企业可能产生重大生产安全事故隐患的风险点进行监测预警并实现有效闭环？",
+    "reference_answer": "其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生",
+    "question_type": "Process",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0008",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0008"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0008",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0008"
+    ],
+    "gold_evidence_span": "其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生",
+    "gold_evidence_spans": [
+      "其次针对企业的可能产生重大生产安全事故隐患的风险点进行监测预警，及时收集相关监测报警数据，并实现有效闭环是非常有必要性的，能够推动政府及企业进一步强化责任措施落实，有效防范钢铁企业的重大安全风险，坚决遏制重特大事故发生"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA035",
+    "project_id": "P02",
+    "question": "事故事件管理模块中，事故和未遂事件分别需要在多长时间内补充事件调查报告或调查结果？",
+    "reference_answer": "由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库",
+    "question_type": "Numeric constraint",
+    "source_document": "晋钢安全预警平台-详细设计规格 V1.1--1020.docx",
+    "source_section": "系统设计 > 事故事件管理 > 功能描述",
+    "gold_evidence_unit_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B3377",
+    "gold_evidence_unit_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B3377"
+    ],
+    "gold_evidence_id": "晋钢安全预警平台-详细设计规格 V1.1--1020:B3377",
+    "gold_evidence_ids": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020:B3377"
+    ],
+    "gold_evidence_span": "由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库",
+    "gold_evidence_spans": [
+      "由办事员在事故/事件管理模块填报事故/未遂事件信息，如果是事故，需在72小时内补充事件调查报告，如果是未遂事件，需在72小时内补充事件调查结果，由相关领导审批，可选择是否纳入事故案例库"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "晋钢安全预警平台-详细设计规格 V1.1--1020.docx"
+    ],
+    "difficulty": "Medium",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  },
+  {
+    "qa_id": "QA036",
+    "project_id": "P02",
+    "question": "风险分级管控由哪几个功能点组成？",
+    "reference_answer": "由风险信息管理和安全风险一张图 2 个功能点组成",
+    "question_type": "Numeric constraint",
+    "source_document": "调研报告 （晋钢安全）.docx",
+    "source_section": "5.1.双重预防体系 > 5.1.1.功能架构 > 5.1.2.风险分级管控",
+    "gold_evidence_unit_id": "调研报告 （晋钢安全）:B0032",
+    "gold_evidence_unit_ids": [
+      "调研报告 （晋钢安全）:B0032"
+    ],
+    "gold_evidence_id": "调研报告 （晋钢安全）:B0032",
+    "gold_evidence_ids": [
+      "调研报告 （晋钢安全）:B0032"
+    ],
+    "gold_evidence_span": "由风险信息管理和安全风险一张图 2 个功能点组成",
+    "gold_evidence_spans": [
+      "由风险信息管理和安全风险一张图 2 个功能点组成"
+    ],
+    "evidence_occurrence_count": 1,
+    "evidence_documents": [
+      "调研报告 （晋钢安全）.docx"
+    ],
+    "difficulty": "Easy",
+    "review_status": "APPROVED",
+    "audit_status": "APPROVED",
+    "review_notes": "",
+    "privacy_review_status": "NO_RISK",
+    "suggested_privacy_flags": [],
+    "human_approved": true,
+    "evidence_model": "multi_evidence_any_hit",
+    "candidate_state": "CANDIDATE_REWRITE",
+    "draft_origin": "rule_generated_for_human_review",
+    "answer_grounding": "LITERAL"
+  }
+]

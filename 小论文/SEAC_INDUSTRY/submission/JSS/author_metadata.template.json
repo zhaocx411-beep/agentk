@@ -1,0 +1,19 @@
+{
+  "authors": [
+    {
+      "name": "REPLACE WITH VERIFIED FULL NAME",
+      "affiliation_ids": ["1"],
+      "orcid": ""
+    }
+  ],
+  "affiliations": [
+    {
+      "id": "1",
+      "name": "REPLACE WITH OFFICIAL INSTITUTION, DEPARTMENT, CITY, POSTCODE, COUNTRY"
+    }
+  ],
+  "corresponding_author": {
+    "name": "REPLACE WITH VERIFIED FULL NAME",
+    "email": "REPLACE WITH INSTITUTIONAL EMAIL"
+  }
+}

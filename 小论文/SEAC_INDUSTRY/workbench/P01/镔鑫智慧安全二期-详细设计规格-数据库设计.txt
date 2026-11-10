@@ -1,0 +1,636 @@
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0001] [worksheet] [封面]
+ |  |  |  | 江苏金恒信息科技股份有限公司 |  |  | 密级：内部 |  |  |  |  |  ||  |  |  |  | 数据库说明文档 |  |  | 版本：V1.0 |  |  |  |  | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0002] [worksheet] [目录]
+1、相关方管理系统 | 本子系统的所有表均在172.26.250.12数据库BXYQSECUSER表空间中。 |  | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0003] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | EHS_REL_CONTRACT_INFO | 正式工基础信息表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0004] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | EHS_DAN_SECURITY_MEASURES | 危险作业安全措施条目
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0005] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | EHS_REG_CATEGORY | 制度类别
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0006] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | EHS_HT_PLAN_TASK | 计划性检查管理主表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0007] [table] [目录 > 描述]
+ | 序号 | 表名 | 描述 ||  | 1 | EHS_TRAIN_COURSEWARE_MANAGE | 培训课件表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0008] [table] [目录 > 描述]
+6、现场管理系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_LIVE_HEALTH_RECORD | 个人健康档案主档信息表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0009] [table] [目录 > 描述]
+7、机构和职责管理系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_ORG_DEPT_MANAGER | 安全管理组织机构表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0010] [table] [目录 > 描述]
+8、应急事故预警管理系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_EMER_PLAN_INFO | 应急预案基础信息表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0011] [table] [目录 > 描述]
+9、管理制度系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_REG_SOP | 岗位SOP文件表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0012] [table] [目录 > 描述]
+10、危险源分级管控系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_HT_HAZARD_IDENTIFY | 危险源辨识表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0013] [table] [目录 > 描述]
+11、职业健康系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_LIVE_MANAGE_MANUAL | 管理手册表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0014] [table] [目录 > 描述]
+12、智能动态监督系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_INTELL_DYNAMIC_SUPERVISION | 监督信息表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0015] [table] [目录 > 描述]
+13、危险化学品系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_DAN_CHEMICALS | 危险化学品表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0016] [table] [目录 > 描述]
+14、区域网格化系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_REGION_LIMIT_SPACE | 有限空间表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0017] [table] [目录 > 描述]
+15、安全生产责任制系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_REL_CONTRACT_POST | oa岗位表
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0018] [table] [目录 > 描述]
+16、点巡检管理系统 | 序号 | 表名 | 描述 ||  | 1 | EHS_INSPECTION_PLAN | 点巡检计划
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0019] [table] [相关方管理系统 > EHS_REL_CONTRACT_INFO]
+1、 | 表名 | EHS_REL_CONTRACT_INFO | 表的描述 | 说明：记录同步OA的正式工信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0020] [table] [相关方管理系统 > EHS_REL_CONTRACT_DEPT]
+2、 | 表名 | EHS_REL_CONTRACT_DEPT | 表的描述 | 说明：记录同步OA的组织架构信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0021] [table] [相关方管理系统 > EHS_REL_SPCL_INFO]
+3、 | 表名 | EHS_REL_SPCL_INFO | 表的描述 | 说明：记录包括正式工和相关方人员特种作业证信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0022] [table] [相关方管理系统 > EHS_REL_SPCL_INFO_VICE]
+4、 | 表名 | EHS_REL_SPCL_INFO_VICE | 表的描述 | 说明：备份包括正式工和相关方人员特种作业证信息，用于审批时新旧数据对照 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0023] [table] [相关方管理系统 > EHS_REL_CO_BASE_INFO]
+5、 | 表名 | EHS_REL_CO_BASE_INFO | 表的描述 | 说明：记录同步SRM相关方单位基础信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0024] [table] [相关方管理系统 > EHS_REL_CO_FILE_INFO]
+6、 | 表名 | EHS_REL_CO_FILE_INFO | 表的描述 | 说明：记录相关方单位资质文件信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0025] [table] [相关方管理系统 > EHS_REL_PERSON_INFO]
+7、 | 表名 | EHS_REL_PERSON_INFO | 表的描述 | 说明：记录相关方人员基础文字信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0026] [table] [相关方管理系统 > EHS_REL_PERSON_INFO_VICE]
+8、 | 表名 | EHS_REL_PERSON_INFO_VICE | 表的描述 | 说明：备份相关方人员基础文字信息表，用于审批时新旧数据对照 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0027] [table] [相关方管理系统 > EHS_REL_APPROVAL_RECORD]
+9、 | 表名 | EHS_REL_APPROVAL_RECORD | 表的描述 | 说明：单位、人员、管理人员等类型的审批意见记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0028] [table] [相关方管理系统 > EHS_REL_TEAM_MANAGE]
+10、 | 表名 | EHS_REL_TEAM_MANAGE | 表的描述 | 说明：记录相关方班组信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0029] [table] [相关方管理系统 > EHS_REL_TEAM_MANAGE_VICE]
+11、 | 表名 | EHS_REL_TEAM_MANAGE_VICE | 表的描述 | 说明：记录相关方班组信息表，用于审批时新旧数据对照 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0030] [table] [相关方管理系统 > EHS_REL_AGREEMENT_FILE]
+12、 | 表名 | EHS_REL_AGREEMENT_FILE | 表的描述 | 说明：记录相关方合同资质文件表，四方会签前需要提供的资质证明文件（以及班组中提供的人员委托书） |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0031] [table] [相关方管理系统 > EHS_REL_AGREEMENT_FILE_VICE]
+13、 | 表名 | EHS_REL_AGREEMENT_FILE_VICE | 表的描述 | 说明：记录相关方合同资质文件表，用于审批时主要是适用于班组中提供的人员委托书修改时新旧数据对照 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0032] [table] [相关方管理系统 > EHS_REL_SAFE_APPLICATION]
+14、 | 表名 | EHS_REL_SAFE_APPLICATION | 表的描述 | 说明：记录四方会签申请信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0033] [table] [相关方管理系统 > EHS_REL_PROJECT_INFO]
+15、 | 表名 | EHS_REL_PROJECT_INFO | 表的描述 | 说明：记录同步OA相关方项目信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0034] [table] [相关方管理系统 > EHS_REL_AGREEMENT_INFO]
+16、 | 表名 | EHS_REL_AGREEMENT_INFO | 表的描述 | 说明：记录同步OA相关方合同信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0035] [table] [相关方管理系统 > EHS_REL_PERSON_BLACK_LIST]
+17、 | 表名 | EHS_REL_PERSON_BLACK_LIST | 表的描述 | 说明：记录相关方人员黑名单信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0036] [table] [相关方管理系统 > EHS_REL_PERSON_BLACK_RECORD]
+18、 | 表名 | EHS_REL_PERSON_BLACK_RECORD | 表的描述 | 说明：记录相关方人员黑名单审批记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0037] [table] [相关方管理系统 > EHS_REL_CLAIM_STANDARD]
+19、 | 表名 | EHS_REL_CLAIM_STANDARD | 表的描述 | 说明：记录同步OA（违约索赔条目） |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0038] [table] [相关方管理系统 > EHS_REL_DEDUCTION_STANDARD]
+20、 | 表名 | EHS_REL_DEDUCTION_STANDARD | 表的描述 | 说明：记录违章扣分标准管理信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0039] [table] [相关方管理系统 > EHS_REL_ILLEGAL_CLAIM]
+21、 | 表名 | EHS_REL_ILLEGAL_CLAIM | 表的描述 | 说明：记录同步OA相关方作业违章索赔表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0040] [table] [相关方管理系统 > EHS_REL_ILLEGAL_CLAIM_DETAIL]
+22、 | 表名 | EHS_REL_ILLEGAL_CLAIM_DETAIL | 表的描述 | 说明：记录同步OA相关方作业违章和索赔标准关联关系表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0041] [table] [相关方管理系统 > EHS_REC_ILLEGAL_MANAGE_INFO]
+23、 | 表名 | EHS_REC_ILLEGAL_MANAGE_INFO | 表的描述 | 说明：记录相关方作业违章管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0042] [table] [相关方管理系统 > EHS_REL_ILLEGAL_MANAGE_PERSON]
+24、 | 表名 | EHS_REL_ILLEGAL_MANAGE_PERSON | 表的描述 | 说明：记录作业违章人员扣分关联表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0043] [table] [相关方管理系统 > PER_PERSONNEL_LATEST_INRECORD]
+25、 | 表名 | PER_PERSONNEL_LATEST_INRECORD | 表的描述 | 说明：施工人员进出场记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0044] [table] [相关方管理系统 > EHS_RELVT_SIGN_NOTICE]
+26、 | 表名 | EHS_RELVT_SIGN_NOTICE | 表的描述 | 说明：安全告知书 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0045] [table] [相关方管理系统 > EHS_RELVT_MONTH_CHECK]
+26、 | 表名 | EHS_RELVT_MONTH_CHECK | 表的描述 | 说明：月度检查表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0046] [table] [相关方管理系统 > EHS_RELVT_INDEPEND_INFO]
+27、 | 表名 | EHS_RELVT_INDEPEND_INFO | 表的描述 | 说明：自主基础台账表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0047] [table] [相关方管理系统 > EHS_RELVT_TEAM_PERFORMANCE]
+27、 | 表名 | EHS_RELVT_TEAM_PERFORMANCE | 表的描述 | 说明：班组绩效表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0048] [table] [相关方管理系统 > EHS_RELVT_SAFE_MEETING]
+27、 | 表名 | EHS_RELVT_SAFE_MEETING | 表的描述 | 说明：相关方安全会议表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0049] [table] [危险作业子系统 > EHS_DAN_SECURITY_MEASURES]
+1、 | 表名 | EHS_DAN_SECURITY_MEASURES | 表的描述 | 危险作业安全措施信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0050] [table] [危险作业子系统 > EHS_DAN_DEVICE_INFO]
+2、 | 表名 | EHS_DAN_DEVICE_INFO | 表的描述 | 作业监控设备信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0051] [table] [危险作业子系统 > EHS_DAN_DEVICE_BIND_HISTORY]
+3、 | 表名 | EHS_DAN_DEVICE_BIND_HISTORY | 表的描述 | 作业任务信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0052] [table] [危险作业子系统 > EHS_DAN_OPERATION_TASK]
+4、 | 表名 | EHS_DAN_OPERATION_TASK | 表的描述 | 作业任务信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0053] [table] [危险作业子系统 > EHS_DAN_PERMIT]
+5、 | 表名 | EHS_DAN_PERMIT | 表的描述 | 危险作业许可证 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0054] [table] [危险作业子系统 > EHS_DAN_PERMIT_SECURITY]
+6、 | 表名 | EHS_DAN_PERMIT_SECURITY | 表的描述 | 许可证安全措施明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0055] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_APPLY]
+7、 | 表名 | EHS_DAN_DAY_OPERATION_APPLY | 表的描述 | 开工确认申请 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0056] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_SECURITY]
+8、 | 表名 | EHS_DAN_DAY_OPERATION_SECURITY | 表的描述 | 开工确认安全措施明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0057] [table] [危险作业子系统 > EHS_DAN_GAS_TEST_DETAIL]
+9、 | 表名 | EHS_DAN_GAS_TEST_DETAIL | 表的描述 | 气体监测分析明细 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0058] [table] [危险作业子系统 > EHS_DAN_GAS_TEST_RULE]
+10、 | 表名 | EHS_DAN_GAS_TEST_RULE | 表的描述 | 气体检测分析规则 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0059] [table] [危险作业子系统 > EHS_DAN_CHECK_UP]
+11、 | 表名 | EHS_DAN_CHECK_UP | 表的描述 | 危险作业现场检查 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0060] [table] [危险作业子系统 > EHS_DAN_PERMIT_ACCEPT_APPROVAL]
+12、 | 表名 | EHS_DAN_PERMIT_ACCEPT_APPROVAL | 表的描述 | 危险作业许可证验收审批 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0061] [table] [危险作业子系统 > EHS_DAN_JOB_RECORD]
+13、 | 表名 | EHS_DAN_JOB_RECORD | 表的描述 | 定时任务记录 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0062] [table] [危险作业子系统 > EHS_DAN_PERMIT_RECORD]
+14、 | 表名 | EHS_DAN_PERMIT_RECORD | 表的描述 | 许可证操作记录 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0063] [table] [危险作业子系统 > EHS_DAN_PERMIT_AUTH]
+15、 | 表名 | EHS_DAN_PERMIT_AUTH | 表的描述 | 危险作业权限管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0064] [table] [危险作业子系统 > EHS_DAN_PERMIT_JOB_TEMPLATE]
+16、 | 表名 | EHS_DAN_PERMIT_JOB_TEMPLATE | 表的描述 | 许可证操作模板 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0065] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_JOB]
+17、 | 表名 | EHS_DAN_DAY_OPERATION_JOB | 表的描述 | 开工作业进出状态 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0066] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_JOB]
+18、 | 表名 | EHS_DAN_DAY_OPERATION_JOB | 表的描述 | 开工作业进出状态 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0067] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_JOB_RECORD]
+19、 | 表名 | EHS_DAN_DAY_OPERATION_JOB_RECORD | 表的描述 | 开工作业进出记录 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0068] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_PECCANT]
+20、 | 表名 | EHS_DAN_DAY_OPERATION_PECCANT | 表的描述 | 危险作业过程监控 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0069] [table] [危险作业子系统 > EHS_DAN_DAY_OPERATION_PROCESS]
+21、 | 表名 | EHS_DAN_DAY_OPERATION_PROCESS | 表的描述 | 危险作业过程监控违章 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0070] [table] [危险作业子系统 > EHS_DAN_GUARDIAN_PERSON]
+22、 | 表名 | EHS_DAN_GUARDIAN_PERSON | 表的描述 | 监护人员库 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0071] [table] [危险作业子系统 > EHS_DAN_HOIST_PERSON]
+23、 | 表名 | EHS_DAN_HOIST_PERSON | 表的描述 | 吊装人员库 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0072] [table] [危险作业子系统 > EHS_DAN_PERMIT_FLOW_SIGN]
+24、 | 表名 | EHS_DAN_PERMIT_FLOW_SIGN | 表的描述 | 危险作业流程人员签字 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0073] [table] [现场管理系统 > EHS_LIVE_HEALTH_RECORD]
+1、 | 表名 | EHS_LIVE_HEALTH_RECORD | 表的描述 | 说明：记录个人健康档案主档信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0074] [table] [现场管理系统 > EHS_LIVE_OCCUPATIONAL_HISTORY]
+2、 | 表名 | EHS_LIVE_OCCUPATIONAL_HISTORY | 表的描述 | 说明：记录个人职业病史及职业病危害接触历史表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0075] [table] [现场管理系统 > EHS_LIVE_PAST_MEDICAL_HISTORY]
+3、 | 表名 | EHS_LIVE_PAST_MEDICAL_HISTORY | 表的描述 | 说明：记录既往病史表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0076] [table] [现场管理系统 > EHS_LIVE_OCCUPATIONAL_DIAGNOSIS_HISTORY]
+4、 | 表名 | EHS_LIVE_OCCUPATIONAL_DIAGNOSIS_HISTORY | 表的描述 | 说明：记录职业病诊断表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0077] [table] [现场管理系统 > EHS_LIVE_OCCUPATIONAL_HAZARDS]
+5、 | 表名 | EHS_LIVE_OCCUPATIONAL_HAZARDS | 表的描述 | 说明：记录职职业病危害因素表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0078] [table] [现场管理系统 > EHS_LIVE_MEDICAL_REPORT]
+6、 | 表名 | EHS_LIVE_MEDICAL_REPORT | 表的描述 | 说明：记录个人体检报告主档信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0079] [table] [现场管理系统 > EHS_LIVE_MEDICAL_REPORT_RECORD]
+7、 | 表名 | EHS_LIVE_MEDICAL_REPORT_RECORD | 表的描述 | 说明：记录个人体检报告历史记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0080] [table] [现场管理系统 > EHS_LIVE_THREE_FILE_MANAGER]
+8、 | 表名 | EHS_LIVE_THREE_FILE_MANAGER | 表的描述 | 说明：记录三同时文件信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0081] [table] [现场管理系统 > EHS_LIVE_SAFEACITIVITY_INFO]
+9、 | 表名 | EHS_LIVE_SAFEACITIVITY_INFO | 表的描述 | 说明：记录安全日活动信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0082] [table] [现场管理系统 > EHS_LIVE_CASE_EDUCATION]
+10、 | 表名 | EHS_LIVE_CASE_EDUCATION | 表的描述 | 说明：记录案例教育信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0083] [table] [现场管理系统 > EHS_LIVE_TEAM_CHANGE_RECORD]
+11、 | 表名 | EHS_LIVE_TEAM_CHANGE_RECORD | 表的描述 | 说明：记录交接班基本信息记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0084] [table] [现场管理系统 > EHS_LIVE_TEAM_MEMBERS_RECORD]
+13、 | 表名 | EHS_LIVE_TEAM_MEMBERS_RECORD | 表的描述 | 说明：记录交接班班组成员信息记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0085] [table] [现场管理系统 > EHS_TAR_TARGET_DEPT_REL]
+14、 | 表名 | EHS_TAR_TARGET_DEPT_REL | 表的描述 | 目标部门关联表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0086] [table] [现场管理系统 > EHS_TAR_PLAN_TASK]
+15、 | 表名 | EHS_TAR_PLAN_TASK | 表的描述 | 计划任务管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0087] [table] [现场管理系统 > EHS_TAR_PLAN_TASK_DETAIL]
+16、 | 表名 | EHS_TAR_PLAN_TASK_DETAIL | 表的描述 | 计划任务管理要求表（详情表） |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0088] [table] [现场管理系统 > EHS_TAR_PLAN_TASK_ISSUE]
+17、 | 表名 | EHS_TAR_PLAN_TASK_ISSUE | 表的描述 | 计划任务要求下发表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0089] [table] [现场管理系统 > EHS_CULTURE_ACTIVITY_PLAN]
+18、 | 表名 | EHS_CULTURE_ACTIVITY_PLAN | 表的描述 | 活动计划表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0090] [table] [现场管理系统 > EHS_PHOTO_WALL]
+19、 | 表名 | EHS_PHOTO_WALL | 表的描述 | 照片墙管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0091] [table] [现场管理系统 > EHS_SCENE_SPECIAL_EQUIPMENT]
+20、 | 表名 | EHS_SCENE_SPECIAL_EQUIPMENT | 表的描述 | 特种设备清单 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0092] [table] [现场管理系统 > EHS_SCENE_NEAR_EXPIRED]
+21、 | 表名 | EHS_SCENE_NEAR_EXPIRED | 表的描述 | 临期设备台账 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0093] [table] [现场管理系统 > EHS_SCENE_CAUTION_SIGN]
+22、 | 表名 | EHS_SCENE_CAUTION_SIGN | 表的描述 | 警示标志管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0094] [table] [现场管理系统 > EHS_SCENE_SIGN_TYPE]
+23、 | 表名 | EHS_SCENE_SIGN_TYPE | 表的描述 | 警示类型管理 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0095] [table] [现场管理系统 > EHS_TEAM_ISM_INFO]
+24、 | 表名 | EHS_TEAM_ISM_INFO | 表的描述 | 班组制度台账表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0096] [table] [现场管理系统 > EHS_MEETING_CAMERA_INFO]
+25、 | 表名 | EHS_MEETING_CAMERA_INFO | 表的描述 | 会议室摄像机管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0097] [table] [现场管理系统 > EHS_MEETING_CAMERA_TEAM]
+26、 | 表名 | EHS_MEETING_CAMERA_TEAM | 表的描述 | 会议室班组绑定表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0098] [table] [现场管理系统 > EHS_LIVE_TEAM_ABNORMAL_RECORD]
+27、 | 表名 | EHS_LIVE_TEAM_ABNORMAL_RECORD | 表的描述 | 交接班异常信息记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0099] [table] [现场管理系统 > EHS_TEAM_SEGMENT_INFO]
+28、 | 表名 | EHS_TEAM_SEGMENT_INFO | 表的描述 | 班组细化台账表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0100] [table] [机构和职责管理系统 > EHS_ORG_DEPT_MANAGER]
+1、 | 表名 | EHS_ORG_DEPT_MANAGER | 表的描述 | 说明：记录安全管理组织机构表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0101] [table] [机构和职责管理系统 > EHS_ORG_STANDARD]
+2、 | 表名 | EHS_ORG_STANDARD | 表的描述 | 说明：记录安全生产责任量化标准 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0102] [table] [机构和职责管理系统 > EHS_ORG_PERSON_INFO]
+3、 | 表名 | EHS_ORG_PERSON_INFO | 表的描述 | 说明：记录安全生产责任岗位人员信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0103] [table] [机构和职责管理系统 > EHS_ORG_PERSON_WORK_RECORD]
+4、 | 表名 | EHS_ORG_PERSON_WORK_RECORD | 表的描述 | 说明：记录安全生产责任人员履职记录（填报）表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0104] [table] [机构和职责管理系统 > EHS_ORG_PERSON_CHANGE]
+5、 | 表名 | EHS_ORG_PERSON_CHANGE | 表的描述 | 说明：记录安全生产责任岗位人员变更记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0105] [table] [机构和职责管理系统 > EHS_ORG_SAFE_MEETING]
+6、 | 表名 | EHS_ORG_SAFE_MEETING | 表的描述 | 说明：记录安全会议信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0106] [table] [机构和职责管理系统 > EHS_ORG_SAFE_MEETING_PERSON]
+7、 | 表名 | EHS_ORG_SAFE_MEETING_PERSON | 表的描述 | 说明：记录参加安全会议人员信息表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0107] [table] [机构和职责管理系统 > EHS_ORG_KPI_CHECK_PERSON]
+8、 | 表名 | EHS_ORG_KPI_CHECK_PERSON | 表的描述 | 说明：记录个人绩效信息主档表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0108] [table] [机构和职责管理系统 > EHS_ORG_DEDUCT_POINTS_RECORD]
+9、 | 表名 | EHS_ORG_DEDUCT_POINTS_RECORD | 表的描述 | 说明：记录个人/单位绩效扣分记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0109] [table] [机构和职责管理系统 > EHS_ORG_DEDUCT_POINTS_RECORD]
+10、 | 表名 | EHS_ORG_DEDUCT_POINTS_RECORD | 表的描述 | 说明：记录个人/单位绩效扣分记录表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0110] [table] [机构和职责管理系统 > EHS_ORG_KPI_CHECK_UNIT]
+11、 | 表名 | EHS_ORG_KPI_CHECK_UNIT | 表的描述 | 说明：记录单位绩效信息主档表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0111] [table] [机构和职责管理系统 > EHS_TAR_ANNUAL_TARGET]
+11、 | 表名 | EHS_TAR_ANNUAL_TARGET | 表的描述 | 年度目标管理主表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0112] [table] [机构和职责管理系统 > EHS_TAR_DUTY_DEPT]
+11、 | 表名 | EHS_TAR_DUTY_DEPT | 表的描述 | 责任部门管理主表 |  |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注 | 
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0113] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_PLAN_TASK]
+1、 | 表名 | EHS_HT_PLAN_TASK | 表的描述 | 本表用来记录计划性检查信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0114] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_PLAN_TASK_BRANCH]
+2、 | 表名 | EHS_HT_PLAN_TASK_BRANCH | 表的描述 | 本表用来记录计划性建表与厂部关联关系 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0115] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_PLAN_TASK_STAFF]
+3、 | 表名 | EHS_HT_PLAN_TASK_STAFF | 表的描述 | 本表用来记录计划性建表与检查人员关联信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0116] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_CHECK_TYPE]
+4、 | 表名 | EHS_HT_CHECK_TYPE | 表的描述 | 本表用来记录计划性检查的检查类型 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0117] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_CHECK_CONFIG]
+5、 | 表名 | EHS_HT_CHECK_CONFIG | 表的描述 | 本表用来记录计划性检查的检查配置信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0118] [table] [风险分级管控隐患排查治理子系统 > EEHS_HT_CHECK_CONFIG_DETAIL]
+6、 | 表名 | EEHS_HT_CHECK_CONFIG_DETAIL | 表的描述 | 本表用来记录计划性检查的检查配置信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0119] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_CHECKER_RECORD]
+7、 | 表名 | EHS_HT_CHECKER_RECORD | 表的描述 | 本表用来记录计划性检查人员填报信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0120] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_POSSESSION_PRINCIPAL]
+8、 | 表名 | EHS_HT_POSSESSION_PRINCIPAL | 表的描述 | 本表用来记录属地负责人信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0121] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RANDOM_SNAPSHOT]
+9、 | 表名 | EHS_HT_RANDOM_SNAPSHOT | 表的描述 | 本表用来记录员工随手拍信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0122] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_POINT]
+10、 | 表名 | EHS_HT_RISK_POINT | 表的描述 | 本表用来记录风险点点位信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0123] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_POINT_DETAIL]
+11、 | 表名 | EHS_HT_RISK_POINT_DETAIL | 表的描述 | 本表用来记录风险点点位检查项信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0124] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_POINT_RECORD]
+12、 | 表名 | EHS_HT_RISK_POINT_RECORD | 表的描述 | 本表用来记录风险点人员检查信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0125] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_POINT_RECORD_DETAIL]
+13、 | 表名 | EHS_HT_RISK_POINT_RECORD_DETAIL | 表的描述 | 本表用来记录风险点人员检查异常检查项信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0126] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_DANGER_JOB_CORRECT]
+14、 | 表名 | EHS_HT_DANGER_JOB_CORRECT | 表的描述 | 本表用来记录作业检查违章信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0127] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_CORRECT]
+15、 | 表名 | EHS_HT_RISK_CORRECT | 表的描述 | 本表用来记录隐患治理整改信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0128] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_CORRECT_CASE]
+16、 | 表名 | EHS_HT_RISK_CORRECT_CASE | 表的描述 | 本表用来记录隐患治理案例库信息 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0129] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_CORRECT_FLOW]
+17、 | 表名 | EHS_HT_CORRECT_FLOW | 表的描述 | 本表用来记录隐患治理整改流程 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0130] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_CORRECT_RECHECK]
+18、 | 表名 | EHS_HT_RISK_CORRECT_RECHECK | 表的描述 | 隐患整改再更改表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0131] [table] [风险分级管控隐患排查治理子系统 > EHS_HT_RISK_GRADE_INFO]
+19、 | 表名 | EHS_HT_RISK_GRADE_INFO | 表的描述 | 风险分级管控台账表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0132] [table] [危险源分级管控 > EHS_HT_HAZARD_IDENTIFY]
+1、 | 表名 | EHS_HT_HAZARD_IDENTIFY | 表的描述 | 危险源辨识表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0133] [table] [危险源分级管控 > EHS_HT_HAZARD_IDENTIFY_DETAIL]
+2、 | 表名 | EHS_HT_HAZARD_IDENTIFY_DETAIL | 表的描述 | 危险源辨识检查项表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0134] [table] [危险源分级管控 > EHS_HT_HAZARD_UNIT]
+3、 | 表名 | EHS_HT_HAZARD_UNIT | 表的描述 | 危险单元表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0135] [table] [危险源分级管控 > EHS_HT_HAZARD_UNIT_LOCATION]
+4、 | 表名 | EHS_HT_HAZARD_UNIT_LOCATION | 表的描述 | 危险单元划分表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0136] [table] [危险源分级管控 > EHS_HT_LEC_WORK_EVALUATE]
+5、 | 表名 | EHS_HT_LEC_WORK_EVALUATE | 表的描述 | LEC作业条件危险性评价表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0137] [table] [危险源分级管控 > EHS_HT_HAZARD_WORK_FILE]
+6、 | 表名 | EHS_HT_HAZARD_WORK_FILE | 表的描述 | 危险源辨识文件管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0138] [table] [危险源分级管控 > EHS_OPERATE_RECORD]
+6、 | 表名 | EHS_OPERATE_RECORD | 表的描述 | 操作记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0139] [table] [应急事故预警管理系统 > EHS_EMER_PLAN_INFO]
+1、 | 表名 | EHS_EMER_PLAN_INFO | 表的描述 | 说明：记录应急预案基础信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0140] [table] [应急事故预警管理系统 > EHS_EMER_PLAN_DETAIL_INFO]
+2、 | 表名 | EHS_EMER_PLAN_DETAIL_INFO | 表的描述 | 说明：记录应急预案详细信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0141] [table] [应急事故预警管理系统 > EHS_EMER_MATERIAL_INFO]
+3、 | 表名 | EHS_EMER_MATERIAL_INFO | 表的描述 | 说明：记录应急物资基本信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0142] [table] [应急事故预警管理系统 > EHS_EMER_METERIAL_CHECK_RECORD]
+4、 | 表名 | EHS_EMER_METERIAL_CHECK_RECORD | 表的描述 | 说明：记录应急物资检查记录表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0143] [table] [应急事故预警管理系统 > EHS_EMER_USED_RECORD]
+5、 | 表名 | EHS_EMER_USED_RECORD | 表的描述 | 说明：记录应急物资/小组使用记录表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0144] [table] [应急事故预警管理系统 > EHS_EMER_TEAM_MANAGE]
+6、 | 表名 | EHS_EMER_TEAM_MANAGE | 表的描述 | 说明：记录应急小组管理表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0145] [table] [应急事故预警管理系统 > EHS_EMER_MAKE_PLAN_INFO]
+7、 | 表名 | EHS_EMER_MAKE_PLAN_INFO | 表的描述 | 说明：记录应急演练计划信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0146] [table] [应急事故预警管理系统 > EHS_EMER_PLAN_DRILL_RECORD]
+8、 | 表名 | EHS_EMER_PLAN_DRILL_RECORD | 表的描述 | 说明：记录应急演练记录表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0147] [table] [应急事故预警管理系统 > EHS_EMER_EVENT_PROCESS]
+9、 | 表名 | EHS_EMER_EVENT_PROCESS | 表的描述 | 说明：记录应急事件处理信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0148] [table] [应急事故预警管理系统 > EHS_WARN_SAFETY_INCIDENT]
+10、 | 表名 | EHS_WARN_SAFETY_INCIDENT | 表的描述 | 安全事件管理表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0149] [table] [应急事故预警管理系统 > EHS_WARN_OCCUPATIONAL_INJURY_INFO]
+11、 | 表名 | EHS_WARN_OCCUPATIONAL_INJURY_INFO | 表的描述 | 工伤信息管理表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0150] [table] [应急事故预警管理系统 > EHS_WARN_SAFETY_ACCIDENT]
+12、 | 表名 | EHS_WARN_SAFETY_ACCIDENT | 表的描述 | 安全事故管理表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0151] [table] [应急事故预警管理系统 > EHS_WARN_ACCIDENT_MEETING_REL]
+12、 | 表名 | EHS_WARN_ACCIDENT_MEETING_REL | 表的描述 | 事故会议关联表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0152] [table] [应急事故预警管理系统 > EHS_WARN_GAS_FIRE_ALARM]
+13、 | 表名 | EHS_WARN_GAS_FIRE_ALARM | 表的描述 | 气体火灾报警表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0153] [table] [应急事故预警管理系统 > EHS_WARN_FATAL_DANGER_ALARM]
+14、 | 表名 | EHS_WARN_FATAL_DANGER_ALARM | 表的描述 | 重大危险源预警表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0154] [table] [应急事故预警管理系统 > EHS_WARN_VIDEO_AI_EARLY_INFO]
+15、 | 表名 | EHS_WARN_VIDEO_AI_EARLY_INFO | 表的描述 | 视频AI预警信息表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0155] [table] [应急事故预警管理系统 > EHS_WARN_VIDEO_AI_ORDER]
+16、 | 表名 | EHS_WARN_VIDEO_AI_ORDER | 表的描述 | 视频AI工单表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0156] [table] [应急事故预警管理系统 > EHS_WARN_VIDEO_AI_ORDER_RECORD]
+17、 | 表名 | EHS_WARN_VIDEO_AI_ORDER_RECORD | 表的描述 | 视频AI工单处理记录表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0157] [table] [应急事故预警管理系统 > EHS_WARN_VIDEO_MONITOR_INFO]
+18、 | 表名 | EHS_WARN_VIDEO_MONITOR_INFO | 表的描述 | 视频监测点管理表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0158] [table] [应急事故预警管理系统 > EHS_EMER_MATERIAL_CHECK_INFO]
+19、 | 表名 | EHS_EMER_MATERIAL_CHECK_INFO | 表的描述 | 应急物资点检清单表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0159] [table] [应急事故预警管理系统 > EHS_EMER_MATERIAL_PLAN]
+20、 | 表名 | EHS_EMER_MATERIAL_PLAN | 表的描述 | 应急物资点检计划表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0160] [table] [应急事故预警管理系统 > EHS_EMER_MATERIAL_CHECK_RECORD]
+21、 | 表名 | EHS_EMER_MATERIAL_CHECK_RECORD | 表的描述 | 应急物资点检记录表 |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0161] [table] [管理制度子系统 > EHS_REG_CATEGORY]
+1、 | 表名 | EHS_REG_CATEGORY | 表的描述 | 制度类别 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0162] [table] [管理制度子系统 > EHS_REG_ITEM]
+2、 | 表名 | EHS_REG_ITEM | 表的描述 | 制度条目 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0163] [table] [管理制度子系统 > EHS_REG_SOP]
+3、 | 表名 | EHS_REG_SOP | 表的描述 | 岗位SOP文件表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0164] [table] [管理制度子系统 > EHS_REG_SELF_ASSESSSMENT_CONFIG]
+4、 | 表名 | EHS_REG_SELF_ASSESSSMENT_CONFIG | 表的描述 | 自评文件项配置 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0165] [table] [管理制度子系统 > EHS_REG_SELF_ASSESSSMENT]
+5、 | 表名 | EHS_REG_SELF_ASSESSSMENT | 表的描述 | 标准化自评主表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0166] [table] [管理制度子系统 > EHS_REG_SELF_ASSESSSMENT_RECORD]
+6、 | 表名 | EHS_REG_SELF_ASSESSSMENT_RECORD | 表的描述 | 标准化自评记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0167] [table] [管理制度子系统 > EHS_REG_EXTERNAL_ASSESSSMENT]
+7、 | 表名 | EHS_REG_EXTERNAL_ASSESSSMENT | 表的描述 | 标准化外审表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0168] [table] [职业健康子系统 > EHS_LIVE_MANAGE_MANUAL]
+1、 | 1 | 表名 | EHS_LIVE_MANAGE_MANUAL | 表的描述 | 管理手册表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0169] [table] [职业健康子系统 > EHS_LIVE_PROGRAM_FILE]
+2、 | 2 | 表名 | EHS_LIVE_PROGRAM_FILE | 表的描述 | 程序文件表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0170] [table] [职业健康子系统 > EHS_LIVE_INTERNAL_AUDIT]
+3、 | 3 | 表名 | EHS_LIVE_INTERNAL_AUDIT | 表的描述 | 内部审核表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0171] [table] [职业健康子系统 > EHS_LIVE_EXTERNAL_AUDIT]
+4、 | 4 | 表名 | EHS_LIVE_EXTERNAL_AUDIT | 表的描述 | 外部审核表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0172] [table] [职业健康子系统 > EHS_LIVE_ANNUAL_RECORD]
+5、 | 5 | 表名 | EHS_LIVE_ANNUAL_RECORD | 表的描述 | 年度记录表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0173] [table] [职业健康子系统 > EHS_LIVE_HARM_ITEM]
+6、 | 6 | 表名 | EHS_LIVE_HARM_ITEM | 表的描述 | 危害项目表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0174] [table] [职业健康子系统 > EHS_LIVE_DECLAR_RECEIPT]
+7、 | 7 | 表名 | EHS_LIVE_DECLAR_RECEIPT | 表的描述 | 申报回执表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0175] [table] [职业健康子系统 > EHS_LIVE_HARM_CHECK_RECORD]
+8、 | 8 | 表名 | EHS_LIVE_HARM_CHECK_RECORD | 表的描述 | 危害检测记录表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0176] [table] [职业健康子系统 > EHS_LIVE_HARM_SITU_EVALUATION]
+9、 | 9 | 表名 | EHS_LIVE_HARM_SITU_EVALUATION | 表的描述 | 现状评价表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0177] [table] [职业健康子系统 > EHS_LIVE_HEALTH_CHECK_RECORD]
+10、 | 10 | 表名 | EHS_LIVE_HEALTH_CHECK_RECORD | 表的描述 | 职业健康检查记录表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0178] [table] [职业健康子系统 > EHS_LIVE_RADIA_HYGIENE_RECORD]
+11、 | 11 | 表名 | EHS_LIVE_RADIA_HYGIENE_RECORD | 表的描述 | 放射卫生记录表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0179] [table] [职业健康子系统 > EHS_LIVE_TRAIN_RECORD]
+12、 | 12 | 表名 | EHS_LIVE_TRAIN_RECORD | 表的描述 | 培训记录表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0180] [table] [智能动态监督子系统 > EHS_INTELL_DYNAMIC_SUPERVISION]
+1、 | 表名 | EHS_INTELL_DYNAMIC_SUPERVISION | 表的描述 | 监督信息表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0181] [table] [智能动态监督子系统 > EHS_INTELL_DYNAMIC_SUPERVISION_RECORD]
+2、 | 表名 | EHS_INTELL_DYNAMIC_SUPERVISION_RECORD | 表的描述 | 处理记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0182] [table] [危险化学品子系统 > EHS_DAN_CHEMICALS]
+1、 | 表名 |  | EHS_DAN_CHEMICALS | 表的描述 | 危险化学品表 |  |  |  ||  | 字段名 | 1 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0183] [table] [危险化学品子系统 > 2]
+2、 | 表名 | 2 | EHS_DAN_OXYGEN_DEVICE | 表的描述 | 制氧设备台账表 |  |  |  ||  | 字段名 |  | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0184] [table] [危险化学品子系统 > 3]
+2、 | 表名 | 3 | EHS_DAN_CHEMICALS_RECORD | 表的描述 | 危化品到期记录表 |  |  |  ||  | 字段名 |  | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0185] [table] [区域网格化管理子系统 > EHS_REGION_LIMIT_SPACE]
+1、 | 1 | 表名 | EHS_REGION_LIMIT_SPACE | 表的描述 | 有限空间表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0186] [table] [区域网格化管理子系统 > EHS_REGION_INFO]
+2、 | 2 | 表名 | EHS_REGION_INFO | 表的描述 | 区域划分表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0187] [table] [区域网格化管理子系统 > EHS_REGION_SAFE_RECORD]
+2、 | 3 | 表名 | EHS_REGION_SAFE_RECORD | 表的描述 | 本质安全维护表 |  |  |  ||  |  | 字段名 | 字段类型 | 字段属性（主键、Key、外键） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0188] [table] [安全教育培训管理子系统 > EHS_TRAIN_COURSEWARE_MANAGE]
+1、 | 表名 | EHS_TRAIN_COURSEWARE_MANAGE | 表的描述 | 培训课件表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0189] [table] [安全教育培训管理子系统 > EHS_TRAIN_EXECUTE_RECORD_PROGRESS]
+2、 | 表名 | EHS_TRAIN_EXECUTE_RECORD_PROGRESS | 表的描述 | 自主学习表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0190] [table] [安全教育培训管理子系统 > EHS_EXM_QUESTION_BANK_MANAGEMENT]
+3、 | 表名 | EHS_EXM_QUESTION_BANK_MANAGEMENT | 表的描述 | 题库管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0191] [table] [安全教育培训管理子系统 > EHS_EXM_QUESTION_MANAGEMENT]
+4、 | 表名 | EHS_EXM_QUESTION_MANAGEMENT | 表的描述 | 题目管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0192] [table] [安全教育培训管理子系统 > EHS_EXM_TEST_PAPER]
+5、 | 表名 | EHS_EXM_TEST_PAPER | 表的描述 | 试卷管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0193] [table] [安全教育培训管理子系统 > EHS_EXM_EXAMINATION_MANAGEMENT]
+6、 | 表名 | EHS_EXM_EXAMINATION_MANAGEMENT | 表的描述 | 考务管理表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0194] [table] [安全教育培训管理子系统 > EXM_TSET_PAPER_STAFF]
+7、 | 表名 | EXM_TSET_PAPER_STAFF | 表的描述 | 员工考试表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0195] [table] [安全教育培训管理子系统 > EXM_TSET_PAPER_QUESTION]
+8、 | 表名 | EXM_TSET_PAPER_QUESTION | 表的描述 | 考试记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0196] [table] [安全教育培训管理子系统 > EHS_TRAIN_COURSEWARE_COLLECT]
+9、 | 表名 | EHS_TRAIN_COURSEWARE_COLLECT | 表的描述 | 课件点赞收藏记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0197] [table] [安全教育培训管理子系统 > EHS_EXM_AUTO_QUESTION_RECORD]
+10、 | 表名 | EHS_EXM_AUTO_QUESTION_RECORD | 表的描述 | 题库自主答题练习记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0198] [table] [安全教育培训管理子系统 > EHS_EXM_AUTO_STUDY_RECORD]
+11、 | 表名 | EHS_EXM_AUTO_STUDY_RECORD | 表的描述 | 自主学习时长记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0199] [table] [安全教育培训管理子系统 > EHS_TRAIN_DAILY_CONFIG]
+12、 | 表名 | EHS_TRAIN_DAILY_CONFIG | 表的描述 | 每日一练配置表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0200] [table] [安全教育培训管理子系统 > EHS_TRAIN_DAILY_CONFIG_DETAIL]
+13、 | 表名 | EHS_TRAIN_DAILY_CONFIG_DETAIL | 表的描述 | 每日一练配置关联表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0201] [table] [安全教育培训管理子系统 > EHS_THREE_SAFETY_STAFF_ARCHIVES]
+14、 | 表名 | EHS_THREE_SAFETY_STAFF_ARCHIVES | 表的描述 | 三级安全教育档案表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0202] [table] [安全教育培训管理子系统 > EHS_THREE_SAFETY_PLAN_INFO]
+15、 | 表名 | EHS_THREE_SAFETY_PLAN_INFO | 表的描述 | 三级安全培训计划表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0203] [table] [安全教育培训管理子系统 > EHS_THREE_SAFETY_PLAN_STAFF]
+16、 | 表名 | EHS_THREE_SAFETY_PLAN_STAFF | 表的描述 | 三级安全培训计划人员表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0204] [table] [安全教育培训管理子系统 > EHS_THREE_SAFETY_PLAN_STAFF_RECORD]
+17、 | 表名 | EHS_THREE_SAFETY_PLAN_STAFF_RECORD | 表的描述 | 三级安全培训计划人员记录表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0205] [table] [安全教育培训管理子系统 > EHS_THREE_SAFETY_RECORD_DETAIL]
+18、 | 表名 | EHS_THREE_SAFETY_RECORD_DETAIL | 表的描述 | 三级培训计划人员记录详情表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0206] [table] [安全生产责任制系统 > EHS_REL_CONTRACT_POST]
+1、 | 表名 | EHS_REL_CONTRACT_POST | 表的描述 | oa岗位表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0207] [table] [安全生产责任制系统 > EHS_PRODUCT_DUTY_INFO]
+2、 | 表名 | EHS_PRODUCT_DUTY_INFO | 表的描述 | 安全生产责任库 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0208] [table] [安全生产责任制系统 > EHS_DUTY_TASK_INFO]
+3、 | 表名 | EHS_DUTY_TASK_INFO | 表的描述 | 标准履职任务库 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0209] [table] [安全生产责任制系统 > EHS_DUTY_TASK_ANNUAL_INFO]
+4、 | 表名 | EHS_DUTY_TASK_ANNUAL_INFO | 表的描述 | 年度履职任务表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0210] [table] [安全生产责任制系统 > EHS_DUTY_TASK_STATISTICS]
+5、 | 表名 | EHS_DUTY_TASK_STATISTICS | 表的描述 | 月度履职任务统计表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0211] [table] [点巡检管理系统 > EHS_INSPECTION_PLAN]
+1、 | 表名 | EHS_INSPECTION_PLAN | 表的描述 | 点巡检计划表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+
+[镔鑫智慧安全二期-详细设计规格-数据库设计:B0212] [table] [点巡检管理系统 > EHS_INSPECTION_TAKS]
+2、 | 表名 | EHS_INSPECTION_TAKS | 表的描述 | 点巡检任务表 |  |  |  ||  | 字段名 | 字段类型 | 字段属性（主键、Key） | 长度 | 取值 | 是否为空 | 备注
+

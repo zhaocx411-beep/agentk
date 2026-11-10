@@ -1,0 +1,342 @@
+[
+  {
+    "candidate_id": "BP001",
+    "human_label": "BREAK",
+    "review_notes": "封面甲乙方信息结束后，进入日期'2025年5月'，这是一个新的文档分区（封面->目录）。虽然都是封面元素，但'2025年5月'作为heading引入了后续目录段落，是结构性边界。"
+  },
+  {
+    "candidate_id": "BP002",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'软件实施范围>清洁运输优化'的具体内容，右侧进入'服务器资源'这个完全不同的实施范围类别。从软件功能到硬件资源，主题明确不同。"
+  },
+  {
+    "candidate_id": "BP003",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'职业健康年度记录台账'的详细字段描述，右侧进入同级别的另一个台账'职业病危害项目台账'。两个台账各自独立完整，互不依赖。"
+  },
+  {
+    "candidate_id": "BP004",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'监测指标信息'的报警阈值规则描述，右侧进入'动态感知信息'这个新的子功能。两者都在'感知数据'下，但各自描述不同类型数据，可独立理解。"
+  },
+  {
+    "candidate_id": "BP005",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'验收标准>项目验收'的备注内容，右侧进入顶层章节'售后服务与质保'。大章节切换，主题完全不同。"
+  },
+  {
+    "candidate_id": "BP006",
+    "human_label": "NO_BREAK",
+    "review_notes": "左右两段都在'项目目标'节内。左侧引用应急管理部文件阐述背景，右侧紧接着说'自该文件下发之后，江苏省...'进一步展开。右侧直接承接左侧的政策文件编号，是连续论述。"
+  },
+  {
+    "candidate_id": "BP007",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'维护职业健康体系文件，包括：'，右侧是'（1）管理手册...'。这是典型的引导语+列表项结构，列表项依赖引导语才能理解完整语义。"
+  },
+  {
+    "candidate_id": "BP008",
+    "human_label": "NO_BREAK",
+    "review_notes": "左右都是'宿舍管理优化'下的功能需求列表项。左侧'人员入住信息表格增加大部门；'和右侧'入住信息表格显示宿舍入住详情...'是并列的需求条目。"
+  },
+  {
+    "candidate_id": "BP009",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧'代表（签字）：'和右侧'日期：'同属合同签署区的格式性字段，不可分割。"
+  },
+  {
+    "candidate_id": "BP010",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'安全一期功能深化提升'范围表中的连续行。左侧是'职业健康管理|提升|...'行，右侧是'班组安全管理|提升|...'行。共享表头结构。"
+  },
+  {
+    "candidate_id": "BP011",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一对接数据表中编号连续的设备行（17号->18号），都是1#转炉水冷副枪的监测参数。共享表结构和上下文。"
+  },
+  {
+    "candidate_id": "BP012",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一接口表格中的连续行，描述不同系统间的数据交互方向。共享'涉及接口'这个表的结构。"
+  },
+  {
+    "candidate_id": "BP013",
+    "human_label": "BREAK",
+    "review_notes": "与BP001类似。封面公司名结束后，'2024年011月'作为heading引入后续目录区域。封面信息到目录的过渡。"
+  },
+  {
+    "candidate_id": "BP014",
+    "human_label": "NO_BREAK",
+    "review_notes": "这是目录中的父级标题'9 验收标准 38'和子级标题'9.1 项目验收程序 38'。它们是目录中的连续条目，且是父子层级关系，目录条目间不应断开。"
+  },
+  {
+    "candidate_id": "BP015",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'视频监控>前端监控接入'的表注（表6-3），右侧进入同级子功能'监控平台及存储部署'。两者分别讨论硬件接入和存储部署，各自独立完整。"
+  },
+  {
+    "candidate_id": "BP016",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'职务维护'的功能描述（一句话），右侧进入同级的'履职任务维护'子功能。两个维护功能各自独立描述。"
+  },
+  {
+    "candidate_id": "BP017",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'软件开发明细'的估算表格，右侧进入'硬件设备清单'。投资估算下两个完全不同的类别（软件vs硬件）。"
+  },
+  {
+    "candidate_id": "BP018",
+    "human_label": "NO_BREAK",
+    "review_notes": "与BP006完全相同的情况。同一'项目背景'节内，右侧段落紧接左侧政策文件引述进行地方落实情况的展开论述。"
+  },
+  {
+    "candidate_id": "BP019",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'点检记录'功能下的连续编号子流程。左侧是'(2)点检任务管理'的最后一句，右侧是'(3)点检结果记录'。虽然是不同编号步骤，但它们是同一功能内依次执行的流程环节，语义连续。"
+  },
+  {
+    "candidate_id": "BP020",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是编号小标题'(2)纹理指标要求'，右侧是该标题的正文内容。标题与正文不可分割。"
+  },
+  {
+    "candidate_id": "BP021",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'举例：'引导语，右侧是示例表格数据。引导语后紧接的示例不可独立理解。"
+  },
+  {
+    "candidate_id": "BP022",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'项目实施范围'表格中的连续行。左侧'视频监控数据|视频设备信息|...'行，右侧'预警信息|预警信息展示|...'行。共享表头。"
+  },
+  {
+    "candidate_id": "BP023",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'人员综合档案'表格中的连续行。'班组绩效'行后接'领导绩效'行，是同一绩效分类表格的并列数据。"
+  },
+  {
+    "candidate_id": "BP024",
+    "human_label": "NO_BREAK",
+    "review_notes": "硬件设备清单表的表头行（序号|名称|规格参数|...）后接第一条数据行（1|xxx许可|...）。数据行依赖表头定义才能理解。"
+  },
+  {
+    "candidate_id": "BP025",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'目 录'文字，右侧是正文第一个heading '1. 概述 1'。从目录区进入正文区，是文档结构性分界。"
+  },
+  {
+    "candidate_id": "BP026",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'概述'章节内容（一句话介绍本文档），右侧进入'内部接口设计'这个全新主题章节。从文档说明进入具体技术内容。"
+  },
+  {
+    "candidate_id": "BP027",
+    "human_label": "BREAK",
+    "review_notes": "左侧是内部接口最后一个接口响应的JSON闭括号'}'，右侧进入'外部接口设计'大章节。内部接口->外部接口，是接口文档的大分类边界。"
+  },
+  {
+    "candidate_id": "BP028",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'正式工组织架构信息同步接口'的JSON响应结束'}'，右侧进入新的接口'安环类违约索赔信息同步接口'。两个完全独立的接口定义。"
+  },
+  {
+    "candidate_id": "BP029",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'OA消息推送接口'的JSON响应结束'}'，右侧进入新接口'特种设备台帐同步接口'。各自是完整独立的接口规格。"
+  },
+  {
+    "candidate_id": "BP030",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'请求信息'小标题，右侧是'1）请求方式：POST'。这是同一接口定义内的标题-内容关系，'请求信息'引出后续详情。"
+  },
+  {
+    "candidate_id": "BP031",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'请求信息参数：'引导文字，右侧是参数表格。引导语与其对应的表格数据不可分割。"
+  },
+  {
+    "candidate_id": "BP032",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一接口定义内的连续部分。左侧参数表格结束，右侧进入'请求信息样例'。虽可独立理解样例，但它们同属一个接口定义的紧密连续描述段落。"
+  },
+  {
+    "candidate_id": "BP033",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一JSON响应示例代码块中的连续行。'\"message\": \"系统错误...\"'后接'}'闭括号。代码块内不应断开。"
+  },
+  {
+    "candidate_id": "BP034",
+    "human_label": "NO_BREAK",
+    "review_notes": "表格的合并表头行'文档修订历史|...'后接列名行'变更日期|新版本号|...'。表头标题与列名构成完整表头结构。"
+  },
+  {
+    "candidate_id": "BP035",
+    "human_label": "NO_BREAK",
+    "review_notes": "参数表的列名行（参数名称|参数类型|...）后接第一条数据行（startTime|String|...）。数据依赖表头。"
+  },
+  {
+    "candidate_id": "BP036",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一参数表中的连续字段行。factorySerialNumber和spec都是同一接口的请求参数字段。"
+  },
+  {
+    "candidate_id": "BP037",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'1、相关方管理系统'的数据库表列表，右侧是另一个子系统的表列表。虽在同一目录sheet中，但它们是不同子系统的数据库表目录，各自独立可理解，是自然的子系统边界。"
+  },
+  {
+    "candidate_id": "BP038",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'6、现场管理系统'的数据库表目录，右侧是'7、机构和职责管理系统'的表目录。不同子系统间是自然语义边界。"
+  },
+  {
+    "candidate_id": "BP039",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'11、职业健康系统'的表目录，右侧是'12、智能动态监督系统'的表目录。不同子系统边界。"
+  },
+  {
+    "candidate_id": "BP040",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是编号'9、'的EHS_ORG_DEDUCT_POINTS_RECORD表定义，右侧是编号'10、'的同名表。两者表名完全相同，看起来是同一个表定义的延续部分（字段太多分两段），不应断开。"
+  },
+  {
+    "candidate_id": "BP041",
+    "human_label": "NO_BREAK",
+    "review_notes": "封面sheet中，文档标题行后接修订历史表头行（日期|版本号|修订说明|...）。同一封面表格的连续行。"
+  },
+  {
+    "candidate_id": "BP042",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一数据库表(EHS_ORG_KPI_CHECK_PERSON)字段定义中的连续行。CREATE_DATE_TIME后接UPDATE_USER_NO。"
+  },
+  {
+    "candidate_id": "BP043",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一数据库表(EHS_INSPECTION_TAKS)字段定义中的连续行。COMPANY_ID后接DEVICE_NAME。"
+  },
+  {
+    "candidate_id": "BP044",
+    "human_label": "BREAK",
+    "review_notes": "目录页'目 录'结束后，进入正文第一个heading '1 概述 1'。目录->正文是明确的文档结构分界。"
+  },
+  {
+    "candidate_id": "BP045",
+    "human_label": "BREAK",
+    "review_notes": "左侧是目录中'4.22.2 功能描述 215'条目，右侧是'4.23 点巡检管理模块 218'条目。跨越了模块边界（4.22检验检测->4.23点巡检），是自然的功能模块分界。"
+  },
+  {
+    "candidate_id": "BP046",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'职业健康管理提升模块'最后一个子功能的返回码表，右侧进入'安全标准化提升模块'。顶层模块切换。"
+  },
+  {
+    "candidate_id": "BP047",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'数据库表'节中的画面-表映射表格，右侧进入同一子功能下的'逻辑设计'节。虽属同一子功能，但'数据库表设计'和'逻辑设计'是两个独立的设计维度，各自可独立阅读理解。"
+  },
+  {
+    "candidate_id": "BP048",
+    "human_label": "BREAK",
+    "review_notes": "左侧引用'接口文档.docx'，右侧引用'数据库文档'。附录中两个独立的外部文档指向，各自一句话完整。"
+  },
+  {
+    "candidate_id": "BP049",
+    "human_label": "NO_BREAK",
+    "review_notes": "与BP006/018/062相同。同一'项目背景'节内连续论述段落，右侧直接承接左侧的政策文件编号进行展开。"
+  },
+  {
+    "candidate_id": "BP050",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'1、涉及的数据库表'小标题，右侧是对应的数据库表列表。标题引出表格内容。"
+  },
+  {
+    "candidate_id": "BP051",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'数据库表'节内的连续编号段。左侧是'1、涉及的数据库表'的表格，右侧是'2、画面说明与数据库表的映射'。它们是同一设计模式的两个步骤，紧密关联。"
+  },
+  {
+    "candidate_id": "BP052",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'输出'标题，右侧是返回码表格。标题引出其对应数据表格。"
+  },
+  {
+    "candidate_id": "BP053",
+    "human_label": "NO_BREAK",
+    "review_notes": "文档修订历史表的列名行（变更日期|新版本号|...）后接第一条数据行（2025.09.13|V1.0|...）。表头与数据不可分。"
+  },
+  {
+    "candidate_id": "BP054",
+    "human_label": "NO_BREAK",
+    "review_notes": "返回码表格的表头行（序号|返回码|返回提示信息|说明）后接第一条数据行（1|code：2000|成功|...）。表头与数据行不可分。"
+  },
+  {
+    "candidate_id": "BP055",
+    "human_label": "NO_BREAK",
+    "review_notes": "参考资料表的列名行（参考文件|备注）后接第一条数据行（《镔鑫智慧安全二期项目技术协议》|）。表头与数据不可分。"
+  },
+  {
+    "candidate_id": "BP056",
+    "human_label": "NO_BREAK",
+    "review_notes": "会议纪要表格中的连续信息行。'出席人员'行后接'会议主题'行，共同构成会议基本信息。"
+  },
+  {
+    "candidate_id": "BP057",
+    "human_label": "BREAK",
+    "review_notes": "左侧是文档封面标题'需求规格说明书'，右侧进入正文第一章'概述'。封面->正文的明确结构边界。"
+  },
+  {
+    "candidate_id": "BP058",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'三级培训教育>功能描述'的一句话概述，右侧进入同级子功能'三级培训资料管理'。功能描述是概括性的，资料管理是具体独立子功能，可独立理解。"
+  },
+  {
+    "candidate_id": "BP059",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'班组安全管理提升>班组细化管理'的功能表格，右侧进入完全不同的顶层模块'安全标准化提升'。大模块分界。"
+  },
+  {
+    "candidate_id": "BP060",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'人员违章管理>功能概述'（概括性一段话），右侧进入具体子功能'违章联动个人绩效'。概述总结后进入独立子功能描述。"
+  },
+  {
+    "candidate_id": "BP061",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'验收标准>项目验收'最后的备注，右侧进入新顶层章节'技术支持与服务'。大章节切换。"
+  },
+  {
+    "candidate_id": "BP062",
+    "human_label": "NO_BREAK",
+    "review_notes": "与BP006/018/049相同。项目背景段落的连续论述，右侧紧接左侧政策引述做地方落实展开。"
+  },
+  {
+    "candidate_id": "BP063",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是'图3-44 相关方自主基础台账'的图注，右侧是'功能说明'引入下方的功能表格。图注->功能说明是对同一功能的连续描述部分。"
+  },
+  {
+    "candidate_id": "BP064",
+    "human_label": "NO_BREAK",
+    "review_notes": "左侧是设备设施信息的文字描述（固定式一氧化碳报警器...），右侧是'原型画面'提示后接原型图。同一功能的需求描述+原型展示，连续关联。"
+  },
+  {
+    "candidate_id": "BP065",
+    "human_label": "BREAK",
+    "review_notes": "左侧是'技术支持与服务'中远程支持服务的描述，右侧进入'需求确认'签字表格。这是从技术服务条款过渡到合同签署确认，主题发生了本质变化。"
+  },
+  {
+    "candidate_id": "BP066",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一'项目现状'表格中的连续行。第1行（流程层面现状）后接第2行（业务层面现状）。共享表头结构。"
+  },
+  {
+    "candidate_id": "BP067",
+    "human_label": "NO_BREAK",
+    "review_notes": "同一功能说明表格中'输入|输入查询班组、时间段'行后接'处理|查询对应信息'行。这是输入/处理/输出的标准三段式描述，不可分割。"
+  },
+  {
+    "candidate_id": "BP068",
+    "human_label": "NO_BREAK",
+    "review_notes": "需求确认表格中声明文字行后接'业主单位（签字盖章）'行。签字确认区域的连续组成部分。"
+  }
+]

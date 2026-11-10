@@ -1,0 +1,31 @@
+{
+  "scope": "locked_test",
+  "projects": [
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "methods": [
+    "fixed",
+    "langchain_recursive",
+    "llamaindex_sentence",
+    "proposed",
+    "proposed_v6",
+    "recursive",
+    "seac_no_adaptive_threshold",
+    "seac_no_continuity",
+    "seac_no_density",
+    "seac_no_fusion",
+    "seac_no_heading_context",
+    "seac_no_semantic",
+    "seac_no_table_children",
+    "semantic",
+    "structure"
+  ],
+  "retrieval_questions": 1875,
+  "boundary_records": 20520
+}

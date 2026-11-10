@@ -1,0 +1,25 @@
+{
+  "proposed_v6": {
+    "chunk_count": 15824,
+    "mean_chunk_tokens": 73.79903943377148,
+    "min_chunk_tokens": 1,
+    "max_chunk_tokens": 512,
+    "parent_chunk_count": 2547,
+    "retrieval_chunk_count": 13277,
+    "boundary": {
+      "tp": 20,
+      "fp": 4,
+      "fn": 0,
+      "tn": 26,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1": 0.9090909090909091
+    },
+    "retrieval": {
+      "mrr": 0.3462313072056722,
+      "hit_rate@1": 0.1388888888888889,
+      "hit_rate@3": 0.5277777777777778,
+      "hit_rate@5": 0.5833333333333334
+    }
+  }
+}

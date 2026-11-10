@@ -1,0 +1,36 @@
+{"id": "P03-QA001", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "题干以“本次”指代会议属未说明的上下文（文档主题实为“需求讨论会”），需改写为自足表述，证据行可用。"}
+{"id": "P03-QA002", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": ["PERSON_NAME_OR_CONTACT"], "note": "地点由证据行直接支持，但题干“本次”指代不明，需改写为明确指向该需求讨论会的问法。"}
+{"id": "P03-QA003", "content_verdict": "NEEDS_REWRITE", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "原文为“请求方式：HTTP POST”，答案只写“HTTP”未给出请求方法，需补全为“HTTP POST”。"}
+{"id": "P03-QA004", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": ["INTERNAL_NETWORK_OR_URL", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "请求路径由证据段直接给出且在语料中唯一，章节与题型正确。"}
+{"id": "P03-QA005", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "pointCode行给出类型、取值范围与必填三项，答案由该唯一行归纳，2.1.2.3的同名行属不同标题路径可区分。"}
+{"id": "P03-QA006", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "statusCode行取值范围为空，答案只写类型与必填与原文一致，行内可唯一定位。"}
+{"id": "P03-QA007", "content_verdict": "APPROVED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "message行取值范围为空，答案与该唯一行一致，无冲突答案。"}
+{"id": "P03-QA008", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": [], "note": "题干写2.1.2.1获取各点位的水位数据接口，但organizationId行属于2.1.2.2获取各点位的水位预测值，且2.1.2.1请求参数表只有pointCode，需把题干接口改为2.1.2.2。"}
+{"id": "P03-QA009", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": [], "note": "startTime行同样属于2.1.2.2获取各点位的水位预测值，题干接口错标为2.1.2.1，需更正后方可使用。"}
+{"id": "P03-QA010", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "表名与表描述在同一行内对应，答案“水位/雨量点位配置”唯一。"}
+{"id": "P03-QA011", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P03-QA012", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P03-QA013", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P03-QA014", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P03-QA015", "content_verdict": "APPROVED", "difficulty": "Easy", "suggested_privacy_flags": [], "note": "证据行同时给出表名与表描述，答案唯一。"}
+{"id": "P03-QA016", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段列出四项管理员技能要求，答案只截取第一项且span在列表中间断开，需改写题干或补全证据。"}
+{"id": "P03-QA017", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干仅写“画面设计”，该文档中同名章节众多，且答案保留编号“3、”，需限定到移动端感知数据画面设计。"}
+{"id": "P03-QA018", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "该服务条款语句在技术协议第10节以完全相同措辞出现（见QA019），跨文档重复导致来源与最小证据无法唯一对齐，且与QA019构成近重复题。"}
+{"id": "P03-QA019", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA"], "note": "与QA018答案完全相同、证据在需求规格书中重复出现，两题互为近重复且证据不唯一。"}
+{"id": "P03-QA020", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干“政策要求支持或提供什么能力”与答案（数字防汛系统提供技术支撑）语义不匹配，需改写为指向该结论句的具体问题。"}
+{"id": "P03-QA021", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段并列描述感知预警、防汛资源、防汛周报三项作用，模板问法下多句同样可作答，需改写收敛到感知预警。"}
+{"id": "P03-QA022", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "同一表述在详细设计规格B0786中重复出现，跨文档证据重复且题干依赖章节号定位，无法唯一对齐。"}
+{"id": "P03-QA023", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["CUSTOMER_OR_VENDOR_IDENTITY"], "note": "题干直接套用章节标题“统一规划、设计”，问法不自然，需改写为该设计原则的具体内容问题。"}
+{"id": "P03-QA024", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "与QA032指向同一段落且答案完全相同，属近重复；且Feature题型与“效率提升50%”这一效果指标不符，应保留数量型那一条。"}
+{"id": "P03-QA025", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干仅写“画面设计”，该文档多处同名章节，需限定到感知预警水位检测的画面设计。"}
+{"id": "P03-QA026", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该段多句均描述技术可行性，模板问法下存在同样合理的其他答案，需改写为指向结论句的具体问题。"}
+{"id": "P03-QA027", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案保留条目编号“(2)”且该节含多条目标任务，模板问法无法唯一确定答案，需改写题干。"}
+{"id": "P03-QA028", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "答案为项目目标的第(1)条，同节其他条目同样满足“描述了什么实现过程”，需改写题干指向汛情感知体系。"}
+{"id": "P03-QA029", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该节还有“5个雨量计”“共10套设备”等数量表述，模板问法下存在多个同样合理答案，需改写为针对摄像机点位数的问题。"}
+{"id": "P03-QA030", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干“功能描述中”无法定位章节，且同一语句在需求规格书B1020中重复出现，来源与证据均不唯一。"}
+{"id": "P03-QA031", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该节含雨量计5个、摄像机5个、合计10套等多项数量，模板问法无法唯一定位，需改写为针对雨量计数量的问题。"}
+{"id": "P03-QA032", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": ["PROPRIETARY_BUSINESS_DATA", "CUSTOMER_OR_VENDOR_IDENTITY"], "note": "50%的效率提升事实可用，但span取了整条要点而非最小片段，且题干模板化，需改写并收敛证据。"}
+{"id": "P03-QA033", "content_verdict": "REJECTED", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "与QA034证据单元和答案完全相同，属近重复题，且Process题型与“5个雨量计”这一数量事实不符。"}
+{"id": "P03-QA034", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "该节含多条硬件条目，题干模板化且span为整条要点，需改写为“安装并调试多少个雨量计设备”并收敛证据。"}
+{"id": "P03-QA035", "content_verdict": "NEEDS_REWRITE", "difficulty": "Medium", "suggested_privacy_flags": [], "note": "题干问“支持或提供什么能力”而答案是设备数量与接入条件，语义不匹配，需改写题干。"}
+{"id": "P03-QA036", "content_verdict": "NEEDS_REWRITE", "difficulty": "Hard", "suggested_privacy_flags": [], "note": "“3个明渠”的数量事实需在含OCR噪声（loT）的长条目中判断，span为整条要点而非最小片段，题干亦模板化，需改写并收敛。"}
